@@ -1,0 +1,158 @@
+\subsection*{Detection Using A Pre-\/\+Trained Model}
+
+This post will guide you through detecting objects with the Y\+O\+LO system using a pre-\/trained model. If you don\textquotesingle{}t already have Darknet installed, you should do that first.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/pjreddie/darknet}
+\DoxyCodeLine{cd darknet}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+Easy!
+
+You already have the config file for Y\+O\+LO in the cfg/ subdirectory. You will have to download the pre-\/trained weight file 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wget https://pjreddie.com/media/files/yolov3.weights}
+\end{DoxyCode}
+ Then run the detector!
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg}
+\end{DoxyCode}
+ You will see some output like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{layer     filters    size              input                output}
+\DoxyCodeLine{    0 conv     32  3 x 3 / 1   416 x 416 x   3   ->   416 x 416 x  32  0.299 BFLOPs}
+\DoxyCodeLine{    1 conv     64  3 x 3 / 2   416 x 416 x  32   ->   208 x 208 x  64  1.595 BFLOPs}
+\DoxyCodeLine{    .......}
+\DoxyCodeLine{  105 conv    255  1 x 1 / 1    52 x  52 x 256   ->    52 x  52 x 255  0.353 BFLOPs}
+\DoxyCodeLine{  106 detection}
+\DoxyCodeLine{truth\_thresh: Using default '1.000000'}
+\DoxyCodeLine{Loading weights from yolov3.weights...Done!}
+\DoxyCodeLine{data/dog.jpg: Predicted in 0.029329 seconds.}
+\DoxyCodeLine{dog: 99\%}
+\DoxyCodeLine{truck: 93\%}
+\DoxyCodeLine{bicycle: 99\%}
+\end{DoxyCode}
+ Darknet prints out the objects it detected, its confidence, and how long it took to find them. We didn\textquotesingle{}t compile Darknet with Open\+CV so it can\textquotesingle{}t display the detections directly. Instead, it saves them in predictions.\+png. You can open it to see the detected objects. Since we are using Darknet on the C\+PU it takes around 6-\/12 seconds per image. If we use the G\+PU version it would be much faster.
+
+\subsection*{Multiple Images}
+
+Instead of supplying an image on the command line, you can leave it blank to try multiple images in a row. Instead you will see a prompt when the config and weights are done loading\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detect cfg/yolov3.cfg yolov3.weights}
+\DoxyCodeLine{layer     filters    size              input                output}
+\DoxyCodeLine{    0 conv     32  3 x 3 / 1   416 x 416 x   3   ->   416 x 416 x  32  0.299 BFLOPs}
+\DoxyCodeLine{    1 conv     64  3 x 3 / 2   416 x 416 x  32   ->   208 x 208 x  64  1.595 BFLOPs}
+\DoxyCodeLine{    .......}
+\DoxyCodeLine{  104 conv    256  3 x 3 / 1    52 x  52 x 128   ->    52 x  52 x 256  1.595 BFLOPs}
+\DoxyCodeLine{  105 conv    255  1 x 1 / 1    52 x  52 x 256   ->    52 x  52 x 255  0.353 BFLOPs}
+\DoxyCodeLine{  106 detection}
+\DoxyCodeLine{Loading weights from yolov3.weights...Done!}
+\DoxyCodeLine{Enter Image Path:}
+\end{DoxyCode}
+ Enter an image path like data/horses.\+jpg to have it predict boxes for that image.
+
+Once it is done it will prompt you for more paths to try different images. Use Ctrl-\/C to exit the program once you are done.
+
+\subsection*{Changing The Detection Threshold}
+
+By default, Y\+O\+LO only displays objects detected with a confidence of .25 or higher. You can change this by passing the -\/thresh $<$val$>$ flag to the yolo command. For example, to display all detection you can set the threshold to 0\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg -thresh 0}
+\end{DoxyCode}
+ Which produces\+:
+
+!\mbox{[}\mbox{]}\mbox{[}all\mbox{]}
+
+So that\textquotesingle{}s obviously not super useful but you can set it to different values to control what gets thresholded by the model
+
+\subsection*{Tiny Y\+O\+L\+Ov3}
+
+We have a very small model as well for constrained environments, {\ttfamily yolov3-\/tiny}. To use this model, first download the weights\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wget https://pjreddie.com/media/files/yolov3-tiny.weights}
+\end{DoxyCode}
+ Then run the detector with the tiny config file and weights\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights data/dog.jpg}
+\end{DoxyCode}
+ \subsection*{Compiling With C\+U\+DA and Opencv}
+
+Darknet on the C\+PU is fast but it\textquotesingle{}s like 500 times faster on G\+P\+U! You\textquotesingle{}ll have to have an Nvidia G\+PU and you\textquotesingle{}ll have to install C\+U\+DA and opencv. If you have installed R\+OS desktop you should already have opencv installed
+
+\subsection*{Install C\+U\+DA}
+
+\href{https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html}{\texttt{ https\+://docs.\+nvidia.\+com/cuda/cuda-\/installation-\/guide-\/linux/index.\+html}}
+
+Once you have C\+U\+DA installed, change the first couple lines of the Makefile in the base directory to read\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GPU=1}
+\DoxyCodeLine{OPENCV=1}
+\end{DoxyCode}
+ Now you can make the project and C\+U\+DA will be enabled. By default it will run the network on the 0th graphics card in your system (if you installed C\+U\+DA correctly you can list your graphics cards using {\ttfamily nvidia-\/smi}). Again you can run
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg}
+\end{DoxyCode}
+ \subsection*{Note}
+
+Yolo v3 uses a lot of gpu ram. if you get the following error consider using tiny-\/yolo or yolov2
+
+grab pretrained weights for yolo V2 using 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wget https://pjreddie.com/media/files/yolov3.weights}
+\end{DoxyCode}
+
+
+run Y\+O\+L\+Ov2
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detect cfg/yolov2.cfg yolov2.weights data/dog.jpg}
+\end{DoxyCode}
+ \subsection*{Real-\/\+Time Detection on a Webcam}
+
+Running Y\+O\+LO on test data isn\textquotesingle{}t very interesting if you can\textquotesingle{}t see the result. Instead of running it on a bunch of images let\textquotesingle{}s run it on the input from a webcam!
+
+To run this demo you will need to compile Darknet with C\+U\+DA and Open\+CV.
+
+To run this demo you will need to compile Darknet with C\+U\+DA and Open\+CV. Then run the command\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights}
+\end{DoxyCode}
+ Y\+O\+LO will display the current F\+PS and predicted classes as well as the image with bounding boxes drawn on top of it.
+
+You will need a webcam connected to the computer that Open\+CV can connect to or it won\textquotesingle{}t work. If you have multiple webcams connected and want to select which one to use you can pass the flag -\/c $<$num$>$ to pick (Open\+CV uses webcam 0 by default).
+
+You can also run it on a video file if Open\+CV can read the video\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights <video file>}
+\end{DoxyCode}
+
+
+\subsection*{Use Y\+O\+LO to train your own custom classes}
+
+\mbox{\hyperlink{md_yoloTraining}{Training Y\+O\+LO with B\+Box-\/\+Label-\/\+Tool}}
+
+\subsection*{Cite}
+
+If you use Y\+O\+L\+Ov3 in your work please cite our paper!
+
+@article\{yolov3, title=\{Y\+O\+L\+Ov3\+: An Incremental Improvement\}, author=\{Redmon, Joseph and Farhadi, Ali\}, journal = \{ar\+Xiv\}, year=\{2018\} \} 
