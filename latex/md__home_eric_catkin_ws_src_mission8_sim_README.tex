@@ -1,0 +1,28 @@
+Gazebo simulation of mission 8
+
+\subsection*{Setup}
+
+run 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{echo 'export GAZEBO\_MODEL\_PATH=\$\{GAZEBO\_MODEL\_PATH\}:~/catkin\_ws/src/mission8\_sim/models' >> ~/.bashrc}
+\end{DoxyCode}
+
+
+\subsection*{Running Sim}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src/mission8\_sim/scripts}
+\DoxyCodeLine{./startMultiSim.sh}
+\end{DoxyCode}
+
+
+\subsection*{Controlling Actor}
+
+add the following line to the .bashrc
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GAZEBO\_PLUGIN\_PATH=\$\{GAZEBO\_PLUGIN\_PATH\}:/home/tar/catkin\_ws/build/mission8\_sim/}
+\end{DoxyCode}
+ 

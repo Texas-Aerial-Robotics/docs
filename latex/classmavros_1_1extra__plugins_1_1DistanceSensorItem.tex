@@ -1,0 +1,63 @@
+\hypertarget{classmavros_1_1extra__plugins_1_1DistanceSensorItem}{}\section{mavros\+::extra\+\_\+plugins\+::Distance\+Sensor\+Item Class Reference}
+\label{classmavros_1_1extra__plugins_1_1DistanceSensorItem}\index{mavros::extra\_plugins::DistanceSensorItem@{mavros::extra\_plugins::DistanceSensorItem}}
+
+
+Distance sensor mapping storage item.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmavros_1_1extra__plugins_1_1DistanceSensorItem}{Distance\+Sensor\+Item}} $>$ \mbox{\hyperlink{group__plugin_ga0156f4cebc73c6f4b88d5a4053e98c2b}{Ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__plugin_ga4a5d2662de657c6d326a0e3dc697d889}{Distance\+Sensor\+Item}} ()
+\item 
+void \mbox{\hyperlink{group__plugin_ga57b6fa996ec369d2474ff69c77434917}{range\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Range\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__plugin_ga0156f4cebc73c6f4b88d5a4053e98c2b}{Ptr}} \mbox{\hyperlink{group__plugin_gae1634c431193fc47e5f577b9e326ea0b}{create\+\_\+item}} (\mbox{\hyperlink{classmavros_1_1extra__plugins_1_1DistanceSensorPlugin}{Distance\+Sensor\+Plugin}} $\ast$\mbox{\hyperlink{group__plugin_ga4f45665ceec645c00b6692388d8c0d51}{owner}}, std\+::string \mbox{\hyperlink{group__plugin_gaec60262d11a7bb202f471aa4d6608615}{topic\+\_\+name}})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__plugin_ga51a4de10631a84721596038771ef77ea}{is\+\_\+subscriber}}
+\begin{DoxyCompactList}\small\item\em this item is a subscriber, else is a publisher \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__plugin_ga3488a32205974b427d937ca524aa3aa0}{send\+\_\+tf}}
+\begin{DoxyCompactList}\small\item\em defines if a transform is sent or not \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_gaeac19ed23b46f4e7a3cf3c02ed28da28}{sensor\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em id of the sensor \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group__plugin_ga347b13757e45e5125842a118c43ef74a}{field\+\_\+of\+\_\+view}}
+\begin{DoxyCompactList}\small\item\em F\+OV of the sensor. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__plugin_ga0d2d16da9abd307183e28dca358cc82d}{position}}
+\begin{DoxyCompactList}\small\item\em sensor position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__plugin_ga43f807eab20df3eafb28caf582e4b77b}{orientation}}
+\begin{DoxyCompactList}\small\item\em check orientation of sensor if != -\/1 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__plugin_ga9795eedbcdd190f5131ceee05829bea1}{covariance}}
+\begin{DoxyCompactList}\small\item\em in centimeters, current specification \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{group__plugin_ga6b41efde5ba3e2b5822233811dd45997}{frame\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em frame id for send \end{DoxyCompactList}\item 
+ros\+::\+Publisher \mbox{\hyperlink{group__plugin_ga0604c0a60bf1edd2f50b3d0fe4171eec}{pub}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{group__plugin_ga59362a543db0805a4669950637451270}{sub}}
+\item 
+std\+::string \mbox{\hyperlink{group__plugin_gaec60262d11a7bb202f471aa4d6608615}{topic\+\_\+name}}
+\item 
+\mbox{\hyperlink{classmavros_1_1extra__plugins_1_1DistanceSensorPlugin}{Distance\+Sensor\+Plugin}} $\ast$ \mbox{\hyperlink{group__plugin_ga4f45665ceec645c00b6692388d8c0d51}{owner}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Distance sensor mapping storage item. 
+
+Definition at line 31 of file distance\+\_\+sensor.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros\+\_\+extras/src/plugins/\mbox{\hyperlink{distance__sensor_8cpp}{distance\+\_\+sensor.\+cpp}}\end{DoxyCompactItemize}

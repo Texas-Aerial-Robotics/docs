@@ -1,0 +1,240 @@
+\hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader}{}\section{pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader Class Reference}
+\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader}\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+Inheritance diagram for pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpymavlink_1_1mavwp_1_1MAVFenceLoader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad2c36ce95b96d8ccb0d182254b64a75a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad95b9bdad05fdf89e63f52ffd2c8aa87}{target\+\_\+system}}=0, \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a38751985c2a37046971dcd69a83b8370}{target\+\_\+component}}=0)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad1ba7f8d238b1ff9fba27f1ac45a4174}{count}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_adf811be126be216f243c8c3e5410095b}{point}} (self, \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a58e43bc724a67d155e5746e7abf3d31e}{add}} (self, \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_aa556e6ef7a6379e42ec797f3b2f376b1}{reindex}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_adfb4b572f7ecfa4bee52c3f62e42915f}{add\+\_\+latlon}} (self, lat, lon)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a892ccc569e1dcae04f5b9a9219849c0b}{clear}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a31e6f593846fa95c782d1567215cb141}{load}} (self, filename)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a34fdb2bc4e79b7649714adb5d0bfd667}{save}} (self, filename)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a3a8c6237c42535dd031f28da0a9139ea}{move}} (self, \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}, lat, lng, change\+\_\+time=True)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a7c1a07eaf7b428d33bc963335ae4d5bd}{remove}} (self, \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}, change\+\_\+time=True)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a9c0857c45d7a72d6e9dfd80246816f8e}{polygon}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a280180d0d631199133ba120b55fc74ee}{points}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad95b9bdad05fdf89e63f52ffd2c8aa87}{target\+\_\+system}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a38751985c2a37046971dcd69a83b8370}{target\+\_\+component}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a9d2edef837016a734557e430f25b3158}{last\+\_\+change}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}MAVLink geo-fence loader\end{DoxyVerb}
+ 
+
+Definition at line 504 of file mavwp.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad2c36ce95b96d8ccb0d182254b64a75a}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad2c36ce95b96d8ccb0d182254b64a75a}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{target\+\_\+system = {\ttfamily 0},  }\item[{}]{target\+\_\+component = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 506 of file mavwp.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a58e43bc724a67d155e5746e7abf3d31e}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a58e43bc724a67d155e5746e7abf3d31e}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!add@{add}}
+\index{add@{add}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+add (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}add a point\end{DoxyVerb}
+ 
+
+Definition at line 520 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_adfb4b572f7ecfa4bee52c3f62e42915f}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_adfb4b572f7ecfa4bee52c3f62e42915f}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!add\_latlon@{add\_latlon}}
+\index{add\_latlon@{add\_latlon}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{add\_latlon()}{add\_latlon()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+add\+\_\+latlon (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lat,  }\item[{}]{lon }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}add a point via latitude/longitude\end{DoxyVerb}
+ 
+
+Definition at line 535 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a892ccc569e1dcae04f5b9a9219849c0b}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a892ccc569e1dcae04f5b9a9219849c0b}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!clear@{clear}}
+\index{clear@{clear}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+clear (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}clear point list\end{DoxyVerb}
+ 
+
+Definition at line 541 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad1ba7f8d238b1ff9fba27f1ac45a4174}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad1ba7f8d238b1ff9fba27f1ac45a4174}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!count@{count}}
+\index{count@{count}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+count (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return number of points\end{DoxyVerb}
+ 
+
+Definition at line 512 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a31e6f593846fa95c782d1567215cb141}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a31e6f593846fa95c782d1567215cb141}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!load@{load}}
+\index{load@{load}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+load (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}load points from a file.
+returns number of points loaded\end{DoxyVerb}
+ 
+
+Definition at line 546 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a3a8c6237c42535dd031f28da0a9139ea}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a3a8c6237c42535dd031f28da0a9139ea}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!move@{move}}
+\index{move@{move}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+move (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i,  }\item[{}]{lat,  }\item[{}]{lng,  }\item[{}]{change\+\_\+time = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}move a fence point\end{DoxyVerb}
+ 
+
+Definition at line 571 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_adf811be126be216f243c8c3e5410095b}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_adf811be126be216f243c8c3e5410095b}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!point@{point}}
+\index{point@{point}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{point()}{point()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+point (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return a point\end{DoxyVerb}
+ 
+
+Definition at line 516 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a9c0857c45d7a72d6e9dfd80246816f8e}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a9c0857c45d7a72d6e9dfd80246816f8e}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!polygon@{polygon}}
+\index{polygon@{polygon}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{polygon()}{polygon()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+polygon (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return a polygon for the fence\end{DoxyVerb}
+ 
+
+Definition at line 602 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_aa556e6ef7a6379e42ec797f3b2f376b1}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_aa556e6ef7a6379e42ec797f3b2f376b1}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!reindex@{reindex}}
+\index{reindex@{reindex}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{reindex()}{reindex()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+reindex (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}reindex waypoints\end{DoxyVerb}
+ 
+
+Definition at line 525 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a7c1a07eaf7b428d33bc963335ae4d5bd}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a7c1a07eaf7b428d33bc963335ae4d5bd}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!remove@{remove}}
+\index{remove@{remove}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+remove (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i,  }\item[{}]{change\+\_\+time = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}remove a fence point\end{DoxyVerb}
+ 
+
+Definition at line 587 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a34fdb2bc4e79b7649714adb5d0bfd667}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a34fdb2bc4e79b7649714adb5d0bfd667}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!save@{save}}
+\index{save@{save}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily def pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}save fence points to a file\end{DoxyVerb}
+ 
+
+Definition at line 564 of file mavwp.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a9d2edef837016a734557e430f25b3158}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a9d2edef837016a734557e430f25b3158}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!last\_change@{last\_change}}
+\index{last\_change@{last\_change}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{last\_change}{last\_change}}
+{\footnotesize\ttfamily pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+last\+\_\+change}
+
+
+
+Definition at line 510 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a280180d0d631199133ba120b55fc74ee}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a280180d0d631199133ba120b55fc74ee}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!points@{points}}
+\index{points@{points}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+points}
+
+
+
+Definition at line 507 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a38751985c2a37046971dcd69a83b8370}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_a38751985c2a37046971dcd69a83b8370}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!target\_component@{target\_component}}
+\index{target\_component@{target\_component}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{target\_component}{target\_component}}
+{\footnotesize\ttfamily pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+target\+\_\+component}
+
+
+
+Definition at line 509 of file mavwp.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad95b9bdad05fdf89e63f52ffd2c8aa87}\label{classpymavlink_1_1mavwp_1_1MAVFenceLoader_ad95b9bdad05fdf89e63f52ffd2c8aa87}} 
+\index{pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}!target\_system@{target\_system}}
+\index{target\_system@{target\_system}!pymavlink.mavwp.MAVFenceLoader@{pymavlink.mavwp.MAVFenceLoader}}
+\subsubsection{\texorpdfstring{target\_system}{target\_system}}
+{\footnotesize\ttfamily pymavlink.\+mavwp.\+M\+A\+V\+Fence\+Loader.\+target\+\_\+system}
+
+
+
+Definition at line 508 of file mavwp.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/\mbox{\hyperlink{mavwp_8py}{mavwp.\+py}}\end{DoxyCompactItemize}

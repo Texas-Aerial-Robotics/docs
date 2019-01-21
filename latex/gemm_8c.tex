@@ -1,0 +1,122 @@
+\hypertarget{gemm_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/gemm.c File Reference}
+\label{gemm_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/gemm.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/gemm.c}}
+{\ttfamily \#include \char`\"{}gemm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gemm_8c_a39304cbcf3858c9e2416ef1d1cf3879f}{gemm\+\_\+bin}} (int M, int N, int K, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, char $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}, int lda, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, int ldb, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}, int ldc)
+\item 
+float $\ast$ \mbox{\hyperlink{gemm_8c_ac381fb40806eeb0c63fdb1d7e029bfde}{random\+\_\+matrix}} (int rows, int cols)
+\item 
+void \mbox{\hyperlink{gemm_8c_abec5c296a1f7f8fb79e08ca2c1ab8c53}{time\+\_\+random\+\_\+matrix}} (int TA, int TB, int m, int k, int n)
+\item 
+void \mbox{\hyperlink{gemm_8c_aa240ba331e3abf53f9fca7d240322669}{gemm}} (int TA, int TB, int M, int N, int K, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}, int lda, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, int ldb, float \mbox{\hyperlink{face__down__transform_8cpp_af3ba667da124a5d7e851367777758d8d}{B\+E\+TA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}, int ldc)
+\item 
+void \mbox{\hyperlink{gemm_8c_a14ab4a1fb811893dc00f63d5a38cd865}{gemm\+\_\+nn}} (int M, int N, int K, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}, int lda, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, int ldb, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}, int ldc)
+\item 
+void \mbox{\hyperlink{gemm_8c_a37c53215a2359d80bc7738195c73e078}{gemm\+\_\+nt}} (int M, int N, int K, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}, int lda, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, int ldb, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}, int ldc)
+\item 
+void \mbox{\hyperlink{gemm_8c_a5977bc756e0987452155d6644205b5b1}{gemm\+\_\+tn}} (int M, int N, int K, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}, int lda, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, int ldb, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}, int ldc)
+\item 
+void \mbox{\hyperlink{gemm_8c_ac0428aa4e1bc4de1c273ffa4df2c195b}{gemm\+\_\+tt}} (int M, int N, int K, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}, int lda, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, int ldb, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}, int ldc)
+\item 
+void \mbox{\hyperlink{gemm_8c_a44c67f1aa36826c2fe8b8da5022a7ce6}{gemm\+\_\+cpu}} (int TA, int TB, int M, int N, int K, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}, int lda, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, int ldb, float \mbox{\hyperlink{face__down__transform_8cpp_af3ba667da124a5d7e851367777758d8d}{B\+E\+TA}}, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}, int ldc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gemm_8c_aa240ba331e3abf53f9fca7d240322669}\label{gemm_8c_aa240ba331e3abf53f9fca7d240322669}} 
+\index{gemm.c@{gemm.c}!gemm@{gemm}}
+\index{gemm@{gemm}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{gemm()}{gemm()}}
+{\footnotesize\ttfamily void gemm (\begin{DoxyParamCaption}\item[{int}]{TA,  }\item[{int}]{TB,  }\item[{int}]{M,  }\item[{int}]{N,  }\item[{int}]{K,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{A,  }\item[{int}]{lda,  }\item[{float $\ast$}]{B,  }\item[{int}]{ldb,  }\item[{float}]{B\+E\+TA,  }\item[{float $\ast$}]{C,  }\item[{int}]{ldc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_a39304cbcf3858c9e2416ef1d1cf3879f}\label{gemm_8c_a39304cbcf3858c9e2416ef1d1cf3879f}} 
+\index{gemm.c@{gemm.c}!gemm\_bin@{gemm\_bin}}
+\index{gemm\_bin@{gemm\_bin}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{gemm\_bin()}{gemm\_bin()}}
+{\footnotesize\ttfamily void gemm\+\_\+bin (\begin{DoxyParamCaption}\item[{int}]{M,  }\item[{int}]{N,  }\item[{int}]{K,  }\item[{float}]{A\+L\+P\+HA,  }\item[{char $\ast$}]{A,  }\item[{int}]{lda,  }\item[{float $\ast$}]{B,  }\item[{int}]{ldb,  }\item[{float $\ast$}]{C,  }\item[{int}]{ldc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_a44c67f1aa36826c2fe8b8da5022a7ce6}\label{gemm_8c_a44c67f1aa36826c2fe8b8da5022a7ce6}} 
+\index{gemm.c@{gemm.c}!gemm\_cpu@{gemm\_cpu}}
+\index{gemm\_cpu@{gemm\_cpu}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{gemm\_cpu()}{gemm\_cpu()}}
+{\footnotesize\ttfamily void gemm\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{TA,  }\item[{int}]{TB,  }\item[{int}]{M,  }\item[{int}]{N,  }\item[{int}]{K,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{A,  }\item[{int}]{lda,  }\item[{float $\ast$}]{B,  }\item[{int}]{ldb,  }\item[{float}]{B\+E\+TA,  }\item[{float $\ast$}]{C,  }\item[{int}]{ldc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 145 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_a14ab4a1fb811893dc00f63d5a38cd865}\label{gemm_8c_a14ab4a1fb811893dc00f63d5a38cd865}} 
+\index{gemm.c@{gemm.c}!gemm\_nn@{gemm\_nn}}
+\index{gemm\_nn@{gemm\_nn}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{gemm\_nn()}{gemm\_nn()}}
+{\footnotesize\ttfamily void gemm\+\_\+nn (\begin{DoxyParamCaption}\item[{int}]{M,  }\item[{int}]{N,  }\item[{int}]{K,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{A,  }\item[{int}]{lda,  }\item[{float $\ast$}]{B,  }\item[{int}]{ldb,  }\item[{float $\ast$}]{C,  }\item[{int}]{ldc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_a37c53215a2359d80bc7738195c73e078}\label{gemm_8c_a37c53215a2359d80bc7738195c73e078}} 
+\index{gemm.c@{gemm.c}!gemm\_nt@{gemm\_nt}}
+\index{gemm\_nt@{gemm\_nt}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{gemm\_nt()}{gemm\_nt()}}
+{\footnotesize\ttfamily void gemm\+\_\+nt (\begin{DoxyParamCaption}\item[{int}]{M,  }\item[{int}]{N,  }\item[{int}]{K,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{A,  }\item[{int}]{lda,  }\item[{float $\ast$}]{B,  }\item[{int}]{ldb,  }\item[{float $\ast$}]{C,  }\item[{int}]{ldc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_a5977bc756e0987452155d6644205b5b1}\label{gemm_8c_a5977bc756e0987452155d6644205b5b1}} 
+\index{gemm.c@{gemm.c}!gemm\_tn@{gemm\_tn}}
+\index{gemm\_tn@{gemm\_tn}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{gemm\_tn()}{gemm\_tn()}}
+{\footnotesize\ttfamily void gemm\+\_\+tn (\begin{DoxyParamCaption}\item[{int}]{M,  }\item[{int}]{N,  }\item[{int}]{K,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{A,  }\item[{int}]{lda,  }\item[{float $\ast$}]{B,  }\item[{int}]{ldb,  }\item[{float $\ast$}]{C,  }\item[{int}]{ldc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_ac0428aa4e1bc4de1c273ffa4df2c195b}\label{gemm_8c_ac0428aa4e1bc4de1c273ffa4df2c195b}} 
+\index{gemm.c@{gemm.c}!gemm\_tt@{gemm\_tt}}
+\index{gemm\_tt@{gemm\_tt}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{gemm\_tt()}{gemm\_tt()}}
+{\footnotesize\ttfamily void gemm\+\_\+tt (\begin{DoxyParamCaption}\item[{int}]{M,  }\item[{int}]{N,  }\item[{int}]{K,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{A,  }\item[{int}]{lda,  }\item[{float $\ast$}]{B,  }\item[{int}]{ldb,  }\item[{float $\ast$}]{C,  }\item[{int}]{ldc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_ac381fb40806eeb0c63fdb1d7e029bfde}\label{gemm_8c_ac381fb40806eeb0c63fdb1d7e029bfde}} 
+\index{gemm.c@{gemm.c}!random\_matrix@{random\_matrix}}
+\index{random\_matrix@{random\_matrix}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{random\_matrix()}{random\_matrix()}}
+{\footnotesize\ttfamily float$\ast$ random\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file gemm.\+c.
+
+\mbox{\Hypertarget{gemm_8c_abec5c296a1f7f8fb79e08ca2c1ab8c53}\label{gemm_8c_abec5c296a1f7f8fb79e08ca2c1ab8c53}} 
+\index{gemm.c@{gemm.c}!time\_random\_matrix@{time\_random\_matrix}}
+\index{time\_random\_matrix@{time\_random\_matrix}!gemm.c@{gemm.c}}
+\subsubsection{\texorpdfstring{time\_random\_matrix()}{time\_random\_matrix()}}
+{\footnotesize\ttfamily void time\+\_\+random\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{TA,  }\item[{int}]{TB,  }\item[{int}]{m,  }\item[{int}]{k,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file gemm.\+c.
+

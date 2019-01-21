@@ -1,0 +1,203 @@
+\hypertarget{classifier_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/classifier.c File Reference}
+\label{classifier_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/classifier.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/classifier.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \mbox{\hyperlink{classifier_8c_aaf9a80adfb8278c876232c10a4cf23b9}{get\+\_\+regression\+\_\+values}} (char $\ast$$\ast$labels, int n)
+\item 
+void \mbox{\hyperlink{classifier_8c_ad875e8ecf86a386ce16c7142484f3efb}{train\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int $\ast$gpus, int ngpus, int clear)
+\item 
+void \mbox{\hyperlink{classifier_8c_a636dccf9308a3ae0dbd8660f29db4e02}{validate\+\_\+classifier\+\_\+crop}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{classifier_8c_ae6830ebfccd79c255f5cac844aa5454b}{validate\+\_\+classifier\+\_\+10}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{classifier_8c_aeae387d13aac40e2eb3aff9584f03a8b}{validate\+\_\+classifier\+\_\+full}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{classifier_8c_a654da2bb707e0b4538d2193e6d8f55d1}{validate\+\_\+classifier\+\_\+single}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{classifier_8c_a502e20bf0c6a6f1ae374fc4b4b1b6a6a}{validate\+\_\+classifier\+\_\+multi}} (char $\ast$datacfg, char $\ast$cfg, char $\ast$weights)
+\item 
+void \mbox{\hyperlink{classifier_8c_a894dd692d95f8f8a8da05dae07e60138}{try\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, int layer\+\_\+num)
+\item 
+void \mbox{\hyperlink{classifier_8c_aa8603edf5e9da49cdee89b35d6bc5b42}{predict\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, int top)
+\item 
+void \mbox{\hyperlink{classifier_8c_a9ae475089952950f04778d56a5dd0f8e}{label\+\_\+classifier}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{classifier_8c_aceccf5b6380cf57e56df5655b85fb52e}{test\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int target\+\_\+layer)
+\item 
+void \mbox{\hyperlink{classifier_8c_a2c43e9395cec1556efc1cac6c9f9cfd4}{file\+\_\+output\+\_\+classifier}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile, char $\ast$listfile)
+\item 
+void \mbox{\hyperlink{classifier_8c_ab770e80d03219ab55ec93fdd0237f13b}{threat\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int cam\+\_\+index, const char $\ast$filename)
+\item 
+void \mbox{\hyperlink{classifier_8c_a8901a041f50c430e093fddb249d78d2f}{gun\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int cam\+\_\+index, const char $\ast$filename)
+\item 
+void \mbox{\hyperlink{classifier_8c_ac5e746c237b87dfa56d2ac1a5db9f3b9}{demo\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int cam\+\_\+index, const char $\ast$filename)
+\item 
+void \mbox{\hyperlink{classifier_8c_a08cb29ba2c4674431352eff4e6274b56}{run\+\_\+classifier}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{classifier_8c_ac5e746c237b87dfa56d2ac1a5db9f3b9}\label{classifier_8c_ac5e746c237b87dfa56d2ac1a5db9f3b9}} 
+\index{classifier.c@{classifier.c}!demo\_classifier@{demo\_classifier}}
+\index{demo\_classifier@{demo\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{demo\_classifier()}{demo\_classifier()}}
+{\footnotesize\ttfamily void demo\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{cam\+\_\+index,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 963 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a2c43e9395cec1556efc1cac6c9f9cfd4}\label{classifier_8c_a2c43e9395cec1556efc1cac6c9f9cfd4}} 
+\index{classifier.c@{classifier.c}!file\_output\_classifier@{file\_output\_classifier}}
+\index{file\_output\_classifier@{file\_output\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{file\_output\_classifier()}{file\_output\_classifier()}}
+{\footnotesize\ttfamily void file\+\_\+output\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{listfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 718 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_aaf9a80adfb8278c876232c10a4cf23b9}\label{classifier_8c_aaf9a80adfb8278c876232c10a4cf23b9}} 
+\index{classifier.c@{classifier.c}!get\_regression\_values@{get\_regression\_values}}
+\index{get\_regression\_values@{get\_regression\_values}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{get\_regression\_values()}{get\_regression\_values()}}
+{\footnotesize\ttfamily float$\ast$ get\+\_\+regression\+\_\+values (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{labels,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a8901a041f50c430e093fddb249d78d2f}\label{classifier_8c_a8901a041f50c430e093fddb249d78d2f}} 
+\index{classifier.c@{classifier.c}!gun\_classifier@{gun\_classifier}}
+\index{gun\_classifier@{gun\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{gun\_classifier()}{gun\_classifier()}}
+{\footnotesize\ttfamily void gun\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{cam\+\_\+index,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 887 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a9ae475089952950f04778d56a5dd0f8e}\label{classifier_8c_a9ae475089952950f04778d56a5dd0f8e}} 
+\index{classifier.c@{classifier.c}!label\_classifier@{label\_classifier}}
+\index{label\_classifier@{label\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{label\_classifier()}{label\_classifier()}}
+{\footnotesize\ttfamily void label\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 613 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_aa8603edf5e9da49cdee89b35d6bc5b42}\label{classifier_8c_aa8603edf5e9da49cdee89b35d6bc5b42}} 
+\index{classifier.c@{classifier.c}!predict\_classifier@{predict\_classifier}}
+\index{predict\_classifier@{predict\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{predict\_classifier()}{predict\_classifier()}}
+{\footnotesize\ttfamily void predict\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{int}]{top }\end{DoxyParamCaption})}
+
+
+
+Definition at line 559 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a08cb29ba2c4674431352eff4e6274b56}\label{classifier_8c_a08cb29ba2c4674431352eff4e6274b56}} 
+\index{classifier.c@{classifier.c}!run\_classifier@{run\_classifier}}
+\index{run\_classifier@{run\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{run\_classifier()}{run\_classifier()}}
+{\footnotesize\ttfamily void run\+\_\+classifier (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1054 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_aceccf5b6380cf57e56df5655b85fb52e}\label{classifier_8c_aceccf5b6380cf57e56df5655b85fb52e}} 
+\index{classifier.c@{classifier.c}!test\_classifier@{test\_classifier}}
+\index{test\_classifier@{test\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{test\_classifier()}{test\_classifier()}}
+{\footnotesize\ttfamily void test\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{target\+\_\+layer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 649 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_ab770e80d03219ab55ec93fdd0237f13b}\label{classifier_8c_ab770e80d03219ab55ec93fdd0237f13b}} 
+\index{classifier.c@{classifier.c}!threat\_classifier@{threat\_classifier}}
+\index{threat\_classifier@{threat\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{threat\_classifier()}{threat\_classifier()}}
+{\footnotesize\ttfamily void threat\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{cam\+\_\+index,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 757 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_ad875e8ecf86a386ce16c7142484f3efb}\label{classifier_8c_ad875e8ecf86a386ce16c7142484f3efb}} 
+\index{classifier.c@{classifier.c}!train\_classifier@{train\_classifier}}
+\index{train\_classifier@{train\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{train\_classifier()}{train\_classifier()}}
+{\footnotesize\ttfamily void train\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int $\ast$}]{gpus,  }\item[{int}]{ngpus,  }\item[{int}]{clear }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a894dd692d95f8f8a8da05dae07e60138}\label{classifier_8c_a894dd692d95f8f8a8da05dae07e60138}} 
+\index{classifier.c@{classifier.c}!try\_classifier@{try\_classifier}}
+\index{try\_classifier@{try\_classifier}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{try\_classifier()}{try\_classifier()}}
+{\footnotesize\ttfamily void try\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{int}]{layer\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 481 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_ae6830ebfccd79c255f5cac844aa5454b}\label{classifier_8c_ae6830ebfccd79c255f5cac844aa5454b}} 
+\index{classifier.c@{classifier.c}!validate\_classifier\_10@{validate\_classifier\_10}}
+\index{validate\_classifier\_10@{validate\_classifier\_10}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{validate\_classifier\_10()}{validate\_classifier\_10()}}
+{\footnotesize\ttfamily void validate\+\_\+classifier\+\_\+10 (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 234 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a636dccf9308a3ae0dbd8660f29db4e02}\label{classifier_8c_a636dccf9308a3ae0dbd8660f29db4e02}} 
+\index{classifier.c@{classifier.c}!validate\_classifier\_crop@{validate\_classifier\_crop}}
+\index{validate\_classifier\_crop@{validate\_classifier\_crop}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{validate\_classifier\_crop()}{validate\_classifier\_crop()}}
+{\footnotesize\ttfamily void validate\+\_\+classifier\+\_\+crop (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 170 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_aeae387d13aac40e2eb3aff9584f03a8b}\label{classifier_8c_aeae387d13aac40e2eb3aff9584f03a8b}} 
+\index{classifier.c@{classifier.c}!validate\_classifier\_full@{validate\_classifier\_full}}
+\index{validate\_classifier\_full@{validate\_classifier\_full}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{validate\_classifier\_full()}{validate\_classifier\_full()}}
+{\footnotesize\ttfamily void validate\+\_\+classifier\+\_\+full (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 303 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a502e20bf0c6a6f1ae374fc4b4b1b6a6a}\label{classifier_8c_a502e20bf0c6a6f1ae374fc4b4b1b6a6a}} 
+\index{classifier.c@{classifier.c}!validate\_classifier\_multi@{validate\_classifier\_multi}}
+\index{validate\_classifier\_multi@{validate\_classifier\_multi}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{validate\_classifier\_multi()}{validate\_classifier\_multi()}}
+{\footnotesize\ttfamily void validate\+\_\+classifier\+\_\+multi (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights }\end{DoxyParamCaption})}
+
+
+
+Definition at line 419 of file classifier.\+c.
+
+\mbox{\Hypertarget{classifier_8c_a654da2bb707e0b4538d2193e6d8f55d1}\label{classifier_8c_a654da2bb707e0b4538d2193e6d8f55d1}} 
+\index{classifier.c@{classifier.c}!validate\_classifier\_single@{validate\_classifier\_single}}
+\index{validate\_classifier\_single@{validate\_classifier\_single}!classifier.c@{classifier.c}}
+\subsubsection{\texorpdfstring{validate\_classifier\_single()}{validate\_classifier\_single()}}
+{\footnotesize\ttfamily void validate\+\_\+classifier\+\_\+single (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 361 of file classifier.\+c.
+

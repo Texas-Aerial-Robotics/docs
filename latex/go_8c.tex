@@ -1,0 +1,437 @@
+\hypertarget{go_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/go.c File Reference}
+\label{go_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/go.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/go.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmoves}{moves}}
+\item 
+struct \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}}
+\item 
+struct \mbox{\hyperlink{structmove}{move}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} \mbox{\hyperlink{go_8c_a47e554a368a510a674f594b60bdf88d2}{mcts\+\_\+tree}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{go_8c_a32e577b5a2069403e8019f984845faac}{legal\+\_\+go}} (float $\ast$b, float $\ast$ko, int \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}}, int r, int c)
+\item 
+int \mbox{\hyperlink{go_8c_a26de2580a641e310e1fc647eaad2c4d7}{check\+\_\+ko}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float $\ast$ko)
+\item 
+char $\ast$ \mbox{\hyperlink{go_8c_a7fea59d697108309468be55ab9b8a1a8}{fgetgo}} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\hyperlink{structmoves}{moves}} \mbox{\hyperlink{go_8c_af3527c2afe543ad88276f7ab0ca580b9}{load\+\_\+go\+\_\+moves}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{go_8c_a17432d5a451dec0ceeb8db0e17ebe207}{string\+\_\+to\+\_\+board}} (char $\ast$s, float $\ast$board)
+\item 
+void \mbox{\hyperlink{go_8c_add4047a6b13dcaa1653e9f6a953a7c18}{board\+\_\+to\+\_\+string}} (char $\ast$s, float $\ast$board)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{go_8c_a4f610a96be9e62cbff6c70e1ec9c227a}{random\+\_\+go\+\_\+moves}} (\mbox{\hyperlink{structmoves}{moves}} m, int n)
+\item 
+void \mbox{\hyperlink{go_8c_a1bee8a9fcda465fdc3b9cf57b7646f7d}{train\+\_\+go}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, int $\ast$gpus, int ngpus, int clear)
+\item 
+void \mbox{\hyperlink{go_8c_a00f6e4d6b97085fdcedc21f3791df59c}{print\+\_\+board}} (F\+I\+LE $\ast$stream, float $\ast$board, int player, int $\ast$indexes)
+\item 
+void \mbox{\hyperlink{go_8c_a58d8c150474f6f2394a764cb3a216227}{flip\+\_\+board}} (float $\ast$board)
+\item 
+float \mbox{\hyperlink{go_8c_a1c3cdfc157bdd4a836f73322a20663a4}{predict\+\_\+move2}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float $\ast$board, float $\ast$\mbox{\hyperlink{structmove}{move}}, int multi)
+\item 
+void \mbox{\hyperlink{go_8c_a4fcf68963d283904716e37878758a5d6}{move\+\_\+go}} (float $\ast$b, int \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}}, int r, int c)
+\item 
+int \mbox{\hyperlink{go_8c_a94ee49514caf595610a76d8d691b4078}{compare\+\_\+board}} (float $\ast$a, float $\ast$b)
+\item 
+void \mbox{\hyperlink{go_8c_a4b1e0c431bbdf3b1bf949034015c7061}{free\+\_\+mcts}} (\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$root)
+\item 
+float $\ast$ \mbox{\hyperlink{go_8c_a5749689f1cb128d430b7f2cbc5ff5710}{network\+\_\+predict\+\_\+rotations}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float $\ast$next)
+\item 
+\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$ \mbox{\hyperlink{go_8c_a8d8a1a2da74e03012bdcf402e39ea573}{expand}} (float $\ast$next, float $\ast$ko, \mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+float $\ast$ \mbox{\hyperlink{go_8c_abb11424ffb59871eabd4252a5a5d1eb5}{copy\+\_\+board}} (float $\ast$board)
+\item 
+float \mbox{\hyperlink{go_8c_a27f10aa47108462888360b6d94704ba0}{select\+\_\+mcts}} (\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$root, \mbox{\hyperlink{structnetwork}{network}} $\ast$net, float $\ast$prev, float cpuct)
+\item 
+\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$ \mbox{\hyperlink{go_8c_a27c9fe1d56986cee1da83d25096f25eb}{run\+\_\+mcts}} (\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$\mbox{\hyperlink{structtree}{tree}}, \mbox{\hyperlink{structnetwork}{network}} $\ast$net, float $\ast$board, float $\ast$ko, int player, int n, float cpuct, float secs)
+\item 
+\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$ \mbox{\hyperlink{go_8c_a7c4a5bbc2391bc95de77432a1dfca003}{move\+\_\+mcts}} (\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$\mbox{\hyperlink{structtree}{tree}}, int index)
+\item 
+\mbox{\hyperlink{structmove}{move}} \mbox{\hyperlink{go_8c_a0c455215c457f6de941dccf02efe2641}{pick\+\_\+move}} (\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$\mbox{\hyperlink{structtree}{tree}}, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, int player)
+\item 
+int \mbox{\hyperlink{go_8c_a7ccdbba6020a5a2bfe35524ed01d83df}{suicide\+\_\+go}} (float $\ast$b, int \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}}, int r, int c)
+\item 
+void \mbox{\hyperlink{go_8c_ae3949a68287cfeb7a1c35abfca445142}{valid\+\_\+go}} (char $\ast$cfgfile, char $\ast$weightfile, int multi, char $\ast$filename)
+\item 
+int \mbox{\hyperlink{go_8c_abecaf7ce58e9ebf3455756a62384c245}{print\+\_\+game}} (float $\ast$board, F\+I\+LE $\ast$fp)
+\item 
+int \mbox{\hyperlink{go_8c_ab0f9ad2b1dfb2b7aa020ab34d01badf4}{stdin\+\_\+ready}} ()
+\item 
+\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$ \mbox{\hyperlink{go_8c_adfee9987ccc3ff4cd5d6d594e1e417c0}{ponder}} (\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$\mbox{\hyperlink{structtree}{tree}}, \mbox{\hyperlink{structnetwork}{network}} $\ast$net, float $\ast$b, float $\ast$ko, int player, float cpuct)
+\item 
+void \mbox{\hyperlink{go_8c_a806eea11d39729903f19fd3aa586b574}{engine\+\_\+go}} (char $\ast$filename, char $\ast$weightfile, int mcts\+\_\+iters, float secs, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, float cpuct, int anon, int resign)
+\item 
+void \mbox{\hyperlink{go_8c_a88ad2f96f9ea8092406bcb8f1873e92d}{test\+\_\+go}} (char $\ast$cfg, char $\ast$weights, int multi)
+\item 
+float \mbox{\hyperlink{go_8c_ad6d52f67407a3866ab526806ee6def85}{score\+\_\+game}} (float $\ast$board)
+\item 
+void \mbox{\hyperlink{go_8c_aef3d780fb37b0f0a08f1eb90a807247a}{self\+\_\+go}} (char $\ast$filename, char $\ast$weightfile, char $\ast$f2, char $\ast$w2, int multi)
+\item 
+void \mbox{\hyperlink{go_8c_acbc5b7a174f506f13ab6d0fca1faa102}{run\+\_\+go}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{go_8c_a2a99b4dc38f9b4ceadb80091e2dce12c}{inverted}} = 1
+\item 
+int \mbox{\hyperlink{go_8c_afd34566fdbd8e7f8f4d5b750a3040191}{noi}} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{go_8c_a47e554a368a510a674f594b60bdf88d2}\label{go_8c_a47e554a368a510a674f594b60bdf88d2}} 
+\index{go.c@{go.c}!mcts\_tree@{mcts\_tree}}
+\index{mcts\_tree@{mcts\_tree}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{mcts\_tree}{mcts\_tree}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}}  \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{go_8c_add4047a6b13dcaa1653e9f6a953a7c18}\label{go_8c_add4047a6b13dcaa1653e9f6a953a7c18}} 
+\index{go.c@{go.c}!board\_to\_string@{board\_to\_string}}
+\index{board\_to\_string@{board\_to\_string}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{board\_to\_string()}{board\_to\_string()}}
+{\footnotesize\ttfamily void board\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{float $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a26de2580a641e310e1fc647eaad2c4d7}\label{go_8c_a26de2580a641e310e1fc647eaad2c4d7}} 
+\index{go.c@{go.c}!check\_ko@{check\_ko}}
+\index{check\_ko@{check\_ko}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{check\_ko()}{check\_ko()}}
+{\footnotesize\ttfamily int check\+\_\+ko (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{ko }\end{DoxyParamCaption})}
+
+
+
+Definition at line 637 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a94ee49514caf595610a76d8d691b4078}\label{go_8c_a94ee49514caf595610a76d8d691b4078}} 
+\index{go.c@{go.c}!compare\_board@{compare\_board}}
+\index{compare\_board@{compare\_board}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{compare\_board()}{compare\_board()}}
+{\footnotesize\ttfamily int compare\+\_\+board (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{float $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 356 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_abb11424ffb59871eabd4252a5a5d1eb5}\label{go_8c_abb11424ffb59871eabd4252a5a5d1eb5}} 
+\index{go.c@{go.c}!copy\_board@{copy\_board}}
+\index{copy\_board@{copy\_board}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{copy\_board()}{copy\_board()}}
+{\footnotesize\ttfamily float$\ast$ copy\+\_\+board (\begin{DoxyParamCaption}\item[{float $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Definition at line 454 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a806eea11d39729903f19fd3aa586b574}\label{go_8c_a806eea11d39729903f19fd3aa586b574}} 
+\index{go.c@{go.c}!engine\_go@{engine\_go}}
+\index{engine\_go@{engine\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{engine\_go()}{engine\_go()}}
+{\footnotesize\ttfamily void engine\+\_\+go (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{mcts\+\_\+iters,  }\item[{float}]{secs,  }\item[{float}]{temp,  }\item[{float}]{cpuct,  }\item[{int}]{anon,  }\item[{int}]{resign }\end{DoxyParamCaption})}
+
+
+
+Definition at line 813 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a8d8a1a2da74e03012bdcf402e39ea573}\label{go_8c_a8d8a1a2da74e03012bdcf402e39ea573}} 
+\index{go.c@{go.c}!expand@{expand}}
+\index{expand@{expand}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{expand()}{expand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}}$\ast$ expand (\begin{DoxyParamCaption}\item[{float $\ast$}]{next,  }\item[{float $\ast$}]{ko,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 424 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a7fea59d697108309468be55ab9b8a1a8}\label{go_8c_a7fea59d697108309468be55ab9b8a1a8}} 
+\index{go.c@{go.c}!fgetgo@{fgetgo}}
+\index{fgetgo@{fgetgo}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{fgetgo()}{fgetgo()}}
+{\footnotesize\ttfamily char$\ast$ fgetgo (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a58d8c150474f6f2394a764cb3a216227}\label{go_8c_a58d8c150474f6f2394a764cb3a216227}} 
+\index{go.c@{go.c}!flip\_board@{flip\_board}}
+\index{flip\_board@{flip\_board}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{flip\_board()}{flip\_board()}}
+{\footnotesize\ttfamily void flip\+\_\+board (\begin{DoxyParamCaption}\item[{float $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Definition at line 286 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a4b1e0c431bbdf3b1bf949034015c7061}\label{go_8c_a4b1e0c431bbdf3b1bf949034015c7061}} 
+\index{go.c@{go.c}!free\_mcts@{free\_mcts}}
+\index{free\_mcts@{free\_mcts}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{free\_mcts()}{free\_mcts()}}
+{\footnotesize\ttfamily void free\+\_\+mcts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Definition at line 376 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a32e577b5a2069403e8019f984845faac}\label{go_8c_a32e577b5a2069403e8019f984845faac}} 
+\index{go.c@{go.c}!legal\_go@{legal\_go}}
+\index{legal\_go@{legal\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{legal\_go()}{legal\_go()}}
+{\footnotesize\ttfamily int legal\+\_\+go (\begin{DoxyParamCaption}\item[{float $\ast$}]{b,  }\item[{float $\ast$}]{ko,  }\item[{int}]{p,  }\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 647 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_af3527c2afe543ad88276f7ab0ca580b9}\label{go_8c_af3527c2afe543ad88276f7ab0ca580b9}} 
+\index{go.c@{go.c}!load\_go\_moves@{load\_go\_moves}}
+\index{load\_go\_moves@{load\_go\_moves}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{load\_go\_moves()}{load\_go\_moves()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmoves}{moves}} load\+\_\+go\+\_\+moves (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a4fcf68963d283904716e37878758a5d6}\label{go_8c_a4fcf68963d283904716e37878758a5d6}} 
+\index{go.c@{go.c}!move\_go@{move\_go}}
+\index{move\_go@{move\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{move\_go()}{move\_go()}}
+{\footnotesize\ttfamily void move\+\_\+go (\begin{DoxyParamCaption}\item[{float $\ast$}]{b,  }\item[{int}]{p,  }\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 344 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a7c4a5bbc2391bc95de77432a1dfca003}\label{go_8c_a7c4a5bbc2391bc95de77432a1dfca003}} 
+\index{go.c@{go.c}!move\_mcts@{move\_mcts}}
+\index{move\_mcts@{move\_mcts}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{move\_mcts()}{move\_mcts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}}$\ast$ move\+\_\+mcts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$}]{tree,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 528 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a5749689f1cb128d430b7f2cbc5ff5710}\label{go_8c_a5749689f1cb128d430b7f2cbc5ff5710}} 
+\index{go.c@{go.c}!network\_predict\_rotations@{network\_predict\_rotations}}
+\index{network\_predict\_rotations@{network\_predict\_rotations}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{network\_predict\_rotations()}{network\_predict\_rotations()}}
+{\footnotesize\ttfamily float$\ast$ network\+\_\+predict\+\_\+rotations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float $\ast$}]{next }\end{DoxyParamCaption})}
+
+
+
+Definition at line 393 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a0c455215c457f6de941dccf02efe2641}\label{go_8c_a0c455215c457f6de941dccf02efe2641}} 
+\index{go.c@{go.c}!pick\_move@{pick\_move}}
+\index{pick\_move@{pick\_move}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{pick\_move()}{pick\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmove}{move}} pick\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$}]{tree,  }\item[{float}]{temp,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+
+
+Definition at line 549 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_adfee9987ccc3ff4cd5d6d594e1e417c0}\label{go_8c_adfee9987ccc3ff4cd5d6d594e1e417c0}} 
+\index{go.c@{go.c}!ponder@{ponder}}
+\index{ponder@{ponder}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{ponder()}{ponder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}}$\ast$ ponder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$}]{tree,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float $\ast$}]{b,  }\item[{float $\ast$}]{ko,  }\item[{int}]{player,  }\item[{float}]{cpuct }\end{DoxyParamCaption})}
+
+
+
+Definition at line 800 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a1c3cdfc157bdd4a836f73322a20663a4}\label{go_8c_a1c3cdfc157bdd4a836f73322a20663a4}} 
+\index{go.c@{go.c}!predict\_move2@{predict\_move2}}
+\index{predict\_move2@{predict\_move2}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{predict\_move2()}{predict\_move2()}}
+{\footnotesize\ttfamily float predict\+\_\+move2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float $\ast$}]{board,  }\item[{float $\ast$}]{move,  }\item[{int}]{multi }\end{DoxyParamCaption})}
+
+
+
+Definition at line 297 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a00f6e4d6b97085fdcedc21f3791df59c}\label{go_8c_a00f6e4d6b97085fdcedc21f3791df59c}} 
+\index{go.c@{go.c}!print\_board@{print\_board}}
+\index{print\_board@{print\_board}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{print\_board()}{print\_board()}}
+{\footnotesize\ttfamily void print\+\_\+board (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{stream,  }\item[{float $\ast$}]{board,  }\item[{int}]{player,  }\item[{int $\ast$}]{indexes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 247 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_abecaf7ce58e9ebf3455756a62384c245}\label{go_8c_abecaf7ce58e9ebf3455756a62384c245}} 
+\index{go.c@{go.c}!print\_game@{print\_game}}
+\index{print\_game@{print\_game}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{print\_game()}{print\_game()}}
+{\footnotesize\ttfamily int print\+\_\+game (\begin{DoxyParamCaption}\item[{float $\ast$}]{board,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 766 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a4f610a96be9e62cbff6c70e1ec9c227a}\label{go_8c_a4f610a96be9e62cbff6c70e1ec9c227a}} 
+\index{go.c@{go.c}!random\_go\_moves@{random\_go\_moves}}
+\index{random\_go\_moves@{random\_go\_moves}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{random\_go\_moves()}{random\_go\_moves()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} random\+\_\+go\+\_\+moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoves}{moves}}}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_acbc5b7a174f506f13ab6d0fca1faa102}\label{go_8c_acbc5b7a174f506f13ab6d0fca1faa102}} 
+\index{go.c@{go.c}!run\_go@{run\_go}}
+\index{run\_go@{run\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{run\_go()}{run\_go()}}
+{\footnotesize\ttfamily void run\+\_\+go (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1320 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a27c9fe1d56986cee1da83d25096f25eb}\label{go_8c_a27c9fe1d56986cee1da83d25096f25eb}} 
+\index{go.c@{go.c}!run\_mcts@{run\_mcts}}
+\index{run\_mcts@{run\_mcts}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{run\_mcts()}{run\_mcts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}}$\ast$ run\+\_\+mcts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$}]{tree,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float $\ast$}]{board,  }\item[{float $\ast$}]{ko,  }\item[{int}]{player,  }\item[{int}]{n,  }\item[{float}]{cpuct,  }\item[{float}]{secs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 510 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_ad6d52f67407a3866ab526806ee6def85}\label{go_8c_ad6d52f67407a3866ab526806ee6def85}} 
+\index{go.c@{go.c}!score\_game@{score\_game}}
+\index{score\_game@{score\_game}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{score\_game()}{score\_game()}}
+{\footnotesize\ttfamily float score\+\_\+game (\begin{DoxyParamCaption}\item[{float $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1187 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a27f10aa47108462888360b6d94704ba0}\label{go_8c_a27f10aa47108462888360b6d94704ba0}} 
+\index{go.c@{go.c}!select\_mcts@{select\_mcts}}
+\index{select\_mcts@{select\_mcts}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{select\_mcts()}{select\_mcts()}}
+{\footnotesize\ttfamily float select\+\_\+mcts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmcts__tree}{mcts\+\_\+tree}} $\ast$}]{root,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float $\ast$}]{prev,  }\item[{float}]{cpuct }\end{DoxyParamCaption})}
+
+
+
+Definition at line 461 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_aef3d780fb37b0f0a08f1eb90a807247a}\label{go_8c_aef3d780fb37b0f0a08f1eb90a807247a}} 
+\index{go.c@{go.c}!self\_go@{self\_go}}
+\index{self\_go@{self\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{self\_go()}{self\_go()}}
+{\footnotesize\ttfamily void self\+\_\+go (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{f2,  }\item[{char $\ast$}]{w2,  }\item[{int}]{multi }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1213 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_ab0f9ad2b1dfb2b7aa020ab34d01badf4}\label{go_8c_ab0f9ad2b1dfb2b7aa020ab34d01badf4}} 
+\index{go.c@{go.c}!stdin\_ready@{stdin\_ready}}
+\index{stdin\_ready@{stdin\_ready}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{stdin\_ready()}{stdin\_ready()}}
+{\footnotesize\ttfamily int stdin\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 784 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a17432d5a451dec0ceeb8db0e17ebe207}\label{go_8c_a17432d5a451dec0ceeb8db0e17ebe207}} 
+\index{go.c@{go.c}!string\_to\_board@{string\_to\_board}}
+\index{string\_to\_board@{string\_to\_board}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{string\_to\_board()}{string\_to\_board()}}
+{\footnotesize\ttfamily void string\+\_\+to\+\_\+board (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{float $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a7ccdbba6020a5a2bfe35524ed01d83df}\label{go_8c_a7ccdbba6020a5a2bfe35524ed01d83df}} 
+\index{go.c@{go.c}!suicide\_go@{suicide\_go}}
+\index{suicide\_go@{suicide\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{suicide\_go()}{suicide\_go()}}
+{\footnotesize\ttfamily int suicide\+\_\+go (\begin{DoxyParamCaption}\item[{float $\ast$}]{b,  }\item[{int}]{p,  }\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 625 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a88ad2f96f9ea8092406bcb8f1873e92d}\label{go_8c_a88ad2f96f9ea8092406bcb8f1873e92d}} 
+\index{go.c@{go.c}!test\_go@{test\_go}}
+\index{test\_go@{test\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{test\_go()}{test\_go()}}
+{\footnotesize\ttfamily void test\+\_\+go (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights,  }\item[{int}]{multi }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1098 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_a1bee8a9fcda465fdc3b9cf57b7646f7d}\label{go_8c_a1bee8a9fcda465fdc3b9cf57b7646f7d}} 
+\index{go.c@{go.c}!train\_go@{train\_go}}
+\index{train\_go@{train\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{train\_go()}{train\_go()}}
+{\footnotesize\ttfamily void train\+\_\+go (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{int $\ast$}]{gpus,  }\item[{int}]{ngpus,  }\item[{int}]{clear }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_ae3949a68287cfeb7a1c35abfca445142}\label{go_8c_ae3949a68287cfeb7a1c35abfca445142}} 
+\index{go.c@{go.c}!valid\_go@{valid\_go}}
+\index{valid\_go@{valid\_go}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{valid\_go()}{valid\_go()}}
+{\footnotesize\ttfamily void valid\+\_\+go (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{multi,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 733 of file go.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{go_8c_a2a99b4dc38f9b4ceadb80091e2dce12c}\label{go_8c_a2a99b4dc38f9b4ceadb80091e2dce12c}} 
+\index{go.c@{go.c}!inverted@{inverted}}
+\index{inverted@{inverted}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{inverted}{inverted}}
+{\footnotesize\ttfamily int inverted = 1}
+
+
+
+Definition at line 7 of file go.\+c.
+
+\mbox{\Hypertarget{go_8c_afd34566fdbd8e7f8f4d5b750a3040191}\label{go_8c_afd34566fdbd8e7f8f4d5b750a3040191}} 
+\index{go.c@{go.c}!noi@{noi}}
+\index{noi@{noi}!go.c@{go.c}}
+\subsubsection{\texorpdfstring{noi}{noi}}
+{\footnotesize\ttfamily int noi = 1}
+
+
+
+Definition at line 8 of file go.\+c.
+

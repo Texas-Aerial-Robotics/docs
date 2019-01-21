@@ -1,0 +1,302 @@
+\hypertarget{side__camera__transform_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Transformations-\/\+Ros/src/side\+\_\+camera\+\_\+transform.cpp File Reference}
+\label{side__camera__transform_8cpp}\index{/home/eric/catkin\_ws/src/Transformations-\/Ros/src/side\_camera\_transform.cpp@{/home/eric/catkin\_ws/src/Transformations-\/Ros/src/side\_camera\_transform.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Int8.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Float64.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Box.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Boxes.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Point\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Poses.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Pose.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/objects.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sensor\+\_\+msgs/\+Imu.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structorientation}{orientation}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{side__camera__transform_8cpp_a7a00feeb1581fbd831b45d299463934a}{enu\+\_\+2\+\_\+gym}} (nav\+\_\+msgs\+::\+Odometry current\+\_\+pose\+\_\+enu)
+\item 
+void \mbox{\hyperlink{side__camera__transform_8cpp_a85853a76977344d78280db3faca9aa80}{heading\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{side__camera__transform_8cpp_ac40976daacdbe2fb876080a30cd74651}{imu\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Imu\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{side__camera__transform_8cpp_afa0f9061a6152b26289dd2c93b295847}{pose\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{side__camera__transform_8cpp_a04a588f784580f203e111c812785a598}{gym\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+geometry\+\_\+msgs\+::\+Point\+Stamped \mbox{\hyperlink{side__camera__transform_8cpp_a17625dc0c8e277b4c0012dfe9caf76bf}{pixel2metric\+\_\+facedown}} (double alt, vector$<$ double $>$ obj\+\_\+pix, \mbox{\hyperlink{structorientation}{orientation}} camparam\+Of\+Frame)
+\item 
+void \mbox{\hyperlink{side__camera__transform_8cpp_a4440685cfdd3290c7741e10f0b184713}{chatter\+Callback}} (const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{side__camera__transform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}{center\+Point}} (const darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes\+::\+Const\+Ptr \&msg\+Box)
+\item 
+int \mbox{\hyperlink{side__camera__transform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{side__camera__transform_8cpp_a2dd51e03005d5cb52315290d27f61870}{W}} = 1000
+\item 
+int \mbox{\hyperlink{side__camera__transform_8cpp_ab66cdad03ba8402b9965242fd4462a42}{gridM}} = 20
+\item 
+const double \mbox{\hyperlink{side__camera__transform_8cpp_a18a20b47f9ea772d8b34ed5dcd3d8b38}{P\+H\+I\+\_\+Y}} = (32.\+751868$\ast$M\+\_\+\+PI/180)
+\item 
+const double \mbox{\hyperlink{side__camera__transform_8cpp_ae08ebb725fe5add31bcc0004e5ee0265}{P\+H\+I\+\_\+X}} = (43.\+08195$\ast$M\+\_\+\+PI/180)
+\item 
+const double \mbox{\hyperlink{side__camera__transform_8cpp_a5673b9de5c7dbd6beb1af4ff9309007a}{P\+I\+X\+E\+LS}} \mbox{[}2\mbox{]} = \{640, 480\}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{side__camera__transform_8cpp_ab9674253569259608088097e713c6905}{current\+\_\+pose}}
+\item 
+std\+\_\+msgs\+::\+Float64 \mbox{\hyperlink{side__camera__transform_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}{gym\+Offset}}
+\item 
+transformations\+\_\+ros\+::objects \mbox{\hyperlink{side__camera__transform_8cpp_a7977c6d0d984ddd22e8ca18e681bfcd8}{roomba\+Positions1}}
+\item 
+sensor\+\_\+msgs\+::\+Imu \mbox{\hyperlink{side__camera__transform_8cpp_af4c1686b93c23e8b4b698c82c66845f4}{I\+MU}}
+\item 
+std\+\_\+msgs\+::\+Float64 \mbox{\hyperlink{side__camera__transform_8cpp_a789b24bd49a5da0f2134739639555add}{current\+\_\+heading}}
+\item 
+int \mbox{\hyperlink{side__camera__transform_8cpp_a3a3a09505e0160ff8f3f7c83a7088474}{num\+Of\+Cams\+\_\+g}} = 0
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structorientation}{orientation}} $>$ \mbox{\hyperlink{side__camera__transform_8cpp_a42d80fafd96db5d880fb9d96c003deeb}{cam\+\_\+params\+\_\+g}}
+\item 
+\mbox{\hyperlink{structorientation}{orientation}} \mbox{\hyperlink{side__camera__transform_8cpp_a50f2508e91eba0e81671984ac79e7e08}{current\+\_\+orientation}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{side__camera__transform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}\label{side__camera__transform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!centerPoint@{centerPoint}}
+\index{centerPoint@{centerPoint}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{centerPoint()}{centerPoint()}}
+{\footnotesize\ttfamily void center\+Point (\begin{DoxyParamCaption}\item[{const darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes\+::\+Const\+Ptr \&}]{msg\+Box }\end{DoxyParamCaption})}
+
+
+
+Definition at line 195 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a4440685cfdd3290c7741e10f0b184713}\label{side__camera__transform_8cpp_a4440685cfdd3290c7741e10f0b184713}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!chatterCallback@{chatterCallback}}
+\index{chatterCallback@{chatterCallback}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{chatterCallback()}{chatterCallback()}}
+{\footnotesize\ttfamily void chatter\+Callback (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 190 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a7a00feeb1581fbd831b45d299463934a}\label{side__camera__transform_8cpp_a7a00feeb1581fbd831b45d299463934a}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!enu\_2\_gym@{enu\_2\_gym}}
+\index{enu\_2\_gym@{enu\_2\_gym}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{enu\_2\_gym()}{enu\_2\_gym()}}
+{\footnotesize\ttfamily void enu\+\_\+2\+\_\+gym (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Odometry}]{current\+\_\+pose\+\_\+enu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a04a588f784580f203e111c812785a598}\label{side__camera__transform_8cpp_a04a588f784580f203e111c812785a598}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!gym\_cb@{gym\_cb}}
+\index{gym\_cb@{gym\_cb}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{gym\_cb()}{gym\_cb()}}
+{\footnotesize\ttfamily void gym\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a85853a76977344d78280db3faca9aa80}\label{side__camera__transform_8cpp_a85853a76977344d78280db3faca9aa80}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!heading\_cb@{heading\_cb}}
+\index{heading\_cb@{heading\_cb}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{heading\_cb()}{heading\_cb()}}
+{\footnotesize\ttfamily void heading\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_ac40976daacdbe2fb876080a30cd74651}\label{side__camera__transform_8cpp_ac40976daacdbe2fb876080a30cd74651}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!imu\_cb@{imu\_cb}}
+\index{imu\_cb@{imu\_cb}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{imu\_cb()}{imu\_cb()}}
+{\footnotesize\ttfamily void imu\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Imu\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{side__camera__transform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!main@{main}}
+\index{main@{main}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 251 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a17625dc0c8e277b4c0012dfe9caf76bf}\label{side__camera__transform_8cpp_a17625dc0c8e277b4c0012dfe9caf76bf}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!pixel2metric\_facedown@{pixel2metric\_facedown}}
+\index{pixel2metric\_facedown@{pixel2metric\_facedown}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{pixel2metric\_facedown()}{pixel2metric\_facedown()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Point\+Stamped pixel2metric\+\_\+facedown (\begin{DoxyParamCaption}\item[{double}]{alt,  }\item[{vector$<$ double $>$}]{obj\+\_\+pix,  }\item[{\mbox{\hyperlink{structorientation}{orientation}}}]{camparam\+Of\+Frame }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_afa0f9061a6152b26289dd2c93b295847}\label{side__camera__transform_8cpp_afa0f9061a6152b26289dd2c93b295847}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{side__camera__transform_8cpp_a42d80fafd96db5d880fb9d96c003deeb}\label{side__camera__transform_8cpp_a42d80fafd96db5d880fb9d96c003deeb}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!cam\_params\_g@{cam\_params\_g}}
+\index{cam\_params\_g@{cam\_params\_g}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{cam\_params\_g}{cam\_params\_g}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structorientation}{orientation}}$>$ cam\+\_\+params\+\_\+g}
+
+
+
+Definition at line 50 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a789b24bd49a5da0f2134739639555add}\label{side__camera__transform_8cpp_a789b24bd49a5da0f2134739639555add}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!current\_heading@{current\_heading}}
+\index{current\_heading@{current\_heading}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{current\_heading}{current\_heading}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Float64 current\+\_\+heading}
+
+
+
+Definition at line 40 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a50f2508e91eba0e81671984ac79e7e08}\label{side__camera__transform_8cpp_a50f2508e91eba0e81671984ac79e7e08}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!current\_orientation@{current\_orientation}}
+\index{current\_orientation@{current\_orientation}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{current\_orientation}{current\_orientation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structorientation}{orientation}} current\+\_\+orientation}
+
+
+
+Definition at line 51 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_ab9674253569259608088097e713c6905}\label{side__camera__transform_8cpp_ab9674253569259608088097e713c6905}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry current\+\_\+pose}
+
+
+
+Definition at line 36 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_ab66cdad03ba8402b9965242fd4462a42}\label{side__camera__transform_8cpp_ab66cdad03ba8402b9965242fd4462a42}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!gridM@{gridM}}
+\index{gridM@{gridM}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{gridM}{gridM}}
+{\footnotesize\ttfamily int gridM = 20}
+
+
+
+Definition at line 24 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}\label{side__camera__transform_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!gymOffset@{gymOffset}}
+\index{gymOffset@{gymOffset}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{gymOffset}{gymOffset}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Float64 gym\+Offset}
+
+
+
+Definition at line 37 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_af4c1686b93c23e8b4b698c82c66845f4}\label{side__camera__transform_8cpp_af4c1686b93c23e8b4b698c82c66845f4}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!IMU@{IMU}}
+\index{IMU@{IMU}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{IMU}{IMU}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Imu I\+MU}
+
+
+
+Definition at line 39 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a3a3a09505e0160ff8f3f7c83a7088474}\label{side__camera__transform_8cpp_a3a3a09505e0160ff8f3f7c83a7088474}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!numOfCams\_g@{numOfCams\_g}}
+\index{numOfCams\_g@{numOfCams\_g}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{numOfCams\_g}{numOfCams\_g}}
+{\footnotesize\ttfamily int num\+Of\+Cams\+\_\+g = 0}
+
+
+
+Definition at line 41 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_ae08ebb725fe5add31bcc0004e5ee0265}\label{side__camera__transform_8cpp_ae08ebb725fe5add31bcc0004e5ee0265}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!PHI\_X@{PHI\_X}}
+\index{PHI\_X@{PHI\_X}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{PHI\_X}{PHI\_X}}
+{\footnotesize\ttfamily const double P\+H\+I\+\_\+X = (43.\+08195$\ast$M\+\_\+\+PI/180)}
+
+
+
+Definition at line 30 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a18a20b47f9ea772d8b34ed5dcd3d8b38}\label{side__camera__transform_8cpp_a18a20b47f9ea772d8b34ed5dcd3d8b38}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!PHI\_Y@{PHI\_Y}}
+\index{PHI\_Y@{PHI\_Y}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{PHI\_Y}{PHI\_Y}}
+{\footnotesize\ttfamily const double P\+H\+I\+\_\+Y = (32.\+751868$\ast$M\+\_\+\+PI/180)}
+
+
+
+Definition at line 28 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a5673b9de5c7dbd6beb1af4ff9309007a}\label{side__camera__transform_8cpp_a5673b9de5c7dbd6beb1af4ff9309007a}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!PIXELS@{PIXELS}}
+\index{PIXELS@{PIXELS}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{PIXELS}{PIXELS}}
+{\footnotesize\ttfamily const double P\+I\+X\+E\+LS\mbox{[}2\mbox{]} = \{640, 480\}}
+
+
+
+Definition at line 32 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a7977c6d0d984ddd22e8ca18e681bfcd8}\label{side__camera__transform_8cpp_a7977c6d0d984ddd22e8ca18e681bfcd8}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!roombaPositions1@{roombaPositions1}}
+\index{roombaPositions1@{roombaPositions1}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{roombaPositions1}{roombaPositions1}}
+{\footnotesize\ttfamily transformations\+\_\+ros\+::objects roomba\+Positions1}
+
+
+
+Definition at line 38 of file side\+\_\+camera\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{side__camera__transform_8cpp_a2dd51e03005d5cb52315290d27f61870}\label{side__camera__transform_8cpp_a2dd51e03005d5cb52315290d27f61870}} 
+\index{side\_camera\_transform.cpp@{side\_camera\_transform.cpp}!W@{W}}
+\index{W@{W}!side\_camera\_transform.cpp@{side\_camera\_transform.cpp}}
+\subsubsection{\texorpdfstring{W}{W}}
+{\footnotesize\ttfamily int W = 1000}
+
+
+
+Definition at line 23 of file side\+\_\+camera\+\_\+transform.\+cpp.
+

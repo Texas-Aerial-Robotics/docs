@@ -1,0 +1,38 @@
+\hypertarget{structmavros_1_1std__plugins_1_1FTPRequest_1_1PayloadHeader}{}\section{mavros\+::std\+\_\+plugins\+::F\+T\+P\+Request\+::Payload\+Header Struct Reference}
+\label{structmavros_1_1std__plugins_1_1FTPRequest_1_1PayloadHeader}\index{mavros::std\_plugins::FTPRequest::PayloadHeader@{mavros::std\_plugins::FTPRequest::PayloadHeader}}
+
+
+This is the payload which is in mavlink\+\_\+file\+\_\+transfer\+\_\+protocol\+\_\+t.\+payload. We pad the structure ourselves to 32 bit alignment to avoid usage of any pack pragmas.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__plugin_ga0bde534b62af463e4deeba5c0810dc9f}{seq\+Number}}
+\begin{DoxyCompactList}\small\item\em sequence number for message \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_ga1209ac70809aacaac73c8213101abee0}{session}}
+\begin{DoxyCompactList}\small\item\em Session id for read and write commands. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_ga340cfea8909b60e37e878965187fc278}{opcode}}
+\begin{DoxyCompactList}\small\item\em Command opcode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_gaadeefe030ed0876e8f2d9d5a8b31eec8}{size}}
+\begin{DoxyCompactList}\small\item\em Size of data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_gabaad85a3fcad787b3090475a09c9a0d2}{req\+\_\+opcode}}
+\begin{DoxyCompactList}\small\item\em Request opcode returned in k\+Rsp\+Ack, k\+Rsp\+Nak message. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_ga25e7938240c0066274c19308b8dbbf9a}{padding}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em 32 bit aligment padding \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__plugin_gad3b592e2842b6992de35f68befe7b068}{offset}}
+\begin{DoxyCompactList}\small\item\em Offsets for List and Read commands. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_gafd17454ffa66cafc1bf7b4a8d4b82961}{data}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em command data, varies by Opcode \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the payload which is in mavlink\+\_\+file\+\_\+transfer\+\_\+protocol\+\_\+t.\+payload. We pad the structure ourselves to 32 bit alignment to avoid usage of any pack pragmas. 
+
+Definition at line 52 of file ftp.\+cpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/plugins/\mbox{\hyperlink{ftp_8cpp}{ftp.\+cpp}}\end{DoxyCompactItemize}

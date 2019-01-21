@@ -1,0 +1,79 @@
+\hypertarget{classmavros_1_1std__plugins_1_1Parameter}{}\section{mavros\+::std\+\_\+plugins\+::Parameter Class Reference}
+\label{classmavros_1_1std__plugins_1_1Parameter}\index{mavros::std\_plugins::Parameter@{mavros::std\_plugins::Parameter}}
+
+
+\mbox{\hyperlink{classmavros_1_1std__plugins_1_1Parameter}{Parameter}} storage.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__plugin_ga7d57778649dff1fd8c9aaf2599ff5238}{MT}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+PE
+\item 
+using \mbox{\hyperlink{group__plugin_gaa94f933e0249802ee1985cb650408c31}{P\+A\+R\+A\+M\+\_\+\+S\+ET}} = mavlink\+::common\+::msg\+::\+P\+A\+R\+A\+M\+\_\+\+S\+ET
+\item 
+using \mbox{\hyperlink{group__plugin_gafe570e1ad21e55964c02084e1a485c92}{Xml\+Rpc\+Value}} = Xml\+Rpc\+::\+Xml\+Rpc\+Value
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__plugin_gaacaefc75948fab6cb140c8fbe6a9398e}{set\+\_\+value}} (mavlink\+::common\+::msg\+::\+P\+A\+R\+A\+M\+\_\+\+V\+A\+L\+UE \&pmsg)
+\item 
+void \mbox{\hyperlink{group__plugin_ga3dbec960ba82630bd31abb9dcca666c8}{set\+\_\+value\+\_\+apm\+\_\+quirk}} (mavlink\+::common\+::msg\+::\+P\+A\+R\+A\+M\+\_\+\+V\+A\+L\+UE \&pmsg)
+\item 
+\mbox{\hyperlink{group__plugin_gaa94f933e0249802ee1985cb650408c31}{P\+A\+R\+A\+M\+\_\+\+S\+ET}} \mbox{\hyperlink{group__plugin_ga4b2fdb771fa5acf1f2ec5224636f603f}{to\+\_\+param\+\_\+set}} ()
+\begin{DoxyCompactList}\small\item\em Make P\+A\+R\+A\+M\+\_\+\+S\+ET message. Set target ids manually! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__plugin_gaa94f933e0249802ee1985cb650408c31}{P\+A\+R\+A\+M\+\_\+\+S\+ET}} \mbox{\hyperlink{group__plugin_gac1ad9cfef5618f54cf828438bb98cb03}{to\+\_\+param\+\_\+set\+\_\+apm\+\_\+qurk}} ()
+\begin{DoxyCompactList}\small\item\em Make P\+A\+R\+A\+M\+\_\+\+S\+ET message. Set target ids manually! \end{DoxyCompactList}\item 
+int64\+\_\+t \mbox{\hyperlink{group__plugin_gae72d53f3c84fe6c018f95d55510f78b8}{to\+\_\+integer}} ()
+\item 
+double \mbox{\hyperlink{group__plugin_ga687f8cff04b669b9d15aacd19ec0af23}{to\+\_\+real}} ()
+\item 
+std\+::string \mbox{\hyperlink{group__plugin_ga37cec503b8ebce4ccf83c34b3cc1a5c3}{to\+\_\+string}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{group__plugin_ga90b347f43583c077d87ec34b7bfb7164}{check\+\_\+exclude\+\_\+param\+\_\+id}} (std\+::string \mbox{\hyperlink{group__plugin_ga6e9b1d000a31b2ca2773ff03c28980da}{param\+\_\+id}})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{group__plugin_ga6e9b1d000a31b2ca2773ff03c28980da}{param\+\_\+id}}
+\item 
+\mbox{\hyperlink{group__plugin_gafe570e1ad21e55964c02084e1a485c92}{Xml\+Rpc\+Value}} \mbox{\hyperlink{group__plugin_ga91eae662f2d0f3b1a796940ab770c9f2}{param\+\_\+value}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__plugin_ga531408831574f2bcf7311ddae08a1b1e}{param\+\_\+index}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__plugin_ga962048d830e7dea388e9c9956e1a5b1b}{param\+\_\+count}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classmavros_1_1std__plugins_1_1Parameter}{Parameter}} storage. 
+
+Stores parameter value.
+
+A\+PM uses\+:
+\begin{DoxyItemize}
+\item int8 (primary for bools)
+\item int16 ???
+\item int32 for int\textquotesingle{}s
+\item real32 for float\textquotesingle{}s
+\end{DoxyItemize}
+
+P\+X4\+:
+\begin{DoxyItemize}
+\item int32 for int\textquotesingle{}s
+\item real32 for float\textquotesingle{}s
+\end{DoxyItemize}
+
+So no reason to really use boost\+::any. But feel free to fire an issue if your AP do not like it. 
+
+Definition at line 48 of file param.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/plugins/\mbox{\hyperlink{param_8cpp}{param.\+cpp}}\end{DoxyCompactItemize}

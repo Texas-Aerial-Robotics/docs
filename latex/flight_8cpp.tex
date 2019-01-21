@@ -1,0 +1,162 @@
+\hypertarget{flight_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Mission8\+\_\+\+Out\+Of\+Controls/src/flight.cpp File Reference}
+\label{flight_8cpp}\index{/home/eric/catkin\_ws/src/Mission8\_OutOfControls/src/flight.cpp@{/home/eric/catkin\_ws/src/Mission8\_OutOfControls/src/flight.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Float64.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+Bool.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Set\+Mode.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+State.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Position\+Target.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose2\+D.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+T\+O\+L.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ros/duration.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{flight_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}{state\+\_\+cb}} (const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{flight_8cpp_a8a016ae63cb84f9f8b2f440ba33aa729}{pose\+\_\+cb}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{flight_8cpp_a85853a76977344d78280db3faca9aa80}{heading\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{flight_8cpp_a9c3baea5ae305330b4692ba0f8b23869}{set\+Heading}} (float heading)
+\item 
+void \mbox{\hyperlink{flight_8cpp_af7166d52af865f29695cb0746d47918e}{set\+Destination}} (float x, float y, float z)
+\item 
+int \mbox{\hyperlink{flight_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mavros\+\_\+msgs\+::\+State \mbox{\hyperlink{flight_8cpp_aa03a6f341db74b895fa5c862973dd941}{current\+\_\+state}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{flight_8cpp_abd2869bcb1ae0d4d93896909e70930e7}{current\+\_\+pose}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{flight_8cpp_aeae70abce814c854b8bf3c2c1dea5d40}{pose}}
+\item 
+std\+\_\+msgs\+::\+Float64 \mbox{\hyperlink{flight_8cpp_a789b24bd49a5da0f2134739639555add}{current\+\_\+heading}}
+\item 
+float \mbox{\hyperlink{flight_8cpp_a1bfd9feb2dd11b3f55fa3f191f021115}{G\+Y\+M\+\_\+\+O\+F\+F\+S\+ET}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{flight_8cpp_a85853a76977344d78280db3faca9aa80}\label{flight_8cpp_a85853a76977344d78280db3faca9aa80}} 
+\index{flight.cpp@{flight.cpp}!heading\_cb@{heading\_cb}}
+\index{heading\_cb@{heading\_cb}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{heading\_cb()}{heading\_cb()}}
+{\footnotesize\ttfamily void heading\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{flight_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{flight.cpp@{flight.cpp}!main@{main}}
+\index{main@{main}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_a8a016ae63cb84f9f8b2f440ba33aa729}\label{flight_8cpp_a8a016ae63cb84f9f8b2f440ba33aa729}} 
+\index{flight.cpp@{flight.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_af7166d52af865f29695cb0746d47918e}\label{flight_8cpp_af7166d52af865f29695cb0746d47918e}} 
+\index{flight.cpp@{flight.cpp}!setDestination@{setDestination}}
+\index{setDestination@{setDestination}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{setDestination()}{setDestination()}}
+{\footnotesize\ttfamily void set\+Destination (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_a9c3baea5ae305330b4692ba0f8b23869}\label{flight_8cpp_a9c3baea5ae305330b4692ba0f8b23869}} 
+\index{flight.cpp@{flight.cpp}!setHeading@{setHeading}}
+\index{setHeading@{setHeading}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{setHeading()}{setHeading()}}
+{\footnotesize\ttfamily void set\+Heading (\begin{DoxyParamCaption}\item[{float}]{heading }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}\label{flight_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}} 
+\index{flight.cpp@{flight.cpp}!state\_cb@{state\_cb}}
+\index{state\_cb@{state\_cb}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{state\_cb()}{state\_cb()}}
+{\footnotesize\ttfamily void state\+\_\+cb (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file flight.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{flight_8cpp_a789b24bd49a5da0f2134739639555add}\label{flight_8cpp_a789b24bd49a5da0f2134739639555add}} 
+\index{flight.cpp@{flight.cpp}!current\_heading@{current\_heading}}
+\index{current\_heading@{current\_heading}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{current\_heading}{current\_heading}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Float64 current\+\_\+heading}
+
+
+
+Definition at line 25 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_abd2869bcb1ae0d4d93896909e70930e7}\label{flight_8cpp_abd2869bcb1ae0d4d93896909e70930e7}} 
+\index{flight.cpp@{flight.cpp}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped current\+\_\+pose}
+
+
+
+Definition at line 23 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_aa03a6f341db74b895fa5c862973dd941}\label{flight_8cpp_aa03a6f341db74b895fa5c862973dd941}} 
+\index{flight.cpp@{flight.cpp}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily mavros\+\_\+msgs\+::\+State current\+\_\+state}
+
+
+
+Definition at line 21 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_a1bfd9feb2dd11b3f55fa3f191f021115}\label{flight_8cpp_a1bfd9feb2dd11b3f55fa3f191f021115}} 
+\index{flight.cpp@{flight.cpp}!GYM\_OFFSET@{GYM\_OFFSET}}
+\index{GYM\_OFFSET@{GYM\_OFFSET}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{GYM\_OFFSET}{GYM\_OFFSET}}
+{\footnotesize\ttfamily float G\+Y\+M\+\_\+\+O\+F\+F\+S\+ET}
+
+
+
+Definition at line 26 of file flight.\+cpp.
+
+\mbox{\Hypertarget{flight_8cpp_aeae70abce814c854b8bf3c2c1dea5d40}\label{flight_8cpp_aeae70abce814c854b8bf3c2c1dea5d40}} 
+\index{flight.cpp@{flight.cpp}!pose@{pose}}
+\index{pose@{pose}!flight.cpp@{flight.cpp}}
+\subsubsection{\texorpdfstring{pose}{pose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped pose}
+
+
+
+Definition at line 24 of file flight.\+cpp.
+

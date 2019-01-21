@@ -1,0 +1,39 @@
+\hypertarget{trajectory_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros\+\_\+extras/src/plugins/trajectory.cpp File Reference}
+\label{trajectory_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros\_extras/src/plugins/trajectory.cpp@{/home/eric/catkin\_ws/src/mavros/mavros\_extras/src/plugins/trajectory.cpp}}
+
+
+Trajectory plugin.  
+
+
+{\ttfamily \#include $<$mavros/mavros\+\_\+plugin.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Trajectory.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Position\+Target.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Path.\+h$>$}\newline
+{\ttfamily \#include $<$pluginlib/class\+\_\+list\+\_\+macros.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavros_1_1extra__plugins_1_1TrajectoryPlugin}{mavros\+::extra\+\_\+plugins\+::\+Trajectory\+Plugin}}
+\begin{DoxyCompactList}\small\item\em Trajectory plugin to receive planned path from the F\+CU and send back to the F\+CU a corrected path (collision free, smoothed) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1extra__plugins}{mavros\+::extra\+\_\+plugins}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__plugin_gafae91f0662f199848c074fd4d2edd106}{mavros\+::extra\+\_\+plugins\+::\+Mav\+Points}} = std\+::array$<$ float, N\+U\+M\+\_\+\+P\+O\+I\+N\+TS $>$
+\begin{DoxyCompactList}\small\item\em Type matching mavlink\+::common\+::msg\+::\+T\+R\+A\+J\+E\+C\+T\+O\+R\+Y\+::\+T\+R\+A\+J\+E\+C\+T\+O\+R\+Y\+\_\+\+R\+E\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+TS fields. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__plugin_ga93699d5632be3dfe1bb548ed5a0b4171}{mavros\+::extra\+\_\+plugins\+::\+Ros\+Points}} = mavros\+\_\+msgs\+::\+Position\+Target
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Trajectory plugin. 
+
+\begin{DoxyAuthor}{Author}
+Martina Rivizzigno \href{mailto:martina@rivizzigno.it}{\texttt{ martina@rivizzigno.\+it}} 
+\end{DoxyAuthor}

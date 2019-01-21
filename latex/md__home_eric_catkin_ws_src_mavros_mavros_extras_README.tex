@@ -1,0 +1,17 @@
+Some extra plugins and nodes for \href{https://github.com/mavlink/mavros}{\texttt{ mavros}}.
+
+\subsection*{servo\+\_\+state\+\_\+publisher }
+
+Convert {\ttfamily mavros\+\_\+msgs/\+R\+C\+Out} to {\ttfamily sensor\+\_\+msgs/\+Joint\+State} messages. It is required to bind U\+R\+DF model and real servos.
+
+\subsection*{px4flow }
+
+Plugin for mavros. Publish {\ttfamily O\+P\+T\+I\+C\+A\+L\+\_\+\+F\+L\+O\+W\+\_\+\+R\+AD} data.
+
+\subsection*{mocap\+\_\+pose\+\_\+estimate }
+
+Plugin for mavros, to send mocap data to F\+CU. Currently, not used by the F\+CU. Data can be send via {\ttfamily vision\+\_\+position} plugin.
+
+\subsection*{px-\/ros-\/pkg replacement }
+
+Use {\ttfamily roslaunch mavros\+\_\+extras px4flow.\+launch} for that. 

@@ -1,0 +1,182 @@
+\hypertarget{velTest_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Controls-\/\+R\+O\+S/src/vel\+Test.cpp File Reference}
+\label{velTest_8cpp}\index{/home/eric/catkin\_ws/src/Controls-\/ROS/src/velTest.cpp@{/home/eric/catkin\_ws/src/Controls-\/ROS/src/velTest.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+Bool.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Set\+Mode.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+State.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Position\+Target.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+T\+O\+L.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$ros/duration.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{velTest_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}{state\+\_\+cb}} (const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{velTest_8cpp_a5f57b5233443947728c3eb2d2dac6d06}{pose\+\_\+cb}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \mbox{\hyperlink{flight_8cpp_aeae70abce814c854b8bf3c2c1dea5d40}{pose}})
+\item 
+float \mbox{\hyperlink{velTest_8cpp_a846fc0af74d4d38f8c91bdb135b32864}{get\+\_\+distance}} (double x1, double y1, double z1, double x2, double y2, double z2)
+\item 
+bool \mbox{\hyperlink{velTest_8cpp_a5db420c38d13f5d69c707edab1cfa7fe}{go\+\_\+to\+\_\+position}} (ros\+::\+Node\+Handle $\ast$nh, float \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, float \mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})
+\item 
+bool \mbox{\hyperlink{velTest_8cpp_a113e8481dbf37f4952eaf45a17ab37bc}{go\+\_\+to\+\_\+position\+\_\+raw}} (ros\+::\+Node\+Handle $\ast$nh, float \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, float \mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}}, float velX, float velY, float velZ)
+\item 
+bool \mbox{\hyperlink{velTest_8cpp_a18d100dabf9d657ba189f25232191212}{go\+\_\+to\+\_\+position\+\_\+pid}} (ros\+::\+Node\+Handle $\ast$nh, float \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, float \mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})
+\item 
+int \mbox{\hyperlink{velTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mavros\+\_\+msgs\+::\+State \mbox{\hyperlink{velTest_8cpp_aa03a6f341db74b895fa5c862973dd941}{current\+\_\+state}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{velTest_8cpp_abd2869bcb1ae0d4d93896909e70930e7}{current\+\_\+pose}}
+\item 
+const float \mbox{\hyperlink{velTest_8cpp_a11ea7bf94fd8a46511b090dea365f816}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}} = 1
+\item 
+const float \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}} = 1.\+0f
+\item 
+const float \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}} = 0.\+0f
+\item 
+const float \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{velTest_8cpp_a846fc0af74d4d38f8c91bdb135b32864}\label{velTest_8cpp_a846fc0af74d4d38f8c91bdb135b32864}} 
+\index{velTest.cpp@{velTest.cpp}!get\_distance@{get\_distance}}
+\index{get\_distance@{get\_distance}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{get\_distance()}{get\_distance()}}
+{\footnotesize\ttfamily float get\+\_\+distance (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{z1,  }\item[{double}]{x2,  }\item[{double}]{y2,  }\item[{double}]{z2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a5db420c38d13f5d69c707edab1cfa7fe}\label{velTest_8cpp_a5db420c38d13f5d69c707edab1cfa7fe}} 
+\index{velTest.cpp@{velTest.cpp}!go\_to\_position@{go\_to\_position}}
+\index{go\_to\_position@{go\_to\_position}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{go\_to\_position()}{go\_to\_position()}}
+{\footnotesize\ttfamily bool go\+\_\+to\+\_\+position (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle $\ast$}]{nh,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a18d100dabf9d657ba189f25232191212}\label{velTest_8cpp_a18d100dabf9d657ba189f25232191212}} 
+\index{velTest.cpp@{velTest.cpp}!go\_to\_position\_pid@{go\_to\_position\_pid}}
+\index{go\_to\_position\_pid@{go\_to\_position\_pid}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{go\_to\_position\_pid()}{go\_to\_position\_pid()}}
+{\footnotesize\ttfamily bool go\+\_\+to\+\_\+position\+\_\+pid (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle $\ast$}]{nh,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line 120 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a113e8481dbf37f4952eaf45a17ab37bc}\label{velTest_8cpp_a113e8481dbf37f4952eaf45a17ab37bc}} 
+\index{velTest.cpp@{velTest.cpp}!go\_to\_position\_raw@{go\_to\_position\_raw}}
+\index{go\_to\_position\_raw@{go\_to\_position\_raw}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{go\_to\_position\_raw()}{go\_to\_position\_raw()}}
+{\footnotesize\ttfamily bool go\+\_\+to\+\_\+position\+\_\+raw (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle $\ast$}]{nh,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{velX,  }\item[{float}]{velY,  }\item[{float}]{velZ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 79 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{velTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{velTest.cpp@{velTest.cpp}!main@{main}}
+\index{main@{main}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a5f57b5233443947728c3eb2d2dac6d06}\label{velTest_8cpp_a5f57b5233443947728c3eb2d2dac6d06}} 
+\index{velTest.cpp@{velTest.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr}]{pose }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}\label{velTest_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}} 
+\index{velTest.cpp@{velTest.cpp}!state\_cb@{state\_cb}}
+\index{state\_cb@{state\_cb}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{state\_cb()}{state\_cb()}}
+{\footnotesize\ttfamily void state\+\_\+cb (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file vel\+Test.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{velTest_8cpp_abd2869bcb1ae0d4d93896909e70930e7}\label{velTest_8cpp_abd2869bcb1ae0d4d93896909e70930e7}} 
+\index{velTest.cpp@{velTest.cpp}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped current\+\_\+pose}
+
+
+
+Definition at line 21 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_aa03a6f341db74b895fa5c862973dd941}\label{velTest_8cpp_aa03a6f341db74b895fa5c862973dd941}} 
+\index{velTest.cpp@{velTest.cpp}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily mavros\+\_\+msgs\+::\+State current\+\_\+state}
+
+
+
+Definition at line 20 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}\label{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}} 
+\index{velTest.cpp@{velTest.cpp}!d@{d}}
+\index{d@{d}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily const float d = 0.\+0f}
+
+
+
+Definition at line 27 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}\label{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}} 
+\index{velTest.cpp@{velTest.cpp}!i@{i}}
+\index{i@{i}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily const float i = 0.\+0f}
+
+
+
+Definition at line 26 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}\label{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}} 
+\index{velTest.cpp@{velTest.cpp}!p@{p}}
+\index{p@{p}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily const float p = 1.\+0f}
+
+
+
+Definition at line 25 of file vel\+Test.\+cpp.
+
+\mbox{\Hypertarget{velTest_8cpp_a11ea7bf94fd8a46511b090dea365f816}\label{velTest_8cpp_a11ea7bf94fd8a46511b090dea365f816}} 
+\index{velTest.cpp@{velTest.cpp}!POSITION\_TOLERANCE@{POSITION\_TOLERANCE}}
+\index{POSITION\_TOLERANCE@{POSITION\_TOLERANCE}!velTest.cpp@{velTest.cpp}}
+\subsubsection{\texorpdfstring{POSITION\_TOLERANCE}{POSITION\_TOLERANCE}}
+{\footnotesize\ttfamily const float P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE = 1}
+
+
+
+Definition at line 23 of file vel\+Test.\+cpp.
+

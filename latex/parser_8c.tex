@@ -1,0 +1,641 @@
+\hypertarget{parser_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/parser.c File Reference}
+\label{parser_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/parser.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/parser.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}activation\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logistic\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}l2norm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}avgpool\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}batchnorm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connected\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}deconvolutional\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}convolutional\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cost\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crnn\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crop\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detection\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dropout\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gru\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}local\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}maxpool\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}normalization\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}option\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}region\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}yolo\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reorg\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rnn\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}route\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}upsample\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shortcut\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}softmax\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lstm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsection}{section}}
+\item 
+struct \mbox{\hyperlink{structsize__params}{size\+\_\+params}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structsize__params}{size\+\_\+params}} \mbox{\hyperlink{parser_8c_acdd170d61db42ca186611fc257900947}{size\+\_\+params}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{parser_8c_aa7c8fda2a12e7c5c7d23ec9ab96b9eb3}{read\+\_\+cfg}} (char $\ast$filename)
+\item 
+\mbox{\hyperlink{darknet_8h_a5f7e99058765b058df158c099200b154}{L\+A\+Y\+E\+R\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{parser_8c_a990806ef35cd5caa481e2c9bb93442a9}{string\+\_\+to\+\_\+layer\+\_\+type}} (char $\ast$type)
+\item 
+void \mbox{\hyperlink{parser_8c_a97c3da45ea6b7b689493efb262b35de8}{free\+\_\+section}} (\mbox{\hyperlink{structsection}{section}} $\ast$s)
+\item 
+void \mbox{\hyperlink{parser_8c_aa7de52e3912846e2e40682d903fa4932}{parse\+\_\+data}} (char $\ast$\mbox{\hyperlink{structdata}{data}}, float $\ast$a, int n)
+\item 
+\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} \mbox{\hyperlink{parser_8c_ae36102ed30d5b253ec3c58df3192c771}{parse\+\_\+local}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a7ad1750e2fb2e9403fa68f21a2c62c28}{parse\+\_\+deconvolutional}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} \mbox{\hyperlink{parser_8c_a471db4c53b8d77ab23576fe4c6856d3f}{parse\+\_\+convolutional}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a4e1046e1d1d1030ad9f473d9b930f2a0}{parse\+\_\+crnn}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a5504899aea1400dbc33dba8eac459460}{parse\+\_\+rnn}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_af8d59a4d921f3c03b0977d39feb14ced}{parse\+\_\+gru}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a2a5f4c8838a5a8176a401fe5514ef784}{parse\+\_\+lstm}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_ae605a8b185ee74d1e7d1fd9b761bda39}{parse\+\_\+connected}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}} \mbox{\hyperlink{parser_8c_a1f908ce65d9b8a102e754f61f00882b3}{parse\+\_\+softmax}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+int $\ast$ \mbox{\hyperlink{parser_8c_a701a3ad8a40932cc3831ba0d3b2b7ed6}{parse\+\_\+yolo\+\_\+mask}} (char $\ast$a, int $\ast$num)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a4a865d811f9e58c51fe92203f30cf159}{parse\+\_\+yolo}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_afedfffed817f89349b250c4afe09041c}{parse\+\_\+region}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}} \mbox{\hyperlink{parser_8c_ab5cfcdcccf8d8f3fa5f46d4528a70cab}{parse\+\_\+detection}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} \mbox{\hyperlink{parser_8c_a853d2066af42522c1de3f97d0bc0ff29}{parse\+\_\+cost}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{crop__layer_8h_a425e27d714e5fc642fd2ac3a23eed138}{crop\+\_\+layer}} \mbox{\hyperlink{parser_8c_a8d1bd90ea4beb8fc3069999af7f4448f}{parse\+\_\+crop}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a934cdac39f052fe5f89407b9c99e729e}{parse\+\_\+reorg}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} \mbox{\hyperlink{parser_8c_abef6e6b93a1c7ba7aef41bf2b95e9d27}{parse\+\_\+maxpool}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} \mbox{\hyperlink{parser_8c_ad30661bf80ffee22a45132dbcd53043d}{parse\+\_\+avgpool}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} \mbox{\hyperlink{parser_8c_acd4507a8980581f176f52500997f32ed}{parse\+\_\+dropout}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a070f2ff614c49ca43151b17082372374}{parse\+\_\+normalization}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a912380cd9e2ee925a2e0af57cbde0511}{parse\+\_\+batchnorm}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_ae7fc57df3338c2b57b6e6ae7ffb0f7f1}{parse\+\_\+shortcut}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params, \mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a41585ea2c341b260918374dd8d753bb9}{parse\+\_\+l2norm}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a8a6bd099d7ca6f1868ac5510690c336d}{parse\+\_\+logistic}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_aa6d3ed6372d755d53624f85c06da7dbe}{parse\+\_\+activation}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{parser_8c_a1740a85de99684ef8fb3b22cbdd1835f}{parse\+\_\+upsample}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params, \mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+\mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} \mbox{\hyperlink{parser_8c_a088e8aab5c2cab4739a3de6ea0f26b2c}{parse\+\_\+route}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structsize__params}{size\+\_\+params}} params, \mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+\mbox{\hyperlink{darknet_8h_a9c2ce38711c59085616b738d2aa21184}{learning\+\_\+rate\+\_\+policy}} \mbox{\hyperlink{parser_8c_a847f40459df9253d6f495cc2c05287bb}{get\+\_\+policy}} (char $\ast$s)
+\item 
+void \mbox{\hyperlink{parser_8c_a21c6f7046fcd48a8cfd74c23fcf944ca}{parse\+\_\+net\+\_\+options}} (\mbox{\hyperlink{structlist}{list}} $\ast$options, \mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+int \mbox{\hyperlink{parser_8c_ad1828ac8171ebfd2b0810efb68a892d8}{is\+\_\+network}} (\mbox{\hyperlink{structsection}{section}} $\ast$s)
+\item 
+\mbox{\hyperlink{structnetwork}{network}} $\ast$ \mbox{\hyperlink{parser_8c_ac5d6f5c442a05689da2d50f177aa729e}{parse\+\_\+network\+\_\+cfg}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{parser_8c_ac83e4fda654eeafa6f1c341029c93f9b}{save\+\_\+convolutional\+\_\+weights\+\_\+binary}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{parser_8c_a5cdde81bd0215925a9e0d4aad0db098b}{save\+\_\+convolutional\+\_\+weights}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{parser_8c_a5cec060b47d3c4f5822a666a902fb1d9}{save\+\_\+batchnorm\+\_\+weights}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{parser_8c_a4bcb2cbd7ce4ef62a68da04f8b171c99}{save\+\_\+connected\+\_\+weights}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{parser_8c_ada6e85f094c813f01a04e691d6c23efb}{save\+\_\+weights\+\_\+upto}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, char $\ast$filename, int cutoff)
+\item 
+void \mbox{\hyperlink{parser_8c_afd862388b9780b6382a384241bf21757}{save\+\_\+weights}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, char $\ast$filename)
+\item 
+void \mbox{\hyperlink{parser_8c_ab87f0cb2dad80a204b7bc1160c07fcf4}{transpose\+\_\+matrix}} (float $\ast$a, int rows, int cols)
+\item 
+void \mbox{\hyperlink{parser_8c_afc59a75157891b6b4d8f6f36184af64f}{load\+\_\+connected\+\_\+weights}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp, int transpose)
+\item 
+void \mbox{\hyperlink{parser_8c_a2b139ffba226eaf030476963db410e4d}{load\+\_\+batchnorm\+\_\+weights}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{parser_8c_a35fc9e550f1ff67379a66fa190cc467c}{load\+\_\+convolutional\+\_\+weights\+\_\+binary}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{parser_8c_a4d5bf1eb1a59e7d6a073b93ad6f42e5c}{load\+\_\+convolutional\+\_\+weights}} (\mbox{\hyperlink{structlayer}{layer}} l, F\+I\+LE $\ast$fp)
+\item 
+void \mbox{\hyperlink{parser_8c_abb17f71fa3838540cc5eff6492cce5e6}{load\+\_\+weights\+\_\+upto}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, char $\ast$filename, int start, int cutoff)
+\item 
+void \mbox{\hyperlink{parser_8c_a60957f4d236ea8e417999b1778ec3d55}{load\+\_\+weights}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{parser_8c_acdd170d61db42ca186611fc257900947}\label{parser_8c_acdd170d61db42ca186611fc257900947}} 
+\index{parser.c@{parser.c}!size\_params@{size\_params}}
+\index{size\_params@{size\_params}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{size\_params}{size\_params}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structsize__params}{size\+\_\+params}}  \mbox{\hyperlink{structsize__params}{size\+\_\+params}}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{parser_8c_a97c3da45ea6b7b689493efb262b35de8}\label{parser_8c_a97c3da45ea6b7b689493efb262b35de8}} 
+\index{parser.c@{parser.c}!free\_section@{free\_section}}
+\index{free\_section@{free\_section}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{free\_section()}{free\_section()}}
+{\footnotesize\ttfamily void free\+\_\+section (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsection}{section}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a847f40459df9253d6f495cc2c05287bb}\label{parser_8c_a847f40459df9253d6f495cc2c05287bb}} 
+\index{parser.c@{parser.c}!get\_policy@{get\_policy}}
+\index{get\_policy@{get\_policy}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{get\_policy()}{get\_policy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{darknet_8h_a9c2ce38711c59085616b738d2aa21184}{learning\+\_\+rate\+\_\+policy}} get\+\_\+policy (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 630 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ad1828ac8171ebfd2b0810efb68a892d8}\label{parser_8c_ad1828ac8171ebfd2b0810efb68a892d8}} 
+\index{parser.c@{parser.c}!is\_network@{is\_network}}
+\index{is\_network@{is\_network}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{is\_network()}{is\_network()}}
+{\footnotesize\ttfamily int is\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsection}{section}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 724 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a2b139ffba226eaf030476963db410e4d}\label{parser_8c_a2b139ffba226eaf030476963db410e4d}} 
+\index{parser.c@{parser.c}!load\_batchnorm\_weights@{load\_batchnorm\_weights}}
+\index{load\_batchnorm\_weights@{load\_batchnorm\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{load\_batchnorm\_weights()}{load\_batchnorm\_weights()}}
+{\footnotesize\ttfamily void load\+\_\+batchnorm\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1107 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_afc59a75157891b6b4d8f6f36184af64f}\label{parser_8c_afc59a75157891b6b4d8f6f36184af64f}} 
+\index{parser.c@{parser.c}!load\_connected\_weights@{load\_connected\_weights}}
+\index{load\_connected\_weights@{load\_connected\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{load\_connected\_weights()}{load\_connected\_weights()}}
+{\footnotesize\ttfamily void load\+\_\+connected\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{transpose }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1083 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a4d5bf1eb1a59e7d6a073b93ad6f42e5c}\label{parser_8c_a4d5bf1eb1a59e7d6a073b93ad6f42e5c}} 
+\index{parser.c@{parser.c}!load\_convolutional\_weights@{load\_convolutional\_weights}}
+\index{load\_convolutional\_weights@{load\_convolutional\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{load\_convolutional\_weights()}{load\_convolutional\_weights()}}
+{\footnotesize\ttfamily void load\+\_\+convolutional\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1149 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a35fc9e550f1ff67379a66fa190cc467c}\label{parser_8c_a35fc9e550f1ff67379a66fa190cc467c}} 
+\index{parser.c@{parser.c}!load\_convolutional\_weights\_binary@{load\_convolutional\_weights\_binary}}
+\index{load\_convolutional\_weights\_binary@{load\_convolutional\_weights\_binary}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{load\_convolutional\_weights\_binary()}{load\_convolutional\_weights\_binary()}}
+{\footnotesize\ttfamily void load\+\_\+convolutional\+\_\+weights\+\_\+binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1119 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a60957f4d236ea8e417999b1778ec3d55}\label{parser_8c_a60957f4d236ea8e417999b1778ec3d55}} 
+\index{parser.c@{parser.c}!load\_weights@{load\_weights}}
+\index{load\_weights@{load\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{load\_weights()}{load\_weights()}}
+{\footnotesize\ttfamily void load\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1292 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_abb17f71fa3838540cc5eff6492cce5e6}\label{parser_8c_abb17f71fa3838540cc5eff6492cce5e6}} 
+\index{parser.c@{parser.c}!load\_weights\_upto@{load\_weights\_upto}}
+\index{load\_weights\_upto@{load\_weights\_upto}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{load\_weights\_upto()}{load\_weights\_upto()}}
+{\footnotesize\ttfamily void load\+\_\+weights\+\_\+upto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{char $\ast$}]{filename,  }\item[{int}]{start,  }\item[{int}]{cutoff }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1202 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_aa6d3ed6372d755d53624f85c06da7dbe}\label{parser_8c_aa6d3ed6372d755d53624f85c06da7dbe}} 
+\index{parser.c@{parser.c}!parse\_activation@{parse\_activation}}
+\index{parse\_activation@{parse\_activation}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_activation()}{parse\_activation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+activation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 566 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ad30661bf80ffee22a45132dbcd53043d}\label{parser_8c_ad30661bf80ffee22a45132dbcd53043d}} 
+\index{parser.c@{parser.c}!parse\_avgpool@{parse\_avgpool}}
+\index{parse\_avgpool@{parse\_avgpool}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_avgpool()}{parse\_avgpool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} parse\+\_\+avgpool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 488 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a912380cd9e2ee925a2e0af57cbde0511}\label{parser_8c_a912380cd9e2ee925a2e0af57cbde0511}} 
+\index{parser.c@{parser.c}!parse\_batchnorm@{parse\_batchnorm}}
+\index{parse\_batchnorm@{parse\_batchnorm}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_batchnorm()}{parse\_batchnorm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+batchnorm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 521 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ae605a8b185ee74d1e7d1fd9b761bda39}\label{parser_8c_ae605a8b185ee74d1e7d1fd9b761bda39}} 
+\index{parser.c@{parser.c}!parse\_connected@{parse\_connected}}
+\index{parse\_connected@{parse\_connected}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_connected()}{parse\_connected()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+connected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 257 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a471db4c53b8d77ab23576fe4c6856d3f}\label{parser_8c_a471db4c53b8d77ab23576fe4c6856d3f}} 
+\index{parser.c@{parser.c}!parse\_convolutional@{parse\_convolutional}}
+\index{parse\_convolutional@{parse\_convolutional}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_convolutional()}{parse\_convolutional()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} parse\+\_\+convolutional (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a853d2066af42522c1de3f97d0bc0ff29}\label{parser_8c_a853d2066af42522c1de3f97d0bc0ff29}} 
+\index{parser.c@{parser.c}!parse\_cost@{parse\_cost}}
+\index{parse\_cost@{parse\_cost}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_cost()}{parse\_cost()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} parse\+\_\+cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 417 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a4e1046e1d1d1030ad9f473d9b930f2a0}\label{parser_8c_a4e1046e1d1d1030ad9f473d9b930f2a0}} 
+\index{parser.c@{parser.c}!parse\_crnn@{parse\_crnn}}
+\index{parse\_crnn@{parse\_crnn}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_crnn()}{parse\_crnn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+crnn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 207 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a8d1bd90ea4beb8fc3069999af7f4448f}\label{parser_8c_a8d1bd90ea4beb8fc3069999af7f4448f}} 
+\index{parser.c@{parser.c}!parse\_crop@{parse\_crop}}
+\index{parse\_crop@{parse\_crop}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_crop()}{parse\_crop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{crop__layer_8h_a425e27d714e5fc642fd2ac3a23eed138}{crop\+\_\+layer}} parse\+\_\+crop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 429 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_aa7de52e3912846e2e40682d903fa4932}\label{parser_8c_aa7de52e3912846e2e40682d903fa4932}} 
+\index{parser.c@{parser.c}!parse\_data@{parse\_data}}
+\index{parse\_data@{parse\_data}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_data()}{parse\_data()}}
+{\footnotesize\ttfamily void parse\+\_\+data (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a7ad1750e2fb2e9403fa68f21a2c62c28}\label{parser_8c_a7ad1750e2fb2e9403fa68f21a2c62c28}} 
+\index{parser.c@{parser.c}!parse\_deconvolutional@{parse\_deconvolutional}}
+\index{parse\_deconvolutional@{parse\_deconvolutional}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_deconvolutional()}{parse\_deconvolutional()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+deconvolutional (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ab5cfcdcccf8d8f3fa5f46d4528a70cab}\label{parser_8c_ab5cfcdcccf8d8f3fa5f46d4528a70cab}} 
+\index{parser.c@{parser.c}!parse\_detection@{parse\_detection}}
+\index{parse\_detection@{parse\_detection}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_detection()}{parse\_detection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}} parse\+\_\+detection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 393 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_acd4507a8980581f176f52500997f32ed}\label{parser_8c_acd4507a8980581f176f52500997f32ed}} 
+\index{parser.c@{parser.c}!parse\_dropout@{parse\_dropout}}
+\index{parse\_dropout@{parse\_dropout}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_dropout()}{parse\_dropout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} parse\+\_\+dropout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 501 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_af8d59a4d921f3c03b0977d39feb14ced}\label{parser_8c_af8d59a4d921f3c03b0977d39feb14ced}} 
+\index{parser.c@{parser.c}!parse\_gru@{parse\_gru}}
+\index{parse\_gru@{parse\_gru}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_gru()}{parse\_gru()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+gru (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 236 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a41585ea2c341b260918374dd8d753bb9}\label{parser_8c_a41585ea2c341b260918374dd8d753bb9}} 
+\index{parser.c@{parser.c}!parse\_l2norm@{parse\_l2norm}}
+\index{parse\_l2norm@{parse\_l2norm}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_l2norm()}{parse\_l2norm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+l2norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 547 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ae36102ed30d5b253ec3c58df3192c771}\label{parser_8c_ae36102ed30d5b253ec3c58df3192c771}} 
+\index{parser.c@{parser.c}!parse\_local@{parse\_local}}
+\index{parse\_local@{parse\_local}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_local()}{parse\_local()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} parse\+\_\+local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a8a6bd099d7ca6f1868ac5510690c336d}\label{parser_8c_a8a6bd099d7ca6f1868ac5510690c336d}} 
+\index{parser.c@{parser.c}!parse\_logistic@{parse\_logistic}}
+\index{parse\_logistic@{parse\_logistic}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_logistic()}{parse\_logistic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+logistic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 557 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a2a5f4c8838a5a8176a401fe5514ef784}\label{parser_8c_a2a5f4c8838a5a8176a401fe5514ef784}} 
+\index{parser.c@{parser.c}!parse\_lstm@{parse\_lstm}}
+\index{parse\_lstm@{parse\_lstm}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_lstm()}{parse\_lstm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+lstm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 247 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_abef6e6b93a1c7ba7aef41bf2b95e9d27}\label{parser_8c_abef6e6b93a1c7ba7aef41bf2b95e9d27}} 
+\index{parser.c@{parser.c}!parse\_maxpool@{parse\_maxpool}}
+\index{parse\_maxpool@{parse\_maxpool}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_maxpool()}{parse\_maxpool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} parse\+\_\+maxpool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 471 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a21c6f7046fcd48a8cfd74c23fcf944ca}\label{parser_8c_a21c6f7046fcd48a8cfd74c23fcf944ca}} 
+\index{parser.c@{parser.c}!parse\_net\_options@{parse\_net\_options}}
+\index{parse\_net\_options@{parse\_net\_options}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_net\_options()}{parse\_net\_options()}}
+{\footnotesize\ttfamily void parse\+\_\+net\+\_\+options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 643 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ac5d6f5c442a05689da2d50f177aa729e}\label{parser_8c_ac5d6f5c442a05689da2d50f177aa729e}} 
+\index{parser.c@{parser.c}!parse\_network\_cfg@{parse\_network\_cfg}}
+\index{parse\_network\_cfg@{parse\_network\_cfg}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_network\_cfg()}{parse\_network\_cfg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnetwork}{network}}$\ast$ parse\+\_\+network\+\_\+cfg (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 730 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a070f2ff614c49ca43151b17082372374}\label{parser_8c_a070f2ff614c49ca43151b17082372374}} 
+\index{parser.c@{parser.c}!parse\_normalization@{parse\_normalization}}
+\index{parse\_normalization@{parse\_normalization}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_normalization()}{parse\_normalization()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+normalization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 511 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_afedfffed817f89349b250c4afe09041c}\label{parser_8c_afedfffed817f89349b250c4afe09041c}} 
+\index{parser.c@{parser.c}!parse\_region@{parse\_region}}
+\index{parse\_region@{parse\_region}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_region()}{parse\_region()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+region (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 341 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a934cdac39f052fe5f89407b9c99e729e}\label{parser_8c_a934cdac39f052fe5f89407b9c99e729e}} 
+\index{parser.c@{parser.c}!parse\_reorg@{parse\_reorg}}
+\index{parse\_reorg@{parse\_reorg}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_reorg()}{parse\_reorg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+reorg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 453 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a5504899aea1400dbc33dba8eac459460}\label{parser_8c_a5504899aea1400dbc33dba8eac459460}} 
+\index{parser.c@{parser.c}!parse\_rnn@{parse\_rnn}}
+\index{parse\_rnn@{parse\_rnn}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_rnn()}{parse\_rnn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+rnn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 222 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a088e8aab5c2cab4739a3de6ea0f26b2c}\label{parser_8c_a088e8aab5c2cab4739a3de6ea0f26b2c}} 
+\index{parser.c@{parser.c}!parse\_route@{parse\_route}}
+\index{parse\_route@{parse\_route}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_route()}{parse\_route()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} parse\+\_\+route (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 589 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ae7fc57df3338c2b57b6e6ae7ffb0f7f1}\label{parser_8c_ae7fc57df3338c2b57b6e6ae7ffb0f7f1}} 
+\index{parser.c@{parser.c}!parse\_shortcut@{parse\_shortcut}}
+\index{parse\_shortcut@{parse\_shortcut}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_shortcut()}{parse\_shortcut()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+shortcut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 527 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a1f908ce65d9b8a102e754f61f00882b3}\label{parser_8c_a1f908ce65d9b8a102e754f61f00882b3}} 
+\index{parser.c@{parser.c}!parse\_softmax@{parse\_softmax}}
+\index{parse\_softmax@{parse\_softmax}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_softmax()}{parse\_softmax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}} parse\+\_\+softmax (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 268 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a1740a85de99684ef8fb3b22cbdd1835f}\label{parser_8c_a1740a85de99684ef8fb3b22cbdd1835f}} 
+\index{parser.c@{parser.c}!parse\_upsample@{parse\_upsample}}
+\index{parse\_upsample@{parse\_upsample}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_upsample()}{parse\_upsample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+upsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 580 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a4a865d811f9e58c51fe92203f30cf159}\label{parser_8c_a4a865d811f9e58c51fe92203f30cf159}} 
+\index{parser.c@{parser.c}!parse\_yolo@{parse\_yolo}}
+\index{parse\_yolo@{parse\_yolo}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_yolo()}{parse\_yolo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} parse\+\_\+yolo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{options,  }\item[{\mbox{\hyperlink{structsize__params}{size\+\_\+params}}}]{params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 303 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a701a3ad8a40932cc3831ba0d3b2b7ed6}\label{parser_8c_a701a3ad8a40932cc3831ba0d3b2b7ed6}} 
+\index{parser.c@{parser.c}!parse\_yolo\_mask@{parse\_yolo\_mask}}
+\index{parse\_yolo\_mask@{parse\_yolo\_mask}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{parse\_yolo\_mask()}{parse\_yolo\_mask()}}
+{\footnotesize\ttfamily int$\ast$ parse\+\_\+yolo\+\_\+mask (\begin{DoxyParamCaption}\item[{char $\ast$}]{a,  }\item[{int $\ast$}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 282 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_aa7c8fda2a12e7c5c7d23ec9ab96b9eb3}\label{parser_8c_aa7c8fda2a12e7c5c7d23ec9ab96b9eb3}} 
+\index{parser.c@{parser.c}!read\_cfg@{read\_cfg}}
+\index{read\_cfg@{read\_cfg}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{read\_cfg()}{read\_cfg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}}$\ast$ read\+\_\+cfg (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 876 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a5cec060b47d3c4f5822a666a902fb1d9}\label{parser_8c_a5cec060b47d3c4f5822a666a902fb1d9}} 
+\index{parser.c@{parser.c}!save\_batchnorm\_weights@{save\_batchnorm\_weights}}
+\index{save\_batchnorm\_weights@{save\_batchnorm\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{save\_batchnorm\_weights()}{save\_batchnorm\_weights()}}
+{\footnotesize\ttfamily void save\+\_\+batchnorm\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 964 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a4bcb2cbd7ce4ef62a68da04f8b171c99}\label{parser_8c_a4bcb2cbd7ce4ef62a68da04f8b171c99}} 
+\index{parser.c@{parser.c}!save\_connected\_weights@{save\_connected\_weights}}
+\index{save\_connected\_weights@{save\_connected\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{save\_connected\_weights()}{save\_connected\_weights()}}
+{\footnotesize\ttfamily void save\+\_\+connected\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 976 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a5cdde81bd0215925a9e0d4aad0db098b}\label{parser_8c_a5cdde81bd0215925a9e0d4aad0db098b}} 
+\index{parser.c@{parser.c}!save\_convolutional\_weights@{save\_convolutional\_weights}}
+\index{save\_convolutional\_weights@{save\_convolutional\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{save\_convolutional\_weights()}{save\_convolutional\_weights()}}
+{\footnotesize\ttfamily void save\+\_\+convolutional\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 943 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ac83e4fda654eeafa6f1c341029c93f9b}\label{parser_8c_ac83e4fda654eeafa6f1c341029c93f9b}} 
+\index{parser.c@{parser.c}!save\_convolutional\_weights\_binary@{save\_convolutional\_weights\_binary}}
+\index{save\_convolutional\_weights\_binary@{save\_convolutional\_weights\_binary}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{save\_convolutional\_weights\_binary()}{save\_convolutional\_weights\_binary()}}
+{\footnotesize\ttfamily void save\+\_\+convolutional\+\_\+weights\+\_\+binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 911 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_afd862388b9780b6382a384241bf21757}\label{parser_8c_afd862388b9780b6382a384241bf21757}} 
+\index{parser.c@{parser.c}!save\_weights@{save\_weights}}
+\index{save\_weights@{save\_weights}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{save\_weights()}{save\_weights()}}
+{\footnotesize\ttfamily void save\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1065 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ada6e85f094c813f01a04e691d6c23efb}\label{parser_8c_ada6e85f094c813f01a04e691d6c23efb}} 
+\index{parser.c@{parser.c}!save\_weights\_upto@{save\_weights\_upto}}
+\index{save\_weights\_upto@{save\_weights\_upto}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{save\_weights\_upto()}{save\_weights\_upto()}}
+{\footnotesize\ttfamily void save\+\_\+weights\+\_\+upto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{char $\ast$}]{filename,  }\item[{int}]{cutoff }\end{DoxyParamCaption})}
+
+
+
+Definition at line 992 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_a990806ef35cd5caa481e2c9bb93442a9}\label{parser_8c_a990806ef35cd5caa481e2c9bb93442a9}} 
+\index{parser.c@{parser.c}!string\_to\_layer\_type@{string\_to\_layer\_type}}
+\index{string\_to\_layer\_type@{string\_to\_layer\_type}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{string\_to\_layer\_type()}{string\_to\_layer\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{darknet_8h_a5f7e99058765b058df158c099200b154}{L\+A\+Y\+E\+R\+\_\+\+T\+Y\+PE}} string\+\_\+to\+\_\+layer\+\_\+type (\begin{DoxyParamCaption}\item[{char $\ast$}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file parser.\+c.
+
+\mbox{\Hypertarget{parser_8c_ab87f0cb2dad80a204b7bc1160c07fcf4}\label{parser_8c_ab87f0cb2dad80a204b7bc1160c07fcf4}} 
+\index{parser.c@{parser.c}!transpose\_matrix@{transpose\_matrix}}
+\index{transpose\_matrix@{transpose\_matrix}!parser.c@{parser.c}}
+\subsubsection{\texorpdfstring{transpose\_matrix()}{transpose\_matrix()}}
+{\footnotesize\ttfamily void transpose\+\_\+matrix (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1070 of file parser.\+c.
+

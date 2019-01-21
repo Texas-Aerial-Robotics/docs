@@ -1,0 +1,417 @@
+\hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase}{}\section{pymavlink.\+quaternion.\+Quaternion\+Base Class Reference}
+\label{classpymavlink_1_1quaternion_1_1QuaternionBase}\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+Inheritance diagram for pymavlink.\+quaternion.\+Quaternion\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpymavlink_1_1quaternion_1_1QuaternionBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a6bfc9e17d697406593e6757969c36bf2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, attitude=\mbox{[}1, 0, 0, 0\mbox{]})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a5afdd0b6ec9069e6f0e0bf2032cf9fe6}{q}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a2877818e54a5c9bc1a39caf4ce0fddf5}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, index)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_adf7daed709c0f21d0225039830450543}{q}} (self, q)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a05ce9891b63e3b83fc52521581ddba5e}{euler}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a3bc9e70528ac1880ec02a69c9fe86c26}{euler}} (self, euler)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a534fc3e09f0c3b65e8fe5105d39e4891}{dcm}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a2da4adc7fb783fe3d4e3c4d92f3ac91e}{dcm}} (self, dcm)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a747068d71180696e5131e2ca31c2a13c}{transform}} (self, v)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a9b204e22c7e9e0625a84ef16d8b87755}{norm}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_aec2e9571fc65fcda925d8be556ce949b}{normalize}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a6d4db8c4ecf5f04d0ebaf798d17605cf}{inversed}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_acf052c96499b7df3c5d535e7e6615197}{\+\_\+\+\_\+eq\+\_\+\+\_\+}} (self, other)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_ae368fa4a7df294b50db40a17d20c0908}{close}} (self, other)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a694593af9f5007fc418b1473c3b32496}{\+\_\+\+\_\+mul\+\_\+\+\_\+}} (self, other)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_acdb6fa13b26fc10c02eb40ee51de6899}{\+\_\+\+\_\+truediv\+\_\+\+\_\+}} (self, other)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a2c8b45efc655d4220042a132c4255f01}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a074bda381cb981dcd546d196b94f0f65}{normalize\+\_\+array}} (\mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a392dcd8a214e33c00791e9fb655612b8}{q}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a2de35cb9d1f25dabffe8706230ec2a8a}{norm\+\_\+array}} (\mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a392dcd8a214e33c00791e9fb655612b8}{q}})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a392dcd8a214e33c00791e9fb655612b8}{q}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_aaba200ee55a36ebaa3c8db02513a1cfe}{dcm}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1quaternion_1_1QuaternionBase_a61484badb48116df5bafd66da24b3c02}{euler}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Quaternion class, this is the version which supports numpy arrays
+If you need support for Matrix3 look at the Quaternion class
+
+Usage:
+    >>> from quaternion import QuaternionBase
+    >>> import numpy as np
+    >>> q = QuaternionBase([np.radians(20), np.radians(20), np.radians(20)])
+    >>> print(q)
+    [ 0.9603483   0.13871646  0.19810763  0.13871646]
+    >>> print(q.dcm)
+    [[ 0.88302222 -0.21147065  0.41898917]
+     [ 0.3213938   0.92303098 -0.21147065]
+     [-0.34202014  0.3213938   0.88302222]]
+    >>> q = QuaternionBase([1, 0, 0, 0])
+    >>> print(q.euler)
+    [ 0. -0.  0.]
+    >>> m = [[1, 0, 0], [0, 0, -1], [0, 1, 0]]
+    >>> q = QuaternionBase(m)
+    >>> vector = [0, 1, 0]
+    >>> vector2 = q.transform(vector)
+\end{DoxyVerb}
+ 
+
+Definition at line 20 of file quaternion.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a6bfc9e17d697406593e6757969c36bf2}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a6bfc9e17d697406593e6757969c36bf2}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attitude = {\ttfamily \mbox{[}1,~0,~0,~0\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a quaternion from an attitude
+
+:param attitude: another QuaternionBase,
+    3 element list [roll, pitch, yaw],
+    4 element list [w, x, y ,z], DCM (3x3 array)
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1Quaternion_ad82c01c2f6c5edc2e25d367624f565c5}{pymavlink.\+quaternion.\+Quaternion}}.
+
+
+
+Definition at line 45 of file quaternion.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_acf052c96499b7df3c5d535e7e6615197}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_acf052c96499b7df3c5d535e7e6615197}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!\_\_eq\_\_@{\_\_eq\_\_}}
+\index{\_\_eq\_\_@{\_\_eq\_\_}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{\_\_eq\_\_()}{\_\_eq\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+\_\+\+\_\+eq\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Equality test (same orientation, not necessarily same rotation)
+
+:param other: a QuaternionBase
+:returns: true if the quaternions are equal
+\end{DoxyVerb}
+ 
+
+Definition at line 203 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a2877818e54a5c9bc1a39caf4ce0fddf5}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a2877818e54a5c9bc1a39caf4ce0fddf5}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the quaternion entry at index\end{DoxyVerb}
+ 
+
+Definition at line 79 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a694593af9f5007fc418b1473c3b32496}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a694593af9f5007fc418b1473c3b32496}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!\_\_mul\_\_@{\_\_mul\_\_}}
+\index{\_\_mul\_\_@{\_\_mul\_\_}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{\_\_mul\_\_()}{\_\_mul\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+\_\+\+\_\+mul\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param other: QuaternionBase
+:returns: multiplaction of this Quaternion with other
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1Quaternion_af3d7ea873b5cc8bea69d2664b8e6dcc9}{pymavlink.\+quaternion.\+Quaternion}}.
+
+
+
+Definition at line 227 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a2c8b45efc655d4220042a132c4255f01}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a2c8b45efc655d4220042a132c4255f01}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}String of quaternion values\end{DoxyVerb}
+ 
+
+Definition at line 449 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_acdb6fa13b26fc10c02eb40ee51de6899}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_acdb6fa13b26fc10c02eb40ee51de6899}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!\_\_truediv\_\_@{\_\_truediv\_\_}}
+\index{\_\_truediv\_\_@{\_\_truediv\_\_}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{\_\_truediv\_\_()}{\_\_truediv\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+\_\+\+\_\+truediv\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param other: QuaternionBase
+:returns: division of this Quaternion with other
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1Quaternion_a768c82f6b6fbb4e9c3a496e494a0c587}{pymavlink.\+quaternion.\+Quaternion}}.
+
+
+
+Definition at line 241 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_ae368fa4a7df294b50db40a17d20c0908}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_ae368fa4a7df294b50db40a17d20c0908}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!close@{close}}
+\index{close@{close}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+close (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Equality test with tolerance
+(same orientation, not necessarily same rotation)
+
+
+:param other: a QuaternionBase
+:returns: true if the quaternions are almost equal
+\end{DoxyVerb}
+ 
+
+Definition at line 214 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a534fc3e09f0c3b65e8fe5105d39e4891}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a534fc3e09f0c3b65e8fe5105d39e4891}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!dcm@{dcm}}
+\index{dcm@{dcm}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{dcm()}{dcm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+dcm (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the DCM
+
+:returns: 3x3 array
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1Quaternion_a8c596178af38be093dd787c609d7da09}{pymavlink.\+quaternion.\+Quaternion}}.
+
+
+
+Definition at line 130 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a2da4adc7fb783fe3d4e3c4d92f3ac91e}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a2da4adc7fb783fe3d4e3c4d92f3ac91e}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!dcm@{dcm}}
+\index{dcm@{dcm}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{dcm()}{dcm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+dcm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dcm }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the DCM
+:param dcm: 3x3 array\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1Quaternion_a2223bcf5392e9fc3980e012074318707}{pymavlink.\+quaternion.\+Quaternion}}.
+
+
+
+Definition at line 146 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a05ce9891b63e3b83fc52521581ddba5e}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a05ce9891b63e3b83fc52521581ddba5e}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!euler@{euler}}
+\index{euler@{euler}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{euler()}{euler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+euler (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the euler angles.
+The convention is Tait-Bryan (ZY'X'')
+
+:returns: array containing the euler angles [roll, pitch, yaw]
+\end{DoxyVerb}
+ 
+
+Definition at line 97 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a3bc9e70528ac1880ec02a69c9fe86c26}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a3bc9e70528ac1880ec02a69c9fe86c26}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!euler@{euler}}
+\index{euler@{euler}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{euler()}{euler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+euler (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{euler }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the euler angles
+:param euler: list or array of the euler angles [roll, pitch, yaw]\end{DoxyVerb}
+ 
+
+Definition at line 115 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a6d4db8c4ecf5f04d0ebaf798d17605cf}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a6d4db8c4ecf5f04d0ebaf798d17605cf}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!inversed@{inversed}}
+\index{inversed@{inversed}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{inversed()}{inversed()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+inversed (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get inversed quaternion
+
+:returns: inversed quaternion
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1Quaternion_a0dd030159c7d726fad2cb12fd4c3983a}{pymavlink.\+quaternion.\+Quaternion}}.
+
+
+
+Definition at line 194 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a9b204e22c7e9e0625a84ef16d8b87755}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a9b204e22c7e9e0625a84ef16d8b87755}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!norm@{norm}}
+\index{norm@{norm}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+norm (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns norm of quaternion
+
+:returns: norm (scalar)
+\end{DoxyVerb}
+ 
+
+Definition at line 181 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a2de35cb9d1f25dabffe8706230ec2a8a}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a2de35cb9d1f25dabffe8706230ec2a8a}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!norm\_array@{norm\_array}}
+\index{norm\_array@{norm\_array}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{norm\_array()}{norm\_array()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+norm\+\_\+array (\begin{DoxyParamCaption}\item[{}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Calculate quaternion norm on array q
+:param quaternion: array of len 4
+:returns: norm (scalar)
+\end{DoxyVerb}
+ 
+
+Definition at line 267 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_aec2e9571fc65fcda925d8be556ce949b}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_aec2e9571fc65fcda925d8be556ce949b}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!normalize@{normalize}}
+\index{normalize@{normalize}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+normalize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Normalizes the quaternion\end{DoxyVerb}
+ 
+
+Definition at line 189 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a074bda381cb981dcd546d196b94f0f65}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a074bda381cb981dcd546d196b94f0f65}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!normalize\_array@{normalize\_array}}
+\index{normalize\_array@{normalize\_array}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{normalize\_array()}{normalize\_array()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+normalize\+\_\+array (\begin{DoxyParamCaption}\item[{}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Normalizes the list with len 4 so that it can be used as quaternion
+:param q: array of len 4
+:returns: normalized array
+\end{DoxyVerb}
+ 
+
+Definition at line 255 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a5afdd0b6ec9069e6f0e0bf2032cf9fe6}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a5afdd0b6ec9069e6f0e0bf2032cf9fe6}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!q@{q}}
+\index{q@{q}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{q()}{q()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+q (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the quaternion
+:returns: array containing the quaternion elements
+\end{DoxyVerb}
+ 
+
+Definition at line 65 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_adf7daed709c0f21d0225039830450543}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_adf7daed709c0f21d0225039830450543}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!q@{q}}
+\index{q@{q}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{q()}{q()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+q (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{q }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the quaternion
+:param q: list or array of quaternion values [w, x, y, z]
+\end{DoxyVerb}
+ 
+
+Definition at line 84 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a747068d71180696e5131e2ca31c2a13c}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a747068d71180696e5131e2ca31c2a13c}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!transform@{transform}}
+\index{transform@{transform}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily def pymavlink.\+quaternion.\+Quaternion\+Base.\+transform (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{v }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculates the vector transformed by this quaternion
+:param v: array with len 3 to be transformed
+:returns: transformed vector
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1quaternion_1_1Quaternion_a79b86f00f3500a6c34fa3a099f3714f7}{pymavlink.\+quaternion.\+Quaternion}}.
+
+
+
+Definition at line 163 of file quaternion.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_aaba200ee55a36ebaa3c8db02513a1cfe}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_aaba200ee55a36ebaa3c8db02513a1cfe}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!dcm@{dcm}}
+\index{dcm@{dcm}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{dcm}{dcm}}
+{\footnotesize\ttfamily pymavlink.\+quaternion.\+Quaternion\+Base.\+dcm}
+
+
+
+Definition at line 56 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a61484badb48116df5bafd66da24b3c02}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a61484badb48116df5bafd66da24b3c02}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!euler@{euler}}
+\index{euler@{euler}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{euler}{euler}}
+{\footnotesize\ttfamily pymavlink.\+quaternion.\+Quaternion\+Base.\+euler}
+
+
+
+Definition at line 60 of file quaternion.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1quaternion_1_1QuaternionBase_a392dcd8a214e33c00791e9fb655612b8}\label{classpymavlink_1_1quaternion_1_1QuaternionBase_a392dcd8a214e33c00791e9fb655612b8}} 
+\index{pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}!q@{q}}
+\index{q@{q}!pymavlink.quaternion.QuaternionBase@{pymavlink.quaternion.QuaternionBase}}
+\subsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily pymavlink.\+quaternion.\+Quaternion\+Base.\+q}
+
+
+
+Definition at line 54 of file quaternion.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/\mbox{\hyperlink{quaternion_8py}{quaternion.\+py}}\end{DoxyCompactItemize}

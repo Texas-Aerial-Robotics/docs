@@ -1,0 +1,71 @@
+\hypertarget{namespacepymavlink_1_1mavexpression}{}\section{pymavlink.\+mavexpression Namespace Reference}
+\label{namespacepymavlink_1_1mavexpression}\index{pymavlink.mavexpression@{pymavlink.mavexpression}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavexpression_a8fee43c3020a15e908bbd7c6bce1e7ca}{evaluate\+\_\+expression}} (expression, vars)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1mavexpression_afc944dcbe25c09a86ea53d042ce147ad}{home}} = os.\+getenv(\textquotesingle{}H\+O\+ME\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1mavexpression_a1a68cb085c05aa0acd7c862299f8ea74}{extra}} = os.\+path.\+join(\mbox{\hyperlink{namespacepymavlink_1_1mavexpression_afc944dcbe25c09a86ea53d042ce147ad}{home}}, \textquotesingle{}.pymavlink\textquotesingle{}, \textquotesingle{}mavextra.\+py\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1mavexpression_a4b72830e24885390bf68490e1acfcec7}{mavuser}} = imp.\+load\+\_\+source(\textquotesingle{}pymavlink.\+mavuser\textquotesingle{}, \mbox{\hyperlink{namespacepymavlink_1_1mavexpression_a1a68cb085c05aa0acd7c862299f8ea74}{extra}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}mavlink expression evaluation functions
+
+Copyright Andrew Tridgell 2011
+Released under GNU GPL version 3 or later
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1mavexpression_a8fee43c3020a15e908bbd7c6bce1e7ca}\label{namespacepymavlink_1_1mavexpression_a8fee43c3020a15e908bbd7c6bce1e7ca}} 
+\index{pymavlink.mavexpression@{pymavlink.mavexpression}!evaluate\_expression@{evaluate\_expression}}
+\index{evaluate\_expression@{evaluate\_expression}!pymavlink.mavexpression@{pymavlink.mavexpression}}
+\subsubsection{\texorpdfstring{evaluate\_expression()}{evaluate\_expression()}}
+{\footnotesize\ttfamily def pymavlink.\+mavexpression.\+evaluate\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{expression,  }\item[{}]{vars }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}evaluation an expression\end{DoxyVerb}
+ 
+
+Definition at line 26 of file mavexpression.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1mavexpression_a1a68cb085c05aa0acd7c862299f8ea74}\label{namespacepymavlink_1_1mavexpression_a1a68cb085c05aa0acd7c862299f8ea74}} 
+\index{pymavlink.mavexpression@{pymavlink.mavexpression}!extra@{extra}}
+\index{extra@{extra}!pymavlink.mavexpression@{pymavlink.mavexpression}}
+\subsubsection{\texorpdfstring{extra}{extra}}
+{\footnotesize\ttfamily pymavlink.\+mavexpression.\+extra = os.\+path.\+join(\mbox{\hyperlink{namespacepymavlink_1_1mavexpression_afc944dcbe25c09a86ea53d042ce147ad}{home}}, \textquotesingle{}.pymavlink\textquotesingle{}, \textquotesingle{}mavextra.\+py\textquotesingle{})}
+
+
+
+Definition at line 20 of file mavexpression.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavexpression_afc944dcbe25c09a86ea53d042ce147ad}\label{namespacepymavlink_1_1mavexpression_afc944dcbe25c09a86ea53d042ce147ad}} 
+\index{pymavlink.mavexpression@{pymavlink.mavexpression}!home@{home}}
+\index{home@{home}!pymavlink.mavexpression@{pymavlink.mavexpression}}
+\subsubsection{\texorpdfstring{home}{home}}
+{\footnotesize\ttfamily pymavlink.\+mavexpression.\+home = os.\+getenv(\textquotesingle{}H\+O\+ME\textquotesingle{})}
+
+
+
+Definition at line 18 of file mavexpression.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavexpression_a4b72830e24885390bf68490e1acfcec7}\label{namespacepymavlink_1_1mavexpression_a4b72830e24885390bf68490e1acfcec7}} 
+\index{pymavlink.mavexpression@{pymavlink.mavexpression}!mavuser@{mavuser}}
+\index{mavuser@{mavuser}!pymavlink.mavexpression@{pymavlink.mavexpression}}
+\subsubsection{\texorpdfstring{mavuser}{mavuser}}
+{\footnotesize\ttfamily pymavlink.\+mavexpression.\+mavuser = imp.\+load\+\_\+source(\textquotesingle{}pymavlink.\+mavuser\textquotesingle{}, \mbox{\hyperlink{namespacepymavlink_1_1mavexpression_a1a68cb085c05aa0acd7c862299f8ea74}{extra}})}
+
+
+
+Definition at line 23 of file mavexpression.\+py.
+

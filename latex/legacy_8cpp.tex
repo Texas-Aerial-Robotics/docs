@@ -1,0 +1,128 @@
+\hypertarget{legacy_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Strat\+Node/src/legacy.cpp File Reference}
+\label{legacy_8cpp}\index{/home/eric/catkin\_ws/src/StratNode/src/legacy.cpp@{/home/eric/catkin\_ws/src/StratNode/src/legacy.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{legacy_8cpp_a5cb2fd7bfc59d0db65ee46e594b4bb55}{chatter\+Callback}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+int \mbox{\hyperlink{legacy_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+\_\+msgs\+::\+String \mbox{\hyperlink{legacy_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}
+\item 
+std\+::stringstream \mbox{\hyperlink{legacy_8cpp_a92211863a9a3dafb14ae33244777a229}{ss\+\_\+mode}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{legacy_8cpp_a7f39bd91d782823b2048dbb9f5f1b01e}{Roomba\+Pose}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{legacy_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}{waypoint}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{legacy_8cpp_ac3a805285b594b3948945bc1c374c69e}{newpoint}}
+\item 
+deque$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{legacy_8cpp_ae79b2703b63114d3a3b9f9a2a26fe542}{points}}
+\item 
+bool \mbox{\hyperlink{legacy_8cpp_a06a288f619d7dc9d86e1609af685ea20}{knew}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{legacy_8cpp_a5cb2fd7bfc59d0db65ee46e594b4bb55}\label{legacy_8cpp_a5cb2fd7bfc59d0db65ee46e594b4bb55}} 
+\index{legacy.cpp@{legacy.cpp}!chatterCallback@{chatterCallback}}
+\index{chatterCallback@{chatterCallback}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{chatterCallback()}{chatterCallback()}}
+{\footnotesize\ttfamily void chatter\+Callback (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file legacy.\+cpp.
+
+\mbox{\Hypertarget{legacy_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{legacy_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{legacy.cpp@{legacy.cpp}!main@{main}}
+\index{main@{main}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file legacy.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{legacy_8cpp_a06a288f619d7dc9d86e1609af685ea20}\label{legacy_8cpp_a06a288f619d7dc9d86e1609af685ea20}} 
+\index{legacy.cpp@{legacy.cpp}!knew@{knew}}
+\index{knew@{knew}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{knew}{knew}}
+{\footnotesize\ttfamily bool knew = 0}
+
+
+
+Definition at line 17 of file legacy.\+cpp.
+
+\mbox{\Hypertarget{legacy_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}\label{legacy_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}} 
+\index{legacy.cpp@{legacy.cpp}!msg@{msg}}
+\index{msg@{msg}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+String msg}
+
+
+
+Definition at line 11 of file legacy.\+cpp.
+
+\mbox{\Hypertarget{legacy_8cpp_ac3a805285b594b3948945bc1c374c69e}\label{legacy_8cpp_ac3a805285b594b3948945bc1c374c69e}} 
+\index{legacy.cpp@{legacy.cpp}!newpoint@{newpoint}}
+\index{newpoint@{newpoint}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{newpoint}{newpoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped newpoint}
+
+
+
+Definition at line 15 of file legacy.\+cpp.
+
+\mbox{\Hypertarget{legacy_8cpp_ae79b2703b63114d3a3b9f9a2a26fe542}\label{legacy_8cpp_ae79b2703b63114d3a3b9f9a2a26fe542}} 
+\index{legacy.cpp@{legacy.cpp}!points@{points}}
+\index{points@{points}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily deque$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ points}
+
+
+
+Definition at line 16 of file legacy.\+cpp.
+
+\mbox{\Hypertarget{legacy_8cpp_a7f39bd91d782823b2048dbb9f5f1b01e}\label{legacy_8cpp_a7f39bd91d782823b2048dbb9f5f1b01e}} 
+\index{legacy.cpp@{legacy.cpp}!RoombaPose@{RoombaPose}}
+\index{RoombaPose@{RoombaPose}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{RoombaPose}{RoombaPose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped Roomba\+Pose}
+
+
+
+Definition at line 13 of file legacy.\+cpp.
+
+\mbox{\Hypertarget{legacy_8cpp_a92211863a9a3dafb14ae33244777a229}\label{legacy_8cpp_a92211863a9a3dafb14ae33244777a229}} 
+\index{legacy.cpp@{legacy.cpp}!ss\_mode@{ss\_mode}}
+\index{ss\_mode@{ss\_mode}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{ss\_mode}{ss\_mode}}
+{\footnotesize\ttfamily std\+::stringstream ss\+\_\+mode}
+
+
+
+Definition at line 12 of file legacy.\+cpp.
+
+\mbox{\Hypertarget{legacy_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}\label{legacy_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}} 
+\index{legacy.cpp@{legacy.cpp}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!legacy.cpp@{legacy.cpp}}
+\subsubsection{\texorpdfstring{waypoint}{waypoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped waypoint}
+
+
+
+Definition at line 14 of file legacy.\+cpp.
+

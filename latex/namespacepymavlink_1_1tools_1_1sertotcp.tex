@@ -1,0 +1,176 @@
+\hypertarget{namespacepymavlink_1_1tools_1_1sertotcp}{}\section{pymavlink.\+tools.\+sertotcp Namespace Reference}
+\label{namespacepymavlink_1_1tools_1_1sertotcp}\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_acea7267f0cbd70801a3173f386311131}{open\+\_\+socket}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_aa3dd094c6098a72b58a58bcedfee06ba}{parser}} = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a5155d3e9f5af677146f4631236d6db70}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a3e5a0995f5e8308207e66eb4b62913a2}{type}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_acc958c5fc9b5c4b8795b1b610ea3fdd4}{int}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a4910fcac8e670df1cda872ceae80866a}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a36c01b1b7be097afcc65c2b1a0aaacbf}{str}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_ab233978b338bba7bac90e2e0ec6e4426}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_ad5c3bf7886d1b09611a8fa7439774576}{serport}} = serial.\+Serial(args.\+serialport, args.\+baudrate, timeout=0)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_ab50c30caa18849d8693fd3e379765605}{tcpsock}} = None
+\item 
+bool \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_aa9236c906f0fd9eba4a3ba194992ca22}{gotdata}} = False
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_adef36cfc28a514a6fd90610647203385}{n}} = serport.\+in\+Waiting()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a71a94e54f6490e74e277b00e3e8c9680}{b}} = serport.\+read(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_adef36cfc28a514a6fd90610647203385}{n}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}map a serial port to an outgoing TCP connection
+Released under GNU GPLv3 or later
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_acea7267f0cbd70801a3173f386311131}\label{namespacepymavlink_1_1tools_1_1sertotcp_acea7267f0cbd70801a3173f386311131}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!open\_socket@{open\_socket}}
+\index{open\_socket@{open\_socket}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{open\_socket()}{open\_socket()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+sertotcp.\+open\+\_\+socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file sertotcp.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_ab233978b338bba7bac90e2e0ec6e4426}\label{namespacepymavlink_1_1tools_1_1sertotcp_ab233978b338bba7bac90e2e0ec6e4426}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!args@{args}}
+\index{args@{args}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 20 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_a71a94e54f6490e74e277b00e3e8c9680}\label{namespacepymavlink_1_1tools_1_1sertotcp_a71a94e54f6490e74e277b00e3e8c9680}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!b@{b}}
+\index{b@{b}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+b = serport.\+read(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_adef36cfc28a514a6fd90610647203385}{n}})}
+
+
+
+Definition at line 49 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_a5155d3e9f5af677146f4631236d6db70}\label{namespacepymavlink_1_1tools_1_1sertotcp_a5155d3e9f5af677146f4631236d6db70}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!default@{default}}
+\index{default@{default}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+default}
+
+
+
+Definition at line 16 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_aa9236c906f0fd9eba4a3ba194992ca22}\label{namespacepymavlink_1_1tools_1_1sertotcp_aa9236c906f0fd9eba4a3ba194992ca22}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!gotdata@{gotdata}}
+\index{gotdata@{gotdata}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{gotdata}{gotdata}}
+{\footnotesize\ttfamily bool pymavlink.\+tools.\+sertotcp.\+gotdata = False}
+
+
+
+Definition at line 40 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_a4910fcac8e670df1cda872ceae80866a}\label{namespacepymavlink_1_1tools_1_1sertotcp_a4910fcac8e670df1cda872ceae80866a}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!help@{help}}
+\index{help@{help}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+help}
+
+
+
+Definition at line 16 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_acc958c5fc9b5c4b8795b1b610ea3fdd4}\label{namespacepymavlink_1_1tools_1_1sertotcp_acc958c5fc9b5c4b8795b1b610ea3fdd4}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!int@{int}}
+\index{int@{int}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{int}{int}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+int}
+
+
+
+Definition at line 16 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_adef36cfc28a514a6fd90610647203385}\label{namespacepymavlink_1_1tools_1_1sertotcp_adef36cfc28a514a6fd90610647203385}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!n@{n}}
+\index{n@{n}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+n = serport.\+in\+Waiting()}
+
+
+
+Definition at line 47 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_aa3dd094c6098a72b58a58bcedfee06ba}\label{namespacepymavlink_1_1tools_1_1sertotcp_aa3dd094c6098a72b58a58bcedfee06ba}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!parser@{parser}}
+\index{parser@{parser}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+parser = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)}
+
+
+
+Definition at line 15 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_ad5c3bf7886d1b09611a8fa7439774576}\label{namespacepymavlink_1_1tools_1_1sertotcp_ad5c3bf7886d1b09611a8fa7439774576}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!serport@{serport}}
+\index{serport@{serport}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{serport}{serport}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+serport = serial.\+Serial(args.\+serialport, args.\+baudrate, timeout=0)}
+
+
+
+Definition at line 22 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_a36c01b1b7be097afcc65c2b1a0aaacbf}\label{namespacepymavlink_1_1tools_1_1sertotcp_a36c01b1b7be097afcc65c2b1a0aaacbf}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!str@{str}}
+\index{str@{str}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{str}{str}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+str}
+
+
+
+Definition at line 17 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_ab50c30caa18849d8693fd3e379765605}\label{namespacepymavlink_1_1tools_1_1sertotcp_ab50c30caa18849d8693fd3e379765605}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!tcpsock@{tcpsock}}
+\index{tcpsock@{tcpsock}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{tcpsock}{tcpsock}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+tcpsock = None}
+
+
+
+Definition at line 24 of file sertotcp.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1sertotcp_a3e5a0995f5e8308207e66eb4b62913a2}\label{namespacepymavlink_1_1tools_1_1sertotcp_a3e5a0995f5e8308207e66eb4b62913a2}} 
+\index{pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}!type@{type}}
+\index{type@{type}!pymavlink.tools.sertotcp@{pymavlink.tools.sertotcp}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+sertotcp.\+type}
+
+
+
+Definition at line 16 of file sertotcp.\+py.
+

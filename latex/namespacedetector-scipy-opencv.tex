@@ -1,0 +1,98 @@
+\hypertarget{namespacedetector-scipy-opencv}{}\section{detector-\/scipy-\/opencv Namespace Reference}
+\label{namespacedetector-scipy-opencv}\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedetector-scipy-opencv_a21af42bac0599affdd209fb7ad6ace05}{array\+\_\+to\+\_\+image}} (\mbox{\hyperlink{namespacedetector-scipy-opencv_a0472a36e7499b02302910f8ab212facb}{arr}})
+\item 
+def \mbox{\hyperlink{namespacedetector-scipy-opencv_a965d0b9c768aaaf2cede0dd9e1148b1d}{detect2}} (\mbox{\hyperlink{namespacedetector-scipy-opencv_a5e661955bb33e5ddd0c20e700ef246b1}{net}}, \mbox{\hyperlink{namespacedetector-scipy-opencv_aefa8c13d2324512c8b50817683901197}{meta}}, \mbox{\hyperlink{structimage}{image}}, thresh=.\+5, hier\+\_\+thresh=.\+5, nms=.\+45)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_a5e661955bb33e5ddd0c20e700ef246b1}{net}} = dn.\+load\+\_\+net(\char`\"{}cfg/tiny-\/yolo.\+cfg\char`\"{}, \char`\"{}tiny-\/yolo.\+weights\char`\"{}, 0)
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_aefa8c13d2324512c8b50817683901197}{meta}} = dn.\+load\+\_\+meta(\char`\"{}cfg/coco.\+data\char`\"{})
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_a454d4a9590e11c36c21186a87d98a199}{r}} = dn.\+detect(\mbox{\hyperlink{namespacedetector-scipy-opencv_a5e661955bb33e5ddd0c20e700ef246b1}{net}}, \mbox{\hyperlink{namespacedetector-scipy-opencv_aefa8c13d2324512c8b50817683901197}{meta}}, \char`\"{}data/dog.\+jpg\char`\"{})
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_a0472a36e7499b02302910f8ab212facb}{arr}} = imread(\textquotesingle{}\mbox{\hyperlink{structdata}{data}}/dog.\+jpg\textquotesingle{})
+\item 
+def \mbox{\hyperlink{namespacedetector-scipy-opencv_a5f732f155542b878160190ca2240d4db}{im}} = \mbox{\hyperlink{namespacedetector-scipy-opencv_a21af42bac0599affdd209fb7ad6ace05}{array\+\_\+to\+\_\+image}}(\mbox{\hyperlink{namespacedetector-scipy-opencv_a0472a36e7499b02302910f8ab212facb}{arr}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacedetector-scipy-opencv_a21af42bac0599affdd209fb7ad6ace05}\label{namespacedetector-scipy-opencv_a21af42bac0599affdd209fb7ad6ace05}} 
+\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}!array\_to\_image@{array\_to\_image}}
+\index{array\_to\_image@{array\_to\_image}!detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsubsection{\texorpdfstring{array\_to\_image()}{array\_to\_image()}}
+{\footnotesize\ttfamily def detector-\/scipy-\/opencv.\+array\+\_\+to\+\_\+image (\begin{DoxyParamCaption}\item[{}]{arr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file detector-\/scipy-\/opencv.\+py.
+
+\mbox{\Hypertarget{namespacedetector-scipy-opencv_a965d0b9c768aaaf2cede0dd9e1148b1d}\label{namespacedetector-scipy-opencv_a965d0b9c768aaaf2cede0dd9e1148b1d}} 
+\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}!detect2@{detect2}}
+\index{detect2@{detect2}!detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsubsection{\texorpdfstring{detect2()}{detect2()}}
+{\footnotesize\ttfamily def detector-\/scipy-\/opencv.\+detect2 (\begin{DoxyParamCaption}\item[{}]{net,  }\item[{}]{meta,  }\item[{}]{image,  }\item[{}]{thresh = {\ttfamily .5},  }\item[{}]{hier\+\_\+thresh = {\ttfamily .5},  }\item[{}]{nms = {\ttfamily .45} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file detector-\/scipy-\/opencv.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedetector-scipy-opencv_a0472a36e7499b02302910f8ab212facb}\label{namespacedetector-scipy-opencv_a0472a36e7499b02302910f8ab212facb}} 
+\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}!arr@{arr}}
+\index{arr@{arr}!detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsubsection{\texorpdfstring{arr}{arr}}
+{\footnotesize\ttfamily detector-\/scipy-\/opencv.\+arr = imread(\textquotesingle{}\mbox{\hyperlink{structdata}{data}}/dog.\+jpg\textquotesingle{})}
+
+
+
+Definition at line 45 of file detector-\/scipy-\/opencv.\+py.
+
+\mbox{\Hypertarget{namespacedetector-scipy-opencv_a5f732f155542b878160190ca2240d4db}\label{namespacedetector-scipy-opencv_a5f732f155542b878160190ca2240d4db}} 
+\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}!im@{im}}
+\index{im@{im}!detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsubsection{\texorpdfstring{im}{im}}
+{\footnotesize\ttfamily def detector-\/scipy-\/opencv.\+im = \mbox{\hyperlink{namespacedetector-scipy-opencv_a21af42bac0599affdd209fb7ad6ace05}{array\+\_\+to\+\_\+image}}(\mbox{\hyperlink{namespacedetector-scipy-opencv_a0472a36e7499b02302910f8ab212facb}{arr}})}
+
+
+
+Definition at line 46 of file detector-\/scipy-\/opencv.\+py.
+
+\mbox{\Hypertarget{namespacedetector-scipy-opencv_aefa8c13d2324512c8b50817683901197}\label{namespacedetector-scipy-opencv_aefa8c13d2324512c8b50817683901197}} 
+\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}!meta@{meta}}
+\index{meta@{meta}!detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily detector-\/scipy-\/opencv.\+meta = dn.\+load\+\_\+meta(\char`\"{}cfg/coco.\+data\char`\"{})}
+
+
+
+Definition at line 40 of file detector-\/scipy-\/opencv.\+py.
+
+\mbox{\Hypertarget{namespacedetector-scipy-opencv_a5e661955bb33e5ddd0c20e700ef246b1}\label{namespacedetector-scipy-opencv_a5e661955bb33e5ddd0c20e700ef246b1}} 
+\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}!net@{net}}
+\index{net@{net}!detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsubsection{\texorpdfstring{net}{net}}
+{\footnotesize\ttfamily detector-\/scipy-\/opencv.\+net = dn.\+load\+\_\+net(\char`\"{}cfg/tiny-\/yolo.\+cfg\char`\"{}, \char`\"{}tiny-\/yolo.\+weights\char`\"{}, 0)}
+
+
+
+Definition at line 39 of file detector-\/scipy-\/opencv.\+py.
+
+\mbox{\Hypertarget{namespacedetector-scipy-opencv_a454d4a9590e11c36c21186a87d98a199}\label{namespacedetector-scipy-opencv_a454d4a9590e11c36c21186a87d98a199}} 
+\index{detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}!r@{r}}
+\index{r@{r}!detector-\/scipy-\/opencv@{detector-\/scipy-\/opencv}}
+\subsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily def detector-\/scipy-\/opencv.\+r = dn.\+detect(\mbox{\hyperlink{namespacedetector-scipy-opencv_a5e661955bb33e5ddd0c20e700ef246b1}{net}}, \mbox{\hyperlink{namespacedetector-scipy-opencv_aefa8c13d2324512c8b50817683901197}{meta}}, \char`\"{}data/dog.\+jpg\char`\"{})}
+
+
+
+Definition at line 41 of file detector-\/scipy-\/opencv.\+py.
+

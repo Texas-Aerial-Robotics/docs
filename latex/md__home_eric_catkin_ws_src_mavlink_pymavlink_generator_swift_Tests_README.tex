@@ -1,0 +1,20 @@
+{\ttfamily M\+A\+V\+Link\+Tests} target covers {\ttfamily Data\+Extensions} with unit tests (conversion between raw data and typed values). Also it contains some integration tests for {\ttfamily M\+A\+V\+Link} class.
+
+To quickly generate M\+A\+V\+Link classes and enums for Swift you can use following script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./ardugen.sh}
+\end{DoxyCode}
+ It will generate Swift files for {\ttfamily ardupilotmega.\+xml} definitions into {\ttfamily M\+A\+V\+Link/\+M\+A\+V\+Link/\+Swift} folder and C headers for the same xml file into {\ttfamily M\+A\+V\+Link\+Test/\+M\+A\+V\+Link/C} folder. C headers are used to check Swift library compatibility with C/\+C++ implementations.
+
+Please keep in mind that you will probably need to re-\/add generated M\+A\+V\+Link swift files to the project as complete list of files depends on specific declarations in xml file. C headers will be compiled as Clang module, so there is no need to add them into Xcode project.
+
+Test suite consists of\+:
+\begin{DoxyItemize}
+\item {\ttfamily Data\+Extensions\+Tests.\+swift} contains unit tests that cover raw-\/to-\/typed values transformations and vise versa (with informative erroring)
+\item {\ttfamily M\+A\+V\+Link\+Tests.\+swift} covers some edge cases of parsing state machine
+\item {\ttfamily Compare\+With\+C\+Imp\+Tests.\+swift} tests which compare output of Swift library with C on the same raw data input (attached tlog file)
+\end{DoxyItemize}
+
+Test tlog file was downloaded from \href{https://github.com/dronekit/dronekit-la-testdata}{\texttt{ Drone\+Kit LA testdata}} repository. 

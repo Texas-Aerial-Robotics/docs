@@ -1,0 +1,66 @@
+\hypertarget{lstm__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/lstm\+\_\+layer.c File Reference}
+\label{lstm__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/lstm\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/lstm\_layer.c}}
+{\ttfamily \#include \char`\"{}lstm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connected\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gemm.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{lstm__layer_8c_a2e2ef73f1844febdde30fa9f8a85f775}{make\+\_\+lstm\+\_\+layer}} (int batch, int inputs, int outputs, int steps, int batch\+\_\+normalize, int adam)
+\item 
+void \mbox{\hyperlink{lstm__layer_8c_a989a440afc90df095509fb685e44d144}{update\+\_\+lstm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\item 
+void \mbox{\hyperlink{lstm__layer_8c_acf6b79dce4a200f6841b131836e95ee7}{forward\+\_\+lstm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} state)
+\item 
+void \mbox{\hyperlink{lstm__layer_8c_ae0c39c0541db7ed103b8c93c16b32c25}{backward\+\_\+lstm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lstm__layer_8c_ae0c39c0541db7ed103b8c93c16b32c25}\label{lstm__layer_8c_ae0c39c0541db7ed103b8c93c16b32c25}} 
+\index{lstm\_layer.c@{lstm\_layer.c}!backward\_lstm\_layer@{backward\_lstm\_layer}}
+\index{backward\_lstm\_layer@{backward\_lstm\_layer}!lstm\_layer.c@{lstm\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_lstm\_layer()}{backward\_lstm\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+lstm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 242 of file lstm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{lstm__layer_8c_acf6b79dce4a200f6841b131836e95ee7}\label{lstm__layer_8c_acf6b79dce4a200f6841b131836e95ee7}} 
+\index{lstm\_layer.c@{lstm\_layer.c}!forward\_lstm\_layer@{forward\_lstm\_layer}}
+\index{forward\_lstm\_layer@{forward\_lstm\_layer}!lstm\_layer.c@{lstm\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_lstm\_layer()}{forward\_lstm\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+lstm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 156 of file lstm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{lstm__layer_8c_a2e2ef73f1844febdde30fa9f8a85f775}\label{lstm__layer_8c_a2e2ef73f1844febdde30fa9f8a85f775}} 
+\index{lstm\_layer.c@{lstm\_layer.c}!make\_lstm\_layer@{make\_lstm\_layer}}
+\index{make\_lstm\_layer@{make\_lstm\_layer}!lstm\_layer.c@{lstm\_layer.c}}
+\subsubsection{\texorpdfstring{make\_lstm\_layer()}{make\_lstm\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+lstm\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{int}]{outputs,  }\item[{int}]{steps,  }\item[{int}]{batch\+\_\+normalize,  }\item[{int}]{adam }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file lstm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{lstm__layer_8c_a989a440afc90df095509fb685e44d144}\label{lstm__layer_8c_a989a440afc90df095509fb685e44d144}} 
+\index{lstm\_layer.c@{lstm\_layer.c}!update\_lstm\_layer@{update\_lstm\_layer}}
+\index{update\_lstm\_layer@{update\_lstm\_layer}!lstm\_layer.c@{lstm\_layer.c}}
+\subsubsection{\texorpdfstring{update\_lstm\_layer()}{update\_lstm\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+lstm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 144 of file lstm\+\_\+layer.\+c.
+

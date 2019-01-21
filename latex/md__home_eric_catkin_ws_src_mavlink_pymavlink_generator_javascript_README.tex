@@ -1,0 +1,158 @@
+This code generates {\ttfamily npm} modules that can be used with Node.\+js. As with the other implementations in Python and C, the M\+A\+V\+Link protocol is specified in X\+ML manifests which can be modified to add custom messages.
+
+{\itshape See the gotcha\textquotesingle{}s and todo\textquotesingle{}s section below} for some important caveats. This implementation should be considered pre-\/beta\+: it creates a working M\+A\+V\+Link parser, but there\textquotesingle{}s plenty of rough edges in terms of A\+PI.
+
+\subsubsection*{Generating the JS implementation}
+
+Folders in the {\ttfamily implementations/} directory are {\ttfamily npm} modules, automatically generated from X\+ML manifests that are in the \href{https://github.com/mavlink/mavlink}{\texttt{ mavlink/mavlink}} project. If you wish to generate custom M\+A\+V\+Link packets, you would need to follow the directions there.
+
+You need to have Node.\+js and npm installed to build.
+
+To build the Javascript implementations\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm install}
+\end{DoxyCode}
+
+
+or
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+(which calls npm)
+
+\subsubsection*{Usage in Node.\+js}
+
+The generated modules emit events when valid M\+A\+V\+Link messages are encountered. The name of the event is the same as the name of the message\+: {\ttfamily H\+E\+A\+R\+T\+B\+E\+AT}, {\ttfamily F\+E\+T\+C\+H\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+I\+ST}, {\ttfamily R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+AM}, etc. In addition, a generic {\ttfamily message} event is emitted whenever a message is successfully decoded.
+
+The below code is a rough sketch of how to use the generated module in Node.\+js. A somewhat more complete (though early, early alpha) example can be found \href{https://github.com/acuasi/ground-control-station}{\texttt{ here}}.
+
+\paragraph*{Generating the parser}
+
+After running the generator, copy the version of the M\+A\+V\+Link protocol you need into your project\textquotesingle{}s {\ttfamily node\+\_\+modules} folder, then enter that directory and install its dependencies using {\ttfamily npm install}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cp -R javascript/implementations/mavlink\_ardupilotmega\_v1.0 /path/to/my/project/node\_modules/}
+\DoxyCodeLine{cd /path/to/my/project/node\_modules/mavlink\_ardupilotmega\_v1.0 \&\& npm install}
+\end{DoxyCode}
+
+
+Then, you can use the M\+A\+V\+Link module, as sketched below.
+
+\paragraph*{Initializing the parser}
+
+In your {\ttfamily server.\+js} script, you need to include the generated parser and instantiate it; you also need some kind of binary stream library that can read/write binary data and emit an event when new data is ready to be parsed (\mbox{\hyperlink{classTCP}{T\+CP}}, \mbox{\hyperlink{classUDP}{U\+DP}}, serial port all have appropriate libraries in the npm-\/o-\/sphere). The connection\textquotesingle{}s \char`\"{}data is ready\char`\"{} event is bound to invoke the M\+A\+V\+Link parser to try and extract a valid message.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// requires Underscore.js and jspack}
+\DoxyCodeLine{// can use Winston for logging}
+\DoxyCodeLine{// see package.json for dependencies for the implementation}
+\DoxyCodeLine{var mavlink = require('mavlink\_ardupilotmega\_v1.0'), }
+\DoxyCodeLine{    net = require('net');}
+\DoxyCodeLine{}
+\DoxyCodeLine{// Instantiate the parser}
+\DoxyCodeLine{// logger: pass a Winston logger or null if not used}
+\DoxyCodeLine{// 1: source system id}
+\DoxyCodeLine{// 50: source component id}
+\DoxyCodeLine{mavlinkParser = new MAVLink(logger, 1, 50);}
+\DoxyCodeLine{}
+\DoxyCodeLine{// Create a connection -- can be anything that can receive/send binary}
+\DoxyCodeLine{connection = net.createConnection(5760, '127.0.0.1');}
+\DoxyCodeLine{}
+\DoxyCodeLine{// When the connection issues a "got data" event, try and parse it}
+\DoxyCodeLine{connection.on('data', function(data) \{}
+\DoxyCodeLine{    mavlinkParser.parseBuffer(data);}
+\DoxyCodeLine{\});}
+\end{DoxyCode}
+
+
+\paragraph*{Receiving M\+A\+V\+Link messages}
+
+If the serial buffer has a valid M\+A\+V\+Link message, the message is removed from the buffer and parsed. Upon parsing a valid message, the M\+A\+V\+Link implementation emits two events\+: {\ttfamily message} (for any message) and the specific message name that was parsed, so you can listen for specific messages and handle them.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// Attach an event handler for any valid MAVLink message}
+\DoxyCodeLine{mavlinkParser.on('message', function(message) \{}
+\DoxyCodeLine{    console.log('Got a message of any type!');}
+\DoxyCodeLine{    console.log(message);}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{// Attach an event handler for a specific MAVLink message}
+\DoxyCodeLine{mavlinkParser.on('HEARTBEAT', function(message) \{}
+\DoxyCodeLine{    console.log('Got a heartbeat message!');}
+\DoxyCodeLine{    console.log(message); // message is a HEARTBEAT message}
+\DoxyCodeLine{\});}
+\end{DoxyCode}
+
+
+\paragraph*{Sending M\+A\+V\+Link messages}
+
+{\itshape See the gotcha\textquotesingle{}s and todo\textquotesingle{}s section below} for some important caveats. The below code is preliminary and {\itshape will} change to be more direct. At this point, the M\+A\+V\+Link parser doesn\textquotesingle{}t manage any state information about the U\+AV or the connection itself, so a few fields need to be fudged, as indicated below.
+
+Sending a M\+A\+V\+Link message is done by creating the message object, populating its fields, and packing/sending it across the wire. Messages are defined in the generated code, and you can look up the parameter list/docs for each message type there. For example, the message {\ttfamily R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+AM} has this signature\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mavlink.messages.request\_data\_stream = function(target\_system, target\_component, req\_stream\_id, req\_message\_rate, start\_stop) //...}
+\end{DoxyCode}
+
+
+Creating the message is done like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{request = new mavlink.messages.request\_data\_stream(1, 1, mavlink.MAV\_DATA\_STREAM\_ALL, 1, 1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{// Create a buffer consisting of the packed message, and send it across the wire.}
+\DoxyCodeLine{// You need to pass a MAVLink instance to pack. It will then take care of setting sequence number, system and component id.}
+\DoxyCodeLine{// Hack alert: the MAVLink connection could/should encapsulate this.}
+\DoxyCodeLine{p = new Buffer(request.pack(mavlinkParser));}
+\DoxyCodeLine{connection.write(p);}
+\end{DoxyCode}
+
+
+\subsubsection*{Gotchas and todo\textquotesingle{}s}
+
+Java\+Script doesn\textquotesingle{}t have 64bit integers (long). The library that replaces Pythons struct converts {\ttfamily q} and {\ttfamily Q} into 3 part arrays\+: {\ttfamily \mbox{[}low\+Bits, high\+Bits, unsigned\+Flag\mbox{]}}. These arrays can be used with int64 libraries such as \href{https://github.com/dcodeIO/Long.js}{\texttt{ Long.\+js}}. See \href{https://github.com/AndreasAntener/node-jspack/blob/master/test/int64.js}{\texttt{ int64.\+js}} for examples.
+
+Current implementation tries to be as robust as possible. It doesn\textquotesingle{}t throw errors but emits bad\+\_\+data messages. Also it discards the buffer of a possible message as soon as if finds a valid prefix. Future improvements\+:
+\begin{DoxyItemize}
+\item Implement not so robust parsing\+: throw errors (similar to the Python version)
+\item Implement trying hard\+: parse buffer char by char and don\textquotesingle{}t just discard the expected length buffer if there is an error
+\end{DoxyItemize}
+
+This code isn\textquotesingle{}t great idiomatic Javascript (yet!), instead, it\textquotesingle{}s more of a line-\/by-\/line translation from Python as much as possible.
+
+The Python M\+A\+V\+Link code manages some information about the connection status (system/component attached, bad packets, durations/times, etc), and that work isn\textquotesingle{}t completely present in this code yet.
+
+Code to create/send M\+A\+V\+Link messages to a client is very clumsy at this point in time {\itshape and will change} to make it more direct.
+
+Publish generated scripts as npm module.
+
+\subsubsection*{Development}
+
+Unit tests cover basic packing/unpacking functionality against mock binary buffers representing valid M\+A\+Vlink generated by the Python implementation. You need to have \href{http://visionmedia.github.com/mocha/}{\texttt{ mocha}} installed to run the unit tests.
+
+To run tests, use npm\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm test}
+\end{DoxyCode}
+
+
+Specific instructions for generating Jenkins-\/friendly output is done through the makefile as well\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make ci}
+\end{DoxyCode}
+ 

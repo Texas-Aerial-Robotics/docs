@@ -1,0 +1,393 @@
+\hypertarget{blas_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/blas.h File Reference}
+\label{blas_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/blas.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/blas.h}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{blas_8h_a342ca7301ce3569b4e709b26d0c6a824}{flatten}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, int size, int layers, int batch, int forward)
+\item 
+void \mbox{\hyperlink{blas_8h_a50faafc66cb2a46626f678e7c23b31a4}{pm}} (int M, int N, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}})
+\item 
+float $\ast$ \mbox{\hyperlink{blas_8h_ac381fb40806eeb0c63fdb1d7e029bfde}{random\+\_\+matrix}} (int rows, int cols)
+\item 
+void \mbox{\hyperlink{blas_8h_abec5c296a1f7f8fb79e08ca2c1ab8c53}{time\+\_\+random\+\_\+matrix}} (int TA, int TB, int m, int k, int n)
+\item 
+void \mbox{\hyperlink{blas_8h_a35a86f53b12419497b789d1b115ca244}{reorg\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, int w, int h, int c, int batch, int stride, int forward, float $\ast$out)
+\item 
+void \mbox{\hyperlink{blas_8h_ad4152e1ba8b8c9d4f55dca4f77fa369d}{test\+\_\+blas}} ()
+\item 
+void \mbox{\hyperlink{blas_8h_a60c968dc197b97a03b399f557235e7a9}{inter\+\_\+cpu}} (int NX, float $\ast$X, int NY, float $\ast$Y, int \mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, float $\ast$O\+UT)
+\item 
+void \mbox{\hyperlink{blas_8h_a2c06810d0224f04aa209bad96c756c82}{deinter\+\_\+cpu}} (int NX, float $\ast$X, int NY, float $\ast$Y, int \mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}, float $\ast$O\+UT)
+\item 
+void \mbox{\hyperlink{blas_8h_a36bc6cbf78387dee1d17efdee986906e}{mult\+\_\+add\+\_\+into\+\_\+cpu}} (int N, float $\ast$X, float $\ast$Y, float $\ast$Z)
+\item 
+void \mbox{\hyperlink{blas_8h_aca992f6ed5cd6b7abca80bca89df397f}{const\+\_\+cpu}} (int N, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$X, int I\+N\+CX)
+\item 
+void \mbox{\hyperlink{blas_8h_a2ec50100d7aaab656a1032e4d36f9226}{constrain\+\_\+gpu}} (int N, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$X, int I\+N\+CX)
+\item 
+void \mbox{\hyperlink{blas_8h_a16c351b80490408aa433f16fa6e5bf40}{pow\+\_\+cpu}} (int N, float \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}}, float $\ast$X, int I\+N\+CX, float $\ast$Y, int I\+N\+CY)
+\item 
+void \mbox{\hyperlink{blas_8h_a265d9895cb0bd21d1e87aa1285f08914}{mul\+\_\+cpu}} (int N, float $\ast$X, int I\+N\+CX, float $\ast$Y, int I\+N\+CY)
+\item 
+int \mbox{\hyperlink{blas_8h_a1bb12768d691b88dec3f6c7539adff47}{test\+\_\+gpu\+\_\+blas}} ()
+\item 
+void \mbox{\hyperlink{blas_8h_a7da2246f38d6cd1676323ae0b15f5ad9}{shortcut\+\_\+cpu}} (int batch, int w1, int h1, int c1, float $\ast$add, int w2, int h2, int c2, float s1, float s2, float $\ast$out)
+\item 
+void \mbox{\hyperlink{blas_8h_aa9b8a32d8aae40aa9a7834e58e09974f}{mean\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, int batch, int filters, int spatial, float $\ast$mean)
+\item 
+void \mbox{\hyperlink{blas_8h_a0b814616350ba7a38fc885e0497011a7}{variance\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float $\ast$mean, int batch, int filters, int spatial, float $\ast$variance)
+\item 
+void \mbox{\hyperlink{blas_8h_ad2afef6b2dde26f2a1098e42f8b48e8f}{scale\+\_\+bias}} (float $\ast$output, float $\ast$scales, int batch, int n, int size)
+\item 
+void \mbox{\hyperlink{blas_8h_ad294f39c089d9017cbf8614bc584409d}{backward\+\_\+scale\+\_\+cpu}} (float $\ast$x\+\_\+norm, float $\ast$delta, int batch, int n, int size, float $\ast$scale\+\_\+updates)
+\item 
+void \mbox{\hyperlink{blas_8h_a87f9e84fdeb71dfa36fcd5fc6a65f4fb}{mean\+\_\+delta\+\_\+cpu}} (float $\ast$delta, float $\ast$variance, int batch, int filters, int spatial, float $\ast$mean\+\_\+delta)
+\item 
+void \mbox{\hyperlink{blas_8h_a5468ae76e1f7a1cfa35cf3c974d2ef8a}{variance\+\_\+delta\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float $\ast$delta, float $\ast$mean, float $\ast$variance, int batch, int filters, int spatial, float $\ast$variance\+\_\+delta)
+\item 
+void \mbox{\hyperlink{blas_8h_a85baa02a320f2f8e6939d775c38b357c}{normalize\+\_\+delta\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float $\ast$mean, float $\ast$variance, float $\ast$mean\+\_\+delta, float $\ast$variance\+\_\+delta, int batch, int filters, int spatial, float $\ast$delta)
+\item 
+void \mbox{\hyperlink{blas_8h_abbb62e96305f1d6b574d59293c5e5b76}{l2normalize\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float $\ast$dx, int batch, int filters, int spatial)
+\item 
+void \mbox{\hyperlink{blas_8h_a520d4b34b247df84cf9a5f632cec4c12}{smooth\+\_\+l1\+\_\+cpu}} (int n, float $\ast$pred, float $\ast$truth, float $\ast$delta, float $\ast$\mbox{\hyperlink{utils_8c_a6c317cffefb9737fb2260da73688f275}{error}})
+\item 
+void \mbox{\hyperlink{blas_8h_afb4d0ba7eb3b84de29d4aeed84fdd514}{l2\+\_\+cpu}} (int n, float $\ast$pred, float $\ast$truth, float $\ast$delta, float $\ast$\mbox{\hyperlink{utils_8c_a6c317cffefb9737fb2260da73688f275}{error}})
+\item 
+void \mbox{\hyperlink{blas_8h_ae49b2e6518954df9e14463e82d3c5058}{l1\+\_\+cpu}} (int n, float $\ast$pred, float $\ast$truth, float $\ast$delta, float $\ast$\mbox{\hyperlink{utils_8c_a6c317cffefb9737fb2260da73688f275}{error}})
+\item 
+void \mbox{\hyperlink{blas_8h_adbe01da3f5f80c7a02b0d8ae30ab8515}{logistic\+\_\+x\+\_\+ent\+\_\+cpu}} (int n, float $\ast$pred, float $\ast$truth, float $\ast$delta, float $\ast$\mbox{\hyperlink{utils_8c_a6c317cffefb9737fb2260da73688f275}{error}})
+\item 
+void \mbox{\hyperlink{blas_8h_a5e97eba8afa1a44d905455842e94ca6c}{softmax\+\_\+x\+\_\+ent\+\_\+cpu}} (int n, float $\ast$pred, float $\ast$truth, float $\ast$delta, float $\ast$\mbox{\hyperlink{utils_8c_a6c317cffefb9737fb2260da73688f275}{error}})
+\item 
+void \mbox{\hyperlink{blas_8h_a99500a4eaf41c0cda99997fbbd72568e}{weighted\+\_\+sum\+\_\+cpu}} (float $\ast$a, float $\ast$b, float $\ast$s, int num, float $\ast$c)
+\item 
+void \mbox{\hyperlink{blas_8h_a88db58ad177115373264d3f52828fe5f}{weighted\+\_\+delta\+\_\+cpu}} (float $\ast$a, float $\ast$b, float $\ast$s, float $\ast$da, float $\ast$db, float $\ast$ds, int n, float $\ast$dc)
+\item 
+void \mbox{\hyperlink{blas_8h_a31c4f0273f3c5639ae7734d24e11274a}{softmax}} (float $\ast$input, int n, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, int stride, float $\ast$output)
+\item 
+void \mbox{\hyperlink{blas_8h_ad328f3d0648b19a98fafc221e43ed73d}{softmax\+\_\+cpu}} (float $\ast$input, int n, int batch, int batch\+\_\+offset, int groups, int group\+\_\+offset, int stride, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, float $\ast$output)
+\item 
+void \mbox{\hyperlink{blas_8h_ae774efe95983a8776fc923479e2c4f98}{upsample\+\_\+cpu}} (float $\ast$in, int w, int h, int c, int batch, int stride, int forward, float scale, float $\ast$out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{blas_8h_ad294f39c089d9017cbf8614bc584409d}\label{blas_8h_ad294f39c089d9017cbf8614bc584409d}} 
+\index{blas.h@{blas.h}!backward\_scale\_cpu@{backward\_scale\_cpu}}
+\index{backward\_scale\_cpu@{backward\_scale\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{backward\_scale\_cpu()}{backward\_scale\_cpu()}}
+{\footnotesize\ttfamily void backward\+\_\+scale\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x\+\_\+norm,  }\item[{float $\ast$}]{delta,  }\item[{int}]{batch,  }\item[{int}]{n,  }\item[{int}]{size,  }\item[{float $\ast$}]{scale\+\_\+updates }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{blas_8h_aca992f6ed5cd6b7abca80bca89df397f}\label{blas_8h_aca992f6ed5cd6b7abca80bca89df397f}} 
+\index{blas.h@{blas.h}!const\_cpu@{const\_cpu}}
+\index{const\_cpu@{const\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{const\_cpu()}{const\_cpu()}}
+{\footnotesize\ttfamily void const\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{N,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{X,  }\item[{int}]{I\+N\+CX }\end{DoxyParamCaption})}
+
+
+
+Definition at line 160 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a2ec50100d7aaab656a1032e4d36f9226}\label{blas_8h_a2ec50100d7aaab656a1032e4d36f9226}} 
+\index{blas.h@{blas.h}!constrain\_gpu@{constrain\_gpu}}
+\index{constrain\_gpu@{constrain\_gpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{constrain\_gpu()}{constrain\_gpu()}}
+{\footnotesize\ttfamily void constrain\+\_\+gpu (\begin{DoxyParamCaption}\item[{int}]{N,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{X,  }\item[{int}]{I\+N\+CX }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blas_8h_a2c06810d0224f04aa209bad96c756c82}\label{blas_8h_a2c06810d0224f04aa209bad96c756c82}} 
+\index{blas.h@{blas.h}!deinter\_cpu@{deinter\_cpu}}
+\index{deinter\_cpu@{deinter\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{deinter\_cpu()}{deinter\_cpu()}}
+{\footnotesize\ttfamily void deinter\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{NX,  }\item[{float $\ast$}]{X,  }\item[{int}]{NY,  }\item[{float $\ast$}]{Y,  }\item[{int}]{B,  }\item[{float $\ast$}]{O\+UT }\end{DoxyParamCaption})}
+
+
+
+Definition at line 196 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a342ca7301ce3569b4e709b26d0c6a824}\label{blas_8h_a342ca7301ce3569b4e709b26d0c6a824}} 
+\index{blas.h@{blas.h}!flatten@{flatten}}
+\index{flatten@{flatten}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{flatten()}{flatten()}}
+{\footnotesize\ttfamily void flatten (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{int}]{size,  }\item[{int}]{layers,  }\item[{int}]{batch,  }\item[{int}]{forward }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a60c968dc197b97a03b399f557235e7a9}\label{blas_8h_a60c968dc197b97a03b399f557235e7a9}} 
+\index{blas.h@{blas.h}!inter\_cpu@{inter\_cpu}}
+\index{inter\_cpu@{inter\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{inter\_cpu()}{inter\_cpu()}}
+{\footnotesize\ttfamily void inter\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{NX,  }\item[{float $\ast$}]{X,  }\item[{int}]{NY,  }\item[{float $\ast$}]{Y,  }\item[{int}]{B,  }\item[{float $\ast$}]{O\+UT }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_ae49b2e6518954df9e14463e82d3c5058}\label{blas_8h_ae49b2e6518954df9e14463e82d3c5058}} 
+\index{blas.h@{blas.h}!l1\_cpu@{l1\_cpu}}
+\index{l1\_cpu@{l1\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{l1\_cpu()}{l1\_cpu()}}
+{\footnotesize\ttfamily void l1\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{float $\ast$}]{pred,  }\item[{float $\ast$}]{truth,  }\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Definition at line 255 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_afb4d0ba7eb3b84de29d4aeed84fdd514}\label{blas_8h_afb4d0ba7eb3b84de29d4aeed84fdd514}} 
+\index{blas.h@{blas.h}!l2\_cpu@{l2\_cpu}}
+\index{l2\_cpu@{l2\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{l2\_cpu()}{l2\_cpu()}}
+{\footnotesize\ttfamily void l2\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{float $\ast$}]{pred,  }\item[{float $\ast$}]{truth,  }\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Definition at line 287 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_abbb62e96305f1d6b574d59293c5e5b76}\label{blas_8h_abbb62e96305f1d6b574d59293c5e5b76}} 
+\index{blas.h@{blas.h}!l2normalize\_cpu@{l2normalize\_cpu}}
+\index{l2normalize\_cpu@{l2normalize\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{l2normalize\_cpu()}{l2normalize\_cpu()}}
+{\footnotesize\ttfamily void l2normalize\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{dx,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_adbe01da3f5f80c7a02b0d8ae30ab8515}\label{blas_8h_adbe01da3f5f80c7a02b0d8ae30ab8515}} 
+\index{blas.h@{blas.h}!logistic\_x\_ent\_cpu@{logistic\_x\_ent\_cpu}}
+\index{logistic\_x\_ent\_cpu@{logistic\_x\_ent\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{logistic\_x\_ent\_cpu()}{logistic\_x\_ent\_cpu()}}
+{\footnotesize\ttfamily void logistic\+\_\+x\+\_\+ent\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{float $\ast$}]{pred,  }\item[{float $\ast$}]{truth,  }\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Definition at line 276 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_aa9b8a32d8aae40aa9a7834e58e09974f}\label{blas_8h_aa9b8a32d8aae40aa9a7834e58e09974f}} 
+\index{blas.h@{blas.h}!mean\_cpu@{mean\_cpu}}
+\index{mean\_cpu@{mean\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{mean\_cpu()}{mean\_cpu()}}
+{\footnotesize\ttfamily void mean\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{mean }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a87f9e84fdeb71dfa36fcd5fc6a65f4fb}\label{blas_8h_a87f9e84fdeb71dfa36fcd5fc6a65f4fb}} 
+\index{blas.h@{blas.h}!mean\_delta\_cpu@{mean\_delta\_cpu}}
+\index{mean\_delta\_cpu@{mean\_delta\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{mean\_delta\_cpu()}{mean\_delta\_cpu()}}
+{\footnotesize\ttfamily void mean\+\_\+delta\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{variance,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{mean\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{blas_8h_a265d9895cb0bd21d1e87aa1285f08914}\label{blas_8h_a265d9895cb0bd21d1e87aa1285f08914}} 
+\index{blas.h@{blas.h}!mul\_cpu@{mul\_cpu}}
+\index{mul\_cpu@{mul\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{mul\_cpu()}{mul\_cpu()}}
+{\footnotesize\ttfamily void mul\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{N,  }\item[{float $\ast$}]{X,  }\item[{int}]{I\+N\+CX,  }\item[{float $\ast$}]{Y,  }\item[{int}]{I\+N\+CY }\end{DoxyParamCaption})}
+
+
+
+Definition at line 166 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a36bc6cbf78387dee1d17efdee986906e}\label{blas_8h_a36bc6cbf78387dee1d17efdee986906e}} 
+\index{blas.h@{blas.h}!mult\_add\_into\_cpu@{mult\_add\_into\_cpu}}
+\index{mult\_add\_into\_cpu@{mult\_add\_into\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{mult\_add\_into\_cpu()}{mult\_add\_into\_cpu()}}
+{\footnotesize\ttfamily void mult\+\_\+add\+\_\+into\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{N,  }\item[{float $\ast$}]{X,  }\item[{float $\ast$}]{Y,  }\item[{float $\ast$}]{Z }\end{DoxyParamCaption})}
+
+
+
+Definition at line 232 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a85baa02a320f2f8e6939d775c38b357c}\label{blas_8h_a85baa02a320f2f8e6939d775c38b357c}} 
+\index{blas.h@{blas.h}!normalize\_delta\_cpu@{normalize\_delta\_cpu}}
+\index{normalize\_delta\_cpu@{normalize\_delta\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{normalize\_delta\_cpu()}{normalize\_delta\_cpu()}}
+{\footnotesize\ttfamily void normalize\+\_\+delta\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{mean,  }\item[{float $\ast$}]{variance,  }\item[{float $\ast$}]{mean\+\_\+delta,  }\item[{float $\ast$}]{variance\+\_\+delta,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{blas_8h_a50faafc66cb2a46626f678e7c23b31a4}\label{blas_8h_a50faafc66cb2a46626f678e7c23b31a4}} 
+\index{blas.h@{blas.h}!pm@{pm}}
+\index{pm@{pm}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{pm()}{pm()}}
+{\footnotesize\ttfamily void pm (\begin{DoxyParamCaption}\item[{int}]{M,  }\item[{int}]{N,  }\item[{float $\ast$}]{A }\end{DoxyParamCaption})}
+
+
+
+Definition at line 203 of file utils.\+c.
+
+\mbox{\Hypertarget{blas_8h_a16c351b80490408aa433f16fa6e5bf40}\label{blas_8h_a16c351b80490408aa433f16fa6e5bf40}} 
+\index{blas.h@{blas.h}!pow\_cpu@{pow\_cpu}}
+\index{pow\_cpu@{pow\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{pow\_cpu()}{pow\_cpu()}}
+{\footnotesize\ttfamily void pow\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{N,  }\item[{float}]{A\+L\+P\+HA,  }\item[{float $\ast$}]{X,  }\item[{int}]{I\+N\+CX,  }\item[{float $\ast$}]{Y,  }\item[{int}]{I\+N\+CY }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_ac381fb40806eeb0c63fdb1d7e029bfde}\label{blas_8h_ac381fb40806eeb0c63fdb1d7e029bfde}} 
+\index{blas.h@{blas.h}!random\_matrix@{random\_matrix}}
+\index{random\_matrix@{random\_matrix}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{random\_matrix()}{random\_matrix()}}
+{\footnotesize\ttfamily float$\ast$ random\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file gemm.\+c.
+
+\mbox{\Hypertarget{blas_8h_a35a86f53b12419497b789d1b115ca244}\label{blas_8h_a35a86f53b12419497b789d1b115ca244}} 
+\index{blas.h@{blas.h}!reorg\_cpu@{reorg\_cpu}}
+\index{reorg\_cpu@{reorg\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{reorg\_cpu()}{reorg\_cpu()}}
+{\footnotesize\ttfamily void reorg\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c,  }\item[{int}]{batch,  }\item[{int}]{stride,  }\item[{int}]{forward,  }\item[{float $\ast$}]{out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_ad2afef6b2dde26f2a1098e42f8b48e8f}\label{blas_8h_ad2afef6b2dde26f2a1098e42f8b48e8f}} 
+\index{blas.h@{blas.h}!scale\_bias@{scale\_bias}}
+\index{scale\_bias@{scale\_bias}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{scale\_bias()}{scale\_bias()}}
+{\footnotesize\ttfamily void scale\+\_\+bias (\begin{DoxyParamCaption}\item[{float $\ast$}]{output,  }\item[{float $\ast$}]{scales,  }\item[{int}]{batch,  }\item[{int}]{n,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 423 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{blas_8h_a7da2246f38d6cd1676323ae0b15f5ad9}\label{blas_8h_a7da2246f38d6cd1676323ae0b15f5ad9}} 
+\index{blas.h@{blas.h}!shortcut\_cpu@{shortcut\_cpu}}
+\index{shortcut\_cpu@{shortcut\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{shortcut\_cpu()}{shortcut\_cpu()}}
+{\footnotesize\ttfamily void shortcut\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w1,  }\item[{int}]{h1,  }\item[{int}]{c1,  }\item[{float $\ast$}]{add,  }\item[{int}]{w2,  }\item[{int}]{h2,  }\item[{int}]{c2,  }\item[{float}]{s1,  }\item[{float}]{s2,  }\item[{float $\ast$}]{out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a520d4b34b247df84cf9a5f632cec4c12}\label{blas_8h_a520d4b34b247df84cf9a5f632cec4c12}} 
+\index{blas.h@{blas.h}!smooth\_l1\_cpu@{smooth\_l1\_cpu}}
+\index{smooth\_l1\_cpu@{smooth\_l1\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{smooth\_l1\_cpu()}{smooth\_l1\_cpu()}}
+{\footnotesize\ttfamily void smooth\+\_\+l1\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{float $\ast$}]{pred,  }\item[{float $\ast$}]{truth,  }\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Definition at line 238 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a31c4f0273f3c5639ae7734d24e11274a}\label{blas_8h_a31c4f0273f3c5639ae7734d24e11274a}} 
+\index{blas.h@{blas.h}!softmax@{softmax}}
+\index{softmax@{softmax}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{softmax()}{softmax()}}
+{\footnotesize\ttfamily void softmax (\begin{DoxyParamCaption}\item[{float $\ast$}]{input,  }\item[{int}]{n,  }\item[{float}]{temp,  }\item[{int}]{stride,  }\item[{float $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Definition at line 305 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_ad328f3d0648b19a98fafc221e43ed73d}\label{blas_8h_ad328f3d0648b19a98fafc221e43ed73d}} 
+\index{blas.h@{blas.h}!softmax\_cpu@{softmax\_cpu}}
+\index{softmax\_cpu@{softmax\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{softmax\_cpu()}{softmax\_cpu()}}
+{\footnotesize\ttfamily void softmax\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{input,  }\item[{int}]{n,  }\item[{int}]{batch,  }\item[{int}]{batch\+\_\+offset,  }\item[{int}]{groups,  }\item[{int}]{group\+\_\+offset,  }\item[{int}]{stride,  }\item[{float}]{temp,  }\item[{float $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Definition at line 324 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a5e97eba8afa1a44d905455842e94ca6c}\label{blas_8h_a5e97eba8afa1a44d905455842e94ca6c}} 
+\index{blas.h@{blas.h}!softmax\_x\_ent\_cpu@{softmax\_x\_ent\_cpu}}
+\index{softmax\_x\_ent\_cpu@{softmax\_x\_ent\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{softmax\_x\_ent\_cpu()}{softmax\_x\_ent\_cpu()}}
+{\footnotesize\ttfamily void softmax\+\_\+x\+\_\+ent\+\_\+cpu (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{float $\ast$}]{pred,  }\item[{float $\ast$}]{truth,  }\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Definition at line 265 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_ad4152e1ba8b8c9d4f55dca4f77fa369d}\label{blas_8h_ad4152e1ba8b8c9d4f55dca4f77fa369d}} 
+\index{blas.h@{blas.h}!test\_blas@{test\_blas}}
+\index{test\_blas@{test\_blas}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{test\_blas()}{test\_blas()}}
+{\footnotesize\ttfamily void test\+\_\+blas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blas_8h_a1bb12768d691b88dec3f6c7539adff47}\label{blas_8h_a1bb12768d691b88dec3f6c7539adff47}} 
+\index{blas.h@{blas.h}!test\_gpu\_blas@{test\_gpu\_blas}}
+\index{test\_gpu\_blas@{test\_gpu\_blas}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{test\_gpu\_blas()}{test\_gpu\_blas()}}
+{\footnotesize\ttfamily int test\+\_\+gpu\+\_\+blas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blas_8h_abec5c296a1f7f8fb79e08ca2c1ab8c53}\label{blas_8h_abec5c296a1f7f8fb79e08ca2c1ab8c53}} 
+\index{blas.h@{blas.h}!time\_random\_matrix@{time\_random\_matrix}}
+\index{time\_random\_matrix@{time\_random\_matrix}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{time\_random\_matrix()}{time\_random\_matrix()}}
+{\footnotesize\ttfamily void time\+\_\+random\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{TA,  }\item[{int}]{TB,  }\item[{int}]{m,  }\item[{int}]{k,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file gemm.\+c.
+
+\mbox{\Hypertarget{blas_8h_ae774efe95983a8776fc923479e2c4f98}\label{blas_8h_ae774efe95983a8776fc923479e2c4f98}} 
+\index{blas.h@{blas.h}!upsample\_cpu@{upsample\_cpu}}
+\index{upsample\_cpu@{upsample\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{upsample\_cpu()}{upsample\_cpu()}}
+{\footnotesize\ttfamily void upsample\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{in,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c,  }\item[{int}]{batch,  }\item[{int}]{stride,  }\item[{int}]{forward,  }\item[{float}]{scale,  }\item[{float $\ast$}]{out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 334 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a0b814616350ba7a38fc885e0497011a7}\label{blas_8h_a0b814616350ba7a38fc885e0497011a7}} 
+\index{blas.h@{blas.h}!variance\_cpu@{variance\_cpu}}
+\index{variance\_cpu@{variance\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{variance\_cpu()}{variance\_cpu()}}
+{\footnotesize\ttfamily void variance\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{mean,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{variance }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a5468ae76e1f7a1cfa35cf3c974d2ef8a}\label{blas_8h_a5468ae76e1f7a1cfa35cf3c974d2ef8a}} 
+\index{blas.h@{blas.h}!variance\_delta\_cpu@{variance\_delta\_cpu}}
+\index{variance\_delta\_cpu@{variance\_delta\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{variance\_delta\_cpu()}{variance\_delta\_cpu()}}
+{\footnotesize\ttfamily void variance\+\_\+delta\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{mean,  }\item[{float $\ast$}]{variance,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{variance\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 102 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{blas_8h_a88db58ad177115373264d3f52828fe5f}\label{blas_8h_a88db58ad177115373264d3f52828fe5f}} 
+\index{blas.h@{blas.h}!weighted\_delta\_cpu@{weighted\_delta\_cpu}}
+\index{weighted\_delta\_cpu@{weighted\_delta\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{weighted\_delta\_cpu()}{weighted\_delta\_cpu()}}
+{\footnotesize\ttfamily void weighted\+\_\+delta\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{float $\ast$}]{b,  }\item[{float $\ast$}]{s,  }\item[{float $\ast$}]{da,  }\item[{float $\ast$}]{db,  }\item[{float $\ast$}]{ds,  }\item[{int}]{n,  }\item[{float $\ast$}]{dc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file blas.\+c.
+
+\mbox{\Hypertarget{blas_8h_a99500a4eaf41c0cda99997fbbd72568e}\label{blas_8h_a99500a4eaf41c0cda99997fbbd72568e}} 
+\index{blas.h@{blas.h}!weighted\_sum\_cpu@{weighted\_sum\_cpu}}
+\index{weighted\_sum\_cpu@{weighted\_sum\_cpu}!blas.h@{blas.h}}
+\subsubsection{\texorpdfstring{weighted\_sum\_cpu()}{weighted\_sum\_cpu()}}
+{\footnotesize\ttfamily void weighted\+\_\+sum\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{float $\ast$}]{b,  }\item[{float $\ast$}]{s,  }\item[{int}]{num,  }\item[{float $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file blas.\+c.
+

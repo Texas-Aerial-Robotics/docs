@@ -1,0 +1,77 @@
+\hypertarget{YoloObjectDetector_8hpp}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet\+\_\+ros/include/darknet\+\_\+ros/\+Yolo\+Object\+Detector.hpp File Reference}
+\label{YoloObjectDetector_8hpp}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet\_ros/include/darknet\_ros/YoloObjectDetector.hpp@{/home/eric/catkin\_ws/src/darknet\_ros/darknet\_ros/include/darknet\_ros/YoloObjectDetector.hpp}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$std\+\_\+msgs/\+Header.\+h$>$}\newline
+{\ttfamily \#include $<$std\+\_\+msgs/\+Int8.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/server/simple\+\_\+action\+\_\+server.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/image\+\_\+encodings.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Image.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Point.\+h$>$}\newline
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/objdetect/objdetect.\+hpp$>$}\newline
+{\ttfamily \#include $<$cv\+\_\+bridge/cv\+\_\+bridge.\+h$>$}\newline
+{\ttfamily \#include $<$darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Boxes.\+h$>$}\newline
+{\ttfamily \#include $<$darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Box.\+h$>$}\newline
+{\ttfamily \#include $<$darknet\+\_\+ros\+\_\+msgs/\+Check\+For\+Objects\+Action.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detection\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}region\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cost\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}box.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet\+\_\+ros/image\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdarknet__ros_1_1RosBox__}{darknet\+\_\+ros\+::\+Ros\+Box\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Bounding box of the detected object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdarknet__ros_1_1IplImageWithHeader__}{darknet\+\_\+ros\+::\+Ipl\+Image\+With\+Header\+\_\+}}
+\item 
+class \mbox{\hyperlink{classdarknet__ros_1_1YoloObjectDetector}{darknet\+\_\+ros\+::\+Yolo\+Object\+Detector}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedarknet__ros}{darknet\+\_\+ros}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{YoloObjectDetector_8hpp_a01fcef1648521568574e7dfe9e65bc7a}{ipl\+\_\+into\+\_\+image}} (Ipl\+Image $\ast$src, \mbox{\hyperlink{structimage}{image}} im)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{YoloObjectDetector_8hpp_a851dc64722a7112c0ea6336bdf0b0f6d}{ipl\+\_\+to\+\_\+image}} (Ipl\+Image $\ast$src)
+\item 
+void \mbox{\hyperlink{YoloObjectDetector_8hpp_a7ee8b5472c419a07ccd30f42528e722e}{show\+\_\+image\+\_\+cv}} (\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}}, const char $\ast$name, Ipl\+Image $\ast$disp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{YoloObjectDetector_8hpp_a01fcef1648521568574e7dfe9e65bc7a}\label{YoloObjectDetector_8hpp_a01fcef1648521568574e7dfe9e65bc7a}} 
+\index{YoloObjectDetector.hpp@{YoloObjectDetector.hpp}!ipl\_into\_image@{ipl\_into\_image}}
+\index{ipl\_into\_image@{ipl\_into\_image}!YoloObjectDetector.hpp@{YoloObjectDetector.hpp}}
+\subsubsection{\texorpdfstring{ipl\_into\_image()}{ipl\_into\_image()}}
+{\footnotesize\ttfamily void ipl\+\_\+into\+\_\+image (\begin{DoxyParamCaption}\item[{Ipl\+Image $\ast$}]{src,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{im }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{YoloObjectDetector_8hpp_a851dc64722a7112c0ea6336bdf0b0f6d}\label{YoloObjectDetector_8hpp_a851dc64722a7112c0ea6336bdf0b0f6d}} 
+\index{YoloObjectDetector.hpp@{YoloObjectDetector.hpp}!ipl\_to\_image@{ipl\_to\_image}}
+\index{ipl\_to\_image@{ipl\_to\_image}!YoloObjectDetector.hpp@{YoloObjectDetector.hpp}}
+\subsubsection{\texorpdfstring{ipl\_to\_image()}{ipl\_to\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} ipl\+\_\+to\+\_\+image (\begin{DoxyParamCaption}\item[{Ipl\+Image $\ast$}]{src }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{YoloObjectDetector_8hpp_a7ee8b5472c419a07ccd30f42528e722e}\label{YoloObjectDetector_8hpp_a7ee8b5472c419a07ccd30f42528e722e}} 
+\index{YoloObjectDetector.hpp@{YoloObjectDetector.hpp}!show\_image\_cv@{show\_image\_cv}}
+\index{show\_image\_cv@{show\_image\_cv}!YoloObjectDetector.hpp@{YoloObjectDetector.hpp}}
+\subsubsection{\texorpdfstring{show\_image\_cv()}{show\_image\_cv()}}
+{\footnotesize\ttfamily void show\+\_\+image\+\_\+cv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{p,  }\item[{const char $\ast$}]{name,  }\item[{Ipl\+Image $\ast$}]{disp }\end{DoxyParamCaption})}
+

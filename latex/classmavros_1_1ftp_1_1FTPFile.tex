@@ -1,0 +1,235 @@
+\hypertarget{classmavros_1_1ftp_1_1FTPFile}{}\section{mavros.\+ftp.\+F\+T\+P\+File Class Reference}
+\label{classmavros_1_1ftp_1_1FTPFile}\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+Inheritance diagram for mavros.\+ftp.\+F\+T\+P\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmavros_1_1ftp_1_1FTPFile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_ab9ee82f1e229db08bfa039e2b7c53e45}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a9aa7f5b38e225c1208000bb59ed089e8}{name}}, \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a4ca55c2e19240b8792ea85f2ea7ff01a}{mode}})
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_aa4c3a31a020d032afb6ab23d60bd6b52}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a3d38aa5af0f898e95939ac30e507a26b}{open}} (self, path, \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a4ca55c2e19240b8792ea85f2ea7ff01a}{mode}})
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a0ee10b7bd1ada00958549feb8ee64892}{close}} (self)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a5be56ce2d69a2218f265ebd06da8b87c}{read}} (self, \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a375139e1ed26f06ca4a866626c888a09}{size}}=1)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_aa1878b3e0aa7d10f58b443ad4e6351ce}{write}} (self, bin\+\_\+data)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a1eae7ed6dd89b65f0197b3fd347422b6}{tell}} (self)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a3fed06e798361b6267a1c06f6f76483e}{seek}} (self, \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a9f517555ac2185b085474fbf6dea481f}{offset}}, whence=os.\+S\+E\+E\+K\+\_\+\+S\+ET)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a7d31a3943fa085489ad4c688c3870a10}{truncate}} (self, \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a375139e1ed26f06ca4a866626c888a09}{size}}=0)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a8d93c57761c8b69342d3939718a5418e}{closed}} (self)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_ab6e951ed4196f73fe9e56fd080cd2225}{\+\_\+\+\_\+enter\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a3455a85dc5cf2172788cda0687d91c0a}{\+\_\+\+\_\+exit\+\_\+\+\_\+}} (self, exc\+\_\+type, exc\+\_\+value, traceback)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a9aa7f5b38e225c1208000bb59ed089e8}{name}}
+\item 
+\mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a4ca55c2e19240b8792ea85f2ea7ff01a}{mode}}
+\item 
+\mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a375139e1ed26f06ca4a866626c888a09}{size}}
+\item 
+\mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile_a9f517555ac2185b085474fbf6dea481f}{offset}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}FCU file object.
+Note that current PX4 firmware only support two connections simultaneously.
+\end{DoxyVerb}
+ 
+
+Definition at line 42 of file ftp.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_ab9ee82f1e229db08bfa039e2b7c53e45}\label{classmavros_1_1ftp_1_1FTPFile_ab9ee82f1e229db08bfa039e2b7c53e45}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_aa4c3a31a020d032afb6ab23d60bd6b52}\label{classmavros_1_1ftp_1_1FTPFile_aa4c3a31a020d032afb6ab23d60bd6b52}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!\_\_del\_\_@{\_\_del\_\_}}
+\index{\_\_del\_\_@{\_\_del\_\_}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{\_\_del\_\_()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file ftp.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_ab6e951ed4196f73fe9e56fd080cd2225}\label{classmavros_1_1ftp_1_1FTPFile_ab6e951ed4196f73fe9e56fd080cd2225}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!\_\_enter\_\_@{\_\_enter\_\_}}
+\index{\_\_enter\_\_@{\_\_enter\_\_}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{\_\_enter\_\_()}{\_\_enter\_\_()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+\_\+\+\_\+enter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 149 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a3455a85dc5cf2172788cda0687d91c0a}\label{classmavros_1_1ftp_1_1FTPFile_a3455a85dc5cf2172788cda0687d91c0a}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!\_\_exit\_\_@{\_\_exit\_\_}}
+\index{\_\_exit\_\_@{\_\_exit\_\_}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{\_\_exit\_\_()}{\_\_exit\_\_()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+\_\+\+\_\+exit\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exc\+\_\+type,  }\item[{}]{exc\+\_\+value,  }\item[{}]{traceback }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a0ee10b7bd1ada00958549feb8ee64892}\label{classmavros_1_1ftp_1_1FTPFile_a0ee10b7bd1ada00958549feb8ee64892}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!close@{close}}
+\index{close@{close}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a8d93c57761c8b69342d3939718a5418e}\label{classmavros_1_1ftp_1_1FTPFile_a8d93c57761c8b69342d3939718a5418e}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!closed@{closed}}
+\index{closed@{closed}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{closed()}{closed()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+closed (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 146 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a3d38aa5af0f898e95939ac30e507a26b}\label{classmavros_1_1ftp_1_1FTPFile_a3d38aa5af0f898e95939ac30e507a26b}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!open@{open}}
+\index{open@{open}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+open (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Supported modes:
+    - 'w': write binary
+    - 'r': read binary
+    - 'cw': create excl & write
+\end{DoxyVerb}
+ 
+
+Definition at line 56 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a5be56ce2d69a2218f265ebd06da8b87c}\label{classmavros_1_1ftp_1_1FTPFile_a5be56ce2d69a2218f265ebd06da8b87c}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!read@{read}}
+\index{read@{read}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+read (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a3fed06e798361b6267a1c06f6f76483e}\label{classmavros_1_1ftp_1_1FTPFile_a3fed06e798361b6267a1c06f6f76483e}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!seek@{seek}}
+\index{seek@{seek}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{seek()}{seek()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+seek (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{offset,  }\item[{}]{whence = {\ttfamily os.SEEK\+\_\+SET} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a1eae7ed6dd89b65f0197b3fd347422b6}\label{classmavros_1_1ftp_1_1FTPFile_a1eae7ed6dd89b65f0197b3fd347422b6}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!tell@{tell}}
+\index{tell@{tell}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{tell()}{tell()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+tell (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a7d31a3943fa085489ad4c688c3870a10}\label{classmavros_1_1ftp_1_1FTPFile_a7d31a3943fa085489ad4c688c3870a10}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!truncate@{truncate}}
+\index{truncate@{truncate}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{truncate()}{truncate()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+truncate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_aa1878b3e0aa7d10f58b443ad4e6351ce}\label{classmavros_1_1ftp_1_1FTPFile_aa1878b3e0aa7d10f58b443ad4e6351ce}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!write@{write}}
+\index{write@{write}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+F\+T\+P\+File.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bin\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file ftp.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a4ca55c2e19240b8792ea85f2ea7ff01a}\label{classmavros_1_1ftp_1_1FTPFile_a4ca55c2e19240b8792ea85f2ea7ff01a}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!mode@{mode}}
+\index{mode@{mode}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily mavros.\+ftp.\+F\+T\+P\+File.\+mode}
+
+
+
+Definition at line 50 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a9aa7f5b38e225c1208000bb59ed089e8}\label{classmavros_1_1ftp_1_1FTPFile_a9aa7f5b38e225c1208000bb59ed089e8}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!name@{name}}
+\index{name@{name}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily mavros.\+ftp.\+F\+T\+P\+File.\+name}
+
+
+
+Definition at line 49 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a9f517555ac2185b085474fbf6dea481f}\label{classmavros_1_1ftp_1_1FTPFile_a9f517555ac2185b085474fbf6dea481f}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!offset@{offset}}
+\index{offset@{offset}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily mavros.\+ftp.\+F\+T\+P\+File.\+offset}
+
+
+
+Definition at line 86 of file ftp.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1ftp_1_1FTPFile_a375139e1ed26f06ca4a866626c888a09}\label{classmavros_1_1ftp_1_1FTPFile_a375139e1ed26f06ca4a866626c888a09}} 
+\index{mavros.ftp.FTPFile@{mavros.ftp.FTPFile}!size@{size}}
+\index{size@{size}!mavros.ftp.FTPFile@{mavros.ftp.FTPFile}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily mavros.\+ftp.\+F\+T\+P\+File.\+size}
+
+
+
+Definition at line 85 of file ftp.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/mavros/\mbox{\hyperlink{ftp_8py}{ftp.\+py}}\end{DoxyCompactItemize}

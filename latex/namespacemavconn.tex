@@ -1,0 +1,44 @@
+\hypertarget{namespacemavconn}{}\section{mavconn Namespace Reference}
+\label{namespacemavconn}\index{mavconn@{mavconn}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavconn_1_1utils}{utils}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavconn_1_1DeviceError}{Device\+Error}}
+\begin{DoxyCompactList}\small\item\em Common exception for communication error. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{M\+A\+V\+Conn\+Interface}}
+\begin{DoxyCompactList}\small\item\em Generic mavlink interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnSerial}{M\+A\+V\+Conn\+Serial}}
+\begin{DoxyCompactList}\small\item\em Serial interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnTCPClient}{M\+A\+V\+Conn\+T\+C\+P\+Client}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTCP}{T\+CP}} client interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnTCPServer}{M\+A\+V\+Conn\+T\+C\+P\+Server}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTCP}{T\+CP}} server interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnUDP}{M\+A\+V\+Conn\+U\+DP}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUDP}{U\+DP}} interface. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmavconn_1_1MsgBuffer}{Msg\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Message buffer for internal use in libmavconn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__mavconn_gab7fe4e29d643505aafb15c532a9338d3}{steady\+\_\+clock}} = std\+::chrono\+::steady\+\_\+clock
+\item 
+using \mbox{\hyperlink{group__mavconn_ga46feb20496b24d733abd4e68ef29bc90}{lock\+\_\+guard}} = std\+::lock\+\_\+guard$<$ std\+::recursive\+\_\+mutex $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{Framing}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a5ed4e9858ad8d239145ef285b6210a00}{Framing\+::incomplete}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE, 
+\mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a444bcb3a3fcf8389296c49467f27e1d6}{Framing\+::ok}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+OK, 
+\mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494abaf1c3d199daf5f5b444664b81a08749}{Framing\+::bad\+\_\+crc}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+C\+RC, 
+\mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494adbfa03ea5df0b8979551ed84f97018e9}{Framing\+::bad\+\_\+signature}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE
+ \}
+\begin{DoxyCompactList}\small\item\em Rx packer framing status. (same as {\ttfamily mavlink\+::mavlink\+\_\+framing\+\_\+t}) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}{Protocol}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3a3ffc64fa10df9a884ba82f3e49e8282e}{Protocol\+::\+V10}} = 1, 
+\mbox{\hyperlink{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3aba9161e2ae9f747e361fa824ca0d0337}{Protocol\+::\+V20}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em M\+A\+V\+Link protocol version. \end{DoxyCompactList}\end{DoxyCompactItemize}

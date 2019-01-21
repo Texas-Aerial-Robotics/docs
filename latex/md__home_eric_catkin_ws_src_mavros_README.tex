@@ -1,0 +1,61 @@
+\href{https://gitter.im/mavlink/mavros?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge}{\texttt{ }}
+
+M\+A\+V\+Link extendable communication node for R\+OS.
+
+
+\begin{DoxyItemize}
+\item Since 2014-\/08-\/11 this repository contains several packages.
+\item Since 2014-\/11-\/02 hydro support separated from master to hydro-\/devel branch.
+\item Since 2015-\/03-\/04 all packages also dual licensed under terms of B\+SD license.
+\item Since 2015-\/08-\/10 all messages moved to \mbox{\hyperlink{namespacemavros__msgs}{mavros\+\_\+msgs}} package
+\item Since 2016-\/02-\/05 (v0.\+17) frame conversion changed again
+\item Since 2016-\/06-\/22 (pre v0.\+18) Indigo and Jade separated from master to indigo-\/devel branch.
+\item Since 2016-\/06-\/23 (0.\+18.\+0) support M\+A\+V\+Link 2.\+0 without signing.
+\item Since 2017-\/08-\/23 (0.\+20.\+0) \href{https://geographiclib.sourceforge.io/}{\texttt{ Geographic\+Lib}} and it\textquotesingle{}s datasets are required. Used to convert A\+M\+SL (F\+CU) and W\+G\+S84 (R\+OS) altitudes.
+\item Since 2018-\/05-\/11 (0.\+25.\+0) support building master for Indigo and Jande stopped. Mainly because update of console-\/bridge package.
+\item Since 2018-\/05-\/14 (0.\+25.\+1) support for Indigo returned. We use compatibility layer for console-\/bridge.
+\end{DoxyItemize}
+
+\subsection*{mavros package }
+
+It is the main package, please see its R\+E\+A\+D\+ME. Here you may read \href{https://github.com/mavlink/mavros/blob/master/mavros/README.md\#installation}{\texttt{ installation instructions}}.
+
+\subsection*{mavros\+\_\+extras package }
+
+This package contains some extra nodes and plugins for mavros, please see its R\+E\+A\+D\+ME.
+
+\subsection*{libmavconn package }
+
+This package contain mavconn library, see its R\+E\+A\+D\+ME. Lib\+M\+A\+V\+Conn may be used outside of R\+OS environment.
+
+\subsection*{test\+\_\+mavros package }
+
+This package contain hand-\/tests and manual page for A\+PM and P\+X4 S\+I\+TL. Please see R\+E\+A\+D\+ME first!
+
+\subsection*{\mbox{\hyperlink{namespacemavros__msgs}{mavros\+\_\+msgs}} package }
+
+This package contains messages and services used in mavros.
+
+\subsection*{Support forums and chats }
+
+Please ask your questions not related to bugs/feauture or requests on\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://groups.google.com/forum/\#!forum/px4users}{\texttt{ px4users Google Group (Mailing List)}}
+\item \href{https://gitter.im/mavlink/mavros}{\texttt{ Mavros on Gitter IM}}
+\item \href{https://gitter.im/PX4/Firmware}{\texttt{ P\+X4/\+Firmware on Gitter IM}}
+\item \href{https://gitter.im/ArduPilot/ardupilot/VisionProjects}{\texttt{ Ardu\+Pilot/\+Vision\+Projects on Gitter IM}}
+\end{DoxyItemize}
+
+We\textquotesingle{}d like to keep the project bugtracker as free as possible, so please contact via the above methods. You can also PM us via Gitter.
+
+\subsection*{CI Statuses }
+
+
+\begin{DoxyItemize}
+\item R\+OS Kinetic\+: \href{http://build.ros.org/job/Kdev__mavros__ubuntu_xenial_amd64/}{\texttt{ }}
+\item R\+OS Lunar\+: \href{http://build.ros.org/job/Ldev__mavros__ubuntu_xenial_amd64/}{\texttt{ }}
+\item R\+OS Melodic\+: \href{http://build.ros.org/job/Mdev__mavros__ubuntu_bionic_amd64/}{\texttt{ }}
+\item Travis master on Indigo \& Jade\+: \href{https://travis-ci.org/mavlink/mavros}{\texttt{ }} 
+\end{DoxyItemize}

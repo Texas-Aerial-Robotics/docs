@@ -1,0 +1,83 @@
+\href{https://travis-ci.org/ArduPilot/pymavlink}{\texttt{ }} \section*{Pymavlink}
+
+This is a python implementation of the M\+A\+V\+Link protocol.
+
+\section*{Documentation}
+
+Please see \href{http://ardupilot.org/dev/docs/mavlink-commands.html}{\texttt{ http\+://ardupilot.\+org/dev/docs/mavlink-\/commands.\+html}} for documentation.
+
+For realtime discussion please see the pymavlink gitter channel here \href{https://gitter.im/ArduPilot/pymavlink}{\texttt{ https\+://gitter.\+im/\+Ardu\+Pilot/pymavlink}}
+
+\section*{Installation}
+
+\subsection*{Recommendation}
+
+Pymavlink is currently a Python 2 package. It is recommended to install and use it with Python 2.
+
+However an initial Python 3 support is given. The following instructions assume you are using Python 2 and a Debian-\/based (like Ubuntu) installation.
+
+\subsection*{Dependencies}
+
+Pymavlink requires 3 dependencies \+: \begin{DoxyVerb}- future : for python 2 and python 3 interoperability (http://python-future.org/)
+- lxml : for checking and parsing xml file (http://lxml.de/installation.html)
+- python-dev : for mavnative
+\end{DoxyVerb}
+
+
+\subsubsection*{On linux}
+
+lxml has some additional dependencies that can be installed with your package manager (here with apt-\/get) \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get install libxml2-dev libxslt-dev python-dev}
+\end{DoxyCode}
+
+
+Using pip you can install the required dependencies for pymavlink \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo pip2 install -U future lxml}
+\end{DoxyCode}
+
+
+The -\/U parameter allows updating future and lxml version if it is already installed.
+
+\subsubsection*{On Windows}
+
+Use pip to install future as for linux. Lxml can be installed with a windows installer from here \+: \href{https://pypi.python.org/pypi/lxml/3.6.0}{\texttt{ https\+://pypi.\+python.\+org/pypi/lxml/3.\+6.\+0}}
+
+\subsection*{Installation}
+
+\subsubsection*{For users}
+
+It is recommended to install pymavlink from Py\+Pi with pip, that way dependencies should be auto install by pip. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo pip2 install -U pymavlink}
+\end{DoxyCode}
+ The -\/U parameter allow to update pymavlink version if it is already installed.
+
+\subsubsection*{For developers}
+
+On the pymavlink directory, you can use \+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo MDEF=PATH\_TO\_message\_definitions pip2 install . -v}
+\end{DoxyCode}
+ The -\/v parameter will output the installation commands on the terminal. The M\+D\+EF usage is require as pip install is done from /tmp directory, so it is necessary to use M\+D\+EF variable to point on the message\+\_\+definitions directory. Use pip should auto install dependencies and allow to keep them up-\/to-\/date with pip.
+
+Or 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo python2 setup.py install}
+\end{DoxyCode}
+
+
+\subsubsection*{Advance usage}
+
+Please see Pip documentation \+: \href{https://pip.pypa.io/en/stable/}{\texttt{ https\+://pip.\+pypa.\+io/en/stable/}}
+
+\subsection*{\# License }
+
+pymavlink is released under the G\+NU Lesser General Public License v3 or later.
+
+Join the chat at \href{https://gitter.im/ArduPilot/pymavlink}{\texttt{ https\+://gitter.\+im/\+Ardu\+Pilot/pymavlink}} 

@@ -1,0 +1,21 @@
+M\+A\+V\+Link \mbox{\hyperlink{classUDP}{U\+DP}} Example for $\ast$nix system (Linux, Mac\+OS, B\+SD, etc.)
+
+To compile with G\+CC, just enter\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc -std=c99 -I ../../include/common -o mavlink\_udp mavlink\_udp.c}
+\end{DoxyCode}
+
+
+The M\+A\+V\+Link header directory must be added to the include path, as shown above. Be sure to use version 1.\+0 of the M\+A\+V\+Link headers for this example, otherwise the ground control software may be unable to connect.
+
+To run, type\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./mavlink\_udp}
+\end{DoxyCode}
+
+
+If you run {\itshape Q\+Ground\+Control} on the same machine, a M\+AV should pop up. 

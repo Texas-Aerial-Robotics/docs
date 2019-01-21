@@ -1,0 +1,61 @@
+\hypertarget{dropout__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/dropout\+\_\+layer.c File Reference}
+\label{dropout__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/dropout\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/dropout\_layer.c}}
+{\ttfamily \#include \char`\"{}dropout\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} \mbox{\hyperlink{dropout__layer_8c_adad83269f1a10b7389960f8568f774cd}{make\+\_\+dropout\+\_\+layer}} (int batch, int inputs, float probability)
+\item 
+void \mbox{\hyperlink{dropout__layer_8c_a7749148a9ec108e6be1096202adb4011}{resize\+\_\+dropout\+\_\+layer}} (\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} $\ast$l, int inputs)
+\item 
+void \mbox{\hyperlink{dropout__layer_8c_a7add1464a4c6ca04f70627c953256832}{forward\+\_\+dropout\+\_\+layer}} (\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{dropout__layer_8c_ada4b6162d5622aa8e7a23eb315280b9e}{backward\+\_\+dropout\+\_\+layer}} (\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dropout__layer_8c_ada4b6162d5622aa8e7a23eb315280b9e}\label{dropout__layer_8c_ada4b6162d5622aa8e7a23eb315280b9e}} 
+\index{dropout\_layer.c@{dropout\_layer.c}!backward\_dropout\_layer@{backward\_dropout\_layer}}
+\index{backward\_dropout\_layer@{backward\_dropout\_layer}!dropout\_layer.c@{dropout\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_dropout\_layer()}{backward\_dropout\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+dropout\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file dropout\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{dropout__layer_8c_a7add1464a4c6ca04f70627c953256832}\label{dropout__layer_8c_a7add1464a4c6ca04f70627c953256832}} 
+\index{dropout\_layer.c@{dropout\_layer.c}!forward\_dropout\_layer@{forward\_dropout\_layer}}
+\index{forward\_dropout\_layer@{forward\_dropout\_layer}!dropout\_layer.c@{dropout\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_dropout\_layer()}{forward\_dropout\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+dropout\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file dropout\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{dropout__layer_8c_adad83269f1a10b7389960f8568f774cd}\label{dropout__layer_8c_adad83269f1a10b7389960f8568f774cd}} 
+\index{dropout\_layer.c@{dropout\_layer.c}!make\_dropout\_layer@{make\_dropout\_layer}}
+\index{make\_dropout\_layer@{make\_dropout\_layer}!dropout\_layer.c@{dropout\_layer.c}}
+\subsubsection{\texorpdfstring{make\_dropout\_layer()}{make\_dropout\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} make\+\_\+dropout\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{float}]{probability }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file dropout\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{dropout__layer_8c_a7749148a9ec108e6be1096202adb4011}\label{dropout__layer_8c_a7749148a9ec108e6be1096202adb4011}} 
+\index{dropout\_layer.c@{dropout\_layer.c}!resize\_dropout\_layer@{resize\_dropout\_layer}}
+\index{resize\_dropout\_layer@{resize\_dropout\_layer}!dropout\_layer.c@{dropout\_layer.c}}
+\subsubsection{\texorpdfstring{resize\_dropout\_layer()}{resize\_dropout\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+dropout\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dropout__layer_8h_afc94286c466894f320ed746d584f7585}{dropout\+\_\+layer}} $\ast$}]{l,  }\item[{int}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file dropout\+\_\+layer.\+c.
+

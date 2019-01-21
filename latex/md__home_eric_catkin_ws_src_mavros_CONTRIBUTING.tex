@@ -1,0 +1,36 @@
+
+\begin{DoxyEnumerate}
+\item Fork the repo\+: 
+\item Clone the repo ({\ttfamily git clone \href{https://github.com/mavlink/mavros.git}{\texttt{ https\+://github.\+com/mavlink/mavros.\+git}}});
+\item Create a remote connection to your repo ({\ttfamily git remote add $<$remote\+\_\+repo$>$ git@github.\+com\+:$<$Your\+Git\+User$>$/mavros.git});
+\item Create a feature/dev branch ({\ttfamily git checkout -\/b $<$feature\+\_\+branch$>$});
+\item Add the changes;
+\item Apply the changes by committing ({\ttfamily git commit -\/m \char`\"{}$<$message$>$\char`\"{}} or {\ttfamily git commit -\/a} and then write message; if adding new files\+: {\ttfamily git add $<$path/to/file.\+ext$>$});
+\item Check code style {\ttfamily uncrustify -\/c \$\{R\+O\+S\+\_\+\+W\+O\+R\+K\+S\+P\+A\+CE\}/src/mavros/mavros/tools/uncrustify-\/cpp.cfg -\/-\/replace -\/-\/no-\/backup $<$path/to/file.\+ext$>$};
+\item Fix small code style errors and typos;
+\item Commit with description like \char`\"{}uncrustify\char`\"{} or \char`\"{}code style fix\char`\"{}. Please avoid changes in program logic (separate commit are better than mix of style and bug fix);
+\item Run tests\+:
+\begin{DoxyItemize}
+\item with {\ttfamily catkin\+\_\+make}, issue {\ttfamily catkin\+\_\+make tests} and then {\ttfamily catkin\+\_\+make run\+\_\+tests};
+\item with {\ttfamily catkin tools}, issue {\ttfamily catkin run\+\_\+tests};
+\end{DoxyItemize}
+\item If everything goes as planned, push the changes ({\ttfamily git push -\/u $<$remote\+\_\+repo$>$ $<$feature\+\_\+branch$>$}) and issue a pull request.
+\end{DoxyEnumerate}
+
+\subsection*{cog.\+py generators }
+
+In many places we need to copy some data from M\+A\+V\+Link, and in many places we have regular patterns of code (e.\+g. copy message fields). To avoid manual copy-\/paste work (and errors!) we use \href{https://nedbatchelder.com/code/cog/}{\texttt{ cog.\+py}} generator/preprocessor. Generator program written in comment blocks on Python (that allow import pymavlink), output will be inserted between markers. As an example you may look at {\ttfamily \mbox{\hyperlink{namespacemavlink_a3a4897758bbfeb0c28182fef6f3bc60f}{utils\+::to\+\_\+string()}}} implementation for some enums\+: \href{https://github.com/mavlink/mavros/blob/master/mavros/src/lib/enum_to_string.cpp}{\texttt{ lib/enum\+\_\+to\+\_\+string.\+cpp}}.
+
+To install it \+: \begin{DoxyVerb}pip install --user cogapp pymavlink
+\end{DoxyVerb}
+
+
+Then fill the behaviour you when between the {\ttfamily \mbox{[}\mbox{[}\mbox{[}cog\+:\mbox{]}\mbox{]}\mbox{]}} {\ttfamily \mbox{[}\mbox{[}\mbox{[}end\mbox{]}\mbox{]}\mbox{]}} balise and invoke cog like this\+: \begin{DoxyVerb}cog.py -cr your_file.h/cpp
+\end{DoxyVerb}
+
+
+Your file will be updated by cog. \begin{DoxyVerb}./mavros/tools/cogall.sh
+\end{DoxyVerb}
+
+
+This script will regenerate all files with generators. 

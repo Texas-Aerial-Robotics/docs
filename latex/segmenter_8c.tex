@@ -1,0 +1,59 @@
+\hypertarget{segmenter_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/segmenter.c File Reference}
+\label{segmenter_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/segmenter.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/segmenter.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{segmenter_8c_ab5b24f699237b6975bec0f9cee98a092}{train\+\_\+segmenter}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int $\ast$gpus, int ngpus, int clear, int display)
+\item 
+void \mbox{\hyperlink{segmenter_8c_ac9679eed490013d62f5440cf4c436f30}{predict\+\_\+segmenter}} (char $\ast$datafile, char $\ast$cfg, char $\ast$weights, char $\ast$filename)
+\item 
+void \mbox{\hyperlink{segmenter_8c_a2c8619f5e63d77f1cf80342374d82cd6}{demo\+\_\+segmenter}} (char $\ast$datacfg, char $\ast$cfg, char $\ast$weights, int cam\+\_\+index, const char $\ast$filename)
+\item 
+void \mbox{\hyperlink{segmenter_8c_a1cc3931b6dae3aabf581ef833bbc75f0}{run\+\_\+segmenter}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{segmenter_8c_a2c8619f5e63d77f1cf80342374d82cd6}\label{segmenter_8c_a2c8619f5e63d77f1cf80342374d82cd6}} 
+\index{segmenter.c@{segmenter.c}!demo\_segmenter@{demo\_segmenter}}
+\index{demo\_segmenter@{demo\_segmenter}!segmenter.c@{segmenter.c}}
+\subsubsection{\texorpdfstring{demo\_segmenter()}{demo\_segmenter()}}
+{\footnotesize\ttfamily void demo\+\_\+segmenter (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights,  }\item[{int}]{cam\+\_\+index,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file segmenter.\+c.
+
+\mbox{\Hypertarget{segmenter_8c_ac9679eed490013d62f5440cf4c436f30}\label{segmenter_8c_ac9679eed490013d62f5440cf4c436f30}} 
+\index{segmenter.c@{segmenter.c}!predict\_segmenter@{predict\_segmenter}}
+\index{predict\_segmenter@{predict\_segmenter}!segmenter.c@{segmenter.c}}
+\subsubsection{\texorpdfstring{predict\_segmenter()}{predict\_segmenter()}}
+{\footnotesize\ttfamily void predict\+\_\+segmenter (\begin{DoxyParamCaption}\item[{char $\ast$}]{datafile,  }\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 135 of file segmenter.\+c.
+
+\mbox{\Hypertarget{segmenter_8c_a1cc3931b6dae3aabf581ef833bbc75f0}\label{segmenter_8c_a1cc3931b6dae3aabf581ef833bbc75f0}} 
+\index{segmenter.c@{segmenter.c}!run\_segmenter@{run\_segmenter}}
+\index{run\_segmenter@{run\_segmenter}!segmenter.c@{segmenter.c}}
+\subsubsection{\texorpdfstring{run\_segmenter()}{run\_segmenter()}}
+{\footnotesize\ttfamily void run\+\_\+segmenter (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 230 of file segmenter.\+c.
+
+\mbox{\Hypertarget{segmenter_8c_ab5b24f699237b6975bec0f9cee98a092}\label{segmenter_8c_ab5b24f699237b6975bec0f9cee98a092}} 
+\index{segmenter.c@{segmenter.c}!train\_segmenter@{train\_segmenter}}
+\index{train\_segmenter@{train\_segmenter}!segmenter.c@{segmenter.c}}
+\subsubsection{\texorpdfstring{train\_segmenter()}{train\_segmenter()}}
+{\footnotesize\ttfamily void train\+\_\+segmenter (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int $\ast$}]{gpus,  }\item[{int}]{ngpus,  }\item[{int}]{clear,  }\item[{int}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file segmenter.\+c.
+

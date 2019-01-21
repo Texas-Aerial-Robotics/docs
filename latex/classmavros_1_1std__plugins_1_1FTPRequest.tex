@@ -1,0 +1,114 @@
+\hypertarget{classmavros_1_1std__plugins_1_1FTPRequest}{}\section{mavros\+::std\+\_\+plugins\+::F\+T\+P\+Request Class Reference}
+\label{classmavros_1_1std__plugins_1_1FTPRequest}\index{mavros::std\_plugins::FTPRequest@{mavros::std\_plugins::FTPRequest}}
+
+
+F\+TP Request message abstraction class.  
+
+
+Inheritance diagram for mavros\+::std\+\_\+plugins\+::F\+T\+P\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmavros_1_1std__plugins_1_1FTPRequest}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmavros_1_1std__plugins_1_1FTPRequest_1_1PayloadHeader}{Payload\+Header}}
+\begin{DoxyCompactList}\small\item\em This is the payload which is in mavlink\+\_\+file\+\_\+transfer\+\_\+protocol\+\_\+t.\+payload. We pad the structure ourselves to 32 bit alignment to avoid usage of any pack pragmas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__plugin_gaa250490cd75da57eb00865e70210f672}{Opcode}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a4d893c501fd26da8a1fdc3f478d0a85d}{k\+Cmd\+None}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a1a438ee59082be89a87abfca2f8598ab}{k\+Cmd\+Terminate\+Session}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a8f5bbf5ab102c019ce126cbe44659dc8}{k\+Cmd\+Reset\+Sessions}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672ae29e5b3caecf3898fcbf5c073d9f89c3}{k\+Cmd\+List\+Directory}}, 
+\newline
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672ab9b54fe5983aea8d8c5e0f8ac34c1279}{k\+Cmd\+Open\+File\+RO}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672ae607c70da8bbc315cc578f51c967118c}{k\+Cmd\+Read\+File}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672abc47eb420c8e5f75e8ad539ee4a2b644}{k\+Cmd\+Create\+File}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a6ba24d5c7e08e301942d0ec3186543a1}{k\+Cmd\+Write\+File}}, 
+\newline
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672af654e489a69902e38202fba631a00ca0}{k\+Cmd\+Remove\+File}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672ac80c4f9c6a9fefc1895c7344aefb500b}{k\+Cmd\+Create\+Directory}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672aed57fb17bc16d1a83b1109fc6f017966}{k\+Cmd\+Remove\+Directory}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672af7b251e2c0063516bcb76ef1990b3c45}{k\+Cmd\+Open\+File\+WO}}, 
+\newline
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a802bdbf59d034202685db7e12fceb717}{k\+Cmd\+Truncate\+File}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a09d8617905e8fc6f07b92a07b0c50b82}{k\+Cmd\+Rename}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a947657fa1bef3f83865eefd61f550aa5}{k\+Cmd\+Calc\+File\+C\+R\+C32}}, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672a1a73e6655d993991a0b1e6281063d27f}{k\+Cmd\+Burst\+Read\+File}}, 
+\newline
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672aa59cf34836fe912c24462f09bbaa29f3}{k\+Rsp\+Ack}} = 128, 
+\mbox{\hyperlink{group__plugin_ggaa250490cd75da57eb00865e70210f672ab6594d2846e473df72ad8bd84907b980}{k\+Rsp\+Nak}}
+ \}
+\begin{DoxyCompactList}\small\item\em Command opcodes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__plugin_ga6a8ced5d703e3cd6216c5042e9eaa67e}{Error\+Code}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67eae86722d9394287916642cb7f406fd8d4}{k\+Err\+None}}, 
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67ea84d1bb571bd6c91e2d5bb058de3d3350}{k\+Err\+Fail}}, 
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67eae943875999f395b71314e35bf8d0a1e3}{k\+Err\+Fail\+Errno}}, 
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67eae0152479e4c81bc277211f63bc62693e}{k\+Err\+Invalid\+Data\+Size}}, 
+\newline
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67eafc10e3c3c94f7fcfb93aea0aca254f94}{k\+Err\+Invalid\+Session}}, 
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67eadfc596248fba0275a99af54ce288f343}{k\+Err\+No\+Sessions\+Available}}, 
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67ead99fd4e6f8ef5bc7d209e2ec080cf4ec}{k\+Err\+E\+OF}}, 
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67ea2c8a93294412ac50ed701da3b6ca1617}{k\+Err\+Unknown\+Command}}, 
+\newline
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67ea84aa10febdbce7bca815467a6edda11f}{k\+Err\+Fail\+File\+Exists}}, 
+\mbox{\hyperlink{group__plugin_gga6a8ced5d703e3cd6216c5042e9eaa67ea2a4999bca0f72647926218959c428e0c}{k\+Err\+Fail\+File\+Protected}}
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes returned in Nak response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__plugin_ga5db0f34c632d274bb013df23cb8aa362}{raw\+\_\+payload}} ()
+\item 
+\mbox{\hyperlink{structmavros_1_1std__plugins_1_1FTPRequest_1_1PayloadHeader}{Payload\+Header}} $\ast$ \mbox{\hyperlink{group__plugin_gacb2fd6b1a67b8f6d182b943f64af8802}{header}} ()
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__plugin_ga8624be9f0794a1e686a06f68fe405bcd}{data}} ()
+\item 
+char $\ast$ \mbox{\hyperlink{group__plugin_ga0786d26298e7a59ee7e22d9bc0c7f7b1}{data\+\_\+c}} ()
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{group__plugin_gae1a0d86b63b05cad94daaaf57bd30a60}{data\+\_\+u32}} ()
+\item 
+void \mbox{\hyperlink{group__plugin_ga79bbc1bfe041055051a72f5c1efb630d}{set\+\_\+data\+\_\+string}} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Copy string to payload. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__plugin_ga49ae6323933afa8b164aaffccb798a0a}{get\+\_\+target\+\_\+system\+\_\+id}} ()
+\item 
+bool \mbox{\hyperlink{group__plugin_gab4fea3506785f409afdfb0917bab879f}{decode\+\_\+valid}} (\mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} $\ast$uas)
+\begin{DoxyCompactList}\small\item\em Decode and check target system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__plugin_gadc186f416bee256e70ceecb927d3a135}{send}} (\mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} $\ast$uas, uint16\+\_\+t seq\+Number)
+\begin{DoxyCompactList}\small\item\em Encode and send message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__plugin_ga65eec8a4ea0ca2018dab26b891c6cd6b}{F\+T\+P\+Request}} ()
+\item 
+\mbox{\hyperlink{group__plugin_gafaf43c2f853d7c01415db8b820e6390c}{F\+T\+P\+Request}} (\mbox{\hyperlink{group__plugin_gaa250490cd75da57eb00865e70210f672}{Opcode}} op, uint8\+\_\+t session=0)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char \mbox{\hyperlink{group__plugin_ga305f7ede1a81342461da0e6a5474b530}{D\+I\+R\+E\+N\+T\+\_\+\+F\+I\+LE}} = \textquotesingle{}\mbox{\hyperlink{mavlink__sha256_8h_a42257a545daf5b7933d6e8f96adc74f2}{F}}\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{group__plugin_ga4968be6fa6605fa70b81152e83bbef67}{D\+I\+R\+E\+N\+T\+\_\+\+D\+IR}} = \textquotesingle{}\mbox{\hyperlink{mavlink__sha256_8h_af316c33cc298530f245e8b55330e86b5}{D}}\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{group__plugin_ga5628fc53877a3f7a45b2ec1ec2a8652e}{D\+I\+R\+E\+N\+T\+\_\+\+S\+K\+IP}} = \textquotesingle{}S\textquotesingle{}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{group__plugin_gad25555fafe3a6aa0f078fec9099a6431}{D\+A\+T\+A\+\_\+\+M\+A\+X\+SZ}} = 251 -\/ sizeof(\mbox{\hyperlink{structmavros_1_1std__plugins_1_1FTPRequest_1_1PayloadHeader}{Payload\+Header}})
+\begin{DoxyCompactList}\small\item\em payload.\+size() -\/ header bytes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\+TP Request message abstraction class. 
+
+\begin{DoxyNote}{Note}
+This class not portable, and works on little-\/endian machines only. 
+\end{DoxyNote}
+
+
+Definition at line 48 of file ftp.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/plugins/\mbox{\hyperlink{ftp_8cpp}{ftp.\+cpp}}\end{DoxyCompactItemize}

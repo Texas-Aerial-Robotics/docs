@@ -1,0 +1,27 @@
+\begin{quote}
+A nodelet to dynamically reroute cameras image feed topics. \end{quote}
+
+
+\subsection*{Dependencies}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/elikos/elikos_msgs}{\texttt{ elikos\+\_\+msgs}}
+\end{DoxyItemize}
+
+\subsection*{Running Signal\+Man}
+
+Start video streams 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch video\_stream\_opencv webcam.launch}
+\DoxyCodeLine{roslaunch video\_stream\_opencv webcam2.launch}
+\end{DoxyCode}
+ Run Signal\+Man 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch camera\_signalman camera\_signalman\_nodelet.launch}
+\end{DoxyCode}
+ view output via image\+\_\+view 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun image\_view image\_view image:=/camersignalman/image\_raw}
+\end{DoxyCode}
+ 

@@ -1,0 +1,54 @@
+\hypertarget{structmavconn_1_1MsgBuffer}{}\section{mavconn\+::Msg\+Buffer Struct Reference}
+\label{structmavconn_1_1MsgBuffer}\index{mavconn::MsgBuffer@{mavconn::MsgBuffer}}
+
+
+Message buffer for internal use in libmavconn.  
+
+
+
+
+{\ttfamily \#include $<$msgbuffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__mavconn_ga64da82fdf707ca5304fda5e686fe4f11}{Msg\+Buffer}} ()
+\item 
+\mbox{\hyperlink{group__mavconn_ga202de878cea6b3fff8f8ef8c7f001cd5}{Msg\+Buffer}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\begin{DoxyCompactList}\small\item\em Buffer constructor from mavlink\+\_\+message\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mavconn_ga8bcb63913aa131f1c054dc1e18a4d945}{Msg\+Buffer}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&obj, \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+::mavlink\+\_\+status\+\_\+t}} $\ast$\mbox{\hyperlink{keyTalker_8cpp_a6e27f49150e9a14580fb313cc2777e00}{status}}, uint8\+\_\+t sysid, uint8\+\_\+t compid)
+\begin{DoxyCompactList}\small\item\em Buffer constructor for \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} derived object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mavconn_ga4555922debc003d9ba989aded6714fb5}{Msg\+Buffer}} (const uint8\+\_\+t $\ast$bytes, ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga564c27473f42c6cea687c8b5bbbb1621}{nbytes}})
+\begin{DoxyCompactList}\small\item\em Buffer constructor for send\+\_\+bytes() \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__mavconn_gac56cac6705c915b3c74c3d0b12c45939}{$\sim$\+Msg\+Buffer}} ()
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__mavconn_ga0c971b3c0d8d540ccaf7e1929a5ecf07}{dpos}} ()
+\item 
+ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga564c27473f42c6cea687c8b5bbbb1621}{nbytes}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__mavconn_gafac3ddb58cafe6448ff6f046a73a66a5}{data}} \mbox{[}\mbox{\hyperlink{group__mavconn_ga7187a6a6dd41cfe0e92d2c59c81a0010}{M\+A\+X\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga712063584cbb6fa1ffb3cb30d0b2bd61}{len}}
+\item 
+ssize\+\_\+t \mbox{\hyperlink{group__mavconn_gaf3493729d445b0f55b2ced8cfc5fa0f6}{pos}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga7187a6a6dd41cfe0e92d2c59c81a0010}{M\+A\+X\+\_\+\+S\+I\+ZE}} = \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} + 16
+\begin{DoxyCompactList}\small\item\em Maximum buffer size with padding for C\+RC bytes (280 + padding) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Message buffer for internal use in libmavconn. 
+
+Definition at line 27 of file msgbuffer.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/include/mavconn/\mbox{\hyperlink{msgbuffer_8h}{msgbuffer.\+h}}\end{DoxyCompactItemize}

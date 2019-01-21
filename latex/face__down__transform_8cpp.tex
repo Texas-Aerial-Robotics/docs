@@ -1,0 +1,208 @@
+\hypertarget{face__down__transform_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Transformations-\/\+Ros/src/face\+\_\+down\+\_\+transform.cpp File Reference}
+\label{face__down__transform_8cpp}\index{/home/eric/catkin\_ws/src/Transformations-\/Ros/src/face\_down\_transform.cpp@{/home/eric/catkin\_ws/src/Transformations-\/Ros/src/face\_down\_transform.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Int8.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Box.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Boxes.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Float64.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Range.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{face__down__transform_8cpp_a896defc3810595d00b5f33a6e269a7d9}{pixel2metric\+\_\+facedown}} (double x\+\_\+e, double y\+\_\+e, double alt, double theta, double theta\+\_\+0, vector$<$ double $>$ obj\+\_\+pix, vector$<$ double $>$ \&O\+\_\+m)
+\item 
+void \mbox{\hyperlink{face__down__transform_8cpp_a4440685cfdd3290c7741e10f0b184713}{chatter\+Callback}} (const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{face__down__transform_8cpp_a34d5c6917b257aaf051931045eeee430}{rng\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Range\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{face__down__transform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}{center\+Point}} (const darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes\+::\+Const\+Ptr \&msg\+Box)
+\item 
+void \mbox{\hyperlink{face__down__transform_8cpp_afa0f9061a6152b26289dd2c93b295847}{pose\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{face__down__transform_8cpp_a85853a76977344d78280db3faca9aa80}{heading\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+int \mbox{\hyperlink{face__down__transform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}{A\+L\+P\+HA}} = 31.\+8244
+\item 
+const double \mbox{\hyperlink{face__down__transform_8cpp_af3ba667da124a5d7e851367777758d8d}{B\+E\+TA}} = 40.\+4497
+\item 
+const double \mbox{\hyperlink{face__down__transform_8cpp_acf1872cc488921db9cc0a819767e127c}{P\+I\+X\+L\+ES}} \mbox{[}2\mbox{]} = \{320, 240\}
+\item 
+const double \mbox{\hyperlink{face__down__transform_8cpp_a952eac791b596a61bba0a133a3bb439f}{PI}} = 3.\+14159
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{face__down__transform_8cpp_ab9674253569259608088097e713c6905}{current\+\_\+pose}}
+\item 
+std\+\_\+msgs\+::\+Float64 \mbox{\hyperlink{face__down__transform_8cpp_a789b24bd49a5da0f2134739639555add}{current\+\_\+heading}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{face__down__transform_8cpp_ad052bfc0c6186c459ef6fadf7cdf69b5}{roomba\+Pose}}
+\item 
+sensor\+\_\+msgs\+::\+Range \mbox{\hyperlink{face__down__transform_8cpp_aee0ac0efcb16824ebf07ab95791ad036}{rngfnd}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{face__down__transform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}\label{face__down__transform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!centerPoint@{centerPoint}}
+\index{centerPoint@{centerPoint}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{centerPoint()}{centerPoint()}}
+{\footnotesize\ttfamily void center\+Point (\begin{DoxyParamCaption}\item[{const darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes\+::\+Const\+Ptr \&}]{msg\+Box }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_a4440685cfdd3290c7741e10f0b184713}\label{face__down__transform_8cpp_a4440685cfdd3290c7741e10f0b184713}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!chatterCallback@{chatterCallback}}
+\index{chatterCallback@{chatterCallback}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{chatterCallback()}{chatterCallback()}}
+{\footnotesize\ttfamily void chatter\+Callback (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_a85853a76977344d78280db3faca9aa80}\label{face__down__transform_8cpp_a85853a76977344d78280db3faca9aa80}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!heading\_cb@{heading\_cb}}
+\index{heading\_cb@{heading\_cb}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{heading\_cb()}{heading\_cb()}}
+{\footnotesize\ttfamily void heading\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{face__down__transform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!main@{main}}
+\index{main@{main}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_a896defc3810595d00b5f33a6e269a7d9}\label{face__down__transform_8cpp_a896defc3810595d00b5f33a6e269a7d9}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!pixel2metric\_facedown@{pixel2metric\_facedown}}
+\index{pixel2metric\_facedown@{pixel2metric\_facedown}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{pixel2metric\_facedown()}{pixel2metric\_facedown()}}
+{\footnotesize\ttfamily void pixel2metric\+\_\+facedown (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+e,  }\item[{double}]{y\+\_\+e,  }\item[{double}]{alt,  }\item[{double}]{theta,  }\item[{double}]{theta\+\_\+0,  }\item[{vector$<$ double $>$}]{obj\+\_\+pix,  }\item[{vector$<$ double $>$ \&}]{O\+\_\+m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_afa0f9061a6152b26289dd2c93b295847}\label{face__down__transform_8cpp_afa0f9061a6152b26289dd2c93b295847}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_a34d5c6917b257aaf051931045eeee430}\label{face__down__transform_8cpp_a34d5c6917b257aaf051931045eeee430}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!rng\_cb@{rng\_cb}}
+\index{rng\_cb@{rng\_cb}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{rng\_cb()}{rng\_cb()}}
+{\footnotesize\ttfamily void rng\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Range\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}\label{face__down__transform_8cpp_a29874299171f0e96c480b139d19adef4}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!ALPHA@{ALPHA}}
+\index{ALPHA@{ALPHA}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{ALPHA}{ALPHA}}
+{\footnotesize\ttfamily const double A\+L\+P\+HA = 31.\+8244}
+
+
+
+Definition at line 17 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_af3ba667da124a5d7e851367777758d8d}\label{face__down__transform_8cpp_af3ba667da124a5d7e851367777758d8d}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!BETA@{BETA}}
+\index{BETA@{BETA}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{BETA}{BETA}}
+{\footnotesize\ttfamily const double B\+E\+TA = 40.\+4497}
+
+
+
+Definition at line 18 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_a789b24bd49a5da0f2134739639555add}\label{face__down__transform_8cpp_a789b24bd49a5da0f2134739639555add}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!current\_heading@{current\_heading}}
+\index{current\_heading@{current\_heading}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{current\_heading}{current\_heading}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Float64 current\+\_\+heading}
+
+
+
+Definition at line 22 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_ab9674253569259608088097e713c6905}\label{face__down__transform_8cpp_ab9674253569259608088097e713c6905}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry current\+\_\+pose}
+
+
+
+Definition at line 21 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_a952eac791b596a61bba0a133a3bb439f}\label{face__down__transform_8cpp_a952eac791b596a61bba0a133a3bb439f}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!PI@{PI}}
+\index{PI@{PI}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily const double PI = 3.\+14159}
+
+
+
+Definition at line 20 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_acf1872cc488921db9cc0a819767e127c}\label{face__down__transform_8cpp_acf1872cc488921db9cc0a819767e127c}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!PIXLES@{PIXLES}}
+\index{PIXLES@{PIXLES}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{PIXLES}{PIXLES}}
+{\footnotesize\ttfamily const double P\+I\+X\+L\+ES\mbox{[}2\mbox{]} = \{320, 240\}}
+
+
+
+Definition at line 19 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_aee0ac0efcb16824ebf07ab95791ad036}\label{face__down__transform_8cpp_aee0ac0efcb16824ebf07ab95791ad036}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!rngfnd@{rngfnd}}
+\index{rngfnd@{rngfnd}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{rngfnd}{rngfnd}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Range rngfnd}
+
+
+
+Definition at line 25 of file face\+\_\+down\+\_\+transform.\+cpp.
+
+\mbox{\Hypertarget{face__down__transform_8cpp_ad052bfc0c6186c459ef6fadf7cdf69b5}\label{face__down__transform_8cpp_ad052bfc0c6186c459ef6fadf7cdf69b5}} 
+\index{face\_down\_transform.cpp@{face\_down\_transform.cpp}!roombaPose@{roombaPose}}
+\index{roombaPose@{roombaPose}!face\_down\_transform.cpp@{face\_down\_transform.cpp}}
+\subsubsection{\texorpdfstring{roombaPose}{roombaPose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped roomba\+Pose}
+
+
+
+Definition at line 24 of file face\+\_\+down\+\_\+transform.\+cpp.
+

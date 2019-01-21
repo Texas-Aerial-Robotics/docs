@@ -1,0 +1,96 @@
+\hypertarget{classmavros_1_1mission_1_1QGroundControlWP}{}\section{mavros.\+mission.\+Q\+Ground\+Control\+WP Class Reference}
+\label{classmavros_1_1mission_1_1QGroundControlWP}\index{mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}}
+Inheritance diagram for mavros.\+mission.\+Q\+Ground\+Control\+WP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmavros_1_1mission_1_1QGroundControlWP}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavros_1_1mission_1_1QGroundControlWP_1_1CSVDialect}{C\+S\+V\+Dialect}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmavros_1_1mission_1_1QGroundControlWP_a6b06e2e1e92496e9d0eeb304d2702181}{read}} (self, file\+\_\+)
+\item 
+def \mbox{\hyperlink{classmavros_1_1mission_1_1QGroundControlWP_a3ade3c33ce488e4f5fb361bfe7ff8e2d}{write}} (self, file\+\_\+, waypoints)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classmavros_1_1mission_1_1QGroundControlWP_a18fce57e1eb603454951a5f9a1dece7b}{file\+\_\+header}} = \textquotesingle{}Q\+GC W\+PL 120\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{classmavros_1_1mission_1_1QGroundControlWP_a4c13ee8890a26f2a76b43ee013bf7b99}{known\+\_\+versions}} = (110, 120)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Parse QGC waypoint file\end{DoxyVerb}
+ 
+
+Definition at line 63 of file mission.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmavros_1_1mission_1_1QGroundControlWP_a6b06e2e1e92496e9d0eeb304d2702181}\label{classmavros_1_1mission_1_1QGroundControlWP_a6b06e2e1e92496e9d0eeb304d2702181}} 
+\index{mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}!read@{read}}
+\index{read@{read}!mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily def mavros.\+mission.\+Q\+Ground\+Control\+W\+P.\+read (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+\_\+ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a iterable of waypoints\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmavros_1_1mission_1_1WaypointFile_a36f785a3f53697cb369b6de9afd376d2}{mavros.\+mission.\+Waypoint\+File}}.
+
+
+
+Definition at line 76 of file mission.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1mission_1_1QGroundControlWP_a3ade3c33ce488e4f5fb361bfe7ff8e2d}\label{classmavros_1_1mission_1_1QGroundControlWP_a3ade3c33ce488e4f5fb361bfe7ff8e2d}} 
+\index{mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}!write@{write}}
+\index{write@{write}!mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def mavros.\+mission.\+Q\+Ground\+Control\+W\+P.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+\_\+,  }\item[{}]{waypoints }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Writes waypoints to file\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmavros_1_1mission_1_1WaypointFile_a04d4ed37ce9357a0467ef9226296cb49}{mavros.\+mission.\+Waypoint\+File}}.
+
+
+
+Definition at line 103 of file mission.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmavros_1_1mission_1_1QGroundControlWP_a18fce57e1eb603454951a5f9a1dece7b}\label{classmavros_1_1mission_1_1QGroundControlWP_a18fce57e1eb603454951a5f9a1dece7b}} 
+\index{mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}!file\_header@{file\_header}}
+\index{file\_header@{file\_header}!mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}}
+\subsubsection{\texorpdfstring{file\_header}{file\_header}}
+{\footnotesize\ttfamily string mavros.\+mission.\+Q\+Ground\+Control\+W\+P.\+file\+\_\+header = \textquotesingle{}Q\+GC W\+PL 120\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 66 of file mission.\+py.
+
+\mbox{\Hypertarget{classmavros_1_1mission_1_1QGroundControlWP_a4c13ee8890a26f2a76b43ee013bf7b99}\label{classmavros_1_1mission_1_1QGroundControlWP_a4c13ee8890a26f2a76b43ee013bf7b99}} 
+\index{mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}!known\_versions@{known\_versions}}
+\index{known\_versions@{known\_versions}!mavros.mission.QGroundControlWP@{mavros.mission.QGroundControlWP}}
+\subsubsection{\texorpdfstring{known\_versions}{known\_versions}}
+{\footnotesize\ttfamily tuple mavros.\+mission.\+Q\+Ground\+Control\+W\+P.\+known\+\_\+versions = (110, 120)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 67 of file mission.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/mavros/\mbox{\hyperlink{mission_8py}{mission.\+py}}\end{DoxyCompactItemize}

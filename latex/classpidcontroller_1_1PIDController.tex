@@ -1,0 +1,34 @@
+\hypertarget{classpidcontroller_1_1PIDController}{}\section{pidcontroller\+::P\+I\+D\+Controller Class Reference}
+\label{classpidcontroller_1_1PIDController}\index{pidcontroller::PIDController@{pidcontroller::PIDController}}
+
+
+{\ttfamily \#include $<$pid\+\_\+controller.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__test__utils_ga67cc314aa5b3b4e9c47ac414b3a4c008}{P\+I\+D\+Controller}} ()
+\item 
+\mbox{\hyperlink{group__test__utils_ga4ae30cc03173417fa6edb5c055966a3f}{$\sim$\+P\+I\+D\+Controller}} ()
+\item 
+void \mbox{\hyperlink{group__test__utils_ga845b866b1ae4b73e39e4ca42395750b3}{setup\+\_\+linvel\+\_\+pid}} (double p\+\_\+gain, double i\+\_\+gain, double d\+\_\+gain, double i\+\_\+max, double i\+\_\+min, const ros\+::\+Node\+Handle \&\mbox{\hyperlink{structnode}{node}})
+\begin{DoxyCompactList}\small\item\em Sets up the P\+ID values for computation of the linear velocities effort. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__test__utils_ga5d8a387440921ea68907364c0e1d7b5b}{setup\+\_\+yawrate\+\_\+pid}} (double p\+\_\+gain, double i\+\_\+gain, double d\+\_\+gain, double i\+\_\+max, double i\+\_\+min, const ros\+::\+Node\+Handle \&\mbox{\hyperlink{structnode}{node}})
+\begin{DoxyCompactList}\small\item\em Sets up the P\+ID values for computation of the yaw rate effort. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__test__utils_gac62955a265057681e6399488ced3471a}{compute\+\_\+linvel\+\_\+effort}} (Eigen\+::\+Vector3d goal, Eigen\+::\+Vector3d current, ros\+::\+Time last\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Computes the linear velocity effort to apply to each axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group__test__utils_gaee16eb0d9a067ac80a1d92e50991b60b}{compute\+\_\+yawrate\+\_\+effort}} (double goal, double current, ros\+::\+Time last\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Computes the yaw rate effort to apply. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file pid\+\_\+controller.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/test\+\_\+mavros/include/test\+\_\+mavros/utils/\mbox{\hyperlink{pid__controller_8h}{pid\+\_\+controller.\+h}}\item 
+/home/eric/catkin\+\_\+ws/src/mavros/test\+\_\+mavros/sitl\+\_\+test/lib/\mbox{\hyperlink{pid__controller_8cpp}{pid\+\_\+controller.\+cpp}}\end{DoxyCompactItemize}

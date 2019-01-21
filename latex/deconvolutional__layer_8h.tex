@@ -1,0 +1,73 @@
+\hypertarget{deconvolutional__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/deconvolutional\+\_\+layer.h File Reference}
+\label{deconvolutional__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/deconvolutional\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/deconvolutional\_layer.h}}
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{deconvolutional__layer_8h_ae283f276837bc1df356d937fbe1dc5a4}{make\+\_\+deconvolutional\+\_\+layer}} (int batch, int h, int w, int c, int n, int size, int stride, int padding, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} activation, int batch\+\_\+normalize, int adam)
+\item 
+void \mbox{\hyperlink{deconvolutional__layer_8h_a544f251012472636afb0502dd1c76805}{resize\+\_\+deconvolutional\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} $\ast$l, int h, int w)
+\item 
+void \mbox{\hyperlink{deconvolutional__layer_8h_a1ea31ae617ce48e8be083832d4d7cfc2}{forward\+\_\+deconvolutional\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{deconvolutional__layer_8h_a775d448fe76c2a7731f36db1f7a3827c}{update\+\_\+deconvolutional\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\item 
+void \mbox{\hyperlink{deconvolutional__layer_8h_aa3385fe5d86ee9f81a695b0c323f7416}{backward\+\_\+deconvolutional\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{deconvolutional__layer_8h_aa3385fe5d86ee9f81a695b0c323f7416}\label{deconvolutional__layer_8h_aa3385fe5d86ee9f81a695b0c323f7416}} 
+\index{deconvolutional\_layer.h@{deconvolutional\_layer.h}!backward\_deconvolutional\_layer@{backward\_deconvolutional\_layer}}
+\index{backward\_deconvolutional\_layer@{backward\_deconvolutional\_layer}!deconvolutional\_layer.h@{deconvolutional\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_deconvolutional\_layer()}{backward\_deconvolutional\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+deconvolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 249 of file deconvolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{deconvolutional__layer_8h_a1ea31ae617ce48e8be083832d4d7cfc2}\label{deconvolutional__layer_8h_a1ea31ae617ce48e8be083832d4d7cfc2}} 
+\index{deconvolutional\_layer.h@{deconvolutional\_layer.h}!forward\_deconvolutional\_layer@{forward\_deconvolutional\_layer}}
+\index{forward\_deconvolutional\_layer@{forward\_deconvolutional\_layer}!deconvolutional\_layer.h@{deconvolutional\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_deconvolutional\_layer()}{forward\_deconvolutional\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+deconvolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 222 of file deconvolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{deconvolutional__layer_8h_ae283f276837bc1df356d937fbe1dc5a4}\label{deconvolutional__layer_8h_ae283f276837bc1df356d937fbe1dc5a4}} 
+\index{deconvolutional\_layer.h@{deconvolutional\_layer.h}!make\_deconvolutional\_layer@{make\_deconvolutional\_layer}}
+\index{make\_deconvolutional\_layer@{make\_deconvolutional\_layer}!deconvolutional\_layer.h@{deconvolutional\_layer.h}}
+\subsubsection{\texorpdfstring{make\_deconvolutional\_layer()}{make\_deconvolutional\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+deconvolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{h,  }\item[{int}]{w,  }\item[{int}]{c,  }\item[{int}]{n,  }\item[{int}]{size,  }\item[{int}]{stride,  }\item[{int}]{padding,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{activation,  }\item[{int}]{batch\+\_\+normalize,  }\item[{int}]{adam }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file deconvolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{deconvolutional__layer_8h_a544f251012472636afb0502dd1c76805}\label{deconvolutional__layer_8h_a544f251012472636afb0502dd1c76805}} 
+\index{deconvolutional\_layer.h@{deconvolutional\_layer.h}!resize\_deconvolutional\_layer@{resize\_deconvolutional\_layer}}
+\index{resize\_deconvolutional\_layer@{resize\_deconvolutional\_layer}!deconvolutional\_layer.h@{deconvolutional\_layer.h}}
+\subsubsection{\texorpdfstring{resize\_deconvolutional\_layer()}{resize\_deconvolutional\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+deconvolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}} $\ast$}]{l,  }\item[{int}]{h,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 183 of file deconvolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{deconvolutional__layer_8h_a775d448fe76c2a7731f36db1f7a3827c}\label{deconvolutional__layer_8h_a775d448fe76c2a7731f36db1f7a3827c}} 
+\index{deconvolutional\_layer.h@{deconvolutional\_layer.h}!update\_deconvolutional\_layer@{update\_deconvolutional\_layer}}
+\index{update\_deconvolutional\_layer@{update\_deconvolutional\_layer}!deconvolutional\_layer.h@{deconvolutional\_layer.h}}
+\subsubsection{\texorpdfstring{update\_deconvolutional\_layer()}{update\_deconvolutional\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+deconvolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 290 of file deconvolutional\+\_\+layer.\+c.
+

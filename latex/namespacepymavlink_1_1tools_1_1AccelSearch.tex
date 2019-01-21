@@ -1,0 +1,231 @@
+\hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch}{}\section{pymavlink.\+tools.\+Accel\+Search Namespace Reference}
+\label{namespacepymavlink_1_1tools_1_1AccelSearch}\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a20e68a37811b32e425149b7751a0180b}{Accel\+Search}} (filename)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a3b9f53c9196650011745ba1bd483e584}{search\+\_\+dirs}}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a9a479651d64962eb0d1d91b8e0508a30}{results}} = \textquotesingle{}Search\+Results.\+zip\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a34cf6b60e874d51185ab2fc4997c9ef5}{email}} = \textquotesingle{}Craig Elder $<$craig@3drobotics.\+com$>$\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_ad06281c25f5ea505bac4b15673f6ede4}{parser}} = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a3d70b34e6a21c2df5e3df48dd8777f85}{action}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_af62bdada39e5ed5688eb4806078f1a54}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a4d74e7e29e6b7f40261872ea8865404c}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a9f46afe0132c571acbf4f536a68e6276}{args}} = parser.\+parse\+\_\+args()
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_adfb9f84bfd3c391863e97281c326d0f5}{logcount}} = 0
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a0bca2e9760b6a219df28ce13d7b480b0}{found}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a209d53c94eb8bf3792bf9e76692b9d49}{directories}} = args.\+directory
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_ab9d70abda8675fc388a6a5dd64e15911}{filelist}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a533fc9b3de465371a337da46d8f3e000}{path}} = os.\+path.\+join(root, \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a2127731e1cc2c0698014708e428ffc5e}{f}})
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a2127731e1cc2c0698014708e428ffc5e}{f}} = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_ab9d70abda8675fc388a6a5dd64e15911}{filelist}}\mbox{[}\mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a6ef693fa8c321379c8d76e4146d4ca27}{zip}} = zipfile.\+Zip\+File(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a9a479651d64962eb0d1d91b8e0508a30}{results}}, \textquotesingle{}w\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_ad4e01754352be7eae43c865e659e8468}{arcname}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}search a set of log files for bad accel values
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a20e68a37811b32e425149b7751a0180b}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a20e68a37811b32e425149b7751a0180b}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!AccelSearch@{AccelSearch}}
+\index{AccelSearch@{AccelSearch}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{AccelSearch()}{AccelSearch()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+Accel\+Search.\+Accel\+Search (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file Accel\+Search.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a3d70b34e6a21c2df5e3df48dd8777f85}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a3d70b34e6a21c2df5e3df48dd8777f85}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!action@{action}}
+\index{action@{action}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+action}
+
+
+
+Definition at line 28 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_ad4e01754352be7eae43c865e659e8468}\label{namespacepymavlink_1_1tools_1_1AccelSearch_ad4e01754352be7eae43c865e659e8468}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!arcname@{arcname}}
+\index{arcname@{arcname}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{arcname}{arcname}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+arcname}
+
+
+
+Definition at line 139 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a9f46afe0132c571acbf4f536a68e6276}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a9f46afe0132c571acbf4f536a68e6276}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!args@{args}}
+\index{args@{args}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 33 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_af62bdada39e5ed5688eb4806078f1a54}\label{namespacepymavlink_1_1tools_1_1AccelSearch_af62bdada39e5ed5688eb4806078f1a54}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!default@{default}}
+\index{default@{default}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+default}
+
+
+
+Definition at line 28 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a209d53c94eb8bf3792bf9e76692b9d49}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a209d53c94eb8bf3792bf9e76692b9d49}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!directories@{directories}}
+\index{directories@{directories}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{directories}{directories}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+directories = args.\+directory}
+
+
+
+Definition at line 93 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a34cf6b60e874d51185ab2fc4997c9ef5}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a34cf6b60e874d51185ab2fc4997c9ef5}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!email@{email}}
+\index{email@{email}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string pymavlink.\+tools.\+Accel\+Search.\+email = \textquotesingle{}Craig Elder $<$craig@3drobotics.\+com$>$\textquotesingle{}}
+
+
+
+Definition at line 24 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a2127731e1cc2c0698014708e428ffc5e}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a2127731e1cc2c0698014708e428ffc5e}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!f@{f}}
+\index{f@{f}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+f = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_ab9d70abda8675fc388a6a5dd64e15911}{filelist}}\mbox{[}\mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}\mbox{]}}
+
+
+
+Definition at line 116 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_ab9d70abda8675fc388a6a5dd64e15911}\label{namespacepymavlink_1_1tools_1_1AccelSearch_ab9d70abda8675fc388a6a5dd64e15911}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!filelist@{filelist}}
+\index{filelist@{filelist}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{filelist}{filelist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+Accel\+Search.\+filelist = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 99 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a0bca2e9760b6a219df28ce13d7b480b0}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a0bca2e9760b6a219df28ce13d7b480b0}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!found@{found}}
+\index{found@{found}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{found}{found}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+Accel\+Search.\+found = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 92 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a4d74e7e29e6b7f40261872ea8865404c}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a4d74e7e29e6b7f40261872ea8865404c}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!help@{help}}
+\index{help@{help}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+help}
+
+
+
+Definition at line 28 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_adfb9f84bfd3c391863e97281c326d0f5}\label{namespacepymavlink_1_1tools_1_1AccelSearch_adfb9f84bfd3c391863e97281c326d0f5}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!logcount@{logcount}}
+\index{logcount@{logcount}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{logcount}{logcount}}
+{\footnotesize\ttfamily int pymavlink.\+tools.\+Accel\+Search.\+logcount = 0}
+
+
+
+Definition at line 35 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_ad06281c25f5ea505bac4b15673f6ede4}\label{namespacepymavlink_1_1tools_1_1AccelSearch_ad06281c25f5ea505bac4b15673f6ede4}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!parser@{parser}}
+\index{parser@{parser}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+parser = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)}
+
+
+
+Definition at line 27 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a533fc9b3de465371a337da46d8f3e000}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a533fc9b3de465371a337da46d8f3e000}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!path@{path}}
+\index{path@{path}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+path = os.\+path.\+join(root, \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a2127731e1cc2c0698014708e428ffc5e}{f}})}
+
+
+
+Definition at line 110 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a9a479651d64962eb0d1d91b8e0508a30}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a9a479651d64962eb0d1d91b8e0508a30}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!results@{results}}
+\index{results@{results}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{results}{results}}
+{\footnotesize\ttfamily string pymavlink.\+tools.\+Accel\+Search.\+results = \textquotesingle{}Search\+Results.\+zip\textquotesingle{}}
+
+
+
+Definition at line 23 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a3b9f53c9196650011745ba1bd483e584}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a3b9f53c9196650011745ba1bd483e584}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!search\_dirs@{search\_dirs}}
+\index{search\_dirs@{search\_dirs}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{search\_dirs}{search\_dirs}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+search\+\_\+dirs}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [\textcolor{stringliteral}{'c:\(\backslash\)Program Files\(\backslash\)APM Planner'},}
+\DoxyCodeLine{2                \textcolor{stringliteral}{'c:\(\backslash\)Program Files\(\backslash\)Mission Planner'},}
+\DoxyCodeLine{3                \textcolor{stringliteral}{'c:\(\backslash\)Program Files (x86)\(\backslash\)APM Planner'},}
+\DoxyCodeLine{4                \textcolor{stringliteral}{'c:\(\backslash\)Program Files (x86)\(\backslash\)Mission Planner'}]}
+
+\end{DoxyCode}
+
+
+Definition at line 19 of file Accel\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1AccelSearch_a6ef693fa8c321379c8d76e4146d4ca27}\label{namespacepymavlink_1_1tools_1_1AccelSearch_a6ef693fa8c321379c8d76e4146d4ca27}} 
+\index{pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}!zip@{zip}}
+\index{zip@{zip}!pymavlink.tools.AccelSearch@{pymavlink.tools.AccelSearch}}
+\subsubsection{\texorpdfstring{zip}{zip}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+Accel\+Search.\+zip = zipfile.\+Zip\+File(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1AccelSearch_a9a479651d64962eb0d1d91b8e0508a30}{results}}, \textquotesingle{}w\textquotesingle{})}
+
+
+
+Definition at line 129 of file Accel\+Search.\+py.
+

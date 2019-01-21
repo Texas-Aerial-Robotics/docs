@@ -1,0 +1,105 @@
+\hypertarget{setHome_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Controls-\/\+R\+O\+S/src/set\+Home.cpp File Reference}
+\label{setHome_8cpp}\index{/home/eric/catkin\_ws/src/Controls-\/ROS/src/setHome.cpp@{/home/eric/catkin\_ws/src/Controls-\/ROS/src/setHome.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$mavconn/interface.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+Home.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+State.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Mavlink.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/mavlink\+\_\+convert.\+h$>$}\newline
+{\ttfamily \#include $<$mavlink/v2.\+0/mavlink\+\_\+helpers.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{setHome_8cpp_acb1a1676d1be779d8e58b3ab7401446d}{pack\+Mavlink\+Message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&mav\+Msg, mavros\+\_\+msgs\+::\+Mavlink \&ros\+Msg)
+\item 
+void \mbox{\hyperlink{setHome_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}{state\+\_\+cb}} (const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+int \mbox{\hyperlink{setHome_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mavros\+\_\+msgs\+::\+State \mbox{\hyperlink{setHome_8cpp_aa03a6f341db74b895fa5c862973dd941}{current\+\_\+state}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}} = 255
+\item 
+uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}} = 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_ac9afff43526a157e4c4e45607c1418b8}{target\+\_\+system}} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{setHome_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{setHome_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{setHome.cpp@{setHome.cpp}!main@{main}}
+\index{main@{main}!setHome.cpp@{setHome.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file set\+Home.\+cpp.
+
+\mbox{\Hypertarget{setHome_8cpp_acb1a1676d1be779d8e58b3ab7401446d}\label{setHome_8cpp_acb1a1676d1be779d8e58b3ab7401446d}} 
+\index{setHome.cpp@{setHome.cpp}!packMavlinkMessage@{packMavlinkMessage}}
+\index{packMavlinkMessage@{packMavlinkMessage}!setHome.cpp@{setHome.cpp}}
+\subsubsection{\texorpdfstring{packMavlinkMessage()}{packMavlinkMessage()}}
+{\footnotesize\ttfamily bool pack\+Mavlink\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{mav\+Msg,  }\item[{mavros\+\_\+msgs\+::\+Mavlink \&}]{ros\+Msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file set\+Home.\+cpp.
+
+\mbox{\Hypertarget{setHome_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}\label{setHome_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}} 
+\index{setHome.cpp@{setHome.cpp}!state\_cb@{state\_cb}}
+\index{state\_cb@{state\_cb}!setHome.cpp@{setHome.cpp}}
+\subsubsection{\texorpdfstring{state\_cb()}{state\_cb()}}
+{\footnotesize\ttfamily void state\+\_\+cb (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file set\+Home.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}\label{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}} 
+\index{setHome.cpp@{setHome.cpp}!component\_id@{component\_id}}
+\index{component\_id@{component\_id}!setHome.cpp@{setHome.cpp}}
+\subsubsection{\texorpdfstring{component\_id}{component\_id}}
+{\footnotesize\ttfamily uint8\+\_\+t component\+\_\+id = 1}
+
+
+
+Definition at line 12 of file set\+Home.\+cpp.
+
+\mbox{\Hypertarget{setHome_8cpp_aa03a6f341db74b895fa5c862973dd941}\label{setHome_8cpp_aa03a6f341db74b895fa5c862973dd941}} 
+\index{setHome.cpp@{setHome.cpp}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!setHome.cpp@{setHome.cpp}}
+\subsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily mavros\+\_\+msgs\+::\+State current\+\_\+state}
+
+
+
+Definition at line 9 of file set\+Home.\+cpp.
+
+\mbox{\Hypertarget{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}\label{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}} 
+\index{setHome.cpp@{setHome.cpp}!system\_id@{system\_id}}
+\index{system\_id@{system\_id}!setHome.cpp@{setHome.cpp}}
+\subsubsection{\texorpdfstring{system\_id}{system\_id}}
+{\footnotesize\ttfamily uint8\+\_\+t system\+\_\+id = 255}
+
+
+
+Definition at line 11 of file set\+Home.\+cpp.
+
+\mbox{\Hypertarget{setHome_8cpp_ac9afff43526a157e4c4e45607c1418b8}\label{setHome_8cpp_ac9afff43526a157e4c4e45607c1418b8}} 
+\index{setHome.cpp@{setHome.cpp}!target\_system@{target\_system}}
+\index{target\_system@{target\_system}!setHome.cpp@{setHome.cpp}}
+\subsubsection{\texorpdfstring{target\_system}{target\_system}}
+{\footnotesize\ttfamily uint8\+\_\+t target\+\_\+system = 1}
+
+
+
+Definition at line 13 of file set\+Home.\+cpp.
+

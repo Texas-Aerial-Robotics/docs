@@ -1,0 +1,64 @@
+\hypertarget{detection__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/detection\+\_\+layer.h File Reference}
+\label{detection__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/detection\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/detection\_layer.h}}
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}} \mbox{\hyperlink{detection__layer_8h_abd42da178aad193f61e7e829c34be483}{make\+\_\+detection\+\_\+layer}} (int batch, int inputs, int n, int size, int classes, int coords, int rescore)
+\item 
+void \mbox{\hyperlink{detection__layer_8h_a9160e6deb288c256697c0b3d3d3a7909}{forward\+\_\+detection\+\_\+layer}} (const \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{detection__layer_8h_a46eff38e5007c73bf4de33f2b0adbd61}{backward\+\_\+detection\+\_\+layer}} (const \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}\label{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}} 
+\index{detection\_layer.h@{detection\_layer.h}!detection\_layer@{detection\_layer}}
+\index{detection\_layer@{detection\_layer}!detection\_layer.h@{detection\_layer.h}}
+\subsubsection{\texorpdfstring{detection\_layer}{detection\_layer}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}}}
+
+
+
+Definition at line 7 of file detection\+\_\+layer.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{detection__layer_8h_a46eff38e5007c73bf4de33f2b0adbd61}\label{detection__layer_8h_a46eff38e5007c73bf4de33f2b0adbd61}} 
+\index{detection\_layer.h@{detection\_layer.h}!backward\_detection\_layer@{backward\_detection\_layer}}
+\index{backward\_detection\_layer@{backward\_detection\_layer}!detection\_layer.h@{detection\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_detection\_layer()}{backward\_detection\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+detection\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 220 of file detection\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{detection__layer_8h_a9160e6deb288c256697c0b3d3d3a7909}\label{detection__layer_8h_a9160e6deb288c256697c0b3d3d3a7909}} 
+\index{detection\_layer.h@{detection\_layer.h}!forward\_detection\_layer@{forward\_detection\_layer}}
+\index{forward\_detection\_layer@{forward\_detection\_layer}!detection\_layer.h@{detection\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_detection\_layer()}{forward\_detection\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+detection\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file detection\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{detection__layer_8h_abd42da178aad193f61e7e829c34be483}\label{detection__layer_8h_abd42da178aad193f61e7e829c34be483}} 
+\index{detection\_layer.h@{detection\_layer.h}!make\_detection\_layer@{make\_detection\_layer}}
+\index{make\_detection\_layer@{make\_detection\_layer}!detection\_layer.h@{detection\_layer.h}}
+\subsubsection{\texorpdfstring{make\_detection\_layer()}{make\_detection\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{detection__layer_8h_a3a5018a4d1685b278fc2586711a3a976}{detection\+\_\+layer}} make\+\_\+detection\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{int}]{n,  }\item[{int}]{size,  }\item[{int}]{classes,  }\item[{int}]{coords,  }\item[{int}]{rescore }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file detection\+\_\+layer.\+c.
+

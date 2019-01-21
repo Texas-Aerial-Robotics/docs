@@ -1,0 +1,78 @@
+\hypertarget{testmav_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C/test/windows/testmav.cpp File Reference}
+\label{testmav_8cpp}\index{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/test/windows/testmav.cpp@{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/test/windows/testmav.cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}assert.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mavlink\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$common/mavlink.\+h$>$}\newline
+{\ttfamily \#include $<$common/testsuite.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{testmav_8cpp_a36dd739ad299e3b8d9ce634693155028}{M\+A\+V\+L\+I\+N\+K\+\_\+\+U\+S\+E\+\_\+\+C\+O\+N\+V\+E\+N\+I\+E\+N\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}}
+\item 
+\#define \mbox{\hyperlink{testmav_8cpp_aff625e94451bf446bdd56f5d0e081077}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+\+N\+U\+M\+\_\+\+B\+U\+F\+F\+E\+RS}}~2
+\item 
+\#define \mbox{\hyperlink{testmav_8cpp_aad5dd4313a4e19ae3bddccfbebda5b62}{M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+S\+S\+E\+RT}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})~assert(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})
+\item 
+\#define \mbox{\hyperlink{testmav_8cpp_a8e8993b45d6e2faf05ea5573d86b2321}{P\+R\+I\+N\+T\+\_\+\+F\+O\+R\+M\+AT}}(f,  def)~(f-\/$>$print\+\_\+format?f-\/$>$print\+\_\+format\+:def)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{testmav_8cpp_a353674c5af92be7fb389265cde4e5e03}{\+\_\+tmain}} (int argc, \+\_\+\+T\+C\+H\+AR $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{testmav_8cpp_aad5dd4313a4e19ae3bddccfbebda5b62}\label{testmav_8cpp_aad5dd4313a4e19ae3bddccfbebda5b62}} 
+\index{testmav.cpp@{testmav.cpp}!MAVLINK\_ASSERT@{MAVLINK\_ASSERT}}
+\index{MAVLINK\_ASSERT@{MAVLINK\_ASSERT}!testmav.cpp@{testmav.cpp}}
+\subsubsection{\texorpdfstring{MAVLINK\_ASSERT}{MAVLINK\_ASSERT}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} }\end{DoxyParamCaption})~assert(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})}
+
+
+
+Definition at line 17 of file testmav.\+cpp.
+
+\mbox{\Hypertarget{testmav_8cpp_aff625e94451bf446bdd56f5d0e081077}\label{testmav_8cpp_aff625e94451bf446bdd56f5d0e081077}} 
+\index{testmav.cpp@{testmav.cpp}!MAVLINK\_COMM\_NUM\_BUFFERS@{MAVLINK\_COMM\_NUM\_BUFFERS}}
+\index{MAVLINK\_COMM\_NUM\_BUFFERS@{MAVLINK\_COMM\_NUM\_BUFFERS}!testmav.cpp@{testmav.cpp}}
+\subsubsection{\texorpdfstring{MAVLINK\_COMM\_NUM\_BUFFERS}{MAVLINK\_COMM\_NUM\_BUFFERS}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+\+N\+U\+M\+\_\+\+B\+U\+F\+F\+E\+RS~2}
+
+
+
+Definition at line 12 of file testmav.\+cpp.
+
+\mbox{\Hypertarget{testmav_8cpp_a36dd739ad299e3b8d9ce634693155028}\label{testmav_8cpp_a36dd739ad299e3b8d9ce634693155028}} 
+\index{testmav.cpp@{testmav.cpp}!MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS@{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}}
+\index{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS@{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}!testmav.cpp@{testmav.cpp}}
+\subsubsection{\texorpdfstring{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+U\+S\+E\+\_\+\+C\+O\+N\+V\+E\+N\+I\+E\+N\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}
+
+
+
+Definition at line 11 of file testmav.\+cpp.
+
+\mbox{\Hypertarget{testmav_8cpp_a8e8993b45d6e2faf05ea5573d86b2321}\label{testmav_8cpp_a8e8993b45d6e2faf05ea5573d86b2321}} 
+\index{testmav.cpp@{testmav.cpp}!PRINT\_FORMAT@{PRINT\_FORMAT}}
+\index{PRINT\_FORMAT@{PRINT\_FORMAT}!testmav.cpp@{testmav.cpp}}
+\subsubsection{\texorpdfstring{PRINT\_FORMAT}{PRINT\_FORMAT}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+\_\+\+F\+O\+R\+M\+AT(\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{def }\end{DoxyParamCaption})~(f-\/$>$print\+\_\+format?f-\/$>$print\+\_\+format\+:def)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{testmav_8cpp_a353674c5af92be7fb389265cde4e5e03}\label{testmav_8cpp_a353674c5af92be7fb389265cde4e5e03}} 
+\index{testmav.cpp@{testmav.cpp}!\_tmain@{\_tmain}}
+\index{\_tmain@{\_tmain}!testmav.cpp@{testmav.cpp}}
+\subsubsection{\texorpdfstring{\_tmain()}{\_tmain()}}
+{\footnotesize\ttfamily int \+\_\+tmain (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{\+\_\+\+T\+C\+H\+AR $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file testmav.\+cpp.
+

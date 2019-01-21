@@ -1,0 +1,34 @@
+\hypertarget{col2im_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/col2im.c File Reference}
+\label{col2im_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/col2im.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/col2im.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{col2im_8c_a94bb8b38729baa41ded448d0b2c1a58b}{col2im\+\_\+add\+\_\+pixel}} (float $\ast$im, int height, int width, int channels, int row, int col, int channel, int pad, float val)
+\item 
+void \mbox{\hyperlink{col2im_8c_a18a54cf3e6467eb0614659f5316eb82a}{col2im\+\_\+cpu}} (float $\ast$data\+\_\+col, int channels, int height, int width, int ksize, int stride, int pad, float $\ast$data\+\_\+im)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{col2im_8c_a94bb8b38729baa41ded448d0b2c1a58b}\label{col2im_8c_a94bb8b38729baa41ded448d0b2c1a58b}} 
+\index{col2im.c@{col2im.c}!col2im\_add\_pixel@{col2im\_add\_pixel}}
+\index{col2im\_add\_pixel@{col2im\_add\_pixel}!col2im.c@{col2im.c}}
+\subsubsection{\texorpdfstring{col2im\_add\_pixel()}{col2im\_add\_pixel()}}
+{\footnotesize\ttfamily void col2im\+\_\+add\+\_\+pixel (\begin{DoxyParamCaption}\item[{float $\ast$}]{im,  }\item[{int}]{height,  }\item[{int}]{width,  }\item[{int}]{channels,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{channel,  }\item[{int}]{pad,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file col2im.\+c.
+
+\mbox{\Hypertarget{col2im_8c_a18a54cf3e6467eb0614659f5316eb82a}\label{col2im_8c_a18a54cf3e6467eb0614659f5316eb82a}} 
+\index{col2im.c@{col2im.c}!col2im\_cpu@{col2im\_cpu}}
+\index{col2im\_cpu@{col2im\_cpu}!col2im.c@{col2im.c}}
+\subsubsection{\texorpdfstring{col2im\_cpu()}{col2im\_cpu()}}
+{\footnotesize\ttfamily void col2im\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{data\+\_\+col,  }\item[{int}]{channels,  }\item[{int}]{height,  }\item[{int}]{width,  }\item[{int}]{ksize,  }\item[{int}]{stride,  }\item[{int}]{pad,  }\item[{float $\ast$}]{data\+\_\+im }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file col2im.\+c.
+

@@ -1,0 +1,147 @@
+\hypertarget{classgazebo_1_1ActorPlugin}{}\section{gazebo\+::Actor\+Plugin Class Reference}
+\label{classgazebo_1_1ActorPlugin}\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+
+
+{\ttfamily \#include $<$Actor\+Plugin.\+hh$>$}
+
+Inheritance diagram for gazebo\+::Actor\+Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgazebo_1_1ActorPlugin}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgazebo_1_1ActorPlugin_ab8db0f2c6a6e64f252033664932da9bb}{Actor\+Plugin}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgazebo_1_1ActorPlugin_aaf3229851338f17b7265d41a8290322d}{Load}} (physics\+::\+Model\+Ptr \+\_\+model, sdf\+::\+Element\+Ptr \+\_\+sdf)
+\begin{DoxyCompactList}\small\item\em Load the actor plugin. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgazebo_1_1ActorPlugin_a94e1e04cacc4d05855f16ced457e938d}{Reset}} ()
+\item 
+void \mbox{\hyperlink{classgazebo_1_1ActorPlugin_ae20299e0479c1643cead3a3f06dade20}{On\+Ros\+Msg}} (const geometry\+\_\+msgs\+::\+Twist\+Const\+Ptr \&\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Handle an incoming message from R\+OS. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgazebo_1_1ActorPlugin_ab8db0f2c6a6e64f252033664932da9bb}{Actor\+Plugin}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgazebo_1_1ActorPlugin_a15cb180134502f927e3b99fc3c8f42be}{Load}} (physics\+::\+Model\+Ptr \+\_\+model, sdf\+::\+Element\+Ptr \+\_\+sdf)
+\begin{DoxyCompactList}\small\item\em Load the actor plugin. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgazebo_1_1ActorPlugin_a20bb6734c948e45ccd384817a5197a43}{Reset}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 40 of file Actor\+Plugin.\+hh.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgazebo_1_1ActorPlugin_ab8db0f2c6a6e64f252033664932da9bb}\label{classgazebo_1_1ActorPlugin_ab8db0f2c6a6e64f252033664932da9bb}} 
+\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}!ActorPlugin@{ActorPlugin}}
+\index{ActorPlugin@{ActorPlugin}!gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+\subsubsection{\texorpdfstring{ActorPlugin()}{ActorPlugin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily gazebo\+::\+Actor\+Plugin\+::\+Actor\+Plugin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+Definition at line 30 of file Actor\+Plugin.\+cpp.
+
+\mbox{\Hypertarget{classgazebo_1_1ActorPlugin_ab8db0f2c6a6e64f252033664932da9bb}\label{classgazebo_1_1ActorPlugin_ab8db0f2c6a6e64f252033664932da9bb}} 
+\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}!ActorPlugin@{ActorPlugin}}
+\index{ActorPlugin@{ActorPlugin}!gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+\subsubsection{\texorpdfstring{ActorPlugin()}{ActorPlugin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily gazebo\+::\+Actor\+Plugin\+::\+Actor\+Plugin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgazebo_1_1ActorPlugin_a15cb180134502f927e3b99fc3c8f42be}\label{classgazebo_1_1ActorPlugin_a15cb180134502f927e3b99fc3c8f42be}} 
+\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}!Load@{Load}}
+\index{Load@{Load}!gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+\subsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void gazebo\+::\+Actor\+Plugin\+::\+Load (\begin{DoxyParamCaption}\item[{physics\+::\+Model\+Ptr}]{\+\_\+model,  }\item[{sdf\+::\+Element\+Ptr}]{\+\_\+sdf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the actor plugin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+model} & Pointer to the parent model. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+sdf} & Pointer to the plugin\textquotesingle{}s S\+DF elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgazebo_1_1ActorPlugin_aaf3229851338f17b7265d41a8290322d}\label{classgazebo_1_1ActorPlugin_aaf3229851338f17b7265d41a8290322d}} 
+\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}!Load@{Load}}
+\index{Load@{Load}!gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+\subsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void gazebo\+::\+Actor\+Plugin\+::\+Load (\begin{DoxyParamCaption}\item[{physics\+::\+Model\+Ptr}]{\+\_\+model,  }\item[{sdf\+::\+Element\+Ptr}]{\+\_\+sdf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the actor plugin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+model} & Pointer to the parent model. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+sdf} & Pointer to the plugin\textquotesingle{}s S\+DF elements. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file Actor\+Plugin.\+cpp.
+
+\mbox{\Hypertarget{classgazebo_1_1ActorPlugin_ae20299e0479c1643cead3a3f06dade20}\label{classgazebo_1_1ActorPlugin_ae20299e0479c1643cead3a3f06dade20}} 
+\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}!OnRosMsg@{OnRosMsg}}
+\index{OnRosMsg@{OnRosMsg}!gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+\subsubsection{\texorpdfstring{OnRosMsg()}{OnRosMsg()}}
+{\footnotesize\ttfamily void gazebo\+::\+Actor\+Plugin\+::\+On\+Ros\+Msg (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Twist\+Const\+Ptr \&}]{\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handle an incoming message from R\+OS. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+msg} & A float value that is used to set the velocity of the Velodyne. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file Actor\+Plugin.\+hh.
+
+\mbox{\Hypertarget{classgazebo_1_1ActorPlugin_a20bb6734c948e45ccd384817a5197a43}\label{classgazebo_1_1ActorPlugin_a20bb6734c948e45ccd384817a5197a43}} 
+\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}!Reset@{Reset}}
+\index{Reset@{Reset}!gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void gazebo\+::\+Actor\+Plugin\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classgazebo_1_1ActorPlugin_a94e1e04cacc4d05855f16ced457e938d}\label{classgazebo_1_1ActorPlugin_a94e1e04cacc4d05855f16ced457e938d}} 
+\index{gazebo::ActorPlugin@{gazebo::ActorPlugin}!Reset@{Reset}}
+\index{Reset@{Reset}!gazebo::ActorPlugin@{gazebo::ActorPlugin}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void gazebo\+::\+Actor\+Plugin\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 81 of file Actor\+Plugin.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mission8\+\_\+sim/include/\mbox{\hyperlink{include_2ActorPlugin_8hh}{Actor\+Plugin.\+hh}}\item 
+/home/eric/catkin\+\_\+ws/src/mission8\+\_\+sim/models/actor/\mbox{\hyperlink{ActorPlugin_8cpp}{Actor\+Plugin.\+cpp}}\item 
+/home/eric/catkin\+\_\+ws/src/mission8\+\_\+sim/models/actor/\mbox{\hyperlink{randomwalk__plugin_8cpp}{randomwalk\+\_\+plugin.\+cpp}}\item 
+/home/eric/catkin\+\_\+ws/src/mission8\+\_\+sim/src/\mbox{\hyperlink{simple__world__plugin_8cpp}{simple\+\_\+world\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

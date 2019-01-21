@@ -1,0 +1,258 @@
+\hypertarget{classpymavlink_1_1DFReader_1_1DFReader}{}\section{pymavlink.\+D\+F\+Reader.\+D\+F\+Reader Class Reference}
+\label{classpymavlink_1_1DFReader_1_1DFReader}\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+Inheritance diagram for pymavlink.\+D\+F\+Reader.\+D\+F\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpymavlink_1_1DFReader_1_1DFReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a61e0dac0ea04b561026a7430a4151e4d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a5c00e009f191c36057548ab1ec7c55c6}{init\+\_\+clock\+\_\+px4}} (self, px4\+\_\+msg\+\_\+time, px4\+\_\+msg\+\_\+gps)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a7024dae05e22c20921859c26202e4c2c}{init\+\_\+clock\+\_\+msec}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_ab8d8991c0b0a08c78280a368c79fbd1c}{init\+\_\+clock\+\_\+usec}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_afb024cca6810c36c6cb2164c35e25ef7}{init\+\_\+clock\+\_\+gps\+\_\+interpolated}} (self, \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_acd84fa97df078e2f2bc16e06904f73a0}{clock}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_ac2bc47ae655fa152f8e434470731cbda}{init\+\_\+clock}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a7c726e75615d8cc5b2a65fe62ab2f21d}{recv\+\_\+msg}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_aa0900449adff0ff0946cc568f83308ed}{recv\+\_\+match}} (self, condition=None, type=None, blocking=False)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a793c18e4b164a17f7088a0cec9a647d5}{check\+\_\+condition}} (self, condition)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a610321cdac70a9229612b42efc1f1dd0}{param}} (self, name, default=None)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_acd84fa97df078e2f2bc16e06904f73a0}{clock}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a736be07c12524b4c6cae6225e458e812}{timestamp}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a7f27c207bdc7b62333579d81bd92219b}{mav\+\_\+type}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_abbad566e5d37a3d4582cbb7283a53feb}{verbose}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_ab98bf6cb7dba82b6cad031b3676af9d6}{params}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a018083ea80aeb982d2f3bcb8fe8a4957}{messages}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_af8c453df7a4226b12ee451a6742af34e}{flightmode}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1DFReader_1_1DFReader_a716dfb53a8ff2c2af70ce668998b1faa}{percent}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}parse a generic dataflash file\end{DoxyVerb}
+ 
+
+Definition at line 374 of file D\+F\+Reader.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a61e0dac0ea04b561026a7430a4151e4d}\label{classpymavlink_1_1DFReader_1_1DFReader_a61e0dac0ea04b561026a7430a4151e4d}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 376 of file D\+F\+Reader.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a793c18e4b164a17f7088a0cec9a647d5}\label{classpymavlink_1_1DFReader_1_1DFReader_a793c18e4b164a17f7088a0cec9a647d5}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!check\_condition@{check\_condition}}
+\index{check\_condition@{check\_condition}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{check\_condition()}{check\_condition()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+check\+\_\+condition (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{condition }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}check if a condition is true\end{DoxyVerb}
+ 
+
+Definition at line 557 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_ac2bc47ae655fa152f8e434470731cbda}\label{classpymavlink_1_1DFReader_1_1DFReader_ac2bc47ae655fa152f8e434470731cbda}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!init\_clock@{init\_clock}}
+\index{init\_clock@{init\_clock}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{init\_clock()}{init\_clock()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+init\+\_\+clock (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}work out time basis for the log\end{DoxyVerb}
+ 
+
+Definition at line 409 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_afb024cca6810c36c6cb2164c35e25ef7}\label{classpymavlink_1_1DFReader_1_1DFReader_afb024cca6810c36c6cb2164c35e25ef7}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!init\_clock\_gps\_interpolated@{init\_clock\_gps\_interpolated}}
+\index{init\_clock\_gps\_interpolated@{init\_clock\_gps\_interpolated}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{init\_clock\_gps\_interpolated()}{init\_clock\_gps\_interpolated()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+init\+\_\+clock\+\_\+gps\+\_\+interpolated (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{clock }\end{DoxyParamCaption})}
+
+
+
+Definition at line 406 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a7024dae05e22c20921859c26202e4c2c}\label{classpymavlink_1_1DFReader_1_1DFReader_a7024dae05e22c20921859c26202e4c2c}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!init\_clock\_msec@{init\_clock\_msec}}
+\index{init\_clock\_msec@{init\_clock\_msec}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{init\_clock\_msec()}{init\_clock\_msec()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+init\+\_\+clock\+\_\+msec (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 399 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a5c00e009f191c36057548ab1ec7c55c6}\label{classpymavlink_1_1DFReader_1_1DFReader_a5c00e009f191c36057548ab1ec7c55c6}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!init\_clock\_px4@{init\_clock\_px4}}
+\index{init\_clock\_px4@{init\_clock\_px4}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{init\_clock\_px4()}{init\_clock\_px4()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+init\+\_\+clock\+\_\+px4 (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{px4\+\_\+msg\+\_\+time,  }\item[{}]{px4\+\_\+msg\+\_\+gps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 392 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_ab8d8991c0b0a08c78280a368c79fbd1c}\label{classpymavlink_1_1DFReader_1_1DFReader_ab8d8991c0b0a08c78280a368c79fbd1c}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!init\_clock\_usec@{init\_clock\_usec}}
+\index{init\_clock\_usec@{init\_clock\_usec}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{init\_clock\_usec()}{init\_clock\_usec()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+init\+\_\+clock\+\_\+usec (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 403 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a610321cdac70a9229612b42efc1f1dd0}\label{classpymavlink_1_1DFReader_1_1DFReader_a610321cdac70a9229612b42efc1f1dd0}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!param@{param}}
+\index{param@{param}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{param()}{param()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+param (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{default = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}convenient function for returning an arbitrary MAVLink
+   parameter with a default\end{DoxyVerb}
+ 
+
+Definition at line 561 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_aa0900449adff0ff0946cc568f83308ed}\label{classpymavlink_1_1DFReader_1_1DFReader_aa0900449adff0ff0946cc568f83308ed}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!recv\_match@{recv\_match}}
+\index{recv\_match@{recv\_match}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{recv\_match()}{recv\_match()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+recv\+\_\+match (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{condition = {\ttfamily None},  }\item[{}]{type = {\ttfamily None},  }\item[{}]{blocking = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}recv the next message that matches the given condition
+type can be a string or a list of strings\end{DoxyVerb}
+ 
+
+Definition at line 542 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a7c726e75615d8cc5b2a65fe62ab2f21d}\label{classpymavlink_1_1DFReader_1_1DFReader_a7c726e75615d8cc5b2a65fe62ab2f21d}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!recv\_msg@{recv\_msg}}
+\index{recv\_msg@{recv\_msg}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{recv\_msg()}{recv\_msg()}}
+{\footnotesize\ttfamily def pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+recv\+\_\+msg (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 505 of file D\+F\+Reader.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_acd84fa97df078e2f2bc16e06904f73a0}\label{classpymavlink_1_1DFReader_1_1DFReader_acd84fa97df078e2f2bc16e06904f73a0}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!clock@{clock}}
+\index{clock@{clock}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+clock}
+
+
+
+Definition at line 378 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_af8c453df7a4226b12ee451a6742af34e}\label{classpymavlink_1_1DFReader_1_1DFReader_af8c453df7a4226b12ee451a6742af34e}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!flightmode@{flightmode}}
+\index{flightmode@{flightmode}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{flightmode}{flightmode}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+flightmode}
+
+
+
+Definition at line 387 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a7f27c207bdc7b62333579d81bd92219b}\label{classpymavlink_1_1DFReader_1_1DFReader_a7f27c207bdc7b62333579d81bd92219b}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!mav\_type@{mav\_type}}
+\index{mav\_type@{mav\_type}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{mav\_type}{mav\_type}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+mav\+\_\+type}
+
+
+
+Definition at line 380 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a018083ea80aeb982d2f3bcb8fe8a4957}\label{classpymavlink_1_1DFReader_1_1DFReader_a018083ea80aeb982d2f3bcb8fe8a4957}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!messages@{messages}}
+\index{messages@{messages}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{messages}{messages}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+messages}
+
+
+
+Definition at line 386 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_ab98bf6cb7dba82b6cad031b3676af9d6}\label{classpymavlink_1_1DFReader_1_1DFReader_ab98bf6cb7dba82b6cad031b3676af9d6}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!params@{params}}
+\index{params@{params}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+params}
+
+
+
+Definition at line 382 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a716dfb53a8ff2c2af70ce668998b1faa}\label{classpymavlink_1_1DFReader_1_1DFReader_a716dfb53a8ff2c2af70ce668998b1faa}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!percent@{percent}}
+\index{percent@{percent}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{percent}{percent}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+percent}
+
+
+
+Definition at line 388 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_a736be07c12524b4c6cae6225e458e812}\label{classpymavlink_1_1DFReader_1_1DFReader_a736be07c12524b4c6cae6225e458e812}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+timestamp}
+
+
+
+Definition at line 379 of file D\+F\+Reader.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1DFReader_1_1DFReader_abbad566e5d37a3d4582cbb7283a53feb}\label{classpymavlink_1_1DFReader_1_1DFReader_abbad566e5d37a3d4582cbb7283a53feb}} 
+\index{pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}!verbose@{verbose}}
+\index{verbose@{verbose}!pymavlink.DFReader.DFReader@{pymavlink.DFReader.DFReader}}
+\subsubsection{\texorpdfstring{verbose}{verbose}}
+{\footnotesize\ttfamily pymavlink.\+D\+F\+Reader.\+D\+F\+Reader.\+verbose}
+
+
+
+Definition at line 381 of file D\+F\+Reader.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/\mbox{\hyperlink{DFReader_8py}{D\+F\+Reader.\+py}}\end{DoxyCompactItemize}

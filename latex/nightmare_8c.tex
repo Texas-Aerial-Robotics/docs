@@ -1,0 +1,82 @@
+\hypertarget{nightmare_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/nightmare.c File Reference}
+\label{nightmare_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/nightmare.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/nightmare.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{nightmare_8c_a7b31dd04a1194f79427ee06b8bd1498b}{abs\+\_\+mean}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, int n)
+\item 
+void \mbox{\hyperlink{nightmare_8c_a561eaf6bb47290c5cddb9ba6b5c66f48}{calculate\+\_\+loss}} (float $\ast$output, float $\ast$delta, int n, float thresh)
+\item 
+void \mbox{\hyperlink{nightmare_8c_a3fa2a59e61282c0b9a673497b0e5b1f0}{optimize\+\_\+picture}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structimage}{image}} orig, int max\+\_\+layer, float scale, float rate, float thresh, int norm)
+\item 
+void \mbox{\hyperlink{nightmare_8c_acd159186e193428cba70578a92bafed2}{smooth}} (\mbox{\hyperlink{structimage}{image}} recon, \mbox{\hyperlink{structimage}{image}} update, float lambda, int num)
+\item 
+void \mbox{\hyperlink{nightmare_8c_a4a25b5757e8347adf19afd90445a0879}{reconstruct\+\_\+picture}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float $\ast$features, \mbox{\hyperlink{structimage}{image}} recon, \mbox{\hyperlink{structimage}{image}} update, float rate, float momentum, float lambda, int smooth\+\_\+size, int iters)
+\item 
+void \mbox{\hyperlink{nightmare_8c_aaefb0ed0f5bd621bb9e131e2bc1b4852}{run\+\_\+nightmare}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{nightmare_8c_a7b31dd04a1194f79427ee06b8bd1498b}\label{nightmare_8c_a7b31dd04a1194f79427ee06b8bd1498b}} 
+\index{nightmare.c@{nightmare.c}!abs\_mean@{abs\_mean}}
+\index{abs\_mean@{abs\_mean}!nightmare.c@{nightmare.c}}
+\subsubsection{\texorpdfstring{abs\_mean()}{abs\_mean()}}
+{\footnotesize\ttfamily float abs\+\_\+mean (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file nightmare.\+c.
+
+\mbox{\Hypertarget{nightmare_8c_a561eaf6bb47290c5cddb9ba6b5c66f48}\label{nightmare_8c_a561eaf6bb47290c5cddb9ba6b5c66f48}} 
+\index{nightmare.c@{nightmare.c}!calculate\_loss@{calculate\_loss}}
+\index{calculate\_loss@{calculate\_loss}!nightmare.c@{nightmare.c}}
+\subsubsection{\texorpdfstring{calculate\_loss()}{calculate\_loss()}}
+{\footnotesize\ttfamily void calculate\+\_\+loss (\begin{DoxyParamCaption}\item[{float $\ast$}]{output,  }\item[{float $\ast$}]{delta,  }\item[{int}]{n,  }\item[{float}]{thresh }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file nightmare.\+c.
+
+\mbox{\Hypertarget{nightmare_8c_a3fa2a59e61282c0b9a673497b0e5b1f0}\label{nightmare_8c_a3fa2a59e61282c0b9a673497b0e5b1f0}} 
+\index{nightmare.c@{nightmare.c}!optimize\_picture@{optimize\_picture}}
+\index{optimize\_picture@{optimize\_picture}!nightmare.c@{nightmare.c}}
+\subsubsection{\texorpdfstring{optimize\_picture()}{optimize\_picture()}}
+{\footnotesize\ttfamily void optimize\+\_\+picture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{orig,  }\item[{int}]{max\+\_\+layer,  }\item[{float}]{scale,  }\item[{float}]{rate,  }\item[{float}]{thresh,  }\item[{int}]{norm }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file nightmare.\+c.
+
+\mbox{\Hypertarget{nightmare_8c_a4a25b5757e8347adf19afd90445a0879}\label{nightmare_8c_a4a25b5757e8347adf19afd90445a0879}} 
+\index{nightmare.c@{nightmare.c}!reconstruct\_picture@{reconstruct\_picture}}
+\index{reconstruct\_picture@{reconstruct\_picture}!nightmare.c@{nightmare.c}}
+\subsubsection{\texorpdfstring{reconstruct\_picture()}{reconstruct\_picture()}}
+{\footnotesize\ttfamily void reconstruct\+\_\+picture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float $\ast$}]{features,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{recon,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{update,  }\item[{float}]{rate,  }\item[{float}]{momentum,  }\item[{float}]{lambda,  }\item[{int}]{smooth\+\_\+size,  }\item[{int}]{iters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 135 of file nightmare.\+c.
+
+\mbox{\Hypertarget{nightmare_8c_aaefb0ed0f5bd621bb9e131e2bc1b4852}\label{nightmare_8c_aaefb0ed0f5bd621bb9e131e2bc1b4852}} 
+\index{nightmare.c@{nightmare.c}!run\_nightmare@{run\_nightmare}}
+\index{run\_nightmare@{run\_nightmare}!nightmare.c@{nightmare.c}}
+\subsubsection{\texorpdfstring{run\_nightmare()}{run\_nightmare()}}
+{\footnotesize\ttfamily void run\+\_\+nightmare (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 288 of file nightmare.\+c.
+
+\mbox{\Hypertarget{nightmare_8c_acd159186e193428cba70578a92bafed2}\label{nightmare_8c_acd159186e193428cba70578a92bafed2}} 
+\index{nightmare.c@{nightmare.c}!smooth@{smooth}}
+\index{smooth@{smooth}!nightmare.c@{nightmare.c}}
+\subsubsection{\texorpdfstring{smooth()}{smooth()}}
+{\footnotesize\ttfamily void smooth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{recon,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{update,  }\item[{float}]{lambda,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 114 of file nightmare.\+c.
+

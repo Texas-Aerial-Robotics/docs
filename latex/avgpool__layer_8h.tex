@@ -1,0 +1,86 @@
+\hypertarget{avgpool__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/avgpool\+\_\+layer.h File Reference}
+\label{avgpool__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/avgpool\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/avgpool\_layer.h}}
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{avgpool__layer_8h_a85fe3e97f1357e79550f2fe7044dcd4c}{get\+\_\+avgpool\+\_\+image}} (\mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} \mbox{\hyperlink{avgpool__layer_8h_aa48973ba2fa1987674e789d1511307c4}{make\+\_\+avgpool\+\_\+layer}} (int batch, int w, int h, int c)
+\item 
+void \mbox{\hyperlink{avgpool__layer_8h_aa34eb4c52cfe95d539cbbcdd37e4d711}{resize\+\_\+avgpool\+\_\+layer}} (\mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} $\ast$l, int w, int h)
+\item 
+void \mbox{\hyperlink{avgpool__layer_8h_abacd82eb3f6c169bac2d6f9ce591fbe3}{forward\+\_\+avgpool\+\_\+layer}} (const \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{avgpool__layer_8h_a08eb5fae5bf3a51b3d1b6c84974acd36}{backward\+\_\+avgpool\+\_\+layer}} (const \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}\label{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}} 
+\index{avgpool\_layer.h@{avgpool\_layer.h}!avgpool\_layer@{avgpool\_layer}}
+\index{avgpool\_layer@{avgpool\_layer}!avgpool\_layer.h@{avgpool\_layer.h}}
+\subsubsection{\texorpdfstring{avgpool\_layer}{avgpool\_layer}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}}}
+
+
+
+Definition at line 9 of file avgpool\+\_\+layer.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{avgpool__layer_8h_a08eb5fae5bf3a51b3d1b6c84974acd36}\label{avgpool__layer_8h_a08eb5fae5bf3a51b3d1b6c84974acd36}} 
+\index{avgpool\_layer.h@{avgpool\_layer.h}!backward\_avgpool\_layer@{backward\_avgpool\_layer}}
+\index{backward\_avgpool\_layer@{backward\_avgpool\_layer}!avgpool\_layer.h@{avgpool\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_avgpool\_layer()}{backward\_avgpool\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+avgpool\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file avgpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{avgpool__layer_8h_abacd82eb3f6c169bac2d6f9ce591fbe3}\label{avgpool__layer_8h_abacd82eb3f6c169bac2d6f9ce591fbe3}} 
+\index{avgpool\_layer.h@{avgpool\_layer.h}!forward\_avgpool\_layer@{forward\_avgpool\_layer}}
+\index{forward\_avgpool\_layer@{forward\_avgpool\_layer}!avgpool\_layer.h@{avgpool\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_avgpool\_layer()}{forward\_avgpool\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+avgpool\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file avgpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{avgpool__layer_8h_a85fe3e97f1357e79550f2fe7044dcd4c}\label{avgpool__layer_8h_a85fe3e97f1357e79550f2fe7044dcd4c}} 
+\index{avgpool\_layer.h@{avgpool\_layer.h}!get\_avgpool\_image@{get\_avgpool\_image}}
+\index{get\_avgpool\_image@{get\_avgpool\_image}!avgpool\_layer.h@{avgpool\_layer.h}}
+\subsubsection{\texorpdfstring{get\_avgpool\_image()}{get\_avgpool\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+avgpool\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{avgpool__layer_8h_aa48973ba2fa1987674e789d1511307c4}\label{avgpool__layer_8h_aa48973ba2fa1987674e789d1511307c4}} 
+\index{avgpool\_layer.h@{avgpool\_layer.h}!make\_avgpool\_layer@{make\_avgpool\_layer}}
+\index{make\_avgpool\_layer@{make\_avgpool\_layer}!avgpool\_layer.h@{avgpool\_layer.h}}
+\subsubsection{\texorpdfstring{make\_avgpool\_layer()}{make\_avgpool\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} make\+\_\+avgpool\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file avgpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{avgpool__layer_8h_aa34eb4c52cfe95d539cbbcdd37e4d711}\label{avgpool__layer_8h_aa34eb4c52cfe95d539cbbcdd37e4d711}} 
+\index{avgpool\_layer.h@{avgpool\_layer.h}!resize\_avgpool\_layer@{resize\_avgpool\_layer}}
+\index{resize\_avgpool\_layer@{resize\_avgpool\_layer}!avgpool\_layer.h@{avgpool\_layer.h}}
+\subsubsection{\texorpdfstring{resize\_avgpool\_layer()}{resize\_avgpool\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+avgpool\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{avgpool__layer_8h_a3e05cb4feb19992f846137c546b3f981}{avgpool\+\_\+layer}} $\ast$}]{l,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file avgpool\+\_\+layer.\+c.
+

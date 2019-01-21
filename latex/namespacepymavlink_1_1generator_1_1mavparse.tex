@@ -1,0 +1,164 @@
+\hypertarget{namespacepymavlink_1_1generator_1_1mavparse}{}\section{pymavlink.\+generator.\+mavparse Namespace Reference}
+\label{namespacepymavlink_1_1generator_1_1mavparse}\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavparse_1_1MAVEnum}{M\+A\+V\+Enum}}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavparse_1_1MAVEnumEntry}{M\+A\+V\+Enum\+Entry}}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavparse_1_1MAVEnumParam}{M\+A\+V\+Enum\+Param}}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavparse_1_1MAVField}{M\+A\+V\+Field}}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavparse_1_1MAVParseError}{M\+A\+V\+Parse\+Error}}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavparse_1_1MAVType}{M\+A\+V\+Type}}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavparse_1_1MAVXML}{M\+A\+V\+X\+ML}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_aba7d09994f850b5dce98eb0356318543}{message\+\_\+checksum}} (\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_a7547b5a23ef0b60fac86a3dae099723b}{merge\+\_\+enums}} (xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_aade73d992c7a3adb54e6ed2682ba97ce}{check\+\_\+duplicates}} (xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_a7626b3a261c60c715fcce93281b0c5d0}{total\+\_\+msgs}} (xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_aa0e41fa4aa5b31e62663f114f77de9a4}{mkdir\+\_\+p}} (dir)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_a2f1946ee948a684dcbdd0bf5afee5689}{P\+R\+O\+T\+O\+C\+O\+L\+\_\+0\+\_\+9}} = \char`\"{}0.\+9\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_ab308d4fdc1b0fbcfa2789aa6af08f46e}{P\+R\+O\+T\+O\+C\+O\+L\+\_\+1\+\_\+0}} = \char`\"{}1.\+0\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_a87817b2175b76fab09524650d04cd139}{P\+R\+O\+T\+O\+C\+O\+L\+\_\+2\+\_\+0}} = \char`\"{}2.\+0\char`\"{}
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_aa767ba97b2d56ec79d71110d223fa05a}{F\+L\+A\+G\+\_\+\+H\+A\+V\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+Y\+S\+T\+EM}} = 1
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_ac489014afb91b659714bb125f9b22c8b}{F\+L\+A\+G\+\_\+\+H\+A\+V\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}mavlink python parse functions
+
+Copyright Andrew Tridgell 2011
+Released under GNU GPL version 3 or later
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_aade73d992c7a3adb54e6ed2682ba97ce}\label{namespacepymavlink_1_1generator_1_1mavparse_aade73d992c7a3adb54e6ed2682ba97ce}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!check\_duplicates@{check\_duplicates}}
+\index{check\_duplicates@{check\_duplicates}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{check\_duplicates()}{check\_duplicates()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavparse.\+check\+\_\+duplicates (\begin{DoxyParamCaption}\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}check for duplicate message IDs\end{DoxyVerb}
+ 
+
+Definition at line 437 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_a7547b5a23ef0b60fac86a3dae099723b}\label{namespacepymavlink_1_1generator_1_1mavparse_a7547b5a23ef0b60fac86a3dae099723b}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!merge\_enums@{merge\_enums}}
+\index{merge\_enums@{merge\_enums}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{merge\_enums()}{merge\_enums()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavparse.\+merge\+\_\+enums (\begin{DoxyParamCaption}\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}merge enums between XML files\end{DoxyVerb}
+ 
+
+Definition at line 404 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_aba7d09994f850b5dce98eb0356318543}\label{namespacepymavlink_1_1generator_1_1mavparse_aba7d09994f850b5dce98eb0356318543}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!message\_checksum@{message\_checksum}}
+\index{message\_checksum@{message\_checksum}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{message\_checksum()}{message\_checksum()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavparse.\+message\+\_\+checksum (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate a 8-bit checksum of the key fields of a message, so we
+   can detect incompatible XML changes\end{DoxyVerb}
+ 
+
+Definition at line 387 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_aa0e41fa4aa5b31e62663f114f77de9a4}\label{namespacepymavlink_1_1generator_1_1mavparse_aa0e41fa4aa5b31e62663f114f77de9a4}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!mkdir\_p@{mkdir\_p}}
+\index{mkdir\_p@{mkdir\_p}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{mkdir\_p()}{mkdir\_p()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavparse.\+mkdir\+\_\+p (\begin{DoxyParamCaption}\item[{}]{dir }\end{DoxyParamCaption})}
+
+
+
+Definition at line 488 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_a7626b3a261c60c715fcce93281b0c5d0}\label{namespacepymavlink_1_1generator_1_1mavparse_a7626b3a261c60c715fcce93281b0c5d0}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!total\_msgs@{total\_msgs}}
+\index{total\_msgs@{total\_msgs}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{total\_msgs()}{total\_msgs()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavparse.\+total\+\_\+msgs (\begin{DoxyParamCaption}\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}count total number of msgs\end{DoxyVerb}
+ 
+
+Definition at line 481 of file mavparse.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_ac489014afb91b659714bb125f9b22c8b}\label{namespacepymavlink_1_1generator_1_1mavparse_ac489014afb91b659714bb125f9b22c8b}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!FLAG\_HAVE\_TARGET\_COMPONENT@{FLAG\_HAVE\_TARGET\_COMPONENT}}
+\index{FLAG\_HAVE\_TARGET\_COMPONENT@{FLAG\_HAVE\_TARGET\_COMPONENT}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{FLAG\_HAVE\_TARGET\_COMPONENT}{FLAG\_HAVE\_TARGET\_COMPONENT}}
+{\footnotesize\ttfamily int pymavlink.\+generator.\+mavparse.\+F\+L\+A\+G\+\_\+\+H\+A\+V\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT = 2}
+
+
+
+Definition at line 25 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_aa767ba97b2d56ec79d71110d223fa05a}\label{namespacepymavlink_1_1generator_1_1mavparse_aa767ba97b2d56ec79d71110d223fa05a}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!FLAG\_HAVE\_TARGET\_SYSTEM@{FLAG\_HAVE\_TARGET\_SYSTEM}}
+\index{FLAG\_HAVE\_TARGET\_SYSTEM@{FLAG\_HAVE\_TARGET\_SYSTEM}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{FLAG\_HAVE\_TARGET\_SYSTEM}{FLAG\_HAVE\_TARGET\_SYSTEM}}
+{\footnotesize\ttfamily int pymavlink.\+generator.\+mavparse.\+F\+L\+A\+G\+\_\+\+H\+A\+V\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+Y\+S\+T\+EM = 1}
+
+
+
+Definition at line 24 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_a2f1946ee948a684dcbdd0bf5afee5689}\label{namespacepymavlink_1_1generator_1_1mavparse_a2f1946ee948a684dcbdd0bf5afee5689}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!PROTOCOL\_0\_9@{PROTOCOL\_0\_9}}
+\index{PROTOCOL\_0\_9@{PROTOCOL\_0\_9}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{PROTOCOL\_0\_9}{PROTOCOL\_0\_9}}
+{\footnotesize\ttfamily string pymavlink.\+generator.\+mavparse.\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+0\+\_\+9 = \char`\"{}0.\+9\char`\"{}}
+
+
+
+Definition at line 19 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_ab308d4fdc1b0fbcfa2789aa6af08f46e}\label{namespacepymavlink_1_1generator_1_1mavparse_ab308d4fdc1b0fbcfa2789aa6af08f46e}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!PROTOCOL\_1\_0@{PROTOCOL\_1\_0}}
+\index{PROTOCOL\_1\_0@{PROTOCOL\_1\_0}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{PROTOCOL\_1\_0}{PROTOCOL\_1\_0}}
+{\footnotesize\ttfamily string pymavlink.\+generator.\+mavparse.\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+1\+\_\+0 = \char`\"{}1.\+0\char`\"{}}
+
+
+
+Definition at line 20 of file mavparse.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavparse_a87817b2175b76fab09524650d04cd139}\label{namespacepymavlink_1_1generator_1_1mavparse_a87817b2175b76fab09524650d04cd139}} 
+\index{pymavlink.generator.mavparse@{pymavlink.generator.mavparse}!PROTOCOL\_2\_0@{PROTOCOL\_2\_0}}
+\index{PROTOCOL\_2\_0@{PROTOCOL\_2\_0}!pymavlink.generator.mavparse@{pymavlink.generator.mavparse}}
+\subsubsection{\texorpdfstring{PROTOCOL\_2\_0}{PROTOCOL\_2\_0}}
+{\footnotesize\ttfamily string pymavlink.\+generator.\+mavparse.\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+2\+\_\+0 = \char`\"{}2.\+0\char`\"{}}
+
+
+
+Definition at line 21 of file mavparse.\+py.
+

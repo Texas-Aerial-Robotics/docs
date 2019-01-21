@@ -1,0 +1,220 @@
+\hypertarget{classpymavlink_1_1mavutil_1_1mavserial}{}\section{pymavlink.\+mavutil.\+mavserial Class Reference}
+\label{classpymavlink_1_1mavutil_1_1mavserial}\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+Inheritance diagram for pymavlink.\+mavutil.\+mavserial\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpymavlink_1_1mavutil_1_1mavserial}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a58a367989819aa421781a816ce1586bb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a42ee22c9edea351a8228113efb0c1907}{device}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a30e81076e135f155338cdb028d634bdb}{baud}}=115200, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_aec2ff119c2631f63d3608bd347133183}{autoreconnect}}=False, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a02c06667c79f4414ed9c4ee6a8dec903}{source\+\_\+system}}=255, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a84e307f771a9ac2aed567831845c417e}{source\+\_\+component}}=0, use\+\_\+native=\mbox{\hyperlink{namespacepymavlink_1_1mavutil_a21ce9da7b698a7bc21c44b9f77341b62}{default\+\_\+native}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_af4a1da9b197ebf58110e26b805af1fda}{set\+\_\+rtscts}} (self, enable)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_aa69a31cb7e3cee07ec43174501cb79ac}{set\+\_\+baudrate}} (self, baudrate)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a3e2176f72a1c7590584597cb63d12eb2}{close}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_acd3d12828b5794091b0984d65c292770}{recv}} (self, n=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a6d0072efcfa0a49f95de45a8475b26e8}{write}} (self, buf)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a0ab2dd40a877e6d0e4bf8f9232805fb9}{reset}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a30e81076e135f155338cdb028d634bdb}{baud}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a42ee22c9edea351a8228113efb0c1907}{device}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_aec2ff119c2631f63d3608bd347133183}{autoreconnect}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a21eb82949b5d2a8f77da9b6b07a99962}{port}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_af3469e2df31f9684e6603459dcae461d}{rtscts}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_af651e06812c51cc77cd0617615050d94}{portdead}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a1a4e38937fe65a0c201ffa9f6e83d1d3}{fd}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}a serial mavlink port\end{DoxyVerb}
+ 
+
+Definition at line 793 of file mavutil.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a58a367989819aa421781a816ce1586bb}\label{classpymavlink_1_1mavutil_1_1mavserial_a58a367989819aa421781a816ce1586bb}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavserial.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{device,  }\item[{}]{baud = {\ttfamily 115200},  }\item[{}]{autoreconnect = {\ttfamily False},  }\item[{}]{source\+\_\+system = {\ttfamily 255},  }\item[{}]{source\+\_\+component = {\ttfamily 0},  }\item[{}]{use\+\_\+native = {\ttfamily \mbox{\hyperlink{namespacepymavlink_1_1mavutil_a21ce9da7b698a7bc21c44b9f77341b62}{default\+\_\+native}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 795 of file mavutil.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a3e2176f72a1c7590584597cb63d12eb2}\label{classpymavlink_1_1mavutil_1_1mavserial_a3e2176f72a1c7590584597cb63d12eb2}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!close@{close}}
+\index{close@{close}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavserial.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 832 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_acd3d12828b5794091b0984d65c292770}\label{classpymavlink_1_1mavutil_1_1mavserial_acd3d12828b5794091b0984d65c292770}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!recv@{recv}}
+\index{recv@{recv}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{recv()}{recv()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavserial.\+recv (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}default recv method\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a09cb800fc6b03949ace05ce320539be2}{pymavlink.\+mavutil.\+mavfile}}.
+
+
+
+Definition at line 835 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a0ab2dd40a877e6d0e4bf8f9232805fb9}\label{classpymavlink_1_1mavutil_1_1mavserial_a0ab2dd40a877e6d0e4bf8f9232805fb9}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!reset@{reset}}
+\index{reset@{reset}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavserial.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 856 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_aa69a31cb7e3cee07ec43174501cb79ac}\label{classpymavlink_1_1mavutil_1_1mavserial_aa69a31cb7e3cee07ec43174501cb79ac}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!set\_baudrate@{set\_baudrate}}
+\index{set\_baudrate@{set\_baudrate}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{set\_baudrate()}{set\_baudrate()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavserial.\+set\+\_\+baudrate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{baudrate }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}set baudrate\end{DoxyVerb}
+ 
+
+Definition at line 824 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_af4a1da9b197ebf58110e26b805af1fda}\label{classpymavlink_1_1mavutil_1_1mavserial_af4a1da9b197ebf58110e26b805af1fda}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!set\_rtscts@{set\_rtscts}}
+\index{set\_rtscts@{set\_rtscts}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{set\_rtscts()}{set\_rtscts()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavserial.\+set\+\_\+rtscts (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{enable }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enable/disable RTS/CTS if applicable\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2607aae0fda1190034889d9e1c585539}{pymavlink.\+mavutil.\+mavfile}}.
+
+
+
+Definition at line 816 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a6d0072efcfa0a49f95de45a8475b26e8}\label{classpymavlink_1_1mavutil_1_1mavserial_a6d0072efcfa0a49f95de45a8475b26e8}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!write@{write}}
+\index{write@{write}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavserial.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buf }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}default write method\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a8f40348c156083384c07dfa73cf92a62}{pymavlink.\+mavutil.\+mavfile}}.
+
+
+
+Definition at line 845 of file mavutil.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_aec2ff119c2631f63d3608bd347133183}\label{classpymavlink_1_1mavutil_1_1mavserial_aec2ff119c2631f63d3608bd347133183}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!autoreconnect@{autoreconnect}}
+\index{autoreconnect@{autoreconnect}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{autoreconnect}{autoreconnect}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavserial.\+autoreconnect}
+
+
+
+Definition at line 801 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a30e81076e135f155338cdb028d634bdb}\label{classpymavlink_1_1mavutil_1_1mavserial_a30e81076e135f155338cdb028d634bdb}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!baud@{baud}}
+\index{baud@{baud}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{baud}{baud}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavserial.\+baud}
+
+
+
+Definition at line 799 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a42ee22c9edea351a8228113efb0c1907}\label{classpymavlink_1_1mavutil_1_1mavserial_a42ee22c9edea351a8228113efb0c1907}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!device@{device}}
+\index{device@{device}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavserial.\+device}
+
+
+
+Definition at line 800 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a1a4e38937fe65a0c201ffa9f6e83d1d3}\label{classpymavlink_1_1mavutil_1_1mavserial_a1a4e38937fe65a0c201ffa9f6e83d1d3}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!fd@{fd}}
+\index{fd@{fd}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavserial.\+fd}
+
+
+
+Definition at line 866 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_a21eb82949b5d2a8f77da9b6b07a99962}\label{classpymavlink_1_1mavutil_1_1mavserial_a21eb82949b5d2a8f77da9b6b07a99962}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!port@{port}}
+\index{port@{port}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavserial.\+port}
+
+
+
+Definition at line 805 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_af651e06812c51cc77cd0617615050d94}\label{classpymavlink_1_1mavutil_1_1mavserial_af651e06812c51cc77cd0617615050d94}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!portdead@{portdead}}
+\index{portdead@{portdead}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{portdead}{portdead}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavserial.\+portdead}
+
+
+
+Definition at line 851 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavserial_af3469e2df31f9684e6603459dcae461d}\label{classpymavlink_1_1mavutil_1_1mavserial_af3469e2df31f9684e6603459dcae461d}} 
+\index{pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}!rtscts@{rtscts}}
+\index{rtscts@{rtscts}!pymavlink.mavutil.mavserial@{pymavlink.mavutil.mavserial}}
+\subsubsection{\texorpdfstring{rtscts}{rtscts}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavserial.\+rtscts}
+
+
+
+Definition at line 814 of file mavutil.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/\mbox{\hyperlink{mavutil_8py}{mavutil.\+py}}\end{DoxyCompactItemize}

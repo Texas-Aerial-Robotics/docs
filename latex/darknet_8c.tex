@@ -1,0 +1,432 @@
+\hypertarget{darknet_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/darknet.c File Reference}
+\label{darknet_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/darknet.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/darknet.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{darknet_8c_aa8603edf5e9da49cdee89b35d6bc5b42}{predict\+\_\+classifier}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, int top)
+\item 
+void \mbox{\hyperlink{darknet_8c_ad29ded4bbd1d823ecf9a61135e0710cb}{test\+\_\+detector}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, float thresh, float hier\+\_\+thresh, char $\ast$outfile, int fullscreen)
+\item 
+void \mbox{\hyperlink{darknet_8c_ae2af4814947b728e7cfafec8c446050e}{run\+\_\+yolo}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a677c1747fd7a58c7f7da3314af5d6120}{run\+\_\+detector}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a9a2e98f86cd2b185650f4ec039d38b03}{run\+\_\+coco}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_add5178ee1c90068a3229f6ee5349dfcc}{run\+\_\+captcha}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_aaefb0ed0f5bd621bb9e131e2bc1b4852}{run\+\_\+nightmare}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a08cb29ba2c4674431352eff4e6274b56}{run\+\_\+classifier}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_aa80afdae21d8e85cfa1ead4aea5e4467}{run\+\_\+regressor}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a1cc3931b6dae3aabf581ef833bbc75f0}{run\+\_\+segmenter}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a7fd5ff39b30355662b36d8f1c3efae78}{run\+\_\+char\+\_\+rnn}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a695072073d4da637e4728d2527422292}{run\+\_\+tag}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a964d88fc4dfa875f6de21066f7171d11}{run\+\_\+cifar}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_acbc5b7a174f506f13ab6d0fca1faa102}{run\+\_\+go}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a4c4bbc70a093ad78def4e127f35bc626}{run\+\_\+art}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a4bc1230a2d77e86644c4719157fc69cc}{run\+\_\+super}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_ab48437873371bf1e3ff2b7714109f178}{run\+\_\+lsd}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{darknet_8c_a7dfa7e733fd4cb2475215182772ba1bf}{average}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+long \mbox{\hyperlink{darknet_8c_a20d9a3501717aa63438aca398cc9878c}{numops}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+void \mbox{\hyperlink{darknet_8c_a4c45f1bb571fe1f3c52c4f7b7d858f8d}{speed}} (char $\ast$cfgfile, int tics)
+\item 
+void \mbox{\hyperlink{darknet_8c_ac61af9d7b12e2d1ac431925614a3b819}{operations}} (char $\ast$cfgfile)
+\item 
+void \mbox{\hyperlink{darknet_8c_ab5a20c1c9997af0dec519e992b9400b9}{oneoff}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+void \mbox{\hyperlink{darknet_8c_a40cc02a08590681209ce323ff9e22042}{oneoff2}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile, int l)
+\item 
+void \mbox{\hyperlink{darknet_8c_a4663de4fa674346c82a366077969fd4b}{partial}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile, int max)
+\item 
+void \mbox{\hyperlink{darknet_8c_aba271489f2674fe3636f84c922754a00}{print\+\_\+weights}} (char $\ast$cfgfile, char $\ast$weightfile, int n)
+\item 
+void \mbox{\hyperlink{darknet_8c_a83ca859f15e1369a5e569df1a7486ebe}{rescale\+\_\+net}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+void \mbox{\hyperlink{darknet_8c_a2bc7b77a09e6cfe48e3511ff39990af4}{rgbgr\+\_\+net}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+void \mbox{\hyperlink{darknet_8c_a69898d896e1117395eae539fa27b4eee}{reset\+\_\+normalize\+\_\+net}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{darknet_8c_a71be3d176e3af144125a308286d80fdc}{normalize\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, int n)
+\item 
+void \mbox{\hyperlink{darknet_8c_a6a824943f20fa1121776a2a4fd6f1b03}{normalize\+\_\+net}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+void \mbox{\hyperlink{darknet_8c_ab619dcce0bf0acf8db3db0d86dfa83de}{statistics\+\_\+net}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{darknet_8c_a59310cd440b860b5f21bd6e3ffef65d0}{denormalize\+\_\+net}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+void \mbox{\hyperlink{darknet_8c_a4776cfe55bb021aae488942b3e144de9}{mkimg}} (char $\ast$cfgfile, char $\ast$weightfile, int h, int w, int num, char $\ast$prefix)
+\item 
+void \mbox{\hyperlink{darknet_8c_a2b74a3332b1c442875e900ee9254649c}{visualize}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+int \mbox{\hyperlink{darknet_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{darknet_8c_a7dfa7e733fd4cb2475215182772ba1bf}\label{darknet_8c_a7dfa7e733fd4cb2475215182772ba1bf}} 
+\index{darknet.c@{darknet.c}!average@{average}}
+\index{average@{average}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily void average (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a59310cd440b860b5f21bd6e3ffef65d0}\label{darknet_8c_a59310cd440b860b5f21bd6e3ffef65d0}} 
+\index{darknet.c@{darknet.c}!denormalize\_net@{denormalize\_net}}
+\index{denormalize\_net@{denormalize\_net}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{denormalize\_net()}{denormalize\_net()}}
+{\footnotesize\ttfamily void denormalize\+\_\+net (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 334 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{darknet_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{darknet.c@{darknet.c}!main@{main}}
+\index{main@{main}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 403 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a4776cfe55bb021aae488942b3e144de9}\label{darknet_8c_a4776cfe55bb021aae488942b3e144de9}} 
+\index{darknet.c@{darknet.c}!mkimg@{mkimg}}
+\index{mkimg@{mkimg}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{mkimg()}{mkimg()}}
+{\footnotesize\ttfamily void mkimg (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{h,  }\item[{int}]{w,  }\item[{int}]{num,  }\item[{char $\ast$}]{prefix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 368 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a71be3d176e3af144125a308286d80fdc}\label{darknet_8c_a71be3d176e3af144125a308286d80fdc}} 
+\index{darknet.c@{darknet.c}!normalize\_layer@{normalize\_layer}}
+\index{normalize\_layer@{normalize\_layer}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{normalize\_layer()}{normalize\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} normalize\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 265 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a6a824943f20fa1121776a2a4fd6f1b03}\label{darknet_8c_a6a824943f20fa1121776a2a4fd6f1b03}} 
+\index{darknet.c@{darknet.c}!normalize\_net@{normalize\_net}}
+\index{normalize\_net@{normalize\_net}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{normalize\_net()}{normalize\_net()}}
+{\footnotesize\ttfamily void normalize\+\_\+net (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 278 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a20d9a3501717aa63438aca398cc9878c}\label{darknet_8c_a20d9a3501717aa63438aca398cc9878c}} 
+\index{darknet.c@{darknet.c}!numops@{numops}}
+\index{numops@{numops}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{numops()}{numops()}}
+{\footnotesize\ttfamily long numops (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_ab5a20c1c9997af0dec519e992b9400b9}\label{darknet_8c_ab5a20c1c9997af0dec519e992b9400b9}} 
+\index{darknet.c@{darknet.c}!oneoff@{oneoff}}
+\index{oneoff@{oneoff}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{oneoff()}{oneoff()}}
+{\footnotesize\ttfamily void oneoff (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 145 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a40cc02a08590681209ce323ff9e22042}\label{darknet_8c_a40cc02a08590681209ce323ff9e22042}} 
+\index{darknet.c@{darknet.c}!oneoff2@{oneoff2}}
+\index{oneoff2@{oneoff2}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{oneoff2()}{oneoff2()}}
+{\footnotesize\ttfamily void oneoff2 (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_ac61af9d7b12e2d1ac431925614a3b819}\label{darknet_8c_ac61af9d7b12e2d1ac431925614a3b819}} 
+\index{darknet.c@{darknet.c}!operations@{operations}}
+\index{operations@{operations}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{operations()}{operations()}}
+{\footnotesize\ttfamily void operations (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a4663de4fa674346c82a366077969fd4b}\label{darknet_8c_a4663de4fa674346c82a366077969fd4b}} 
+\index{darknet.c@{darknet.c}!partial@{partial}}
+\index{partial@{partial}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{partial()}{partial()}}
+{\footnotesize\ttfamily void partial (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 184 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_aa8603edf5e9da49cdee89b35d6bc5b42}\label{darknet_8c_aa8603edf5e9da49cdee89b35d6bc5b42}} 
+\index{darknet.c@{darknet.c}!predict\_classifier@{predict\_classifier}}
+\index{predict\_classifier@{predict\_classifier}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{predict\_classifier()}{predict\_classifier()}}
+{\footnotesize\ttfamily void predict\+\_\+classifier (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{int}]{top }\end{DoxyParamCaption})}
+
+
+
+Definition at line 559 of file classifier.\+c.
+
+\mbox{\Hypertarget{darknet_8c_aba271489f2674fe3636f84c922754a00}\label{darknet_8c_aba271489f2674fe3636f84c922754a00}} 
+\index{darknet.c@{darknet.c}!print\_weights@{print\_weights}}
+\index{print\_weights@{print\_weights}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{print\_weights()}{print\_weights()}}
+{\footnotesize\ttfamily void print\+\_\+weights (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 191 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a83ca859f15e1369a5e569df1a7486ebe}\label{darknet_8c_a83ca859f15e1369a5e569df1a7486ebe}} 
+\index{darknet.c@{darknet.c}!rescale\_net@{rescale\_net}}
+\index{rescale\_net@{rescale\_net}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{rescale\_net()}{rescale\_net()}}
+{\footnotesize\ttfamily void rescale\+\_\+net (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a69898d896e1117395eae539fa27b4eee}\label{darknet_8c_a69898d896e1117395eae539fa27b4eee}} 
+\index{darknet.c@{darknet.c}!reset\_normalize\_net@{reset\_normalize\_net}}
+\index{reset\_normalize\_net@{reset\_normalize\_net}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{reset\_normalize\_net()}{reset\_normalize\_net()}}
+{\footnotesize\ttfamily void reset\+\_\+normalize\+\_\+net (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 240 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a2bc7b77a09e6cfe48e3511ff39990af4}\label{darknet_8c_a2bc7b77a09e6cfe48e3511ff39990af4}} 
+\index{darknet.c@{darknet.c}!rgbgr\_net@{rgbgr\_net}}
+\index{rgbgr\_net@{rgbgr\_net}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{rgbgr\_net()}{rgbgr\_net()}}
+{\footnotesize\ttfamily void rgbgr\+\_\+net (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 225 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a4c4bbc70a093ad78def4e127f35bc626}\label{darknet_8c_a4c4bbc70a093ad78def4e127f35bc626}} 
+\index{darknet.c@{darknet.c}!run\_art@{run\_art}}
+\index{run\_art@{run\_art}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_art()}{run\_art()}}
+{\footnotesize\ttfamily void run\+\_\+art (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file art.\+c.
+
+\mbox{\Hypertarget{darknet_8c_add5178ee1c90068a3229f6ee5349dfcc}\label{darknet_8c_add5178ee1c90068a3229f6ee5349dfcc}} 
+\index{darknet.c@{darknet.c}!run\_captcha@{run\_captcha}}
+\index{run\_captcha@{run\_captcha}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_captcha()}{run\_captcha()}}
+{\footnotesize\ttfamily void run\+\_\+captcha (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 335 of file captcha.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a7fd5ff39b30355662b36d8f1c3efae78}\label{darknet_8c_a7fd5ff39b30355662b36d8f1c3efae78}} 
+\index{darknet.c@{darknet.c}!run\_char\_rnn@{run\_char\_rnn}}
+\index{run\_char\_rnn@{run\_char\_rnn}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_char\_rnn()}{run\_char\_rnn()}}
+{\footnotesize\ttfamily void run\+\_\+char\+\_\+rnn (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 519 of file rnn.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a964d88fc4dfa875f6de21066f7171d11}\label{darknet_8c_a964d88fc4dfa875f6de21066f7171d11}} 
+\index{darknet.c@{darknet.c}!run\_cifar@{run\_cifar}}
+\index{run\_cifar@{run\_cifar}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_cifar()}{run\_cifar()}}
+{\footnotesize\ttfamily void run\+\_\+cifar (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 232 of file cifar.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a08cb29ba2c4674431352eff4e6274b56}\label{darknet_8c_a08cb29ba2c4674431352eff4e6274b56}} 
+\index{darknet.c@{darknet.c}!run\_classifier@{run\_classifier}}
+\index{run\_classifier@{run\_classifier}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_classifier()}{run\_classifier()}}
+{\footnotesize\ttfamily void run\+\_\+classifier (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1054 of file classifier.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a9a2e98f86cd2b185650f4ec039d38b03}\label{darknet_8c_a9a2e98f86cd2b185650f4ec039d38b03}} 
+\index{darknet.c@{darknet.c}!run\_coco@{run\_coco}}
+\index{run\_coco@{run\_coco}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_coco()}{run\_coco()}}
+{\footnotesize\ttfamily void run\+\_\+coco (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 340 of file coco.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a677c1747fd7a58c7f7da3314af5d6120}\label{darknet_8c_a677c1747fd7a58c7f7da3314af5d6120}} 
+\index{darknet.c@{darknet.c}!run\_detector@{run\_detector}}
+\index{run\_detector@{run\_detector}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_detector()}{run\_detector()}}
+{\footnotesize\ttfamily void run\+\_\+detector (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 794 of file detector.\+c.
+
+\mbox{\Hypertarget{darknet_8c_acbc5b7a174f506f13ab6d0fca1faa102}\label{darknet_8c_acbc5b7a174f506f13ab6d0fca1faa102}} 
+\index{darknet.c@{darknet.c}!run\_go@{run\_go}}
+\index{run\_go@{run\_go}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_go()}{run\_go()}}
+{\footnotesize\ttfamily void run\+\_\+go (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1320 of file go.\+c.
+
+\mbox{\Hypertarget{darknet_8c_ab48437873371bf1e3ff2b7714109f178}\label{darknet_8c_ab48437873371bf1e3ff2b7714109f178}} 
+\index{darknet.c@{darknet.c}!run\_lsd@{run\_lsd}}
+\index{run\_lsd@{run\_lsd}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_lsd()}{run\_lsd()}}
+{\footnotesize\ttfamily void run\+\_\+lsd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1360 of file lsd.\+c.
+
+\mbox{\Hypertarget{darknet_8c_aaefb0ed0f5bd621bb9e131e2bc1b4852}\label{darknet_8c_aaefb0ed0f5bd621bb9e131e2bc1b4852}} 
+\index{darknet.c@{darknet.c}!run\_nightmare@{run\_nightmare}}
+\index{run\_nightmare@{run\_nightmare}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_nightmare()}{run\_nightmare()}}
+{\footnotesize\ttfamily void run\+\_\+nightmare (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 288 of file nightmare.\+c.
+
+\mbox{\Hypertarget{darknet_8c_aa80afdae21d8e85cfa1ead4aea5e4467}\label{darknet_8c_aa80afdae21d8e85cfa1ead4aea5e4467}} 
+\index{darknet.c@{darknet.c}!run\_regressor@{run\_regressor}}
+\index{run\_regressor@{run\_regressor}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_regressor()}{run\_regressor()}}
+{\footnotesize\ttfamily void run\+\_\+regressor (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 209 of file regressor.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a1cc3931b6dae3aabf581ef833bbc75f0}\label{darknet_8c_a1cc3931b6dae3aabf581ef833bbc75f0}} 
+\index{darknet.c@{darknet.c}!run\_segmenter@{run\_segmenter}}
+\index{run\_segmenter@{run\_segmenter}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_segmenter()}{run\_segmenter()}}
+{\footnotesize\ttfamily void run\+\_\+segmenter (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 230 of file segmenter.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a4bc1230a2d77e86644c4719157fc69cc}\label{darknet_8c_a4bc1230a2d77e86644c4719157fc69cc}} 
+\index{darknet.c@{darknet.c}!run\_super@{run\_super}}
+\index{run\_super@{run\_super}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_super()}{run\_super()}}
+{\footnotesize\ttfamily void run\+\_\+super (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 104 of file super.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a695072073d4da637e4728d2527422292}\label{darknet_8c_a695072073d4da637e4728d2527422292}} 
+\index{darknet.c@{darknet.c}!run\_tag@{run\_tag}}
+\index{run\_tag@{run\_tag}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_tag()}{run\_tag()}}
+{\footnotesize\ttfamily void run\+\_\+tag (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file tag.\+c.
+
+\mbox{\Hypertarget{darknet_8c_ae2af4814947b728e7cfafec8c446050e}\label{darknet_8c_ae2af4814947b728e7cfafec8c446050e}} 
+\index{darknet.c@{darknet.c}!run\_yolo@{run\_yolo}}
+\index{run\_yolo@{run\_yolo}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{run\_yolo()}{run\_yolo()}}
+{\footnotesize\ttfamily void run\+\_\+yolo (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 311 of file yolo.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a4c45f1bb571fe1f3c52c4f7b7d858f8d}\label{darknet_8c_a4c45f1bb571fe1f3c52c4f7b7d858f8d}} 
+\index{darknet.c@{darknet.c}!speed@{speed}}
+\index{speed@{speed}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{speed()}{speed()}}
+{\footnotesize\ttfamily void speed (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{int}]{tics }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_ab619dcce0bf0acf8db3db0d86dfa83de}\label{darknet_8c_ab619dcce0bf0acf8db3db0d86dfa83de}} 
+\index{darknet.c@{darknet.c}!statistics\_net@{statistics\_net}}
+\index{statistics\_net@{statistics\_net}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{statistics\_net()}{statistics\_net()}}
+{\footnotesize\ttfamily void statistics\+\_\+net (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 304 of file darknet.\+c.
+
+\mbox{\Hypertarget{darknet_8c_ad29ded4bbd1d823ecf9a61135e0710cb}\label{darknet_8c_ad29ded4bbd1d823ecf9a61135e0710cb}} 
+\index{darknet.c@{darknet.c}!test\_detector@{test\_detector}}
+\index{test\_detector@{test\_detector}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{test\_detector()}{test\_detector()}}
+{\footnotesize\ttfamily void test\+\_\+detector (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{float}]{thresh,  }\item[{float}]{hier\+\_\+thresh,  }\item[{char $\ast$}]{outfile,  }\item[{int}]{fullscreen }\end{DoxyParamCaption})}
+
+
+
+Definition at line 562 of file detector.\+c.
+
+\mbox{\Hypertarget{darknet_8c_a2b74a3332b1c442875e900ee9254649c}\label{darknet_8c_a2b74a3332b1c442875e900ee9254649c}} 
+\index{darknet.c@{darknet.c}!visualize@{visualize}}
+\index{visualize@{visualize}!darknet.c@{darknet.c}}
+\subsubsection{\texorpdfstring{visualize()}{visualize()}}
+{\footnotesize\ttfamily void visualize (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 394 of file darknet.\+c.
+

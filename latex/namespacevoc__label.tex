@@ -1,0 +1,98 @@
+\hypertarget{namespacevoc__label}{}\section{voc\+\_\+label Namespace Reference}
+\label{namespacevoc__label}\index{voc\_label@{voc\_label}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacevoc__label_a6acb30b6d6bbb5769eac3381abeab0aa}{convert}} (size, \mbox{\hyperlink{structbox}{box}})
+\item 
+def \mbox{\hyperlink{namespacevoc__label_a88b8266c71d2efb8bcdbb3a033f210e6}{convert\+\_\+annotation}} (year, image\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacevoc__label_a41c13500b772a8e333989ee599cb5e59}{sets}} = \mbox{[}(\textquotesingle{}2012\textquotesingle{}, \textquotesingle{}train\textquotesingle{}), (\textquotesingle{}2012\textquotesingle{}, \textquotesingle{}val\textquotesingle{}), (\textquotesingle{}2007\textquotesingle{}, \textquotesingle{}train\textquotesingle{}), (\textquotesingle{}2007\textquotesingle{}, \textquotesingle{}val\textquotesingle{}), (\textquotesingle{}2007\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{classtest}{test}}\textquotesingle{})\mbox{]}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacevoc__label_a0dadf92eb37e0de693533dbafa6223d7}{classes}} = \mbox{[}\char`\"{}aeroplane\char`\"{}, \char`\"{}bicycle\char`\"{}, \char`\"{}bird\char`\"{}, \char`\"{}boat\char`\"{}, \char`\"{}bottle\char`\"{}, \char`\"{}bus\char`\"{}, \char`\"{}car\char`\"{}, \char`\"{}cat\char`\"{}, \char`\"{}chair\char`\"{}, \char`\"{}cow\char`\"{}, \char`\"{}diningtable\char`\"{}, \char`\"{}dog\char`\"{}, \char`\"{}horse\char`\"{}, \char`\"{}motorbike\char`\"{}, \char`\"{}person\char`\"{}, \char`\"{}pottedplant\char`\"{}, \char`\"{}sheep\char`\"{}, \char`\"{}sofa\char`\"{}, \char`\"{}train\char`\"{}, \char`\"{}tvmonitor\char`\"{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacevoc__label_aae3f517979bd13e02baba600c32fa954}{wd}} = getcwd()
+\item 
+\mbox{\hyperlink{namespacevoc__label_a57a526ed1c226d30a484d56ca3fcda07}{image\+\_\+ids}} = open(\textquotesingle{}V\+O\+Cdevkit/V\+OC\%s/Image\+Sets/Main/\%s.\+txt\textquotesingle{}\%(year, image\+\_\+set)).read().\mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a76299b86e144434260dcab80323ec9da}{strip}}().split()
+\item 
+\mbox{\hyperlink{namespacevoc__label_a6842cb03274520125ec688c9a076c3a6}{list\+\_\+file}} = open(\textquotesingle{}\%s\+\_\+\%s.\+txt\textquotesingle{}\%(year, image\+\_\+set), \textquotesingle{}w\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacevoc__label_a6acb30b6d6bbb5769eac3381abeab0aa}\label{namespacevoc__label_a6acb30b6d6bbb5769eac3381abeab0aa}} 
+\index{voc\_label@{voc\_label}!convert@{convert}}
+\index{convert@{convert}!voc\_label@{voc\_label}}
+\subsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily def voc\+\_\+label.\+convert (\begin{DoxyParamCaption}\item[{}]{size,  }\item[{}]{box }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file voc\+\_\+label.\+py.
+
+\mbox{\Hypertarget{namespacevoc__label_a88b8266c71d2efb8bcdbb3a033f210e6}\label{namespacevoc__label_a88b8266c71d2efb8bcdbb3a033f210e6}} 
+\index{voc\_label@{voc\_label}!convert\_annotation@{convert\_annotation}}
+\index{convert\_annotation@{convert\_annotation}!voc\_label@{voc\_label}}
+\subsubsection{\texorpdfstring{convert\_annotation()}{convert\_annotation()}}
+{\footnotesize\ttfamily def voc\+\_\+label.\+convert\+\_\+annotation (\begin{DoxyParamCaption}\item[{}]{year,  }\item[{}]{image\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file voc\+\_\+label.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacevoc__label_a0dadf92eb37e0de693533dbafa6223d7}\label{namespacevoc__label_a0dadf92eb37e0de693533dbafa6223d7}} 
+\index{voc\_label@{voc\_label}!classes@{classes}}
+\index{classes@{classes}!voc\_label@{voc\_label}}
+\subsubsection{\texorpdfstring{classes}{classes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} voc\+\_\+label.\+classes = \mbox{[}\char`\"{}aeroplane\char`\"{}, \char`\"{}bicycle\char`\"{}, \char`\"{}bird\char`\"{}, \char`\"{}boat\char`\"{}, \char`\"{}bottle\char`\"{}, \char`\"{}bus\char`\"{}, \char`\"{}car\char`\"{}, \char`\"{}cat\char`\"{}, \char`\"{}chair\char`\"{}, \char`\"{}cow\char`\"{}, \char`\"{}diningtable\char`\"{}, \char`\"{}dog\char`\"{}, \char`\"{}horse\char`\"{}, \char`\"{}motorbike\char`\"{}, \char`\"{}person\char`\"{}, \char`\"{}pottedplant\char`\"{}, \char`\"{}sheep\char`\"{}, \char`\"{}sofa\char`\"{}, \char`\"{}train\char`\"{}, \char`\"{}tvmonitor\char`\"{}\mbox{]}}
+
+
+
+Definition at line 9 of file voc\+\_\+label.\+py.
+
+\mbox{\Hypertarget{namespacevoc__label_a57a526ed1c226d30a484d56ca3fcda07}\label{namespacevoc__label_a57a526ed1c226d30a484d56ca3fcda07}} 
+\index{voc\_label@{voc\_label}!image\_ids@{image\_ids}}
+\index{image\_ids@{image\_ids}!voc\_label@{voc\_label}}
+\subsubsection{\texorpdfstring{image\_ids}{image\_ids}}
+{\footnotesize\ttfamily voc\+\_\+label.\+image\+\_\+ids = open(\textquotesingle{}V\+O\+Cdevkit/V\+OC\%s/Image\+Sets/Main/\%s.\+txt\textquotesingle{}\%(year, image\+\_\+set)).read().\mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a76299b86e144434260dcab80323ec9da}{strip}}().split()}
+
+
+
+Definition at line 50 of file voc\+\_\+label.\+py.
+
+\mbox{\Hypertarget{namespacevoc__label_a6842cb03274520125ec688c9a076c3a6}\label{namespacevoc__label_a6842cb03274520125ec688c9a076c3a6}} 
+\index{voc\_label@{voc\_label}!list\_file@{list\_file}}
+\index{list\_file@{list\_file}!voc\_label@{voc\_label}}
+\subsubsection{\texorpdfstring{list\_file}{list\_file}}
+{\footnotesize\ttfamily voc\+\_\+label.\+list\+\_\+file = open(\textquotesingle{}\%s\+\_\+\%s.\+txt\textquotesingle{}\%(year, image\+\_\+set), \textquotesingle{}w\textquotesingle{})}
+
+
+
+Definition at line 51 of file voc\+\_\+label.\+py.
+
+\mbox{\Hypertarget{namespacevoc__label_a41c13500b772a8e333989ee599cb5e59}\label{namespacevoc__label_a41c13500b772a8e333989ee599cb5e59}} 
+\index{voc\_label@{voc\_label}!sets@{sets}}
+\index{sets@{sets}!voc\_label@{voc\_label}}
+\subsubsection{\texorpdfstring{sets}{sets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} voc\+\_\+label.\+sets = \mbox{[}(\textquotesingle{}2012\textquotesingle{}, \textquotesingle{}train\textquotesingle{}), (\textquotesingle{}2012\textquotesingle{}, \textquotesingle{}val\textquotesingle{}), (\textquotesingle{}2007\textquotesingle{}, \textquotesingle{}train\textquotesingle{}), (\textquotesingle{}2007\textquotesingle{}, \textquotesingle{}val\textquotesingle{}), (\textquotesingle{}2007\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{classtest}{test}}\textquotesingle{})\mbox{]}}
+
+
+
+Definition at line 7 of file voc\+\_\+label.\+py.
+
+\mbox{\Hypertarget{namespacevoc__label_aae3f517979bd13e02baba600c32fa954}\label{namespacevoc__label_aae3f517979bd13e02baba600c32fa954}} 
+\index{voc\_label@{voc\_label}!wd@{wd}}
+\index{wd@{wd}!voc\_label@{voc\_label}}
+\subsubsection{\texorpdfstring{wd}{wd}}
+{\footnotesize\ttfamily voc\+\_\+label.\+wd = getcwd()}
+
+
+
+Definition at line 45 of file voc\+\_\+label.\+py.
+

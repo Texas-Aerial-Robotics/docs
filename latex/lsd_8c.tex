@@ -1,0 +1,130 @@
+\hypertarget{lsd_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/lsd.c File Reference}
+\label{lsd_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/lsd.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/lsd.c}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lsd_8c_ad2cfb4b652506776235b68650521c16f}{slerp}} (float $\ast$start, float $\ast$end, float s, int n, float $\ast$out)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{lsd_8c_a1a7f26d23b9c97c8a32146d6d71523c0}{random\+\_\+unit\+\_\+vector\+\_\+image}} (int w, int h, int c)
+\item 
+void \mbox{\hyperlink{lsd_8c_aa9903a9091b07ae461ffc13ac2905afe}{inter\+\_\+dcgan}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{lsd_8c_a0ff5b76eeaf6a6f3ea748d9e7d02de52}{test\+\_\+dcgan}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{lsd_8c_a9a3d47e0d988d580b2e1092e0c869cf1}{set\+\_\+network\+\_\+alpha\+\_\+beta}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float alpha, float beta)
+\item 
+void \mbox{\hyperlink{lsd_8c_a4c217539bca821fb9cfbb670bd65345b}{train\+\_\+prog}} (char $\ast$cfg, char $\ast$weight, char $\ast$acfg, char $\ast$aweight, int clear, int display, char $\ast$train\+\_\+images, int maxbatch)
+\item 
+void \mbox{\hyperlink{lsd_8c_ab11297cfffd86d2baf9fa0f7ba55e875}{train\+\_\+dcgan}} (char $\ast$cfg, char $\ast$weight, char $\ast$acfg, char $\ast$aweight, int clear, int display, char $\ast$train\+\_\+images, int maxbatch)
+\item 
+void \mbox{\hyperlink{lsd_8c_a2ae443574ec61dc746fa85f65d6d1cf2}{train\+\_\+colorizer}} (char $\ast$cfg, char $\ast$weight, char $\ast$acfg, char $\ast$aweight, int clear, int display)
+\item 
+void \mbox{\hyperlink{lsd_8c_a0300833ac73c235127ea19da0e03ad95}{test\+\_\+lsd}} (char $\ast$cfg, char $\ast$weights, char $\ast$filename, int gray)
+\item 
+void \mbox{\hyperlink{lsd_8c_ab48437873371bf1e3ff2b7714109f178}{run\+\_\+lsd}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lsd_8c_aa9903a9091b07ae461ffc13ac2905afe}\label{lsd_8c_aa9903a9091b07ae461ffc13ac2905afe}} 
+\index{lsd.c@{lsd.c}!inter\_dcgan@{inter\_dcgan}}
+\index{inter\_dcgan@{inter\_dcgan}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{inter\_dcgan()}{inter\_dcgan()}}
+{\footnotesize\ttfamily void inter\+\_\+dcgan (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 411 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_a1a7f26d23b9c97c8a32146d6d71523c0}\label{lsd_8c_a1a7f26d23b9c97c8a32146d6d71523c0}} 
+\index{lsd.c@{lsd.c}!random\_unit\_vector\_image@{random\_unit\_vector\_image}}
+\index{random\_unit\_vector\_image@{random\_unit\_vector\_image}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{random\_unit\_vector\_image()}{random\_unit\_vector\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} random\+\_\+unit\+\_\+vector\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 399 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_ab48437873371bf1e3ff2b7714109f178}\label{lsd_8c_ab48437873371bf1e3ff2b7714109f178}} 
+\index{lsd.c@{lsd.c}!run\_lsd@{run\_lsd}}
+\index{run\_lsd@{run\_lsd}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{run\_lsd()}{run\_lsd()}}
+{\footnotesize\ttfamily void run\+\_\+lsd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1360 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_a9a3d47e0d988d580b2e1092e0c869cf1}\label{lsd_8c_a9a3d47e0d988d580b2e1092e0c869cf1}} 
+\index{lsd.c@{lsd.c}!set\_network\_alpha\_beta@{set\_network\_alpha\_beta}}
+\index{set\_network\_alpha\_beta@{set\_network\_alpha\_beta}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{set\_network\_alpha\_beta()}{set\_network\_alpha\_beta()}}
+{\footnotesize\ttfamily void set\+\_\+network\+\_\+alpha\+\_\+beta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float}]{alpha,  }\item[{float}]{beta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 512 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_ad2cfb4b652506776235b68650521c16f}\label{lsd_8c_ad2cfb4b652506776235b68650521c16f}} 
+\index{lsd.c@{lsd.c}!slerp@{slerp}}
+\index{slerp@{slerp}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{slerp()}{slerp()}}
+{\footnotesize\ttfamily void slerp (\begin{DoxyParamCaption}\item[{float $\ast$}]{start,  }\item[{float $\ast$}]{end,  }\item[{float}]{s,  }\item[{int}]{n,  }\item[{float $\ast$}]{out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 387 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_a0ff5b76eeaf6a6f3ea748d9e7d02de52}\label{lsd_8c_a0ff5b76eeaf6a6f3ea748d9e7d02de52}} 
+\index{lsd.c@{lsd.c}!test\_dcgan@{test\_dcgan}}
+\index{test\_dcgan@{test\_dcgan}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{test\_dcgan()}{test\_dcgan()}}
+{\footnotesize\ttfamily void test\+\_\+dcgan (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 473 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_a0300833ac73c235127ea19da0e03ad95}\label{lsd_8c_a0300833ac73c235127ea19da0e03ad95}} 
+\index{lsd.c@{lsd.c}!test\_lsd@{test\_lsd}}
+\index{test\_lsd@{test\_lsd}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{test\_lsd()}{test\_lsd()}}
+{\footnotesize\ttfamily void test\+\_\+lsd (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights,  }\item[{char $\ast$}]{filename,  }\item[{int}]{gray }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1304 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_a2ae443574ec61dc746fa85f65d6d1cf2}\label{lsd_8c_a2ae443574ec61dc746fa85f65d6d1cf2}} 
+\index{lsd.c@{lsd.c}!train\_colorizer@{train\_colorizer}}
+\index{train\_colorizer@{train\_colorizer}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{train\_colorizer()}{train\_colorizer()}}
+{\footnotesize\ttfamily void train\+\_\+colorizer (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weight,  }\item[{char $\ast$}]{acfg,  }\item[{char $\ast$}]{aweight,  }\item[{int}]{clear,  }\item[{int}]{display }\end{DoxyParamCaption})}
+
+
+
+Definition at line 875 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_ab11297cfffd86d2baf9fa0f7ba55e875}\label{lsd_8c_ab11297cfffd86d2baf9fa0f7ba55e875}} 
+\index{lsd.c@{lsd.c}!train\_dcgan@{train\_dcgan}}
+\index{train\_dcgan@{train\_dcgan}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{train\_dcgan()}{train\_dcgan()}}
+{\footnotesize\ttfamily void train\+\_\+dcgan (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weight,  }\item[{char $\ast$}]{acfg,  }\item[{char $\ast$}]{aweight,  }\item[{int}]{clear,  }\item[{int}]{display,  }\item[{char $\ast$}]{train\+\_\+images,  }\item[{int}]{maxbatch }\end{DoxyParamCaption})}
+
+
+
+Definition at line 680 of file lsd.\+c.
+
+\mbox{\Hypertarget{lsd_8c_a4c217539bca821fb9cfbb670bd65345b}\label{lsd_8c_a4c217539bca821fb9cfbb670bd65345b}} 
+\index{lsd.c@{lsd.c}!train\_prog@{train\_prog}}
+\index{train\_prog@{train\_prog}!lsd.c@{lsd.c}}
+\subsubsection{\texorpdfstring{train\_prog()}{train\_prog()}}
+{\footnotesize\ttfamily void train\+\_\+prog (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weight,  }\item[{char $\ast$}]{acfg,  }\item[{char $\ast$}]{aweight,  }\item[{int}]{clear,  }\item[{int}]{display,  }\item[{char $\ast$}]{train\+\_\+images,  }\item[{int}]{maxbatch }\end{DoxyParamCaption})}
+
+
+
+Definition at line 523 of file lsd.\+c.
+

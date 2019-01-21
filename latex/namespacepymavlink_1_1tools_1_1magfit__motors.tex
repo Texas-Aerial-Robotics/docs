@@ -1,0 +1,251 @@
+\hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors}{}\section{pymavlink.\+tools.\+magfit\+\_\+motors Namespace Reference}
+\label{namespacepymavlink_1_1tools_1_1magfit__motors}\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a976924d27c33f71974f3d7c70674cf82}{noise}} ()
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a6cf3772c22bd040df003057b8e5ae68d}{select\+\_\+data}} (\mbox{\hyperlink{structdata}{data}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a7251ec199a4f359bc17d4a45827cfd58}{radius}} (\mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, offsets, motor\+\_\+ofs)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_aa6e80f814cf0800c2263a28e37fc849f}{radius\+\_\+cmp}} (a, b, offsets, motor\+\_\+ofs)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a37869b2a7af3e558569774e7940444e2}{sphere\+\_\+error}} (\mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}}, \mbox{\hyperlink{structdata}{data}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a894c345a3e835d40e605b38f7cd62db7}{fit\+\_\+data}} (\mbox{\hyperlink{structdata}{data}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a77e8faeadc7b37710f2d336d744e6492}{magfit}} (logfile)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_af14464509f99203a4b7a9d8d921e9e44}{parser}} = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a98281994246dadaf6c0650facb414254}{dest}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a913c48c5ca0e3ab4afe744743e5d8a97}{action}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a26555be2425d9499fca7470a3e8b61b9}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_afbccfb7c9d8d3f32508f8ddc87a3b7c0}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a799d3ced2a839245c04875d15154007c}{None}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a02f44d9e6b0605a85106254aa809f414}{type}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_adacd10b5a5e5dcbda0ac78a5331dd855}{float}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a57935f8392a1c7e85ce53789def3d3f3}{metavar}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a2ac8e4039cfbd11b92b7a46d3384ebe4}{nargs}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a7700e9fef248605dc567389a42c901a3}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_adacd10b5a5e5dcbda0ac78a5331dd855}{float}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_a8290263a984c6842655820ea9f2437e6}{total}} = 0.\+0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}fit best estimate of magnetometer offsets, trying to take into account motor interference
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a894c345a3e835d40e605b38f7cd62db7}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a894c345a3e835d40e605b38f7cd62db7}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!fit\_data@{fit\_data}}
+\index{fit\_data@{fit\_data}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{fit\_data()}{fit\_data()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+motors.\+fit\+\_\+data (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a77e8faeadc7b37710f2d336d744e6492}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a77e8faeadc7b37710f2d336d744e6492}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!magfit@{magfit}}
+\index{magfit@{magfit}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{magfit()}{magfit()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+motors.\+magfit (\begin{DoxyParamCaption}\item[{}]{logfile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}find best magnetometer offset fit to a log file\end{DoxyVerb}
+ 
+
+Definition at line 78 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a976924d27c33f71974f3d7c70674cf82}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a976924d27c33f71974f3d7c70674cf82}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!noise@{noise}}
+\index{noise@{noise}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{noise()}{noise()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+motors.\+noise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}a noise vector\end{DoxyVerb}
+ 
+
+Definition at line 22 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a7251ec199a4f359bc17d4a45827cfd58}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a7251ec199a4f359bc17d4a45827cfd58}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!radius@{radius}}
+\index{radius@{radius}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{radius()}{radius()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+motors.\+radius (\begin{DoxyParamCaption}\item[{}]{d,  }\item[{}]{offsets,  }\item[{}]{motor\+\_\+ofs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return radius give data point and offsets\end{DoxyVerb}
+ 
+
+Definition at line 44 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_aa6e80f814cf0800c2263a28e37fc849f}\label{namespacepymavlink_1_1tools_1_1magfit__motors_aa6e80f814cf0800c2263a28e37fc849f}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!radius\_cmp@{radius\_cmp}}
+\index{radius\_cmp@{radius\_cmp}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{radius\_cmp()}{radius\_cmp()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+motors.\+radius\+\_\+cmp (\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{offsets,  }\item[{}]{motor\+\_\+ofs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return radius give data point and offsets\end{DoxyVerb}
+ 
+
+Definition at line 49 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a6cf3772c22bd040df003057b8e5ae68d}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a6cf3772c22bd040df003057b8e5ae68d}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!select\_data@{select\_data}}
+\index{select\_data@{select\_data}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{select\_data()}{select\_data()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+motors.\+select\+\_\+data (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a37869b2a7af3e558569774e7940444e2}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a37869b2a7af3e558569774e7940444e2}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!sphere\_error@{sphere\_error}}
+\index{sphere\_error@{sphere\_error}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{sphere\_error()}{sphere\_error()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+motors.\+sphere\+\_\+error (\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file magfit\+\_\+motors.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a913c48c5ca0e3ab4afe744743e5d8a97}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a913c48c5ca0e3ab4afe744743e5d8a97}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!action@{action}}
+\index{action@{action}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+action}
+
+
+
+Definition at line 11 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a7700e9fef248605dc567389a42c901a3}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a7700e9fef248605dc567389a42c901a3}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!args@{args}}
+\index{args@{args}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 16 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_afbccfb7c9d8d3f32508f8ddc87a3b7c0}\label{namespacepymavlink_1_1tools_1_1magfit__motors_afbccfb7c9d8d3f32508f8ddc87a3b7c0}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!default@{default}}
+\index{default@{default}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+default}
+
+
+
+Definition at line 12 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a98281994246dadaf6c0650facb414254}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a98281994246dadaf6c0650facb414254}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!dest@{dest}}
+\index{dest@{dest}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{dest}{dest}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+dest}
+
+
+
+Definition at line 11 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_adacd10b5a5e5dcbda0ac78a5331dd855}\label{namespacepymavlink_1_1tools_1_1magfit__motors_adacd10b5a5e5dcbda0ac78a5331dd855}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!float@{float}}
+\index{float@{float}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{float}{float}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+float}
+
+
+
+Definition at line 13 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a26555be2425d9499fca7470a3e8b61b9}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a26555be2425d9499fca7470a3e8b61b9}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!help@{help}}
+\index{help@{help}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+help}
+
+
+
+Definition at line 11 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a57935f8392a1c7e85ce53789def3d3f3}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a57935f8392a1c7e85ce53789def3d3f3}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!metavar@{metavar}}
+\index{metavar@{metavar}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{metavar}{metavar}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+metavar}
+
+
+
+Definition at line 14 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a2ac8e4039cfbd11b92b7a46d3384ebe4}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a2ac8e4039cfbd11b92b7a46d3384ebe4}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!nargs@{nargs}}
+\index{nargs@{nargs}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+nargs}
+
+
+
+Definition at line 14 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a799d3ced2a839245c04875d15154007c}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a799d3ced2a839245c04875d15154007c}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!None@{None}}
+\index{None@{None}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{None}{None}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+None}
+
+
+
+Definition at line 12 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_af14464509f99203a4b7a9d8d921e9e44}\label{namespacepymavlink_1_1tools_1_1magfit__motors_af14464509f99203a4b7a9d8d921e9e44}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!parser@{parser}}
+\index{parser@{parser}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+parser = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)}
+
+
+
+Definition at line 10 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a8290263a984c6842655820ea9f2437e6}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a8290263a984c6842655820ea9f2437e6}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!total@{total}}
+\index{total@{total}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__motors_adacd10b5a5e5dcbda0ac78a5331dd855}{float}} pymavlink.\+tools.\+magfit\+\_\+motors.\+total = 0.\+0}
+
+
+
+Definition at line 146 of file magfit\+\_\+motors.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__motors_a02f44d9e6b0605a85106254aa809f414}\label{namespacepymavlink_1_1tools_1_1magfit__motors_a02f44d9e6b0605a85106254aa809f414}} 
+\index{pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}!type@{type}}
+\index{type@{type}!pymavlink.tools.magfit\_motors@{pymavlink.tools.magfit\_motors}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+motors.\+type}
+
+
+
+Definition at line 13 of file magfit\+\_\+motors.\+py.
+

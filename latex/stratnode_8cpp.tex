@@ -1,0 +1,261 @@
+\hypertarget{stratnode_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Strat\+Node/src/stratnode.cpp File Reference}
+\label{stratnode_8cpp}\index{/home/eric/catkin\_ws/src/StratNode/src/stratnode.cpp@{/home/eric/catkin\_ws/src/StratNode/src/stratnode.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Float64.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Poses.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Pose.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}matplotlibcpp.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structslope}{slope}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{stratnode_8cpp_a7a00feeb1581fbd831b45d299463934a}{enu\+\_\+2\+\_\+gym}} (nav\+\_\+msgs\+::\+Odometry current\+\_\+pose\+\_\+enu)
+\item 
+void \mbox{\hyperlink{stratnode_8cpp_a04a588f784580f203e111c812785a598}{gym\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{stratnode_8cpp_afa0f9061a6152b26289dd2c93b295847}{pose\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{stratnode_8cpp_ac93df82c0a0391861bbdf58610ebe000}{roomba\+\_\+cb}} (const transformations\+\_\+ros\+::roomba\+Poses\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{stratnode_8cpp_a34b1f24f6af84f91adb60cfd5786c7e4}{time\+Check}} ()
+\item 
+void \mbox{\hyperlink{stratnode_8cpp_a37b35278ecdeb458bfd604ce1aec92b1}{target}} ()
+\item 
+int \mbox{\hyperlink{stratnode_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{stratnode_8cpp_abb37d7ecd0737887dce058897bfa7b0b}{M\+A\+X\+\_\+\+P\+O\+I\+N\+TS}} = 10
+\item 
+int \mbox{\hyperlink{stratnode_8cpp_a55fc502015142062735ebfd18c825354}{marker}} =0
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{stratnode_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}{waypoint}}
+\item 
+transformations\+\_\+ros\+::roomba\+Poses \mbox{\hyperlink{stratnode_8cpp_ac0874ef8b36e5e415a5fdb850ff472f6}{roomba\+Positions}}
+\item 
+vector$<$ deque$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ $>$ \mbox{\hyperlink{stratnode_8cpp_af12f8df1f15383367d224bff8dff4252}{decks}}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{stratnode_8cpp_ab9674253569259608088097e713c6905}{current\+\_\+pose}}
+\item 
+std\+\_\+msgs\+::\+Float64 \mbox{\hyperlink{stratnode_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}{gym\+Offset}}
+\item 
+std\+::stringstream \mbox{\hyperlink{stratnode_8cpp_a92211863a9a3dafb14ae33244777a229}{ss\+\_\+mode}}
+\item 
+std\+\_\+msgs\+::\+String \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}
+\item 
+double \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}
+\item 
+int \mbox{\hyperlink{stratnode_8cpp_a3daa5985cb85baab76287f95f11adf11}{M\+O\+DE}} = 0
+\item 
+int \mbox{\hyperlink{stratnode_8cpp_aec7a168b21df4350c2e09c55e1e84885}{T\+A\+R\+G\+E\+TQ}} = 100
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{stratnode_8cpp_a7a00feeb1581fbd831b45d299463934a}\label{stratnode_8cpp_a7a00feeb1581fbd831b45d299463934a}} 
+\index{stratnode.cpp@{stratnode.cpp}!enu\_2\_gym@{enu\_2\_gym}}
+\index{enu\_2\_gym@{enu\_2\_gym}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{enu\_2\_gym()}{enu\_2\_gym()}}
+{\footnotesize\ttfamily void enu\+\_\+2\+\_\+gym (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Odometry}]{current\+\_\+pose\+\_\+enu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a04a588f784580f203e111c812785a598}\label{stratnode_8cpp_a04a588f784580f203e111c812785a598}} 
+\index{stratnode.cpp@{stratnode.cpp}!gym\_cb@{gym\_cb}}
+\index{gym\_cb@{gym\_cb}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{gym\_cb()}{gym\_cb()}}
+{\footnotesize\ttfamily void gym\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{stratnode_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{stratnode.cpp@{stratnode.cpp}!main@{main}}
+\index{main@{main}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 214 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_afa0f9061a6152b26289dd2c93b295847}\label{stratnode_8cpp_afa0f9061a6152b26289dd2c93b295847}} 
+\index{stratnode.cpp@{stratnode.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_ac93df82c0a0391861bbdf58610ebe000}\label{stratnode_8cpp_ac93df82c0a0391861bbdf58610ebe000}} 
+\index{stratnode.cpp@{stratnode.cpp}!roomba\_cb@{roomba\_cb}}
+\index{roomba\_cb@{roomba\_cb}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{roomba\_cb()}{roomba\_cb()}}
+{\footnotesize\ttfamily void roomba\+\_\+cb (\begin{DoxyParamCaption}\item[{const transformations\+\_\+ros\+::roomba\+Poses\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a37b35278ecdeb458bfd604ce1aec92b1}\label{stratnode_8cpp_a37b35278ecdeb458bfd604ce1aec92b1}} 
+\index{stratnode.cpp@{stratnode.cpp}!target@{target}}
+\index{target@{target}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{target()}{target()}}
+{\footnotesize\ttfamily void target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a34b1f24f6af84f91adb60cfd5786c7e4}\label{stratnode_8cpp_a34b1f24f6af84f91adb60cfd5786c7e4}} 
+\index{stratnode.cpp@{stratnode.cpp}!timeCheck@{timeCheck}}
+\index{timeCheck@{timeCheck}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{timeCheck()}{timeCheck()}}
+{\footnotesize\ttfamily void time\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 155 of file stratnode.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{stratnode_8cpp_ab9674253569259608088097e713c6905}\label{stratnode_8cpp_ab9674253569259608088097e713c6905}} 
+\index{stratnode.cpp@{stratnode.cpp}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry current\+\_\+pose}
+
+
+
+Definition at line 24 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_af12f8df1f15383367d224bff8dff4252}\label{stratnode_8cpp_af12f8df1f15383367d224bff8dff4252}} 
+\index{stratnode.cpp@{stratnode.cpp}!decks@{decks}}
+\index{decks@{decks}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{decks}{decks}}
+{\footnotesize\ttfamily vector$<$deque$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ $>$ decks}
+
+
+
+Definition at line 23 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}\label{stratnode_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}} 
+\index{stratnode.cpp@{stratnode.cpp}!gymOffset@{gymOffset}}
+\index{gymOffset@{gymOffset}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{gymOffset}{gymOffset}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Float64 gym\+Offset}
+
+
+
+Definition at line 25 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a55fc502015142062735ebfd18c825354}\label{stratnode_8cpp_a55fc502015142062735ebfd18c825354}} 
+\index{stratnode.cpp@{stratnode.cpp}!marker@{marker}}
+\index{marker@{marker}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily int marker =0}
+
+
+
+Definition at line 19 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_abb37d7ecd0737887dce058897bfa7b0b}\label{stratnode_8cpp_abb37d7ecd0737887dce058897bfa7b0b}} 
+\index{stratnode.cpp@{stratnode.cpp}!MAX\_POINTS@{MAX\_POINTS}}
+\index{MAX\_POINTS@{MAX\_POINTS}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{MAX\_POINTS}{MAX\_POINTS}}
+{\footnotesize\ttfamily int M\+A\+X\+\_\+\+P\+O\+I\+N\+TS = 10}
+
+
+
+Definition at line 18 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a3daa5985cb85baab76287f95f11adf11}\label{stratnode_8cpp_a3daa5985cb85baab76287f95f11adf11}} 
+\index{stratnode.cpp@{stratnode.cpp}!MODE@{MODE}}
+\index{MODE@{MODE}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{MODE}{MODE}}
+{\footnotesize\ttfamily int M\+O\+DE = 0}
+
+
+
+Definition at line 30 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}\label{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}} 
+\index{stratnode.cpp@{stratnode.cpp}!msg@{msg}}
+\index{msg@{msg}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+String msg}
+
+
+
+Definition at line 27 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_ac0874ef8b36e5e415a5fdb850ff472f6}\label{stratnode_8cpp_ac0874ef8b36e5e415a5fdb850ff472f6}} 
+\index{stratnode.cpp@{stratnode.cpp}!roombaPositions@{roombaPositions}}
+\index{roombaPositions@{roombaPositions}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{roombaPositions}{roombaPositions}}
+{\footnotesize\ttfamily transformations\+\_\+ros\+::roomba\+Poses roomba\+Positions}
+
+
+
+Definition at line 22 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a92211863a9a3dafb14ae33244777a229}\label{stratnode_8cpp_a92211863a9a3dafb14ae33244777a229}} 
+\index{stratnode.cpp@{stratnode.cpp}!ss\_mode@{ss\_mode}}
+\index{ss\_mode@{ss\_mode}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{ss\_mode}{ss\_mode}}
+{\footnotesize\ttfamily std\+::stringstream ss\+\_\+mode}
+
+
+
+Definition at line 26 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_aec7a168b21df4350c2e09c55e1e84885}\label{stratnode_8cpp_aec7a168b21df4350c2e09c55e1e84885}} 
+\index{stratnode.cpp@{stratnode.cpp}!TARGETQ@{TARGETQ}}
+\index{TARGETQ@{TARGETQ}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{TARGETQ}{TARGETQ}}
+{\footnotesize\ttfamily int T\+A\+R\+G\+E\+TQ = 100}
+
+
+
+Definition at line 31 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}\label{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}} 
+\index{stratnode.cpp@{stratnode.cpp}!temp@{temp}}
+\index{temp@{temp}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily double temp}
+
+
+
+Definition at line 29 of file stratnode.\+cpp.
+
+\mbox{\Hypertarget{stratnode_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}\label{stratnode_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}} 
+\index{stratnode.cpp@{stratnode.cpp}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!stratnode.cpp@{stratnode.cpp}}
+\subsubsection{\texorpdfstring{waypoint}{waypoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped waypoint}
+
+
+
+Definition at line 21 of file stratnode.\+cpp.
+

@@ -1,0 +1,59 @@
+\hypertarget{connected__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/connected\+\_\+layer.h File Reference}
+\label{connected__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/connected\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/connected\_layer.h}}
+{\ttfamily \#include \char`\"{}activations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{connected__layer_8h_a8c03925e07504c5f996beb769d594852}{make\+\_\+connected\+\_\+layer}} (int batch, int inputs, int outputs, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} activation, int batch\+\_\+normalize, int adam)
+\item 
+void \mbox{\hyperlink{connected__layer_8h_a4cf1c868f90698cafc796c63a20ae371}{forward\+\_\+connected\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{connected__layer_8h_a510156aa4506e40152e6fc6dafa991c1}{backward\+\_\+connected\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{connected__layer_8h_a822f192980954880e61172c8fd3477c7}{update\+\_\+connected\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{connected__layer_8h_a510156aa4506e40152e6fc6dafa991c1}\label{connected__layer_8h_a510156aa4506e40152e6fc6dafa991c1}} 
+\index{connected\_layer.h@{connected\_layer.h}!backward\_connected\_layer@{backward\_connected\_layer}}
+\index{backward\_connected\_layer@{backward\_connected\_layer}!connected\_layer.h@{connected\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_connected\_layer()}{backward\_connected\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+connected\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 169 of file connected\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{connected__layer_8h_a4cf1c868f90698cafc796c63a20ae371}\label{connected__layer_8h_a4cf1c868f90698cafc796c63a20ae371}} 
+\index{connected\_layer.h@{connected\_layer.h}!forward\_connected\_layer@{forward\_connected\_layer}}
+\index{forward\_connected\_layer@{forward\_connected\_layer}!connected\_layer.h@{connected\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_connected\_layer()}{forward\_connected\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+connected\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file connected\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{connected__layer_8h_a8c03925e07504c5f996beb769d594852}\label{connected__layer_8h_a8c03925e07504c5f996beb769d594852}} 
+\index{connected\_layer.h@{connected\_layer.h}!make\_connected\_layer@{make\_connected\_layer}}
+\index{make\_connected\_layer@{make\_connected\_layer}!connected\_layer.h@{connected\_layer.h}}
+\subsubsection{\texorpdfstring{make\_connected\_layer()}{make\_connected\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+connected\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{int}]{outputs,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{activation,  }\item[{int}]{batch\+\_\+normalize,  }\item[{int}]{adam }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file connected\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{connected__layer_8h_a822f192980954880e61172c8fd3477c7}\label{connected__layer_8h_a822f192980954880e61172c8fd3477c7}} 
+\index{connected\_layer.h@{connected\_layer.h}!update\_connected\_layer@{update\_connected\_layer}}
+\index{update\_connected\_layer@{update\_connected\_layer}!connected\_layer.h@{connected\_layer.h}}
+\subsubsection{\texorpdfstring{update\_connected\_layer()}{update\_connected\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+connected\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 132 of file connected\+\_\+layer.\+c.
+

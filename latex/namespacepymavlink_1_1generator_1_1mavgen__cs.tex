@@ -1,0 +1,205 @@
+\hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs}{}\section{pymavlink.\+generator.\+mavgen\+\_\+cs Namespace Reference}
+\label{namespacepymavlink_1_1generator_1_1mavgen__cs}\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a92544b954c0e791aafb1d03d768e0c13}{generate\+\_\+preamble}} (outf, msgs, args, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a9915c2abe90b770671bcb76ff7752a9a}{generate\+\_\+xml\+Doc\+Summary}} (outf, summary\+Text, tab\+Depth)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a5ed1c57295dc34129fd7f4d80f2a8b25}{generate\+\_\+enums}} (outf, enums)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a07bde4c2a35f369eeeda973364b5ef19}{generate\+\_\+classes}} (outf, msgs)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a85f6d78f3a8f11400ba3d9be4e4ce405}{generate\+\_\+\+Deserialization}} (outf, messages)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a1b4c53af7bc25e5cb3f2a3d2e67deeee}{generate\+\_\+\+Serialization}} (outf, messages)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a0786f1048124c0599ae8ddf33077a201}{generate\+\_\+\+Codec\+Index}} (outf, messages, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a401ce8f84466bcf2b9247fab7f057fd2}{generate}} (basename, xml)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_afd765216770d275a8155a15fcea9e228}{t}} = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_ae949f75fb520f4e00cfb374dd701dfb2}{map}}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_ac5f9ceb669ed4c71b42212ce69020f92}{map\+Type}}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__cs_a1ac6d29c09535167fbefeeec15f67a4e}{map\+Field\+Name}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}parse a MAVLink protocol XML file and generate a CSharp implementation\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a401ce8f84466bcf2b9247fab7f057fd2}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a401ce8f84466bcf2b9247fab7f057fd2}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate@{generate}}
+\index{generate@{generate}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate complete MAVLink CSharp implemenation\end{DoxyVerb}
+ 
+
+Definition at line 258 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a07bde4c2a35f369eeeda973364b5ef19}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a07bde4c2a35f369eeeda973364b5ef19}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate\_classes@{generate\_classes}}
+\index{generate\_classes@{generate\_classes}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate\_classes()}{generate\_classes()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate\+\_\+classes (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msgs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a0786f1048124c0599ae8ddf33077a201}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a0786f1048124c0599ae8ddf33077a201}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate\_CodecIndex@{generate\_CodecIndex}}
+\index{generate\_CodecIndex@{generate\_CodecIndex}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate\_CodecIndex()}{generate\_CodecIndex()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate\+\_\+\+Codec\+Index (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{messages,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+
+
+Definition at line 195 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a85f6d78f3a8f11400ba3d9be4e4ce405}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a85f6d78f3a8f11400ba3d9be4e4ce405}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate\_Deserialization@{generate\_Deserialization}}
+\index{generate\_Deserialization@{generate\_Deserialization}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate\_Deserialization()}{generate\_Deserialization()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate\+\_\+\+Deserialization (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{messages }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a5ed1c57295dc34129fd7f4d80f2a8b25}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a5ed1c57295dc34129fd7f4d80f2a8b25}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate\_enums@{generate\_enums}}
+\index{generate\_enums@{generate\_enums}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate\_enums()}{generate\_enums()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate\+\_\+enums (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{enums }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a92544b954c0e791aafb1d03d768e0c13}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a92544b954c0e791aafb1d03d768e0c13}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate\_preamble@{generate\_preamble}}
+\index{generate\_preamble@{generate\_preamble}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate\_preamble()}{generate\_preamble()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate\+\_\+preamble (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msgs,  }\item[{}]{args,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a1b4c53af7bc25e5cb3f2a3d2e67deeee}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a1b4c53af7bc25e5cb3f2a3d2e67deeee}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate\_Serialization@{generate\_Serialization}}
+\index{generate\_Serialization@{generate\_Serialization}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate\_Serialization()}{generate\_Serialization()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate\+\_\+\+Serialization (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{messages }\end{DoxyParamCaption})}
+
+
+
+Definition at line 160 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a9915c2abe90b770671bcb76ff7752a9a}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a9915c2abe90b770671bcb76ff7752a9a}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!generate\_xmlDocSummary@{generate\_xmlDocSummary}}
+\index{generate\_xmlDocSummary@{generate\_xmlDocSummary}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{generate\_xmlDocSummary()}{generate\_xmlDocSummary()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+cs.\+generate\+\_\+xml\+Doc\+Summary (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{summary\+Text,  }\item[{}]{tab\+Depth }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file mavgen\+\_\+cs.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_ae949f75fb520f4e00cfb374dd701dfb2}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_ae949f75fb520f4e00cfb374dd701dfb2}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!map@{map}}
+\index{map@{map}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily dictionary pymavlink.\+generator.\+mavgen\+\_\+cs.\+map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2         \textcolor{stringliteral}{'float'}    : \textcolor{stringliteral}{'float'},}
+\DoxyCodeLine{3         \textcolor{stringliteral}{'double'}   : \textcolor{stringliteral}{'double'},}
+\DoxyCodeLine{4         \textcolor{stringliteral}{'char'}     : \textcolor{stringliteral}{'byte'},}
+\DoxyCodeLine{5         \textcolor{stringliteral}{'int8\_t'}   : \textcolor{stringliteral}{'sbyte'},}
+\DoxyCodeLine{6         \textcolor{stringliteral}{'uint8\_t'}  : \textcolor{stringliteral}{'byte'},}
+\DoxyCodeLine{7         \textcolor{stringliteral}{'uint8\_t\_mavlink\_version'}  : \textcolor{stringliteral}{'B'},}
+\DoxyCodeLine{8         \textcolor{stringliteral}{'int16\_t'}  : \textcolor{stringliteral}{'Int16'},}
+\DoxyCodeLine{9         \textcolor{stringliteral}{'uint16\_t'} : \textcolor{stringliteral}{'UInt16'},}
+\DoxyCodeLine{10         \textcolor{stringliteral}{'int32\_t'}  : \textcolor{stringliteral}{'Int32'},}
+\DoxyCodeLine{11         \textcolor{stringliteral}{'uint32\_t'} : \textcolor{stringliteral}{'UInt32'},}
+\DoxyCodeLine{12         \textcolor{stringliteral}{'int64\_t'}  : \textcolor{stringliteral}{'Int64'},}
+\DoxyCodeLine{13         \textcolor{stringliteral}{'uint64\_t'} : \textcolor{stringliteral}{'UInt64'},}
+\DoxyCodeLine{14         \}}
+
+\end{DoxyCode}
+
+
+Definition at line 17 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_a1ac6d29c09535167fbefeeec15f67a4e}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_a1ac6d29c09535167fbefeeec15f67a4e}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!mapFieldName@{mapFieldName}}
+\index{mapFieldName@{mapFieldName}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{mapFieldName}{mapFieldName}}
+{\footnotesize\ttfamily dictionary pymavlink.\+generator.\+mavgen\+\_\+cs.\+map\+Field\+Name}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2         \textcolor{stringliteral}{'fixed'}    : \textcolor{stringliteral}{'@fixed'}}
+\DoxyCodeLine{3         \}}
+
+\end{DoxyCode}
+
+
+Definition at line 48 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_ac5f9ceb669ed4c71b42212ce69020f92}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_ac5f9ceb669ed4c71b42212ce69020f92}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!mapType@{mapType}}
+\index{mapType@{mapType}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{mapType}{mapType}}
+{\footnotesize\ttfamily dictionary pymavlink.\+generator.\+mavgen\+\_\+cs.\+map\+Type}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2         \textcolor{stringliteral}{'float'}    : (\textcolor{stringliteral}{'ToSingle'}, 4),}
+\DoxyCodeLine{3         \textcolor{stringliteral}{'double'}   : (\textcolor{stringliteral}{'ToDouble'}, 8),}
+\DoxyCodeLine{4         \textcolor{stringliteral}{'int8\_t'}   : (\textcolor{stringliteral}{'ToInt8'}, 1),}
+\DoxyCodeLine{5         \textcolor{stringliteral}{'uint8\_t'}   : (\textcolor{stringliteral}{'ToUInt8'}, 1),}
+\DoxyCodeLine{6         \textcolor{stringliteral}{'char'}   :   (\textcolor{stringliteral}{'ToChar'}, 1),}
+\DoxyCodeLine{7         \textcolor{stringliteral}{'int16\_t'}  : (\textcolor{stringliteral}{'ToInt16'}, 2),}
+\DoxyCodeLine{8         \textcolor{stringliteral}{'uint16\_t'} : (\textcolor{stringliteral}{'ToUInt16'}, 2),}
+\DoxyCodeLine{9         \textcolor{stringliteral}{'int32\_t'}  : (\textcolor{stringliteral}{'ToInt32'}, 4),}
+\DoxyCodeLine{10         \textcolor{stringliteral}{'uint32\_t'} : (\textcolor{stringliteral}{'ToUInt32'}, 4),}
+\DoxyCodeLine{11         \textcolor{stringliteral}{'int64\_t'}  : (\textcolor{stringliteral}{'ToInt64'}, 8),}
+\DoxyCodeLine{12         \textcolor{stringliteral}{'uint64\_t'} : (\textcolor{stringliteral}{'ToUInt64'}, 8),}
+\DoxyCodeLine{13         \}}
+
+\end{DoxyCode}
+
+
+Definition at line 33 of file mavgen\+\_\+cs.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__cs_afd765216770d275a8155a15fcea9e228}\label{namespacepymavlink_1_1generator_1_1mavgen__cs_afd765216770d275a8155a15fcea9e228}} 
+\index{pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}!t@{t}}
+\index{t@{t}!pymavlink.generator.mavgen\_cs@{pymavlink.generator.mavgen\_cs}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavgen\+\_\+cs.\+t = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()}
+
+
+
+Definition at line 14 of file mavgen\+\_\+cs.\+py.
+

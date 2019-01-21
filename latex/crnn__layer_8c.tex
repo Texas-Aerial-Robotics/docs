@@ -1,0 +1,66 @@
+\hypertarget{crnn__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/crnn\+\_\+layer.c File Reference}
+\label{crnn__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/crnn\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/crnn\_layer.c}}
+{\ttfamily \#include \char`\"{}crnn\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}convolutional\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gemm.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{crnn__layer_8c_a3a5caefacf770ad4004a2fff8970569d}{make\+\_\+crnn\+\_\+layer}} (int batch, int h, int w, int c, int hidden\+\_\+filters, int output\+\_\+filters, int steps, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} activation, int batch\+\_\+normalize)
+\item 
+void \mbox{\hyperlink{crnn__layer_8c_a422e7cb889739fec2265e19baa2c2c85}{update\+\_\+crnn\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\item 
+void \mbox{\hyperlink{crnn__layer_8c_a1dc9e7102b478aeb420e2f1558c204ab}{forward\+\_\+crnn\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{crnn__layer_8c_a9398f65558364ee35dcaa4bac49a3d1e}{backward\+\_\+crnn\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{crnn__layer_8c_a9398f65558364ee35dcaa4bac49a3d1e}\label{crnn__layer_8c_a9398f65558364ee35dcaa4bac49a3d1e}} 
+\index{crnn\_layer.c@{crnn\_layer.c}!backward\_crnn\_layer@{backward\_crnn\_layer}}
+\index{backward\_crnn\_layer@{backward\_crnn\_layer}!crnn\_layer.c@{crnn\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_crnn\_layer()}{backward\_crnn\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+crnn\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 132 of file crnn\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{crnn__layer_8c_a1dc9e7102b478aeb420e2f1558c204ab}\label{crnn__layer_8c_a1dc9e7102b478aeb420e2f1558c204ab}} 
+\index{crnn\_layer.c@{crnn\_layer.c}!forward\_crnn\_layer@{forward\_crnn\_layer}}
+\index{forward\_crnn\_layer@{forward\_crnn\_layer}!crnn\_layer.c@{crnn\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_crnn\_layer()}{forward\_crnn\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+crnn\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file crnn\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{crnn__layer_8c_a3a5caefacf770ad4004a2fff8970569d}\label{crnn__layer_8c_a3a5caefacf770ad4004a2fff8970569d}} 
+\index{crnn\_layer.c@{crnn\_layer.c}!make\_crnn\_layer@{make\_crnn\_layer}}
+\index{make\_crnn\_layer@{make\_crnn\_layer}!crnn\_layer.c@{crnn\_layer.c}}
+\subsubsection{\texorpdfstring{make\_crnn\_layer()}{make\_crnn\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+crnn\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{h,  }\item[{int}]{w,  }\item[{int}]{c,  }\item[{int}]{hidden\+\_\+filters,  }\item[{int}]{output\+\_\+filters,  }\item[{int}]{steps,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{activation,  }\item[{int}]{batch\+\_\+normalize }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file crnn\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{crnn__layer_8c_a422e7cb889739fec2265e19baa2c2c85}\label{crnn__layer_8c_a422e7cb889739fec2265e19baa2c2c85}} 
+\index{crnn\_layer.c@{crnn\_layer.c}!update\_crnn\_layer@{update\_crnn\_layer}}
+\index{update\_crnn\_layer@{update\_crnn\_layer}!crnn\_layer.c@{crnn\_layer.c}}
+\subsubsection{\texorpdfstring{update\_crnn\_layer()}{update\_crnn\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+crnn\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file crnn\+\_\+layer.\+c.
+

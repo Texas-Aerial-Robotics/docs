@@ -1,0 +1,151 @@
+\hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc}{}\section{pymavlink.\+generator.\+mavgen\+\_\+objc Namespace Reference}
+\label{namespacepymavlink_1_1generator_1_1mavgen__objc}\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_a029723100a1cc0db78017c05edbc66a9}{generate\+\_\+mavlink}} (directory, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_a62689e6ef17a3f47ebe23fdb19258f4b}{generate\+\_\+base\+\_\+message}} (directory, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_a2cf69803028e8d4f40edf1eeb561f996}{generate\+\_\+message\+\_\+definitions\+\_\+h}} (directory, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_ab9050e3458fe8e9f6cc2210a66bd2b83}{generate\+\_\+message}} (directory, m)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_aadc6040b4b644298ef796c16cdabb42c}{camel\+\_\+case\+\_\+from\+\_\+underscores}} (string)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_ad0ae2d39d1f7d12c1178449325199d2d}{lower\+\_\+camel\+\_\+case\+\_\+from\+\_\+underscores}} (string)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_a677ef15fb3fb65545a5a589e513b7fe4}{generate\+\_\+shared}} (basename, xml\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_a0976eb9b9b1af74699e2a1ecf5fef706}{generate\+\_\+message\+\_\+definitions}} (basename, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_a2a6922cc4a5527ce0746314515c76438}{generate}} (basename, xml\+\_\+list)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__objc_a379787c6cbc3c99a94724d25039c0fbf}{t}} = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}parse a MAVLink protocol XML file and generate an Objective-C implementation
+
+Copyright John Boiles 2013
+Released under GNU GPL version 3 or later
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_aadc6040b4b644298ef796c16cdabb42c}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_aadc6040b4b644298ef796c16cdabb42c}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!camel\_case\_from\_underscores@{camel\_case\_from\_underscores}}
+\index{camel\_case\_from\_underscores@{camel\_case\_from\_underscores}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{camel\_case\_from\_underscores()}{camel\_case\_from\_underscores()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+camel\+\_\+case\+\_\+from\+\_\+underscores (\begin{DoxyParamCaption}\item[{}]{string }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate a CamelCase string from an underscore_string.\end{DoxyVerb}
+ 
+
+Definition at line 312 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_a2a6922cc4a5527ce0746314515c76438}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_a2a6922cc4a5527ce0746314515c76438}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!generate@{generate}}
+\index{generate@{generate}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+generate (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate complete MAVLink Objective-C implemenation\end{DoxyVerb}
+ 
+
+Definition at line 432 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_a62689e6ef17a3f47ebe23fdb19258f4b}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_a62689e6ef17a3f47ebe23fdb19258f4b}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!generate\_base\_message@{generate\_base\_message}}
+\index{generate\_base\_message@{generate\_base\_message}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{generate\_base\_message()}{generate\_base\_message()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+generate\+\_\+base\+\_\+message (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate base MVMessage header and implementation\end{DoxyVerb}
+ 
+
+Definition at line 116 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_a029723100a1cc0db78017c05edbc66a9}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_a029723100a1cc0db78017c05edbc66a9}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!generate\_mavlink@{generate\_mavlink}}
+\index{generate\_mavlink@{generate\_mavlink}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{generate\_mavlink()}{generate\_mavlink()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+generate\+\_\+mavlink (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate MVMavlink header and implementation\end{DoxyVerb}
+ 
+
+Definition at line 15 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_ab9050e3458fe8e9f6cc2210a66bd2b83}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_ab9050e3458fe8e9f6cc2210a66bd2b83}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!generate\_message@{generate\_message}}
+\index{generate\_message@{generate\_message}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{generate\_message()}{generate\_message()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+generate\+\_\+message (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{m }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate per-message header and implementation file\end{DoxyVerb}
+ 
+
+Definition at line 248 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_a0976eb9b9b1af74699e2a1ecf5fef706}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_a0976eb9b9b1af74699e2a1ecf5fef706}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!generate\_message\_definitions@{generate\_message\_definitions}}
+\index{generate\_message\_definitions@{generate\_message\_definitions}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{generate\_message\_definitions()}{generate\_message\_definitions()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+generate\+\_\+message\+\_\+definitions (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate files for one XML file\end{DoxyVerb}
+ 
+
+Definition at line 358 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_a2cf69803028e8d4f40edf1eeb561f996}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_a2cf69803028e8d4f40edf1eeb561f996}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!generate\_message\_definitions\_h@{generate\_message\_definitions\_h}}
+\index{generate\_message\_definitions\_h@{generate\_message\_definitions\_h}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{generate\_message\_definitions\_h()}{generate\_message\_definitions\_h()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+generate\+\_\+message\+\_\+definitions\+\_\+h (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate headerfile containing includes for all messages\end{DoxyVerb}
+ 
+
+Definition at line 231 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_a677ef15fb3fb65545a5a589e513b7fe4}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_a677ef15fb3fb65545a5a589e513b7fe4}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!generate\_shared@{generate\_shared}}
+\index{generate\_shared@{generate\_shared}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{generate\_shared()}{generate\_shared()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+generate\+\_\+shared (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file mavgen\+\_\+objc.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_ad0ae2d39d1f7d12c1178449325199d2d}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_ad0ae2d39d1f7d12c1178449325199d2d}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!lower\_camel\_case\_from\_underscores@{lower\_camel\_case\_from\_underscores}}
+\index{lower\_camel\_case\_from\_underscores@{lower\_camel\_case\_from\_underscores}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{lower\_camel\_case\_from\_underscores()}{lower\_camel\_case\_from\_underscores()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+objc.\+lower\+\_\+camel\+\_\+case\+\_\+from\+\_\+underscores (\begin{DoxyParamCaption}\item[{}]{string }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate a lower-cased camelCase string from an underscore_string.
+For example: my_variable_name -> myVariableName\end{DoxyVerb}
+ 
+
+Definition at line 320 of file mavgen\+\_\+objc.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__objc_a379787c6cbc3c99a94724d25039c0fbf}\label{namespacepymavlink_1_1generator_1_1mavgen__objc_a379787c6cbc3c99a94724d25039c0fbf}} 
+\index{pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}!t@{t}}
+\index{t@{t}!pymavlink.generator.mavgen\_objc@{pymavlink.generator.mavgen\_objc}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavgen\+\_\+objc.\+t = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()}
+
+
+
+Definition at line 13 of file mavgen\+\_\+objc.\+py.
+

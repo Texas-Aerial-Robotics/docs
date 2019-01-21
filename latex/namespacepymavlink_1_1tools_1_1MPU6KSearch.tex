@@ -1,0 +1,196 @@
+\hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch}{}\section{pymavlink.\+tools.\+M\+P\+U6\+K\+Search Namespace Reference}
+\label{namespacepymavlink_1_1tools_1_1MPU6KSearch}\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_a279d987dea7583d9f989aa9cf3e8b3b7}{I\+M\+U\+Check\+Fail}} (filename)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_adb2e53c6e56de3bd2784aa39e2605d92}{match\+\_\+extension}} (\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_a9ed3d2455a7095caeaeb4f078ce9b64c}{search\+\_\+dirs}}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac0205e09e9160c156c91decf18d0b6c0}{results}} = \textquotesingle{}Search\+Results.\+zip\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_addf5782d97897730d0cb3b7410787906}{email}} = \textquotesingle{}Craig Elder $<$craig@3drobotics.\+com$>$\textquotesingle{}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac237d9dc19ad865c06c3b254b1413ea0}{found}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_a91724bc509807606cd6a2e1598b58891}{directories}} = sys.\+argv\mbox{[}1\+:\mbox{]}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_aca86a704134fd3da4bb5925d74832d36}{filelist}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ab42858fbaf5e3782f567e13183d9ea07}{extensions}} = \mbox{[}\textquotesingle{}.tlog\textquotesingle{},\textquotesingle{}.bin\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_a159243f0ffefc2196fac676fca1d67c1}{path}} = os.\+path.\+join(root, \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}})
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}} = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_aca86a704134fd3da4bb5925d74832d36}{filelist}}\mbox{[}\mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_a20389f5c308cc78d8368d19db6ef8b92}{zip}} = zipfile.\+Zip\+File(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac0205e09e9160c156c91decf18d0b6c0}{results}}, \textquotesingle{}w\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_a363a1bdf64d3d75b1d37289d07de7386}{arcname}} = os.\+path.\+basename(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_a74dfdaae82367ac45a4be38a0a325453}{mtime}} = os.\+path.\+getmtime(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}search a set of log files for signs of inconsistent IMU data
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_a279d987dea7583d9f989aa9cf3e8b3b7}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_a279d987dea7583d9f989aa9cf3e8b3b7}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!IMUCheckFail@{IMUCheckFail}}
+\index{IMUCheckFail@{IMUCheckFail}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{IMUCheckFail()}{IMUCheckFail()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+I\+M\+U\+Check\+Fail (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_adb2e53c6e56de3bd2784aa39e2605d92}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_adb2e53c6e56de3bd2784aa39e2605d92}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!match\_extension@{match\_extension}}
+\index{match\_extension@{match\_extension}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{match\_extension()}{match\_extension()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+match\+\_\+extension (\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}see if the path matches a extension\end{DoxyVerb}
+ 
+
+Definition at line 142 of file M\+P\+U6\+K\+Search.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_a363a1bdf64d3d75b1d37289d07de7386}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_a363a1bdf64d3d75b1d37289d07de7386}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!arcname@{arcname}}
+\index{arcname@{arcname}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{arcname}{arcname}}
+{\footnotesize\ttfamily string pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+arcname = os.\+path.\+basename(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}})}
+
+
+
+Definition at line 189 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_a91724bc509807606cd6a2e1598b58891}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_a91724bc509807606cd6a2e1598b58891}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!directories@{directories}}
+\index{directories@{directories}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{directories}{directories}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+directories = sys.\+argv\mbox{[}1\+:\mbox{]}}
+
+
+
+Definition at line 134 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_addf5782d97897730d0cb3b7410787906}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_addf5782d97897730d0cb3b7410787906}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!email@{email}}
+\index{email@{email}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+email = \textquotesingle{}Craig Elder $<$craig@3drobotics.\+com$>$\textquotesingle{}}
+
+
+
+Definition at line 25 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_ab42858fbaf5e3782f567e13183d9ea07}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_ab42858fbaf5e3782f567e13183d9ea07}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!extensions@{extensions}}
+\index{extensions@{extensions}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{extensions}{extensions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+extensions = \mbox{[}\textquotesingle{}.tlog\textquotesingle{},\textquotesingle{}.bin\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 140 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!f@{f}}
+\index{f@{f}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+f = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_aca86a704134fd3da4bb5925d74832d36}{filelist}}\mbox{[}\mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}\mbox{]}}
+
+
+
+Definition at line 162 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_aca86a704134fd3da4bb5925d74832d36}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_aca86a704134fd3da4bb5925d74832d36}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!filelist@{filelist}}
+\index{filelist@{filelist}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{filelist}{filelist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+filelist = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 138 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac237d9dc19ad865c06c3b254b1413ea0}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac237d9dc19ad865c06c3b254b1413ea0}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!found@{found}}
+\index{found@{found}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{found}{found}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+found = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 133 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_a74dfdaae82367ac45a4be38a0a325453}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_a74dfdaae82367ac45a4be38a0a325453}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!mtime@{mtime}}
+\index{mtime@{mtime}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{mtime}{mtime}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+mtime = os.\+path.\+getmtime(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}})}
+
+
+
+Definition at line 191 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_a159243f0ffefc2196fac676fca1d67c1}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_a159243f0ffefc2196fac676fca1d67c1}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!path@{path}}
+\index{path@{path}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+path = os.\+path.\+join(root, \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac07a87a94d378396fc6958ca6fcb3064}{f}})}
+
+
+
+Definition at line 156 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac0205e09e9160c156c91decf18d0b6c0}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac0205e09e9160c156c91decf18d0b6c0}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!results@{results}}
+\index{results@{results}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{results}{results}}
+{\footnotesize\ttfamily string pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+results = \textquotesingle{}Search\+Results.\+zip\textquotesingle{}}
+
+
+
+Definition at line 24 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_a9ed3d2455a7095caeaeb4f078ce9b64c}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_a9ed3d2455a7095caeaeb4f078ce9b64c}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!search\_dirs@{search\_dirs}}
+\index{search\_dirs@{search\_dirs}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{search\_dirs}{search\_dirs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+search\+\_\+dirs}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [\textcolor{stringliteral}{'c:\(\backslash\)Program Files\(\backslash\)APM Planner'},}
+\DoxyCodeLine{2                \textcolor{stringliteral}{'c:\(\backslash\)Program Files\(\backslash\)Mission Planner'},}
+\DoxyCodeLine{3                \textcolor{stringliteral}{'c:\(\backslash\)Program Files (x86)\(\backslash\)APM Planner'},}
+\DoxyCodeLine{4                \textcolor{stringliteral}{'c:\(\backslash\)Program Files (x86)\(\backslash\)Mission Planner'}]}
+
+\end{DoxyCode}
+
+
+Definition at line 20 of file M\+P\+U6\+K\+Search.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1MPU6KSearch_a20389f5c308cc78d8368d19db6ef8b92}\label{namespacepymavlink_1_1tools_1_1MPU6KSearch_a20389f5c308cc78d8368d19db6ef8b92}} 
+\index{pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}!zip@{zip}}
+\index{zip@{zip}!pymavlink.tools.MPU6KSearch@{pymavlink.tools.MPU6KSearch}}
+\subsubsection{\texorpdfstring{zip}{zip}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+M\+P\+U6\+K\+Search.\+zip = zipfile.\+Zip\+File(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1MPU6KSearch_ac0205e09e9160c156c91decf18d0b6c0}{results}}, \textquotesingle{}w\textquotesingle{})}
+
+
+
+Definition at line 179 of file M\+P\+U6\+K\+Search.\+py.
+

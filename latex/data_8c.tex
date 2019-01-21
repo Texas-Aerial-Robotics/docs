@@ -1,0 +1,867 @@
+\hypertarget{data_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/data.c File Reference}
+\label{data_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/data.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/data.c}}
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{data_8c_ad968bae48e34b60fd8eced07862bd9b5}{N\+U\+M\+C\+H\+A\+RS}}~37
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{data_8c_a3c0e083ce3917bb394ca5708a52f34f5}{get\+\_\+paths}} (char $\ast$filename)
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{data_8c_ad6890ae69b3360c7e3aac78eabe6200c}{get\+\_\+random\+\_\+paths}} (char $\ast$$\ast$paths, int n, int m)
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{data_8c_a6854ac922d5925d0afdd752ca0d912ed}{find\+\_\+replace\+\_\+paths}} (char $\ast$$\ast$paths, int n, char $\ast$find, char $\ast$replace)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{data_8c_a7a80b004ad7e5bb8168ecd56ca4385c3}{load\+\_\+image\+\_\+paths\+\_\+gray}} (char $\ast$$\ast$paths, int n, int w, int h)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{data_8c_ad1faaba982db4eea6cf7d1eb650186c5}{load\+\_\+image\+\_\+paths}} (char $\ast$$\ast$paths, int n, int w, int h)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{data_8c_a0f4978e407f22ee5001b48a8a4d326e2}{load\+\_\+image\+\_\+augment\+\_\+paths}} (char $\ast$$\ast$paths, int n, int min, int max, int size, float angle, float aspect, float hue, float saturation, float exposure, int center)
+\item 
+\mbox{\hyperlink{structbox__label}{box\+\_\+label}} $\ast$ \mbox{\hyperlink{data_8c_a4374d1f158c54ea10bc69d983a765379}{read\+\_\+boxes}} (char $\ast$filename, int $\ast$n)
+\item 
+void \mbox{\hyperlink{data_8c_af2b38e075b074d21719d21aecb185793}{randomize\+\_\+boxes}} (\mbox{\hyperlink{structbox__label}{box\+\_\+label}} $\ast$b, int n)
+\item 
+void \mbox{\hyperlink{data_8c_a3730bfac0277a59f69188e4e3192012d}{correct\+\_\+boxes}} (\mbox{\hyperlink{structbox__label}{box\+\_\+label}} $\ast$boxes, int n, float dx, float dy, float sx, float sy, int flip)
+\item 
+void \mbox{\hyperlink{data_8c_abb2e5344d53c7c3fc8e2fc9d690397e1}{fill\+\_\+truth\+\_\+swag}} (char $\ast$path, float $\ast$truth, int classes, int flip, float dx, float dy, float sx, float sy)
+\item 
+void \mbox{\hyperlink{data_8c_a2fd5b85fd33f4dfe6d8c9c0df8d5e0d8}{fill\+\_\+truth\+\_\+region}} (char $\ast$path, float $\ast$truth, int classes, int num\+\_\+boxes, int flip, float dx, float dy, float sx, float sy)
+\item 
+void \mbox{\hyperlink{data_8c_a75a84e3d5e0670cc1d72c70f7cd767a5}{load\+\_\+rle}} (\mbox{\hyperlink{structimage}{image}} im, int $\ast$rle, int n)
+\item 
+void \mbox{\hyperlink{data_8c_af68e92104adc66a67ecd17dabf1611cb}{or\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} src, \mbox{\hyperlink{structimage}{image}} dest, int c)
+\item 
+void \mbox{\hyperlink{data_8c_a6a6bed5582e4ee3fd2b20993703edd4a}{exclusive\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} src)
+\item 
+\mbox{\hyperlink{structbox}{box}} \mbox{\hyperlink{data_8c_a6b99ba822d519322c07c3b6bc03bb8cf}{bound\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im)
+\item 
+void \mbox{\hyperlink{data_8c_a76036ad7b50902dc2b69d57baf7ce418}{fill\+\_\+truth\+\_\+iseg}} (char $\ast$path, int num\+\_\+boxes, float $\ast$truth, int classes, int w, int h, \mbox{\hyperlink{structaugment__args}{augment\+\_\+args}} aug, int flip, int mw, int mh)
+\item 
+void \mbox{\hyperlink{data_8c_a5bab3498730d6409cf22b5e3107a24bc}{fill\+\_\+truth\+\_\+detection}} (char $\ast$path, int num\+\_\+boxes, float $\ast$truth, int classes, int flip, float dx, float dy, float sx, float sy)
+\item 
+void \mbox{\hyperlink{data_8c_acf22fe41fdd547c8e14f36b236a812e0}{print\+\_\+letters}} (float $\ast$pred, int n)
+\item 
+void \mbox{\hyperlink{data_8c_ad635531416f8a8dc982e1cf108d29ec1}{fill\+\_\+truth\+\_\+captcha}} (char $\ast$path, int n, float $\ast$truth)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_aef1c432b8082eca32f06d6369dc80f64}{load\+\_\+data\+\_\+captcha}} (char $\ast$$\ast$paths, int n, int m, int k, int w, int h)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a62f386d1561d87d9c754c0e8f07aa3ff}{load\+\_\+data\+\_\+captcha\+\_\+encode}} (char $\ast$$\ast$paths, int n, int m, int w, int h)
+\item 
+void \mbox{\hyperlink{data_8c_a9aafc84188318df7ba98955af6390114}{fill\+\_\+truth}} (char $\ast$path, char $\ast$$\ast$labels, int k, float $\ast$truth)
+\item 
+void \mbox{\hyperlink{data_8c_a380b2b4f741e120fa922cea9d1b66f6a}{fill\+\_\+hierarchy}} (float $\ast$truth, int k, \mbox{\hyperlink{structtree}{tree}} $\ast$hierarchy)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{data_8c_a41a8645e7b162b353d30e9c0d6ca76de}{load\+\_\+regression\+\_\+labels\+\_\+paths}} (char $\ast$$\ast$paths, int n, int k)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{data_8c_a6e9343e6732f6312c9e60b68dc1b1e8c}{load\+\_\+labels\+\_\+paths}} (char $\ast$$\ast$paths, int n, char $\ast$$\ast$labels, int k, \mbox{\hyperlink{structtree}{tree}} $\ast$hierarchy)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{data_8c_ac0aa5a060a77127d95d7778d966df356}{load\+\_\+tags\+\_\+paths}} (char $\ast$$\ast$paths, int n, int k)
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{data_8c_aa9ca43248e7e2809c6bfb504c55b32b9}{get\+\_\+labels}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{data_8c_a4b0ce36f011ddb4b2ba58f58114d3219}{free\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{data_8c_a2ed6cfd8f669aaae58e67eff27c2f483}{get\+\_\+segmentation\+\_\+image}} (char $\ast$path, int w, int h, int classes)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{data_8c_aadbf1a11f015a7149437398e3c231ac8}{get\+\_\+segmentation\+\_\+image2}} (char $\ast$path, int w, int h, int classes)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a9169dd3e8659005b0fb2662cb39a7c7c}{load\+\_\+data\+\_\+seg}} (int n, char $\ast$$\ast$paths, int m, int w, int h, int classes, int min, int max, float angle, float aspect, float hue, float saturation, float exposure, int div)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_ad50996173393008e6a5c97151ce7f519}{load\+\_\+data\+\_\+iseg}} (int n, char $\ast$$\ast$paths, int m, int w, int h, int classes, int boxes, int coords, int min, int max, float angle, float aspect, float hue, float saturation, float exposure)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_ab7e1e67d61f872591c5123f9caf396d6}{load\+\_\+data\+\_\+region}} (int n, char $\ast$$\ast$paths, int m, int w, int h, int size, int classes, float jitter, float hue, float saturation, float exposure)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_ab9d8ce6e878b53b6f7c786c1b297e695}{load\+\_\+data\+\_\+compare}} (int n, char $\ast$$\ast$paths, int m, int classes, int w, int h)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a89013987873d2ee74fd382c674335fd5}{load\+\_\+data\+\_\+swag}} (char $\ast$$\ast$paths, int n, int classes, float jitter)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_acbd80b4bb77de421ce8f0715f6d2a80a}{load\+\_\+data\+\_\+detection}} (int n, char $\ast$$\ast$paths, int m, int w, int h, int boxes, int classes, float jitter, float hue, float saturation, float exposure)
+\item 
+void $\ast$ \mbox{\hyperlink{data_8c_ab5f0db527025988c7478eddea9d97141}{load\+\_\+thread}} (void $\ast$ptr)
+\item 
+pthread\+\_\+t \mbox{\hyperlink{data_8c_a887edef560c1d5fe3f395f02c0a00612}{load\+\_\+data\+\_\+in\+\_\+thread}} (\mbox{\hyperlink{structload__args}{load\+\_\+args}} args)
+\item 
+void $\ast$ \mbox{\hyperlink{data_8c_acaa01523478e21693a252ffd0851dff6}{load\+\_\+threads}} (void $\ast$ptr)
+\item 
+void \mbox{\hyperlink{data_8c_af613daa4c07c1d470f0ced3afd6842a6}{load\+\_\+data\+\_\+blocking}} (\mbox{\hyperlink{structload__args}{load\+\_\+args}} args)
+\item 
+pthread\+\_\+t \mbox{\hyperlink{data_8c_a1ebf184d64b6d068463176b30445e90f}{load\+\_\+data}} (\mbox{\hyperlink{structload__args}{load\+\_\+args}} args)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_afe091cc7ae2ab63ee2a2d6e8d89202f8}{load\+\_\+data\+\_\+writing}} (char $\ast$$\ast$paths, int n, int m, int w, int h, int out\+\_\+w, int out\+\_\+h)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a2d65bb024ba143cf988a3c4b5494a90e}{load\+\_\+data\+\_\+old}} (char $\ast$$\ast$paths, int n, int m, char $\ast$$\ast$labels, int k, int w, int h)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a3994c72c392eae1b1c405d439de76e22}{load\+\_\+data\+\_\+super}} (char $\ast$$\ast$paths, int n, int m, int w, int h, int scale)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_af85d9bae0061ba5614532cc8ae3d9bf8}{load\+\_\+data\+\_\+regression}} (char $\ast$$\ast$paths, int n, int m, int k, int min, int max, int size, float angle, float aspect, float hue, float saturation, float exposure)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a84db6f88ee281eccb629b5977db6b914}{select\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} $\ast$orig, int $\ast$inds)
+\item 
+\mbox{\hyperlink{structdata}{data}} $\ast$ \mbox{\hyperlink{data_8c_adf8b21929427108594a57c8102c5f031}{tile\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} orig, int divs, int size)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a71468107461be4d36f0968f73b1fbc06}{resize\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} orig, int w, int h)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a43b17bfc80111f0e9a22b5748e8db3e6}{load\+\_\+data\+\_\+augment}} (char $\ast$$\ast$paths, int n, int m, char $\ast$$\ast$labels, int k, \mbox{\hyperlink{structtree}{tree}} $\ast$hierarchy, int min, int max, int size, float angle, float aspect, float hue, float saturation, float exposure, int center)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a041e51bae1bacd4e84338849783e7d72}{load\+\_\+data\+\_\+tag}} (char $\ast$$\ast$paths, int n, int m, int k, int min, int max, int size, float angle, float aspect, float hue, float saturation, float exposure)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{data_8c_a3aa1345254255bef02986f36729547ce}{concat\+\_\+matrix}} (\mbox{\hyperlink{structmatrix}{matrix}} m1, \mbox{\hyperlink{structmatrix}{matrix}} m2)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_aa9c8a2657c930195dd492ed99a7a0bb2}{concat\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} d1, \mbox{\hyperlink{structdata}{data}} d2)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a4eca1b9b01ae2ff7a98094f7fa3661db}{concat\+\_\+datas}} (\mbox{\hyperlink{structdata}{data}} $\ast$\mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int n)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_ae288bc38519deb719f39a38b92b3d99c}{load\+\_\+categorical\+\_\+data\+\_\+csv}} (char $\ast$filename, int \mbox{\hyperlink{stratnode_8cpp_a37b35278ecdeb458bfd604ce1aec92b1}{target}}, int k)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a7029154d147a2359400982ded034d539}{load\+\_\+cifar10\+\_\+data}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{data_8c_ac842a292f2eb715758b39d469bc47626}{get\+\_\+random\+\_\+batch}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int n, float $\ast$X, float $\ast$\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}})
+\item 
+void \mbox{\hyperlink{data_8c_a338d58d41be3703ef4ce443e5bb4e52f}{get\+\_\+next\+\_\+batch}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int n, int offset, float $\ast$X, float $\ast$\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}})
+\item 
+void \mbox{\hyperlink{data_8c_add0a30894499f2a267939f9369a64e9b}{smooth\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_a15d8a732600fb0730bf2f5d204f3e608}{load\+\_\+all\+\_\+cifar10}} ()
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_af32b828afa01bcaac3fa78bb56ec3b6a}{load\+\_\+go}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{data_8c_a99c2d667a09e1234c18e14cac198a273}{randomize\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+void \mbox{\hyperlink{data_8c_acbb4f5fcc08c77620c177ea1b0cfc667}{scale\+\_\+data\+\_\+rows}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, float s)
+\item 
+void \mbox{\hyperlink{data_8c_af343853074dfe80d14a052effdba825b}{translate\+\_\+data\+\_\+rows}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, float s)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_aa1204f7048d4034131fcb700809087e4}{copy\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+void \mbox{\hyperlink{data_8c_a8bb2e4f18bee940f1b3e76ada4bf7e09}{normalize\+\_\+data\+\_\+rows}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_aa0c8acf66fbe38a9974f7f1a77f7dc77}{get\+\_\+data\+\_\+part}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int part, int total)
+\item 
+\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{data_8c_ae73aa542052eed74b8248bc0df0136ea}{get\+\_\+random\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int num)
+\item 
+\mbox{\hyperlink{structdata}{data}} $\ast$ \mbox{\hyperlink{data_8c_a6ac403c4a56cc8405002dd98f09ee00a}{split\+\_\+data}} (\mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int part, int total)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{data_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex}} = P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{data_8c_ad968bae48e34b60fd8eced07862bd9b5}\label{data_8c_ad968bae48e34b60fd8eced07862bd9b5}} 
+\index{data.c@{data.c}!NUMCHARS@{NUMCHARS}}
+\index{NUMCHARS@{NUMCHARS}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{NUMCHARS}{NUMCHARS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+C\+H\+A\+RS~37}
+
+
+
+Definition at line 450 of file data.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{data_8c_a6b99ba822d519322c07c3b6bc03bb8cf}\label{data_8c_a6b99ba822d519322c07c3b6bc03bb8cf}} 
+\index{data.c@{data.c}!bound\_image@{bound\_image}}
+\index{bound\_image@{bound\_image}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{bound\_image()}{bound\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbox}{box}} bound\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im }\end{DoxyParamCaption})}
+
+
+
+Definition at line 341 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_aa9c8a2657c930195dd492ed99a7a0bb2}\label{data_8c_aa9c8a2657c930195dd492ed99a7a0bb2}} 
+\index{data.c@{data.c}!concat\_data@{concat\_data}}
+\index{concat\_data@{concat\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{concat\_data()}{concat\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} concat\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d1,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{d2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1300 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a4eca1b9b01ae2ff7a98094f7fa3661db}\label{data_8c_a4eca1b9b01ae2ff7a98094f7fa3661db}} 
+\index{data.c@{data.c}!concat\_datas@{concat\_datas}}
+\index{concat\_datas@{concat\_datas}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{concat\_datas()}{concat\_datas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} concat\+\_\+datas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}} $\ast$}]{d,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1311 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a3aa1345254255bef02986f36729547ce}\label{data_8c_a3aa1345254255bef02986f36729547ce}} 
+\index{data.c@{data.c}!concat\_matrix@{concat\_matrix}}
+\index{concat\_matrix@{concat\_matrix}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{concat\_matrix()}{concat\_matrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} concat\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmatrix}{matrix}}}]{m1,  }\item[{\mbox{\hyperlink{structmatrix}{matrix}}}]{m2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1284 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_aa1204f7048d4034131fcb700809087e4}\label{data_8c_aa1204f7048d4034131fcb700809087e4}} 
+\index{data.c@{data.c}!copy\_data@{copy\_data}}
+\index{copy\_data@{copy\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{copy\_data()}{copy\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} copy\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1510 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a3730bfac0277a59f69188e4e3192012d}\label{data_8c_a3730bfac0277a59f69188e4e3192012d}} 
+\index{data.c@{data.c}!correct\_boxes@{correct\_boxes}}
+\index{correct\_boxes@{correct\_boxes}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{correct\_boxes()}{correct\_boxes()}}
+{\footnotesize\ttfamily void correct\+\_\+boxes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbox__label}{box\+\_\+label}} $\ast$}]{boxes,  }\item[{int}]{n,  }\item[{float}]{dx,  }\item[{float}]{dy,  }\item[{float}]{sx,  }\item[{float}]{sy,  }\item[{int}]{flip }\end{DoxyParamCaption})}
+
+
+
+Definition at line 179 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a6a6bed5582e4ee3fd2b20993703edd4a}\label{data_8c_a6a6bed5582e4ee3fd2b20993703edd4a}} 
+\index{data.c@{data.c}!exclusive\_image@{exclusive\_image}}
+\index{exclusive\_image@{exclusive\_image}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{exclusive\_image()}{exclusive\_image()}}
+{\footnotesize\ttfamily void exclusive\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{src }\end{DoxyParamCaption})}
+
+
+
+Definition at line 326 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a380b2b4f741e120fa922cea9d1b66f6a}\label{data_8c_a380b2b4f741e120fa922cea9d1b66f6a}} 
+\index{data.c@{data.c}!fill\_hierarchy@{fill\_hierarchy}}
+\index{fill\_hierarchy@{fill\_hierarchy}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{fill\_hierarchy()}{fill\_hierarchy()}}
+{\footnotesize\ttfamily void fill\+\_\+hierarchy (\begin{DoxyParamCaption}\item[{float $\ast$}]{truth,  }\item[{int}]{k,  }\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{hierarchy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 519 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a9aafc84188318df7ba98955af6390114}\label{data_8c_a9aafc84188318df7ba98955af6390114}} 
+\index{data.c@{data.c}!fill\_truth@{fill\_truth}}
+\index{fill\_truth@{fill\_truth}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{fill\_truth()}{fill\_truth()}}
+{\footnotesize\ttfamily void fill\+\_\+truth (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{char $\ast$$\ast$}]{labels,  }\item[{int}]{k,  }\item[{float $\ast$}]{truth }\end{DoxyParamCaption})}
+
+
+
+Definition at line 504 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ad635531416f8a8dc982e1cf108d29ec1}\label{data_8c_ad635531416f8a8dc982e1cf108d29ec1}} 
+\index{data.c@{data.c}!fill\_truth\_captcha@{fill\_truth\_captcha}}
+\index{fill\_truth\_captcha@{fill\_truth\_captcha}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{fill\_truth\_captcha()}{fill\_truth\_captcha()}}
+{\footnotesize\ttfamily void fill\+\_\+truth\+\_\+captcha (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{int}]{n,  }\item[{float $\ast$}]{truth }\end{DoxyParamCaption})}
+
+
+
+Definition at line 462 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a5bab3498730d6409cf22b5e3107a24bc}\label{data_8c_a5bab3498730d6409cf22b5e3107a24bc}} 
+\index{data.c@{data.c}!fill\_truth\_detection@{fill\_truth\_detection}}
+\index{fill\_truth\_detection@{fill\_truth\_detection}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{fill\_truth\_detection()}{fill\_truth\_detection()}}
+{\footnotesize\ttfamily void fill\+\_\+truth\+\_\+detection (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{int}]{num\+\_\+boxes,  }\item[{float $\ast$}]{truth,  }\item[{int}]{classes,  }\item[{int}]{flip,  }\item[{float}]{dx,  }\item[{float}]{dy,  }\item[{float}]{sx,  }\item[{float}]{sy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 408 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a76036ad7b50902dc2b69d57baf7ce418}\label{data_8c_a76036ad7b50902dc2b69d57baf7ce418}} 
+\index{data.c@{data.c}!fill\_truth\_iseg@{fill\_truth\_iseg}}
+\index{fill\_truth\_iseg@{fill\_truth\_iseg}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{fill\_truth\_iseg()}{fill\_truth\_iseg()}}
+{\footnotesize\ttfamily void fill\+\_\+truth\+\_\+iseg (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{int}]{num\+\_\+boxes,  }\item[{float $\ast$}]{truth,  }\item[{int}]{classes,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{structaugment__args}{augment\+\_\+args}}}]{aug,  }\item[{int}]{flip,  }\item[{int}]{mw,  }\item[{int}]{mh }\end{DoxyParamCaption})}
+
+
+
+Definition at line 363 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a2fd5b85fd33f4dfe6d8c9c0df8d5e0d8}\label{data_8c_a2fd5b85fd33f4dfe6d8c9c0df8d5e0d8}} 
+\index{data.c@{data.c}!fill\_truth\_region@{fill\_truth\_region}}
+\index{fill\_truth\_region@{fill\_truth\_region}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{fill\_truth\_region()}{fill\_truth\_region()}}
+{\footnotesize\ttfamily void fill\+\_\+truth\+\_\+region (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{float $\ast$}]{truth,  }\item[{int}]{classes,  }\item[{int}]{num\+\_\+boxes,  }\item[{int}]{flip,  }\item[{float}]{dx,  }\item[{float}]{dy,  }\item[{float}]{sx,  }\item[{float}]{sy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 254 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_abb2e5344d53c7c3fc8e2fc9d690397e1}\label{data_8c_abb2e5344d53c7c3fc8e2fc9d690397e1}} 
+\index{data.c@{data.c}!fill\_truth\_swag@{fill\_truth\_swag}}
+\index{fill\_truth\_swag@{fill\_truth\_swag}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{fill\_truth\_swag()}{fill\_truth\_swag()}}
+{\footnotesize\ttfamily void fill\+\_\+truth\+\_\+swag (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{float $\ast$}]{truth,  }\item[{int}]{classes,  }\item[{int}]{flip,  }\item[{float}]{dx,  }\item[{float}]{dy,  }\item[{float}]{sx,  }\item[{float}]{sy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 216 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a6854ac922d5925d0afdd752ca0d912ed}\label{data_8c_a6854ac922d5925d0afdd752ca0d912ed}} 
+\index{data.c@{data.c}!find\_replace\_paths@{find\_replace\_paths}}
+\index{find\_replace\_paths@{find\_replace\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{find\_replace\_paths()}{find\_replace\_paths()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ find\+\_\+replace\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{char $\ast$}]{find,  }\item[{char $\ast$}]{replace }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a4b0ce36f011ddb4b2ba58f58114d3219}\label{data_8c_a4b0ce36f011ddb4b2ba58f58114d3219}} 
+\index{data.c@{data.c}!free\_data@{free\_data}}
+\index{free\_data@{free\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{free\_data()}{free\_data()}}
+{\footnotesize\ttfamily void free\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 626 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_aa0c8acf66fbe38a9974f7f1a77f7dc77}\label{data_8c_aa0c8acf66fbe38a9974f7f1a77f7dc77}} 
+\index{data.c@{data.c}!get\_data\_part@{get\_data\_part}}
+\index{get\_data\_part@{get\_data\_part}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_data\_part()}{get\_data\_part()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} get\+\_\+data\+\_\+part (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{part,  }\item[{int}]{total }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1531 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_aa9ca43248e7e2809c6bfb504c55b32b9}\label{data_8c_aa9ca43248e7e2809c6bfb504c55b32b9}} 
+\index{data.c@{data.c}!get\_labels@{get\_labels}}
+\index{get\_labels@{get\_labels}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_labels()}{get\_labels()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+\_\+labels (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 618 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a338d58d41be3703ef4ce443e5bb4e52f}\label{data_8c_a338d58d41be3703ef4ce443e5bb4e52f}} 
+\index{data.c@{data.c}!get\_next\_batch@{get\_next\_batch}}
+\index{get\_next\_batch@{get\_next\_batch}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_next\_batch()}{get\_next\_batch()}}
+{\footnotesize\ttfamily void get\+\_\+next\+\_\+batch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{n,  }\item[{int}]{offset,  }\item[{float $\ast$}]{X,  }\item[{float $\ast$}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1377 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a3c0e083ce3917bb394ca5708a52f34f5}\label{data_8c_a3c0e083ce3917bb394ca5708a52f34f5}} 
+\index{data.c@{data.c}!get\_paths@{get\_paths}}
+\index{get\_paths@{get\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_paths()}{get\_paths()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}}$\ast$ get\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ac842a292f2eb715758b39d469bc47626}\label{data_8c_ac842a292f2eb715758b39d469bc47626}} 
+\index{data.c@{data.c}!get\_random\_batch@{get\_random\_batch}}
+\index{get\_random\_batch@{get\_random\_batch}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_random\_batch()}{get\_random\_batch()}}
+{\footnotesize\ttfamily void get\+\_\+random\+\_\+batch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{n,  }\item[{float $\ast$}]{X,  }\item[{float $\ast$}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1367 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ae73aa542052eed74b8248bc0df0136ea}\label{data_8c_ae73aa542052eed74b8248bc0df0136ea}} 
+\index{data.c@{data.c}!get\_random\_data@{get\_random\_data}}
+\index{get\_random\_data@{get\_random\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_random\_data()}{get\_random\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} get\+\_\+random\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1544 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ad6890ae69b3360c7e3aac78eabe6200c}\label{data_8c_ad6890ae69b3360c7e3aac78eabe6200c}} 
+\index{data.c@{data.c}!get\_random\_paths@{get\_random\_paths}}
+\index{get\_random\_paths@{get\_random\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_random\_paths()}{get\_random\_paths()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+\_\+random\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a2ed6cfd8f669aaae58e67eff27c2f483}\label{data_8c_a2ed6cfd8f669aaae58e67eff27c2f483}} 
+\index{data.c@{data.c}!get\_segmentation\_image@{get\_segmentation\_image}}
+\index{get\_segmentation\_image@{get\_segmentation\_image}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_segmentation\_image()}{get\_segmentation\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+segmentation\+\_\+image (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{classes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 637 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_aadbf1a11f015a7149437398e3c231ac8}\label{data_8c_aadbf1a11f015a7149437398e3c231ac8}} 
+\index{data.c@{data.c}!get\_segmentation\_image2@{get\_segmentation\_image2}}
+\index{get\_segmentation\_image2@{get\_segmentation\_image2}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{get\_segmentation\_image2()}{get\_segmentation\_image2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+segmentation\+\_\+image2 (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{classes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 664 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a15d8a732600fb0730bf2f5d204f3e608}\label{data_8c_a15d8a732600fb0730bf2f5d204f3e608}} 
+\index{data.c@{data.c}!load\_all\_cifar10@{load\_all\_cifar10}}
+\index{load\_all\_cifar10@{load\_all\_cifar10}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_all\_cifar10()}{load\_all\_cifar10()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+all\+\_\+cifar10 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1399 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ae288bc38519deb719f39a38b92b3d99c}\label{data_8c_ae288bc38519deb719f39a38b92b3d99c}} 
+\index{data.c@{data.c}!load\_categorical\_data\_csv@{load\_categorical\_data\_csv}}
+\index{load\_categorical\_data\_csv@{load\_categorical\_data\_csv}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_categorical\_data\_csv()}{load\_categorical\_data\_csv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+categorical\+\_\+data\+\_\+csv (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int}]{target,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1323 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a7029154d147a2359400982ded034d539}\label{data_8c_a7029154d147a2359400982ded034d539}} 
+\index{data.c@{data.c}!load\_cifar10\_data@{load\_cifar10\_data}}
+\index{load\_cifar10\_data@{load\_cifar10\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_cifar10\_data()}{load\_cifar10\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+cifar10\+\_\+data (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1340 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a1ebf184d64b6d068463176b30445e90f}\label{data_8c_a1ebf184d64b6d068463176b30445e90f}} 
+\index{data.c@{data.c}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily pthread\+\_\+t load\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structload__args}{load\+\_\+args}}}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1098 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a43b17bfc80111f0e9a22b5748e8db3e6}\label{data_8c_a43b17bfc80111f0e9a22b5748e8db3e6}} 
+\index{data.c@{data.c}!load\_data\_augment@{load\_data\_augment}}
+\index{load\_data\_augment@{load\_data\_augment}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_augment()}{load\_data\_augment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+augment (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{char $\ast$$\ast$}]{labels,  }\item[{int}]{k,  }\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{hierarchy,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{size,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure,  }\item[{int}]{center }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1258 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_af613daa4c07c1d470f0ced3afd6842a6}\label{data_8c_af613daa4c07c1d470f0ced3afd6842a6}} 
+\index{data.c@{data.c}!load\_data\_blocking@{load\_data\_blocking}}
+\index{load\_data\_blocking@{load\_data\_blocking}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_blocking()}{load\_data\_blocking()}}
+{\footnotesize\ttfamily void load\+\_\+data\+\_\+blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structload__args}{load\+\_\+args}}}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1091 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_aef1c432b8082eca32f06d6369dc80f64}\label{data_8c_aef1c432b8082eca32f06d6369dc80f64}} 
+\index{data.c@{data.c}!load\_data\_captcha@{load\_data\_captcha}}
+\index{load\_data\_captcha@{load\_data\_captcha}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_captcha()}{load\_data\_captcha()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+captcha (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{k,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 477 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a62f386d1561d87d9c754c0e8f07aa3ff}\label{data_8c_a62f386d1561d87d9c754c0e8f07aa3ff}} 
+\index{data.c@{data.c}!load\_data\_captcha\_encode@{load\_data\_captcha\_encode}}
+\index{load\_data\_captcha\_encode@{load\_data\_captcha\_encode}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_captcha\_encode()}{load\_data\_captcha\_encode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+captcha\+\_\+encode (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 492 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ab9d8ce6e878b53b6f7c786c1b297e695}\label{data_8c_ab9d8ce6e878b53b6f7c786c1b297e695}} 
+\index{data.c@{data.c}!load\_data\_compare@{load\_data\_compare}}
+\index{load\_data\_compare@{load\_data\_compare}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_compare()}{load\_data\_compare()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+compare (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{m,  }\item[{int}]{classes,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 840 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_acbd80b4bb77de421ce8f0715f6d2a80a}\label{data_8c_acbd80b4bb77de421ce8f0715f6d2a80a}} 
+\index{data.c@{data.c}!load\_data\_detection@{load\_data\_detection}}
+\index{load\_data\_detection@{load\_data\_detection}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_detection()}{load\_data\_detection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+detection (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{m,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{boxes,  }\item[{int}]{classes,  }\item[{float}]{jitter,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 957 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a887edef560c1d5fe3f395f02c0a00612}\label{data_8c_a887edef560c1d5fe3f395f02c0a00612}} 
+\index{data.c@{data.c}!load\_data\_in\_thread@{load\_data\_in\_thread}}
+\index{load\_data\_in\_thread@{load\_data\_in\_thread}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_in\_thread()}{load\_data\_in\_thread()}}
+{\footnotesize\ttfamily pthread\+\_\+t load\+\_\+data\+\_\+in\+\_\+thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structload__args}{load\+\_\+args}}}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1053 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ad50996173393008e6a5c97151ce7f519}\label{data_8c_ad50996173393008e6a5c97151ce7f519}} 
+\index{data.c@{data.c}!load\_data\_iseg@{load\_data\_iseg}}
+\index{load\_data\_iseg@{load\_data\_iseg}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_iseg()}{load\_data\_iseg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+iseg (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{m,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{classes,  }\item[{int}]{boxes,  }\item[{int}]{coords,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 746 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a2d65bb024ba143cf988a3c4b5494a90e}\label{data_8c_a2d65bb024ba143cf988a3c4b5494a90e}} 
+\index{data.c@{data.c}!load\_data\_old@{load\_data\_old}}
+\index{load\_data\_old@{load\_data\_old}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_old()}{load\_data\_old()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+old (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{char $\ast$$\ast$}]{labels,  }\item[{int}]{k,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1122 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ab7e1e67d61f872591c5123f9caf396d6}\label{data_8c_ab7e1e67d61f872591c5123f9caf396d6}} 
+\index{data.c@{data.c}!load\_data\_region@{load\_data\_region}}
+\index{load\_data\_region@{load\_data\_region}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_region()}{load\_data\_region()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+region (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{m,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{size,  }\item[{int}]{classes,  }\item[{float}]{jitter,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 786 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_af85d9bae0061ba5614532cc8ae3d9bf8}\label{data_8c_af85d9bae0061ba5614532cc8ae3d9bf8}} 
+\index{data.c@{data.c}!load\_data\_regression@{load\_data\_regression}}
+\index{load\_data\_regression@{load\_data\_regression}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_regression()}{load\_data\_regression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+regression (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{k,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{size,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1177 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a9169dd3e8659005b0fb2662cb39a7c7c}\label{data_8c_a9169dd3e8659005b0fb2662cb39a7c7c}} 
+\index{data.c@{data.c}!load\_data\_seg@{load\_data\_seg}}
+\index{load\_data\_seg@{load\_data\_seg}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_seg()}{load\_data\_seg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+seg (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{m,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{classes,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure,  }\item[{int}]{div }\end{DoxyParamCaption})}
+
+
+
+Definition at line 698 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a3994c72c392eae1b1c405d439de76e22}\label{data_8c_a3994c72c392eae1b1c405d439de76e22}} 
+\index{data.c@{data.c}!load\_data\_super@{load\_data\_super}}
+\index{load\_data\_super@{load\_data\_super}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_super()}{load\_data\_super()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+super (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{scale }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1147 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a89013987873d2ee74fd382c674335fd5}\label{data_8c_a89013987873d2ee74fd382c674335fd5}} 
+\index{data.c@{data.c}!load\_data\_swag@{load\_data\_swag}}
+\index{load\_data\_swag@{load\_data\_swag}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_swag()}{load\_data\_swag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+swag (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{classes,  }\item[{float}]{jitter }\end{DoxyParamCaption})}
+
+
+
+Definition at line 904 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a041e51bae1bacd4e84338849783e7d72}\label{data_8c_a041e51bae1bacd4e84338849783e7d72}} 
+\index{data.c@{data.c}!load\_data\_tag@{load\_data\_tag}}
+\index{load\_data\_tag@{load\_data\_tag}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_tag()}{load\_data\_tag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+tag (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{k,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{size,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1271 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_afe091cc7ae2ab63ee2a2d6e8d89202f8}\label{data_8c_afe091cc7ae2ab63ee2a2d6e8d89202f8}} 
+\index{data.c@{data.c}!load\_data\_writing@{load\_data\_writing}}
+\index{load\_data\_writing@{load\_data\_writing}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_data\_writing()}{load\_data\_writing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+data\+\_\+writing (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{out\+\_\+w,  }\item[{int}]{out\+\_\+h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1107 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_af32b828afa01bcaac3fa78bb56ec3b6a}\label{data_8c_af32b828afa01bcaac3fa78bb56ec3b6a}} 
+\index{data.c@{data.c}!load\_go@{load\_go}}
+\index{load\_go@{load\_go}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_go()}{load\_go()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} load\+\_\+go (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1432 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a0f4978e407f22ee5001b48a8a4d326e2}\label{data_8c_a0f4978e407f22ee5001b48a8a4d326e2}} 
+\index{data.c@{data.c}!load\_image\_augment\_paths@{load\_image\_augment\_paths}}
+\index{load\_image\_augment\_paths@{load\_image\_augment\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_image\_augment\_paths()}{load\_image\_augment\_paths()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} load\+\_\+image\+\_\+augment\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{size,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{float}]{hue,  }\item[{float}]{saturation,  }\item[{float}]{exposure,  }\item[{int}]{center }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ad1faaba982db4eea6cf7d1eb650186c5}\label{data_8c_ad1faaba982db4eea6cf7d1eb650186c5}} 
+\index{data.c@{data.c}!load\_image\_paths@{load\_image\_paths}}
+\index{load\_image\_paths@{load\_image\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_image\_paths()}{load\_image\_paths()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} load\+\_\+image\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a7a80b004ad7e5bb8168ecd56ca4385c3}\label{data_8c_a7a80b004ad7e5bb8168ecd56ca4385c3}} 
+\index{data.c@{data.c}!load\_image\_paths\_gray@{load\_image\_paths\_gray}}
+\index{load\_image\_paths\_gray@{load\_image\_paths\_gray}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_image\_paths\_gray()}{load\_image\_paths\_gray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} load\+\_\+image\+\_\+paths\+\_\+gray (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a6e9343e6732f6312c9e60b68dc1b1e8c}\label{data_8c_a6e9343e6732f6312c9e60b68dc1b1e8c}} 
+\index{data.c@{data.c}!load\_labels\_paths@{load\_labels\_paths}}
+\index{load\_labels\_paths@{load\_labels\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_labels\_paths()}{load\_labels\_paths()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} load\+\_\+labels\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{labels,  }\item[{int}]{k,  }\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{hierarchy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 581 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a41a8645e7b162b353d30e9c0d6ca76de}\label{data_8c_a41a8645e7b162b353d30e9c0d6ca76de}} 
+\index{data.c@{data.c}!load\_regression\_labels\_paths@{load\_regression\_labels\_paths}}
+\index{load\_regression\_labels\_paths@{load\_regression\_labels\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_regression\_labels\_paths()}{load\_regression\_labels\_paths()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} load\+\_\+regression\+\_\+labels\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line 551 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a75a84e3d5e0670cc1d72c70f7cd767a5}\label{data_8c_a75a84e3d5e0670cc1d72c70f7cd767a5}} 
+\index{data.c@{data.c}!load\_rle@{load\_rle}}
+\index{load\_rle@{load\_rle}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_rle()}{load\_rle()}}
+{\footnotesize\ttfamily void load\+\_\+rle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{int $\ast$}]{rle,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 302 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ac0aa5a060a77127d95d7778d966df356}\label{data_8c_ac0aa5a060a77127d95d7778d966df356}} 
+\index{data.c@{data.c}!load\_tags\_paths@{load\_tags\_paths}}
+\index{load\_tags\_paths@{load\_tags\_paths}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_tags\_paths()}{load\_tags\_paths()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} load\+\_\+tags\+\_\+paths (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{paths,  }\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line 594 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_ab5f0db527025988c7478eddea9d97141}\label{data_8c_ab5f0db527025988c7478eddea9d97141}} 
+\index{data.c@{data.c}!load\_thread@{load\_thread}}
+\index{load\_thread@{load\_thread}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_thread()}{load\_thread()}}
+{\footnotesize\ttfamily void$\ast$ load\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1010 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_acaa01523478e21693a252ffd0851dff6}\label{data_8c_acaa01523478e21693a252ffd0851dff6}} 
+\index{data.c@{data.c}!load\_threads@{load\_threads}}
+\index{load\_threads@{load\_threads}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{load\_threads()}{load\_threads()}}
+{\footnotesize\ttfamily void$\ast$ load\+\_\+threads (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1062 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a8bb2e4f18bee940f1b3e76ada4bf7e09}\label{data_8c_a8bb2e4f18bee940f1b3e76ada4bf7e09}} 
+\index{data.c@{data.c}!normalize\_data\_rows@{normalize\_data\_rows}}
+\index{normalize\_data\_rows@{normalize\_data\_rows}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{normalize\_data\_rows()}{normalize\_data\_rows()}}
+{\footnotesize\ttfamily void normalize\+\_\+data\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1523 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_af68e92104adc66a67ecd17dabf1611cb}\label{data_8c_af68e92104adc66a67ecd17dabf1611cb}} 
+\index{data.c@{data.c}!or\_image@{or\_image}}
+\index{or\_image@{or\_image}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{or\_image()}{or\_image()}}
+{\footnotesize\ttfamily void or\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{src,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{dest,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 318 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_acf22fe41fdd547c8e14f36b236a812e0}\label{data_8c_acf22fe41fdd547c8e14f36b236a812e0}} 
+\index{data.c@{data.c}!print\_letters@{print\_letters}}
+\index{print\_letters@{print\_letters}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{print\_letters()}{print\_letters()}}
+{\footnotesize\ttfamily void print\+\_\+letters (\begin{DoxyParamCaption}\item[{float $\ast$}]{pred,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 452 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_af2b38e075b074d21719d21aecb185793}\label{data_8c_af2b38e075b074d21719d21aecb185793}} 
+\index{data.c@{data.c}!randomize\_boxes@{randomize\_boxes}}
+\index{randomize\_boxes@{randomize\_boxes}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{randomize\_boxes()}{randomize\_boxes()}}
+{\footnotesize\ttfamily void randomize\+\_\+boxes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbox__label}{box\+\_\+label}} $\ast$}]{b,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a99c2d667a09e1234c18e14cac198a273}\label{data_8c_a99c2d667a09e1234c18e14cac198a273}} 
+\index{data.c@{data.c}!randomize\_data@{randomize\_data}}
+\index{randomize\_data@{randomize\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{randomize\_data()}{randomize\_data()}}
+{\footnotesize\ttfamily void randomize\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1479 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a4374d1f158c54ea10bc69d983a765379}\label{data_8c_a4374d1f158c54ea10bc69d983a765379}} 
+\index{data.c@{data.c}!read\_boxes@{read\_boxes}}
+\index{read\_boxes@{read\_boxes}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{read\_boxes()}{read\_boxes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbox__label}{box\+\_\+label}}$\ast$ read\+\_\+boxes (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 138 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a71468107461be4d36f0968f73b1fbc06}\label{data_8c_a71468107461be4d36f0968f73b1fbc06}} 
+\index{data.c@{data.c}!resize\_data@{resize\_data}}
+\index{resize\_data@{resize\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{resize\_data()}{resize\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} resize\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{orig,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1238 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_acbb4f5fcc08c77620c177ea1b0cfc667}\label{data_8c_acbb4f5fcc08c77620c177ea1b0cfc667}} 
+\index{data.c@{data.c}!scale\_data\_rows@{scale\_data\_rows}}
+\index{scale\_data\_rows@{scale\_data\_rows}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{scale\_data\_rows()}{scale\_data\_rows()}}
+{\footnotesize\ttfamily void scale\+\_\+data\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1494 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a84db6f88ee281eccb629b5977db6b914}\label{data_8c_a84db6f88ee281eccb629b5977db6b914}} 
+\index{data.c@{data.c}!select\_data@{select\_data}}
+\index{select\_data@{select\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{select\_data()}{select\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}} select\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}} $\ast$}]{orig,  }\item[{int $\ast$}]{inds }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1188 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_add0a30894499f2a267939f9369a64e9b}\label{data_8c_add0a30894499f2a267939f9369a64e9b}} 
+\index{data.c@{data.c}!smooth\_data@{smooth\_data}}
+\index{smooth\_data@{smooth\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{smooth\_data()}{smooth\_data()}}
+{\footnotesize\ttfamily void smooth\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1387 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_a6ac403c4a56cc8405002dd98f09ee00a}\label{data_8c_a6ac403c4a56cc8405002dd98f09ee00a}} 
+\index{data.c@{data.c}!split\_data@{split\_data}}
+\index{split\_data@{split\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{split\_data()}{split\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}}$\ast$ split\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{part,  }\item[{int}]{total }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1567 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_adf8b21929427108594a57c8102c5f031}\label{data_8c_adf8b21929427108594a57c8102c5f031}} 
+\index{data.c@{data.c}!tile\_data@{tile\_data}}
+\index{tile\_data@{tile\_data}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{tile\_data()}{tile\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdata}{data}}$\ast$ tile\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{orig,  }\item[{int}]{divs,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1211 of file data.\+c.
+
+\mbox{\Hypertarget{data_8c_af343853074dfe80d14a052effdba825b}\label{data_8c_af343853074dfe80d14a052effdba825b}} 
+\index{data.c@{data.c}!translate\_data\_rows@{translate\_data\_rows}}
+\index{translate\_data\_rows@{translate\_data\_rows}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{translate\_data\_rows()}{translate\_data\_rows()}}
+{\footnotesize\ttfamily void translate\+\_\+data\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1502 of file data.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{data_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}\label{data_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}} 
+\index{data.c@{data.c}!mutex@{mutex}}
+\index{mutex@{mutex}!data.c@{data.c}}
+\subsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t mutex = P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER}
+
+
+
+Definition at line 10 of file data.\+c.
+

@@ -1,0 +1,191 @@
+\hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen}{}\section{pymavlink.\+generator.\+mavtestgen Namespace Reference}
+\label{namespacepymavlink_1_1generator_1_1mavtestgen}\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_ab5f7ec934669efadef3e9665c35a4866}{gen\+\_\+value}} (f, \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}, language)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a383a0b2b58cf23c93d38588c1a63b0f0}{generate\+\_\+methods\+\_\+python}} (\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a62d1fc41625a9ec5e92023a59bf698bf}{outf}}, \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a57c1b5445619b3fe490684298c5c36c6}{msgs}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_aea36216fc3d20f573590548aeee1a08f}{generate\+\_\+methods\+\_\+C}} (\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a62d1fc41625a9ec5e92023a59bf698bf}{outf}}, \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a57c1b5445619b3fe490684298c5c36c6}{msgs}})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_ab620e2ff96a457c9698e3708c7316838}{parser}} = Argument\+Parser(description=\char`\"{}This tool generate M\+A\+V\+Link \mbox{\hyperlink{classtest}{test}} suite\char`\"{})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_ab45eb25c7f20d761a4469d739be313ce}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a226f47485edb2f3f791d5167a2629b40}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a91aed16f2cce928c890e7723fdfca8bc}{metavar}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_ab3c4c9ffb18228eea8f7518c2228cc70}{nargs}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a223b963924b8f6511f130738e636ae5a}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a57c1b5445619b3fe490684298c5c36c6}{msgs}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a53aa39d8783bf0f9d981719593561c9e}{enums}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a107cb672cec756bd43d417aadf4e1892}{m}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a836e99b235ff4bcfe1d25538a4a0841c}{e}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavtestgen_a62d1fc41625a9ec5e92023a59bf698bf}{outf}} = open(args.\+output + \textquotesingle{}.py\textquotesingle{}, \char`\"{}w\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}generate a MAVLink test suite
+
+Copyright Andrew Tridgell 2011
+Released under GNU GPL version 3 or later
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_ab5f7ec934669efadef3e9665c35a4866}\label{namespacepymavlink_1_1generator_1_1mavtestgen_ab5f7ec934669efadef3e9665c35a4866}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!gen\_value@{gen\_value}}
+\index{gen\_value@{gen\_value}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{gen\_value()}{gen\_value()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavtestgen.\+gen\+\_\+value (\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{i,  }\item[{}]{language }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate a test value for the ith field of a message\end{DoxyVerb}
+ 
+
+Definition at line 17 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_aea36216fc3d20f573590548aeee1a08f}\label{namespacepymavlink_1_1generator_1_1mavtestgen_aea36216fc3d20f573590548aeee1a08f}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!generate\_methods\_C@{generate\_methods\_C}}
+\index{generate\_methods\_C@{generate\_methods\_C}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{generate\_methods\_C()}{generate\_methods\_C()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavtestgen.\+generate\+\_\+methods\+\_\+C (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msgs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a383a0b2b58cf23c93d38588c1a63b0f0}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a383a0b2b58cf23c93d38588c1a63b0f0}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!generate\_methods\_python@{generate\_methods\_python}}
+\index{generate\_methods\_python@{generate\_methods\_python}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{generate\_methods\_python()}{generate\_methods\_python()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavtestgen.\+generate\+\_\+methods\+\_\+python (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msgs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file mavtestgen.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a223b963924b8f6511f130738e636ae5a}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a223b963924b8f6511f130738e636ae5a}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!args@{args}}
+\index{args@{args}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 114 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_ab45eb25c7f20d761a4469d739be313ce}\label{namespacepymavlink_1_1generator_1_1mavtestgen_ab45eb25c7f20d761a4469d739be313ce}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!default@{default}}
+\index{default@{default}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+default}
+
+
+
+Definition at line 112 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a836e99b235ff4bcfe1d25538a4a0841c}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a836e99b235ff4bcfe1d25538a4a0841c}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!e@{e}}
+\index{e@{e}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+e}
+
+
+
+Definition at line 120 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a53aa39d8783bf0f9d981719593561c9e}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a53aa39d8783bf0f9d981719593561c9e}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!enums@{enums}}
+\index{enums@{enums}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{enums}{enums}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+generator.\+mavtestgen.\+enums = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 117 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a226f47485edb2f3f791d5167a2629b40}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a226f47485edb2f3f791d5167a2629b40}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!help@{help}}
+\index{help@{help}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+help}
+
+
+
+Definition at line 112 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a107cb672cec756bd43d417aadf4e1892}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a107cb672cec756bd43d417aadf4e1892}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!m@{m}}
+\index{m@{m}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+m}
+
+
+
+Definition at line 120 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a91aed16f2cce928c890e7723fdfca8bc}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a91aed16f2cce928c890e7723fdfca8bc}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!metavar@{metavar}}
+\index{metavar@{metavar}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{metavar}{metavar}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+metavar}
+
+
+
+Definition at line 113 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a57c1b5445619b3fe490684298c5c36c6}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a57c1b5445619b3fe490684298c5c36c6}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!msgs@{msgs}}
+\index{msgs@{msgs}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{msgs}{msgs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+generator.\+mavtestgen.\+msgs = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 116 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_ab3c4c9ffb18228eea8f7518c2228cc70}\label{namespacepymavlink_1_1generator_1_1mavtestgen_ab3c4c9ffb18228eea8f7518c2228cc70}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!nargs@{nargs}}
+\index{nargs@{nargs}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+nargs}
+
+
+
+Definition at line 113 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_a62d1fc41625a9ec5e92023a59bf698bf}\label{namespacepymavlink_1_1generator_1_1mavtestgen_a62d1fc41625a9ec5e92023a59bf698bf}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!outf@{outf}}
+\index{outf@{outf}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{outf}{outf}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+outf = open(args.\+output + \textquotesingle{}.py\textquotesingle{}, \char`\"{}w\char`\"{})}
+
+
+
+Definition at line 131 of file mavtestgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavtestgen_ab620e2ff96a457c9698e3708c7316838}\label{namespacepymavlink_1_1generator_1_1mavtestgen_ab620e2ff96a457c9698e3708c7316838}} 
+\index{pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}!parser@{parser}}
+\index{parser@{parser}!pymavlink.generator.mavtestgen@{pymavlink.generator.mavtestgen}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavtestgen.\+parser = Argument\+Parser(description=\char`\"{}This tool generate M\+A\+V\+Link \mbox{\hyperlink{classtest}{test}} suite\char`\"{})}
+
+
+
+Definition at line 111 of file mavtestgen.\+py.
+

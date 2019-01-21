@@ -1,0 +1,220 @@
+M\+A\+V\+Link extendable communication node for R\+OS with proxy for Ground Control Station (e.\+g. \href{http://qgroundcontrol.org/}{\texttt{ Q\+Ground\+Control}}).
+
+R\+OS A\+PI documentation moved to \href{http://wiki.ros.org/mavros}{\texttt{ wiki.\+ros.\+org}}.
+
+\subsection*{Features }
+
+
+\begin{DoxyItemize}
+\item Communication with autopilot via serial port, \mbox{\hyperlink{classUDP}{U\+DP}} or \mbox{\hyperlink{classTCP}{T\+CP}} (e.\+g. \href{http://px4.io/}{\texttt{ P\+X4 Pro}} or \href{http://ardupilot.com/}{\texttt{ Ardu\+Pilot}})
+\item Internal proxy for Ground Control Station (serial, \mbox{\hyperlink{classUDP}{U\+DP}}, \mbox{\hyperlink{classTCP}{T\+CP}})
+\item Plugin system for R\+O\+S-\/\+M\+A\+V\+Link translation
+\item Parameter manipulation tool
+\item Waypoint manipulation tool
+\item P\+X4\+Flow support (by \href{https://github.com/mavlink/mavros/tree/master/mavros_extras}{\texttt{ mavros\+\_\+extras}})
+\item O\+F\+F\+B\+O\+A\+RD mode support
+\item Geographic coordinates conversions.
+\end{DoxyItemize}
+
+\subsection*{Limitations }
+
+Only for Linux. Depends on \href{http://www.boost.org/}{\texttt{ Boost library}}, G\+CC 4.\+8+ (C++11 support). Catkin build system required.
+
+This package are dependent on \href{http://wiki.ros.org/mavlink}{\texttt{ ros-\/$\ast$-\/mavlink}} build from \href{https://github.com/mavlink/mavlink-gbp-release}{\texttt{ mavlink-\/gbp-\/release}}. It exists in R\+OS package index and usually updates each month.
+
+\subsection*{Connection U\+RL }
+
+Connection defined by U\+RL, you can use any supported type for F\+CU and G\+CS.
+
+Supported schemas\+:
+
+
+\begin{DoxyItemize}
+\item Serial\+: {\ttfamily /path/to/serial/device\mbox{[}\+:baudrate\mbox{]}}
+\item Serial\+: {\ttfamily serial\+:///path/to/serial/device\mbox{[}\+:baudrate\mbox{]}\mbox{[}?ids=sysid,compid\mbox{]}}
+\item Serial with hardware flow control\+: {\ttfamily serial-\/hwfc\+:///path/to/serial/device\mbox{[}\+:baudrate\mbox{]}\mbox{[}?ids=sysid,compid\mbox{]}}
+\item \mbox{\hyperlink{classUDP}{U\+DP}}\+: {\ttfamily udp\+://\mbox{[}bind\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}@\mbox{[}remote\+\_\+host\mbox{[}\+:port\mbox{]}\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}}
+\item \mbox{\hyperlink{classUDP}{U\+DP}} broadcast until G\+CS discovery\+: {\ttfamily udp-\/b\+://\mbox{[}bind\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}@\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}}
+\item \mbox{\hyperlink{classUDP}{U\+DP}} broadcast (permanent)\+: {\ttfamily udp-\/pb\+://\mbox{[}bind\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}@\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}}
+\item {\ttfamily \mbox{\hyperlink{classTCP}{T\+CP}} client\+:}tcp\+://\mbox{[}server\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}{\ttfamily }
+\item {\ttfamily \mbox{\hyperlink{classTCP}{T\+CP}} server\+:}tcp-\/l\+://\mbox{[}bind\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}\`{}
+\end{DoxyItemize}
+
+Note\+:
+
+
+\begin{DoxyItemize}
+\item Ids from U\+RL overrides value given by system\+\_\+id \& component\+\_\+id parameters.
+\item bind\+\_\+host -\/ default {\ttfamily 0.\+0.\+0.\+0} -\/ i.\+e. I\+P4 A\+NY
+\item \mbox{\hyperlink{classUDP}{U\+DP}} default ports\+: 14555 @ 14550
+\item \mbox{\hyperlink{classUDP}{U\+DP}} remote address updated every time with incoming packet on bind port.
+\item \mbox{\hyperlink{classTCP}{T\+CP}} default port\+: 5760
+\end{DoxyItemize}
+
+\subsection*{Coordinate frames }
+
+M\+A\+V\+R\+OS does translate Aerospace N\+ED frames, used in F\+C\+Us to R\+OS E\+NU frames and vice-\/versa. For translate airframe related data we simply apply rotation 180° about R\+O\+LL (X) axis. For local we apply 180° about R\+O\+LL (X) and 90° about Y\+AW (Z) axes. Please read documents from issue \#473 for additional information.
+
+All the conversions are handled in {\ttfamily \mbox{\hyperlink{ftf__frame__conversions_8cpp}{src/lib/ftf\+\_\+frame\+\_\+conversions.\+cpp}}} and {\ttfamily \mbox{\hyperlink{ftf__quaternion__utils_8cpp}{src/lib/ftf\+\_\+quaternion\+\_\+utils.\+cpp}}} and tested in {\ttfamily \mbox{\hyperlink{test__frame__conversions_8cpp}{test/test\+\_\+frame\+\_\+conversions.\+cpp}}} and {\ttfamily \mbox{\hyperlink{test__quaternion__utils_8cpp}{test/test\+\_\+quaternion\+\_\+utils.\+cpp}}} respectively.
+
+Related issues\+: \href{https://github.com/mavlink/mavros/issues/49}{\texttt{ \#49 (outdated)}}, \href{https://github.com/mavlink/mavros/issues/216}{\texttt{ \#216 (outdated)}}, \href{https://github.com/mavlink/mavros/issues/317}{\texttt{ \#317 (outdated)}}, \href{https://github.com/mavlink/mavros/issues/319}{\texttt{ \#319 (outdated)}}, \href{https://github.com/mavlink/mavros/issues/321}{\texttt{ \#321 (outdated)}}, \href{https://github.com/mavlink/mavros/issues/473}{\texttt{ \#473}}. Documents\+: \href{https://docs.google.com/document/d/1bDhaozrUu9F915T58WGzZeOM-McyU20dwxX-NRum1KA/edit}{\texttt{ Frame Conversions}}, \href{https://docs.google.com/spreadsheets/d/1LnsWTblU92J5_SMinTvBvHJWx6sqvzFa8SKbn8TXlnU/edit\#gid=0}{\texttt{ Mavlink coordinate frames}}.
+
+M\+A\+V\+R\+OS also allows conversion of geodetic and geocentric coordinates through \href{https://geographiclib.sourceforge.io/}{\texttt{ Geographic\+Lib}} given that\+:
+\begin{DoxyItemize}
+\item {\ttfamily geographic\+\_\+msgs} and {\ttfamily Nat\+Sat\+Fix.\+msg} require the L\+LA fields to be filled in W\+G\+S-\/84 datum, meaning that the altitude should be the height above the W\+G\+S-\/84 ellipsoid. For that, a conversion from the height above the geoid (A\+M\+SL, considering the egm96 geoid model) to height above the W\+G\+S-\/84 ellipsoid, and vice-\/versa, is available and used in several plugins;
+\item According to R\+OS R\+EP 105, the {\ttfamily earth} frame should be propagated in E\+C\+EF (Earth-\/\+Centered, Earth-\/\+Fixed) local coordinates. For that, the functionalities of Geographic\+Lib are used in order to allow conversion from geodetic coordinates to geocentric coordinates;
+\item The translation from G\+PS coordinates to local geocentric coordinates require the definition of a local origin on the {\ttfamily map} frame, in E\+C\+EF, and calculate the offset to it in E\+NU. All the conversions are supported by Geographic\+Lib classes and methods and implemented in the {\ttfamily global\+\_\+position} plugin.
+\end{DoxyItemize}
+
+\subsection*{Programs }
+
+\subsubsection*{mavros\+\_\+node -- main communication node}
+
+Main node. Allow disable G\+CS proxy by setting empty U\+RL.
+
+Run example (autopilot connected via U\+SB at 921600 baud, G\+CS running on the host with IP 172.\+16.\+254.\+1)\+: \begin{DoxyVerb}rosrun mavros mavros_node _fcu_url:=/dev/ttyACM0:921600 _gcs_url:=udp://@172.16.254.1
+\end{DoxyVerb}
+
+
+\subsubsection*{gcs\+\_\+bridge -- additional proxy}
+
+Allows you to add a channel for G\+CS. For example if you need to connect one G\+CS for H\+IL and the second on the tablet.
+
+Example (S\+I\+TL \& Q\+Ground\+Control)\+: \begin{DoxyVerb}rosrun mavros mavros_node _gcs_url:='udp://:14556@172.16.254.129:14551' &
+rosrun mavros gcs_bridge _gcs_url:='udp://@172.16.254.129'
+\end{DoxyVerb}
+
+
+\subsection*{Launch Files }
+
+Launch files are provided for use with common F\+C\+Us, in particular \mbox{[}Pixhawk\mbox{]}(pixhawk)\+:
+
+
+\begin{DoxyItemize}
+\item \href{launch/px4.launch}{\texttt{ px4.\+launch}} -- for use with the P\+X4 Pro flight stack (for V\+T\+OL, multicopters and planes)
+\item \href{launch/apm.launch}{\texttt{ apm.\+launch}} -- for use with A\+PM flight stacks (e.\+g., all versions of Ardu\+Plane, Ardu\+Copter, etc)
+\end{DoxyItemize}
+
+Examples\+: \begin{DoxyVerb}roslaunch mavros px4.launch
+roslaunch mavros apm.launch fcu_url:=tcp://localhost gcs_url:=udp://@
+\end{DoxyVerb}
+
+
+\subsection*{Installation }
+
+\subsubsection*{Required dependencies}
+
+Most of the R\+OS dependencies are supported and installed by {\ttfamily rosdep}, including external libraries as Eigen and Boost.
+
+\href{https://geographiclib.sourceforge.io/}{\texttt{ Geographic\+Lib}} can be installed by {\ttfamily apt-\/get} and it is already included on the rosdep of M\+A\+V\+R\+OS package. It is also possible to compile it and install it from src but be advised to have the proper install directories the same as the ones of the {\ttfamily apt-\/get} install, in order to make sure that the {\ttfamily Find\+Geographic\+Lib.\+cmake} finds the required shared libraries ({\ttfamily lib\+Geographic.\+so}).
+
+Since {\bfseries{Geographic\+Lib requires certain datasets}} (mainly the geoid dataset) so to fulfill certain calculations, these need to be installed manually by the user using {\ttfamily geographiclib-\/tools}, which can be installed by {\ttfamily apt-\/get} in Debian systems. For a quicker procedure, just {\bfseries{run the available script in the \char`\"{}mavros/scripts\char`\"{} folder, {\ttfamily install\+\_\+geographiclib\+\_\+datasets.\+sh}}}.
+
+Note that if you are using an older M\+A\+V\+R\+OS release source install and want to update to a new one, remember to run {\ttfamily rosdep update} before running {\ttfamily rosdep install -\/-\/from-\/paths \$\{R\+O\+S\+\_\+\+W\+O\+R\+K\+S\+P\+A\+CE\} -\/-\/ignore-\/src -\/-\/rosdistro=\$\{R\+O\+S\+D\+I\+S\+T\+RO\}}, with {\ttfamily R\+O\+S\+\_\+\+W\+O\+R\+K\+S\+P\+A\+CE} your src folder of catkin workspace. This will allow updating the {\ttfamily rosdep} list and install the required dependencies when issuing {\ttfamily rosdep install}.
+
+\+:bangbang\+: {\bfseries{The geoid dataset is mandatory to allow the conversion between heights in order to respect R\+OS msg A\+PI. Not having the dataset available will shutdown the {\ttfamily mavros\+\_\+node}}} \+:bangbang\+:
+
+\+:heavy\+\_\+exclamation\+\_\+mark\+:Run {\ttfamily install\+\_\+geographiclib\+\_\+datasets.\+sh} to install all datasets or {\ttfamily geographiclib-\/datasets-\/download egm96\+\_\+5} ({\itshape Debian 7}, {\itshape Ubuntu 14.\+04}, {\itshape 14.\+10}), {\ttfamily geographiclib-\/get-\/geoids egm96-\/5} ({\itshape Debian 8}, {\itshape Fedora 22}, {\itshape Ubuntu 15.\+04} or later) to install the geoid dataset only\+:heavy\+\_\+exclamation\+\_\+mark\+:
+
+\subsubsection*{Binary installation (deb)}
+
+R\+OS repository has binary packages for Ubuntu x86, amd64 (x86\+\_\+64) and armhf (A\+R\+Mv7). Kinetic also support Debian Jessie amd64 and arm64 (A\+R\+Mv8).
+
+Just use {\ttfamily apt-\/get} for installation\+: \begin{DoxyVerb}sudo apt-get install ros-kinetic-mavros ros-kinetic-mavros-extras
+\end{DoxyVerb}
+
+
+Then install Geographic\+Lib datasets by running the {\ttfamily install\+\_\+geographiclib\+\_\+datasets.\+sh} script\+: \begin{DoxyVerb}wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+./install_geographiclib_datasets.sh
+\end{DoxyVerb}
+
+
+\subsubsection*{Source installation}
+
+Use {\ttfamily wstool} utility for retrieving sources and \href{https://catkin-tools.readthedocs.org/en/latest/}{\texttt{ {\ttfamily catkin} tool}} for build.
+
+N\+O\+TE\+: The source installation instructions are for the R\+OS Kinetic release.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get install python-catkin-tools python-rosinstall-generator -y}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 1. Create the workspace: unneded if you already has workspace}
+\DoxyCodeLine{mkdir -p ~/catkin\_ws/src}
+\DoxyCodeLine{cd ~/catkin\_ws}
+\DoxyCodeLine{catkin init}
+\DoxyCodeLine{wstool init src}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 2. Install MAVLink}
+\DoxyCodeLine{\#    we use the Kinetic reference for all ROS distros as it's not distro-specific and up to date}
+\DoxyCodeLine{rosinstall\_generator --rosdistro kinetic mavlink | tee /tmp/mavros.rosinstall}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 3. Install MAVROS: get source (upstream - released)}
+\DoxyCodeLine{rosinstall\_generator --upstream mavros | tee -a /tmp/mavros.rosinstall}
+\DoxyCodeLine{\# alternative: latest source}
+\DoxyCodeLine{\# rosinstall\_generator --upstream-development mavros | tee -a /tmp/mavros.rosinstall}
+\DoxyCodeLine{\# For fetching all the dependencies into your catkin\_ws, just add '--deps' to the above scripts}
+\DoxyCodeLine{\# ex: rosinstall\_generator --upstream mavros --deps | tee -a /tmp/mavros.rosinstall}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 4. Create workspace \& deps}
+\DoxyCodeLine{wstool merge -t src /tmp/mavros.rosinstall}
+\DoxyCodeLine{wstool update -t src -j4}
+\DoxyCodeLine{rosdep install --from-paths src --ignore-src -y}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 5. Install GeographicLib datasets:}
+\DoxyCodeLine{./src/mavros/mavros/scripts/install\_geographiclib\_datasets.sh}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 6. Build source}
+\DoxyCodeLine{catkin build}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# 7. Make sure that you use setup.bash or setup.zsh from workspace.}
+\DoxyCodeLine{\#    Else rosrun can't find nodes from this workspace.}
+\DoxyCodeLine{source devel/setup.bash}
+\end{DoxyCode}
+
+
+{\itshape Build error}. if you has error with missing {\ttfamily mavlink$\ast$} then you need fresh mavlink package. You may update from \href{http://packages.ros.org/ros-shadow-fixed/ubuntu/pool/main/r/ros-jade-mavlink/}{\texttt{ ros-\/shadow-\/fixed}} (binary installation) or redo script steps 2 \& 4.
+
+{\itshape Note}. Since M\+A\+V\+Link 2.\+0 merged (0.\+18) all dialects supported by same binary. Unfortunately overlap of v1.\+0 message ID\textquotesingle{}s not fully handled, first loaded message forbid further changes. Load order always\+:
+
+
+\begin{DoxyEnumerate}
+\item common
+\item ardupilotmega
+\item alphabetical ordered list
+\item ...
+\end{DoxyEnumerate}
+
+{\itshape Note}\+: {\ttfamily M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+I\+A\+L\+E\+CT} not used anymore.
+
+\subsection*{Troubleshooting }
+
+\subsubsection*{Error\+: serial0\+: receive\+: End of file}
+
+This issue should have been solve in mavros v0.\+23.\+2, it was found to be a Boost.\+A\+S\+IO error and should be fix in release $>$ v1.\+12.\+0 ( $>$Boost 1.\+66).
+
+\subsection*{Contributing }
+
+See C\+O\+N\+T\+R\+I\+B\+U\+T\+I\+NG.md.
+
+\subsection*{Glossary }
+
+
+\begin{DoxyItemize}
+\item {\itshape G\+CS} — Ground Control Station
+\item {\itshape F\+CU} — Flight Control Unit (aka {\itshape FC})
+\item {\itshape O\+BC} — On\+Board Computer (your odroid or raspberry)
+\end{DoxyItemize}
+
+\subsection*{Links }
+
+
+\begin{DoxyItemize}
+\item \href{http://mavlink.org/mavlink/start}{\texttt{ M\+A\+V\+Link}} -- communication protocol
+\item \href{https://github.com/mavlink/mavlink_ros}{\texttt{ mavlink\+\_\+ros}} -- original R\+OS node (few messages, no proxy)
+\item \href{http://pixhawk.org/}{\texttt{ Pixhawk}} -- Reference hardware platform
+\item \href{http://px4.io/}{\texttt{ P\+X4}} -- Reference implementation in the academic community
+\item \href{http://ardupilot.com/}{\texttt{ Ardu\+Pilot}} -- tested autopilot A\+PM\+:Plane (default command set)
+\item \href{http://qgroundcontrol.org/}{\texttt{ Q\+Ground\+Control}} -- tested ground control station for Android, i\+OS, Mac OS, Linux and Windows
+\item \href{https://github.com/mavlink/mavros/tree/master/mavros_extras}{\texttt{ mavros\+\_\+extras}} -- extra plugins \& node for mavros 
+\end{DoxyItemize}

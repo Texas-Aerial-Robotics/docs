@@ -1,0 +1,53 @@
+\hypertarget{l2norm__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/l2norm\+\_\+layer.c File Reference}
+\label{l2norm__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/l2norm\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/l2norm\_layer.c}}
+{\ttfamily \#include \char`\"{}l2norm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{l2norm__layer_8c_a2e7890e6f88d9846670220d4e80fca90}{make\+\_\+l2norm\+\_\+layer}} (int batch, int inputs)
+\item 
+void \mbox{\hyperlink{l2norm__layer_8c_ae2b936caa7cdcc4c1346f5fe2235f9b6}{forward\+\_\+l2norm\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{l2norm__layer_8c_a95784c9112a54b13b19c2f3765fc06c9}{backward\+\_\+l2norm\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{l2norm__layer_8c_a95784c9112a54b13b19c2f3765fc06c9}\label{l2norm__layer_8c_a95784c9112a54b13b19c2f3765fc06c9}} 
+\index{l2norm\_layer.c@{l2norm\_layer.c}!backward\_l2norm\_layer@{backward\_l2norm\_layer}}
+\index{backward\_l2norm\_layer@{backward\_l2norm\_layer}!l2norm\_layer.c@{l2norm\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_l2norm\_layer()}{backward\_l2norm\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+l2norm\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file l2norm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{l2norm__layer_8c_ae2b936caa7cdcc4c1346f5fe2235f9b6}\label{l2norm__layer_8c_ae2b936caa7cdcc4c1346f5fe2235f9b6}} 
+\index{l2norm\_layer.c@{l2norm\_layer.c}!forward\_l2norm\_layer@{forward\_l2norm\_layer}}
+\index{forward\_l2norm\_layer@{forward\_l2norm\_layer}!l2norm\_layer.c@{l2norm\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_l2norm\_layer()}{forward\_l2norm\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+l2norm\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file l2norm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{l2norm__layer_8c_a2e7890e6f88d9846670220d4e80fca90}\label{l2norm__layer_8c_a2e7890e6f88d9846670220d4e80fca90}} 
+\index{l2norm\_layer.c@{l2norm\_layer.c}!make\_l2norm\_layer@{make\_l2norm\_layer}}
+\index{make\_l2norm\_layer@{make\_l2norm\_layer}!l2norm\_layer.c@{l2norm\_layer.c}}
+\subsubsection{\texorpdfstring{make\_l2norm\_layer()}{make\_l2norm\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+l2norm\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file l2norm\+\_\+layer.\+c.
+

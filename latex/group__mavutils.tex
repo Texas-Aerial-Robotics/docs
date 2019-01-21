@@ -1,0 +1,331 @@
+\hypertarget{group__mavutils}{}\section{Mavutils}
+\label{group__mavutils}\index{Mavutils@{Mavutils}}
+
+
+Some useful utils.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavconn}{mavconn}}
+\item 
+ \mbox{\hyperlink{namespacemavconn_1_1utils}{mavconn\+::utils}}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1utils}{mavros\+::utils}}
+\item 
+ \mbox{\hyperlink{namespacesetup}{setup}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{mavros\+::utils\+::timesync\+\_\+mode}} \{ \mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7ab50339a10e1de285ac99d4c3990b8693}{mavros\+::utils\+::timesync\+\_\+mode\+::\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a2b45d810cc872a32caa6e524d97e1bc1}{mavros\+::utils\+::timesync\+\_\+mode\+::\+M\+A\+V\+L\+I\+NK}}, 
+\mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a1136c8e00bec79c43c2c579ef03e934f}{mavros\+::utils\+::timesync\+\_\+mode\+::\+O\+N\+B\+O\+A\+RD}}, 
+\mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7aeb8f4226b2bcd1848b8945edb9120428}{mavros\+::utils\+::timesync\+\_\+mode\+::\+P\+A\+S\+S\+T\+H\+R\+O\+U\+GH}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{group__mavutils_ga0d03da68919138512c198995276dd9ea}{mavconn\+::utils\+::format}} (const std\+::string \&fmt, Args ... args)
+\begin{DoxyCompactList}\small\item\em Make printf-\/formatted std\+::string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\bool \mbox{\hyperlink{group__mavutils_gac5ea11f12ae2183df1dc4a810ff0a87b}{mavconn\+::utils\+::set\+\_\+this\+\_\+thread\+\_\+name}} (const std\+::string \&name, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Set name to current thread, printf-\/like. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const std\+::string \mbox{\hyperlink{group__mavutils_ga6c132876dd85249684a7935fe0bc8f51}{mavconn\+::utils\+::to\+\_\+string\+\_\+ss}} (T \&obj)
+\begin{DoxyCompactList}\small\item\em Convert to string objects with operator $<$$<$. \end{DoxyCompactList}\item 
+constexpr size\+\_\+t \mbox{\hyperlink{group__mavutils_ga301ff0ee568776aa543ccaff3c1c039c}{mavconn\+::utils\+::operator\char`\"{}\char`\"{}\+\_\+\+KiB}} (unsigned long long sz)
+\item 
+{\footnotesize template$<$typename \+\_\+T $>$ }\\constexpr std\+::underlying\+\_\+type$<$ \+\_\+T $>$\+::type \mbox{\hyperlink{group__mavutils_gaed9174e090ae0f75aeb9096b7cb6be56}{mavros\+::utils\+::enum\+\_\+value}} (\+\_\+T e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gac86aed43baa119369cb7eb523c7de067}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga014455201c2903b835912e056c64d02f}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON e)
+\begin{DoxyCompactList}\small\item\em Retrieve alias of the orientation received by M\+A\+V\+Link msg. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaf790b7f7da119e86e0875c9def1f45aa}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gac2fb656a52c699748f929392f47523bf}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+T\+Y\+PE}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaafc0054ec09db1d1fd1560da7be6d265}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga3e1f543b99b1e237a90ccdad25bd3bdb}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+E\+S\+T\+I\+M\+A\+T\+O\+R\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga8e40158252eb7c24a59036afd35bf12b}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+A\+D\+S\+B\+\_\+\+A\+L\+T\+I\+T\+U\+D\+E\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gab8a1c172a6993c1b668f923e58da594f}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+A\+D\+S\+B\+\_\+\+E\+M\+I\+T\+T\+E\+R\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaa3707eb566a03171dd282eeb7d3ca512}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+R\+E\+S\+U\+LT e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaa89b7f807c7cf4be1a8d04377d8ad3bc}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+F\+R\+A\+ME}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga5edcd4c7df23cca0ea720877f0fe4142}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+N\+S\+OR e)
+\item 
+{\footnotesize template$<$typename \+\_\+T $>$ }\\std\+::string \mbox{\hyperlink{group__mavutils_ga80987ce0a2019df54e1fe62b7b53de7f}{mavros\+::utils\+::to\+\_\+string\+\_\+enum}} (int e)
+\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__mavutils_ga9f21cd4e0233c34591600f8809c4fb2b}{mavros\+::utils\+::sensor\+\_\+orientation\+\_\+matching}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON \mbox{\hyperlink{structorientation}{orientation}})
+\begin{DoxyCompactList}\small\item\em Function to match the received orientation received by M\+A\+V\+Link msg and the rotation of the sensor relative to the F\+CU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mavutils_ga0dc70c024ad33cd50af1c9e9bcfaa0c1}{mavros\+::utils\+::sensor\+\_\+orientation\+\_\+from\+\_\+str}} (const std\+::string \&sensor\+\_\+orientation)
+\begin{DoxyCompactList}\small\item\em Retrieve sensor orientation number from alias name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} \mbox{\hyperlink{group__mavutils_gaacb385ef1414eb5c38c20f4f4d91d321}{mavros\+::utils\+::timesync\+\_\+mode\+\_\+from\+\_\+str}} (const std\+::string \&mode)
+\begin{DoxyCompactList}\small\item\em Retreive timesync mode from name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+F\+R\+A\+ME}} \mbox{\hyperlink{group__mavutils_gaeecc00ce9cf4ea787c7309235e35cf8d}{mavros\+::utils\+::mav\+\_\+frame\+\_\+from\+\_\+str}} (const std\+::string \&mav\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Retreive M\+A\+V\+\_\+\+F\+R\+A\+ME from name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Some useful utils. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}\label{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}} 
+\index{Mavutils@{Mavutils}!timesync\_mode@{timesync\_mode}}
+\index{timesync\_mode@{timesync\_mode}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{timesync\_mode}{timesync\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{mavros\+::utils\+::timesync\+\_\+mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Possible modes of timesync operation
+
+Used by \mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} class, but it can\textquotesingle{}t be defined inside because enum is used in utils. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!Mavutils@{Mavutils}}\index{Mavutils@{Mavutils}!NONE@{NONE}}}\mbox{\Hypertarget{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7ab50339a10e1de285ac99d4c3990b8693}\label{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&Disabled. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK@{MAVLINK}!Mavutils@{Mavutils}}\index{Mavutils@{Mavutils}!MAVLINK@{MAVLINK}}}\mbox{\Hypertarget{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a2b45d810cc872a32caa6e524d97e1bc1}\label{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a2b45d810cc872a32caa6e524d97e1bc1}} 
+M\+A\+V\+L\+I\+NK&Via T\+I\+M\+E\+S\+Y\+NC message. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONBOARD@{ONBOARD}!Mavutils@{Mavutils}}\index{Mavutils@{Mavutils}!ONBOARD@{ONBOARD}}}\mbox{\Hypertarget{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a1136c8e00bec79c43c2c579ef03e934f}\label{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a1136c8e00bec79c43c2c579ef03e934f}} 
+O\+N\+B\+O\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PASSTHROUGH@{PASSTHROUGH}!Mavutils@{Mavutils}}\index{Mavutils@{Mavutils}!PASSTHROUGH@{PASSTHROUGH}}}\mbox{\Hypertarget{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7aeb8f4226b2bcd1848b8945edb9120428}\label{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7aeb8f4226b2bcd1848b8945edb9120428}} 
+P\+A\+S\+S\+T\+H\+R\+O\+U\+GH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 44 of file utils.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__mavutils_gaed9174e090ae0f75aeb9096b7cb6be56}\label{group__mavutils_gaed9174e090ae0f75aeb9096b7cb6be56}} 
+\index{Mavutils@{Mavutils}!enum\_value@{enum\_value}}
+\index{enum\_value@{enum\_value}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{enum\_value()}{enum\_value()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+constexpr std\+::underlying\+\_\+type$<$\+\_\+T$>$\+::type mavros\+::utils\+::enum\+\_\+value (\begin{DoxyParamCaption}\item[{\+\_\+T}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Helper to get enum value from strongly typed enum (enum class). 
+
+Definition at line 55 of file utils.\+h.
+
+\mbox{\Hypertarget{group__mavutils_ga0d03da68919138512c198995276dd9ea}\label{group__mavutils_ga0d03da68919138512c198995276dd9ea}} 
+\index{Mavutils@{Mavutils}!format@{format}}
+\index{format@{format}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+std\+::string mavconn\+::utils\+::format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fmt,  }\item[{Args ...}]{args }\end{DoxyParamCaption})}
+
+
+
+Make printf-\/formatted std\+::string. 
+
+
+
+Definition at line 35 of file thread\+\_\+utils.\+h.
+
+\mbox{\Hypertarget{group__mavutils_gaeecc00ce9cf4ea787c7309235e35cf8d}\label{group__mavutils_gaeecc00ce9cf4ea787c7309235e35cf8d}} 
+\index{Mavutils@{Mavutils}!mav\_frame\_from\_str@{mav\_frame\_from\_str}}
+\index{mav\_frame\_from\_str@{mav\_frame\_from\_str}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{mav\_frame\_from\_str()}{mav\_frame\_from\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{M\+A\+V\+\_\+\+F\+R\+A\+ME}} mavros\+::utils\+::mav\+\_\+frame\+\_\+from\+\_\+str (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mav\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Retreive M\+A\+V\+\_\+\+F\+R\+A\+ME from name. 
+
+
+
+Definition at line 467 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__mavutils_ga301ff0ee568776aa543ccaff3c1c039c}\label{group__mavutils_ga301ff0ee568776aa543ccaff3c1c039c}} 
+\index{Mavutils@{Mavutils}!operator\char`\"{}\char`\"{}\_KiB@{operator""""\_KiB}}
+\index{operator\char`\"{}\char`\"{}\_KiB@{operator""""\_KiB}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{operator""""\_KiB()}{operator""\_KiB()}}
+{\footnotesize\ttfamily constexpr size\+\_\+t mavconn\+::utils\+::operator\char`\"{}\char`\"{}\+\_\+\+KiB (\begin{DoxyParamCaption}\item[{unsigned long long}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 78 of file thread\+\_\+utils.\+h.
+
+\mbox{\Hypertarget{group__mavutils_ga0dc70c024ad33cd50af1c9e9bcfaa0c1}\label{group__mavutils_ga0dc70c024ad33cd50af1c9e9bcfaa0c1}} 
+\index{Mavutils@{Mavutils}!sensor\_orientation\_from\_str@{sensor\_orientation\_from\_str}}
+\index{sensor\_orientation\_from\_str@{sensor\_orientation\_from\_str}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{sensor\_orientation\_from\_str()}{sensor\_orientation\_from\_str()}}
+{\footnotesize\ttfamily int mavros\+::utils\+::sensor\+\_\+orientation\+\_\+from\+\_\+str (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sensor\+\_\+orientation }\end{DoxyParamCaption})}
+
+
+
+Retrieve sensor orientation number from alias name. 
+
+
+
+Definition at line 140 of file enum\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{group__mavutils_ga9f21cd4e0233c34591600f8809c4fb2b}\label{group__mavutils_ga9f21cd4e0233c34591600f8809c4fb2b}} 
+\index{Mavutils@{Mavutils}!sensor\_orientation\_matching@{sensor\_orientation\_matching}}
+\index{sensor\_orientation\_matching@{sensor\_orientation\_matching}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{sensor\_orientation\_matching()}{sensor\_orientation\_matching()}}
+{\footnotesize\ttfamily Eigen\+::\+Quaterniond mavros\+::utils\+::sensor\+\_\+orientation\+\_\+matching (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Function to match the received orientation received by M\+A\+V\+Link msg and the rotation of the sensor relative to the F\+CU. 
+
+\mbox{\Hypertarget{group__mavutils_gac5ea11f12ae2183df1dc4a810ff0a87b}\label{group__mavutils_gac5ea11f12ae2183df1dc4a810ff0a87b}} 
+\index{Mavutils@{Mavutils}!set\_this\_thread\_name@{set\_this\_thread\_name}}
+\index{set\_this\_thread\_name@{set\_this\_thread\_name}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{set\_this\_thread\_name()}{set\_this\_thread\_name()}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+bool mavconn\+::utils\+::set\+\_\+this\+\_\+thread\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+
+
+Set name to current thread, printf-\/like. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & name for thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Only for Linux target 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]add for other posix system \end{DoxyRefDesc}
+
+
+Definition at line 55 of file thread\+\_\+utils.\+h.
+
+\mbox{\Hypertarget{group__mavutils_gaacb385ef1414eb5c38c20f4f4d91d321}\label{group__mavutils_gaacb385ef1414eb5c38c20f4f4d91d321}} 
+\index{Mavutils@{Mavutils}!timesync\_mode\_from\_str@{timesync\_mode\_from\_str}}
+\index{timesync\_mode\_from\_str@{timesync\_mode\_from\_str}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{timesync\_mode\_from\_str()}{timesync\_mode\_from\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} mavros\+::utils\+::timesync\+\_\+mode\+\_\+from\+\_\+str (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mode }\end{DoxyParamCaption})}
+
+
+
+Retreive timesync mode from name. 
+
+
+
+Definition at line 248 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__mavutils_ga014455201c2903b835912e056c64d02f}\label{group__mavutils_ga014455201c2903b835912e056c64d02f}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}]{e }\end{DoxyParamCaption})}
+
+
+
+Retrieve alias of the orientation received by M\+A\+V\+Link msg. 
+
+\mbox{\Hypertarget{group__mavutils_gaf790b7f7da119e86e0875c9def1f45aa}\label{group__mavutils_gaf790b7f7da119e86e0875c9def1f45aa}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_gac2fb656a52c699748f929392f47523bf}\label{group__mavutils_gac2fb656a52c699748f929392f47523bf}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+T\+Y\+PE}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_gaafc0054ec09db1d1fd1560da7be6d265}\label{group__mavutils_gaafc0054ec09db1d1fd1560da7be6d265}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_ga3e1f543b99b1e237a90ccdad25bd3bdb}\label{group__mavutils_ga3e1f543b99b1e237a90ccdad25bd3bdb}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+M\+A\+V\+\_\+\+E\+S\+T\+I\+M\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_ga8e40158252eb7c24a59036afd35bf12b}\label{group__mavutils_ga8e40158252eb7c24a59036afd35bf12b}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+A\+D\+S\+B\+\_\+\+A\+L\+T\+I\+T\+U\+D\+E\+\_\+\+T\+Y\+PE}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_gab8a1c172a6993c1b668f923e58da594f}\label{group__mavutils_gab8a1c172a6993c1b668f923e58da594f}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+A\+D\+S\+B\+\_\+\+E\+M\+I\+T\+T\+E\+R\+\_\+\+T\+Y\+PE}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_gaa3707eb566a03171dd282eeb7d3ca512}\label{group__mavutils_gaa3707eb566a03171dd282eeb7d3ca512}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+M\+A\+V\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+R\+E\+S\+U\+LT}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_gaa89b7f807c7cf4be1a8d04377d8ad3bc}\label{group__mavutils_gaa89b7f807c7cf4be1a8d04377d8ad3bc}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+F\+R\+A\+ME}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_ga5edcd4c7df23cca0ea720877f0fe4142}\label{group__mavutils_ga5edcd4c7df23cca0ea720877f0fe4142}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{mavlink\+::common\+::\+M\+A\+V\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+N\+S\+OR}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__mavutils_gac86aed43baa119369cb7eb523c7de067}\label{group__mavutils_gac86aed43baa119369cb7eb523c7de067}} 
+\index{Mavutils@{Mavutils}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}}}]{e }\end{DoxyParamCaption})}
+
+Get string repr for timesync\+\_\+mode 
+
+Definition at line 238 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__mavutils_ga80987ce0a2019df54e1fe62b7b53de7f}\label{group__mavutils_ga80987ce0a2019df54e1fe62b7b53de7f}} 
+\index{Mavutils@{Mavutils}!to\_string\_enum@{to\_string\_enum}}
+\index{to\_string\_enum@{to\_string\_enum}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string\_enum()}{to\_string\_enum()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+std\+::string mavros\+::utils\+::to\+\_\+string\+\_\+enum (\begin{DoxyParamCaption}\item[{int}]{e }\end{DoxyParamCaption})}
+
+Helper to call \mbox{\hyperlink{group__mavutils_gac86aed43baa119369cb7eb523c7de067}{to\+\_\+string()}} for enum \+\_\+T 
+
+Definition at line 84 of file utils.\+h.
+
+\mbox{\Hypertarget{group__mavutils_ga6c132876dd85249684a7935fe0bc8f51}\label{group__mavutils_ga6c132876dd85249684a7935fe0bc8f51}} 
+\index{Mavutils@{Mavutils}!to\_string\_ss@{to\_string\_ss}}
+\index{to\_string\_ss@{to\_string\_ss}!Mavutils@{Mavutils}}
+\subsubsection{\texorpdfstring{to\_string\_ss()}{to\_string\_ss()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const std\+::string mavconn\+::utils\+::to\+\_\+string\+\_\+ss (\begin{DoxyParamCaption}\item[{T \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to string objects with operator $<$$<$. 
+
+
+
+Definition at line 71 of file thread\+\_\+utils.\+h.
+

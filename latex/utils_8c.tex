@@ -1,0 +1,739 @@
+\hypertarget{utils_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/utils.c File Reference}
+\label{utils_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/utils.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/utils.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{utils_8c_af89a5b997626c967e4716fd022aca7bb}{what\+\_\+time\+\_\+is\+\_\+it\+\_\+now}} ()
+\item 
+int $\ast$ \mbox{\hyperlink{utils_8c_a22d6051a31b46910dc0b68bcd5facb05}{read\+\_\+intlist}} (char $\ast$gpu\+\_\+list, int $\ast$ngpus, int \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+int $\ast$ \mbox{\hyperlink{utils_8c_aeb8a1a9cb4af451970cd96ba91cbbe31}{read\+\_\+map}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{utils_8c_a6d7f2250125f0cf3f16e5a7b7c1905a9}{sorta\+\_\+shuffle}} (void $\ast$arr, size\+\_\+t n, size\+\_\+t size, size\+\_\+t sections)
+\item 
+void \mbox{\hyperlink{utils_8c_a0ffcf3aef270870fe180405bc25cad50}{shuffle}} (void $\ast$arr, size\+\_\+t n, size\+\_\+t size)
+\item 
+int $\ast$ \mbox{\hyperlink{utils_8c_a08d7ee593696d43b1b19d7278469d2e9}{random\+\_\+index\+\_\+order}} (int min, int max)
+\item 
+void \mbox{\hyperlink{utils_8c_ae8f911d0e43e2013b752049d7fd8aa48}{del\+\_\+arg}} (int argc, char $\ast$$\ast$argv, int index)
+\item 
+int \mbox{\hyperlink{utils_8c_a845f7b956fcb9711346b8189e18d3846}{find\+\_\+arg}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$arg)
+\item 
+int \mbox{\hyperlink{utils_8c_a6c1259f0b709a2411c0375db749440a2}{find\+\_\+int\+\_\+arg}} (int argc, char $\ast$$\ast$argv, char $\ast$arg, int def)
+\item 
+float \mbox{\hyperlink{utils_8c_af7e57f4e7e4fda1770fbeee64d9443b0}{find\+\_\+float\+\_\+arg}} (int argc, char $\ast$$\ast$argv, char $\ast$arg, float def)
+\item 
+char $\ast$ \mbox{\hyperlink{utils_8c_a22c33a506b0842cadb2a5530a25ca7bf}{find\+\_\+char\+\_\+arg}} (int argc, char $\ast$$\ast$argv, char $\ast$arg, char $\ast$def)
+\item 
+char $\ast$ \mbox{\hyperlink{utils_8c_afe996fdc7e45995e94f02d55845e163b}{basecfg}} (char $\ast$cfgfile)
+\item 
+int \mbox{\hyperlink{utils_8c_a6fa5fdc3d22a596fd2d21f012e5ec2c7}{alphanum\+\_\+to\+\_\+int}} (char c)
+\item 
+char \mbox{\hyperlink{utils_8c_a88c02ede12c15131e71a2387a9ef226f}{int\+\_\+to\+\_\+alphanum}} (int \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}})
+\item 
+void \mbox{\hyperlink{utils_8c_a50faafc66cb2a46626f678e7c23b31a4}{pm}} (int M, int N, float $\ast$\mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}})
+\item 
+void \mbox{\hyperlink{utils_8c_a1ba38c8a3123ae1289a73d9f70e17615}{find\+\_\+replace}} (char $\ast$str, char $\ast$orig, char $\ast$rep, char $\ast$output)
+\item 
+float \mbox{\hyperlink{utils_8c_a375f4de29b8973c3e1b63bf49a5eb00e}{sec}} (clock\+\_\+t clocks)
+\item 
+void \mbox{\hyperlink{utils_8c_aafc3b7bab809d8bc77b7353fd43f731b}{top\+\_\+k}} (float $\ast$a, int n, int k, int $\ast$index)
+\item 
+void \mbox{\hyperlink{utils_8c_a6c317cffefb9737fb2260da73688f275}{error}} (const char $\ast$s)
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{utils_8c_a32ca32cd26b0e86612101830d767c8a5}{read\+\_\+file}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{utils_8c_acab41f0a0d61cac3b20102d02e897780}{malloc\+\_\+error}} ()
+\item 
+void \mbox{\hyperlink{utils_8c_aecaee51f837bcfd8316ab68164620819}{file\+\_\+error}} (char $\ast$s)
+\item 
+\mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{utils_8c_a3b0e9c0cc522f926d826a4e16f256435}{split\+\_\+str}} (char $\ast$s, char delim)
+\item 
+void \mbox{\hyperlink{utils_8c_a76299b86e144434260dcab80323ec9da}{strip}} (char $\ast$s)
+\item 
+void \mbox{\hyperlink{utils_8c_a377b25b3b6d110d34bea9a85d0305917}{strip\+\_\+char}} (char $\ast$s, char bad)
+\item 
+void \mbox{\hyperlink{utils_8c_a8d316e671a183c19ac7631287b29050a}{free\+\_\+ptrs}} (void $\ast$$\ast$ptrs, int n)
+\item 
+char $\ast$ \mbox{\hyperlink{utils_8c_a153eabd234972b240608df09cc4975d3}{fgetl}} (F\+I\+LE $\ast$fp)
+\item 
+int \mbox{\hyperlink{utils_8c_aeb107bc4d07f192c90ee37806b26a1d4}{read\+\_\+int}} (int fd)
+\item 
+void \mbox{\hyperlink{utils_8c_a71b198ba343751a3b889b92bfe9d5fd2}{write\+\_\+int}} (int fd, int n)
+\item 
+int \mbox{\hyperlink{utils_8c_afccdb26cd63a87476385c10ada582642}{read\+\_\+all\+\_\+fail}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+int \mbox{\hyperlink{utils_8c_a1b877af1aab01bde49615e4ac0d45b27}{write\+\_\+all\+\_\+fail}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+void \mbox{\hyperlink{utils_8c_ad4220decb86d761447a704e03423f160}{read\+\_\+all}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+void \mbox{\hyperlink{utils_8c_ab256fc300495d1768adc2e8b7997a140}{write\+\_\+all}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+char $\ast$ \mbox{\hyperlink{utils_8c_a4d27da4f6ddad5146c9190badd121a39}{copy\+\_\+string}} (char $\ast$s)
+\item 
+\mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{utils_8c_ac3aec3e73da4fa4dcb6be73993cc653b}{parse\+\_\+csv\+\_\+line}} (char $\ast$line)
+\item 
+int \mbox{\hyperlink{utils_8c_a55df64d8a7f8b49ad351188c9872f43e}{count\+\_\+fields}} (char $\ast$line)
+\item 
+float $\ast$ \mbox{\hyperlink{utils_8c_aa62de6e095bbf1d6b1048a339738a55d}{parse\+\_\+fields}} (char $\ast$line, int n)
+\item 
+float \mbox{\hyperlink{utils_8c_abedfeccc4fae6ebb143af6a646658b35}{sum\+\_\+array}} (float $\ast$a, int n)
+\item 
+float \mbox{\hyperlink{utils_8c_a2098fae653a82f4bcc9c339229663285}{mean\+\_\+array}} (float $\ast$a, int n)
+\item 
+void \mbox{\hyperlink{utils_8c_a2b0ce94853a05e81d956416164450c5e}{mean\+\_\+arrays}} (float $\ast$$\ast$a, int n, int els, float $\ast$avg)
+\item 
+void \mbox{\hyperlink{utils_8c_ae211f70582950d61802e8ebc3ae0b665}{print\+\_\+statistics}} (float $\ast$a, int n)
+\item 
+float \mbox{\hyperlink{utils_8c_acb8ffd5403deb84ad16360ab0bf87cfa}{variance\+\_\+array}} (float $\ast$a, int n)
+\item 
+int \mbox{\hyperlink{utils_8c_a5402a85f04198ed74b0ac1172b673a14}{constrain\+\_\+int}} (int a, int min, int max)
+\item 
+float \mbox{\hyperlink{utils_8c_acdd3cf194fe55404d95585fcf50a1b4c}{constrain}} (float min, float max, float a)
+\item 
+float \mbox{\hyperlink{utils_8c_ab103bec0ac7219b8766659a86555360d}{dist\+\_\+array}} (float $\ast$a, float $\ast$b, int n, int sub)
+\item 
+float \mbox{\hyperlink{utils_8c_aedf2898bb8258edd5db8da5f934a709e}{mse\+\_\+array}} (float $\ast$a, int n)
+\item 
+void \mbox{\hyperlink{utils_8c_af0d493fdef09c062d7c28c10401beed0}{normalize\+\_\+array}} (float $\ast$a, int n)
+\item 
+void \mbox{\hyperlink{utils_8c_a4c6ce94b4d4e13bf928eedbd5186e8fe}{translate\+\_\+array}} (float $\ast$a, int n, float s)
+\item 
+float \mbox{\hyperlink{utils_8c_ab29ce45fa5e3847d0125e2e7f2e2cb44}{mag\+\_\+array}} (float $\ast$a, int n)
+\item 
+void \mbox{\hyperlink{utils_8c_a8fb2bfbc3ce8319adacd60978267cbb7}{scale\+\_\+array}} (float $\ast$a, int n, float s)
+\item 
+int \mbox{\hyperlink{utils_8c_a505834ece1ee5be76ac5763e397ed000}{sample\+\_\+array}} (float $\ast$a, int n)
+\item 
+int \mbox{\hyperlink{utils_8c_a12f164831d230a6c2ecc035539b13211}{max\+\_\+int\+\_\+index}} (int $\ast$a, int n)
+\item 
+int \mbox{\hyperlink{utils_8c_a3ebf9ae027586c4c7d982ffc92bad3cf}{max\+\_\+index}} (float $\ast$a, int n)
+\item 
+int \mbox{\hyperlink{utils_8c_aa86516fcc6a1cb2cd90c69bafc8cad1f}{int\+\_\+index}} (int $\ast$a, int val, int n)
+\item 
+int \mbox{\hyperlink{utils_8c_ad3de83542e75e46f163db52544498f53}{rand\+\_\+int}} (int min, int max)
+\item 
+float \mbox{\hyperlink{utils_8c_a5b5b0c77bb2f450bce70777573f7ca90}{rand\+\_\+normal}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{utils_8c_a840c471f9da17532e230bccbc490b8c6}{rand\+\_\+size\+\_\+t}} ()
+\item 
+float \mbox{\hyperlink{utils_8c_a5492196e16ed2d16bae1df8483ef79ed}{rand\+\_\+uniform}} (float min, float max)
+\item 
+float \mbox{\hyperlink{utils_8c_ae5e2a8baa8169333fae635a56852f4a8}{rand\+\_\+scale}} (float s)
+\item 
+float $\ast$$\ast$ \mbox{\hyperlink{utils_8c_a04622a0ae5345a6b7dd9577e1cc7b13e}{one\+\_\+hot\+\_\+encode}} (float $\ast$a, int n, int k)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{utils_8c_a6fa5fdc3d22a596fd2d21f012e5ec2c7}\label{utils_8c_a6fa5fdc3d22a596fd2d21f012e5ec2c7}} 
+\index{utils.c@{utils.c}!alphanum\_to\_int@{alphanum\_to\_int}}
+\index{alphanum\_to\_int@{alphanum\_to\_int}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{alphanum\_to\_int()}{alphanum\_to\_int()}}
+{\footnotesize\ttfamily int alphanum\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 193 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_afe996fdc7e45995e94f02d55845e163b}\label{utils_8c_afe996fdc7e45995e94f02d55845e163b}} 
+\index{utils.c@{utils.c}!basecfg@{basecfg}}
+\index{basecfg@{basecfg}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{basecfg()}{basecfg()}}
+{\footnotesize\ttfamily char$\ast$ basecfg (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 179 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_acdd3cf194fe55404d95585fcf50a1b4c}\label{utils_8c_acdd3cf194fe55404d95585fcf50a1b4c}} 
+\index{utils.c@{utils.c}!constrain@{constrain}}
+\index{constrain@{constrain}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{constrain()}{constrain()}}
+{\footnotesize\ttfamily float constrain (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 531 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a5402a85f04198ed74b0ac1172b673a14}\label{utils_8c_a5402a85f04198ed74b0ac1172b673a14}} 
+\index{utils.c@{utils.c}!constrain\_int@{constrain\_int}}
+\index{constrain\_int@{constrain\_int}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{constrain\_int()}{constrain\_int()}}
+{\footnotesize\ttfamily int constrain\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 524 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a4d27da4f6ddad5146c9190badd121a39}\label{utils_8c_a4d27da4f6ddad5146c9190badd121a39}} 
+\index{utils.c@{utils.c}!copy\_string@{copy\_string}}
+\index{copy\_string@{copy\_string}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{copy\_string()}{copy\_string()}}
+{\footnotesize\ttfamily char$\ast$ copy\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 423 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a55df64d8a7f8b49ad351188c9872f43e}\label{utils_8c_a55df64d8a7f8b49ad351188c9872f43e}} 
+\index{utils.c@{utils.c}!count\_fields@{count\_fields}}
+\index{count\_fields@{count\_fields}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{count\_fields()}{count\_fields()}}
+{\footnotesize\ttfamily int count\+\_\+fields (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 447 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ae8f911d0e43e2013b752049d7fd8aa48}\label{utils_8c_ae8f911d0e43e2013b752049d7fd8aa48}} 
+\index{utils.c@{utils.c}!del\_arg@{del\_arg}}
+\index{del\_arg@{del\_arg}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{del\_arg()}{del\_arg()}}
+{\footnotesize\ttfamily void del\+\_\+arg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ab103bec0ac7219b8766659a86555360d}\label{utils_8c_ab103bec0ac7219b8766659a86555360d}} 
+\index{utils.c@{utils.c}!dist\_array@{dist\_array}}
+\index{dist\_array@{dist\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{dist\_array()}{dist\_array()}}
+{\footnotesize\ttfamily float dist\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{float $\ast$}]{b,  }\item[{int}]{n,  }\item[{int}]{sub }\end{DoxyParamCaption})}
+
+
+
+Definition at line 538 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a6c317cffefb9737fb2260da73688f275}\label{utils_8c_a6c317cffefb9737fb2260da73688f275}} 
+\index{utils.c@{utils.c}!error@{error}}
+\index{error@{error}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 253 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a153eabd234972b240608df09cc4975d3}\label{utils_8c_a153eabd234972b240608df09cc4975d3}} 
+\index{utils.c@{utils.c}!fgetl@{fgetl}}
+\index{fgetl@{fgetl}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{fgetl()}{fgetl()}}
+{\footnotesize\ttfamily char$\ast$ fgetl (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 335 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_aecaee51f837bcfd8316ab68164620819}\label{utils_8c_aecaee51f837bcfd8316ab68164620819}} 
+\index{utils.c@{utils.c}!file\_error@{file\_error}}
+\index{file\_error@{file\_error}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{file\_error()}{file\_error()}}
+{\footnotesize\ttfamily void file\+\_\+error (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 281 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a845f7b956fcb9711346b8189e18d3846}\label{utils_8c_a845f7b956fcb9711346b8189e18d3846}} 
+\index{utils.c@{utils.c}!find\_arg@{find\_arg}}
+\index{find\_arg@{find\_arg}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{find\_arg()}{find\_arg()}}
+{\footnotesize\ttfamily int find\+\_\+arg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{char $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 120 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a22c33a506b0842cadb2a5530a25ca7bf}\label{utils_8c_a22c33a506b0842cadb2a5530a25ca7bf}} 
+\index{utils.c@{utils.c}!find\_char\_arg@{find\_char\_arg}}
+\index{find\_char\_arg@{find\_char\_arg}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{find\_char\_arg()}{find\_char\_arg()}}
+{\footnotesize\ttfamily char$\ast$ find\+\_\+char\+\_\+arg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$}]{arg,  }\item[{char $\ast$}]{def }\end{DoxyParamCaption})}
+
+
+
+Definition at line 163 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_af7e57f4e7e4fda1770fbeee64d9443b0}\label{utils_8c_af7e57f4e7e4fda1770fbeee64d9443b0}} 
+\index{utils.c@{utils.c}!find\_float\_arg@{find\_float\_arg}}
+\index{find\_float\_arg@{find\_float\_arg}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{find\_float\_arg()}{find\_float\_arg()}}
+{\footnotesize\ttfamily float find\+\_\+float\+\_\+arg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$}]{arg,  }\item[{float}]{def }\end{DoxyParamCaption})}
+
+
+
+Definition at line 148 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a6c1259f0b709a2411c0375db749440a2}\label{utils_8c_a6c1259f0b709a2411c0375db749440a2}} 
+\index{utils.c@{utils.c}!find\_int\_arg@{find\_int\_arg}}
+\index{find\_int\_arg@{find\_int\_arg}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{find\_int\_arg()}{find\_int\_arg()}}
+{\footnotesize\ttfamily int find\+\_\+int\+\_\+arg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$}]{arg,  }\item[{int}]{def }\end{DoxyParamCaption})}
+
+
+
+Definition at line 133 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a1ba38c8a3123ae1289a73d9f70e17615}\label{utils_8c_a1ba38c8a3123ae1289a73d9f70e17615}} 
+\index{utils.c@{utils.c}!find\_replace@{find\_replace}}
+\index{find\_replace@{find\_replace}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{find\_replace()}{find\_replace()}}
+{\footnotesize\ttfamily void find\+\_\+replace (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{char $\ast$}]{orig,  }\item[{char $\ast$}]{rep,  }\item[{char $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Definition at line 216 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a8d316e671a183c19ac7631287b29050a}\label{utils_8c_a8d316e671a183c19ac7631287b29050a}} 
+\index{utils.c@{utils.c}!free\_ptrs@{free\_ptrs}}
+\index{free\_ptrs@{free\_ptrs}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{free\_ptrs()}{free\_ptrs()}}
+{\footnotesize\ttfamily void free\+\_\+ptrs (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{ptrs,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 328 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_aa86516fcc6a1cb2cd90c69bafc8cad1f}\label{utils_8c_aa86516fcc6a1cb2cd90c69bafc8cad1f}} 
+\index{utils.c@{utils.c}!int\_index@{int\_index}}
+\index{int\_index@{int\_index}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{int\_index()}{int\_index()}}
+{\footnotesize\ttfamily int int\+\_\+index (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int}]{val,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 633 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a88c02ede12c15131e71a2387a9ef226f}\label{utils_8c_a88c02ede12c15131e71a2387a9ef226f}} 
+\index{utils.c@{utils.c}!int\_to\_alphanum@{int\_to\_alphanum}}
+\index{int\_to\_alphanum@{int\_to\_alphanum}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{int\_to\_alphanum()}{int\_to\_alphanum()}}
+{\footnotesize\ttfamily char int\+\_\+to\+\_\+alphanum (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ab29ce45fa5e3847d0125e2e7f2e2cb44}\label{utils_8c_ab29ce45fa5e3847d0125e2e7f2e2cb44}} 
+\index{utils.c@{utils.c}!mag\_array@{mag\_array}}
+\index{mag\_array@{mag\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{mag\_array()}{mag\_array()}}
+{\footnotesize\ttfamily float mag\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 574 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_acab41f0a0d61cac3b20102d02e897780}\label{utils_8c_acab41f0a0d61cac3b20102d02e897780}} 
+\index{utils.c@{utils.c}!malloc\_error@{malloc\_error}}
+\index{malloc\_error@{malloc\_error}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{malloc\_error()}{malloc\_error()}}
+{\footnotesize\ttfamily void malloc\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 275 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a3ebf9ae027586c4c7d982ffc92bad3cf}\label{utils_8c_a3ebf9ae027586c4c7d982ffc92bad3cf}} 
+\index{utils.c@{utils.c}!max\_index@{max\_index}}
+\index{max\_index@{max\_index}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{max\_index()}{max\_index()}}
+{\footnotesize\ttfamily int max\+\_\+index (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 619 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a12f164831d230a6c2ecc035539b13211}\label{utils_8c_a12f164831d230a6c2ecc035539b13211}} 
+\index{utils.c@{utils.c}!max\_int\_index@{max\_int\_index}}
+\index{max\_int\_index@{max\_int\_index}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{max\_int\_index()}{max\_int\_index()}}
+{\footnotesize\ttfamily int max\+\_\+int\+\_\+index (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 605 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a2098fae653a82f4bcc9c339229663285}\label{utils_8c_a2098fae653a82f4bcc9c339229663285}} 
+\index{utils.c@{utils.c}!mean\_array@{mean\_array}}
+\index{mean\_array@{mean\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{mean\_array()}{mean\_array()}}
+{\footnotesize\ttfamily float mean\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 487 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a2b0ce94853a05e81d956416164450c5e}\label{utils_8c_a2b0ce94853a05e81d956416164450c5e}} 
+\index{utils.c@{utils.c}!mean\_arrays@{mean\_arrays}}
+\index{mean\_arrays@{mean\_arrays}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{mean\_arrays()}{mean\_arrays()}}
+{\footnotesize\ttfamily void mean\+\_\+arrays (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{a,  }\item[{int}]{n,  }\item[{int}]{els,  }\item[{float $\ast$}]{avg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 492 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_aedf2898bb8258edd5db8da5f934a709e}\label{utils_8c_aedf2898bb8258edd5db8da5f934a709e}} 
+\index{utils.c@{utils.c}!mse\_array@{mse\_array}}
+\index{mse\_array@{mse\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{mse\_array()}{mse\_array()}}
+{\footnotesize\ttfamily float mse\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 546 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_af0d493fdef09c062d7c28c10401beed0}\label{utils_8c_af0d493fdef09c062d7c28c10401beed0}} 
+\index{utils.c@{utils.c}!normalize\_array@{normalize\_array}}
+\index{normalize\_array@{normalize\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{normalize\_array()}{normalize\_array()}}
+{\footnotesize\ttfamily void normalize\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 554 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a04622a0ae5345a6b7dd9577e1cc7b13e}\label{utils_8c_a04622a0ae5345a6b7dd9577e1cc7b13e}} 
+\index{utils.c@{utils.c}!one\_hot\_encode@{one\_hot\_encode}}
+\index{one\_hot\_encode@{one\_hot\_encode}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{one\_hot\_encode()}{one\_hot\_encode()}}
+{\footnotesize\ttfamily float$\ast$$\ast$ one\+\_\+hot\+\_\+encode (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line 715 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ac3aec3e73da4fa4dcb6be73993cc653b}\label{utils_8c_ac3aec3e73da4fa4dcb6be73993cc653b}} 
+\index{utils.c@{utils.c}!parse\_csv\_line@{parse\_csv\_line}}
+\index{parse\_csv\_line@{parse\_csv\_line}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{parse\_csv\_line()}{parse\_csv\_line()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}}$\ast$ parse\+\_\+csv\+\_\+line (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 430 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_aa62de6e095bbf1d6b1048a339738a55d}\label{utils_8c_aa62de6e095bbf1d6b1048a339738a55d}} 
+\index{utils.c@{utils.c}!parse\_fields@{parse\_fields}}
+\index{parse\_fields@{parse\_fields}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{parse\_fields()}{parse\_fields()}}
+{\footnotesize\ttfamily float$\ast$ parse\+\_\+fields (\begin{DoxyParamCaption}\item[{char $\ast$}]{line,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 459 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a50faafc66cb2a46626f678e7c23b31a4}\label{utils_8c_a50faafc66cb2a46626f678e7c23b31a4}} 
+\index{utils.c@{utils.c}!pm@{pm}}
+\index{pm@{pm}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{pm()}{pm()}}
+{\footnotesize\ttfamily void pm (\begin{DoxyParamCaption}\item[{int}]{M,  }\item[{int}]{N,  }\item[{float $\ast$}]{A }\end{DoxyParamCaption})}
+
+
+
+Definition at line 203 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ae211f70582950d61802e8ebc3ae0b665}\label{utils_8c_ae211f70582950d61802e8ebc3ae0b665}} 
+\index{utils.c@{utils.c}!print\_statistics@{print\_statistics}}
+\index{print\_statistics@{print\_statistics}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{print\_statistics()}{print\_statistics()}}
+{\footnotesize\ttfamily void print\+\_\+statistics (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 507 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ad3de83542e75e46f163db52544498f53}\label{utils_8c_ad3de83542e75e46f163db52544498f53}} 
+\index{utils.c@{utils.c}!rand\_int@{rand\_int}}
+\index{rand\_int@{rand\_int}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{rand\_int()}{rand\_int()}}
+{\footnotesize\ttfamily int rand\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 642 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a5b5b0c77bb2f450bce70777573f7ca90}\label{utils_8c_a5b5b0c77bb2f450bce70777573f7ca90}} 
+\index{utils.c@{utils.c}!rand\_normal@{rand\_normal}}
+\index{rand\_normal@{rand\_normal}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{rand\_normal()}{rand\_normal()}}
+{\footnotesize\ttfamily float rand\+\_\+normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 654 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ae5e2a8baa8169333fae635a56852f4a8}\label{utils_8c_ae5e2a8baa8169333fae635a56852f4a8}} 
+\index{utils.c@{utils.c}!rand\_scale@{rand\_scale}}
+\index{rand\_scale@{rand\_scale}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{rand\_scale()}{rand\_scale()}}
+{\footnotesize\ttfamily float rand\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 708 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a840c471f9da17532e230bccbc490b8c6}\label{utils_8c_a840c471f9da17532e230bccbc490b8c6}} 
+\index{utils.c@{utils.c}!rand\_size\_t@{rand\_size\_t}}
+\index{rand\_size\_t@{rand\_size\_t}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{rand\_size\_t()}{rand\_size\_t()}}
+{\footnotesize\ttfamily size\+\_\+t rand\+\_\+size\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 686 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a5492196e16ed2d16bae1df8483ef79ed}\label{utils_8c_a5492196e16ed2d16bae1df8483ef79ed}} 
+\index{utils.c@{utils.c}!rand\_uniform@{rand\_uniform}}
+\index{rand\_uniform@{rand\_uniform}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{rand\_uniform()}{rand\_uniform()}}
+{\footnotesize\ttfamily float rand\+\_\+uniform (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 698 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a08d7ee593696d43b1b19d7278469d2e9}\label{utils_8c_a08d7ee593696d43b1b19d7278469d2e9}} 
+\index{utils.c@{utils.c}!random\_index\_order@{random\_index\_order}}
+\index{random\_index\_order@{random\_index\_order}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{random\_index\_order()}{random\_index\_order()}}
+{\footnotesize\ttfamily int$\ast$ random\+\_\+index\+\_\+order (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 97 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ad4220decb86d761447a704e03423f160}\label{utils_8c_ad4220decb86d761447a704e03423f160}} 
+\index{utils.c@{utils.c}!read\_all@{read\_all}}
+\index{read\_all@{read\_all}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{read\_all()}{read\_all()}}
+{\footnotesize\ttfamily void read\+\_\+all (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 402 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_afccdb26cd63a87476385c10ada582642}\label{utils_8c_afccdb26cd63a87476385c10ada582642}} 
+\index{utils.c@{utils.c}!read\_all\_fail@{read\_all\_fail}}
+\index{read\_all\_fail@{read\_all\_fail}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{read\_all\_fail()}{read\_all\_fail()}}
+{\footnotesize\ttfamily int read\+\_\+all\+\_\+fail (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 380 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a32ca32cd26b0e86612101830d767c8a5}\label{utils_8c_a32ca32cd26b0e86612101830d767c8a5}} 
+\index{utils.c@{utils.c}!read\_file@{read\_file}}
+\index{read\_file@{read\_file}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{read\_file()}{read\_file()}}
+{\footnotesize\ttfamily unsigned char$\ast$ read\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 260 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_aeb107bc4d07f192c90ee37806b26a1d4}\label{utils_8c_aeb107bc4d07f192c90ee37806b26a1d4}} 
+\index{utils.c@{utils.c}!read\_int@{read\_int}}
+\index{read\_int@{read\_int}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{read\_int()}{read\_int()}}
+{\footnotesize\ttfamily int read\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 366 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a22d6051a31b46910dc0b68bcd5facb05}\label{utils_8c_a22d6051a31b46910dc0b68bcd5facb05}} 
+\index{utils.c@{utils.c}!read\_intlist@{read\_intlist}}
+\index{read\_intlist@{read\_intlist}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{read\_intlist()}{read\_intlist()}}
+{\footnotesize\ttfamily int$\ast$ read\+\_\+intlist (\begin{DoxyParamCaption}\item[{char $\ast$}]{gpu\+\_\+list,  }\item[{int $\ast$}]{ngpus,  }\item[{int}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_aeb8a1a9cb4af451970cd96ba91cbbe31}\label{utils_8c_aeb8a1a9cb4af451970cd96ba91cbbe31}} 
+\index{utils.c@{utils.c}!read\_map@{read\_map}}
+\index{read\_map@{read\_map}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{read\_map()}{read\_map()}}
+{\footnotesize\ttfamily int$\ast$ read\+\_\+map (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a505834ece1ee5be76ac5763e397ed000}\label{utils_8c_a505834ece1ee5be76ac5763e397ed000}} 
+\index{utils.c@{utils.c}!sample\_array@{sample\_array}}
+\index{sample\_array@{sample\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{sample\_array()}{sample\_array()}}
+{\footnotesize\ttfamily int sample\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 592 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a8fb2bfbc3ce8319adacd60978267cbb7}\label{utils_8c_a8fb2bfbc3ce8319adacd60978267cbb7}} 
+\index{utils.c@{utils.c}!scale\_array@{scale\_array}}
+\index{scale\_array@{scale\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{scale\_array()}{scale\_array()}}
+{\footnotesize\ttfamily void scale\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n,  }\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 584 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a375f4de29b8973c3e1b63bf49a5eb00e}\label{utils_8c_a375f4de29b8973c3e1b63bf49a5eb00e}} 
+\index{utils.c@{utils.c}!sec@{sec}}
+\index{sec@{sec}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{sec()}{sec()}}
+{\footnotesize\ttfamily float sec (\begin{DoxyParamCaption}\item[{clock\+\_\+t}]{clocks }\end{DoxyParamCaption})}
+
+
+
+Definition at line 232 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a0ffcf3aef270870fe180405bc25cad50}\label{utils_8c_a0ffcf3aef270870fe180405bc25cad50}} 
+\index{utils.c@{utils.c}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily void shuffle (\begin{DoxyParamCaption}\item[{void $\ast$}]{arr,  }\item[{size\+\_\+t}]{n,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a6d7f2250125f0cf3f16e5a7b7c1905a9}\label{utils_8c_a6d7f2250125f0cf3f16e5a7b7c1905a9}} 
+\index{utils.c@{utils.c}!sorta\_shuffle@{sorta\_shuffle}}
+\index{sorta\_shuffle@{sorta\_shuffle}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{sorta\_shuffle()}{sorta\_shuffle()}}
+{\footnotesize\ttfamily void sorta\+\_\+shuffle (\begin{DoxyParamCaption}\item[{void $\ast$}]{arr,  }\item[{size\+\_\+t}]{n,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{sections }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a3b0e9c0cc522f926d826a4e16f256435}\label{utils_8c_a3b0e9c0cc522f926d826a4e16f256435}} 
+\index{utils.c@{utils.c}!split\_str@{split\_str}}
+\index{split\_str@{split\_str}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{split\_str()}{split\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}}$\ast$ split\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{char}]{delim }\end{DoxyParamCaption})}
+
+
+
+Definition at line 287 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a76299b86e144434260dcab80323ec9da}\label{utils_8c_a76299b86e144434260dcab80323ec9da}} 
+\index{utils.c@{utils.c}!strip@{strip}}
+\index{strip@{strip}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{strip()}{strip()}}
+{\footnotesize\ttfamily void strip (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 302 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a377b25b3b6d110d34bea9a85d0305917}\label{utils_8c_a377b25b3b6d110d34bea9a85d0305917}} 
+\index{utils.c@{utils.c}!strip\_char@{strip\_char}}
+\index{strip\_char@{strip\_char}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{strip\_char()}{strip\_char()}}
+{\footnotesize\ttfamily void strip\+\_\+char (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{char}]{bad }\end{DoxyParamCaption})}
+
+
+
+Definition at line 315 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_abedfeccc4fae6ebb143af6a646658b35}\label{utils_8c_abedfeccc4fae6ebb143af6a646658b35}} 
+\index{utils.c@{utils.c}!sum\_array@{sum\_array}}
+\index{sum\_array@{sum\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{sum\_array()}{sum\_array()}}
+{\footnotesize\ttfamily float sum\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 479 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_aafc3b7bab809d8bc77b7353fd43f731b}\label{utils_8c_aafc3b7bab809d8bc77b7353fd43f731b}} 
+\index{utils.c@{utils.c}!top\_k@{top\_k}}
+\index{top\_k@{top\_k}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{top\_k()}{top\_k()}}
+{\footnotesize\ttfamily void top\+\_\+k (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n,  }\item[{int}]{k,  }\item[{int $\ast$}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 237 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a4c6ce94b4d4e13bf928eedbd5186e8fe}\label{utils_8c_a4c6ce94b4d4e13bf928eedbd5186e8fe}} 
+\index{utils.c@{utils.c}!translate\_array@{translate\_array}}
+\index{translate\_array@{translate\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{translate\_array()}{translate\_array()}}
+{\footnotesize\ttfamily void translate\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n,  }\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 566 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_acb8ffd5403deb84ad16360ab0bf87cfa}\label{utils_8c_acb8ffd5403deb84ad16360ab0bf87cfa}} 
+\index{utils.c@{utils.c}!variance\_array@{variance\_array}}
+\index{variance\_array@{variance\_array}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{variance\_array()}{variance\_array()}}
+{\footnotesize\ttfamily float variance\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 514 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_af89a5b997626c967e4716fd022aca7bb}\label{utils_8c_af89a5b997626c967e4716fd022aca7bb}} 
+\index{utils.c@{utils.c}!what\_time\_is\_it\_now@{what\_time\_is\_it\_now}}
+\index{what\_time\_is\_it\_now@{what\_time\_is\_it\_now}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{what\_time\_is\_it\_now()}{what\_time\_is\_it\_now()}}
+{\footnotesize\ttfamily double what\+\_\+time\+\_\+is\+\_\+it\+\_\+now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_ab256fc300495d1768adc2e8b7997a140}\label{utils_8c_ab256fc300495d1768adc2e8b7997a140}} 
+\index{utils.c@{utils.c}!write\_all@{write\_all}}
+\index{write\_all@{write\_all}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{write\_all()}{write\_all()}}
+{\footnotesize\ttfamily void write\+\_\+all (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 412 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a1b877af1aab01bde49615e4ac0d45b27}\label{utils_8c_a1b877af1aab01bde49615e4ac0d45b27}} 
+\index{utils.c@{utils.c}!write\_all\_fail@{write\_all\_fail}}
+\index{write\_all\_fail@{write\_all\_fail}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{write\_all\_fail()}{write\_all\_fail()}}
+{\footnotesize\ttfamily int write\+\_\+all\+\_\+fail (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 391 of file utils.\+c.
+
+\mbox{\Hypertarget{utils_8c_a71b198ba343751a3b889b92bfe9d5fd2}\label{utils_8c_a71b198ba343751a3b889b92bfe9d5fd2}} 
+\index{utils.c@{utils.c}!write\_int@{write\_int}}
+\index{write\_int@{write\_int}!utils.c@{utils.c}}
+\subsubsection{\texorpdfstring{write\_int()}{write\_int()}}
+{\footnotesize\ttfamily void write\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 374 of file utils.\+c.
+

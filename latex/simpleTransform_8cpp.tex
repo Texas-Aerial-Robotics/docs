@@ -1,0 +1,219 @@
+\hypertarget{simpleTransform_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Transformations-\/\+Ros/src/simple\+Transform.cpp File Reference}
+\label{simpleTransform_8cpp}\index{/home/eric/catkin\_ws/src/Transformations-\/Ros/src/simpleTransform.cpp@{/home/eric/catkin\_ws/src/Transformations-\/Ros/src/simpleTransform.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Int8.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Float64.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Box.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet\+\_\+ros\+\_\+msgs/\+Bounding\+Boxes.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{simpleTransform_8cpp_a7a00feeb1581fbd831b45d299463934a}{enu\+\_\+2\+\_\+gym}} (nav\+\_\+msgs\+::\+Odometry current\+\_\+pose\+\_\+enu)
+\item 
+void \mbox{\hyperlink{simpleTransform_8cpp_afa0f9061a6152b26289dd2c93b295847}{pose\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{simpleTransform_8cpp_a04a588f784580f203e111c812785a598}{gym\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{simpleTransform_8cpp_a57042462d81cd32b2b310571cc72c2cc}{pixel2metric\+\_\+facedown}} (double alt, vector$<$ double $>$ obj\+\_\+pix, vector$<$ double $>$ \&O\+\_\+m, darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes box)
+\item 
+void \mbox{\hyperlink{simpleTransform_8cpp_a4440685cfdd3290c7741e10f0b184713}{chatter\+Callback}} (const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})
+\item 
+void \mbox{\hyperlink{simpleTransform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}{center\+Point}} (const darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes\+::\+Const\+Ptr \&msg\+Box)
+\item 
+int \mbox{\hyperlink{simpleTransform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{simpleTransform_8cpp_a952eac791b596a61bba0a133a3bb439f}{PI}} = 3.\+14159
+\item 
+const double \mbox{\hyperlink{simpleTransform_8cpp_a954ef88779998b7740547aca32e8313f}{P\+HI}} = 31.\+8244$\ast$\mbox{\hyperlink{simpleTransform_8cpp_a952eac791b596a61bba0a133a3bb439f}{PI}}/180
+\item 
+const double \mbox{\hyperlink{simpleTransform_8cpp_ae08ebb725fe5add31bcc0004e5ee0265}{P\+H\+I\+\_\+X}} =40$\ast$\mbox{\hyperlink{simpleTransform_8cpp_a952eac791b596a61bba0a133a3bb439f}{PI}}/180
+\item 
+double \mbox{\hyperlink{simpleTransform_8cpp_a5df70b2be2fb90739f095fe5884e3980}{T\+H\+E\+TA}} = 0
+\item 
+const double \mbox{\hyperlink{simpleTransform_8cpp_a09e608b263cec5728b4904fcfadc223d}{T\+H\+E\+T\+A\+\_\+X}} =0
+\item 
+const double \mbox{\hyperlink{simpleTransform_8cpp_a5673b9de5c7dbd6beb1af4ff9309007a}{P\+I\+X\+E\+LS}} \mbox{[}2\mbox{]} = \{640, 480\}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{simpleTransform_8cpp_ad052bfc0c6186c459ef6fadf7cdf69b5}{roomba\+Pose}}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{simpleTransform_8cpp_ab9674253569259608088097e713c6905}{current\+\_\+pose}}
+\item 
+std\+\_\+msgs\+::\+Float64 \mbox{\hyperlink{simpleTransform_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}{gym\+Offset}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{simpleTransform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}\label{simpleTransform_8cpp_a5c6dcd48b105eda5218549c05ce524dc}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!centerPoint@{centerPoint}}
+\index{centerPoint@{centerPoint}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{centerPoint()}{centerPoint()}}
+{\footnotesize\ttfamily void center\+Point (\begin{DoxyParamCaption}\item[{const darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes\+::\+Const\+Ptr \&}]{msg\+Box }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a4440685cfdd3290c7741e10f0b184713}\label{simpleTransform_8cpp_a4440685cfdd3290c7741e10f0b184713}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!chatterCallback@{chatterCallback}}
+\index{chatterCallback@{chatterCallback}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{chatterCallback()}{chatterCallback()}}
+{\footnotesize\ttfamily void chatter\+Callback (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 98 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a7a00feeb1581fbd831b45d299463934a}\label{simpleTransform_8cpp_a7a00feeb1581fbd831b45d299463934a}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!enu\_2\_gym@{enu\_2\_gym}}
+\index{enu\_2\_gym@{enu\_2\_gym}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{enu\_2\_gym()}{enu\_2\_gym()}}
+{\footnotesize\ttfamily void enu\+\_\+2\+\_\+gym (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Odometry}]{current\+\_\+pose\+\_\+enu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a04a588f784580f203e111c812785a598}\label{simpleTransform_8cpp_a04a588f784580f203e111c812785a598}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!gym\_cb@{gym\_cb}}
+\index{gym\_cb@{gym\_cb}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{gym\_cb()}{gym\_cb()}}
+{\footnotesize\ttfamily void gym\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{simpleTransform_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!main@{main}}
+\index{main@{main}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a57042462d81cd32b2b310571cc72c2cc}\label{simpleTransform_8cpp_a57042462d81cd32b2b310571cc72c2cc}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!pixel2metric\_facedown@{pixel2metric\_facedown}}
+\index{pixel2metric\_facedown@{pixel2metric\_facedown}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{pixel2metric\_facedown()}{pixel2metric\_facedown()}}
+{\footnotesize\ttfamily void pixel2metric\+\_\+facedown (\begin{DoxyParamCaption}\item[{double}]{alt,  }\item[{vector$<$ double $>$}]{obj\+\_\+pix,  }\item[{vector$<$ double $>$ \&}]{O\+\_\+m,  }\item[{darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes}]{box }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_afa0f9061a6152b26289dd2c93b295847}\label{simpleTransform_8cpp_afa0f9061a6152b26289dd2c93b295847}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file simple\+Transform.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{simpleTransform_8cpp_ab9674253569259608088097e713c6905}\label{simpleTransform_8cpp_ab9674253569259608088097e713c6905}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry current\+\_\+pose}
+
+
+
+Definition at line 29 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}\label{simpleTransform_8cpp_a12e315b44b5f1fffa04067a5cb7d451f}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!gymOffset@{gymOffset}}
+\index{gymOffset@{gymOffset}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{gymOffset}{gymOffset}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Float64 gym\+Offset}
+
+
+
+Definition at line 30 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a954ef88779998b7740547aca32e8313f}\label{simpleTransform_8cpp_a954ef88779998b7740547aca32e8313f}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!PHI@{PHI}}
+\index{PHI@{PHI}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{PHI}{PHI}}
+{\footnotesize\ttfamily const double P\+HI = 31.\+8244$\ast$\mbox{\hyperlink{simpleTransform_8cpp_a952eac791b596a61bba0a133a3bb439f}{PI}}/180}
+
+
+
+Definition at line 17 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_ae08ebb725fe5add31bcc0004e5ee0265}\label{simpleTransform_8cpp_ae08ebb725fe5add31bcc0004e5ee0265}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!PHI\_X@{PHI\_X}}
+\index{PHI\_X@{PHI\_X}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{PHI\_X}{PHI\_X}}
+{\footnotesize\ttfamily const double P\+H\+I\+\_\+X =40$\ast$\mbox{\hyperlink{simpleTransform_8cpp_a952eac791b596a61bba0a133a3bb439f}{PI}}/180}
+
+
+
+Definition at line 19 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a952eac791b596a61bba0a133a3bb439f}\label{simpleTransform_8cpp_a952eac791b596a61bba0a133a3bb439f}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!PI@{PI}}
+\index{PI@{PI}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily const double PI = 3.\+14159}
+
+
+
+Definition at line 15 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a5673b9de5c7dbd6beb1af4ff9309007a}\label{simpleTransform_8cpp_a5673b9de5c7dbd6beb1af4ff9309007a}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!PIXELS@{PIXELS}}
+\index{PIXELS@{PIXELS}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{PIXELS}{PIXELS}}
+{\footnotesize\ttfamily const double P\+I\+X\+E\+LS\mbox{[}2\mbox{]} = \{640, 480\}}
+
+
+
+Definition at line 24 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_ad052bfc0c6186c459ef6fadf7cdf69b5}\label{simpleTransform_8cpp_ad052bfc0c6186c459ef6fadf7cdf69b5}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!roombaPose@{roombaPose}}
+\index{roombaPose@{roombaPose}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{roombaPose}{roombaPose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped roomba\+Pose}
+
+
+
+Definition at line 28 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a5df70b2be2fb90739f095fe5884e3980}\label{simpleTransform_8cpp_a5df70b2be2fb90739f095fe5884e3980}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!THETA@{THETA}}
+\index{THETA@{THETA}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{THETA}{THETA}}
+{\footnotesize\ttfamily double T\+H\+E\+TA = 0}
+
+
+
+Definition at line 21 of file simple\+Transform.\+cpp.
+
+\mbox{\Hypertarget{simpleTransform_8cpp_a09e608b263cec5728b4904fcfadc223d}\label{simpleTransform_8cpp_a09e608b263cec5728b4904fcfadc223d}} 
+\index{simpleTransform.cpp@{simpleTransform.cpp}!THETA\_X@{THETA\_X}}
+\index{THETA\_X@{THETA\_X}!simpleTransform.cpp@{simpleTransform.cpp}}
+\subsubsection{\texorpdfstring{THETA\_X}{THETA\_X}}
+{\footnotesize\ttfamily const double T\+H\+E\+T\+A\+\_\+X =0}
+
+
+
+Definition at line 23 of file simple\+Transform.\+cpp.
+

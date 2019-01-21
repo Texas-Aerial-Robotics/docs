@@ -1,0 +1,32 @@
+\#roomba\+\_\+control
+
+Controlling the behaviors of the roomba
+
+H\+OW TO R\+UN
+
+please add the following to your .bashrc 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export GAZEBO\_MODEL\_PATH=\$\{GAZEBO\_MODEL\_PATH\}:~/catkin\_ws/src/roomba\_controls/models}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ~/catkin\_ws/devel/setup.bash}
+\end{DoxyCode}
+
+
+If you were previously running the Gazebo-\/\+Ros sim please R\+E\+M\+O\+VE the following from your .bashrc 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export GAZEBO\_MODEL\_PATH=\$\{GAZEBO\_MODEL\_PATH\}:/home/eric/Computations/roomba\_host/models}
+\end{DoxyCode}
+
+
+Assuming you have catkin, R\+OS kinetic, Gazebo, etc...
+
+
+\begin{DoxyEnumerate}
+\item Type . $\sim$/catkin\+\_\+ws/devel/setup.bash (skip this step if you sourced this in your .bashrc file)
+\item Type roslaunch roomba\+\_\+control create\+\_\+world.\+launch
+\item The sim should launch now. If it doesn\textquotesingle{}t, please let me know! 
+\end{DoxyEnumerate}

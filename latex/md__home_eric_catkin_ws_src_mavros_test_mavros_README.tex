@@ -1,0 +1,132 @@
+This package consists hand-\/tests with F\+CU S\+I\+TL environment. I hope later we will do automatic tests too.
+
+\subsection*{P\+X4 R\+OS S\+I\+TL }
+
+Follow the instructions presented on \href{https://pixhawk.org/dev/ros/sitl}{\texttt{ P\+X4 R\+OS S\+I\+TL Setup}}.
+
+To test the simulation environment all you have to do is launch the proper R\+OS launch file. Right now, the current available one is {\ttfamily iris\+\_\+empty\+\_\+world\+\_\+offboard\+\_\+ctl.\+launch}, which allows to test the offboard control routines of the Firmware, together with the M\+A\+V\+R\+OS A\+PI.
+
+\subsubsection*{Available tests}
+
+\paragraph*{Offboard position and velocity control}
+
+Note\+: acceleration control still not supported on P\+X4 Firmware side.
+
+\subparagraph*{Tested in launch files}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily iris\+\_\+empty\+\_\+world\+\_\+offboard\+\_\+ctl.\+launch}
+\end{DoxyItemize}
+
+\subparagraph*{Description}
+
+Allows testing the offboard control routines of the P\+X4 firmware by issuing setpoint commands through M\+A\+V\+R\+OS plugins. Current test implements code to send\+:
+
+
+\begin{DoxyItemize}
+\item position setpoints
+\item velocity setpoints
+\end{DoxyItemize}
+
+The tests are implemented by issuing some kind of shaped path. Current shapes are\+:
+
+
+\begin{DoxyItemize}
+\item square/rectangle
+\item circle
+\item eight
+\item ellipse (3D)
+\end{DoxyItemize}
+
+\subparagraph*{How to use}
+
+To test the different behaviors, edit {\ttfamily iris\+\_\+empty\+\_\+world\+\_\+offboard\+\_\+ctl.\+launch}. At the bottom of this file, you will find\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{<!-- SITL test base node launcher -->}}
+\DoxyCodeLine{<\textcolor{keywordtype}{arg} \textcolor{keyword}{name}=\textcolor{stringliteral}{"mode"} \textcolor{keyword}{default}=\textcolor{stringliteral}{"position"} />    \textcolor{comment}{<!-- position ctl mode -->}}
+\DoxyCodeLine{<\textcolor{keywordtype}{arg} \textcolor{keyword}{name}=\textcolor{stringliteral}{"shape"} \textcolor{keyword}{default}=\textcolor{stringliteral}{"square"} />    \textcolor{comment}{<!-- square shaped path -->}}
+\end{DoxyCode}
+
+
+Just change the default value of them and issue {\ttfamily roslaunch test\+\_\+mavros iris\+\_\+empty\+\_\+world\+\_\+offboard\+\_\+ctl.\+launch}
+
+Or, you can just issue the roslaunch passing the parameter values on the command line, p.\+e. {\ttfamily roslaunch test\+\_\+mavros iris\+\_\+empty\+\_\+world\+\_\+offboard\+\_\+ctl.\+launch mode\+:=position shape\+:=square}.
+
+\subparagraph*{T\+O\+DO}
+
+
+\begin{DoxyItemize}
+\item Implement acceleration setpoint sending, when this is implemented on Firmware side
+\item Give possibility to users to define the amplitude of movement
+\item Implement a P\+ID controller for velocity to avoid overshoots in the onboard controller
+\end{DoxyItemize}
+
+\subsection*{A\+PM S\+I\+TL }
+
+All what you need described in \href{http://dev.ardupilot.com/wiki/setting-up-sitl-on-linux/}{\texttt{ ardupilot wiki}}.
+
+\subsubsection*{Preparation}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# this is for zsh, but bash should be similar}
+\DoxyCodeLine{function add-dir-to-path() \{}
+\DoxyCodeLine{    PATH+=":\$1"}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# get sources}
+\DoxyCodeLine{cd ~/ros/src}
+\DoxyCodeLine{wstool set imu\_tools --git https://github.com/ccny-ros-pkg/imu\_tools.git -v indigo}
+\DoxyCodeLine{wstool update -j2}
+\DoxyCodeLine{catkin build}
+\DoxyCodeLine{}
+\DoxyCodeLine{cd ~/src/UAV}
+\DoxyCodeLine{git clone https://github.com/diydrones/ardupilot.git}
+\DoxyCodeLine{git checkout ArduPlane-3.3.0 -b ArduPlane-3.3.0}
+\DoxyCodeLine{git clone https://github.com/tridge/jsbsim.git}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# compile JSBSim}
+\DoxyCodeLine{cd jsbsim}
+\DoxyCodeLine{./autogen.sh --enable-libraries}
+\DoxyCodeLine{make -j4}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# also look ardupliot wiki}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# add path to jsbsim binaries}
+\DoxyCodeLine{add-dir-to-path \$PWD/src}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# path to sim\_vehicle.sh}
+\DoxyCodeLine{cd ../ardupilot/Tools/autotest}
+\DoxyCodeLine{add-dir-to-path \$PWD}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# build APM and load default params}
+\DoxyCodeLine{cd ../../ArduPlane}
+\DoxyCodeLine{sim\_vehicle.sh -w}
+\end{DoxyCode}
+
+
+\subsubsection*{How to use}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# shell 1: in ArduPlane folder}
+\DoxyCodeLine{sim\_vehicle.sh --out udp:localhost:15550 --map}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# shell 2: imu test}
+\DoxyCodeLine{roslaunch test\_mavros apm\_imu\_test.launch}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# shell 2: URDF model + local\_position}
+\DoxyCodeLine{roslaunch test\_mavros apm\_local\_position\_test.launch}
+\end{DoxyCode}
+
+
+\subsubsection*{Screen capture for I\+MU test (youtube video)}
+
+\href{http://www.youtube.com/watch?v=mUIptiNbmS4}{\texttt{ }}
+
+\subsubsection*{Screen capture for U\+R\+DF model test}
+
+\href{https://www.youtube.com/watch?v=r_IOGkmy5ZY}{\texttt{ }} 

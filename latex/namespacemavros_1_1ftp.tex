@@ -1,0 +1,116 @@
+\hypertarget{namespacemavros_1_1ftp}{}\section{mavros.\+ftp Namespace Reference}
+\label{namespacemavros_1_1ftp}\index{mavros.ftp@{mavros.ftp}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavros_1_1ftp_1_1FTPFile}{F\+T\+P\+File}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_a6b481ccf77a4b30ba0213d379bac1cd5}{open}} (path, mode)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_a34a55112263ee6c5e8018c45dc04c1d0}{listdir}} (path)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_aa9c32cf7a3fca4b43a45ca103b9e5a7f}{unlink}} (path)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_a45085a8fdfe2bb00fc86f59e8cce62e6}{mkdir}} (path)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_acb46c43e17c6e1a555fb30f0d39aff17}{rmdir}} (path)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_aefef8b91d7e0f5b543d1c7b4b2680dfe}{rename}} (old\+\_\+path, new\+\_\+path)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_a606b1b5ea6c15cbe1b4f15356706fc8b}{checksum}} (path)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1ftp_a58b6c659d54465656c62e9ac5f3ba6e5}{reset\+\_\+server}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacemavros_1_1ftp_a606b1b5ea6c15cbe1b4f15356706fc8b}\label{namespacemavros_1_1ftp_a606b1b5ea6c15cbe1b4f15356706fc8b}} 
+\index{mavros.ftp@{mavros.ftp}!checksum@{checksum}}
+\index{checksum@{checksum}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{checksum()}{checksum()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+checksum (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate CRC32 for :path:\end{DoxyVerb}
+ 
+
+Definition at line 217 of file ftp.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1ftp_a34a55112263ee6c5e8018c45dc04c1d0}\label{namespacemavros_1_1ftp_a34a55112263ee6c5e8018c45dc04c1d0}} 
+\index{mavros.ftp@{mavros.ftp}!listdir@{listdir}}
+\index{listdir@{listdir}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{listdir()}{listdir()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+listdir (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}List directory :path: contents\end{DoxyVerb}
+ 
+
+Definition at line 161 of file ftp.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1ftp_a45085a8fdfe2bb00fc86f59e8cce62e6}\label{namespacemavros_1_1ftp_a45085a8fdfe2bb00fc86f59e8cce62e6}} 
+\index{mavros.ftp@{mavros.ftp}!mkdir@{mkdir}}
+\index{mkdir@{mkdir}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{mkdir()}{mkdir()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+mkdir (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create directory :path:\end{DoxyVerb}
+ 
+
+Definition at line 184 of file ftp.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1ftp_a6b481ccf77a4b30ba0213d379bac1cd5}\label{namespacemavros_1_1ftp_a6b481ccf77a4b30ba0213d379bac1cd5}} 
+\index{mavros.ftp@{mavros.ftp}!open@{open}}
+\index{open@{open}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+open (\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Open file on FCU\end{DoxyVerb}
+ 
+
+Definition at line 156 of file ftp.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1ftp_aefef8b91d7e0f5b543d1c7b4b2680dfe}\label{namespacemavros_1_1ftp_aefef8b91d7e0f5b543d1c7b4b2680dfe}} 
+\index{mavros.ftp@{mavros.ftp}!rename@{rename}}
+\index{rename@{rename}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{rename()}{rename()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+rename (\begin{DoxyParamCaption}\item[{}]{old\+\_\+path,  }\item[{}]{new\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Rename :old_path: to :new_path:\end{DoxyVerb}
+ 
+
+Definition at line 206 of file ftp.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1ftp_a58b6c659d54465656c62e9ac5f3ba6e5}\label{namespacemavros_1_1ftp_a58b6c659d54465656c62e9ac5f3ba6e5}} 
+\index{mavros.ftp@{mavros.ftp}!reset\_server@{reset\_server}}
+\index{reset\_server@{reset\_server}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{reset\_server()}{reset\_server()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+reset\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 229 of file ftp.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1ftp_acb46c43e17c6e1a555fb30f0d39aff17}\label{namespacemavros_1_1ftp_acb46c43e17c6e1a555fb30f0d39aff17}} 
+\index{mavros.ftp@{mavros.ftp}!rmdir@{rmdir}}
+\index{rmdir@{rmdir}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{rmdir()}{rmdir()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+rmdir (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove directory :path:\end{DoxyVerb}
+ 
+
+Definition at line 195 of file ftp.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1ftp_aa9c32cf7a3fca4b43a45ca103b9e5a7f}\label{namespacemavros_1_1ftp_aa9c32cf7a3fca4b43a45ca103b9e5a7f}} 
+\index{mavros.ftp@{mavros.ftp}!unlink@{unlink}}
+\index{unlink@{unlink}!mavros.ftp@{mavros.ftp}}
+\subsubsection{\texorpdfstring{unlink()}{unlink()}}
+{\footnotesize\ttfamily def mavros.\+ftp.\+unlink (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove :path: file\end{DoxyVerb}
+ 
+
+Definition at line 173 of file ftp.\+py.
+

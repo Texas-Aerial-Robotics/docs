@@ -1,0 +1,47 @@
+\hypertarget{batchnorm__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/batchnorm\+\_\+layer.h File Reference}
+\label{batchnorm__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/batchnorm\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/batchnorm\_layer.h}}
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{batchnorm__layer_8h_a08ae8cf0672f794aeba5d835fe8679d6}{make\+\_\+batchnorm\+\_\+layer}} (int batch, int w, int h, int c)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8h_a81e1c9cbb68e655da05845802d9cdea0}{forward\+\_\+batchnorm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8h_a82c768cb86812e916df726da7c514321}{backward\+\_\+batchnorm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{batchnorm__layer_8h_a82c768cb86812e916df726da7c514321}\label{batchnorm__layer_8h_a82c768cb86812e916df726da7c514321}} 
+\index{batchnorm\_layer.h@{batchnorm\_layer.h}!backward\_batchnorm\_layer@{backward\_batchnorm\_layer}}
+\index{backward\_batchnorm\_layer@{backward\_batchnorm\_layer}!batchnorm\_layer.h@{batchnorm\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_batchnorm\_layer()}{backward\_batchnorm\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+batchnorm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 157 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8h_a81e1c9cbb68e655da05845802d9cdea0}\label{batchnorm__layer_8h_a81e1c9cbb68e655da05845802d9cdea0}} 
+\index{batchnorm\_layer.h@{batchnorm\_layer.h}!forward\_batchnorm\_layer@{forward\_batchnorm\_layer}}
+\index{forward\_batchnorm\_layer@{forward\_batchnorm\_layer}!batchnorm\_layer.h@{batchnorm\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_batchnorm\_layer()}{forward\_batchnorm\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+batchnorm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 135 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8h_a08ae8cf0672f794aeba5d835fe8679d6}\label{batchnorm__layer_8h_a08ae8cf0672f794aeba5d835fe8679d6}} 
+\index{batchnorm\_layer.h@{batchnorm\_layer.h}!make\_batchnorm\_layer@{make\_batchnorm\_layer}}
+\index{make\_batchnorm\_layer@{make\_batchnorm\_layer}!batchnorm\_layer.h@{batchnorm\_layer.h}}
+\subsubsection{\texorpdfstring{make\_batchnorm\_layer()}{make\_batchnorm\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+batchnorm\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file batchnorm\+\_\+layer.\+c.
+

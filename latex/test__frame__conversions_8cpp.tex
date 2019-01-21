@@ -1,0 +1,157 @@
+\hypertarget{test__frame__conversions_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/test/test\+\_\+frame\+\_\+conversions.cpp File Reference}
+\label{test__frame__conversions_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros/test/test\_frame\_conversions.cpp@{/home/eric/catkin\_ws/src/mavros/mavros/test/test\_frame\_conversions.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$mavros/frame\+\_\+tf.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__frame__conversions_8cpp_accaa79f0b1b0522e19ce6b6556627328}{E\+X\+P\+E\+C\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON}}(q1,  q2,  epsilon)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_a213c39f9bab284e0b2f571babcc88cee}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+aircraft\+\_\+to\+\_\+baselink\+\_\+123)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_ad018e16ecf147c064ab716cb00736d7c}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+baselink\+\_\+to\+\_\+aircraft\+\_\+123)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_a84c5decc72d40de61695c90d54342a31}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+enu\+\_\+to\+\_\+ned\+\_\+123)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_af3b62a278b78aa8d61a484317d8461d4}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+ned\+\_\+to\+\_\+enu\+\_\+123)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_a2edf7e8a0d32cc878a8de07c2d74049c}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+ecef\+\_\+to\+\_\+enu\+\_\+123\+\_\+00)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_a3896b909aa65aa123da3bec21733b260}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+enu\+\_\+to\+\_\+ecef\+\_\+123\+\_\+00)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_a6bdcc7054c51ba7cefc7f1f3ed260a4f}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+ecef\+\_\+to\+\_\+enu\+\_\+123\+\_\+4030)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_a307a9228c0491b23c193754cb4ed0bd2}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, transform\+\_\+static\+\_\+frame\+\_\+\+\_\+enu\+\_\+to\+\_\+ecef\+\_\+123\+\_\+4030)
+\item 
+\mbox{\hyperlink{test__frame__conversions_8cpp_a03435d0217ea0429bafdfad08fe1cfce}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+transforms\+\_\+\+\_\+ned\+\_\+to\+\_\+ned\+\_\+123)
+\item 
+int \mbox{\hyperlink{test__frame__conversions_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__frame__conversions_8cpp_accaa79f0b1b0522e19ce6b6556627328}\label{test__frame__conversions_8cpp_accaa79f0b1b0522e19ce6b6556627328}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!EXPECT\_QUATERNION@{EXPECT\_QUATERNION}}
+\index{EXPECT\_QUATERNION@{EXPECT\_QUATERNION}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{EXPECT\_QUATERNION}{EXPECT\_QUATERNION}}
+{\footnotesize\ttfamily \#define E\+X\+P\+E\+C\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON(\begin{DoxyParamCaption}\item[{}]{q1,  }\item[{}]{q2,  }\item[{}]{epsilon }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{EXPECT\_NEAR(q1.w(), q2.w(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(q1.x(), q2.x(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(q1.y(), q2.y(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(q1.z(), q2.z(), epsilon)}
+
+\end{DoxyCode}
+
+
+Definition at line 17 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{test__frame__conversions_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!main@{main}}
+\index{main@{main}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a213c39f9bab284e0b2f571babcc88cee}\label{test__frame__conversions_8cpp_a213c39f9bab284e0b2f571babcc88cee}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+aircraft\+\_\+to\+\_\+baselink\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_ad018e16ecf147c064ab716cb00736d7c}\label{test__frame__conversions_8cpp_ad018e16ecf147c064ab716cb00736d7c}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+baselink\+\_\+to\+\_\+aircraft\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a84c5decc72d40de61695c90d54342a31}\label{test__frame__conversions_8cpp_a84c5decc72d40de61695c90d54342a31}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+enu\+\_\+to\+\_\+ned\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_af3b62a278b78aa8d61a484317d8461d4}\label{test__frame__conversions_8cpp_af3b62a278b78aa8d61a484317d8461d4}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+ned\+\_\+to\+\_\+enu\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a2edf7e8a0d32cc878a8de07c2d74049c}\label{test__frame__conversions_8cpp_a2edf7e8a0d32cc878a8de07c2d74049c}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+ecef\+\_\+to\+\_\+enu\+\_\+123\+\_\+00}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a3896b909aa65aa123da3bec21733b260}\label{test__frame__conversions_8cpp_a3896b909aa65aa123da3bec21733b260}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+enu\+\_\+to\+\_\+ecef\+\_\+123\+\_\+00}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a6bdcc7054c51ba7cefc7f1f3ed260a4f}\label{test__frame__conversions_8cpp_a6bdcc7054c51ba7cefc7f1f3ed260a4f}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+ecef\+\_\+to\+\_\+enu\+\_\+123\+\_\+4030}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a307a9228c0491b23c193754cb4ed0bd2}\label{test__frame__conversions_8cpp_a307a9228c0491b23c193754cb4ed0bd2}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{transform\+\_\+static\+\_\+frame\+\_\+\+\_\+enu\+\_\+to\+\_\+ecef\+\_\+123\+\_\+4030}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 112 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{test__frame__conversions_8cpp_a03435d0217ea0429bafdfad08fe1cfce}\label{test__frame__conversions_8cpp_a03435d0217ea0429bafdfad08fe1cfce}} 
+\index{test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_frame\_conversions.cpp@{test\_frame\_conversions.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+transforms\+\_\+\+\_\+ned\+\_\+to\+\_\+ned\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file test\+\_\+frame\+\_\+conversions.\+cpp.
+

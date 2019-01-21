@@ -1,0 +1,37 @@
+It is mavlink connection and communication library used in \href{https://github.com/mavlink/mavros}{\texttt{ M\+A\+V\+R\+OS}}. Since 2014-\/11-\/02 it adopted to use outside from R\+OS environment by splitting to individual package and removing dependencies to rosconsole.
+
+\subsection*{Connection U\+RL }
+
+Connection defined by U\+RL. Just pass one of that U\+RL to {\ttfamily M\+A\+V\+Conn\+Interface\+::open\+\_\+url()} and get connection object.
+
+Supported schemas\+:
+
+
+\begin{DoxyItemize}
+\item Serial\+: {\ttfamily /path/to/serial/device\mbox{[}\+:baudrate\mbox{]}}
+\item Serial\+: {\ttfamily serial\+:///path/to/serial/device\mbox{[}\+:baudrate\mbox{]}\mbox{[}?ids=sysid,compid\mbox{]}}
+\item Serial with hardware flow control\+: {\ttfamily serial-\/hwfc\+:///path/to/serial/device\mbox{[}\+:baudrate\mbox{]}\mbox{[}?ids=sysid,compid\mbox{]}}
+\item \mbox{\hyperlink{classUDP}{U\+DP}}\+: {\ttfamily udp\+://\mbox{[}bind\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}@\mbox{[}remote\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}}
+\item \mbox{\hyperlink{classUDP}{U\+DP}} broadcast until G\+CS discovery\+: {\ttfamily udp-\/b\+://\mbox{[}bind\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}@\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}}
+\item \mbox{\hyperlink{classUDP}{U\+DP}} broadcast (permanent)\+: {\ttfamily udp-\/pb\+://\mbox{[}bind\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}@\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}}
+\item {\ttfamily \mbox{\hyperlink{classTCP}{T\+CP}} client\+:}tcp\+://\mbox{[}server\+\_\+host\mbox{]}\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}{\ttfamily }
+\item {\ttfamily \mbox{\hyperlink{classTCP}{T\+CP}} server\+:}tcp-\/l\+://\mbox{[}bind\+\_\+port\mbox{]}\mbox{[}\+:port\mbox{]}\mbox{[}/?ids=sysid,compid\mbox{]}\`{}
+\end{DoxyItemize}
+
+Note\+: ids from U\+RL overrides ids given by system\+\_\+id \& component\+\_\+id parameters.
+
+\subsection*{Dependencies }
+
+Same as for mavros\+:
+
+
+\begin{DoxyItemize}
+\item Linux host
+\item Boost $>$= 1.\+46 (used Boost.\+A\+S\+IO)
+\item console-\/bridge library
+\item compiller with C++11 support
+\end{DoxyItemize}
+
+\subsection*{License }
+
+Licensed under terms of \href{https://www.gnu.org/licenses/lgpl.html}{\texttt{ {\itshape L\+G\+P\+Lv3}}}, \href{https://github.com/mavlink/mavros/blob/master/LICENSE-BSD.txt}{\texttt{ {\itshape B\+SD}}}, or \href{https://www.gnu.org/licenses/gpl.html}{\texttt{ {\itshape G\+P\+Lv3}}}. 

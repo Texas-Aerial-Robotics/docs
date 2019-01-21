@@ -1,0 +1,220 @@
+\hypertarget{include__v0_89_2mavlink__helpers_8h}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C/include\+\_\+v0.9/mavlink\+\_\+helpers.h File Reference}
+\label{include__v0_89_2mavlink__helpers_8h}\index{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v0.9/mavlink\_helpers.h@{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v0.9/mavlink\_helpers.h}}
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}checksum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mavlink\+\_\+types.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{union____mavlink__bitfield}{\+\_\+\+\_\+mavlink\+\_\+bitfield}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$ \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_ac006d308067f48514ca5c0cf0b046c28}{mavlink\+\_\+get\+\_\+channel\+\_\+status}} (uint8\+\_\+t chan)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$ \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_a65cce515993cd158e828aa7d061ca5b8}{mavlink\+\_\+get\+\_\+channel\+\_\+buffer}} (uint8\+\_\+t chan)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_aa66131138fc02101dcc73b4b556ab422}{mavlink\+\_\+finalize\+\_\+message\+\_\+chan}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}, uint8\+\_\+t chan, uint8\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Finalize a M\+A\+V\+Link message with channel assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_af3bea083c5ec83f5b6570b2bd4a817d0}{mavlink\+\_\+finalize\+\_\+message}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}, uint8\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Finalize a M\+A\+V\+Link message with M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0 as default channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_afea0a9befa84822fd62c2899ea0d849e}{mavlink\+\_\+msg\+\_\+to\+\_\+send\+\_\+buffer}} (uint8\+\_\+t $\ast$buffer, const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\begin{DoxyCompactList}\small\item\em Pack a message to send it over a serial byte stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_ae7cbde569213151151d20c3766edd244}{mavlink\+\_\+start\+\_\+checksum}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_a3293deb7b51f9a9f0b30bf56c8739593}{mavlink\+\_\+update\+\_\+checksum}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, uint8\+\_\+t c)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_ad91e8323cefc65965574c09e72365d7d}{mavlink\+\_\+parse\+\_\+char}} (uint8\+\_\+t chan, uint8\+\_\+t c, \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$r\+\_\+message, \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$r\+\_\+mavlink\+\_\+status)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t \mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_ad102a58f323758552a9c439c1ede4403}{put\+\_\+bitfield\+\_\+n\+\_\+by\+\_\+index}} (int32\+\_\+t b, uint8\+\_\+t bits, uint8\+\_\+t packet\+\_\+index, uint8\+\_\+t bit\+\_\+index, uint8\+\_\+t $\ast$r\+\_\+bit\+\_\+index, uint8\+\_\+t $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Put a bitfield of length 1-\/32 bit into the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_a8201ad9cec6e1480d1f018161aaa5c6f}\label{include__v0_89_2mavlink__helpers_8h_a8201ad9cec6e1480d1f018161aaa5c6f}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!MAVLINK\_HELPER@{MAVLINK\_HELPER}}
+\index{MAVLINK\_HELPER@{MAVLINK\_HELPER}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_HELPER}{MAVLINK\_HELPER}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}
+
+
+
+Definition at line 9 of file mavlink\+\_\+helpers.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_af3bea083c5ec83f5b6570b2bd4a817d0}\label{include__v0_89_2mavlink__helpers_8h_af3bea083c5ec83f5b6570b2bd4a817d0}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_finalize\_message@{mavlink\_finalize\_message}}
+\index{mavlink\_finalize\_message@{mavlink\_finalize\_message}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_finalize\_message()}{mavlink\_finalize\_message()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t mavlink\+\_\+finalize\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg,  }\item[{uint8\+\_\+t}]{system\+\_\+id,  }\item[{uint8\+\_\+t}]{component\+\_\+id,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Finalize a M\+A\+V\+Link message with M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0 as default channel. 
+
+
+
+Definition at line 89 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_aa66131138fc02101dcc73b4b556ab422}\label{include__v0_89_2mavlink__helpers_8h_aa66131138fc02101dcc73b4b556ab422}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_finalize\_message\_chan@{mavlink\_finalize\_message\_chan}}
+\index{mavlink\_finalize\_message\_chan@{mavlink\_finalize\_message\_chan}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_finalize\_message\_chan()}{mavlink\_finalize\_message\_chan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t mavlink\+\_\+finalize\+\_\+message\+\_\+chan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg,  }\item[{uint8\+\_\+t}]{system\+\_\+id,  }\item[{uint8\+\_\+t}]{component\+\_\+id,  }\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Finalize a M\+A\+V\+Link message with channel assignment. 
+
+This function calculates the checksum and sets length and aircraft id correctly. It assumes that the message id and the payload are already correctly set. This function can also be used if the message header has already been written before (as in mavlink\+\_\+msg\+\_\+xxx\+\_\+pack instead of mavlink\+\_\+msg\+\_\+xxx\+\_\+pack\+\_\+headerless), it just introduces little extra overhead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message to finalize \\
+\hline
+{\em system\+\_\+id} & Id of the sending (this) system, 1-\/127 \\
+\hline
+{\em length} & Message length \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_a65cce515993cd158e828aa7d061ca5b8}\label{include__v0_89_2mavlink__helpers_8h_a65cce515993cd158e828aa7d061ca5b8}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_get\_channel\_buffer@{mavlink\_get\_channel\_buffer}}
+\index{mavlink\_get\_channel\_buffer@{mavlink\_get\_channel\_buffer}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_get\_channel\_buffer()}{mavlink\_get\_channel\_buffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}}$\ast$ mavlink\+\_\+get\+\_\+channel\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{chan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_ac006d308067f48514ca5c0cf0b046c28}\label{include__v0_89_2mavlink__helpers_8h_ac006d308067f48514ca5c0cf0b046c28}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_get\_channel\_status@{mavlink\_get\_channel\_status}}
+\index{mavlink\_get\_channel\_status@{mavlink\_get\_channel\_status}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_get\_channel\_status()}{mavlink\_get\_channel\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}}$\ast$ mavlink\+\_\+get\+\_\+channel\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{chan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_afea0a9befa84822fd62c2899ea0d849e}\label{include__v0_89_2mavlink__helpers_8h_afea0a9befa84822fd62c2899ea0d849e}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_msg\_to\_send\_buffer@{mavlink\_msg\_to\_send\_buffer}}
+\index{mavlink\_msg\_to\_send\_buffer@{mavlink\_msg\_to\_send\_buffer}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_msg\_to\_send\_buffer()}{mavlink\_msg\_to\_send\_buffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t mavlink\+\_\+msg\+\_\+to\+\_\+send\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Pack a message to send it over a serial byte stream. 
+
+
+
+Definition at line 157 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_ad91e8323cefc65965574c09e72365d7d}\label{include__v0_89_2mavlink__helpers_8h_ad91e8323cefc65965574c09e72365d7d}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_parse\_char@{mavlink\_parse\_char}}
+\index{mavlink\_parse\_char@{mavlink\_parse\_char}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_parse\_char()}{mavlink\_parse\_char()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t mavlink\+\_\+parse\+\_\+char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{c,  }\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{r\+\_\+message,  }\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$}]{r\+\_\+mavlink\+\_\+status }\end{DoxyParamCaption})}
+
+This is a convenience function which handles the complete M\+A\+V\+Link parsing. the function will parse one byte at a time and return the complete packet once it could be successfully decoded. Checksum and other failures will be silently ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chan} & ID of the current channel. This allows to parse different channels with this function. a channel is not a physical message channel like a serial port, but a logic partition of the communication streams in this case. C\+O\+M\+M\+\_\+\+NB is the limit for the number of channels on M\+CU (e.\+g. A\+R\+M7), while C\+O\+M\+M\+\_\+\+N\+B\+\_\+\+H\+I\+GH is the limit for the number of channels in Linux/\+Windows \\
+\hline
+{\em c} & The char to barse\\
+\hline
+{\em return\+Msg} & N\+U\+LL if no message could be decoded, the message data else \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no message could be decoded, 1 else
+\end{DoxyReturn}
+A typical use scenario of this function call is\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <inttypes.h>} \textcolor{comment}{// For fixed-width uint8\_t type}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct____mavlink__message}{mavlink\_message\_t}} \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}};}
+\DoxyCodeLine{\textcolor{keywordtype}{int} chan = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while}(serial.bytesAvailable > 0)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  uint8\_t \textcolor{keywordtype}{byte} = serial.getNextByte();}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (\mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_ad91e8323cefc65965574c09e72365d7d}{mavlink\_parse\_char}}(chan, \textcolor{keywordtype}{byte}, \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}))}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"Received message with ID \%d, sequence: \%d from component \%d of system \%d"}, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.msgid, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.seq, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.compid, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.sysid);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ $<$ The currently decoded message
+
+$<$ The current decode status
+
+Definition at line 219 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_ae7cbde569213151151d20c3766edd244}\label{include__v0_89_2mavlink__helpers_8h_ae7cbde569213151151d20c3766edd244}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_start\_checksum@{mavlink\_start\_checksum}}
+\index{mavlink\_start\_checksum@{mavlink\_start\_checksum}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_start\_checksum()}{mavlink\_start\_checksum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void mavlink\+\_\+start\+\_\+checksum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_a3293deb7b51f9a9f0b30bf56c8739593}\label{include__v0_89_2mavlink__helpers_8h_a3293deb7b51f9a9f0b30bf56c8739593}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!mavlink\_update\_checksum@{mavlink\_update\_checksum}}
+\index{mavlink\_update\_checksum@{mavlink\_update\_checksum}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{mavlink\_update\_checksum()}{mavlink\_update\_checksum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void mavlink\+\_\+update\+\_\+checksum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg,  }\item[{uint8\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 178 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__helpers_8h_ad102a58f323758552a9c439c1ede4403}\label{include__v0_89_2mavlink__helpers_8h_ad102a58f323758552a9c439c1ede4403}} 
+\index{mavlink\_helpers.h@{mavlink\_helpers.h}!put\_bitfield\_n\_by\_index@{put\_bitfield\_n\_by\_index}}
+\index{put\_bitfield\_n\_by\_index@{put\_bitfield\_n\_by\_index}!mavlink\_helpers.h@{mavlink\_helpers.h}}
+\subsubsection{\texorpdfstring{put\_bitfield\_n\_by\_index()}{put\_bitfield\_n\_by\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t put\+\_\+bitfield\+\_\+n\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{bits,  }\item[{uint8\+\_\+t}]{packet\+\_\+index,  }\item[{uint8\+\_\+t}]{bit\+\_\+index,  }\item[{uint8\+\_\+t $\ast$}]{r\+\_\+bit\+\_\+index,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Put a bitfield of length 1-\/32 bit into the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & the value to add, will be encoded in the bitfield \\
+\hline
+{\em bits} & number of bits to use to encode b, e.\+g. 1 for boolean, 2, 3, etc. \\
+\hline
+{\em packet\+\_\+index} & the position in the packet (the index of the first byte to use) \\
+\hline
+{\em bit\+\_\+index} & the position in the byte (the index of the first bit to use) \\
+\hline
+{\em buffer} & packet buffer to write into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new position of the last used byte in the buffer 
+\end{DoxyReturn}
+
+
+Definition at line 420 of file mavlink\+\_\+helpers.\+h.
+

@@ -1,0 +1,97 @@
+Reference
+
+\textbackslash{}control\+\_\+functions
+
+\mbox{\hyperlink{controlAPIExample_8cpp}{src/control\+A\+P\+I\+Example.\+cpp}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include <control\_functions.hpp>}
+\DoxyCodeLine{//include API }
+\DoxyCodeLine{}
+\DoxyCodeLine{int main(int argc, char** argv)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    //initialize ros }
+\DoxyCodeLine{    ros::init(argc, argv, "offb\_node");}
+\DoxyCodeLine{    ros::NodeHandle controlnode;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    //initialize control publisher/subscribers}
+\DoxyCodeLine{    init\_publisher\_subscriber(controlnode);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //specify some waypoints }
+\DoxyCodeLine{    std::vector<control\_api\_waypoint> waypointList;}
+\DoxyCodeLine{    control\_api\_waypoint nextWayPoint;}
+\DoxyCodeLine{    nextWayPoint.x = 0;}
+\DoxyCodeLine{    nextWayPoint.y = 0;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 0;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 5;}
+\DoxyCodeLine{    nextWayPoint.y = 0;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = -90;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 5;}
+\DoxyCodeLine{    nextWayPoint.y = 5;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 0;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 0;}
+\DoxyCodeLine{    nextWayPoint.y = 5;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 90;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 0;}
+\DoxyCodeLine{    nextWayPoint.y = 0;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 180;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // wait for FCU connection}
+\DoxyCodeLine{    wait4connect();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //wait for used to switch to mode GUIDED}
+\DoxyCodeLine{    wait4start();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //create local reference frame }
+\DoxyCodeLine{    initialize\_local\_frame();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //request takeoff}
+\DoxyCodeLine{    takeoff(3);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //specify control loop rate. We recommend a low frequency to not over load the FCU with messages. Too many messages will cause the drone to be sluggish}
+\DoxyCodeLine{    ros::Rate rate(2.0);}
+\DoxyCodeLine{    int counter = 0;}
+\DoxyCodeLine{    while(ros::ok())}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        ros::spinOnce();}
+\DoxyCodeLine{        rate.sleep();}
+\DoxyCodeLine{        if(check\_waypoint\_reached() == 1)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            if (counter < waypointList.size())}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                set\_destination(waypointList[counter].x,waypointList[counter].y,waypointList[counter].z, waypointList[counter].psi);}
+\DoxyCodeLine{                counter++;  }
+\DoxyCodeLine{            \}else\{}
+\DoxyCodeLine{                //land after all waypoints are reached}
+\DoxyCodeLine{                land();}
+\DoxyCodeLine{            \}   }
+\DoxyCodeLine{        \}   }
+\DoxyCodeLine{        }
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ \subsection*{run example code }
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch mission8\_sim droneOnly.launch}
+\DoxyCodeLine{\# New Terminal}
+\DoxyCodeLine{~/catkin\_ws/src/Mission8\_OutOfControls/scripts/startsim.sh}
+\DoxyCodeLine{\# New Terminal}
+\DoxyCodeLine{roslaunch out\_of\_controls apm.launch}
+\DoxyCodeLine{\# New Terminal }
+\DoxyCodeLine{roslaunch out\_of\_controls contolAPIExample.launch}
+\end{DoxyCode}
+ N\+O\+T\+E$\ast$$\ast$ you can tile gnome terminals by pressing {\ttfamily ctrl + shift + t} 

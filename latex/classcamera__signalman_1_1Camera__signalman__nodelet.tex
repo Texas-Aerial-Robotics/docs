@@ -1,0 +1,100 @@
+\hypertarget{classcamera__signalman_1_1Camera__signalman__nodelet}{}\section{camera\+\_\+signalman\+::Camera\+\_\+signalman\+\_\+nodelet Class Reference}
+\label{classcamera__signalman_1_1Camera__signalman__nodelet}\index{camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}}
+
+
+{\ttfamily \#include $<$Camera\+\_\+signalman\+\_\+nodelet.\+h$>$}
+
+Inheritance diagram for camera\+\_\+signalman\+::Camera\+\_\+signalman\+\_\+nodelet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcamera__signalman_1_1Camera__signalman__nodelet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcamera__signalman_1_1Camera__signalman__nodelet_aeda05ff39bb863e934381f914f55cc6e}{Camera\+\_\+signalman\+\_\+nodelet}} ()=default
+\item 
+bool \mbox{\hyperlink{classcamera__signalman_1_1Camera__signalman__nodelet_abbc3105ad2d75df884e7f62a40cecb87}{set\+Current\+Camera\+Suscriber}} (const std\+::string \&frame\+ID)
+\item 
+bool \mbox{\hyperlink{classcamera__signalman_1_1Camera__signalman__nodelet_a04659efde343f9690deca8425f3c9c37}{set\+Current\+Camera\+Suscriber}} (int camera\+Index)
+\item 
+int \mbox{\hyperlink{classcamera__signalman_1_1Camera__signalman__nodelet_a321e800523b67be8f2250d068012e578}{get\+Current\+Camera\+Index}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main class of the \mbox{\hyperlink{namespacecamera__signalman}{camera\+\_\+signalman}} nodelet. 
+
+Definition at line 26 of file Camera\+\_\+signalman\+\_\+nodelet.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcamera__signalman_1_1Camera__signalman__nodelet_aeda05ff39bb863e934381f914f55cc6e}\label{classcamera__signalman_1_1Camera__signalman__nodelet_aeda05ff39bb863e934381f914f55cc6e}} 
+\index{camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}!Camera\_signalman\_nodelet@{Camera\_signalman\_nodelet}}
+\index{Camera\_signalman\_nodelet@{Camera\_signalman\_nodelet}!camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}}
+\subsubsection{\texorpdfstring{Camera\_signalman\_nodelet()}{Camera\_signalman\_nodelet()}}
+{\footnotesize\ttfamily camera\+\_\+signalman\+::\+Camera\+\_\+signalman\+\_\+nodelet\+::\+Camera\+\_\+signalman\+\_\+nodelet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor for the nodelet\textquotesingle{}s main class. Should be empty or minimal; all the heavy lifting is done in the \#on\+Init method. \begin{DoxySeeAlso}{See also}
+Camera\+\_\+signalman\+\_\+nodelet\+::on\+Init 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcamera__signalman_1_1Camera__signalman__nodelet_a321e800523b67be8f2250d068012e578}\label{classcamera__signalman_1_1Camera__signalman__nodelet_a321e800523b67be8f2250d068012e578}} 
+\index{camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}!getCurrentCameraIndex@{getCurrentCameraIndex}}
+\index{getCurrentCameraIndex@{getCurrentCameraIndex}!camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}}
+\subsubsection{\texorpdfstring{getCurrentCameraIndex()}{getCurrentCameraIndex()}}
+{\footnotesize\ttfamily int camera\+\_\+signalman\+::\+Camera\+\_\+signalman\+\_\+nodelet\+::get\+Current\+Camera\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current subscribed camera feed\textquotesingle{}s index \begin{DoxyReturn}{Returns}
+the current subscribed camera feed\textquotesingle{}s index 
+\end{DoxyReturn}
+
+
+Definition at line 222 of file Camera\+\_\+signalman\+\_\+nodelet.\+cpp.
+
+\mbox{\Hypertarget{classcamera__signalman_1_1Camera__signalman__nodelet_abbc3105ad2d75df884e7f62a40cecb87}\label{classcamera__signalman_1_1Camera__signalman__nodelet_abbc3105ad2d75df884e7f62a40cecb87}} 
+\index{camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}!setCurrentCameraSuscriber@{setCurrentCameraSuscriber}}
+\index{setCurrentCameraSuscriber@{setCurrentCameraSuscriber}!camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}}
+\subsubsection{\texorpdfstring{setCurrentCameraSuscriber()}{setCurrentCameraSuscriber()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool camera\+\_\+signalman\+::\+Camera\+\_\+signalman\+\_\+nodelet\+::set\+Current\+Camera\+Suscriber (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{frame\+ID }\end{DoxyParamCaption})}
+
+Sets the nodelet\textquotesingle{}s listening topic to reroute the latter. If the specified topic is not in the config, the method will return false and no changes will be made. 
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the camera feed to reroute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the topic was in the config and was successfully changed 
+\end{DoxyReturn}
+
+
+Definition at line 160 of file Camera\+\_\+signalman\+\_\+nodelet.\+cpp.
+
+\mbox{\Hypertarget{classcamera__signalman_1_1Camera__signalman__nodelet_a04659efde343f9690deca8425f3c9c37}\label{classcamera__signalman_1_1Camera__signalman__nodelet_a04659efde343f9690deca8425f3c9c37}} 
+\index{camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}!setCurrentCameraSuscriber@{setCurrentCameraSuscriber}}
+\index{setCurrentCameraSuscriber@{setCurrentCameraSuscriber}!camera\_signalman::Camera\_signalman\_nodelet@{camera\_signalman::Camera\_signalman\_nodelet}}
+\subsubsection{\texorpdfstring{setCurrentCameraSuscriber()}{setCurrentCameraSuscriber()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool camera\+\_\+signalman\+::\+Camera\+\_\+signalman\+\_\+nodelet\+::set\+Current\+Camera\+Suscriber (\begin{DoxyParamCaption}\item[{int}]{camera\+Index }\end{DoxyParamCaption})}
+
+Sets the nodelet\textquotesingle{}s listening topic to reroute the latter. (Index starts at 0 you Mathlab pricks). If the specified index is out of bounds of the config, the method will return false and no changes will be made. 
+\begin{DoxyParams}{Parameters}
+{\em camera\+Index} & The index of the camera feed to reroute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the index isn\textquotesingle{}t out of bounds and was successfully changed 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file Camera\+\_\+signalman\+\_\+nodelet.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/camera\+\_\+signalman/include/\mbox{\hyperlink{Camera__signalman__nodelet_8h}{Camera\+\_\+signalman\+\_\+nodelet.\+h}}\item 
+/home/eric/catkin\+\_\+ws/src/camera\+\_\+signalman/src/\mbox{\hyperlink{Camera__signalman__nodelet_8cpp}{Camera\+\_\+signalman\+\_\+nodelet.\+cpp}}\end{DoxyCompactItemize}

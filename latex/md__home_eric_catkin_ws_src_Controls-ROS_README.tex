@@ -1,0 +1,354 @@
+In this repository are the files nessary to build our R\+OS (Robot Operating System) package.
+
+We use {\bfseries{Ubuntu 18.\+04}} and {\bfseries{R\+OS Melodic}}
+
+This package is loaded and runs on our Nvidia Jetson T\+X2 onboard the quadcopter.
+
+It then feeds commands to the Pixhawk 2 using M\+A\+V\+R\+OS.
+
+Note that there is a {\bfseries{Troubleshooting}} section at the bottom of this page.
+
+Code blocks are meant to be typed in Terminal windows. \char`\"{}\+Control+\+Alt+\+T\char`\"{} opens a new Terminal window.
+
+\subsection*{1. Install R\+OS}
+
+
+\begin{DoxyItemize}
+\item Do {\itshape Desktop Install}
+\item Follow until {\itshape Step 1.\+7} at the end of the page
+\end{DoxyItemize}
+
+First, install {\bfseries{R\+OS Melodic}} using the following instructions\+: \href{http://wiki.ros.org/melodic/Installation/Ubuntu}{\texttt{ http\+://wiki.\+ros.\+org/melodic/\+Installation/\+Ubuntu}}
+
+\subsection*{2. Set Up Catkin workspace}
+
+We use {\ttfamily catkin build} instead of {\ttfamily catkin\+\_\+make}. Please install the following\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get install python-wstool python-rosinstall-generator python-catkin-tools}
+\end{DoxyCode}
+
+
+Then, initialize the catkin workspace\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir -p ~/catkin\_ws/src}
+\DoxyCodeLine{cd ~/catkin\_ws}
+\DoxyCodeLine{catkin init}
+\end{DoxyCode}
+
+
+\subsection*{3. Dependencies installation}
+
+Install {\ttfamily mavros} and {\ttfamily mavlink} from source\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws}
+\DoxyCodeLine{wstool init ~/catkin\_ws/src}
+\DoxyCodeLine{}
+\DoxyCodeLine{rosinstall\_generator --upstream mavros | tee /tmp/mavros.rosinstall}
+\DoxyCodeLine{rosinstall\_generator mavlink | tee -a /tmp/mavros.rosinstall}
+\DoxyCodeLine{wstool merge -t src /tmp/mavros.rosinstall}
+\DoxyCodeLine{wstool update -t src}
+\DoxyCodeLine{rosdep install --from-paths src --ignore-src --rosdistro `echo \$ROS\_DISTRO` -y}
+\DoxyCodeLine{}
+\DoxyCodeLine{catkin build}
+\end{DoxyCode}
+
+
+Open your {\ttfamily $\sim$/.bashrc} for editing\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gedit ~/.bashrc}
+\end{DoxyCode}
+
+
+Add this line to end of {\ttfamily $\sim$/.bashrc}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ~/catkin\_ws/devel/setup.bash}
+\end{DoxyCode}
+ Save and exit. Then run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ~/.bashrc}
+\end{DoxyCode}
+
+
+\subsection*{4. Clone our R\+OS package repository}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/Controls-ROS.git}
+\end{DoxyCode}
+ Our repository should now be copied to {\ttfamily $\sim$/catkin\+\_\+ws/src/\+Controls-\/\+R\+O\+S/} (don\textquotesingle{}t run this line. This is just saying that if you browse in the file manager, you will see those folders).
+
+\subsection*{5. Build instructions}
+
+Inside {\ttfamily catkin\+\_\+ws}, run {\ttfamily catkin build}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws}
+\DoxyCodeLine{catkin build}
+\end{DoxyCode}
+
+
+\subsection*{6. Install Ardupilot}
+
+In home directory\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/ardupilot.git}
+\DoxyCodeLine{cd ardupilot}
+\DoxyCodeLine{git checkout Copter-3.5}
+\DoxyCodeLine{git submodule update --init --recursive}
+\end{DoxyCode}
+
+
+Install some packages\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install python-matplotlib python-serial python-wxgtk3.0 python-wxtools python-lxml python-scipy python-opencv ccache gawk git python-pip python-pexpect}
+\DoxyCodeLine{sudo pip2 install future pymavlink MAVProxy}
+\end{DoxyCode}
+
+
+Open {\ttfamily $\sim$/.bashrc} for editing\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gedit ~/.bashrc}
+\end{DoxyCode}
+
+
+Add these lines to end of {\ttfamily $\sim$/.bashrc} (the file open in the text editor)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export PATH=\$PATH:\$HOME/ardupilot/Tools/autotest}
+\DoxyCodeLine{export PATH=/usr/lib/ccache:\$PATH}
+\end{DoxyCode}
+
+
+Save and close the text editor.
+
+Reload {\ttfamily $\sim$/.bashrc}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{. ~/.bashrc}
+\end{DoxyCode}
+
+
+Run S\+I\+TL (Software In The Loop) once to set params\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/ardupilot/ArduCopter}
+\DoxyCodeLine{sim\_vehicle.py -w}
+\end{DoxyCode}
+
+
+Once the new Terminal window pops up and you see the Ardu\+Pilot software say \char`\"{}\+R\+E\+A\+D\+Y T\+O F\+L\+Y,\char`\"{} you can kill the process by hitting \char`\"{}\+Control+\+C\char`\"{} in the Terminal it is running out of.
+
+\subsection*{7. Install Gazebo}
+
+Setup your computer to accept software from \href{http://packages.osrfoundation.org:}{\texttt{ http\+://packages.\+osrfoundation.\+org\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb\_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'}
+\end{DoxyCode}
+
+
+Setup keys\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -}
+\end{DoxyCode}
+
+
+Reload software list\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt update}
+\end{DoxyCode}
+
+
+Install Gazebo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install gazebo9 libgazebo9-dev}
+\end{DoxyCode}
+
+
+Install R\+OS plugins\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install ros-melodic-gazebo-ros ros-melodic-gazebo-plugins}
+\end{DoxyCode}
+
+
+Get Gazebo plugin for A\+PM (Ardu\+Pilot Master)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~}
+\DoxyCodeLine{git clone https://github.com/SwiftGust/ardupilot\_gazebo}
+\DoxyCodeLine{cd ardupilot\_gazebo}
+\DoxyCodeLine{git checkout gazebo9}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make -j4}
+\DoxyCodeLine{sudo make install}
+\end{DoxyCode}
+
+
+Set paths for models\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{echo 'export GAZEBO\_MODEL\_PATH=~/ardupilot\_gazebo/gazebo\_models' >> ~/.bashrc}
+\DoxyCodeLine{. ~/.bashrc}
+\end{DoxyCode}
+
+
+Add Gazebo Models\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{hg clone https://bitbucket.org/osrf/gazebo\_models ~/gazebo\_ws/gazebo\_models}
+\DoxyCodeLine{cd ~/gazebo\_ws/gazebo\_models}
+\DoxyCodeLine{echo 'export GAZEBO\_MODEL\_PATH=~/gazebo\_ws/gazebo\_models' >> ~/.bashrc}
+\DoxyCodeLine{source ~/.bashrc}
+\end{DoxyCode}
+
+
+\subsection*{8. Run Simulator}
+
+In one Terminal (Terminal 1), run S\+I\+TL\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/ardupilot/ArduCopter/}
+\DoxyCodeLine{sim\_vehicle.py -j4 -f Gazebo --console}
+\end{DoxyCode}
+
+
+In another Terminal (Terminal 2), run Gazebo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gazebo --verbose ~/ardupilot\_gazebo/gazebo\_worlds/iris\_irlock\_demo.world}
+\end{DoxyCode}
+
+
+Set parameters for sim in the same window after you run the {\ttfamily sim\+\_\+vehicle.\+py script}. Do this by using command {\ttfamily param load $<$filename$>$} Example params can be found in the {\ttfamily Controls-\/\+Other} repo\+: \href{https://github.com/Texas-Aerial-Robotics/Controls-Other}{\texttt{ https\+://github.\+com/\+Texas-\/\+Aerial-\/\+Robotics/\+Controls-\/\+Other}}
+
+To load our parameters, clone our {\ttfamily Controls-\/\+Other} repository (Terminal 3)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/Controls-Other}
+\end{DoxyCode}
+ In the Ardupilot simulator Terminal (Terminal 1) run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{param load ../../Controls-Other/Params/Sim\_master.param}
+\end{DoxyCode}
+ Play around, then close by \char`\"{}\+Control+\+C\char`\"{} in the Terminal windows.
+
+\subsection*{9. Install Roomba Drone Simulator}
+
+In order to use the Ardupilot simulator with the Roombas -\/ as well as other plugins such as cameras -\/ you need to add R\+OS packages to Gazebo. Install the following dependencies\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install ros-melodic-gazebo-ros ros-melodic-gazebo-plugins}
+\end{DoxyCode}
+
+
+Clone in Gazebo-\/\+Ros in your catkin\+\_\+ws and the Computations repo in your home directory\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/Gazebo-Ros.git}
+\DoxyCodeLine{cd ~}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/Computations.git}
+\end{DoxyCode}
+
+
+Add the following to your {\ttfamily $\sim$/.bashrc} to use the Roomba plugins\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export GAZEBO\_MODEL\_PATH=\$\{GAZEBO\_MODEL\_PATH\}:~/Computations/roomba\_host/models}
+\DoxyCodeLine{export GAZEBO\_PLUGIN\_PATH=\$\{GAZEBO\_PLUGIN\_PATH\}:~/Computations/roomba\_host/build}
+\end{DoxyCode}
+
+
+Build the R\+OS packages you just downloaded\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/}
+\DoxyCodeLine{catkin build}
+\end{DoxyCode}
+
+
+Reload {\ttfamily $\sim$/.bashrc} so the Terminal knows where the packages are located\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ~/.bashrc}
+\end{DoxyCode}
+
+
+\subsubsection*{Run a sim with roslaunch}
+
+In one Terminal (Terminal 1)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch gazebo\_ros\_sim droneOnly.launch}
+\end{DoxyCode}
+ In another Terminal (Terminal 2), run the following command to start and connect the Ardupilot simulator to Gazebo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/ardupilot/ArduCopter/ \&\& sim\_vehicle.py -f gazebo-iris --console -I0}
+\end{DoxyCode}
+ Play around, then close by \char`\"{}\+Control+\+C\char`\"{} in the Terminal windows.
+
+\subsubsection*{To view camera plugin}
+
+Install image view\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install ros-melodic-image-view}
+\end{DoxyCode}
+
+
+To see camera view\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun image\_view image\_view image:=/webcam/image\_raw}
+\end{DoxyCode}
+
+
+\subsection*{10. Run Mavros Scripts from Controls-\/\+Ros package}
+
+Launch the sim via roslaunch (Terminal 1)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch gazebo\_ros\_sim droneOnly.launch}
+\end{DoxyCode}
+ In another Terminal (Terminal 2) run the following command to start and connect the Ardupilot sim to Gazebo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/ardupilot/ArduCopter/ \&\& sim\_vehicle.py -f gazebo-iris --console -I0}
+\end{DoxyCode}
+ In another Terminal (Terminal 3) run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/Controls-Other/Launch/}
+\DoxyCodeLine{roslaunch apm.launch}
+\end{DoxyCode}
+ Be sure to wait for the drone to go throught the full initialization process. The drone will be ready to fly once the console reads Optical Flow now aiding and origin set to G\+PS. For the competition we will not use G\+PS to home the drone, but for introduction sake let the drone use G\+PS
+
+In another Terminal (Terminal 4) run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun flight\_pkg staple}
+\end{DoxyCode}
+
+
+Then in Mav\+Proxy (Terminal 2) switch the mode into {\ttfamily guided}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mode GUIDED}
+\end{DoxyCode}
+
+
+you did it! 🎉
+
+\DoxyHorRuler
+
+
+\subsection*{Troubleshooting and Common Problems\+:}
+
+\subsubsection*{During Catkin Build\+:}
+
+\#\#\#\# Complains about \char`\"{}\+Geographic\+Lib\char`\"{} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src/mavros/mavros/scripts}
+\DoxyCodeLine{sudo ./install\_geographiclib\_datasets.sh}
+\end{DoxyCode}
+
+
+\#\#\#\# Complains about \char`\"{}\+Geometry Msgs\char`\"{} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install ros-melodic-geometry-msgs}
+\end{DoxyCode}
+
+
+\DoxyHorRuler
+
+
+References\+:
+\begin{DoxyItemize}
+\item \href{https://dev.px4.io/en/ros/mavros_installation.html\#source-installation}{\texttt{ https\+://dev.\+px4.\+io/en/ros/mavros\+\_\+installation.\+html\#source-\/installation}}
+\item \href{http://wiki.ros.org/catkin/Tutorials/create_a_workspace}{\texttt{ http\+://wiki.\+ros.\+org/catkin/\+Tutorials/create\+\_\+a\+\_\+workspace}}
+\item \href{https://github.com/ArduPilot/ardupilot_wiki/issues/1001}{\texttt{ https\+://github.\+com/\+Ardu\+Pilot/ardupilot\+\_\+wiki/issues/1001}}
+\item \href{https://github.com/AS4SR/general_info/wiki/ArduPilot:-Instructions-to-set-up-and-run-an-autopilot-using-SITL-and-Gazebo-simulator}{\texttt{ https\+://github.\+com/\+A\+S4\+S\+R/general\+\_\+info/wiki/\+Ardu\+Pilot\+:-\/\+Instructions-\/to-\/set-\/up-\/and-\/run-\/an-\/autopilot-\/using-\/\+S\+I\+T\+L-\/and-\/\+Gazebo-\/simulator}} 
+\end{DoxyItemize}

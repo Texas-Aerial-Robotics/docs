@@ -1,0 +1,112 @@
+\hypertarget{coco_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/coco.c File Reference}
+\label{coco_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/coco.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/coco.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{coco_8c_a7d54248e7cab4c15d780458837482861}{train\+\_\+coco}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+int \mbox{\hyperlink{coco_8c_ac4d2c9686699ff1feb998868f5f07757}{get\+\_\+coco\+\_\+image\+\_\+id}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{coco_8c_a5ad6dc573c38c10f58044b3837c1e933}{validate\+\_\+coco}} (char $\ast$cfg, char $\ast$weights)
+\item 
+void \mbox{\hyperlink{coco_8c_a75e914b5963bbd97ca7ab9b2d61235e4}{validate\+\_\+coco\+\_\+recall}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{coco_8c_a3750d7559afe9fbdcc98dfb5383275a7}{test\+\_\+coco}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, float thresh)
+\item 
+void \mbox{\hyperlink{coco_8c_a9a2e98f86cd2b185650f4ec039d38b03}{run\+\_\+coco}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{coco_8c_a1da6305b8c6be56e3ec19a7ab02800c9}{coco\+\_\+classes}} \mbox{[}$\,$\mbox{]} = \{\char`\"{}person\char`\"{},\char`\"{}bicycle\char`\"{},\char`\"{}car\char`\"{},\char`\"{}motorcycle\char`\"{},\char`\"{}airplane\char`\"{},\char`\"{}bus\char`\"{},\char`\"{}train\char`\"{},\char`\"{}truck\char`\"{},\char`\"{}boat\char`\"{},\char`\"{}traffic light\char`\"{},\char`\"{}fire hydrant\char`\"{},\char`\"{}stop sign\char`\"{},\char`\"{}parking meter\char`\"{},\char`\"{}bench\char`\"{},\char`\"{}bird\char`\"{},\char`\"{}cat\char`\"{},\char`\"{}dog\char`\"{},\char`\"{}horse\char`\"{},\char`\"{}sheep\char`\"{},\char`\"{}cow\char`\"{},\char`\"{}elephant\char`\"{},\char`\"{}bear\char`\"{},\char`\"{}zebra\char`\"{},\char`\"{}giraffe\char`\"{},\char`\"{}backpack\char`\"{},\char`\"{}umbrella\char`\"{},\char`\"{}handbag\char`\"{},\char`\"{}tie\char`\"{},\char`\"{}suitcase\char`\"{},\char`\"{}frisbee\char`\"{},\char`\"{}skis\char`\"{},\char`\"{}snowboard\char`\"{},\char`\"{}sports ball\char`\"{},\char`\"{}kite\char`\"{},\char`\"{}baseball bat\char`\"{},\char`\"{}baseball glove\char`\"{},\char`\"{}skateboard\char`\"{},\char`\"{}surfboard\char`\"{},\char`\"{}tennis racket\char`\"{},\char`\"{}bottle\char`\"{},\char`\"{}wine glass\char`\"{},\char`\"{}cup\char`\"{},\char`\"{}fork\char`\"{},\char`\"{}knife\char`\"{},\char`\"{}spoon\char`\"{},\char`\"{}bowl\char`\"{},\char`\"{}banana\char`\"{},\char`\"{}apple\char`\"{},\char`\"{}sandwich\char`\"{},\char`\"{}orange\char`\"{},\char`\"{}broccoli\char`\"{},\char`\"{}carrot\char`\"{},\char`\"{}hot dog\char`\"{},\char`\"{}pizza\char`\"{},\char`\"{}donut\char`\"{},\char`\"{}cake\char`\"{},\char`\"{}chair\char`\"{},\char`\"{}couch\char`\"{},\char`\"{}potted plant\char`\"{},\char`\"{}bed\char`\"{},\char`\"{}dining table\char`\"{},\char`\"{}toilet\char`\"{},\char`\"{}tv\char`\"{},\char`\"{}laptop\char`\"{},\char`\"{}mouse\char`\"{},\char`\"{}remote\char`\"{},\char`\"{}keyboard\char`\"{},\char`\"{}cell phone\char`\"{},\char`\"{}microwave\char`\"{},\char`\"{}oven\char`\"{},\char`\"{}toaster\char`\"{},\char`\"{}sink\char`\"{},\char`\"{}refrigerator\char`\"{},\char`\"{}book\char`\"{},\char`\"{}clock\char`\"{},\char`\"{}vase\char`\"{},\char`\"{}scissors\char`\"{},\char`\"{}teddy bear\char`\"{},\char`\"{}hair drier\char`\"{},\char`\"{}toothbrush\char`\"{}\}
+\item 
+int \mbox{\hyperlink{coco_8c_a510b483a1df4daf892d602b2deedd78d}{coco\+\_\+ids}} \mbox{[}$\,$\mbox{]} = \{1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,24,25,27,28,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,67,70,72,73,74,75,76,77,78,79,80,81,82,84,85,86,87,88,89,90\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{coco_8c_ac4d2c9686699ff1feb998868f5f07757}\label{coco_8c_ac4d2c9686699ff1feb998868f5f07757}} 
+\index{coco.c@{coco.c}!get\_coco\_image\_id@{get\_coco\_image\_id}}
+\index{get\_coco\_image\_id@{get\_coco\_image\_id}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{get\_coco\_image\_id()}{get\_coco\_image\_id()}}
+{\footnotesize\ttfamily int get\+\_\+coco\+\_\+image\+\_\+id (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file coco.\+c.
+
+\mbox{\Hypertarget{coco_8c_a9a2e98f86cd2b185650f4ec039d38b03}\label{coco_8c_a9a2e98f86cd2b185650f4ec039d38b03}} 
+\index{coco.c@{coco.c}!run\_coco@{run\_coco}}
+\index{run\_coco@{run\_coco}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{run\_coco()}{run\_coco()}}
+{\footnotesize\ttfamily void run\+\_\+coco (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 340 of file coco.\+c.
+
+\mbox{\Hypertarget{coco_8c_a3750d7559afe9fbdcc98dfb5383275a7}\label{coco_8c_a3750d7559afe9fbdcc98dfb5383275a7}} 
+\index{coco.c@{coco.c}!test\_coco@{test\_coco}}
+\index{test\_coco@{test\_coco}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{test\_coco()}{test\_coco()}}
+{\footnotesize\ttfamily void test\+\_\+coco (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{float}]{thresh }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file coco.\+c.
+
+\mbox{\Hypertarget{coco_8c_a7d54248e7cab4c15d780458837482861}\label{coco_8c_a7d54248e7cab4c15d780458837482861}} 
+\index{coco.c@{coco.c}!train\_coco@{train\_coco}}
+\index{train\_coco@{train\_coco}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{train\_coco()}{train\_coco()}}
+{\footnotesize\ttfamily void train\+\_\+coco (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file coco.\+c.
+
+\mbox{\Hypertarget{coco_8c_a5ad6dc573c38c10f58044b3837c1e933}\label{coco_8c_a5ad6dc573c38c10f58044b3837c1e933}} 
+\index{coco.c@{coco.c}!validate\_coco@{validate\_coco}}
+\index{validate\_coco@{validate\_coco}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{validate\_coco()}{validate\_coco()}}
+{\footnotesize\ttfamily void validate\+\_\+coco (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file coco.\+c.
+
+\mbox{\Hypertarget{coco_8c_a75e914b5963bbd97ca7ab9b2d61235e4}\label{coco_8c_a75e914b5963bbd97ca7ab9b2d61235e4}} 
+\index{coco.c@{coco.c}!validate\_coco\_recall@{validate\_coco\_recall}}
+\index{validate\_coco\_recall@{validate\_coco\_recall}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{validate\_coco\_recall()}{validate\_coco\_recall()}}
+{\footnotesize\ttfamily void validate\+\_\+coco\+\_\+recall (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file coco.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{coco_8c_a1da6305b8c6be56e3ec19a7ab02800c9}\label{coco_8c_a1da6305b8c6be56e3ec19a7ab02800c9}} 
+\index{coco.c@{coco.c}!coco\_classes@{coco\_classes}}
+\index{coco\_classes@{coco\_classes}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{coco\_classes}{coco\_classes}}
+{\footnotesize\ttfamily char$\ast$ coco\+\_\+classes\mbox{[}$\,$\mbox{]} = \{\char`\"{}person\char`\"{},\char`\"{}bicycle\char`\"{},\char`\"{}car\char`\"{},\char`\"{}motorcycle\char`\"{},\char`\"{}airplane\char`\"{},\char`\"{}bus\char`\"{},\char`\"{}train\char`\"{},\char`\"{}truck\char`\"{},\char`\"{}boat\char`\"{},\char`\"{}traffic light\char`\"{},\char`\"{}fire hydrant\char`\"{},\char`\"{}stop sign\char`\"{},\char`\"{}parking meter\char`\"{},\char`\"{}bench\char`\"{},\char`\"{}bird\char`\"{},\char`\"{}cat\char`\"{},\char`\"{}dog\char`\"{},\char`\"{}horse\char`\"{},\char`\"{}sheep\char`\"{},\char`\"{}cow\char`\"{},\char`\"{}elephant\char`\"{},\char`\"{}bear\char`\"{},\char`\"{}zebra\char`\"{},\char`\"{}giraffe\char`\"{},\char`\"{}backpack\char`\"{},\char`\"{}umbrella\char`\"{},\char`\"{}handbag\char`\"{},\char`\"{}tie\char`\"{},\char`\"{}suitcase\char`\"{},\char`\"{}frisbee\char`\"{},\char`\"{}skis\char`\"{},\char`\"{}snowboard\char`\"{},\char`\"{}sports ball\char`\"{},\char`\"{}kite\char`\"{},\char`\"{}baseball bat\char`\"{},\char`\"{}baseball glove\char`\"{},\char`\"{}skateboard\char`\"{},\char`\"{}surfboard\char`\"{},\char`\"{}tennis racket\char`\"{},\char`\"{}bottle\char`\"{},\char`\"{}wine glass\char`\"{},\char`\"{}cup\char`\"{},\char`\"{}fork\char`\"{},\char`\"{}knife\char`\"{},\char`\"{}spoon\char`\"{},\char`\"{}bowl\char`\"{},\char`\"{}banana\char`\"{},\char`\"{}apple\char`\"{},\char`\"{}sandwich\char`\"{},\char`\"{}orange\char`\"{},\char`\"{}broccoli\char`\"{},\char`\"{}carrot\char`\"{},\char`\"{}hot dog\char`\"{},\char`\"{}pizza\char`\"{},\char`\"{}donut\char`\"{},\char`\"{}cake\char`\"{},\char`\"{}chair\char`\"{},\char`\"{}couch\char`\"{},\char`\"{}potted plant\char`\"{},\char`\"{}bed\char`\"{},\char`\"{}dining table\char`\"{},\char`\"{}toilet\char`\"{},\char`\"{}tv\char`\"{},\char`\"{}laptop\char`\"{},\char`\"{}mouse\char`\"{},\char`\"{}remote\char`\"{},\char`\"{}keyboard\char`\"{},\char`\"{}cell phone\char`\"{},\char`\"{}microwave\char`\"{},\char`\"{}oven\char`\"{},\char`\"{}toaster\char`\"{},\char`\"{}sink\char`\"{},\char`\"{}refrigerator\char`\"{},\char`\"{}book\char`\"{},\char`\"{}clock\char`\"{},\char`\"{}vase\char`\"{},\char`\"{}scissors\char`\"{},\char`\"{}teddy bear\char`\"{},\char`\"{}hair drier\char`\"{},\char`\"{}toothbrush\char`\"{}\}}
+
+
+
+Definition at line 5 of file coco.\+c.
+
+\mbox{\Hypertarget{coco_8c_a510b483a1df4daf892d602b2deedd78d}\label{coco_8c_a510b483a1df4daf892d602b2deedd78d}} 
+\index{coco.c@{coco.c}!coco\_ids@{coco\_ids}}
+\index{coco\_ids@{coco\_ids}!coco.c@{coco.c}}
+\subsubsection{\texorpdfstring{coco\_ids}{coco\_ids}}
+{\footnotesize\ttfamily int coco\+\_\+ids\mbox{[}$\,$\mbox{]} = \{1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,24,25,27,28,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,67,70,72,73,74,75,76,77,78,79,80,81,82,84,85,86,87,88,89,90\}}
+
+
+
+Definition at line 7 of file coco.\+c.
+

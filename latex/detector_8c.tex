@@ -1,0 +1,105 @@
+\hypertarget{detector_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/detector.c File Reference}
+\label{detector_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/detector.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/detector.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{detector_8c_ae007089ceccb49a69ffa696a4f8dd78a}{train\+\_\+detector}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int $\ast$gpus, int ngpus, int clear)
+\item 
+void \mbox{\hyperlink{detector_8c_a81513990339b88be3c0627e62c786283}{print\+\_\+detector\+\_\+detections}} (F\+I\+LE $\ast$$\ast$fps, char $\ast$id, \mbox{\hyperlink{structdetection}{detection}} $\ast$dets, int total, int classes, int w, int h)
+\item 
+void \mbox{\hyperlink{detector_8c_afd8578ce1a519a0da8686cc23de14589}{print\+\_\+imagenet\+\_\+detections}} (F\+I\+LE $\ast$fp, int id, \mbox{\hyperlink{structdetection}{detection}} $\ast$dets, int total, int classes, int w, int h)
+\item 
+void \mbox{\hyperlink{detector_8c_a8e19e1fdfb2b82b5ce3b72bc8580d8e3}{validate\+\_\+detector\+\_\+flip}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+void \mbox{\hyperlink{detector_8c_aea37ad211a83b40620a2df0eb6623a66}{validate\+\_\+detector}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$outfile)
+\item 
+void \mbox{\hyperlink{detector_8c_a4f5828b59e5940a47f390c2e430fd3d4}{validate\+\_\+detector\+\_\+recall}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{detector_8c_ad29ded4bbd1d823ecf9a61135e0710cb}{test\+\_\+detector}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, float thresh, float hier\+\_\+thresh, char $\ast$outfile, int fullscreen)
+\item 
+void \mbox{\hyperlink{detector_8c_a677c1747fd7a58c7f7da3314af5d6120}{run\+\_\+detector}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{detector_8c_a81513990339b88be3c0627e62c786283}\label{detector_8c_a81513990339b88be3c0627e62c786283}} 
+\index{detector.c@{detector.c}!print\_detector\_detections@{print\_detector\_detections}}
+\index{print\_detector\_detections@{print\_detector\_detections}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{print\_detector\_detections()}{print\_detector\_detections()}}
+{\footnotesize\ttfamily void print\+\_\+detector\+\_\+detections (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$$\ast$}]{fps,  }\item[{char $\ast$}]{id,  }\item[{\mbox{\hyperlink{structdetection}{detection}} $\ast$}]{dets,  }\item[{int}]{total,  }\item[{int}]{classes,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 191 of file detector.\+c.
+
+\mbox{\Hypertarget{detector_8c_afd8578ce1a519a0da8686cc23de14589}\label{detector_8c_afd8578ce1a519a0da8686cc23de14589}} 
+\index{detector.c@{detector.c}!print\_imagenet\_detections@{print\_imagenet\_detections}}
+\index{print\_imagenet\_detections@{print\_imagenet\_detections}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{print\_imagenet\_detections()}{print\_imagenet\_detections()}}
+{\footnotesize\ttfamily void print\+\_\+imagenet\+\_\+detections (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{id,  }\item[{\mbox{\hyperlink{structdetection}{detection}} $\ast$}]{dets,  }\item[{int}]{total,  }\item[{int}]{classes,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file detector.\+c.
+
+\mbox{\Hypertarget{detector_8c_a677c1747fd7a58c7f7da3314af5d6120}\label{detector_8c_a677c1747fd7a58c7f7da3314af5d6120}} 
+\index{detector.c@{detector.c}!run\_detector@{run\_detector}}
+\index{run\_detector@{run\_detector}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{run\_detector()}{run\_detector()}}
+{\footnotesize\ttfamily void run\+\_\+detector (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 794 of file detector.\+c.
+
+\mbox{\Hypertarget{detector_8c_ad29ded4bbd1d823ecf9a61135e0710cb}\label{detector_8c_ad29ded4bbd1d823ecf9a61135e0710cb}} 
+\index{detector.c@{detector.c}!test\_detector@{test\_detector}}
+\index{test\_detector@{test\_detector}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{test\_detector()}{test\_detector()}}
+{\footnotesize\ttfamily void test\+\_\+detector (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{float}]{thresh,  }\item[{float}]{hier\+\_\+thresh,  }\item[{char $\ast$}]{outfile,  }\item[{int}]{fullscreen }\end{DoxyParamCaption})}
+
+
+
+Definition at line 562 of file detector.\+c.
+
+\mbox{\Hypertarget{detector_8c_ae007089ceccb49a69ffa696a4f8dd78a}\label{detector_8c_ae007089ceccb49a69ffa696a4f8dd78a}} 
+\index{detector.c@{detector.c}!train\_detector@{train\_detector}}
+\index{train\_detector@{train\_detector}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{train\_detector()}{train\_detector()}}
+{\footnotesize\ttfamily void train\+\_\+detector (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int $\ast$}]{gpus,  }\item[{int}]{ngpus,  }\item[{int}]{clear }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file detector.\+c.
+
+\mbox{\Hypertarget{detector_8c_aea37ad211a83b40620a2df0eb6623a66}\label{detector_8c_aea37ad211a83b40620a2df0eb6623a66}} 
+\index{detector.c@{detector.c}!validate\_detector@{validate\_detector}}
+\index{validate\_detector@{validate\_detector}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{validate\_detector()}{validate\_detector()}}
+{\footnotesize\ttfamily void validate\+\_\+detector (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 364 of file detector.\+c.
+
+\mbox{\Hypertarget{detector_8c_a8e19e1fdfb2b82b5ce3b72bc8580d8e3}\label{detector_8c_a8e19e1fdfb2b82b5ce3b72bc8580d8e3}} 
+\index{detector.c@{detector.c}!validate\_detector\_flip@{validate\_detector\_flip}}
+\index{validate\_detector\_flip@{validate\_detector\_flip}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{validate\_detector\_flip()}{validate\_detector\_flip()}}
+{\footnotesize\ttfamily void validate\+\_\+detector\+\_\+flip (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 234 of file detector.\+c.
+
+\mbox{\Hypertarget{detector_8c_a4f5828b59e5940a47f390c2e430fd3d4}\label{detector_8c_a4f5828b59e5940a47f390c2e430fd3d4}} 
+\index{detector.c@{detector.c}!validate\_detector\_recall@{validate\_detector\_recall}}
+\index{validate\_detector\_recall@{validate\_detector\_recall}!detector.c@{detector.c}}
+\subsubsection{\texorpdfstring{validate\_detector\_recall()}{validate\_detector\_recall()}}
+{\footnotesize\ttfamily void validate\+\_\+detector\+\_\+recall (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 489 of file detector.\+c.
+

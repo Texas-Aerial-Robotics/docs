@@ -1,0 +1,163 @@
+\hypertarget{group__control__functions}{}\section{Control\+\_\+functions}
+\label{group__control__functions}\index{Control\_functions@{Control\_functions}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcontrol__api__waypoint}{control\+\_\+api\+\_\+waypoint}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb682}{set\+\_\+heading}} (float heading)
+\item 
+void \mbox{\hyperlink{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}{set\+\_\+destination}} (float x, float y, float z, float psi)
+\item 
+int \mbox{\hyperlink{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}{wait4connect}} ()
+\item 
+int \mbox{\hyperlink{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}{wait4start}} ()
+\item 
+int \mbox{\hyperlink{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}{initialize\+\_\+local\+\_\+frame}} ()
+\item 
+int \mbox{\hyperlink{group__control__functions_gac0aa671c99c09687515ec5bb8891c7d2}{takeoff}} (float takeoff\+\_\+alt)
+\item 
+int \mbox{\hyperlink{group__control__functions_ga54abc3f6eae022a8710bc0c2e1c54fbe}{check\+\_\+waypoint\+\_\+reached}} ()
+\item 
+int \mbox{\hyperlink{group__control__functions_ga52a11a139e56315de52d2ab439b0d203}{land}} ()
+\item 
+int \mbox{\hyperlink{group__control__functions_gae693b071b5392f9253cdfc1f4f362fcc}{init\+\_\+publisher\+\_\+subscriber}} (ros\+::\+Node\+Handle controlnode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module is designed to make high level control programming more simple. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__control__functions_ga54abc3f6eae022a8710bc0c2e1c54fbe}\label{group__control__functions_ga54abc3f6eae022a8710bc0c2e1c54fbe}} 
+\index{Control\_functions@{Control\_functions}!check\_waypoint\_reached@{check\_waypoint\_reached}}
+\index{check\_waypoint\_reached@{check\_waypoint\_reached}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{check\_waypoint\_reached()}{check\_waypoint\_reached()}}
+{\footnotesize\ttfamily int check\+\_\+waypoint\+\_\+reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function returns an int of 1 or 0. T\+His function can be used to check when to request the next waypoint in the mission. \begin{DoxyReturn}{Returns}
+1 -\/ waypoint reached 
+
+0 -\/ waypoint not reached 
+\end{DoxyReturn}
+
+
+Definition at line 275 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_gae693b071b5392f9253cdfc1f4f362fcc}\label{group__control__functions_gae693b071b5392f9253cdfc1f4f362fcc}} 
+\index{Control\_functions@{Control\_functions}!init\_publisher\_subscriber@{init\_publisher\_subscriber}}
+\index{init\_publisher\_subscriber@{init\_publisher\_subscriber}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{init\_publisher\_subscriber()}{init\_publisher\_subscriber()}}
+{\footnotesize\ttfamily int init\+\_\+publisher\+\_\+subscriber (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{controlnode }\end{DoxyParamCaption})}
+
+This function is called at the beginning of a program and will start of the communication links to the F\+CU. The function requires the program\textquotesingle{}s ros nodehandle as an input \begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+Definition at line 315 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}\label{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}} 
+\index{Control\_functions@{Control\_functions}!initialize\_local\_frame@{initialize\_local\_frame}}
+\index{initialize\_local\_frame@{initialize\_local\_frame}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{initialize\_local\_frame()}{initialize\_local\_frame()}}
+{\footnotesize\ttfamily int initialize\+\_\+local\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function will create a local reference frame based on the starting location of the drone. This is typically done right before takeoff. This reference frame is what all of the the set destination commands will be in reference to. \begin{DoxyReturn}{Returns}
+0 -\/ frame initialized 
+\end{DoxyReturn}
+
+
+Definition at line 198 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_ga52a11a139e56315de52d2ab439b0d203}\label{group__control__functions_ga52a11a139e56315de52d2ab439b0d203}} 
+\index{Control\_functions@{Control\_functions}!land@{land}}
+\index{land@{land}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{land()}{land()}}
+{\footnotesize\ttfamily int land (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+this function changes the mode of the drone to land \begin{DoxyReturn}{Returns}
+1 -\/ mode change successful 
+
+0 -\/ mode change not successful 
+\end{DoxyReturn}
+
+
+Definition at line 298 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}\label{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}} 
+\index{Control\_functions@{Control\_functions}!set\_destination@{set\_destination}}
+\index{set\_destination@{set\_destination}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{set\_destination()}{set\_destination()}}
+{\footnotesize\ttfamily void set\+\_\+destination (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{psi }\end{DoxyParamCaption})}
+
+This function is used to command the drone to fly to a waypoint. These waypoints should be specified in the local reference frame. This is typically defined from the location the drone is launched. Psi is counter clockwise rotation following the drone’s reference frame defined by the x axis through the right side of the drone with the y axis through the front of the drone. \begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb682}\label{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb682}} 
+\index{Control\_functions@{Control\_functions}!set\_heading@{set\_heading}}
+\index{set\_heading@{set\_heading}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{set\_heading()}{set\_heading()}}
+{\footnotesize\ttfamily void set\+\_\+heading (\begin{DoxyParamCaption}\item[{float}]{heading }\end{DoxyParamCaption})}
+
+This function is used to specify the drone’s heading in the local reference frame. Psi is a counter clockwise rotation following the drone’s reference frame defined by the x axis through the right side of the drone with the y axis through the front of the drone. \begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_gac0aa671c99c09687515ec5bb8891c7d2}\label{group__control__functions_gac0aa671c99c09687515ec5bb8891c7d2}} 
+\index{Control\_functions@{Control\_functions}!takeoff@{takeoff}}
+\index{takeoff@{takeoff}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{takeoff()}{takeoff()}}
+{\footnotesize\ttfamily int takeoff (\begin{DoxyParamCaption}\item[{float}]{takeoff\+\_\+alt }\end{DoxyParamCaption})}
+
+The takeoff function will arm the drone and put the drone in a hover above the initial position. \begin{DoxyReturn}{Returns}
+0 -\/ nominal takeoff 
+
+-\/1 -\/ failed to arm 
+
+-\/2 -\/ failed to takeoff 
+\end{DoxyReturn}
+
+
+Definition at line 228 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}\label{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}} 
+\index{Control\_functions@{Control\_functions}!wait4connect@{wait4connect}}
+\index{wait4connect@{wait4connect}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{wait4connect()}{wait4connect()}}
+{\footnotesize\ttfamily int wait4connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait for connect is a function that will hold the program until communication with the F\+CU is established. \begin{DoxyReturn}{Returns}
+0 -\/ connected to fcu 
+
+-\/1 -\/ failed to connect to drone 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}\label{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}} 
+\index{Control\_functions@{Control\_functions}!wait4start@{wait4start}}
+\index{wait4start@{wait4start}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{wait4start()}{wait4start()}}
+{\footnotesize\ttfamily int wait4start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait for strat will hold the program until the user signals the F\+CU to enther mode guided. This is typically done from a switch on the safety pilot’s remote or from the ground control station. \begin{DoxyReturn}{Returns}
+0 -\/ mission started 
+
+-\/1 -\/ failed to start mission 
+\end{DoxyReturn}
+
+
+Definition at line 176 of file control\+\_\+functions.\+hpp.
+

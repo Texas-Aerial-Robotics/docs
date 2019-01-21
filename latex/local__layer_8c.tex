@@ -1,0 +1,88 @@
+\hypertarget{local__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/local\+\_\+layer.c File Reference}
+\label{local__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/local\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/local\_layer.c}}
+{\ttfamily \#include \char`\"{}local\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}im2col.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}col2im.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gemm.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{local__layer_8c_a3eb8b3196c05bbc195e68dc8d42aa292}{local\+\_\+out\+\_\+height}} (\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} l)
+\item 
+int \mbox{\hyperlink{local__layer_8c_af17c05f872f034f52331e4983c10870d}{local\+\_\+out\+\_\+width}} (\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} \mbox{\hyperlink{local__layer_8c_ab5a3af6d66cf3b029c24de2e455713b2}{make\+\_\+local\+\_\+layer}} (int batch, int h, int w, int c, int n, int size, int stride, int pad, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} activation)
+\item 
+void \mbox{\hyperlink{local__layer_8c_ab7fec7e17557ea7f47c2aeb7acf2fdb3}{forward\+\_\+local\+\_\+layer}} (const \mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{local__layer_8c_a4285f83af61f8ac8e9860c0bf9e6e2c8}{backward\+\_\+local\+\_\+layer}} (\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{local__layer_8c_a76b185c86481e1632bd9b1db594895b9}{update\+\_\+local\+\_\+layer}} (\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{local__layer_8c_a4285f83af61f8ac8e9860c0bf9e6e2c8}\label{local__layer_8c_a4285f83af61f8ac8e9860c0bf9e6e2c8}} 
+\index{local\_layer.c@{local\_layer.c}!backward\_local\_layer@{backward\_local\_layer}}
+\index{backward\_local\_layer@{backward\_local\_layer}!local\_layer.c@{local\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_local\_layer()}{backward\_local\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+local\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file local\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{local__layer_8c_ab7fec7e17557ea7f47c2aeb7acf2fdb3}\label{local__layer_8c_ab7fec7e17557ea7f47c2aeb7acf2fdb3}} 
+\index{local\_layer.c@{local\_layer.c}!forward\_local\_layer@{forward\_local\_layer}}
+\index{forward\_local\_layer@{forward\_local\_layer}!local\_layer.c@{local\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_local\_layer()}{forward\_local\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+local\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file local\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{local__layer_8c_a3eb8b3196c05bbc195e68dc8d42aa292}\label{local__layer_8c_a3eb8b3196c05bbc195e68dc8d42aa292}} 
+\index{local\_layer.c@{local\_layer.c}!local\_out\_height@{local\_out\_height}}
+\index{local\_out\_height@{local\_out\_height}!local\_layer.c@{local\_layer.c}}
+\subsubsection{\texorpdfstring{local\_out\_height()}{local\_out\_height()}}
+{\footnotesize\ttfamily int local\+\_\+out\+\_\+height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file local\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{local__layer_8c_af17c05f872f034f52331e4983c10870d}\label{local__layer_8c_af17c05f872f034f52331e4983c10870d}} 
+\index{local\_layer.c@{local\_layer.c}!local\_out\_width@{local\_out\_width}}
+\index{local\_out\_width@{local\_out\_width}!local\_layer.c@{local\_layer.c}}
+\subsubsection{\texorpdfstring{local\_out\_width()}{local\_out\_width()}}
+{\footnotesize\ttfamily int local\+\_\+out\+\_\+width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file local\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{local__layer_8c_ab5a3af6d66cf3b029c24de2e455713b2}\label{local__layer_8c_ab5a3af6d66cf3b029c24de2e455713b2}} 
+\index{local\_layer.c@{local\_layer.c}!make\_local\_layer@{make\_local\_layer}}
+\index{make\_local\_layer@{make\_local\_layer}!local\_layer.c@{local\_layer.c}}
+\subsubsection{\texorpdfstring{make\_local\_layer()}{make\_local\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}} make\+\_\+local\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{h,  }\item[{int}]{w,  }\item[{int}]{c,  }\item[{int}]{n,  }\item[{int}]{size,  }\item[{int}]{stride,  }\item[{int}]{pad,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{activation }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file local\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{local__layer_8c_a76b185c86481e1632bd9b1db594895b9}\label{local__layer_8c_a76b185c86481e1632bd9b1db594895b9}} 
+\index{local\_layer.c@{local\_layer.c}!update\_local\_layer@{update\_local\_layer}}
+\index{update\_local\_layer@{update\_local\_layer}!local\_layer.c@{local\_layer.c}}
+\subsubsection{\texorpdfstring{update\_local\_layer()}{update\_local\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+local\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{local__layer_8h_a03ec842604ac51c9ba42c4c4790cb0d4}{local\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 167 of file local\+\_\+layer.\+c.
+

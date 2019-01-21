@@ -1,0 +1,1199 @@
+\hypertarget{classpymavlink_1_1mavutil_1_1mavfile}{}\section{pymavlink.\+mavutil.\+mavfile Class Reference}
+\label{classpymavlink_1_1mavutil_1_1mavfile}\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+Inheritance diagram for pymavlink.\+mavutil.\+mavfile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.200000cm]{classpymavlink_1_1mavutil_1_1mavfile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aa1179c2610a2cb4af6884cb853da74ec}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a157775ad737f937ae736cbf039f367aa}{fd}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a3307e42a1f2ad53909dca6f9a232760c}{address}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a02c06667c79f4414ed9c4ee6a8dec903}{source\+\_\+system}}=255, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a84e307f771a9ac2aed567831845c417e}{source\+\_\+component}}=0, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2743806ba71f58e0dc8a98d76e07f7c9}{notimestamps}}=False, input=True, use\+\_\+native=\mbox{\hyperlink{namespacepymavlink_1_1mavutil_a21ce9da7b698a7bc21c44b9f77341b62}{default\+\_\+native}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_af0f0faf1986ca88353787674f7575862}{auto\+\_\+mavlink\+\_\+version}} (self, buf)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a09cb800fc6b03949ace05ce320539be2}{recv}} (self, n=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a83f651dbc2487f6e45599e69d080ef1e}{close}} (self, n=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a8f40348c156083384c07dfa73cf92a62}{write}} (self, buf)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a205cfc15609088ced70b140c33c2c6d3}{select}} (self, timeout)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_ad0ea96f4450b27d0327d9060d55e05be}{pre\+\_\+message}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2607aae0fda1190034889d9e1c585539}{set\+\_\+rtscts}} (self, enable)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aa3ceb80a2e7c62fdfc87c27c278261b9}{probably\+\_\+vehicle\+\_\+heartbeat}} (self, \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a6307d32e7cc751320cb1fe84a1a43049}{post\+\_\+message}} (self, \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_abb4396fef91c8b5768ed865dd441286f}{packet\+\_\+loss}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_acf32945bf305666d12d8a1bf32ae6893}{recv\+\_\+msg}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a7baa4911cf9de819dc682f2904bf4352}{recv\+\_\+match}} (self, condition=None, type=None, blocking=False, timeout=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a8875f5c51e7b332f252af3b6b19fcf23}{check\+\_\+condition}} (self, condition)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2539d7b34226d566b9167f4c0bc5d7a4}{mavlink10}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a84eb9bd740dd761537c4fc16d0c436b7}{mavlink20}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a3cae7386bd175b00f8ab23316165f47a}{setup\+\_\+logfile}} (self, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a173adae978d36daed8740caaf561200d}{logfile}}, mode=\textquotesingle{}w\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_af8bde63a7c980d24fd1679dca36242bf}{setup\+\_\+logfile\+\_\+raw}} (self, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a173adae978d36daed8740caaf561200d}{logfile}}, mode=\textquotesingle{}w\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a3776d63929d3183a65076cda4930b624}{wait\+\_\+heartbeat}} (self, blocking=True)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a5337d04307871f7ac873a17eb24b3180}{param\+\_\+fetch\+\_\+all}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a37e35b77e1bba0d32ec8ff37b79b0e23}{param\+\_\+fetch\+\_\+one}} (self, name)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a7749c322285d3e6c03f20b9f5931a9ba}{time\+\_\+since}} (self, mtype)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a28ff487ffd14ae2366c6dbc65f2c8612}{param\+\_\+set\+\_\+send}} (self, parm\+\_\+name, parm\+\_\+value, parm\+\_\+type=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a49ca013cb65639e9c5a5a436cb0a7756}{waypoint\+\_\+request\+\_\+list\+\_\+send}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a3c9b70e6763649129f677074bd73e41a}{waypoint\+\_\+clear\+\_\+all\+\_\+send}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_af14da05495c0927374c4356a527ad406}{waypoint\+\_\+request\+\_\+send}} (self, seq)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a5ada29335e23c51ef5902135668d07db}{waypoint\+\_\+set\+\_\+current\+\_\+send}} (self, seq)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aba2948f65c3186269715ffcb4b7ddce5}{waypoint\+\_\+current}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2d15b0cae8037dda7803879aa11a3857}{waypoint\+\_\+count\+\_\+send}} (self, seq)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a67cb3ddd8971781b673bcd676596517c}{set\+\_\+mode\+\_\+flag}} (self, flag, enable)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a6433a671029040513eb170b3bfd1689a}{set\+\_\+mode\+\_\+auto}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a243064da4dc092d07af642404240613b}{mode\+\_\+mapping}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a05d005f98f3cbc966f8f00ef013475d5}{set\+\_\+mode\+\_\+apm}} (self, mode, custom\+\_\+mode=0, custom\+\_\+sub\+\_\+mode=0)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aa555cab4483c90f63af193958fa49204}{set\+\_\+mode\+\_\+px4}} (self, mode, custom\+\_\+mode, custom\+\_\+sub\+\_\+mode)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a284eb9b6577bb9d50a67f11ce892769f}{set\+\_\+mode}} (self, mode, custom\+\_\+mode=0, custom\+\_\+sub\+\_\+mode=0)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a6fda4c34e34cccf12e9a34e6103e1678}{set\+\_\+mode\+\_\+rtl}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aeff1ba57a638061a1eaca1286d9c5642}{set\+\_\+mode\+\_\+manual}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a13249ac76758f732632ebefe026207f3}{set\+\_\+mode\+\_\+fbwa}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a93705650b06f0debf62ff0ddc8e1bfee}{set\+\_\+mode\+\_\+loiter}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a5dcc6c45753772530e85f70d28407c03}{set\+\_\+servo}} (self, channel, pwm)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_adefc4e0924a50a82a42a49e790cfe19a}{set\+\_\+relay}} (self, relay\+\_\+pin=0, state=True)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a56b77586434e96ca161d4744104fe313}{calibrate\+\_\+level}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_af0001f7ae0e3d0e63c592f3ad98740d6}{calibrate\+\_\+pressure}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_ae1f8a428d88379acbdbdd0bcc0f81106}{reboot\+\_\+autopilot}} (self, hold\+\_\+in\+\_\+bootloader=False)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a270d661451b79fd6f15c2ffeb42304a6}{wait\+\_\+gps\+\_\+fix}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a15c2f7419959d23ebf1729bbd7871905}{location}} (self, relative\+\_\+alt=False)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_ab9d8c0609102dc488eeb537a2d1c94fe}{arducopter\+\_\+arm}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_affeb5fa286a50594954bd0e15c43718e}{arducopter\+\_\+disarm}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a335d09b6fa521448d97ea2597d0387c0}{motors\+\_\+armed}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a05ead7d3ad2e1228d222592ab34e8585}{motors\+\_\+armed\+\_\+wait}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aff2ed2950af9ff7a504b1a304288d019}{motors\+\_\+disarmed\+\_\+wait}} (self)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_ae2070e90f4df43fc8b44ae29a9a996ed}{field}} (self, type, field, default=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_af62c2fd5d5957067fd74eef6c08dcd9a}{param}} (self, name, default=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a0ba591be56a6a76483d5a7480512406b}{setup\+\_\+signing}} (self, secret\+\_\+key, sign\+\_\+outgoing=True, allow\+\_\+unsigned\+\_\+callback=None, initial\+\_\+timestamp=None, link\+\_\+id=None)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_abd262cadb041fdae939dbfb49219f4be}{disable\+\_\+signing}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a157775ad737f937ae736cbf039f367aa}{fd}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a3307e42a1f2ad53909dca6f9a232760c}{address}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a7521a5e9786057266e9bc3bdafb058d0}{messages}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a1a1f44b89b1ac41484cfd88f83b7c695}{params}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_afb3bf96157b342b89a4279edb3f90239}{target\+\_\+system}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2b8ac037d02bd5e90792e6c420549bb9}{target\+\_\+component}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a02c06667c79f4414ed9c4ee6a8dec903}{source\+\_\+system}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a84e307f771a9ac2aed567831845c417e}{source\+\_\+component}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2585c4bd855d86eb033e4d5fb8405289}{first\+\_\+byte}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_ac662327c5d9bd4fca595ff6bc97fd587}{robust\+\_\+parsing}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aecb6ecfdc61f1c69fc0d15fcdef436b0}{mav}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a173adae978d36daed8740caaf561200d}{logfile}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a369ec548641670e6551050aa82438050}{logfile\+\_\+raw}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a94754e789681df30204171076fdcee9e}{param\+\_\+fetch\+\_\+in\+\_\+progress}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a9580276155bfccf280bf8063157ed216}{param\+\_\+fetch\+\_\+complete}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a60156edac1dab0be5df8c111e5b32910}{start\+\_\+time}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a41a8e74171d6a02c354e6b20e27d8922}{flightmode}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a7a95b597163c1661c47ee3f3b1ced072}{vehicle\+\_\+type}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_aedfd4f8385f7dece207420bfbfafb5d3}{mav\+\_\+type}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_afe55f45b7160244078a3825f22667935}{base\+\_\+mode}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_af135ef21b91f88dc3a4d15690a7bd137}{timestamp}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a471c714f4891bc8908c050cce7c09e1f}{message\+\_\+hooks}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_accae39f4c0613319cb19b951922a0324}{idle\+\_\+hooks}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a37502153c0413757a34aa2bbe7b9db54}{uptime}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2743806ba71f58e0dc8a98d76e07f7c9}{notimestamps}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_ad4a99a4e70e5ea1875078f6addacf8bb}{ground\+\_\+pressure}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a4eb1b54f916d08a9ba1d2dcb8f7139e2}{ground\+\_\+temperature}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a5d9a3ac5666250fe617cb5df530c8082}{altitude}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a48a9748e550310c4c276857ff0712b96}{W\+I\+R\+E\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a2bad0eb3f322ff7dab356b4e07ae8f4a}{last\+\_\+seq}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_afaa7723444c1f5a24d284a0d23e299e2}{mav\+\_\+loss}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_af7e0abc5cb1258cfcdec3a683cd61bdb}{mav\+\_\+count}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_adabc25442afa8c8d23132d3a344b8ef9}{stop\+\_\+on\+\_\+\+E\+OF}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a6a96d664dc258cd8bcf82c84aea68780}{portdead}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavfile_a44f3d71dd47d94e8c1b52a60eb036982}{param\+\_\+fetch\+\_\+start}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}a generic mavlink port\end{DoxyVerb}
+ 
+
+Definition at line 109 of file mavutil.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aa1179c2610a2cb4af6884cb853da74ec}\label{classpymavlink_1_1mavutil_1_1mavfile_aa1179c2610a2cb4af6884cb853da74ec}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fd,  }\item[{}]{address,  }\item[{}]{source\+\_\+system = {\ttfamily 255},  }\item[{}]{source\+\_\+component = {\ttfamily 0},  }\item[{}]{notimestamps = {\ttfamily False},  }\item[{}]{input = {\ttfamily True},  }\item[{}]{use\+\_\+native = {\ttfamily \mbox{\hyperlink{namespacepymavlink_1_1mavutil_a21ce9da7b698a7bc21c44b9f77341b62}{default\+\_\+native}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file mavutil.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_ab9d8c0609102dc488eeb537a2d1c94fe}\label{classpymavlink_1_1mavutil_1_1mavfile_ab9d8c0609102dc488eeb537a2d1c94fe}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!arducopter\_arm@{arducopter\_arm}}
+\index{arducopter\_arm@{arducopter\_arm}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{arducopter\_arm()}{arducopter\_arm()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+arducopter\+\_\+arm (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}arm motors (arducopter only)\end{DoxyVerb}
+ 
+
+Definition at line 687 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_affeb5fa286a50594954bd0e15c43718e}\label{classpymavlink_1_1mavutil_1_1mavfile_affeb5fa286a50594954bd0e15c43718e}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!arducopter\_disarm@{arducopter\_disarm}}
+\index{arducopter\_disarm@{arducopter\_disarm}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{arducopter\_disarm()}{arducopter\_disarm()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+arducopter\+\_\+disarm (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calibrate pressure\end{DoxyVerb}
+ 
+
+Definition at line 703 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_af0f0faf1986ca88353787674f7575862}\label{classpymavlink_1_1mavutil_1_1mavfile_af0f0faf1986ca88353787674f7575862}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!auto\_mavlink\_version@{auto\_mavlink\_version}}
+\index{auto\_mavlink\_version@{auto\_mavlink\_version}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{auto\_mavlink\_version()}{auto\_mavlink\_version()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+auto\+\_\+mavlink\+\_\+version (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buf }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}auto-switch mavlink protocol version\end{DoxyVerb}
+ 
+
+Definition at line 157 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a56b77586434e96ca161d4744104fe313}\label{classpymavlink_1_1mavutil_1_1mavfile_a56b77586434e96ca161d4744104fe313}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!calibrate\_level@{calibrate\_level}}
+\index{calibrate\_level@{calibrate\_level}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{calibrate\_level()}{calibrate\_level()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+calibrate\+\_\+level (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calibrate accels (1D version)\end{DoxyVerb}
+ 
+
+Definition at line 631 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_af0001f7ae0e3d0e63c592f3ad98740d6}\label{classpymavlink_1_1mavutil_1_1mavfile_af0001f7ae0e3d0e63c592f3ad98740d6}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!calibrate\_pressure@{calibrate\_pressure}}
+\index{calibrate\_pressure@{calibrate\_pressure}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{calibrate\_pressure()}{calibrate\_pressure()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+calibrate\+\_\+pressure (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calibrate pressure\end{DoxyVerb}
+ 
+
+Definition at line 637 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a8875f5c51e7b332f252af3b6b19fcf23}\label{classpymavlink_1_1mavutil_1_1mavfile_a8875f5c51e7b332f252af3b6b19fcf23}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!check\_condition@{check\_condition}}
+\index{check\_condition@{check\_condition}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{check\_condition()}{check\_condition()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+check\+\_\+condition (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{condition }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}check if a condition is true\end{DoxyVerb}
+ 
+
+Definition at line 372 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a83f651dbc2487f6e45599e69d080ef1e}\label{classpymavlink_1_1mavutil_1_1mavfile_a83f651dbc2487f6e45599e69d080ef1e}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!close@{close}}
+\index{close@{close}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+close (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}default close method\end{DoxyVerb}
+ 
+
+Definition at line 197 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_abd262cadb041fdae939dbfb49219f4be}\label{classpymavlink_1_1mavutil_1_1mavfile_abd262cadb041fdae939dbfb49219f4be}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!disable\_signing@{disable\_signing}}
+\index{disable\_signing@{disable\_signing}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{disable\_signing()}{disable\_signing()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+disable\+\_\+signing (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}disable MAVLink2 signing\end{DoxyVerb}
+ 
+
+Definition at line 775 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_ae2070e90f4df43fc8b44ae29a9a996ed}\label{classpymavlink_1_1mavutil_1_1mavfile_ae2070e90f4df43fc8b44ae29a9a996ed}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!field@{field}}
+\index{field@{field}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{field()}{field()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{type,  }\item[{}]{field,  }\item[{}]{default = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}convenient function for returning an arbitrary MAVLink
+   field with a default\end{DoxyVerb}
+ 
+
+Definition at line 741 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a15c2f7419959d23ebf1729bbd7871905}\label{classpymavlink_1_1mavutil_1_1mavfile_a15c2f7419959d23ebf1729bbd7871905}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!location@{location}}
+\index{location@{location}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+location (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{relative\+\_\+alt = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return current location\end{DoxyVerb}
+ 
+
+Definition at line 672 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a2539d7b34226d566b9167f4c0bc5d7a4}\label{classpymavlink_1_1mavutil_1_1mavfile_a2539d7b34226d566b9167f4c0bc5d7a4}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!mavlink10@{mavlink10}}
+\index{mavlink10@{mavlink10}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{mavlink10()}{mavlink10()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+mavlink10 (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return True if using MAVLink 1.0 or later\end{DoxyVerb}
+ 
+
+Definition at line 376 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a84eb9bd740dd761537c4fc16d0c436b7}\label{classpymavlink_1_1mavutil_1_1mavfile_a84eb9bd740dd761537c4fc16d0c436b7}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!mavlink20@{mavlink20}}
+\index{mavlink20@{mavlink20}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{mavlink20()}{mavlink20()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+mavlink20 (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return True if using MAVLink 2.0 or later\end{DoxyVerb}
+ 
+
+Definition at line 380 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a243064da4dc092d07af642404240613b}\label{classpymavlink_1_1mavutil_1_1mavfile_a243064da4dc092d07af642404240613b}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!mode\_mapping@{mode\_mapping}}
+\index{mode\_mapping@{mode\_mapping}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{mode\_mapping()}{mode\_mapping()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+mode\+\_\+mapping (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return dictionary mapping mode names to numbers, or None if unknown\end{DoxyVerb}
+ 
+
+Definition at line 502 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a335d09b6fa521448d97ea2597d0387c0}\label{classpymavlink_1_1mavutil_1_1mavfile_a335d09b6fa521448d97ea2597d0387c0}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!motors\_armed@{motors\_armed}}
+\index{motors\_armed@{motors\_armed}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{motors\_armed()}{motors\_armed()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+motors\+\_\+armed (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return true if motors armed\end{DoxyVerb}
+ 
+
+Definition at line 719 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a05ead7d3ad2e1228d222592ab34e8585}\label{classpymavlink_1_1mavutil_1_1mavfile_a05ead7d3ad2e1228d222592ab34e8585}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!motors\_armed\_wait@{motors\_armed\_wait}}
+\index{motors\_armed\_wait@{motors\_armed\_wait}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{motors\_armed\_wait()}{motors\_armed\_wait()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+motors\+\_\+armed\+\_\+wait (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wait for motors to be armed\end{DoxyVerb}
+ 
+
+Definition at line 726 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aff2ed2950af9ff7a504b1a304288d019}\label{classpymavlink_1_1mavutil_1_1mavfile_aff2ed2950af9ff7a504b1a304288d019}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!motors\_disarmed\_wait@{motors\_disarmed\_wait}}
+\index{motors\_disarmed\_wait@{motors\_disarmed\_wait}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{motors\_disarmed\_wait()}{motors\_disarmed\_wait()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+motors\+\_\+disarmed\+\_\+wait (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wait for motors to be disarmed\end{DoxyVerb}
+ 
+
+Definition at line 733 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_abb4396fef91c8b5768ed865dd441286f}\label{classpymavlink_1_1mavutil_1_1mavfile_abb4396fef91c8b5768ed865dd441286f}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!packet\_loss@{packet\_loss}}
+\index{packet\_loss@{packet\_loss}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{packet\_loss()}{packet\_loss()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+packet\+\_\+loss (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}packet loss as a percentage\end{DoxyVerb}
+ 
+
+Definition at line 306 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_af62c2fd5d5957067fd74eef6c08dcd9a}\label{classpymavlink_1_1mavutil_1_1mavfile_af62c2fd5d5957067fd74eef6c08dcd9a}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!param@{param}}
+\index{param@{param}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{param()}{param()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+param (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{default = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}convenient function for returning an arbitrary MAVLink
+   parameter with a default\end{DoxyVerb}
+ 
+
+Definition at line 748 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a5337d04307871f7ac873a17eb24b3180}\label{classpymavlink_1_1mavutil_1_1mavfile_a5337d04307871f7ac873a17eb24b3180}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!param\_fetch\_all@{param\_fetch\_all}}
+\index{param\_fetch\_all@{param\_fetch\_all}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{param\_fetch\_all()}{param\_fetch\_all()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+param\+\_\+fetch\+\_\+all (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}initiate fetch of all parameters\end{DoxyVerb}
+ 
+
+Definition at line 396 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a37e35b77e1bba0d32ec8ff37b79b0e23}\label{classpymavlink_1_1mavutil_1_1mavfile_a37e35b77e1bba0d32ec8ff37b79b0e23}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!param\_fetch\_one@{param\_fetch\_one}}
+\index{param\_fetch\_one@{param\_fetch\_one}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{param\_fetch\_one()}{param\_fetch\_one()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+param\+\_\+fetch\+\_\+one (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}initiate fetch of one parameter\end{DoxyVerb}
+ 
+
+Definition at line 405 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a28ff487ffd14ae2366c6dbc65f2c8612}\label{classpymavlink_1_1mavutil_1_1mavfile_a28ff487ffd14ae2366c6dbc65f2c8612}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!param\_set\_send@{param\_set\_send}}
+\index{param\_set\_send@{param\_set\_send}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{param\_set\_send()}{param\_set\_send()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+param\+\_\+set\+\_\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parm\+\_\+name,  }\item[{}]{parm\+\_\+value,  }\item[{}]{parm\+\_\+type = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wrapper for parameter set\end{DoxyVerb}
+ 
+
+Definition at line 419 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a6307d32e7cc751320cb1fe84a1a43049}\label{classpymavlink_1_1mavutil_1_1mavfile_a6307d32e7cc751320cb1fe84a1a43049}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!post\_message@{post\_message}}
+\index{post\_message@{post\_message}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{post\_message()}{post\_message()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+post\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}default post message call\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavlogfile_ac304637b0b24999e12763ccbc59a2085}{pymavlink.\+mavutil.\+mavlogfile}}.
+
+
+
+Definition at line 234 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_ad0ea96f4450b27d0327d9060d55e05be}\label{classpymavlink_1_1mavutil_1_1mavfile_ad0ea96f4450b27d0327d9060d55e05be}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!pre\_message@{pre\_message}}
+\index{pre\_message@{pre\_message}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{pre\_message()}{pre\_message()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+pre\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}default pre message call\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavlogfile_ad3bd6ab83073f82be56c6d393e6ea6c3}{pymavlink.\+mavutil.\+mavlogfile}}.
+
+
+
+Definition at line 217 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aa3ceb80a2e7c62fdfc87c27c278261b9}\label{classpymavlink_1_1mavutil_1_1mavfile_aa3ceb80a2e7c62fdfc87c27c278261b9}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!probably\_vehicle\_heartbeat@{probably\_vehicle\_heartbeat}}
+\index{probably\_vehicle\_heartbeat@{probably\_vehicle\_heartbeat}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{probably\_vehicle\_heartbeat()}{probably\_vehicle\_heartbeat()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+probably\+\_\+vehicle\+\_\+heartbeat (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 225 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_ae1f8a428d88379acbdbdd0bcc0f81106}\label{classpymavlink_1_1mavutil_1_1mavfile_ae1f8a428d88379acbdbdd0bcc0f81106}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!reboot\_autopilot@{reboot\_autopilot}}
+\index{reboot\_autopilot@{reboot\_autopilot}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{reboot\_autopilot()}{reboot\_autopilot()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+reboot\+\_\+autopilot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{hold\+\_\+in\+\_\+bootloader = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}reboot the autopilot\end{DoxyVerb}
+ 
+
+Definition at line 647 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a09cb800fc6b03949ace05ce320539be2}\label{classpymavlink_1_1mavutil_1_1mavfile_a09cb800fc6b03949ace05ce320539be2}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!recv@{recv}}
+\index{recv@{recv}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{recv()}{recv()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+recv (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}default recv method\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavchildexec_a82bdf3a8047fb35d535a82fd85761a52}{pymavlink.\+mavutil.\+mavchildexec}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavlogfile_a3517f0936b24f1aa60ec3c90b729665e}{pymavlink.\+mavutil.\+mavlogfile}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavtcpin_a51df915724f2169ba96fd97fc0897151}{pymavlink.\+mavutil.\+mavtcpin}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavtcp_a8c56a0ee4f9c42f36534cd36bca997e1}{pymavlink.\+mavutil.\+mavtcp}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavudp_a0381f8262ab6149604e902339c5a4a53}{pymavlink.\+mavutil.\+mavudp}}, and \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_acd3d12828b5794091b0984d65c292770}{pymavlink.\+mavutil.\+mavserial}}.
+
+
+
+Definition at line 193 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a7baa4911cf9de819dc682f2904bf4352}\label{classpymavlink_1_1mavutil_1_1mavfile_a7baa4911cf9de819dc682f2904bf4352}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!recv\_match@{recv\_match}}
+\index{recv\_match@{recv\_match}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{recv\_match()}{recv\_match()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+recv\+\_\+match (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{condition = {\ttfamily None},  }\item[{}]{type = {\ttfamily None},  }\item[{}]{blocking = {\ttfamily False},  }\item[{}]{timeout = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}recv the next MAVLink message that matches the given condition
+type can be a string or a list of strings\end{DoxyVerb}
+ 
+
+Definition at line 342 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_acf32945bf305666d12d8a1bf32ae6893}\label{classpymavlink_1_1mavutil_1_1mavfile_acf32945bf305666d12d8a1bf32ae6893}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!recv\_msg@{recv\_msg}}
+\index{recv\_msg@{recv\_msg}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{recv\_msg()}{recv\_msg()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+recv\+\_\+msg (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}message receive routine\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavmemlog_a7a84e52fc8bf9a84624c848c4a2229da}{pymavlink.\+mavutil.\+mavmemlog}}, and \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavudp_aeb1b82765793d5de815c95caf6863953}{pymavlink.\+mavutil.\+mavudp}}.
+
+
+
+Definition at line 313 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a205cfc15609088ced70b140c33c2c6d3}\label{classpymavlink_1_1mavutil_1_1mavfile_a205cfc15609088ced70b140c33c2c6d3}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!select@{select}}
+\index{select@{select}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+select (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{timeout }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wait for up to timeout seconds for more data\end{DoxyVerb}
+ 
+
+Definition at line 206 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a284eb9b6577bb9d50a67f11ce892769f}\label{classpymavlink_1_1mavutil_1_1mavfile_a284eb9b6577bb9d50a67f11ce892769f}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode@{set\_mode}}
+\index{set\_mode@{set\_mode}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode()}{set\_mode()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode,  }\item[{}]{custom\+\_\+mode = {\ttfamily 0},  }\item[{}]{custom\+\_\+sub\+\_\+mode = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}set arbitrary flight mode\end{DoxyVerb}
+ 
+
+Definition at line 558 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a05d005f98f3cbc966f8f00ef013475d5}\label{classpymavlink_1_1mavutil_1_1mavfile_a05d005f98f3cbc966f8f00ef013475d5}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_apm@{set\_mode\_apm}}
+\index{set\_mode\_apm@{set\_mode\_apm}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_apm()}{set\_mode\_apm()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+apm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode,  }\item[{}]{custom\+\_\+mode = {\ttfamily 0},  }\item[{}]{custom\+\_\+sub\+\_\+mode = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enter arbitrary mode\end{DoxyVerb}
+ 
+
+Definition at line 533 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a6433a671029040513eb170b3bfd1689a}\label{classpymavlink_1_1mavutil_1_1mavfile_a6433a671029040513eb170b3bfd1689a}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_auto@{set\_mode\_auto}}
+\index{set\_mode\_auto@{set\_mode\_auto}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_auto()}{set\_mode\_auto()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+auto (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enter auto mode\end{DoxyVerb}
+ 
+
+Definition at line 493 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a13249ac76758f732632ebefe026207f3}\label{classpymavlink_1_1mavutil_1_1mavfile_a13249ac76758f732632ebefe026207f3}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_fbwa@{set\_mode\_fbwa}}
+\index{set\_mode\_fbwa@{set\_mode\_fbwa}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_fbwa()}{set\_mode\_fbwa()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+fbwa (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enter FBWA mode\end{DoxyVerb}
+ 
+
+Definition at line 586 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a67cb3ddd8971781b673bcd676596517c}\label{classpymavlink_1_1mavutil_1_1mavfile_a67cb3ddd8971781b673bcd676596517c}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_flag@{set\_mode\_flag}}
+\index{set\_mode\_flag@{set\_mode\_flag}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_flag()}{set\_mode\_flag()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+flag (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flag,  }\item[{}]{enable }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Enables/ disables MAV_MODE_FLAG
+@param flag The mode flag, 
+  see MAV_MODE_FLAG enum
+@param enable Enable the flag, (True/False)
+\end{DoxyVerb}
+ 
+
+Definition at line 473 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a93705650b06f0debf62ff0ddc8e1bfee}\label{classpymavlink_1_1mavutil_1_1mavfile_a93705650b06f0debf62ff0ddc8e1bfee}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_loiter@{set\_mode\_loiter}}
+\index{set\_mode\_loiter@{set\_mode\_loiter}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_loiter()}{set\_mode\_loiter()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+loiter (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enter LOITER mode\end{DoxyVerb}
+ 
+
+Definition at line 596 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aeff1ba57a638061a1eaca1286d9c5642}\label{classpymavlink_1_1mavutil_1_1mavfile_aeff1ba57a638061a1eaca1286d9c5642}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_manual@{set\_mode\_manual}}
+\index{set\_mode\_manual@{set\_mode\_manual}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_manual()}{set\_mode\_manual()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+manual (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enter MANUAL mode\end{DoxyVerb}
+ 
+
+Definition at line 575 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aa555cab4483c90f63af193958fa49204}\label{classpymavlink_1_1mavutil_1_1mavfile_aa555cab4483c90f63af193958fa49204}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_px4@{set\_mode\_px4}}
+\index{set\_mode\_px4@{set\_mode\_px4}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_px4()}{set\_mode\_px4()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+px4 (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode,  }\item[{}]{custom\+\_\+mode,  }\item[{}]{custom\+\_\+sub\+\_\+mode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enter arbitrary mode\end{DoxyVerb}
+ 
+
+Definition at line 546 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a6fda4c34e34cccf12e9a34e6103e1678}\label{classpymavlink_1_1mavutil_1_1mavfile_a6fda4c34e34cccf12e9a34e6103e1678}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_mode\_rtl@{set\_mode\_rtl}}
+\index{set\_mode\_rtl@{set\_mode\_rtl}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_mode\_rtl()}{set\_mode\_rtl()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+mode\+\_\+rtl (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enter RTL mode\end{DoxyVerb}
+ 
+
+Definition at line 566 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_adefc4e0924a50a82a42a49e790cfe19a}\label{classpymavlink_1_1mavutil_1_1mavfile_adefc4e0924a50a82a42a49e790cfe19a}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_relay@{set\_relay}}
+\index{set\_relay@{set\_relay}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_relay()}{set\_relay()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+relay (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{relay\+\_\+pin = {\ttfamily 0},  }\item[{}]{state = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set relay_pin to value of state\end{DoxyVerb}
+ 
+
+Definition at line 613 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a2607aae0fda1190034889d9e1c585539}\label{classpymavlink_1_1mavutil_1_1mavfile_a2607aae0fda1190034889d9e1c585539}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_rtscts@{set\_rtscts}}
+\index{set\_rtscts@{set\_rtscts}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_rtscts()}{set\_rtscts()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+rtscts (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{enable }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}enable/disable RTS/CTS if applicable\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_af4a1da9b197ebf58110e26b805af1fda}{pymavlink.\+mavutil.\+mavserial}}.
+
+
+
+Definition at line 221 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a5dcc6c45753772530e85f70d28407c03}\label{classpymavlink_1_1mavutil_1_1mavfile_a5dcc6c45753772530e85f70d28407c03}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!set\_servo@{set\_servo}}
+\index{set\_servo@{set\_servo}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{set\_servo()}{set\_servo()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+set\+\_\+servo (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{channel,  }\item[{}]{pwm }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}set a servo value\end{DoxyVerb}
+ 
+
+Definition at line 605 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a3cae7386bd175b00f8ab23316165f47a}\label{classpymavlink_1_1mavutil_1_1mavfile_a3cae7386bd175b00f8ab23316165f47a}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!setup\_logfile@{setup\_logfile}}
+\index{setup\_logfile@{setup\_logfile}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{setup\_logfile()}{setup\_logfile()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+setup\+\_\+logfile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{logfile,  }\item[{}]{mode = {\ttfamily \textquotesingle{}w\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}start logging to the given logfile, with timestamps\end{DoxyVerb}
+ 
+
+Definition at line 384 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_af8bde63a7c980d24fd1679dca36242bf}\label{classpymavlink_1_1mavutil_1_1mavfile_af8bde63a7c980d24fd1679dca36242bf}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!setup\_logfile\_raw@{setup\_logfile\_raw}}
+\index{setup\_logfile\_raw@{setup\_logfile\_raw}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{setup\_logfile\_raw()}{setup\_logfile\_raw()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+setup\+\_\+logfile\+\_\+raw (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{logfile,  }\item[{}]{mode = {\ttfamily \textquotesingle{}w\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}start logging raw bytes to the given logfile, without timestamps\end{DoxyVerb}
+ 
+
+Definition at line 388 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a0ba591be56a6a76483d5a7480512406b}\label{classpymavlink_1_1mavutil_1_1mavfile_a0ba591be56a6a76483d5a7480512406b}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!setup\_signing@{setup\_signing}}
+\index{setup\_signing@{setup\_signing}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{setup\_signing()}{setup\_signing()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+setup\+\_\+signing (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{secret\+\_\+key,  }\item[{}]{sign\+\_\+outgoing = {\ttfamily True},  }\item[{}]{allow\+\_\+unsigned\+\_\+callback = {\ttfamily None},  }\item[{}]{initial\+\_\+timestamp = {\ttfamily None},  }\item[{}]{link\+\_\+id = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}setup for MAVLink2 signing\end{DoxyVerb}
+ 
+
+Definition at line 755 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a7749c322285d3e6c03f20b9f5931a9ba}\label{classpymavlink_1_1mavutil_1_1mavfile_a7749c322285d3e6c03f20b9f5931a9ba}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!time\_since@{time\_since}}
+\index{time\_since@{time\_since}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{time\_since()}{time\_since()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+time\+\_\+since (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mtype }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return the time since the last message of type mtype was received\end{DoxyVerb}
+ 
+
+Definition at line 413 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a270d661451b79fd6f15c2ffeb42304a6}\label{classpymavlink_1_1mavutil_1_1mavfile_a270d661451b79fd6f15c2ffeb42304a6}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!wait\_gps\_fix@{wait\_gps\_fix}}
+\index{wait\_gps\_fix@{wait\_gps\_fix}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{wait\_gps\_fix()}{wait\_gps\_fix()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+wait\+\_\+gps\+\_\+fix (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 663 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a3776d63929d3183a65076cda4930b624}\label{classpymavlink_1_1mavutil_1_1mavfile_a3776d63929d3183a65076cda4930b624}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!wait\_heartbeat@{wait\_heartbeat}}
+\index{wait\_heartbeat@{wait\_heartbeat}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{wait\_heartbeat()}{wait\_heartbeat()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+wait\+\_\+heartbeat (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{blocking = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wait for a heartbeat so we know the target system IDs\end{DoxyVerb}
+ 
+
+Definition at line 392 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a3c9b70e6763649129f677074bd73e41a}\label{classpymavlink_1_1mavutil_1_1mavfile_a3c9b70e6763649129f677074bd73e41a}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!waypoint\_clear\_all\_send@{waypoint\_clear\_all\_send}}
+\index{waypoint\_clear\_all\_send@{waypoint\_clear\_all\_send}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{waypoint\_clear\_all\_send()}{waypoint\_clear\_all\_send()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+waypoint\+\_\+clear\+\_\+all\+\_\+send (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wrapper for waypoint_clear_all_send\end{DoxyVerb}
+ 
+
+Definition at line 437 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a2d15b0cae8037dda7803879aa11a3857}\label{classpymavlink_1_1mavutil_1_1mavfile_a2d15b0cae8037dda7803879aa11a3857}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!waypoint\_count\_send@{waypoint\_count\_send}}
+\index{waypoint\_count\_send@{waypoint\_count\_send}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{waypoint\_count\_send()}{waypoint\_count\_send()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+waypoint\+\_\+count\+\_\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{seq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wrapper for waypoint_count_send\end{DoxyVerb}
+ 
+
+Definition at line 466 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aba2948f65c3186269715ffcb4b7ddce5}\label{classpymavlink_1_1mavutil_1_1mavfile_aba2948f65c3186269715ffcb4b7ddce5}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!waypoint\_current@{waypoint\_current}}
+\index{waypoint\_current@{waypoint\_current}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{waypoint\_current()}{waypoint\_current()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+waypoint\+\_\+current (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return current waypoint\end{DoxyVerb}
+ 
+
+Definition at line 458 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a49ca013cb65639e9c5a5a436cb0a7756}\label{classpymavlink_1_1mavutil_1_1mavfile_a49ca013cb65639e9c5a5a436cb0a7756}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!waypoint\_request\_list\_send@{waypoint\_request\_list\_send}}
+\index{waypoint\_request\_list\_send@{waypoint\_request\_list\_send}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{waypoint\_request\_list\_send()}{waypoint\_request\_list\_send()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+waypoint\+\_\+request\+\_\+list\+\_\+send (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wrapper for waypoint_request_list_send\end{DoxyVerb}
+ 
+
+Definition at line 430 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_af14da05495c0927374c4356a527ad406}\label{classpymavlink_1_1mavutil_1_1mavfile_af14da05495c0927374c4356a527ad406}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!waypoint\_request\_send@{waypoint\_request\_send}}
+\index{waypoint\_request\_send@{waypoint\_request\_send}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{waypoint\_request\_send()}{waypoint\_request\_send()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+waypoint\+\_\+request\+\_\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{seq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wrapper for waypoint_request_send\end{DoxyVerb}
+ 
+
+Definition at line 444 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a5ada29335e23c51ef5902135668d07db}\label{classpymavlink_1_1mavutil_1_1mavfile_a5ada29335e23c51ef5902135668d07db}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!waypoint\_set\_current\_send@{waypoint\_set\_current\_send}}
+\index{waypoint\_set\_current\_send@{waypoint\_set\_current\_send}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{waypoint\_set\_current\_send()}{waypoint\_set\_current\_send()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+waypoint\+\_\+set\+\_\+current\+\_\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{seq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wrapper for waypoint_set_current_send\end{DoxyVerb}
+ 
+
+Definition at line 451 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a8f40348c156083384c07dfa73cf92a62}\label{classpymavlink_1_1mavutil_1_1mavfile_a8f40348c156083384c07dfa73cf92a62}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!write@{write}}
+\index{write@{write}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def pymavlink.\+mavutil.\+mavfile.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buf }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}default write method\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavchildexec_af5ffc52892313980ff86884f05b3741a}{pymavlink.\+mavutil.\+mavchildexec}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavlogfile_a286beed914444073324880af5f611505}{pymavlink.\+mavutil.\+mavlogfile}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavtcpin_afa11c00945123d40e77e47015066670d}{pymavlink.\+mavutil.\+mavtcpin}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavtcp_abcc941efee4231016584e06c7cf07590}{pymavlink.\+mavutil.\+mavtcp}}, \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavudp_a517fd3e5a3ad03f03ba505ff8b4d7572}{pymavlink.\+mavutil.\+mavudp}}, and \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1mavserial_a6d0072efcfa0a49f95de45a8475b26e8}{pymavlink.\+mavutil.\+mavserial}}.
+
+
+
+Definition at line 201 of file mavutil.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a3307e42a1f2ad53909dca6f9a232760c}\label{classpymavlink_1_1mavutil_1_1mavfile_a3307e42a1f2ad53909dca6f9a232760c}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!address@{address}}
+\index{address@{address}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+address}
+
+
+
+Definition at line 116 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a5d9a3ac5666250fe617cb5df530c8082}\label{classpymavlink_1_1mavutil_1_1mavfile_a5d9a3ac5666250fe617cb5df530c8082}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!altitude@{altitude}}
+\index{altitude@{altitude}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{altitude}{altitude}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+altitude}
+
+
+
+Definition at line 149 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_afe55f45b7160244078a3825f22667935}\label{classpymavlink_1_1mavutil_1_1mavfile_afe55f45b7160244078a3825f22667935}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!base\_mode@{base\_mode}}
+\index{base\_mode@{base\_mode}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{base\_mode}{base\_mode}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+base\+\_\+mode}
+
+
+
+Definition at line 140 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a157775ad737f937ae736cbf039f367aa}\label{classpymavlink_1_1mavutil_1_1mavfile_a157775ad737f937ae736cbf039f367aa}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!fd@{fd}}
+\index{fd@{fd}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+fd}
+
+
+
+Definition at line 115 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a2585c4bd855d86eb033e4d5fb8405289}\label{classpymavlink_1_1mavutil_1_1mavfile_a2585c4bd855d86eb033e4d5fb8405289}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!first\_byte@{first\_byte}}
+\index{first\_byte@{first\_byte}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{first\_byte}{first\_byte}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+first\+\_\+byte}
+
+
+
+Definition at line 128 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a41a8e74171d6a02c354e6b20e27d8922}\label{classpymavlink_1_1mavutil_1_1mavfile_a41a8e74171d6a02c354e6b20e27d8922}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!flightmode@{flightmode}}
+\index{flightmode@{flightmode}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{flightmode}{flightmode}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+flightmode}
+
+
+
+Definition at line 137 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_ad4a99a4e70e5ea1875078f6addacf8bb}\label{classpymavlink_1_1mavutil_1_1mavfile_ad4a99a4e70e5ea1875078f6addacf8bb}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!ground\_pressure@{ground\_pressure}}
+\index{ground\_pressure@{ground\_pressure}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{ground\_pressure}{ground\_pressure}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+ground\+\_\+pressure}
+
+
+
+Definition at line 147 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a4eb1b54f916d08a9ba1d2dcb8f7139e2}\label{classpymavlink_1_1mavutil_1_1mavfile_a4eb1b54f916d08a9ba1d2dcb8f7139e2}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!ground\_temperature@{ground\_temperature}}
+\index{ground\_temperature@{ground\_temperature}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{ground\_temperature}{ground\_temperature}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+ground\+\_\+temperature}
+
+
+
+Definition at line 148 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_accae39f4c0613319cb19b951922a0324}\label{classpymavlink_1_1mavutil_1_1mavfile_accae39f4c0613319cb19b951922a0324}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!idle\_hooks@{idle\_hooks}}
+\index{idle\_hooks@{idle\_hooks}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{idle\_hooks}{idle\_hooks}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+idle\+\_\+hooks}
+
+
+
+Definition at line 143 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a2bad0eb3f322ff7dab356b4e07ae8f4a}\label{classpymavlink_1_1mavutil_1_1mavfile_a2bad0eb3f322ff7dab356b4e07ae8f4a}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!last\_seq@{last\_seq}}
+\index{last\_seq@{last\_seq}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{last\_seq}{last\_seq}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+last\+\_\+seq}
+
+
+
+Definition at line 151 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a173adae978d36daed8740caaf561200d}\label{classpymavlink_1_1mavutil_1_1mavfile_a173adae978d36daed8740caaf561200d}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!logfile@{logfile}}
+\index{logfile@{logfile}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{logfile}{logfile}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+logfile}
+
+
+
+Definition at line 132 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a369ec548641670e6551050aa82438050}\label{classpymavlink_1_1mavutil_1_1mavfile_a369ec548641670e6551050aa82438050}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!logfile\_raw@{logfile\_raw}}
+\index{logfile\_raw@{logfile\_raw}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{logfile\_raw}{logfile\_raw}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+logfile\+\_\+raw}
+
+
+
+Definition at line 133 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aecb6ecfdc61f1c69fc0d15fcdef436b0}\label{classpymavlink_1_1mavutil_1_1mavfile_aecb6ecfdc61f1c69fc0d15fcdef436b0}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!mav@{mav}}
+\index{mav@{mav}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{mav}{mav}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+mav}
+
+
+
+Definition at line 130 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_af7e0abc5cb1258cfcdec3a683cd61bdb}\label{classpymavlink_1_1mavutil_1_1mavfile_af7e0abc5cb1258cfcdec3a683cd61bdb}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!mav\_count@{mav\_count}}
+\index{mav\_count@{mav\_count}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{mav\_count}{mav\_count}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+mav\+\_\+count}
+
+
+
+Definition at line 153 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_afaa7723444c1f5a24d284a0d23e299e2}\label{classpymavlink_1_1mavutil_1_1mavfile_afaa7723444c1f5a24d284a0d23e299e2}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!mav\_loss@{mav\_loss}}
+\index{mav\_loss@{mav\_loss}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{mav\_loss}{mav\_loss}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+mav\+\_\+loss}
+
+
+
+Definition at line 152 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_aedfd4f8385f7dece207420bfbfafb5d3}\label{classpymavlink_1_1mavutil_1_1mavfile_aedfd4f8385f7dece207420bfbfafb5d3}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!mav\_type@{mav\_type}}
+\index{mav\_type@{mav\_type}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{mav\_type}{mav\_type}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+mav\+\_\+type}
+
+
+
+Definition at line 139 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a471c714f4891bc8908c050cce7c09e1f}\label{classpymavlink_1_1mavutil_1_1mavfile_a471c714f4891bc8908c050cce7c09e1f}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!message\_hooks@{message\_hooks}}
+\index{message\_hooks@{message\_hooks}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{message\_hooks}{message\_hooks}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+message\+\_\+hooks}
+
+
+
+Definition at line 142 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a7521a5e9786057266e9bc3bdafb058d0}\label{classpymavlink_1_1mavutil_1_1mavfile_a7521a5e9786057266e9bc3bdafb058d0}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!messages@{messages}}
+\index{messages@{messages}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{messages}{messages}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+messages}
+
+
+
+Definition at line 117 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a2743806ba71f58e0dc8a98d76e07f7c9}\label{classpymavlink_1_1mavutil_1_1mavfile_a2743806ba71f58e0dc8a98d76e07f7c9}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!notimestamps@{notimestamps}}
+\index{notimestamps@{notimestamps}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{notimestamps}{notimestamps}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+notimestamps}
+
+
+
+Definition at line 145 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a9580276155bfccf280bf8063157ed216}\label{classpymavlink_1_1mavutil_1_1mavfile_a9580276155bfccf280bf8063157ed216}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!param\_fetch\_complete@{param\_fetch\_complete}}
+\index{param\_fetch\_complete@{param\_fetch\_complete}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{param\_fetch\_complete}{param\_fetch\_complete}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+param\+\_\+fetch\+\_\+complete}
+
+
+
+Definition at line 135 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a94754e789681df30204171076fdcee9e}\label{classpymavlink_1_1mavutil_1_1mavfile_a94754e789681df30204171076fdcee9e}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!param\_fetch\_in\_progress@{param\_fetch\_in\_progress}}
+\index{param\_fetch\_in\_progress@{param\_fetch\_in\_progress}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{param\_fetch\_in\_progress}{param\_fetch\_in\_progress}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+param\+\_\+fetch\+\_\+in\+\_\+progress}
+
+
+
+Definition at line 134 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a44f3d71dd47d94e8c1b52a60eb036982}\label{classpymavlink_1_1mavutil_1_1mavfile_a44f3d71dd47d94e8c1b52a60eb036982}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!param\_fetch\_start@{param\_fetch\_start}}
+\index{param\_fetch\_start@{param\_fetch\_start}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{param\_fetch\_start}{param\_fetch\_start}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+param\+\_\+fetch\+\_\+start}
+
+
+
+Definition at line 401 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a1a1f44b89b1ac41484cfd88f83b7c695}\label{classpymavlink_1_1mavutil_1_1mavfile_a1a1f44b89b1ac41484cfd88f83b7c695}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!params@{params}}
+\index{params@{params}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+params}
+
+
+
+Definition at line 123 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a6a96d664dc258cd8bcf82c84aea68780}\label{classpymavlink_1_1mavutil_1_1mavfile_a6a96d664dc258cd8bcf82c84aea68780}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!portdead@{portdead}}
+\index{portdead@{portdead}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{portdead}{portdead}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+portdead}
+
+
+
+Definition at line 155 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_ac662327c5d9bd4fca595ff6bc97fd587}\label{classpymavlink_1_1mavutil_1_1mavfile_ac662327c5d9bd4fca595ff6bc97fd587}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!robust\_parsing@{robust\_parsing}}
+\index{robust\_parsing@{robust\_parsing}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{robust\_parsing}{robust\_parsing}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+robust\+\_\+parsing}
+
+
+
+Definition at line 129 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a84e307f771a9ac2aed567831845c417e}\label{classpymavlink_1_1mavutil_1_1mavfile_a84e307f771a9ac2aed567831845c417e}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!source\_component@{source\_component}}
+\index{source\_component@{source\_component}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{source\_component}{source\_component}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+source\+\_\+component}
+
+
+
+Definition at line 127 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a02c06667c79f4414ed9c4ee6a8dec903}\label{classpymavlink_1_1mavutil_1_1mavfile_a02c06667c79f4414ed9c4ee6a8dec903}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!source\_system@{source\_system}}
+\index{source\_system@{source\_system}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{source\_system}{source\_system}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+source\+\_\+system}
+
+
+
+Definition at line 126 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a60156edac1dab0be5df8c111e5b32910}\label{classpymavlink_1_1mavutil_1_1mavfile_a60156edac1dab0be5df8c111e5b32910}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+start\+\_\+time}
+
+
+
+Definition at line 136 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_adabc25442afa8c8d23132d3a344b8ef9}\label{classpymavlink_1_1mavutil_1_1mavfile_adabc25442afa8c8d23132d3a344b8ef9}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!stop\_on\_EOF@{stop\_on\_EOF}}
+\index{stop\_on\_EOF@{stop\_on\_EOF}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{stop\_on\_EOF}{stop\_on\_EOF}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+stop\+\_\+on\+\_\+\+E\+OF}
+
+
+
+Definition at line 154 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a2b8ac037d02bd5e90792e6c420549bb9}\label{classpymavlink_1_1mavutil_1_1mavfile_a2b8ac037d02bd5e90792e6c420549bb9}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!target\_component@{target\_component}}
+\index{target\_component@{target\_component}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{target\_component}{target\_component}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+target\+\_\+component}
+
+
+
+Definition at line 125 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_afb3bf96157b342b89a4279edb3f90239}\label{classpymavlink_1_1mavutil_1_1mavfile_afb3bf96157b342b89a4279edb3f90239}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!target\_system@{target\_system}}
+\index{target\_system@{target\_system}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{target\_system}{target\_system}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+target\+\_\+system}
+
+
+
+Definition at line 124 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_af135ef21b91f88dc3a4d15690a7bd137}\label{classpymavlink_1_1mavutil_1_1mavfile_af135ef21b91f88dc3a4d15690a7bd137}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+timestamp}
+
+
+
+Definition at line 141 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a37502153c0413757a34aa2bbe7b9db54}\label{classpymavlink_1_1mavutil_1_1mavfile_a37502153c0413757a34aa2bbe7b9db54}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!uptime@{uptime}}
+\index{uptime@{uptime}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{uptime}{uptime}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+uptime}
+
+
+
+Definition at line 144 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a7a95b597163c1661c47ee3f3b1ced072}\label{classpymavlink_1_1mavutil_1_1mavfile_a7a95b597163c1661c47ee3f3b1ced072}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!vehicle\_type@{vehicle\_type}}
+\index{vehicle\_type@{vehicle\_type}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{vehicle\_type}{vehicle\_type}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+vehicle\+\_\+type}
+
+
+
+Definition at line 138 of file mavutil.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavutil_1_1mavfile_a48a9748e550310c4c276857ff0712b96}\label{classpymavlink_1_1mavutil_1_1mavfile_a48a9748e550310c4c276857ff0712b96}} 
+\index{pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}!WIRE\_PROTOCOL\_VERSION@{WIRE\_PROTOCOL\_VERSION}}
+\index{WIRE\_PROTOCOL\_VERSION@{WIRE\_PROTOCOL\_VERSION}!pymavlink.mavutil.mavfile@{pymavlink.mavutil.mavfile}}
+\subsubsection{\texorpdfstring{WIRE\_PROTOCOL\_VERSION}{WIRE\_PROTOCOL\_VERSION}}
+{\footnotesize\ttfamily pymavlink.\+mavutil.\+mavfile.\+W\+I\+R\+E\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}
+
+
+
+Definition at line 150 of file mavutil.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/\mbox{\hyperlink{mavutil_8py}{mavutil.\+py}}\end{DoxyCompactItemize}

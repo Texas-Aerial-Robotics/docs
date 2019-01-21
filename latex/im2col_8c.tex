@@ -1,0 +1,34 @@
+\hypertarget{im2col_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/im2col.c File Reference}
+\label{im2col_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/im2col.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/im2col.c}}
+{\ttfamily \#include \char`\"{}im2col.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{im2col_8c_a926633415d519e82388c2fbe8d1d24ed}{im2col\+\_\+get\+\_\+pixel}} (float $\ast$im, int height, int width, int channels, int row, int col, int channel, int pad)
+\item 
+void \mbox{\hyperlink{im2col_8c_a75c68e7a88c78eec8bc874ebcfb2cea2}{im2col\+\_\+cpu}} (float $\ast$data\+\_\+im, int channels, int height, int width, int ksize, int stride, int pad, float $\ast$data\+\_\+col)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{im2col_8c_a75c68e7a88c78eec8bc874ebcfb2cea2}\label{im2col_8c_a75c68e7a88c78eec8bc874ebcfb2cea2}} 
+\index{im2col.c@{im2col.c}!im2col\_cpu@{im2col\_cpu}}
+\index{im2col\_cpu@{im2col\_cpu}!im2col.c@{im2col.c}}
+\subsubsection{\texorpdfstring{im2col\_cpu()}{im2col\_cpu()}}
+{\footnotesize\ttfamily void im2col\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{data\+\_\+im,  }\item[{int}]{channels,  }\item[{int}]{height,  }\item[{int}]{width,  }\item[{int}]{ksize,  }\item[{int}]{stride,  }\item[{int}]{pad,  }\item[{float $\ast$}]{data\+\_\+col }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file im2col.\+c.
+
+\mbox{\Hypertarget{im2col_8c_a926633415d519e82388c2fbe8d1d24ed}\label{im2col_8c_a926633415d519e82388c2fbe8d1d24ed}} 
+\index{im2col.c@{im2col.c}!im2col\_get\_pixel@{im2col\_get\_pixel}}
+\index{im2col\_get\_pixel@{im2col\_get\_pixel}!im2col.c@{im2col.c}}
+\subsubsection{\texorpdfstring{im2col\_get\_pixel()}{im2col\_get\_pixel()}}
+{\footnotesize\ttfamily float im2col\+\_\+get\+\_\+pixel (\begin{DoxyParamCaption}\item[{float $\ast$}]{im,  }\item[{int}]{height,  }\item[{int}]{width,  }\item[{int}]{channels,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{channel,  }\item[{int}]{pad }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file im2col.\+c.
+

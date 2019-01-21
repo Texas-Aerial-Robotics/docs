@@ -1,0 +1,62 @@
+\hypertarget{odomTf_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/simulations\+\_\+ros/src/odom\+Tf.cpp File Reference}
+\label{odomTf_8cpp}\index{/home/eric/catkin\_ws/src/simulations\_ros/src/odomTf.cpp@{/home/eric/catkin\_ws/src/simulations\_ros/src/odomTf.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+Bool.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Set\+Mode.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+State.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Position\+Target.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+T\+O\+L.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tf/transform\+\_\+broadcaster.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{odomTf_8cpp_a586e030a1be1c3399ddff1672fd4cf5f}{odom\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+int \mbox{\hyperlink{odomTf_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{odomTf_8cpp_a8eca8e5acda5efca522e100b23de2b28}{odom}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{odomTf_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{odomTf_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{odomTf.cpp@{odomTf.cpp}!main@{main}}
+\index{main@{main}!odomTf.cpp@{odomTf.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file odom\+Tf.\+cpp.
+
+\mbox{\Hypertarget{odomTf_8cpp_a586e030a1be1c3399ddff1672fd4cf5f}\label{odomTf_8cpp_a586e030a1be1c3399ddff1672fd4cf5f}} 
+\index{odomTf.cpp@{odomTf.cpp}!odom\_cb@{odom\_cb}}
+\index{odom\_cb@{odom\_cb}!odomTf.cpp@{odomTf.cpp}}
+\subsubsection{\texorpdfstring{odom\_cb()}{odom\_cb()}}
+{\footnotesize\ttfamily void odom\+\_\+cb (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file odom\+Tf.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{odomTf_8cpp_a8eca8e5acda5efca522e100b23de2b28}\label{odomTf_8cpp_a8eca8e5acda5efca522e100b23de2b28}} 
+\index{odomTf.cpp@{odomTf.cpp}!odom@{odom}}
+\index{odom@{odom}!odomTf.cpp@{odomTf.cpp}}
+\subsubsection{\texorpdfstring{odom}{odom}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry odom}
+
+
+
+Definition at line 16 of file odom\+Tf.\+cpp.
+

@@ -1,0 +1,60 @@
+\hypertarget{reorg__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/reorg\+\_\+layer.h File Reference}
+\label{reorg__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/reorg\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/reorg\_layer.h}}
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{reorg__layer_8h_ad1ce378e8ff021095ed91072ba46edd9}{make\+\_\+reorg\+\_\+layer}} (int batch, int w, int h, int c, int stride, int reverse, int \mbox{\hyperlink{blas_8h_a342ca7301ce3569b4e709b26d0c6a824}{flatten}}, int extra)
+\item 
+void \mbox{\hyperlink{reorg__layer_8h_a20ccb8cc9b99dbc11971376d960880ed}{resize\+\_\+reorg\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} $\ast$l, int w, int h)
+\item 
+void \mbox{\hyperlink{reorg__layer_8h_a8e057e5c460c1c9c13073fc4a478bce0}{forward\+\_\+reorg\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{reorg__layer_8h_a43aab957943419b06611ce9cfe5d5079}{backward\+\_\+reorg\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{reorg__layer_8h_a43aab957943419b06611ce9cfe5d5079}\label{reorg__layer_8h_a43aab957943419b06611ce9cfe5d5079}} 
+\index{reorg\_layer.h@{reorg\_layer.h}!backward\_reorg\_layer@{backward\_reorg\_layer}}
+\index{backward\_reorg\_layer@{backward\_reorg\_layer}!reorg\_layer.h@{reorg\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_reorg\_layer()}{backward\_reorg\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+reorg\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 112 of file reorg\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{reorg__layer_8h_a8e057e5c460c1c9c13073fc4a478bce0}\label{reorg__layer_8h_a8e057e5c460c1c9c13073fc4a478bce0}} 
+\index{reorg\_layer.h@{reorg\_layer.h}!forward\_reorg\_layer@{forward\_reorg\_layer}}
+\index{forward\_reorg\_layer@{forward\_reorg\_layer}!reorg\_layer.h@{reorg\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_reorg\_layer()}{forward\_reorg\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+reorg\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file reorg\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{reorg__layer_8h_ad1ce378e8ff021095ed91072ba46edd9}\label{reorg__layer_8h_ad1ce378e8ff021095ed91072ba46edd9}} 
+\index{reorg\_layer.h@{reorg\_layer.h}!make\_reorg\_layer@{make\_reorg\_layer}}
+\index{make\_reorg\_layer@{make\_reorg\_layer}!reorg\_layer.h@{reorg\_layer.h}}
+\subsubsection{\texorpdfstring{make\_reorg\_layer()}{make\_reorg\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+reorg\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c,  }\item[{int}]{stride,  }\item[{int}]{reverse,  }\item[{int}]{flatten,  }\item[{int}]{extra }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file reorg\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{reorg__layer_8h_a20ccb8cc9b99dbc11971376d960880ed}\label{reorg__layer_8h_a20ccb8cc9b99dbc11971376d960880ed}} 
+\index{reorg\_layer.h@{reorg\_layer.h}!resize\_reorg\_layer@{resize\_reorg\_layer}}
+\index{resize\_reorg\_layer@{resize\_reorg\_layer}!reorg\_layer.h@{reorg\_layer.h}}
+\subsubsection{\texorpdfstring{resize\_reorg\_layer()}{resize\_reorg\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+reorg\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}} $\ast$}]{l,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file reorg\+\_\+layer.\+c.
+

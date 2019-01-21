@@ -1,0 +1,149 @@
+\hypertarget{structmavlink_1_1Message}{}\section{mavlink\+::Message Struct Reference}
+\label{structmavlink_1_1Message}\index{mavlink::Message@{mavlink::Message}}
+
+
+{\ttfamily \#include $<$message.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmavlink_1_1Message_1_1Info}{Info}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{structmavlink_1_1Message_acfcd821ce25f7e4e2633f44d4a57b185}{get\+\_\+name}} (void) const =0
+\item 
+virtual \mbox{\hyperlink{structmavlink_1_1Message_1_1Info}{Info}} \mbox{\hyperlink{structmavlink_1_1Message_abf1ca05ae7564100d52b04473a784d1c}{get\+\_\+message\+\_\+info}} (void) const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structmavlink_1_1Message_a6a2a01c5fdb6e6039a89f43923085e81}{to\+\_\+yaml}} (void) const =0
+\item 
+virtual void \mbox{\hyperlink{structmavlink_1_1Message_a8aebc1882e5e4b7838909b5fdd56ef1d}{serialize}} (\mbox{\hyperlink{classmavlink_1_1MsgMap}{Msg\+Map}} \&map) const =0
+\item 
+virtual void \mbox{\hyperlink{structmavlink_1_1Message_a082824377e57f4e90bce4cba1a44f90b}{deserialize}} (\mbox{\hyperlink{classmavlink_1_1MsgMap}{Msg\+Map}} \&msp)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespacemavlink_a98a1fe49b380ed1ea252d2c13bf3278d}{msgid\+\_\+t}} \mbox{\hyperlink{structmavlink_1_1Message_a7f0f3c243218c213c80b88967607630e}{M\+S\+G\+\_\+\+ID}} = U\+I\+N\+T32\+\_\+\+M\+AX
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structmavlink_1_1Message_a5bf17835d1732e0b83212a853a838c6b}{L\+E\+N\+G\+TH}} = 0
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structmavlink_1_1Message_ae5e5cad97fc4b3e648c0a05f504d8770}{M\+I\+N\+\_\+\+L\+E\+N\+G\+TH}} = 0
+\item 
+static constexpr uint8\+\_\+t \mbox{\hyperlink{structmavlink_1_1Message_ad261058b3a7dc68e69cd631e5cd766a2}{C\+R\+C\+\_\+\+E\+X\+T\+RA}} = 0
+\item 
+static constexpr auto \mbox{\hyperlink{structmavlink_1_1Message_a8c65d1ee019780792fa21e2502b5306b}{N\+A\+ME}} = \char`\"{}B\+A\+SE\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+A\+V\+Link \mbox{\hyperlink{structmavlink_1_1Message}{Message}} base class. 
+
+Definition at line 44 of file message.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structmavlink_1_1Message_a082824377e57f4e90bce4cba1a44f90b}\label{structmavlink_1_1Message_a082824377e57f4e90bce4cba1a44f90b}} 
+\index{mavlink::Message@{mavlink::Message}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily virtual void mavlink\+::\+Message\+::deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmavlink_1_1MsgMap}{Msg\+Map}} \&}]{msp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Deserialize message.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em map} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structmavlink_1_1Message_abf1ca05ae7564100d52b04473a784d1c}\label{structmavlink_1_1Message_abf1ca05ae7564100d52b04473a784d1c}} 
+\index{mavlink::Message@{mavlink::Message}!get\_message\_info@{get\_message\_info}}
+\index{get\_message\_info@{get\_message\_info}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{get\_message\_info()}{get\_message\_info()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structmavlink_1_1Message_1_1Info}{Info}} mavlink\+::\+Message\+::get\+\_\+message\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get info needed for mavlink\+\_\+finalize\+\_\+message\+\_\+xxx() \mbox{\Hypertarget{structmavlink_1_1Message_acfcd821ce25f7e4e2633f44d4a57b185}\label{structmavlink_1_1Message_acfcd821ce25f7e4e2633f44d4a57b185}} 
+\index{mavlink::Message@{mavlink::Message}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily virtual std\+::string mavlink\+::\+Message\+::get\+\_\+name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get N\+A\+ME constant. Helper for overloaded class access. \mbox{\Hypertarget{structmavlink_1_1Message_a8aebc1882e5e4b7838909b5fdd56ef1d}\label{structmavlink_1_1Message_a8aebc1882e5e4b7838909b5fdd56ef1d}} 
+\index{mavlink::Message@{mavlink::Message}!serialize@{serialize}}
+\index{serialize@{serialize}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily virtual void mavlink\+::\+Message\+::serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmavlink_1_1MsgMap}{Msg\+Map}} \&}]{map }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Serialize message.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em map} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structmavlink_1_1Message_a6a2a01c5fdb6e6039a89f43923085e81}\label{structmavlink_1_1Message_a6a2a01c5fdb6e6039a89f43923085e81}} 
+\index{mavlink::Message@{mavlink::Message}!to\_yaml@{to\_yaml}}
+\index{to\_yaml@{to\_yaml}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{to\_yaml()}{to\_yaml()}}
+{\footnotesize\ttfamily virtual std\+::string mavlink\+::\+Message\+::to\+\_\+yaml (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Make Y\+A\+M\+L-\/string from message content. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmavlink_1_1Message_ad261058b3a7dc68e69cd631e5cd766a2}\label{structmavlink_1_1Message_ad261058b3a7dc68e69cd631e5cd766a2}} 
+\index{mavlink::Message@{mavlink::Message}!CRC\_EXTRA@{CRC\_EXTRA}}
+\index{CRC\_EXTRA@{CRC\_EXTRA}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{CRC\_EXTRA}{CRC\_EXTRA}}
+{\footnotesize\ttfamily constexpr uint8\+\_\+t mavlink\+::\+Message\+::\+C\+R\+C\+\_\+\+E\+X\+T\+RA = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 48 of file message.\+hpp.
+
+\mbox{\Hypertarget{structmavlink_1_1Message_a5bf17835d1732e0b83212a853a838c6b}\label{structmavlink_1_1Message_a5bf17835d1732e0b83212a853a838c6b}} 
+\index{mavlink::Message@{mavlink::Message}!LENGTH@{LENGTH}}
+\index{LENGTH@{LENGTH}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{LENGTH}{LENGTH}}
+{\footnotesize\ttfamily constexpr size\+\_\+t mavlink\+::\+Message\+::\+L\+E\+N\+G\+TH = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 46 of file message.\+hpp.
+
+\mbox{\Hypertarget{structmavlink_1_1Message_ae5e5cad97fc4b3e648c0a05f504d8770}\label{structmavlink_1_1Message_ae5e5cad97fc4b3e648c0a05f504d8770}} 
+\index{mavlink::Message@{mavlink::Message}!MIN\_LENGTH@{MIN\_LENGTH}}
+\index{MIN\_LENGTH@{MIN\_LENGTH}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{MIN\_LENGTH}{MIN\_LENGTH}}
+{\footnotesize\ttfamily constexpr size\+\_\+t mavlink\+::\+Message\+::\+M\+I\+N\+\_\+\+L\+E\+N\+G\+TH = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 47 of file message.\+hpp.
+
+\mbox{\Hypertarget{structmavlink_1_1Message_a7f0f3c243218c213c80b88967607630e}\label{structmavlink_1_1Message_a7f0f3c243218c213c80b88967607630e}} 
+\index{mavlink::Message@{mavlink::Message}!MSG\_ID@{MSG\_ID}}
+\index{MSG\_ID@{MSG\_ID}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{MSG\_ID}{MSG\_ID}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacemavlink_a98a1fe49b380ed1ea252d2c13bf3278d}{msgid\+\_\+t}} mavlink\+::\+Message\+::\+M\+S\+G\+\_\+\+ID = U\+I\+N\+T32\+\_\+\+M\+AX\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 45 of file message.\+hpp.
+
+\mbox{\Hypertarget{structmavlink_1_1Message_a8c65d1ee019780792fa21e2502b5306b}\label{structmavlink_1_1Message_a8c65d1ee019780792fa21e2502b5306b}} 
+\index{mavlink::Message@{mavlink::Message}!NAME@{NAME}}
+\index{NAME@{NAME}!mavlink::Message@{mavlink::Message}}
+\subsubsection{\texorpdfstring{NAME}{NAME}}
+{\footnotesize\ttfamily constexpr auto mavlink\+::\+Message\+::\+N\+A\+ME = \char`\"{}B\+A\+SE\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 49 of file message.\+hpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C\+P\+P11/include\+\_\+v2.\+0/\mbox{\hyperlink{message_8hpp}{message.\+hpp}}\end{DoxyCompactItemize}

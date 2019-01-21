@@ -1,0 +1,81 @@
+\hypertarget{position__listen_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Strat\+Node/src/position\+\_\+listen.cpp File Reference}
+\label{position__listen_8cpp}\index{/home/eric/catkin\_ws/src/StratNode/src/position\_listen.cpp@{/home/eric/catkin\_ws/src/StratNode/src/position\_listen.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Model\+States.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{position__listen_8cpp_a3d3654e6aa93ce289f42571b19c82777}{init\+\_\+datafile}} (std\+::\+String file\+\_\+name)
+\item 
+void \mbox{\hyperlink{position__listen_8cpp_a3ed52f1abe25e28b0045a55204c40dc0}{model\+\_\+states\+\_\+cb}} (const gazebo\+\_\+msgs\+::\+Model\+States\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+const std\+::string \mbox{\hyperlink{position__listen_8cpp_aa46369f3c8adbff876c82270346fffa2}{current\+Date\+Time}} ()
+\item 
+int \mbox{\hyperlink{position__listen_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+gazebo\+\_\+msgs\+::\+Model\+States \mbox{\hyperlink{position__listen_8cpp_a4233b47fc49526324e3f2424f232764d}{cur\+Model\+States}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{position__listen_8cpp_aa46369f3c8adbff876c82270346fffa2}\label{position__listen_8cpp_aa46369f3c8adbff876c82270346fffa2}} 
+\index{position\_listen.cpp@{position\_listen.cpp}!currentDateTime@{currentDateTime}}
+\index{currentDateTime@{currentDateTime}!position\_listen.cpp@{position\_listen.cpp}}
+\subsubsection{\texorpdfstring{currentDateTime()}{currentDateTime()}}
+{\footnotesize\ttfamily const std\+::string current\+Date\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file position\+\_\+listen.\+cpp.
+
+\mbox{\Hypertarget{position__listen_8cpp_a3d3654e6aa93ce289f42571b19c82777}\label{position__listen_8cpp_a3d3654e6aa93ce289f42571b19c82777}} 
+\index{position\_listen.cpp@{position\_listen.cpp}!init\_datafile@{init\_datafile}}
+\index{init\_datafile@{init\_datafile}!position\_listen.cpp@{position\_listen.cpp}}
+\subsubsection{\texorpdfstring{init\_datafile()}{init\_datafile()}}
+{\footnotesize\ttfamily void init\+\_\+datafile (\begin{DoxyParamCaption}\item[{std\+::\+String}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file position\+\_\+listen.\+cpp.
+
+\mbox{\Hypertarget{position__listen_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{position__listen_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{position\_listen.cpp@{position\_listen.cpp}!main@{main}}
+\index{main@{main}!position\_listen.cpp@{position\_listen.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file position\+\_\+listen.\+cpp.
+
+\mbox{\Hypertarget{position__listen_8cpp_a3ed52f1abe25e28b0045a55204c40dc0}\label{position__listen_8cpp_a3ed52f1abe25e28b0045a55204c40dc0}} 
+\index{position\_listen.cpp@{position\_listen.cpp}!model\_states\_cb@{model\_states\_cb}}
+\index{model\_states\_cb@{model\_states\_cb}!position\_listen.cpp@{position\_listen.cpp}}
+\subsubsection{\texorpdfstring{model\_states\_cb()}{model\_states\_cb()}}
+{\footnotesize\ttfamily void model\+\_\+states\+\_\+cb (\begin{DoxyParamCaption}\item[{const gazebo\+\_\+msgs\+::\+Model\+States\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file position\+\_\+listen.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{position__listen_8cpp_a4233b47fc49526324e3f2424f232764d}\label{position__listen_8cpp_a4233b47fc49526324e3f2424f232764d}} 
+\index{position\_listen.cpp@{position\_listen.cpp}!curModelStates@{curModelStates}}
+\index{curModelStates@{curModelStates}!position\_listen.cpp@{position\_listen.cpp}}
+\subsubsection{\texorpdfstring{curModelStates}{curModelStates}}
+{\footnotesize\ttfamily gazebo\+\_\+msgs\+::\+Model\+States cur\+Model\+States}
+
+
+
+Definition at line 10 of file position\+\_\+listen.\+cpp.
+

@@ -1,0 +1,318 @@
+\hypertarget{namespacepymavlink_1_1examples_1_1magtest}{}\section{pymavlink.\+examples.\+magtest Namespace Reference}
+\label{namespacepymavlink_1_1examples_1_1magtest}\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a85f95abe31f900d634b0c548cb8263cb}{set\+\_\+attitude}} (\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a5f4f85280403824f4515003203b490b6}{rc3}}, \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_aa9bde9712f6ffdff13b645156c09dfab}{rc4}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a5318e4afc641238e99eea2d28a2b4128}{True\+Heading}} (S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a783ce71ad67e0f1debb63c6d8779babb}{parser}} = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a5b41d82a28a2e1c5c0fb911678cab960}{required}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a95dcb191104e324188f52da5a45cf367}{True}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a37c7962cfe6f9c457707998e282ebb37}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a2233a45330480258997f60ba4baa5645}{type}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_ae658889b371954a05783abfb1df07ebd}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a3d082598042717821fce72281a19d9f0}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_af56e58adebd478f91d306c5a095c9e4d}{mav1}} = \mbox{\hyperlink{namespacepymavlink_1_1mavutil_aa6c4b8861f86ef3bb746fa0fab241c93}{mavutil.\+mavlink\+\_\+connection}}(args.\+device1, baud=args.\+baudrate)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a3516235c2a928876739d7982bd9f5577}{mav2}} = \mbox{\hyperlink{namespacepymavlink_1_1mavutil_aa6c4b8861f86ef3bb746fa0fab241c93}{mavutil.\+mavlink\+\_\+connection}}(args.\+device2, baud=args.\+baudrate)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_aca99d866c578887ca8b781563516bfc3}{condition}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a7f38ead3d29b80bee730a85adc717add}{blocking}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_adea78a74209f350ecdcbc8517a7dd55c}{event}} = \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1periodic__event}{mavutil.\+periodic\+\_\+event}}(30)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a8556daa189241634467717d1fc5477d0}{pevent}} = \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1periodic__event}{mavutil.\+periodic\+\_\+event}}(0.\+3)
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_af92d1c950ac101b69806b7714ce9ae92}{rc3\+\_\+min}} = 1060
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_ae1a1fcf76a0fd9a85b0047f91a164ba7}{rc3\+\_\+max}} = 1850
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a2a2275c4bbdc823c8f895bb63e4039c7}{rc4\+\_\+min}} = 1080
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a84113c17f1b736a0346be69f763dcd6e}{rc4\+\_\+max}} = 1500
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a5f4f85280403824f4515003203b490b6}{rc3}} = \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_af92d1c950ac101b69806b7714ce9ae92}{rc3\+\_\+min}}
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_aa9bde9712f6ffdff13b645156c09dfab}{rc4}} = 1160
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a37cbe5d4fa2ee121f942f429b5410480}{delta3}} = 2
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_aa4df78ddff63972a042d7aa5c592c55e}{delta4}} = 1
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_abb93a4c501f31a01d184d4e3f3d69ca1}{use\+\_\+pitch}} = 1
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_a8b7b677aa683b3117014b1b8c4c6587a}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+G\+Y\+RO}} = 17
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}rotate APMs on bench to test magnetometers\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a85f95abe31f900d634b0c548cb8263cb}\label{namespacepymavlink_1_1examples_1_1magtest_a85f95abe31f900d634b0c548cb8263cb}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!set\_attitude@{set\_attitude}}
+\index{set\_attitude@{set\_attitude}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{set\_attitude()}{set\_attitude()}}
+{\footnotesize\ttfamily def pymavlink.\+examples.\+magtest.\+set\+\_\+attitude (\begin{DoxyParamCaption}\item[{}]{rc3,  }\item[{}]{rc4 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a5318e4afc641238e99eea2d28a2b4128}\label{namespacepymavlink_1_1examples_1_1magtest_a5318e4afc641238e99eea2d28a2b4128}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!TrueHeading@{TrueHeading}}
+\index{TrueHeading@{TrueHeading}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{TrueHeading()}{TrueHeading()}}
+{\footnotesize\ttfamily def pymavlink.\+examples.\+magtest.\+True\+Heading (\begin{DoxyParamCaption}\item[{}]{S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file magtest.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a3d082598042717821fce72281a19d9f0}\label{namespacepymavlink_1_1examples_1_1magtest_a3d082598042717821fce72281a19d9f0}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!args@{args}}
+\index{args@{args}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 21 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a7f38ead3d29b80bee730a85adc717add}\label{namespacepymavlink_1_1examples_1_1magtest_a7f38ead3d29b80bee730a85adc717add}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!blocking@{blocking}}
+\index{blocking@{blocking}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{blocking}{blocking}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+blocking}
+
+
+
+Definition at line 45 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_aca99d866c578887ca8b781563516bfc3}\label{namespacepymavlink_1_1examples_1_1magtest_aca99d866c578887ca8b781563516bfc3}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!condition@{condition}}
+\index{condition@{condition}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{condition}{condition}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+condition}
+
+
+
+Definition at line 45 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_ae658889b371954a05783abfb1df07ebd}\label{namespacepymavlink_1_1examples_1_1magtest_ae658889b371954a05783abfb1df07ebd}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!default@{default}}
+\index{default@{default}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+default}
+
+
+
+Definition at line 20 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a37cbe5d4fa2ee121f942f429b5410480}\label{namespacepymavlink_1_1examples_1_1magtest_a37cbe5d4fa2ee121f942f429b5410480}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!delta3@{delta3}}
+\index{delta3@{delta3}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{delta3}{delta3}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+delta3 = 2}
+
+
+
+Definition at line 65 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_aa4df78ddff63972a042d7aa5c592c55e}\label{namespacepymavlink_1_1examples_1_1magtest_aa4df78ddff63972a042d7aa5c592c55e}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!delta4@{delta4}}
+\index{delta4@{delta4}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{delta4}{delta4}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+delta4 = 1}
+
+
+
+Definition at line 66 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_adea78a74209f350ecdcbc8517a7dd55c}\label{namespacepymavlink_1_1examples_1_1magtest_adea78a74209f350ecdcbc8517a7dd55c}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!event@{event}}
+\index{event@{event}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+event = \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1periodic__event}{mavutil.\+periodic\+\_\+event}}(30)}
+
+
+
+Definition at line 57 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a37c7962cfe6f9c457707998e282ebb37}\label{namespacepymavlink_1_1examples_1_1magtest_a37c7962cfe6f9c457707998e282ebb37}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!help@{help}}
+\index{help@{help}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+help}
+
+
+
+Definition at line 17 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_af56e58adebd478f91d306c5a095c9e4d}\label{namespacepymavlink_1_1examples_1_1magtest_af56e58adebd478f91d306c5a095c9e4d}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!mav1@{mav1}}
+\index{mav1@{mav1}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{mav1}{mav1}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+mav1 = \mbox{\hyperlink{namespacepymavlink_1_1mavutil_aa6c4b8861f86ef3bb746fa0fab241c93}{mavutil.\+mavlink\+\_\+connection}}(args.\+device1, baud=args.\+baudrate)}
+
+
+
+Definition at line 33 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a3516235c2a928876739d7982bd9f5577}\label{namespacepymavlink_1_1examples_1_1magtest_a3516235c2a928876739d7982bd9f5577}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!mav2@{mav2}}
+\index{mav2@{mav2}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{mav2}{mav2}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+mav2 = \mbox{\hyperlink{namespacepymavlink_1_1mavutil_aa6c4b8861f86ef3bb746fa0fab241c93}{mavutil.\+mavlink\+\_\+connection}}(args.\+device2, baud=args.\+baudrate)}
+
+
+
+Definition at line 36 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a8b7b677aa683b3117014b1b8c4c6587a}\label{namespacepymavlink_1_1examples_1_1magtest_a8b7b677aa683b3117014b1b8c4c6587a}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!MAV\_ACTION\_CALIBRATE\_GYRO@{MAV\_ACTION\_CALIBRATE\_GYRO}}
+\index{MAV\_ACTION\_CALIBRATE\_GYRO@{MAV\_ACTION\_CALIBRATE\_GYRO}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{MAV\_ACTION\_CALIBRATE\_GYRO}{MAV\_ACTION\_CALIBRATE\_GYRO}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+G\+Y\+RO = 17}
+
+
+
+Definition at line 69 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a783ce71ad67e0f1debb63c6d8779babb}\label{namespacepymavlink_1_1examples_1_1magtest_a783ce71ad67e0f1debb63c6d8779babb}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!parser@{parser}}
+\index{parser@{parser}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+parser = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)}
+
+
+
+Definition at line 15 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a8556daa189241634467717d1fc5477d0}\label{namespacepymavlink_1_1examples_1_1magtest_a8556daa189241634467717d1fc5477d0}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!pevent@{pevent}}
+\index{pevent@{pevent}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{pevent}{pevent}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+pevent = \mbox{\hyperlink{classpymavlink_1_1mavutil_1_1periodic__event}{mavutil.\+periodic\+\_\+event}}(0.\+3)}
+
+
+
+Definition at line 58 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a5f4f85280403824f4515003203b490b6}\label{namespacepymavlink_1_1examples_1_1magtest_a5f4f85280403824f4515003203b490b6}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!rc3@{rc3}}
+\index{rc3@{rc3}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{rc3}{rc3}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+rc3 = \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1magtest_af92d1c950ac101b69806b7714ce9ae92}{rc3\+\_\+min}}}
+
+
+
+Definition at line 63 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_ae1a1fcf76a0fd9a85b0047f91a164ba7}\label{namespacepymavlink_1_1examples_1_1magtest_ae1a1fcf76a0fd9a85b0047f91a164ba7}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!rc3\_max@{rc3\_max}}
+\index{rc3\_max@{rc3\_max}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{rc3\_max}{rc3\_max}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+rc3\+\_\+max = 1850}
+
+
+
+Definition at line 60 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_af92d1c950ac101b69806b7714ce9ae92}\label{namespacepymavlink_1_1examples_1_1magtest_af92d1c950ac101b69806b7714ce9ae92}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!rc3\_min@{rc3\_min}}
+\index{rc3\_min@{rc3\_min}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{rc3\_min}{rc3\_min}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+rc3\+\_\+min = 1060}
+
+
+
+Definition at line 59 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_aa9bde9712f6ffdff13b645156c09dfab}\label{namespacepymavlink_1_1examples_1_1magtest_aa9bde9712f6ffdff13b645156c09dfab}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!rc4@{rc4}}
+\index{rc4@{rc4}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{rc4}{rc4}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+rc4 = 1160}
+
+
+
+Definition at line 64 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a84113c17f1b736a0346be69f763dcd6e}\label{namespacepymavlink_1_1examples_1_1magtest_a84113c17f1b736a0346be69f763dcd6e}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!rc4\_max@{rc4\_max}}
+\index{rc4\_max@{rc4\_max}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{rc4\_max}{rc4\_max}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+rc4\+\_\+max = 1500}
+
+
+
+Definition at line 62 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a2a2275c4bbdc823c8f895bb63e4039c7}\label{namespacepymavlink_1_1examples_1_1magtest_a2a2275c4bbdc823c8f895bb63e4039c7}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!rc4\_min@{rc4\_min}}
+\index{rc4\_min@{rc4\_min}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{rc4\_min}{rc4\_min}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+rc4\+\_\+min = 1080}
+
+
+
+Definition at line 61 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a5b41d82a28a2e1c5c0fb911678cab960}\label{namespacepymavlink_1_1examples_1_1magtest_a5b41d82a28a2e1c5c0fb911678cab960}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!required@{required}}
+\index{required@{required}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{required}{required}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+required}
+
+
+
+Definition at line 17 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a95dcb191104e324188f52da5a45cf367}\label{namespacepymavlink_1_1examples_1_1magtest_a95dcb191104e324188f52da5a45cf367}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!True@{True}}
+\index{True@{True}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+True}
+
+
+
+Definition at line 17 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_a2233a45330480258997f60ba4baa5645}\label{namespacepymavlink_1_1examples_1_1magtest_a2233a45330480258997f60ba4baa5645}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!type@{type}}
+\index{type@{type}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+magtest.\+type}
+
+
+
+Definition at line 19 of file magtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1magtest_abb93a4c501f31a01d184d4e3f3d69ca1}\label{namespacepymavlink_1_1examples_1_1magtest_abb93a4c501f31a01d184d4e3f3d69ca1}} 
+\index{pymavlink.examples.magtest@{pymavlink.examples.magtest}!use\_pitch@{use\_pitch}}
+\index{use\_pitch@{use\_pitch}!pymavlink.examples.magtest@{pymavlink.examples.magtest}}
+\subsubsection{\texorpdfstring{use\_pitch}{use\_pitch}}
+{\footnotesize\ttfamily int pymavlink.\+examples.\+magtest.\+use\+\_\+pitch = 1}
+
+
+
+Definition at line 67 of file magtest.\+py.
+

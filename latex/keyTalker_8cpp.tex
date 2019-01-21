@@ -1,0 +1,219 @@
+\hypertarget{keyTalker_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mission8\+\_\+sim/src/key\+Talker.cpp File Reference}
+\label{keyTalker_8cpp}\index{/home/eric/catkin\_ws/src/mission8\_sim/src/keyTalker.cpp@{/home/eric/catkin\_ws/src/mission8\_sim/src/keyTalker.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/glew.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L\+F\+W/glfw3.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{keyTalker_8cpp_ac6bef8e1334f0d8f8c6cb544aea785cc}{vels}} (double \mbox{\hyperlink{keyTalker_8cpp_a6dc6e6f3c75c509ce943163afb5dade7}{speed}}, double \mbox{\hyperlink{keyTalker_8cpp_a5c5b4121f85e7805d4801519d76870de}{turn}})
+\item 
+void \mbox{\hyperlink{keyTalker_8cpp_a901c600bc347a3ae2ab15a1fe1a29f66}{init\+\_\+glfw}} ()
+\item 
+int \mbox{\hyperlink{keyTalker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}
+\item 
+double \mbox{\hyperlink{keyTalker_8cpp_a6dc6e6f3c75c509ce943163afb5dade7}{speed}}
+\item 
+double \mbox{\hyperlink{keyTalker_8cpp_a5c5b4121f85e7805d4801519d76870de}{turn}}
+\item 
+double \mbox{\hyperlink{keyTalker_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}}
+\item 
+double \mbox{\hyperlink{keyTalker_8cpp_ab927965981178aa1fba979a37168db2a}{y}}
+\item 
+double \mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}}
+\item 
+double \mbox{\hyperlink{keyTalker_8cpp_aa78c78a33ff8aacecd1105f94444acd3}{th}}
+\item 
+int \mbox{\hyperlink{keyTalker_8cpp_a6e27f49150e9a14580fb313cc2777e00}{status}}
+\item 
+std\+::map$<$ int, array$<$ double, 4 $>$ $>$ \mbox{\hyperlink{keyTalker_8cpp_a886400aef90f7ee7aee8759b1b9d867c}{move\+Bindings}}
+\item 
+std\+::map$<$ int, array$<$ double, 2 $>$ $>$ \mbox{\hyperlink{keyTalker_8cpp_a6446611db8cb78917aa4bce22aff5d64}{speed\+Bindings}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{keyTalker_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}}
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{keyTalker_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{keyTalker_8cpp_a901c600bc347a3ae2ab15a1fe1a29f66}\label{keyTalker_8cpp_a901c600bc347a3ae2ab15a1fe1a29f66}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!init\_glfw@{init\_glfw}}
+\index{init\_glfw@{init\_glfw}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{init\_glfw()}{init\_glfw()}}
+{\footnotesize\ttfamily void init\+\_\+glfw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{keyTalker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!main@{main}}
+\index{main@{main}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 182 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_ac6bef8e1334f0d8f8c6cb544aea785cc}\label{keyTalker_8cpp_ac6bef8e1334f0d8f8c6cb544aea785cc}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!vels@{vels}}
+\index{vels@{vels}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{vels()}{vels()}}
+{\footnotesize\ttfamily string vels (\begin{DoxyParamCaption}\item[{double}]{speed,  }\item[{double}]{turn }\end{DoxyParamCaption})}
+
+
+
+Definition at line 150 of file key\+Talker.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{keyTalker_8cpp_a886400aef90f7ee7aee8759b1b9d867c}\label{keyTalker_8cpp_a886400aef90f7ee7aee8759b1b9d867c}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!moveBindings@{moveBindings}}
+\index{moveBindings@{moveBindings}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{moveBindings}{moveBindings}}
+{\footnotesize\ttfamily std\+::map$<$int, array$<$double, 4$>$ $>$ move\+Bindings}
+
+
+
+Definition at line 42 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}\label{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!msg@{msg}}
+\index{msg@{msg}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily string msg}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{"Reading from the keyboard  and Publishing to Twist!\(\backslash\)n"}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"---------------------------\(\backslash\)n"}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"Moving around:\(\backslash\)n"}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"   q    w    e\(\backslash\)n"}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"   a    s    d\(\backslash\)n"}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"u/m : increase/decrease max speeds by 10\%\(\backslash\)n"}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"i/, : increase/decrease only linear speed by 10\%\(\backslash\)n"}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"o/. : increase/decrease only angular speed by 10\%\(\backslash\)n"}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"ESC to quit\(\backslash\)n"}}
+
+\end{DoxyCode}
+
+
+Definition at line 15 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a350594df3e8f6948c8462edfd41ce086}\label{keyTalker_8cpp_a350594df3e8f6948c8462edfd41ce086}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!pub@{pub}}
+\index{pub@{pub}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher pub}
+
+
+
+Definition at line 46 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a6dc6e6f3c75c509ce943163afb5dade7}\label{keyTalker_8cpp_a6dc6e6f3c75c509ce943163afb5dade7}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!speed@{speed}}
+\index{speed@{speed}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily double speed}
+
+
+
+Definition at line 39 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a6446611db8cb78917aa4bce22aff5d64}\label{keyTalker_8cpp_a6446611db8cb78917aa4bce22aff5d64}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!speedBindings@{speedBindings}}
+\index{speedBindings@{speedBindings}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{speedBindings}{speedBindings}}
+{\footnotesize\ttfamily std\+::map$<$int, array$<$double, 2$>$ $>$ speed\+Bindings}
+
+
+
+Definition at line 44 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a6e27f49150e9a14580fb313cc2777e00}\label{keyTalker_8cpp_a6e27f49150e9a14580fb313cc2777e00}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!status@{status}}
+\index{status@{status}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily int status}
+
+
+
+Definition at line 40 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_aa78c78a33ff8aacecd1105f94444acd3}\label{keyTalker_8cpp_aa78c78a33ff8aacecd1105f94444acd3}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!th@{th}}
+\index{th@{th}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{th}{th}}
+{\footnotesize\ttfamily double th}
+
+
+
+Definition at line 39 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a5c5b4121f85e7805d4801519d76870de}\label{keyTalker_8cpp_a5c5b4121f85e7805d4801519d76870de}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!turn@{turn}}
+\index{turn@{turn}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{turn}{turn}}
+{\footnotesize\ttfamily double turn}
+
+
+
+Definition at line 39 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}\label{keyTalker_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!window@{window}}
+\index{window@{window}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ window}
+
+
+
+Definition at line 128 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_af88b946fb90d5f08b5fb740c70e98c10}\label{keyTalker_8cpp_af88b946fb90d5f08b5fb740c70e98c10}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!x@{x}}
+\index{x@{x}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double x}
+
+
+
+Definition at line 39 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_ab927965981178aa1fba979a37168db2a}\label{keyTalker_8cpp_ab927965981178aa1fba979a37168db2a}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!y@{y}}
+\index{y@{y}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double y}
+
+
+
+Definition at line 39 of file key\+Talker.\+cpp.
+
+\mbox{\Hypertarget{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}\label{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}} 
+\index{keyTalker.cpp@{keyTalker.cpp}!z@{z}}
+\index{z@{z}!keyTalker.cpp@{keyTalker.cpp}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily double z}
+
+
+
+Definition at line 39 of file key\+Talker.\+cpp.
+

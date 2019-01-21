@@ -1,0 +1,62 @@
+\hypertarget{shortcut__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/shortcut\+\_\+layer.c File Reference}
+\label{shortcut__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/shortcut\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/shortcut\_layer.c}}
+{\ttfamily \#include \char`\"{}shortcut\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activations.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{shortcut__layer_8c_a3aca2328726266a92a5ef31a97bf818c}{make\+\_\+shortcut\+\_\+layer}} (int batch, int index, int w, int h, int c, int w2, int h2, int c2)
+\item 
+void \mbox{\hyperlink{shortcut__layer_8c_a056b252fb51f168d474f01a3389087de}{resize\+\_\+shortcut\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} $\ast$l, int w, int h)
+\item 
+void \mbox{\hyperlink{shortcut__layer_8c_ad7c077313dbf415d2a7147af734b2596}{forward\+\_\+shortcut\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{shortcut__layer_8c_a73cebc83b7e7173a174f16df4c90383c}{backward\+\_\+shortcut\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{shortcut__layer_8c_a73cebc83b7e7173a174f16df4c90383c}\label{shortcut__layer_8c_a73cebc83b7e7173a174f16df4c90383c}} 
+\index{shortcut\_layer.c@{shortcut\_layer.c}!backward\_shortcut\_layer@{backward\_shortcut\_layer}}
+\index{backward\_shortcut\_layer@{backward\_shortcut\_layer}!shortcut\_layer.c@{shortcut\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_shortcut\_layer()}{backward\_shortcut\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+shortcut\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file shortcut\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{shortcut__layer_8c_ad7c077313dbf415d2a7147af734b2596}\label{shortcut__layer_8c_ad7c077313dbf415d2a7147af734b2596}} 
+\index{shortcut\_layer.c@{shortcut\_layer.c}!forward\_shortcut\_layer@{forward\_shortcut\_layer}}
+\index{forward\_shortcut\_layer@{forward\_shortcut\_layer}!shortcut\_layer.c@{shortcut\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_shortcut\_layer()}{forward\_shortcut\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+shortcut\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file shortcut\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{shortcut__layer_8c_a3aca2328726266a92a5ef31a97bf818c}\label{shortcut__layer_8c_a3aca2328726266a92a5ef31a97bf818c}} 
+\index{shortcut\_layer.c@{shortcut\_layer.c}!make\_shortcut\_layer@{make\_shortcut\_layer}}
+\index{make\_shortcut\_layer@{make\_shortcut\_layer}!shortcut\_layer.c@{shortcut\_layer.c}}
+\subsubsection{\texorpdfstring{make\_shortcut\_layer()}{make\_shortcut\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+shortcut\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{index,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c,  }\item[{int}]{w2,  }\item[{int}]{h2,  }\item[{int}]{c2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file shortcut\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{shortcut__layer_8c_a056b252fb51f168d474f01a3389087de}\label{shortcut__layer_8c_a056b252fb51f168d474f01a3389087de}} 
+\index{shortcut\_layer.c@{shortcut\_layer.c}!resize\_shortcut\_layer@{resize\_shortcut\_layer}}
+\index{resize\_shortcut\_layer@{resize\_shortcut\_layer}!shortcut\_layer.c@{shortcut\_layer.c}}
+\subsubsection{\texorpdfstring{resize\_shortcut\_layer()}{resize\_shortcut\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+shortcut\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}} $\ast$}]{l,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file shortcut\+\_\+layer.\+c.
+

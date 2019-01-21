@@ -1,0 +1,185 @@
+\hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua}{}\section{pymavlink.\+generator.\+mavgen\+\_\+wlua Namespace Reference}
+\label{namespacepymavlink_1_1generator_1_1mavgen__wlua}\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_a2f87dcc75f8b9a6b8b417bf387b1a224}{lua\+\_\+type}} (mavlink\+\_\+type)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_aaced6c6a179f60dbd142ca923718ab12}{type\+\_\+size}} (mavlink\+\_\+type)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_a1007bc04078ec16dd974ffb4cbb23475}{mavfmt}} (field)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_ae446521d9f00c70028d9cb99443108b2}{generate\+\_\+preamble}} (outf)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_a370d0ccb6cf4e13152f5e241b6d8b7d8}{generate\+\_\+body\+\_\+fields}} (outf)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_aab77022f5146a6676fe580ef01a92f92}{generate\+\_\+msg\+\_\+table}} (outf, msgs)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_a5a9d333c1ab8267705564a52bc232871}{generate\+\_\+msg\+\_\+fields}} (outf, \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_afe2afd7ec0108cdf0fa8c59ae3d305b0}{generate\+\_\+field\+\_\+dissector}} (outf, \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, field)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_a8e47b34f4ff18421908d9ccb5e532fa9}{generate\+\_\+payload\+\_\+dissector}} (outf, \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_ab1b596877b4a70281a8fc422674df76a}{generate\+\_\+packet\+\_\+dis}} (outf)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_aa34b360e4cc48e283746824c3b7cb416}{generate\+\_\+epilog}} (outf)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_a3d1e27fd417fd358d786d3383cb3cefd}{generate}} (basename, xml)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__wlua_a8aa3596ee3c13af1cad0b541f7a51808}{t}} = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}parse a MAVLink protocol XML file and generate a Wireshark LUA dissector
+
+Copyright Holger Steinhaus 2012
+Released under GNU GPL version 3 or later
+
+Instructions for use: 
+1. python -m pymavlink.tools.mavgen --lang=WLua mymavlink.xml -o ~/.wireshark/plugins/mymavlink.lua
+2. convert binary stream int .pcap file format (see ../examples/mav2pcap.py)
+3. open the pcap file in Wireshark
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_a3d1e27fd417fd358d786d3383cb3cefd}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_a3d1e27fd417fd358d786d3383cb3cefd}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate@{generate}}
+\index{generate@{generate}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate complete python implemenation\end{DoxyVerb}
+ 
+
+Definition at line 391 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_a370d0ccb6cf4e13152f5e241b6d8b7d8}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_a370d0ccb6cf4e13152f5e241b6d8b7d8}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_body\_fields@{generate\_body\_fields}}
+\index{generate\_body\_fields@{generate\_body\_fields}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_body\_fields()}{generate\_body\_fields()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+body\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{outf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_aa34b360e4cc48e283746824c3b7cb416}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_aa34b360e4cc48e283746824c3b7cb416}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_epilog@{generate\_epilog}}
+\index{generate\_epilog@{generate\_epilog}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_epilog()}{generate\_epilog()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+epilog (\begin{DoxyParamCaption}\item[{}]{outf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 376 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_afe2afd7ec0108cdf0fa8c59ae3d305b0}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_afe2afd7ec0108cdf0fa8c59ae3d305b0}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_field\_dissector@{generate\_field\_dissector}}
+\index{generate\_field\_dissector@{generate\_field\_dissector}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_field\_dissector()}{generate\_field\_dissector()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+field\+\_\+dissector (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msg,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+
+
+Definition at line 149 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_a5a9d333c1ab8267705564a52bc232871}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_a5a9d333c1ab8267705564a52bc232871}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_msg\_fields@{generate\_msg\_fields}}
+\index{generate\_msg\_fields@{generate\_msg\_fields}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_msg\_fields()}{generate\_msg\_fields()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+msg\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_aab77022f5146a6676fe580ef01a92f92}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_aab77022f5146a6676fe580ef01a92f92}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_msg\_table@{generate\_msg\_table}}
+\index{generate\_msg\_table@{generate\_msg\_table}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_msg\_table()}{generate\_msg\_table()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+msg\+\_\+table (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msgs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_ab1b596877b4a70281a8fc422674df76a}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_ab1b596877b4a70281a8fc422674df76a}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_packet\_dis@{generate\_packet\_dis}}
+\index{generate\_packet\_dis@{generate\_packet\_dis}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_packet\_dis()}{generate\_packet\_dis()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+packet\+\_\+dis (\begin{DoxyParamCaption}\item[{}]{outf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_a8e47b34f4ff18421908d9ccb5e532fa9}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_a8e47b34f4ff18421908d9ccb5e532fa9}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_payload\_dissector@{generate\_payload\_dissector}}
+\index{generate\_payload\_dissector@{generate\_payload\_dissector}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_payload\_dissector()}{generate\_payload\_dissector()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+payload\+\_\+dissector (\begin{DoxyParamCaption}\item[{}]{outf,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_ae446521d9f00c70028d9cb99443108b2}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_ae446521d9f00c70028d9cb99443108b2}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!generate\_preamble@{generate\_preamble}}
+\index{generate\_preamble@{generate\_preamble}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{generate\_preamble()}{generate\_preamble()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+generate\+\_\+preamble (\begin{DoxyParamCaption}\item[{}]{outf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_a2f87dcc75f8b9a6b8b417bf387b1a224}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_a2f87dcc75f8b9a6b8b417bf387b1a224}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!lua\_type@{lua\_type}}
+\index{lua\_type@{lua\_type}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{lua\_type()}{lua\_type()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+lua\+\_\+type (\begin{DoxyParamCaption}\item[{}]{mavlink\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_a1007bc04078ec16dd974ffb4cbb23475}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_a1007bc04078ec16dd974ffb4cbb23475}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!mavfmt@{mavfmt}}
+\index{mavfmt@{mavfmt}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{mavfmt()}{mavfmt()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+mavfmt (\begin{DoxyParamCaption}\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}work out the struct format for a type\end{DoxyVerb}
+ 
+
+Definition at line 48 of file mavgen\+\_\+wlua.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_aaced6c6a179f60dbd142ca923718ab12}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_aaced6c6a179f60dbd142ca923718ab12}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!type\_size@{type\_size}}
+\index{type\_size@{type\_size}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{type\_size()}{type\_size()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+wlua.\+type\+\_\+size (\begin{DoxyParamCaption}\item[{}]{mavlink\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file mavgen\+\_\+wlua.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__wlua_a8aa3596ee3c13af1cad0b541f7a51808}\label{namespacepymavlink_1_1generator_1_1mavgen__wlua_a8aa3596ee3c13af1cad0b541f7a51808}} 
+\index{pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}!t@{t}}
+\index{t@{t}!pymavlink.generator.mavgen\_wlua@{pymavlink.generator.mavgen\_wlua}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavgen\+\_\+wlua.\+t = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()}
+
+
+
+Definition at line 21 of file mavgen\+\_\+wlua.\+py.
+

@@ -1,0 +1,136 @@
+\hypertarget{ObjectDetection_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet\+\_\+ros/test/\+Object\+Detection.cpp File Reference}
+\label{ObjectDetection_8cpp}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet\_ros/test/ObjectDetection.cpp@{/home/eric/catkin\_ws/src/darknet\_ros/darknet\_ros/test/ObjectDetection.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$ros/package.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Image.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/client/simple\+\_\+action\+\_\+client.\+h$>$}\newline
+{\ttfamily \#include $<$boost/thread.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include $<$cv\+\_\+bridge/cv\+\_\+bridge.\+h$>$}\newline
+{\ttfamily \#include $<$darknet\+\_\+ros\+\_\+msgs/\+Check\+For\+Objects\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef actionlib\+::\+Simple\+Action\+Client$<$ darknet\+\_\+ros\+\_\+msgs\+::\+Check\+For\+Objects\+Action $>$ \mbox{\hyperlink{ObjectDetection_8cpp_a1b1f35749ffb5f399eb81e56edb5166d}{Check\+For\+Objects\+Action\+Client}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{ObjectDetection_8cpp_a1b1f35749ffb5f399eb81e56edb5166d}{Check\+For\+Objects\+Action\+Client}} $>$ \mbox{\hyperlink{ObjectDetection_8cpp_a08d1ad89da2f3173b5d04697450adde1}{Check\+For\+Objects\+Action\+Client\+Ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ObjectDetection_8cpp_abfce0c87021a6bc749eb17fd5cdc9014}{check\+For\+Objects\+Result\+CB}} (const actionlib\+::\+Simple\+Client\+Goal\+State \&state, const darknet\+\_\+ros\+\_\+msgs\+::\+Check\+For\+Objects\+Result\+Const\+Ptr \&result)
+\item 
+bool \mbox{\hyperlink{ObjectDetection_8cpp_ab42e7d4e6853ad89ed19251299344fe7}{send\+Image\+To\+Yolo}} (ros\+::\+Node\+Handle nh, const std\+::string \&path\+To\+Test\+Image)
+\item 
+\mbox{\hyperlink{ObjectDetection_8cpp_a2596119229f00fb85966baa523e141b6}{T\+E\+ST}} (Object\+Detection, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Detect\+Dog)
+\item 
+\mbox{\hyperlink{ObjectDetection_8cpp_ae6724d569d8d40249f17c3e7b82568f0}{T\+E\+ST}} (Object\+Detection, Detect\+A\+N\+Ymal)
+\item 
+\mbox{\hyperlink{ObjectDetection_8cpp_a08c874130431d18679d239ca14e9e3cc}{T\+E\+ST}} (Object\+Detection, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Detect\+Person)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes \mbox{\hyperlink{ObjectDetection_8cpp_a1db49bb4fe504e1ef6a7a52a566eaffa}{bounding\+Boxes\+Results\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{ObjectDetection_8cpp_a1b1f35749ffb5f399eb81e56edb5166d}\label{ObjectDetection_8cpp_a1b1f35749ffb5f399eb81e56edb5166d}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!CheckForObjectsActionClient@{CheckForObjectsActionClient}}
+\index{CheckForObjectsActionClient@{CheckForObjectsActionClient}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{CheckForObjectsActionClient}{CheckForObjectsActionClient}}
+{\footnotesize\ttfamily typedef actionlib\+::\+Simple\+Action\+Client$<$darknet\+\_\+ros\+\_\+msgs\+::\+Check\+For\+Objects\+Action$>$ \mbox{\hyperlink{ObjectDetection_8cpp_a1b1f35749ffb5f399eb81e56edb5166d}{Check\+For\+Objects\+Action\+Client}}}
+
+
+
+Definition at line 31 of file Object\+Detection.\+cpp.
+
+\mbox{\Hypertarget{ObjectDetection_8cpp_a08d1ad89da2f3173b5d04697450adde1}\label{ObjectDetection_8cpp_a08d1ad89da2f3173b5d04697450adde1}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!CheckForObjectsActionClientPtr@{CheckForObjectsActionClientPtr}}
+\index{CheckForObjectsActionClientPtr@{CheckForObjectsActionClientPtr}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{CheckForObjectsActionClientPtr}{CheckForObjectsActionClientPtr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{ObjectDetection_8cpp_a1b1f35749ffb5f399eb81e56edb5166d}{Check\+For\+Objects\+Action\+Client}}$>$ \mbox{\hyperlink{ObjectDetection_8cpp_a08d1ad89da2f3173b5d04697450adde1}{Check\+For\+Objects\+Action\+Client\+Ptr}}}
+
+
+
+Definition at line 32 of file Object\+Detection.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ObjectDetection_8cpp_abfce0c87021a6bc749eb17fd5cdc9014}\label{ObjectDetection_8cpp_abfce0c87021a6bc749eb17fd5cdc9014}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!checkForObjectsResultCB@{checkForObjectsResultCB}}
+\index{checkForObjectsResultCB@{checkForObjectsResultCB}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{checkForObjectsResultCB()}{checkForObjectsResultCB()}}
+{\footnotesize\ttfamily void check\+For\+Objects\+Result\+CB (\begin{DoxyParamCaption}\item[{const actionlib\+::\+Simple\+Client\+Goal\+State \&}]{state,  }\item[{const darknet\+\_\+ros\+\_\+msgs\+::\+Check\+For\+Objects\+Result\+Const\+Ptr \&}]{result }\end{DoxyParamCaption})}
+
+Done-\/callback for Check\+For\+Objects action client. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em state} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em result} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Object\+Detection.\+cpp.
+
+\mbox{\Hypertarget{ObjectDetection_8cpp_ab42e7d4e6853ad89ed19251299344fe7}\label{ObjectDetection_8cpp_ab42e7d4e6853ad89ed19251299344fe7}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!sendImageToYolo@{sendImageToYolo}}
+\index{sendImageToYolo@{sendImageToYolo}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{sendImageToYolo()}{sendImageToYolo()}}
+{\footnotesize\ttfamily bool send\+Image\+To\+Yolo (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{nh,  }\item[{const std\+::string \&}]{path\+To\+Test\+Image }\end{DoxyParamCaption})}
+
+Check for objects action client.
+
+Definition at line 59 of file Object\+Detection.\+cpp.
+
+\mbox{\Hypertarget{ObjectDetection_8cpp_a2596119229f00fb85966baa523e141b6}\label{ObjectDetection_8cpp_a2596119229f00fb85966baa523e141b6}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Object\+Detection}]{,  }\item[{D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Detect\+Dog}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 104 of file Object\+Detection.\+cpp.
+
+\mbox{\Hypertarget{ObjectDetection_8cpp_ae6724d569d8d40249f17c3e7b82568f0}\label{ObjectDetection_8cpp_ae6724d569d8d40249f17c3e7b82568f0}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Object\+Detection}]{,  }\item[{Detect\+A\+N\+Ymal}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file Object\+Detection.\+cpp.
+
+\mbox{\Hypertarget{ObjectDetection_8cpp_a08c874130431d18679d239ca14e9e3cc}\label{ObjectDetection_8cpp_a08c874130431d18679d239ca14e9e3cc}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Object\+Detection}]{,  }\item[{D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Detect\+Person}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 196 of file Object\+Detection.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ObjectDetection_8cpp_a1db49bb4fe504e1ef6a7a52a566eaffa}\label{ObjectDetection_8cpp_a1db49bb4fe504e1ef6a7a52a566eaffa}} 
+\index{ObjectDetection.cpp@{ObjectDetection.cpp}!boundingBoxesResults\_@{boundingBoxesResults\_}}
+\index{boundingBoxesResults\_@{boundingBoxesResults\_}!ObjectDetection.cpp@{ObjectDetection.cpp}}
+\subsubsection{\texorpdfstring{boundingBoxesResults\_}{boundingBoxesResults\_}}
+{\footnotesize\ttfamily darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes bounding\+Boxes\+Results\+\_\+}
+
+
+
+Definition at line 44 of file Object\+Detection.\+cpp.
+

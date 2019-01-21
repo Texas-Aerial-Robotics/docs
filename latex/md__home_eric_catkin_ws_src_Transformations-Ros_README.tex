@@ -1,0 +1,72 @@
+This repo is a catkin package that handels the transformations on our drone
+
+\subsection*{Vector Transformation\+: Drone -\/$>$ Gym}
+
+
+
+\section*{Deploying Vision to Jetson}
+
+\subsection*{Ssh to Jetson}
+
+how to find the ip address
+
+run {\ttfamily ifconfig}
+
+find the adreess that coresponds to the jetson ie enx000ec6da785e
+
+run 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo arp-scan --localnet --interface=enx000ec6da785e}
+\end{DoxyCode}
+
+
+then ssh. Use -\/X for video forwarding 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ssh -X ubuntu@10.42.0.112}
+\end{DoxyCode}
+
+
+\subsection*{In order to run vision on the jetson you need 1 of each ros packages}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Controls-ROS  }
+\DoxyCodeLine{Darknet-Ros  }
+\DoxyCodeLine{Transformations-Ros}
+\DoxyCodeLine{cv3\_bridge    }
+\DoxyCodeLine{mavros       }
+\DoxyCodeLine{video\_stream\_opencv}
+\end{DoxyCode}
+ then run catkin build
+
+\subsection*{running vision on the jetson}
+
+start a video stream 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch video\_stream\_opencv webcam.launch}
+\end{DoxyCode}
+ to verify the webcam is broadcasting in a new terminal run
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun image\_view image\_view image:=/webcam/image\_raw}
+\end{DoxyCode}
+
+
+To run yolo, enter the following\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch darknet\_ros darknet\_ros.launch }
+\end{DoxyCode}
+
+
+To retrieve data from the pixhawk in a new terminal, run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~}
+\DoxyCodeLine{./startup.sh}
+\end{DoxyCode}
+
+
+Now to run the facedown transformation node\+: 
+\begin{DoxyCode}{0}
+\end{DoxyCode}
+ 

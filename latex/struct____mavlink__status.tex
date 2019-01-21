@@ -1,0 +1,232 @@
+\hypertarget{struct____mavlink__status}{}\section{\+\_\+\+\_\+mavlink\+\_\+status Struct Reference}
+\label{struct____mavlink__status}\index{\_\_mavlink\_status@{\_\_mavlink\_status}}
+
+
+{\ttfamily \#include $<$mavlink\+\_\+types.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_a183576e45facc9da8123b7866d458680}{msg\+\_\+received}}
+\begin{DoxyCompactList}\small\item\em Number of received messages. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_ae0ceb5a136021ee78c953f2e86d772cb}{buffer\+\_\+overrun}}
+\begin{DoxyCompactList}\small\item\em Number of buffer overruns. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_ae7a52aa0c84929dbf181220c689f9ec8}{parse\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em Number of parse errors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1}{mavlink\+\_\+parse\+\_\+state\+\_\+t}} \mbox{\hyperlink{struct____mavlink__status_aaf6742a61bbc641a4600184b3260fa0f}{parse\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Parsing state machine. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_a3e582235849323267974003eb1793e25}{packet\+\_\+idx}}
+\begin{DoxyCompactList}\small\item\em Index in current packet. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_affbdd32b3dff8ae35327a79ed6b17646}{current\+\_\+rx\+\_\+seq}}
+\begin{DoxyCompactList}\small\item\em Sequence number of last packet received. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_a06482d6c3fbfa829526c9b2e2e895f32}{current\+\_\+tx\+\_\+seq}}
+\begin{DoxyCompactList}\small\item\em Sequence number of last packet sent. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{struct____mavlink__status_aa088f67773cdf9ff541c5880e65cee68}{packet\+\_\+rx\+\_\+success\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Received packets. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{struct____mavlink__status_a1a1f510b9484e705c971f20fd1d61912}{packet\+\_\+rx\+\_\+drop\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Number of packet drops. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_a2b67d268b29712b9607d1796228a77a2}{flags}}
+\begin{DoxyCompactList}\small\item\em M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+$\ast$. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____mavlink__status_afbdd26652864ceeccf1155287752496c}{signature\+\_\+wait}}
+\begin{DoxyCompactList}\small\item\em number of signature bytes left to receive \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct____mavlink__signing}{\+\_\+\+\_\+mavlink\+\_\+signing}} $\ast$ \mbox{\hyperlink{struct____mavlink__status_a12ca1a2ade1b6b83d87a8cd7553884a9}{signing}}
+\begin{DoxyCompactList}\small\item\em optional signing state \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct____mavlink__signing__streams}{\+\_\+\+\_\+mavlink\+\_\+signing\+\_\+streams}} $\ast$ \mbox{\hyperlink{struct____mavlink__status_ab0e29fe56be92a4bbd722529ac76bd84}{signing\+\_\+streams}}
+\begin{DoxyCompactList}\small\item\em global record of stream timestamps \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 308 of file mavlink\+\_\+types.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct____mavlink__status_ae0ceb5a136021ee78c953f2e86d772cb}\label{struct____mavlink__status_ae0ceb5a136021ee78c953f2e86d772cb}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!buffer\_overrun@{buffer\_overrun}}
+\index{buffer\_overrun@{buffer\_overrun}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{buffer\_overrun}{buffer\_overrun}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::buffer\+\_\+overrun}
+
+
+
+Number of buffer overruns. 
+
+
+
+Definition at line 310 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_affbdd32b3dff8ae35327a79ed6b17646}\label{struct____mavlink__status_affbdd32b3dff8ae35327a79ed6b17646}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!current\_rx\_seq@{current\_rx\_seq}}
+\index{current\_rx\_seq@{current\_rx\_seq}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{current\_rx\_seq}{current\_rx\_seq}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::current\+\_\+rx\+\_\+seq}
+
+
+
+Sequence number of last packet received. 
+
+
+
+Definition at line 314 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_a06482d6c3fbfa829526c9b2e2e895f32}\label{struct____mavlink__status_a06482d6c3fbfa829526c9b2e2e895f32}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!current\_tx\_seq@{current\_tx\_seq}}
+\index{current\_tx\_seq@{current\_tx\_seq}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{current\_tx\_seq}{current\_tx\_seq}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::current\+\_\+tx\+\_\+seq}
+
+
+
+Sequence number of last packet sent. 
+
+
+
+Definition at line 315 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_a2b67d268b29712b9607d1796228a77a2}\label{struct____mavlink__status_a2b67d268b29712b9607d1796228a77a2}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!flags@{flags}}
+\index{flags@{flags}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::flags}
+
+
+
+M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+$\ast$. 
+
+
+
+Definition at line 227 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_a183576e45facc9da8123b7866d458680}\label{struct____mavlink__status_a183576e45facc9da8123b7866d458680}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!msg\_received@{msg\_received}}
+\index{msg\_received@{msg\_received}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{msg\_received}{msg\_received}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::msg\+\_\+received}
+
+
+
+Number of received messages. 
+
+
+
+Definition at line 309 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_a3e582235849323267974003eb1793e25}\label{struct____mavlink__status_a3e582235849323267974003eb1793e25}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!packet\_idx@{packet\_idx}}
+\index{packet\_idx@{packet\_idx}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{packet\_idx}{packet\_idx}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::packet\+\_\+idx}
+
+
+
+Index in current packet. 
+
+
+
+Definition at line 313 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_a1a1f510b9484e705c971f20fd1d61912}\label{struct____mavlink__status_a1a1f510b9484e705c971f20fd1d61912}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!packet\_rx\_drop\_count@{packet\_rx\_drop\_count}}
+\index{packet\_rx\_drop\_count@{packet\_rx\_drop\_count}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{packet\_rx\_drop\_count}{packet\_rx\_drop\_count}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::packet\+\_\+rx\+\_\+drop\+\_\+count}
+
+
+
+Number of packet drops. 
+
+
+
+Definition at line 317 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_aa088f67773cdf9ff541c5880e65cee68}\label{struct____mavlink__status_aa088f67773cdf9ff541c5880e65cee68}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!packet\_rx\_success\_count@{packet\_rx\_success\_count}}
+\index{packet\_rx\_success\_count@{packet\_rx\_success\_count}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{packet\_rx\_success\_count}{packet\_rx\_success\_count}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::packet\+\_\+rx\+\_\+success\+\_\+count}
+
+
+
+Received packets. 
+
+
+
+Definition at line 316 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_ae7a52aa0c84929dbf181220c689f9ec8}\label{struct____mavlink__status_ae7a52aa0c84929dbf181220c689f9ec8}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!parse\_error@{parse\_error}}
+\index{parse\_error@{parse\_error}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{parse\_error}{parse\_error}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::parse\+\_\+error}
+
+
+
+Number of parse errors. 
+
+
+
+Definition at line 311 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_aaf6742a61bbc641a4600184b3260fa0f}\label{struct____mavlink__status_aaf6742a61bbc641a4600184b3260fa0f}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!parse\_state@{parse\_state}}
+\index{parse\_state@{parse\_state}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{parse\_state}{parse\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1}{mavlink\+\_\+parse\+\_\+state\+\_\+t}} \+\_\+\+\_\+mavlink\+\_\+status\+::parse\+\_\+state}
+
+
+
+Parsing state machine. 
+
+
+
+Definition at line 312 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_afbdd26652864ceeccf1155287752496c}\label{struct____mavlink__status_afbdd26652864ceeccf1155287752496c}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!signature\_wait@{signature\_wait}}
+\index{signature\_wait@{signature\_wait}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{signature\_wait}{signature\_wait}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+\+\_\+mavlink\+\_\+status\+::signature\+\_\+wait}
+
+
+
+number of signature bytes left to receive 
+
+
+
+Definition at line 228 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_a12ca1a2ade1b6b83d87a8cd7553884a9}\label{struct____mavlink__status_a12ca1a2ade1b6b83d87a8cd7553884a9}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!signing@{signing}}
+\index{signing@{signing}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{signing}{signing}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct____mavlink__signing}{\+\_\+\+\_\+mavlink\+\_\+signing}}$\ast$ \+\_\+\+\_\+mavlink\+\_\+status\+::signing}
+
+
+
+optional signing state 
+
+
+
+Definition at line 229 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{struct____mavlink__status_ab0e29fe56be92a4bbd722529ac76bd84}\label{struct____mavlink__status_ab0e29fe56be92a4bbd722529ac76bd84}} 
+\index{\_\_mavlink\_status@{\_\_mavlink\_status}!signing\_streams@{signing\_streams}}
+\index{signing\_streams@{signing\_streams}!\_\_mavlink\_status@{\_\_mavlink\_status}}
+\subsubsection{\texorpdfstring{signing\_streams}{signing\_streams}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct____mavlink__signing__streams}{\+\_\+\+\_\+mavlink\+\_\+signing\+\_\+streams}}$\ast$ \+\_\+\+\_\+mavlink\+\_\+status\+::signing\+\_\+streams}
+
+
+
+global record of stream timestamps 
+
+
+
+Definition at line 230 of file mavlink\+\_\+types.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C/include\+\_\+v0.\+9/\mbox{\hyperlink{include__v0_89_2mavlink__types_8h}{mavlink\+\_\+types.\+h}}\end{DoxyCompactItemize}

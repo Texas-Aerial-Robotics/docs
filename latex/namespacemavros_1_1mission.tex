@@ -1,0 +1,141 @@
+\hypertarget{namespacemavros_1_1mission}{}\section{mavros.\+mission Namespace Reference}
+\label{namespacemavros_1_1mission}\index{mavros.mission@{mavros.mission}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavros_1_1mission_1_1QGroundControlWP}{Q\+Ground\+Control\+WP}}
+\item 
+class \mbox{\hyperlink{classmavros_1_1mission_1_1WaypointFile}{Waypoint\+File}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1mission_ada55b002a31f5466e6113778ed0a9bf1}{subscribe\+\_\+waypoints}} (cb, $\ast$$\ast$kvargs)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespacemavros_1_1mission_af5ff79b68cc30a1e3fe1f728ad049643}{F\+R\+A\+M\+ES}}
+\item 
+dictionary \mbox{\hyperlink{namespacemavros_1_1mission_ae942e09010bdb02dbad614e21c30cce4}{N\+A\+V\+\_\+\+C\+M\+DS}}
+\item 
+\mbox{\hyperlink{namespacemavros_1_1mission_af4eb6d7b6e756f2d9c71623fb0bf4546}{pull}} = None
+\item 
+\mbox{\hyperlink{namespacemavros_1_1mission_af118ce1d2eed088eebd56ec7aaa2d8c6}{push}} = None
+\item 
+\mbox{\hyperlink{namespacemavros_1_1mission_afa08761df27335178281b14e9b55a445}{clear}} = None
+\item 
+\mbox{\hyperlink{namespacemavros_1_1mission_ab368586c0e52ea1ac8ac95147a099cd7}{set\+\_\+current}} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacemavros_1_1mission_ada55b002a31f5466e6113778ed0a9bf1}\label{namespacemavros_1_1mission_ada55b002a31f5466e6113778ed0a9bf1}} 
+\index{mavros.mission@{mavros.mission}!subscribe\_waypoints@{subscribe\_waypoints}}
+\index{subscribe\_waypoints@{subscribe\_waypoints}!mavros.mission@{mavros.mission}}
+\subsubsection{\texorpdfstring{subscribe\_waypoints()}{subscribe\_waypoints()}}
+{\footnotesize\ttfamily def mavros.\+mission.\+subscribe\+\_\+waypoints (\begin{DoxyParamCaption}\item[{}]{cb,  }\item[{$\ast$$\ast$}]{kvargs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file mission.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemavros_1_1mission_afa08761df27335178281b14e9b55a445}\label{namespacemavros_1_1mission_afa08761df27335178281b14e9b55a445}} 
+\index{mavros.mission@{mavros.mission}!clear@{clear}}
+\index{clear@{clear}!mavros.mission@{mavros.mission}}
+\subsubsection{\texorpdfstring{clear}{clear}}
+{\footnotesize\ttfamily mavros.\+mission.\+clear = None}
+
+
+
+Definition at line 126 of file mission.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1mission_af5ff79b68cc30a1e3fe1f728ad049643}\label{namespacemavros_1_1mission_af5ff79b68cc30a1e3fe1f728ad049643}} 
+\index{mavros.mission@{mavros.mission}!FRAMES@{FRAMES}}
+\index{FRAMES@{FRAMES}!mavros.mission@{mavros.mission}}
+\subsubsection{\texorpdfstring{FRAMES}{FRAMES}}
+{\footnotesize\ttfamily dictionary mavros.\+mission.\+F\+R\+A\+M\+ES}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     Waypoint.FRAME\_GLOBAL: \textcolor{stringliteral}{'GAA'},}
+\DoxyCodeLine{3     Waypoint.FRAME\_GLOBAL\_REL\_ALT: \textcolor{stringliteral}{'GRA'},}
+\DoxyCodeLine{4     Waypoint.FRAME\_LOCAL\_ENU: \textcolor{stringliteral}{'LOC-ENU'},}
+\DoxyCodeLine{5     Waypoint.FRAME\_LOCAL\_NED: \textcolor{stringliteral}{'LOC-NED'},}
+\DoxyCodeLine{6     Waypoint.FRAME\_MISSION: \textcolor{stringliteral}{'MIS'}}
+\DoxyCodeLine{7 \}}
+
+\end{DoxyCode}
+
+
+Definition at line 21 of file mission.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1mission_ae942e09010bdb02dbad614e21c30cce4}\label{namespacemavros_1_1mission_ae942e09010bdb02dbad614e21c30cce4}} 
+\index{mavros.mission@{mavros.mission}!NAV\_CMDS@{NAV\_CMDS}}
+\index{NAV\_CMDS@{NAV\_CMDS}!mavros.mission@{mavros.mission}}
+\subsubsection{\texorpdfstring{NAV\_CMDS}{NAV\_CMDS}}
+{\footnotesize\ttfamily dictionary mavros.\+mission.\+N\+A\+V\+\_\+\+C\+M\+DS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     CommandCode.NAV\_LAND: \textcolor{stringliteral}{'LAND'},}
+\DoxyCodeLine{3     CommandCode.NAV\_LOITER\_TIME: \textcolor{stringliteral}{'LOITER-TIME'},}
+\DoxyCodeLine{4     CommandCode.NAV\_LOITER\_TURNS: \textcolor{stringliteral}{'LOITER-TURNS'},}
+\DoxyCodeLine{5     CommandCode.NAV\_LOITER\_UNLIM: \textcolor{stringliteral}{'LOITER-UNLIM'},}
+\DoxyCodeLine{6     CommandCode.NAV\_RETURN\_TO\_LAUNCH: \textcolor{stringliteral}{'RTL'},}
+\DoxyCodeLine{7     CommandCode.NAV\_TAKEOFF: \textcolor{stringliteral}{'TAKEOFF'},}
+\DoxyCodeLine{8     CommandCode.NAV\_WAYPOINT: \textcolor{stringliteral}{'WAYPOINT'},}
+\DoxyCodeLine{9     \textcolor{comment}{\# Maybe later i will add this enum to message}}
+\DoxyCodeLine{10     112: \textcolor{stringliteral}{'COND-DELAY'},}
+\DoxyCodeLine{11     113: \textcolor{stringliteral}{'COND-CHANGE-ALT'},}
+\DoxyCodeLine{12     114: \textcolor{stringliteral}{'COND-DISTANCE'},}
+\DoxyCodeLine{13     115: \textcolor{stringliteral}{'COND-YAW'},}
+\DoxyCodeLine{14     177: \textcolor{stringliteral}{'DO-JUMP'},}
+\DoxyCodeLine{15     178: \textcolor{stringliteral}{'DO-CHANGE-SPEED'},}
+\DoxyCodeLine{16     181: \textcolor{stringliteral}{'DO-SET-RELAY'},}
+\DoxyCodeLine{17     182: \textcolor{stringliteral}{'DO-REPEAT-RELAY'},}
+\DoxyCodeLine{18     183: \textcolor{stringliteral}{'DO-SET-SERVO'},}
+\DoxyCodeLine{19     184: \textcolor{stringliteral}{'DO-REPEAT-SERVO'},}
+\DoxyCodeLine{20     201: \textcolor{stringliteral}{'DO-SET-ROI'},}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+
+
+Definition at line 29 of file mission.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1mission_af4eb6d7b6e756f2d9c71623fb0bf4546}\label{namespacemavros_1_1mission_af4eb6d7b6e756f2d9c71623fb0bf4546}} 
+\index{mavros.mission@{mavros.mission}!pull@{pull}}
+\index{pull@{pull}!mavros.mission@{mavros.mission}}
+\subsubsection{\texorpdfstring{pull}{pull}}
+{\footnotesize\ttfamily mavros.\+mission.\+pull = None}
+
+
+
+Definition at line 124 of file mission.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1mission_af118ce1d2eed088eebd56ec7aaa2d8c6}\label{namespacemavros_1_1mission_af118ce1d2eed088eebd56ec7aaa2d8c6}} 
+\index{mavros.mission@{mavros.mission}!push@{push}}
+\index{push@{push}!mavros.mission@{mavros.mission}}
+\subsubsection{\texorpdfstring{push}{push}}
+{\footnotesize\ttfamily mavros.\+mission.\+push = None}
+
+
+
+Definition at line 125 of file mission.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1mission_ab368586c0e52ea1ac8ac95147a099cd7}\label{namespacemavros_1_1mission_ab368586c0e52ea1ac8ac95147a099cd7}} 
+\index{mavros.mission@{mavros.mission}!set\_current@{set\_current}}
+\index{set\_current@{set\_current}!mavros.mission@{mavros.mission}}
+\subsubsection{\texorpdfstring{set\_current}{set\_current}}
+{\footnotesize\ttfamily mavros.\+mission.\+set\+\_\+current = None}
+
+
+
+Definition at line 127 of file mission.\+py.
+

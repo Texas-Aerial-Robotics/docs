@@ -1,0 +1,80 @@
+\hypertarget{frame_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Controls-\/\+R\+O\+S/src/frame.cpp File Reference}
+\label{frame_8cpp}\index{/home/eric/catkin\_ws/src/Controls-\/ROS/src/frame.cpp@{/home/eric/catkin\_ws/src/Controls-\/ROS/src/frame.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+Bool.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Set\+Mode.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+State.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Attitude\+Target.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Range.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{frame_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}{state\+\_\+cb}} (const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{frame_8cpp_a34d5c6917b257aaf051931045eeee430}{rng\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Range\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+int \mbox{\hyperlink{frame_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mavros\+\_\+msgs\+::\+State \mbox{\hyperlink{frame_8cpp_aa03a6f341db74b895fa5c862973dd941}{current\+\_\+state}}
+\item 
+sensor\+\_\+msgs\+::\+Range \mbox{\hyperlink{frame_8cpp_aee0ac0efcb16824ebf07ab95791ad036}{rngfnd}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{frame_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{frame_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{frame.cpp@{frame.cpp}!main@{main}}
+\index{main@{main}!frame.cpp@{frame.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file frame.\+cpp.
+
+\mbox{\Hypertarget{frame_8cpp_a34d5c6917b257aaf051931045eeee430}\label{frame_8cpp_a34d5c6917b257aaf051931045eeee430}} 
+\index{frame.cpp@{frame.cpp}!rng\_cb@{rng\_cb}}
+\index{rng\_cb@{rng\_cb}!frame.cpp@{frame.cpp}}
+\subsubsection{\texorpdfstring{rng\_cb()}{rng\_cb()}}
+{\footnotesize\ttfamily void rng\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Range\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file frame.\+cpp.
+
+\mbox{\Hypertarget{frame_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}\label{frame_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}} 
+\index{frame.cpp@{frame.cpp}!state\_cb@{state\_cb}}
+\index{state\_cb@{state\_cb}!frame.cpp@{frame.cpp}}
+\subsubsection{\texorpdfstring{state\_cb()}{state\_cb()}}
+{\footnotesize\ttfamily void state\+\_\+cb (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file frame.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{frame_8cpp_aa03a6f341db74b895fa5c862973dd941}\label{frame_8cpp_aa03a6f341db74b895fa5c862973dd941}} 
+\index{frame.cpp@{frame.cpp}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!frame.cpp@{frame.cpp}}
+\subsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily mavros\+\_\+msgs\+::\+State current\+\_\+state}
+
+
+
+Definition at line 16 of file frame.\+cpp.
+
+\mbox{\Hypertarget{frame_8cpp_aee0ac0efcb16824ebf07ab95791ad036}\label{frame_8cpp_aee0ac0efcb16824ebf07ab95791ad036}} 
+\index{frame.cpp@{frame.cpp}!rngfnd@{rngfnd}}
+\index{rngfnd@{rngfnd}!frame.cpp@{frame.cpp}}
+\subsubsection{\texorpdfstring{rngfnd}{rngfnd}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Range rngfnd}
+
+
+
+Definition at line 17 of file frame.\+cpp.
+

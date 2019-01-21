@@ -1,0 +1,180 @@
+\hypertarget{more__logging_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Controls-\/\+R\+O\+S/src/more\+\_\+logging.cpp File Reference}
+\label{more__logging_8cpp}\index{/home/eric/catkin\_ws/src/Controls-\/ROS/src/more\_logging.cpp@{/home/eric/catkin\_ws/src/Controls-\/ROS/src/more\_logging.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$std\+\_\+msgs/\+Float64.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Range.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Optical\+Flow\+Rad.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Temperature.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Imu.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{more__logging_8cpp_a9fb0a4df8fb48ade075caf35bec753ef}{opt\+\_\+flow\+\_\+cb}} (const mavros\+\_\+msgs\+::\+Optical\+Flow\+Rad\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{more__logging_8cpp_ad5c52294ef1dc0c9c2067dfca94cca63}{comp\+\_\+hdg\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{more__logging_8cpp_a6273d81db85f2a7846be4e90bf8205cb}{imu\+\_\+data\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Imu\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{more__logging_8cpp_a186732bc324801aae98d18c2bae113a4}{imu\+\_\+temp\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Temperature\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{more__logging_8cpp_a34d5c6917b257aaf051931045eeee430}{rng\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Range\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{more__logging_8cpp_a229b662866f311747b13c401877f7d1b}{init\+\_\+time\+Hist}} (std\+::string file\+\_\+name)
+\item 
+const std\+::string \mbox{\hyperlink{more__logging_8cpp_aa46369f3c8adbff876c82270346fffa2}{current\+Date\+Time}} ()
+\item 
+int \mbox{\hyperlink{more__logging_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+sensor\+\_\+msgs\+::\+Range \mbox{\hyperlink{more__logging_8cpp_af3380f34303efe33f72d5e6fbb63cd20}{rng\+\_\+msg}}
+\item 
+mavros\+\_\+msgs\+::\+Optical\+Flow\+Rad \mbox{\hyperlink{more__logging_8cpp_ab25a94b294cca88478cf270fffee71d8}{opt\+\_\+flow\+\_\+msg}}
+\item 
+std\+\_\+msgs\+::\+Float64 \mbox{\hyperlink{more__logging_8cpp_a3f162e1770b432a06888551004340c6c}{comp\+\_\+hdg\+\_\+msg}}
+\item 
+sensor\+\_\+msgs\+::\+Imu \mbox{\hyperlink{more__logging_8cpp_ab6d9f8ad2a36f4a03f80d417346c32b8}{imu\+\_\+data\+\_\+msg}}
+\item 
+sensor\+\_\+msgs\+::\+Temperature \mbox{\hyperlink{more__logging_8cpp_acb19bf542af8f1e83b1e34c4ba6b2fd0}{imu\+\_\+temp\+\_\+msg}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{more__logging_8cpp_ad5c52294ef1dc0c9c2067dfca94cca63}\label{more__logging_8cpp_ad5c52294ef1dc0c9c2067dfca94cca63}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!comp\_hdg\_cb@{comp\_hdg\_cb}}
+\index{comp\_hdg\_cb@{comp\_hdg\_cb}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{comp\_hdg\_cb()}{comp\_hdg\_cb()}}
+{\footnotesize\ttfamily void comp\+\_\+hdg\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_aa46369f3c8adbff876c82270346fffa2}\label{more__logging_8cpp_aa46369f3c8adbff876c82270346fffa2}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!currentDateTime@{currentDateTime}}
+\index{currentDateTime@{currentDateTime}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{currentDateTime()}{currentDateTime()}}
+{\footnotesize\ttfamily const std\+::string current\+Date\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_a6273d81db85f2a7846be4e90bf8205cb}\label{more__logging_8cpp_a6273d81db85f2a7846be4e90bf8205cb}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!imu\_data\_cb@{imu\_data\_cb}}
+\index{imu\_data\_cb@{imu\_data\_cb}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{imu\_data\_cb()}{imu\_data\_cb()}}
+{\footnotesize\ttfamily void imu\+\_\+data\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Imu\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_a186732bc324801aae98d18c2bae113a4}\label{more__logging_8cpp_a186732bc324801aae98d18c2bae113a4}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!imu\_temp\_cb@{imu\_temp\_cb}}
+\index{imu\_temp\_cb@{imu\_temp\_cb}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{imu\_temp\_cb()}{imu\_temp\_cb()}}
+{\footnotesize\ttfamily void imu\+\_\+temp\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Temperature\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_a229b662866f311747b13c401877f7d1b}\label{more__logging_8cpp_a229b662866f311747b13c401877f7d1b}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!init\_timeHist@{init\_timeHist}}
+\index{init\_timeHist@{init\_timeHist}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{init\_timeHist()}{init\_timeHist()}}
+{\footnotesize\ttfamily void init\+\_\+time\+Hist (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{more__logging_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!main@{main}}
+\index{main@{main}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_a9fb0a4df8fb48ade075caf35bec753ef}\label{more__logging_8cpp_a9fb0a4df8fb48ade075caf35bec753ef}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!opt\_flow\_cb@{opt\_flow\_cb}}
+\index{opt\_flow\_cb@{opt\_flow\_cb}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{opt\_flow\_cb()}{opt\_flow\_cb()}}
+{\footnotesize\ttfamily void opt\+\_\+flow\+\_\+cb (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+Optical\+Flow\+Rad\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_a34d5c6917b257aaf051931045eeee430}\label{more__logging_8cpp_a34d5c6917b257aaf051931045eeee430}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!rng\_cb@{rng\_cb}}
+\index{rng\_cb@{rng\_cb}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{rng\_cb()}{rng\_cb()}}
+{\footnotesize\ttfamily void rng\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Range\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file more\+\_\+logging.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{more__logging_8cpp_a3f162e1770b432a06888551004340c6c}\label{more__logging_8cpp_a3f162e1770b432a06888551004340c6c}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!comp\_hdg\_msg@{comp\_hdg\_msg}}
+\index{comp\_hdg\_msg@{comp\_hdg\_msg}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{comp\_hdg\_msg}{comp\_hdg\_msg}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Float64 comp\+\_\+hdg\+\_\+msg}
+
+
+
+Definition at line 15 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_ab6d9f8ad2a36f4a03f80d417346c32b8}\label{more__logging_8cpp_ab6d9f8ad2a36f4a03f80d417346c32b8}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!imu\_data\_msg@{imu\_data\_msg}}
+\index{imu\_data\_msg@{imu\_data\_msg}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{imu\_data\_msg}{imu\_data\_msg}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Imu imu\+\_\+data\+\_\+msg}
+
+
+
+Definition at line 16 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_acb19bf542af8f1e83b1e34c4ba6b2fd0}\label{more__logging_8cpp_acb19bf542af8f1e83b1e34c4ba6b2fd0}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!imu\_temp\_msg@{imu\_temp\_msg}}
+\index{imu\_temp\_msg@{imu\_temp\_msg}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{imu\_temp\_msg}{imu\_temp\_msg}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Temperature imu\+\_\+temp\+\_\+msg}
+
+
+
+Definition at line 17 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_ab25a94b294cca88478cf270fffee71d8}\label{more__logging_8cpp_ab25a94b294cca88478cf270fffee71d8}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!opt\_flow\_msg@{opt\_flow\_msg}}
+\index{opt\_flow\_msg@{opt\_flow\_msg}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{opt\_flow\_msg}{opt\_flow\_msg}}
+{\footnotesize\ttfamily mavros\+\_\+msgs\+::\+Optical\+Flow\+Rad opt\+\_\+flow\+\_\+msg}
+
+
+
+Definition at line 14 of file more\+\_\+logging.\+cpp.
+
+\mbox{\Hypertarget{more__logging_8cpp_af3380f34303efe33f72d5e6fbb63cd20}\label{more__logging_8cpp_af3380f34303efe33f72d5e6fbb63cd20}} 
+\index{more\_logging.cpp@{more\_logging.cpp}!rng\_msg@{rng\_msg}}
+\index{rng\_msg@{rng\_msg}!more\_logging.cpp@{more\_logging.cpp}}
+\subsubsection{\texorpdfstring{rng\_msg}{rng\_msg}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Range rng\+\_\+msg}
+
+
+
+Definition at line 13 of file more\+\_\+logging.\+cpp.
+

@@ -1,0 +1,154 @@
+\hypertarget{matplotlibcpp_8h}{}\section{/home/eric/catkin\+\_\+ws/src/\+Strat\+Node/include/matplotlibcpp.h File Reference}
+\label{matplotlibcpp_8h}\index{/home/eric/catkin\_ws/src/StratNode/include/matplotlibcpp.h@{/home/eric/catkin\_ws/src/StratNode/include/matplotlibcpp.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$Python.\+h$>$}\newline
+{\ttfamily \#include $<$numpy/arrayobject.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1detail_1_1__interpreter}{matplotlibcpp\+::detail\+::\+\_\+interpreter}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01double_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ double $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01float_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ float $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01bool_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ bool $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01int8__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ int8\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01int16__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ int16\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01int32__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ int32\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01int64__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ int64\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01uint8__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ uint8\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01uint16__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ uint16\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01uint32__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ uint32\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structmatplotlibcpp_1_1select__npy__type_3_01uint64__t_01_4}{matplotlibcpp\+::select\+\_\+npy\+\_\+type$<$ uint64\+\_\+t $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacematplotlibcpp}{matplotlibcpp}}
+\item 
+ \mbox{\hyperlink{namespacematplotlibcpp_1_1detail}{matplotlibcpp\+::detail}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{matplotlibcpp_8h_ab6e6ee86736f9ebb56e74ae21bf3ff8a}{N\+P\+Y\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+A\+PI}}~N\+P\+Y\+\_\+1\+\_\+7\+\_\+\+A\+P\+I\+\_\+\+V\+E\+R\+S\+I\+ON
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a7c176020a3312c69b4af6fa80113e53b}{matplotlibcpp\+::backend}} (const std\+::string \&name)
+\item 
+bool \mbox{\hyperlink{namespacematplotlibcpp_a4854fc237468144bd46809ea7ce8f2a0}{matplotlibcpp\+::annotate}} (std\+::string annotation, double \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, double \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\Py\+Object $\ast$ \mbox{\hyperlink{namespacematplotlibcpp_a62d86e190f22181acf7ead76bd57497f}{matplotlibcpp\+::get\+\_\+array}} (const std\+::vector$<$ Numeric $>$ \&v)
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a43b8f4e1cf62c2e9de4ece52fb4bfadf}{matplotlibcpp\+::plot}} (const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::map$<$ std\+::string, std\+::string $>$ \&keywords, double alpha=1)
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_ae3c91bdfbe011133346dcc4f31ec5932}{matplotlibcpp\+::stem}} (const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::map$<$ std\+::string, std\+::string $>$ \&keywords)
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a928fb4c83f29554b1b37aeea7af9bb73}{matplotlibcpp\+::fill\+\_\+between}} (const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ Numeric $>$ \&y1, const std\+::vector$<$ Numeric $>$ \&y2, const std\+::map$<$ std\+::string, std\+::string $>$ \&keywords)
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_ac0295119bc4ecb6cedd18509409eefd3}{matplotlibcpp\+::hist}} (const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, long bins=10, std\+::string color=\char`\"{}b\char`\"{}, double alpha=1.\+0)
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a2851ef02b92b32ee7d3dd8f8fd065ae3}{matplotlibcpp\+::named\+\_\+hist}} (std\+::string label, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, long bins=10, std\+::string color=\char`\"{}b\char`\"{}, double alpha=1.\+0)
+\item 
+{\footnotesize template$<$typename NumericX , typename NumericY $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a19804a8cbd413b15c8d07848d7a5890e}{matplotlibcpp\+::plot}} (const std\+::vector$<$ NumericX $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ NumericY $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&s=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename NumericX , typename NumericY $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a02a1939d1d0b7b61878bd7cf2d8cd7f3}{matplotlibcpp\+::stem}} (const std\+::vector$<$ NumericX $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ NumericY $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&s=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename NumericX , typename NumericY $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_ad25d4429577dbdd8c087a0ba6869840b}{matplotlibcpp\+::semilogx}} (const std\+::vector$<$ NumericX $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ NumericY $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&s=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename NumericX , typename NumericY $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a4dce9b4c1c16c1dab0cffd11588d4db8}{matplotlibcpp\+::semilogy}} (const std\+::vector$<$ NumericX $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ NumericY $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&s=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename NumericX , typename NumericY $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a6cfa8cba00f52a2c4614fa7a8a0bcd2b}{matplotlibcpp\+::loglog}} (const std\+::vector$<$ NumericX $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ NumericY $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&s=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename NumericX , typename NumericY $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a1ed29787f67ecb8c156e7c4abbcd25b4}{matplotlibcpp\+::errorbar}} (const std\+::vector$<$ NumericX $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ NumericY $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::vector$<$ NumericX $>$ \&yerr, const std\+::string \&s=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a6461c03041d9947a0e3b3593b5b72c95}{matplotlibcpp\+::named\+\_\+plot}} (const std\+::string \&name, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&format=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a547854898d3b05c1ed182ad744545f43}{matplotlibcpp\+::named\+\_\+plot}} (const std\+::string \&name, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&format=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a7696c0134091453723de840be016e43a}{matplotlibcpp\+::named\+\_\+semilogx}} (const std\+::string \&name, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&format=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a34ff51e2a6f94ea30b4ead714f480c4f}{matplotlibcpp\+::named\+\_\+semilogy}} (const std\+::string \&name, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&format=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_ad7616968e5a639737fd547eb7fa0a8a0}{matplotlibcpp\+::named\+\_\+loglog}} (const std\+::string \&name, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&format=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a92c59dd37fb3f355514d88e364ddfde9}{matplotlibcpp\+::plot}} (const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&format=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\bool \mbox{\hyperlink{namespacematplotlibcpp_a40ac4e0d416fad21899637dcf8d281c6}{matplotlibcpp\+::stem}} (const std\+::vector$<$ Numeric $>$ \&\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}, const std\+::string \&format=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_ade0e4c19cb3e1c9e4919f67da97bb992}{matplotlibcpp\+::figure}} ()
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a91e91bcdcfc7632a917830bfe3f71ca3}{matplotlibcpp\+::figure\+\_\+size}} (size\+\_\+t w, size\+\_\+t h)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a916bb5a9dc5f6a24877cc027bf4ee624}{matplotlibcpp\+::legend}} ()
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\void \mbox{\hyperlink{namespacematplotlibcpp_a4645651772918e2dad7d36d9eeaeaefa}{matplotlibcpp\+::ylim}} (Numeric left, Numeric right)
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\void \mbox{\hyperlink{namespacematplotlibcpp_a712cd34472b3687668048899bee4cdbf}{matplotlibcpp\+::xlim}} (Numeric left, Numeric right)
+\item 
+double $\ast$ \mbox{\hyperlink{namespacematplotlibcpp_a8a7686cbe6e2e82e8bd09add8571b31c}{matplotlibcpp\+::xlim}} ()
+\item 
+double $\ast$ \mbox{\hyperlink{namespacematplotlibcpp_a2bbe226f1dee9763197d9ab7692f4dc7}{matplotlibcpp\+::ylim}} ()
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a78f4b6d50e52d1782d52df692232f4e1}{matplotlibcpp\+::subplot}} (long nrows, long ncols, long plot\+\_\+number)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_aa9e0ff1c2399713260568f29c3e2188b}{matplotlibcpp\+::title}} (const std\+::string \&titlestr)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_aab5287e30ebd90df0f5614d8da0f5291}{matplotlibcpp\+::axis}} (const std\+::string \&axisstr)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a8b8f1bb0cc3640fe5140f5a012e4a1c0}{matplotlibcpp\+::xlabel}} (const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a5fa0cba78b9695adc213d2d952168442}{matplotlibcpp\+::ylabel}} (const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_ae0bbf80e73099a91df28e4fb871b166a}{matplotlibcpp\+::grid}} (bool flag)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_ac7b2ae71a81811dfb69bcef95ee8390d}{matplotlibcpp\+::show}} (const bool block=true)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a62aaaf872c41a9d1b71add44c0cc0447}{matplotlibcpp\+::close}} ()
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_aca0fdbeae2fd86ab7291661f154f83ff}{matplotlibcpp\+::xkcd}} ()
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_acd9fc5bb7916c735390c2056214b12be}{matplotlibcpp\+::draw}} ()
+\item 
+{\footnotesize template$<$typename Numeric $>$ }\\void \mbox{\hyperlink{namespacematplotlibcpp_aa5bc4092c9e2acbb2c6ec4efd024cf2f}{matplotlibcpp\+::pause}} (Numeric interval)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a46a2869ed7cd834e93125a20e2a294c2}{matplotlibcpp\+::save}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_adea4113b0ff7f393e18f1a99eb7e1718}{matplotlibcpp\+::clf}} ()
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a9bddb5276ddc48f4ff9c2b36b98db71a}{matplotlibcpp\+::ion}} ()
+\item 
+void \mbox{\hyperlink{namespacematplotlibcpp_a14e2b6e595e057f553ef7b14ddcda82a}{matplotlibcpp\+::tight\+\_\+layout}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{matplotlibcpp_8h_ab6e6ee86736f9ebb56e74ae21bf3ff8a}\label{matplotlibcpp_8h_ab6e6ee86736f9ebb56e74ae21bf3ff8a}} 
+\index{matplotlibcpp.h@{matplotlibcpp.h}!NPY\_NO\_DEPRECATED\_API@{NPY\_NO\_DEPRECATED\_API}}
+\index{NPY\_NO\_DEPRECATED\_API@{NPY\_NO\_DEPRECATED\_API}!matplotlibcpp.h@{matplotlibcpp.h}}
+\subsubsection{\texorpdfstring{NPY\_NO\_DEPRECATED\_API}{NPY\_NO\_DEPRECATED\_API}}
+{\footnotesize\ttfamily \#define N\+P\+Y\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+A\+PI~N\+P\+Y\+\_\+1\+\_\+7\+\_\+\+A\+P\+I\+\_\+\+V\+E\+R\+S\+I\+ON}
+
+
+
+Definition at line 18 of file matplotlibcpp.\+h.
+

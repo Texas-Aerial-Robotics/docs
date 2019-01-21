@@ -1,0 +1,67 @@
+\hypertarget{normalization__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/normalization\+\_\+layer.h File Reference}
+\label{normalization__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/normalization\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/normalization\_layer.h}}
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{normalization__layer_8h_ab4c22cbeb9a0ba2c9feced7f94179bfb}{make\+\_\+normalization\+\_\+layer}} (int batch, int w, int h, int c, int size, float alpha, float beta, float kappa)
+\item 
+void \mbox{\hyperlink{normalization__layer_8h_a66937324cb617f0264839c717539a38a}{resize\+\_\+normalization\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} $\ast$\mbox{\hyperlink{structlayer}{layer}}, int h, int w)
+\item 
+void \mbox{\hyperlink{normalization__layer_8h_ac8752bfc267bd86411a37a46e56ec034}{forward\+\_\+normalization\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{structlayer}{layer}}, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{normalization__layer_8h_ab2a50eea8cb4be828d34c3b69a5540e8}{backward\+\_\+normalization\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{structlayer}{layer}}, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{normalization__layer_8h_a2abf1f6bfee9d65b5f0626e315db2040}{visualize\+\_\+normalization\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{structlayer}{layer}}, char $\ast$\mbox{\hyperlink{keyTalker_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{normalization__layer_8h_ab2a50eea8cb4be828d34c3b69a5540e8}\label{normalization__layer_8h_ab2a50eea8cb4be828d34c3b69a5540e8}} 
+\index{normalization\_layer.h@{normalization\_layer.h}!backward\_normalization\_layer@{backward\_normalization\_layer}}
+\index{backward\_normalization\_layer@{backward\_normalization\_layer}!normalization\_layer.h@{normalization\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_normalization\_layer()}{backward\_normalization\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+normalization\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{layer,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 97 of file normalization\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{normalization__layer_8h_ac8752bfc267bd86411a37a46e56ec034}\label{normalization__layer_8h_ac8752bfc267bd86411a37a46e56ec034}} 
+\index{normalization\_layer.h@{normalization\_layer.h}!forward\_normalization\_layer@{forward\_normalization\_layer}}
+\index{forward\_normalization\_layer@{forward\_normalization\_layer}!normalization\_layer.h@{normalization\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_normalization\_layer()}{forward\_normalization\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+normalization\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{layer,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file normalization\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{normalization__layer_8h_ab4c22cbeb9a0ba2c9feced7f94179bfb}\label{normalization__layer_8h_ab4c22cbeb9a0ba2c9feced7f94179bfb}} 
+\index{normalization\_layer.h@{normalization\_layer.h}!make\_normalization\_layer@{make\_normalization\_layer}}
+\index{make\_normalization\_layer@{make\_normalization\_layer}!normalization\_layer.h@{normalization\_layer.h}}
+\subsubsection{\texorpdfstring{make\_normalization\_layer()}{make\_normalization\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+normalization\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c,  }\item[{int}]{size,  }\item[{float}]{alpha,  }\item[{float}]{beta,  }\item[{float}]{kappa }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file normalization\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{normalization__layer_8h_a66937324cb617f0264839c717539a38a}\label{normalization__layer_8h_a66937324cb617f0264839c717539a38a}} 
+\index{normalization\_layer.h@{normalization\_layer.h}!resize\_normalization\_layer@{resize\_normalization\_layer}}
+\index{resize\_normalization\_layer@{resize\_normalization\_layer}!normalization\_layer.h@{normalization\_layer.h}}
+\subsubsection{\texorpdfstring{resize\_normalization\_layer()}{resize\_normalization\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+normalization\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}} $\ast$}]{layer,  }\item[{int}]{h,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file normalization\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{normalization__layer_8h_a2abf1f6bfee9d65b5f0626e315db2040}\label{normalization__layer_8h_a2abf1f6bfee9d65b5f0626e315db2040}} 
+\index{normalization\_layer.h@{normalization\_layer.h}!visualize\_normalization\_layer@{visualize\_normalization\_layer}}
+\index{visualize\_normalization\_layer@{visualize\_normalization\_layer}!normalization\_layer.h@{normalization\_layer.h}}
+\subsubsection{\texorpdfstring{visualize\_normalization\_layer()}{visualize\_normalization\_layer()}}
+{\footnotesize\ttfamily void visualize\+\_\+normalization\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{layer,  }\item[{char $\ast$}]{window }\end{DoxyParamCaption})}
+

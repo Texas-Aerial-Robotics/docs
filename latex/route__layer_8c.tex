@@ -1,0 +1,60 @@
+\hypertarget{route__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/route\+\_\+layer.c File Reference}
+\label{route__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/route\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/route\_layer.c}}
+{\ttfamily \#include \char`\"{}route\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} \mbox{\hyperlink{route__layer_8c_a449c9e7e19d744493886601e91b98e07}{make\+\_\+route\+\_\+layer}} (int batch, int n, int $\ast$input\+\_\+layers, int $\ast$input\+\_\+sizes)
+\item 
+void \mbox{\hyperlink{route__layer_8c_a2a40d999a04e0a45314f3ddcb1f0eb92}{resize\+\_\+route\+\_\+layer}} (\mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} $\ast$l, \mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+void \mbox{\hyperlink{route__layer_8c_a78927618d8d45f5a3e69c2c1783a6399}{forward\+\_\+route\+\_\+layer}} (const \mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{route__layer_8c_a16c9f747bbf527bebf7014598ba3d66f}{backward\+\_\+route\+\_\+layer}} (const \mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{route__layer_8c_a16c9f747bbf527bebf7014598ba3d66f}\label{route__layer_8c_a16c9f747bbf527bebf7014598ba3d66f}} 
+\index{route\_layer.c@{route\_layer.c}!backward\_route\_layer@{backward\_route\_layer}}
+\index{backward\_route\_layer@{backward\_route\_layer}!route\_layer.c@{route\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_route\_layer()}{backward\_route\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+route\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file route\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{route__layer_8c_a78927618d8d45f5a3e69c2c1783a6399}\label{route__layer_8c_a78927618d8d45f5a3e69c2c1783a6399}} 
+\index{route\_layer.c@{route\_layer.c}!forward\_route\_layer@{forward\_route\_layer}}
+\index{forward\_route\_layer@{forward\_route\_layer}!route\_layer.c@{route\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_route\_layer()}{forward\_route\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+route\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file route\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{route__layer_8c_a449c9e7e19d744493886601e91b98e07}\label{route__layer_8c_a449c9e7e19d744493886601e91b98e07}} 
+\index{route\_layer.c@{route\_layer.c}!make\_route\_layer@{make\_route\_layer}}
+\index{make\_route\_layer@{make\_route\_layer}!route\_layer.c@{route\_layer.c}}
+\subsubsection{\texorpdfstring{make\_route\_layer()}{make\_route\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} make\+\_\+route\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{n,  }\item[{int $\ast$}]{input\+\_\+layers,  }\item[{int $\ast$}]{input\+\_\+sizes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file route\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{route__layer_8c_a2a40d999a04e0a45314f3ddcb1f0eb92}\label{route__layer_8c_a2a40d999a04e0a45314f3ddcb1f0eb92}} 
+\index{route\_layer.c@{route\_layer.c}!resize\_route\_layer@{resize\_route\_layer}}
+\index{resize\_route\_layer@{resize\_route\_layer}!route\_layer.c@{route\_layer.c}}
+\subsubsection{\texorpdfstring{resize\_route\_layer()}{resize\_route\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+route\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{route__layer_8h_a6053039a8f6b5c47ea48fa71c43a538c}{route\+\_\+layer}} $\ast$}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file route\+\_\+layer.\+c.
+

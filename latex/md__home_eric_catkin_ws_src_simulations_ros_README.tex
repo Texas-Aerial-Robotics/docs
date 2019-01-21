@@ -1,0 +1,200 @@
+Repositoy for our sim
+
+steps for installing
+
+\subsection*{1. Install R\+OS}
+
+First, install {\bfseries{R\+OS Kinetic}} using the following instructions\+: \href{http://wiki.ros.org/kinetic/Installation/Ubuntu}{\texttt{ http\+://wiki.\+ros.\+org/kinetic/\+Installation/\+Ubuntu}}
+
+Do {\itshape Desktop Install}
+
+Make sure to follow all the way through the installation (until {\itshape Step 1.\+7} at the end of the page)
+
+\subsection*{2. Set Up Catkin workspace}
+
+We use catkin build instead of catkin\+\_\+make. Please install the following\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get install python-wstool python-rosinstall-generator python-catkin-tools}
+\end{DoxyCode}
+
+
+Then, initialize the catkin workspace\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir -p ~/catkin\_ws/src}
+\DoxyCodeLine{cd ~/catkin\_ws}
+\DoxyCodeLine{catkin init}
+\DoxyCodeLine{catkin config --extend /opt/ros/kinetic}
+\DoxyCodeLine{catkin config --cmake-args -DCMAKE\_BUILD\_TYPE=Release}
+\DoxyCodeLine{catkin config --merge-devel}
+\end{DoxyCode}
+
+
+\subsection*{3. Dependencies installation (catkin\+\_\+make)}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get install ros-kinetic-mavlink}
+\DoxyCodeLine{sudo apt-get install ros-kinetic-geographic-msgs}
+\DoxyCodeLine{sudo apt-get install ros-kinetic-move-base-msgs}
+\DoxyCodeLine{sudo apt-get install ros-kinetic-control-toolbox}
+\DoxyCodeLine{cd ~/catkin\_ws/src}
+\DoxyCodeLine{git clone https://github.com/mavlink/mavros.git}
+\DoxyCodeLine{git clone https://github.com/AkellaSummerResearch/tf\_publisher}
+\end{DoxyCode}
+
+
+\subsection*{4. Clone our R\+OS package repositories}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src }
+\DoxyCodeLine{git clone https://github.com/AkellaSummerResearch/simulations\_ros.git}
+\end{DoxyCode}
+
+
+\subsection*{5. Make instructions}
+
+Inside {\ttfamily catkin\+\_\+ws}, run {\ttfamily catkin\+\_\+make}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws }
+\DoxyCodeLine{catkin\_make }
+\end{DoxyCode}
+
+
+\subsection*{6. Install Gazebo}
+
+Setup your computer to accept software from \href{http://packages.osrfoundation.org:}{\texttt{ http\+://packages.\+osrfoundation.\+org\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb\_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'}
+\end{DoxyCode}
+
+
+Setup keys\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add - }
+\end{DoxyCode}
+
+
+Reload software list\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get update}
+\end{DoxyCode}
+
+
+Install Gazebo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get install gazebo7 libgazebo7-dev}
+\end{DoxyCode}
+
+
+Install R\+OS plugins\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install ros-kinetic-gazebo-ros ros-kinetic-gazebo-plugins}
+\end{DoxyCode}
+
+
+Give permissions to your uses\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo chown \$USER .gazebo/}
+\end{DoxyCode}
+
+
+\subsection*{6. Install Px4}
+
+run ubuntu\+\_\+sim\+\_\+common\+\_\+deps.\+sh 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src/simulations\_ros/scripts/}
+\DoxyCodeLine{./ubuntu\_sim\_common\_deps.sh}
+\DoxyCodeLine{sudo apt install libprotobuf-dev protobuf-compiler libignition-math2-dev}
+\DoxyCodeLine{cd ~/Firmware }
+\DoxyCodeLine{make posix\_sitl\_default gazebo}
+\end{DoxyCode}
+ \subsection*{7. Add paths to .bashrc}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export GAZEBO\_MODEL\_PATH=\$\{GAZEBO\_MODEL\_PATH\}:~/catkin\_ws/src/simulations\_ros/models}
+\DoxyCodeLine{export ROS\_PACKAGE\_PATH=\$ROS\_PACKAGE\_PATH:~/Firmware}
+\DoxyCodeLine{export ROS\_PACKAGE\_PATH=\$ROS\_PACKAGE\_PATH:~/Firmware/Tools/sitl\_gazebo}
+\DoxyCodeLine{source ~/Firmware/Tools/setup\_gazebo.bash ~/Firmware ~/Firmware/build/posix\_sitl\_default}
+\end{DoxyCode}
+ source bashrc 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ~/.bashrc}
+\end{DoxyCode}
+
+
+\subsection*{8. Running Simulation}
+
+move script to start \mbox{\hyperlink{namespacepx4}{px4}} sitl 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cp ~/catkin\_ws/src/simulations\_ros/scripts/startsim.sh ~}
+\end{DoxyCode}
+
+
+In first terminal 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./startsim.sh}
+\end{DoxyCode}
+ In another terminal
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch simulations\_ros px4.launch}
+\end{DoxyCode}
+
+
+If the previous command fails with
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[FATAL] [1538090263.500882984]: UAS: GeographicLib exception: File not readable /usr/share/GeographicLib/geoids/egm96-5.pgm | Run install\_geographiclib\_dataset.sh script in order to install Geoid Model dataset!}
+\end{DoxyCode}
+
+
+run 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd catkin\_ws/src/mavros/mavros/scripts/}
+\DoxyCodeLine{./install\_geographiclib\_datasets.sh}
+\end{DoxyCode}
+
+
+after a few seconds the drone will initialize and you can command the drone to takeoff. In the \mbox{\hyperlink{namespacepx4}{px4}} terminal run\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{commander takeoff}
+\end{DoxyCode}
+
+
+The camera window will pop up. If you close it and want to reopen, type\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun image\_view image\_view image:=/stereo/camera/left/image\_raw}
+\end{DoxyCode}
+
+
+\subsection*{9. Remove G\+PS noise in P\+X4}
+
+In the terminal that is running \mbox{\hyperlink{namespacepx4}{px4}}, run the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{param set EKF2\_GPS\_P\_NOISE 0.01}
+\DoxyCodeLine{param set EKF2\_GPS\_V\_NOISE 0.1}
+\DoxyCodeLine{param set EKF2\_BARO\_NOISE 0.5}
+\DoxyCodeLine{param set EKF2\_GPS\_DELAY 0}
+\end{DoxyCode}
+
+
+P\+X4 should save these parameters. The next time you run P\+X4, the parameters should be set to the ones above. To make sure they are right, run the following in P\+X4\textquotesingle{}s terminal\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{param show EKF2\_GPS\_P\_NOISE}
+\DoxyCodeLine{param show EKF2\_GPS\_V\_NOISE}
+\DoxyCodeLine{param show EKF2\_BARO\_NOISE}
+\DoxyCodeLine{param show EKF2\_GPS\_DELAY}
+\end{DoxyCode}
+ 

@@ -1,0 +1,67 @@
+\hypertarget{classmavconn_1_1MAVConnTCPClient}{}\section{mavconn\+::M\+A\+V\+Conn\+T\+C\+P\+Client Class Reference}
+\label{classmavconn_1_1MAVConnTCPClient}\index{mavconn::MAVConnTCPClient@{mavconn::MAVConnTCPClient}}
+
+
+\mbox{\hyperlink{classTCP}{T\+CP}} client interface.  
+
+
+
+
+{\ttfamily \#include $<$tcp.\+h$>$}
+
+Inheritance diagram for mavconn\+::M\+A\+V\+Conn\+T\+C\+P\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.733746cm]{classmavconn_1_1MAVConnTCPClient}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__mavconn_ga930d7bcb750e00606a1ba406135f0020}{M\+A\+V\+Conn\+T\+C\+P\+Client}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE, std\+::string server\+\_\+host=\mbox{\hyperlink{group__mavconn_ga25f08b85aaeacae255d37a898f978c42}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+H\+O\+ST}}, unsigned short server\+\_\+port=\mbox{\hyperlink{group__mavconn_ga3d9c438ece25a8aa6ae7af15341e7706}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}})
+\item 
+\mbox{\hyperlink{group__mavconn_ga93a7b76eccf987b4321f7bcc502001b8}{M\+A\+V\+Conn\+T\+C\+P\+Client}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}, boost\+::asio\+::io\+\_\+service \&server\+\_\+io)
+\item 
+\mbox{\hyperlink{group__mavconn_gaa9e9ea305aaaa39aeb4bcb91328d47c5}{$\sim$\+M\+A\+V\+Conn\+T\+C\+P\+Client}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_ga3128ab3303f5a303be12c2c9df1ee321}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga6f835299707df78f3694cef5853139d4}{send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message) override
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga1194ffc5b74604c5c432591751803f33}{send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gac327ab4a27b6de2da3c594d93c599312}{send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length) override
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mavconn_gadcabe763ecf8fc00e123fcf78af9eaf4}{is\+\_\+open}} () override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga25f08b85aaeacae255d37a898f978c42}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+H\+O\+ST}} = \char`\"{}localhost\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga3d9c438ece25a8aa6ae7af15341e7706}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}} = 5760
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{group__mavconn_gaa93ce54993292c6350cf74aa47fde6cd}{M\+A\+V\+Conn\+T\+C\+P\+Server}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classTCP}{T\+CP}} client interface. 
+
+\begin{DoxyNote}{Note}
+I\+Pv4 only 
+\end{DoxyNote}
+
+
+Definition at line 34 of file tcp.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/include/mavconn/\mbox{\hyperlink{tcp_8h}{tcp.\+h}}\item 
+/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/src/\mbox{\hyperlink{tcp_8cpp}{tcp.\+cpp}}\end{DoxyCompactItemize}

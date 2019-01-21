@@ -1,0 +1,591 @@
+\hypertarget{network_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/network.c File Reference}
+\label{network_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/network.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/network.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crop\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connected\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gru\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rnn\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crnn\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}local\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}convolutional\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activation\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detection\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}region\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}yolo\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}normalization\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}batchnorm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}maxpool\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reorg\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}avgpool\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cost\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}softmax\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dropout\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}route\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}upsample\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shortcut\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parser.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structload__args}{load\+\_\+args}} \mbox{\hyperlink{network_8c_afd4223b3d5e1fa18bdc5e636c71a962e}{get\+\_\+base\+\_\+args}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+\mbox{\hyperlink{structnetwork}{network}} $\ast$ \mbox{\hyperlink{network_8c_a0ea267bea4a8bc7e7a05cb44e41a4e59}{load\+\_\+network}} (char $\ast$cfg, char $\ast$weights, int clear)
+\item 
+size\+\_\+t \mbox{\hyperlink{network_8c_a6a7d828336e913ca5345d9296891c6c5}{get\+\_\+current\+\_\+batch}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+void \mbox{\hyperlink{network_8c_a1fa8069c4dcc291063967cf6c960749a}{reset\+\_\+network\+\_\+state}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, int b)
+\item 
+void \mbox{\hyperlink{network_8c_a2fa6dbb01b65d7ec1e6dcb490fdda445}{reset\+\_\+rnn}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+float \mbox{\hyperlink{network_8c_a15b81c6ed214093c9c5a7b34704c4c03}{get\+\_\+current\+\_\+rate}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+char $\ast$ \mbox{\hyperlink{network_8c_addd27f6072159c492dde3da46567734b}{get\+\_\+layer\+\_\+string}} (\mbox{\hyperlink{darknet_8h_a5f7e99058765b058df158c099200b154}{L\+A\+Y\+E\+R\+\_\+\+T\+Y\+PE}} a)
+\item 
+\mbox{\hyperlink{structnetwork}{network}} $\ast$ \mbox{\hyperlink{network_8c_a4b232d0afb3398ed41b84a0f35bf6836}{make\+\_\+network}} (int n)
+\item 
+void \mbox{\hyperlink{network_8c_a276857683364bb584055241b55491a9d}{forward\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$netp)
+\item 
+void \mbox{\hyperlink{network_8c_a641a8e4d2e496dbdea055f51c49c94e3}{update\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$netp)
+\item 
+void \mbox{\hyperlink{network_8c_a2d4d6b130b30a0cd862474e151db918e}{calc\+\_\+network\+\_\+cost}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$netp)
+\item 
+int \mbox{\hyperlink{network_8c_a3a65b3da617e1e413227282e160f5163}{get\+\_\+predicted\+\_\+class\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+void \mbox{\hyperlink{network_8c_ada4367ad5905e9796622458cabd201c8}{backward\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$netp)
+\item 
+float \mbox{\hyperlink{network_8c_ac57df04c8c5e00f5115d39471edcf44d}{train\+\_\+network\+\_\+datum}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+float \mbox{\hyperlink{network_8c_a33b7f9a0ce3960ae880e828172480ef5}{train\+\_\+network\+\_\+sgd}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int n)
+\item 
+float \mbox{\hyperlink{network_8c_ae946a9667141b1e74e575d7ff685f293}{train\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+void \mbox{\hyperlink{network_8c_ad01964f34c0dabdb9e45d1ea923c9639}{set\+\_\+temp\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float t)
+\item 
+void \mbox{\hyperlink{network_8c_a0cf39a1104b8f0415c56796b54a3670a}{set\+\_\+batch\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, int b)
+\item 
+int \mbox{\hyperlink{network_8c_a6ae710d2d9ad32cfdec1f925f48c2b50}{resize\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, int w, int h)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{network_8c_aafd23a2e4a2300c56f65a2166c973b76}{get\+\_\+network\+\_\+detection\+\_\+layer}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{network_8c_ab729c416957e0ebe6e180ad8a16e94c7}{get\+\_\+network\+\_\+image\+\_\+layer}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, int \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}})
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{network_8c_ab701f90513d2abf73ff07b27ba693052}{get\+\_\+network\+\_\+image}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+void \mbox{\hyperlink{network_8c_a56c505929369e049e596c7477e1f093b}{visualize\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+void \mbox{\hyperlink{network_8c_a94275753b85150c71f7858eb60e3ab5e}{top\+\_\+predictions}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, int k, int $\ast$index)
+\item 
+float $\ast$ \mbox{\hyperlink{network_8c_a90179d7287c26a987c4722b81ec9a579}{network\+\_\+predict}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float $\ast$input)
+\item 
+int \mbox{\hyperlink{network_8c_ac0b84033651f97833207b0e0c9776d11}{num\+\_\+detections}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float thresh)
+\item 
+\mbox{\hyperlink{structdetection}{detection}} $\ast$ \mbox{\hyperlink{network_8c_a2854feb44aa7bbd7f6ede9a4572115b4}{make\+\_\+network\+\_\+boxes}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, float thresh, int $\ast$num)
+\item 
+void \mbox{\hyperlink{network_8c_a4d30c2fab24164c1445353f23774fca3}{fill\+\_\+network\+\_\+boxes}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, int w, int h, float thresh, float hier, int $\ast$map, int relative, \mbox{\hyperlink{structdetection}{detection}} $\ast$dets)
+\item 
+\mbox{\hyperlink{structdetection}{detection}} $\ast$ \mbox{\hyperlink{network_8c_a07ef43f9f4f2fa70fcff2ae4be6eb24b}{get\+\_\+network\+\_\+boxes}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, int w, int h, float thresh, float hier, int $\ast$map, int relative, int $\ast$num)
+\item 
+void \mbox{\hyperlink{network_8c_a7ecacd03177d009c8f43c76c53f6b363}{free\+\_\+detections}} (\mbox{\hyperlink{structdetection}{detection}} $\ast$dets, int n)
+\item 
+float $\ast$ \mbox{\hyperlink{network_8c_a4b4357e916774cc72d7a37ec35a1e1ba}{network\+\_\+predict\+\_\+image}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structimage}{image}} im)
+\item 
+int \mbox{\hyperlink{network_8c_a5df4a28ccc9a076423f749953e1fd393}{network\+\_\+width}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+int \mbox{\hyperlink{network_8c_ab1b9d257b7f53d7bd6419cca198927c9}{network\+\_\+height}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{network_8c_a26b9df9e27fda449d9e68cfd668a3a53}{network\+\_\+predict\+\_\+data\+\_\+multi}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{classtest}{test}}, int n)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{network_8c_afc08f30b51426b7a2546f8f847810cef}{network\+\_\+predict\+\_\+data}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{classtest}{test}})
+\item 
+void \mbox{\hyperlink{network_8c_a4014dc6c5158a6f277c76b2dbe05fb03}{print\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+void \mbox{\hyperlink{network_8c_a2f139897f7d5ffefad5ab5c753dcc462}{compare\+\_\+networks}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$n1, \mbox{\hyperlink{structnetwork}{network}} $\ast$n2, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{classtest}{test}})
+\item 
+float \mbox{\hyperlink{network_8c_adf351194dc3ed7fd3ccf9f0088b01bb9}{network\+\_\+accuracy}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}})
+\item 
+float $\ast$ \mbox{\hyperlink{network_8c_a6324cb05d7372d36ba476a7172c2cb80}{network\+\_\+accuracies}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int n)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{network_8c_a20984a0b9f47eeeb713481238f6f6c57}{get\+\_\+network\+\_\+output\+\_\+layer}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+float \mbox{\hyperlink{network_8c_a60daaeaf6dd386bab3e7bf4c67e46497}{network\+\_\+accuracy\+\_\+multi}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int n)
+\item 
+void \mbox{\hyperlink{network_8c_ae38418572eb33791df12fbd53dafe9e5}{free\+\_\+network}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{network_8c_ab360e54182b8c0017c3ff08282a7e8ec}{network\+\_\+output\+\_\+layer}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+int \mbox{\hyperlink{network_8c_abfb475b31b05c5d63ecc2af7e305a7f6}{network\+\_\+inputs}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+int \mbox{\hyperlink{network_8c_a3329114bce9228b655c5db283e5b9701}{network\+\_\+outputs}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\item 
+float $\ast$ \mbox{\hyperlink{network_8c_a2f366562c76af65d7783268764b97f10}{network\+\_\+output}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{network_8c_ada4367ad5905e9796622458cabd201c8}\label{network_8c_ada4367ad5905e9796622458cabd201c8}} 
+\index{network.c@{network.c}!backward\_network@{backward\_network}}
+\index{backward\_network@{backward\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{backward\_network()}{backward\_network()}}
+{\footnotesize\ttfamily void backward\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{netp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 263 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a2d4d6b130b30a0cd862474e151db918e}\label{network_8c_a2d4d6b130b30a0cd862474e151db918e}} 
+\index{network.c@{network.c}!calc\_network\_cost@{calc\_network\_cost}}
+\index{calc\_network\_cost@{calc\_network\_cost}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{calc\_network\_cost()}{calc\_network\_cost()}}
+{\footnotesize\ttfamily void calc\+\_\+network\+\_\+cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{netp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 243 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a2f139897f7d5ffefad5ab5c753dcc462}\label{network_8c_a2f139897f7d5ffefad5ab5c753dcc462}} 
+\index{network.c@{network.c}!compare\_networks@{compare\_networks}}
+\index{compare\_networks@{compare\_networks}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{compare\_networks()}{compare\_networks()}}
+{\footnotesize\ttfamily void compare\+\_\+networks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{n1,  }\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{n2,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{test }\end{DoxyParamCaption})}
+
+
+
+Definition at line 656 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a4d30c2fab24164c1445353f23774fca3}\label{network_8c_a4d30c2fab24164c1445353f23774fca3}} 
+\index{network.c@{network.c}!fill\_network\_boxes@{fill\_network\_boxes}}
+\index{fill\_network\_boxes@{fill\_network\_boxes}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{fill\_network\_boxes()}{fill\_network\_boxes()}}
+{\footnotesize\ttfamily void fill\+\_\+network\+\_\+boxes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{float}]{thresh,  }\item[{float}]{hier,  }\item[{int $\ast$}]{map,  }\item[{int}]{relative,  }\item[{\mbox{\hyperlink{structdetection}{detection}} $\ast$}]{dets }\end{DoxyParamCaption})}
+
+
+
+Definition at line 542 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a276857683364bb584055241b55491a9d}\label{network_8c_a276857683364bb584055241b55491a9d}} 
+\index{network.c@{network.c}!forward\_network@{forward\_network}}
+\index{forward\_network@{forward\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{forward\_network()}{forward\_network()}}
+{\footnotesize\ttfamily void forward\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{netp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 188 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a7ecacd03177d009c8f43c76c53f6b363}\label{network_8c_a7ecacd03177d009c8f43c76c53f6b363}} 
+\index{network.c@{network.c}!free\_detections@{free\_detections}}
+\index{free\_detections@{free\_detections}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{free\_detections()}{free\_detections()}}
+{\footnotesize\ttfamily void free\+\_\+detections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdetection}{detection}} $\ast$}]{dets,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 569 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ae38418572eb33791df12fbd53dafe9e5}\label{network_8c_ae38418572eb33791df12fbd53dafe9e5}} 
+\index{network.c@{network.c}!free\_network@{free\_network}}
+\index{free\_network@{free\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{free\_network()}{free\_network()}}
+{\footnotesize\ttfamily void free\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 716 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_afd4223b3d5e1fa18bdc5e636c71a962e}\label{network_8c_afd4223b3d5e1fa18bdc5e636c71a962e}} 
+\index{network.c@{network.c}!get\_base\_args@{get\_base\_args}}
+\index{get\_base\_args@{get\_base\_args}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_base\_args()}{get\_base\_args()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structload__args}{load\+\_\+args}} get\+\_\+base\+\_\+args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a6a7d828336e913ca5345d9296891c6c5}\label{network_8c_a6a7d828336e913ca5345d9296891c6c5}} 
+\index{network.c@{network.c}!get\_current\_batch@{get\_current\_batch}}
+\index{get\_current\_batch@{get\_current\_batch}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_current\_batch()}{get\_current\_batch()}}
+{\footnotesize\ttfamily size\+\_\+t get\+\_\+current\+\_\+batch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a15b81c6ed214093c9c5a7b34704c4c03}\label{network_8c_a15b81c6ed214093c9c5a7b34704c4c03}} 
+\index{network.c@{network.c}!get\_current\_rate@{get\_current\_rate}}
+\index{get\_current\_rate@{get\_current\_rate}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_current\_rate()}{get\_current\_rate()}}
+{\footnotesize\ttfamily float get\+\_\+current\+\_\+rate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_addd27f6072159c492dde3da46567734b}\label{network_8c_addd27f6072159c492dde3da46567734b}} 
+\index{network.c@{network.c}!get\_layer\_string@{get\_layer\_string}}
+\index{get\_layer\_string@{get\_layer\_string}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_layer\_string()}{get\_layer\_string()}}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+layer\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{darknet_8h_a5f7e99058765b058df158c099200b154}{L\+A\+Y\+E\+R\+\_\+\+T\+Y\+PE}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a07ef43f9f4f2fa70fcff2ae4be6eb24b}\label{network_8c_a07ef43f9f4f2fa70fcff2ae4be6eb24b}} 
+\index{network.c@{network.c}!get\_network\_boxes@{get\_network\_boxes}}
+\index{get\_network\_boxes@{get\_network\_boxes}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_network\_boxes()}{get\_network\_boxes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdetection}{detection}}$\ast$ get\+\_\+network\+\_\+boxes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{float}]{thresh,  }\item[{float}]{hier,  }\item[{int $\ast$}]{map,  }\item[{int}]{relative,  }\item[{int $\ast$}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 562 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_aafd23a2e4a2300c56f65a2166c973b76}\label{network_8c_aafd23a2e4a2300c56f65a2166c973b76}} 
+\index{network.c@{network.c}!get\_network\_detection\_layer@{get\_network\_detection\_layer}}
+\index{get\_network\_detection\_layer@{get\_network\_detection\_layer}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_network\_detection\_layer()}{get\_network\_detection\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} get\+\_\+network\+\_\+detection\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 440 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ab701f90513d2abf73ff07b27ba693052}\label{network_8c_ab701f90513d2abf73ff07b27ba693052}} 
+\index{network.c@{network.c}!get\_network\_image@{get\_network\_image}}
+\index{get\_network\_image@{get\_network\_image}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_network\_image()}{get\_network\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+network\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 466 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ab729c416957e0ebe6e180ad8a16e94c7}\label{network_8c_ab729c416957e0ebe6e180ad8a16e94c7}} 
+\index{network.c@{network.c}!get\_network\_image\_layer@{get\_network\_image\_layer}}
+\index{get\_network\_image\_layer@{get\_network\_image\_layer}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_network\_image\_layer()}{get\_network\_image\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+network\+\_\+image\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 453 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a20984a0b9f47eeeb713481238f6f6c57}\label{network_8c_a20984a0b9f47eeeb713481238f6f6c57}} 
+\index{network.c@{network.c}!get\_network\_output\_layer@{get\_network\_output\_layer}}
+\index{get\_network\_output\_layer@{get\_network\_output\_layer}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_network\_output\_layer()}{get\_network\_output\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} get\+\_\+network\+\_\+output\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 699 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a3a65b3da617e1e413227282e160f5163}\label{network_8c_a3a65b3da617e1e413227282e160f5163}} 
+\index{network.c@{network.c}!get\_predicted\_class\_network@{get\_predicted\_class\_network}}
+\index{get\_predicted\_class\_network@{get\_predicted\_class\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{get\_predicted\_class\_network()}{get\_predicted\_class\_network()}}
+{\footnotesize\ttfamily int get\+\_\+predicted\+\_\+class\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 258 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a0ea267bea4a8bc7e7a05cb44e41a4e59}\label{network_8c_a0ea267bea4a8bc7e7a05cb44e41a4e59}} 
+\index{network.c@{network.c}!load\_network@{load\_network}}
+\index{load\_network@{load\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{load\_network()}{load\_network()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnetwork}{network}}$\ast$ load\+\_\+network (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights,  }\item[{int}]{clear }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a4b232d0afb3398ed41b84a0f35bf6836}\label{network_8c_a4b232d0afb3398ed41b84a0f35bf6836}} 
+\index{network.c@{network.c}!make\_network@{make\_network}}
+\index{make\_network@{make\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{make\_network()}{make\_network()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnetwork}{network}}$\ast$ make\+\_\+network (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a2854feb44aa7bbd7f6ede9a4572115b4}\label{network_8c_a2854feb44aa7bbd7f6ede9a4572115b4}} 
+\index{network.c@{network.c}!make\_network\_boxes@{make\_network\_boxes}}
+\index{make\_network\_boxes@{make\_network\_boxes}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{make\_network\_boxes()}{make\_network\_boxes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdetection}{detection}}$\ast$ make\+\_\+network\+\_\+boxes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float}]{thresh,  }\item[{int $\ast$}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line 526 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a6324cb05d7372d36ba476a7172c2cb80}\label{network_8c_a6324cb05d7372d36ba476a7172c2cb80}} 
+\index{network.c@{network.c}!network\_accuracies@{network\_accuracies}}
+\index{network\_accuracies@{network\_accuracies}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_accuracies()}{network\_accuracies()}}
+{\footnotesize\ttfamily float$\ast$ network\+\_\+accuracies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 689 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_adf351194dc3ed7fd3ccf9f0088b01bb9}\label{network_8c_adf351194dc3ed7fd3ccf9f0088b01bb9}} 
+\index{network.c@{network.c}!network\_accuracy@{network\_accuracy}}
+\index{network\_accuracy@{network\_accuracy}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_accuracy()}{network\_accuracy()}}
+{\footnotesize\ttfamily float network\+\_\+accuracy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 681 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a60daaeaf6dd386bab3e7bf4c67e46497}\label{network_8c_a60daaeaf6dd386bab3e7bf4c67e46497}} 
+\index{network.c@{network.c}!network\_accuracy\_multi@{network\_accuracy\_multi}}
+\index{network\_accuracy\_multi@{network\_accuracy\_multi}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_accuracy\_multi()}{network\_accuracy\_multi()}}
+{\footnotesize\ttfamily float network\+\_\+accuracy\+\_\+multi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 708 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ab1b9d257b7f53d7bd6419cca198927c9}\label{network_8c_ab1b9d257b7f53d7bd6419cca198927c9}} 
+\index{network.c@{network.c}!network\_height@{network\_height}}
+\index{network\_height@{network\_height}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_height()}{network\_height()}}
+{\footnotesize\ttfamily int network\+\_\+height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 589 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_abfb475b31b05c5d63ecc2af7e305a7f6}\label{network_8c_abfb475b31b05c5d63ecc2af7e305a7f6}} 
+\index{network.c@{network.c}!network\_inputs@{network\_inputs}}
+\index{network\_inputs@{network\_inputs}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_inputs()}{network\_inputs()}}
+{\footnotesize\ttfamily int network\+\_\+inputs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 745 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a2f366562c76af65d7783268764b97f10}\label{network_8c_a2f366562c76af65d7783268764b97f10}} 
+\index{network.c@{network.c}!network\_output@{network\_output}}
+\index{network\_output@{network\_output}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_output()}{network\_output()}}
+{\footnotesize\ttfamily float$\ast$ network\+\_\+output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 755 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ab360e54182b8c0017c3ff08282a7e8ec}\label{network_8c_ab360e54182b8c0017c3ff08282a7e8ec}} 
+\index{network.c@{network.c}!network\_output\_layer@{network\_output\_layer}}
+\index{network\_output\_layer@{network\_output\_layer}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_output\_layer()}{network\_output\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} network\+\_\+output\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 736 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a3329114bce9228b655c5db283e5b9701}\label{network_8c_a3329114bce9228b655c5db283e5b9701}} 
+\index{network.c@{network.c}!network\_outputs@{network\_outputs}}
+\index{network\_outputs@{network\_outputs}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_outputs()}{network\_outputs()}}
+{\footnotesize\ttfamily int network\+\_\+outputs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 750 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a90179d7287c26a987c4722b81ec9a579}\label{network_8c_a90179d7287c26a987c4722b81ec9a579}} 
+\index{network.c@{network.c}!network\_predict@{network\_predict}}
+\index{network\_predict@{network\_predict}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_predict()}{network\_predict()}}
+{\footnotesize\ttfamily float$\ast$ network\+\_\+predict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float $\ast$}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 497 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_afc08f30b51426b7a2546f8f847810cef}\label{network_8c_afc08f30b51426b7a2546f8f847810cef}} 
+\index{network.c@{network.c}!network\_predict\_data@{network\_predict\_data}}
+\index{network\_predict\_data@{network\_predict\_data}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_predict\_data()}{network\_predict\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} network\+\_\+predict\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{test }\end{DoxyParamCaption})}
+
+
+
+Definition at line 616 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a26b9df9e27fda449d9e68cfd668a3a53}\label{network_8c_a26b9df9e27fda449d9e68cfd668a3a53}} 
+\index{network.c@{network.c}!network\_predict\_data\_multi@{network\_predict\_data\_multi}}
+\index{network\_predict\_data\_multi@{network\_predict\_data\_multi}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_predict\_data\_multi()}{network\_predict\_data\_multi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} network\+\_\+predict\+\_\+data\+\_\+multi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{test,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 591 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a4b4357e916774cc72d7a37ec35a1e1ba}\label{network_8c_a4b4357e916774cc72d7a37ec35a1e1ba}} 
+\index{network.c@{network.c}!network\_predict\_image@{network\_predict\_image}}
+\index{network\_predict\_image@{network\_predict\_image}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_predict\_image()}{network\_predict\_image()}}
+{\footnotesize\ttfamily float$\ast$ network\+\_\+predict\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{im }\end{DoxyParamCaption})}
+
+
+
+Definition at line 579 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a5df4a28ccc9a076423f749953e1fd393}\label{network_8c_a5df4a28ccc9a076423f749953e1fd393}} 
+\index{network.c@{network.c}!network\_width@{network\_width}}
+\index{network\_width@{network\_width}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{network\_width()}{network\_width()}}
+{\footnotesize\ttfamily int network\+\_\+width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 588 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ac0b84033651f97833207b0e0c9776d11}\label{network_8c_ac0b84033651f97833207b0e0c9776d11}} 
+\index{network.c@{network.c}!num\_detections@{num\_detections}}
+\index{num\_detections@{num\_detections}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{num\_detections()}{num\_detections()}}
+{\footnotesize\ttfamily int num\+\_\+detections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float}]{thresh }\end{DoxyParamCaption})}
+
+
+
+Definition at line 510 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a4014dc6c5158a6f277c76b2dbe05fb03}\label{network_8c_a4014dc6c5158a6f277c76b2dbe05fb03}} 
+\index{network.c@{network.c}!print\_network@{print\_network}}
+\index{print\_network@{print\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{print\_network()}{print\_network()}}
+{\footnotesize\ttfamily void print\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 639 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a1fa8069c4dcc291063967cf6c960749a}\label{network_8c_a1fa8069c4dcc291063967cf6c960749a}} 
+\index{network.c@{network.c}!reset\_network\_state@{reset\_network\_state}}
+\index{reset\_network\_state@{reset\_network\_state}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{reset\_network\_state()}{reset\_network\_state()}}
+{\footnotesize\ttfamily void reset\+\_\+network\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a2fa6dbb01b65d7ec1e6dcb490fdda445}\label{network_8c_a2fa6dbb01b65d7ec1e6dcb490fdda445}} 
+\index{network.c@{network.c}!reset\_rnn@{reset\_rnn}}
+\index{reset\_rnn@{reset\_rnn}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{reset\_rnn()}{reset\_rnn()}}
+{\footnotesize\ttfamily void reset\+\_\+rnn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a6ae710d2d9ad32cfdec1f925f48c2b50}\label{network_8c_a6ae710d2d9ad32cfdec1f925f48c2b50}} 
+\index{network.c@{network.c}!resize\_network@{resize\_network}}
+\index{resize\_network@{resize\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{resize\_network()}{resize\_network()}}
+{\footnotesize\ttfamily int resize\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 358 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a0cf39a1104b8f0415c56796b54a3670a}\label{network_8c_a0cf39a1104b8f0415c56796b54a3670a}} 
+\index{network.c@{network.c}!set\_batch\_network@{set\_batch\_network}}
+\index{set\_batch\_network@{set\_batch\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{set\_batch\_network()}{set\_batch\_network()}}
+{\footnotesize\ttfamily void set\+\_\+batch\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 339 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ad01964f34c0dabdb9e45d1ea923c9639}\label{network_8c_ad01964f34c0dabdb9e45d1ea923c9639}} 
+\index{network.c@{network.c}!set\_temp\_network@{set\_temp\_network}}
+\index{set\_temp\_network@{set\_temp\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{set\_temp\_network()}{set\_temp\_network()}}
+{\footnotesize\ttfamily void set\+\_\+temp\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{float}]{t }\end{DoxyParamCaption})}
+
+
+
+Definition at line 330 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a94275753b85150c71f7858eb60e3ab5e}\label{network_8c_a94275753b85150c71f7858eb60e3ab5e}} 
+\index{network.c@{network.c}!top\_predictions@{top\_predictions}}
+\index{top\_predictions@{top\_predictions}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{top\_predictions()}{top\_predictions()}}
+{\footnotesize\ttfamily void top\+\_\+predictions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{int}]{k,  }\item[{int $\ast$}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 491 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ae946a9667141b1e74e575d7ff685f293}\label{network_8c_ae946a9667141b1e74e575d7ff685f293}} 
+\index{network.c@{network.c}!train\_network@{train\_network}}
+\index{train\_network@{train\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{train\_network()}{train\_network()}}
+{\footnotesize\ttfamily float train\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line 314 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_ac57df04c8c5e00f5115d39471edcf44d}\label{network_8c_ac57df04c8c5e00f5115d39471edcf44d}} 
+\index{network.c@{network.c}!train\_network\_datum@{train\_network\_datum}}
+\index{train\_network\_datum@{train\_network\_datum}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{train\_network\_datum()}{train\_network\_datum()}}
+{\footnotesize\ttfamily float train\+\_\+network\+\_\+datum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 289 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a33b7f9a0ce3960ae880e828172480ef5}\label{network_8c_a33b7f9a0ce3960ae880e828172480ef5}} 
+\index{network.c@{network.c}!train\_network\_sgd@{train\_network\_sgd}}
+\index{train\_network\_sgd@{train\_network\_sgd}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{train\_network\_sgd()}{train\_network\_sgd()}}
+{\footnotesize\ttfamily float train\+\_\+network\+\_\+sgd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{d,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 300 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a641a8e4d2e496dbdea055f51c49c94e3}\label{network_8c_a641a8e4d2e496dbdea055f51c49c94e3}} 
+\index{network.c@{network.c}!update\_network@{update\_network}}
+\index{update\_network@{update\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{update\_network()}{update\_network()}}
+{\footnotesize\ttfamily void update\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{netp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 213 of file network.\+c.
+
+\mbox{\Hypertarget{network_8c_a56c505929369e049e596c7477e1f093b}\label{network_8c_a56c505929369e049e596c7477e1f093b}} 
+\index{network.c@{network.c}!visualize\_network@{visualize\_network}}
+\index{visualize\_network@{visualize\_network}!network.c@{network.c}}
+\subsubsection{\texorpdfstring{visualize\_network()}{visualize\_network()}}
+{\footnotesize\ttfamily void visualize\+\_\+network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 477 of file network.\+c.
+

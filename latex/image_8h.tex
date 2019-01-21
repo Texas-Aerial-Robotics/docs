@@ -1,0 +1,419 @@
+\hypertarget{image_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/image.h File Reference}
+\label{image_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/image.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/image.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}box.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{image_8h_a2813bd82c2d03e2ad15fb37d7614392b}{get\+\_\+color}} (int c, int \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, int max)
+\item 
+void \mbox{\hyperlink{image_8h_a681daaccc6b6466cb24f407ed0b369b6}{draw\+\_\+box}} (\mbox{\hyperlink{structimage}{image}} a, int x1, int y1, int x2, int y2, float r, float g, float b)
+\item 
+void \mbox{\hyperlink{image_8h_a00ada3426d4f8d491228b878ac08d56a}{draw\+\_\+bbox}} (\mbox{\hyperlink{structimage}{image}} a, \mbox{\hyperlink{structbox}{box}} bbox, int w, float r, float g, float b)
+\item 
+void \mbox{\hyperlink{image_8h_a44ce3c01e7bfa7c499a68a4d454700c8}{write\+\_\+label}} (\mbox{\hyperlink{structimage}{image}} a, int r, int c, \mbox{\hyperlink{structimage}{image}} $\ast$characters, char $\ast$string, float $\ast$rgb)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_ad40ddbc8c117e8d4acef1ee5d54a948f}{image\+\_\+distance}} (\mbox{\hyperlink{structimage}{image}} a, \mbox{\hyperlink{structimage}{image}} b)
+\item 
+void \mbox{\hyperlink{image_8h_a8ec7a748f76954ca8c78f19ae3e0002d}{scale\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} m, float s)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_ad01bd28b7c51abe97fb4128806181a64}{rotate\+\_\+crop\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, float rad, float s, int w, int h, float dx, float dy, float aspect)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_a16ccc5f4cbac3e5af1accdb9564b7f09}{random\+\_\+crop\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, int w, int h)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_aaf387b54e7bd2b26f13df3bcdd054dc6}{random\+\_\+augment\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, float angle, float aspect, int low, int high, int w, int h)
+\item 
+\mbox{\hyperlink{structaugment__args}{augment\+\_\+args}} \mbox{\hyperlink{image_8h_af056322c4fb4fa6322c536b4d31287aa}{random\+\_\+augment\+\_\+args}} (\mbox{\hyperlink{structimage}{image}} im, float angle, float aspect, int low, int high, int w, int h)
+\item 
+void \mbox{\hyperlink{image_8h_ab02b4af717c0ad64b5f395c455390348}{letterbox\+\_\+image\+\_\+into}} (\mbox{\hyperlink{structimage}{image}} im, int w, int h, \mbox{\hyperlink{structimage}{image}} boxed)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_a4097f3a404ee4a00e380b602ca8f7241}{resize\+\_\+max}} (\mbox{\hyperlink{structimage}{image}} im, int max)
+\item 
+void \mbox{\hyperlink{image_8h_ad6d1584ee81170a5dae88cc76594f1ec}{translate\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} m, float s)
+\item 
+void \mbox{\hyperlink{image_8h_a0320f25f8508fb74f62f151f2ffb0e73}{embed\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} source, \mbox{\hyperlink{structimage}{image}} dest, int dx, int dy)
+\item 
+void \mbox{\hyperlink{image_8h_a6c67f94fa4a0a2a7d5a1a8e291e6e38b}{place\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, int w, int h, int dx, int dy, \mbox{\hyperlink{structimage}{image}} canvas)
+\item 
+void \mbox{\hyperlink{image_8h_ae7f1745db543dd8f176df95e9b94a13e}{saturate\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, float sat)
+\item 
+void \mbox{\hyperlink{image_8h_aac856339c78b97ca007639db5effcbf5}{exposure\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, float sat)
+\item 
+void \mbox{\hyperlink{image_8h_a937abd4132080239cdf564dfab812b5f}{distort\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, float hue, float sat, float val)
+\item 
+void \mbox{\hyperlink{image_8h_abb5117f25454ae5e2ba6e9c8ee0821aa}{saturate\+\_\+exposure\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} im, float sat, float exposure)
+\item 
+void \mbox{\hyperlink{image_8h_a8ba0e5a0a203cbff062f48743187c130}{rgb\+\_\+to\+\_\+hsv}} (\mbox{\hyperlink{structimage}{image}} im)
+\item 
+void \mbox{\hyperlink{image_8h_ae600c0dc7e1152d5234e680f0a48a21f}{hsv\+\_\+to\+\_\+rgb}} (\mbox{\hyperlink{structimage}{image}} im)
+\item 
+void \mbox{\hyperlink{image_8h_ac021b5af8295cad3f244b101d0c5e49a}{yuv\+\_\+to\+\_\+rgb}} (\mbox{\hyperlink{structimage}{image}} im)
+\item 
+void \mbox{\hyperlink{image_8h_a050c6b77b28e78d750a3482fcb01927f}{rgb\+\_\+to\+\_\+yuv}} (\mbox{\hyperlink{structimage}{image}} im)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_a520411eebcc10ed5d6efb6a7f109c29b}{collapse\+\_\+image\+\_\+layers}} (\mbox{\hyperlink{structimage}{image}} source, int border)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_ac559fad06b4db8eca4a22e31a0ad31e3}{collapse\+\_\+images\+\_\+horz}} (\mbox{\hyperlink{structimage}{image}} $\ast$ims, int n)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_a3d18634306b4fb03459c8ecc4102ec0d}{collapse\+\_\+images\+\_\+vert}} (\mbox{\hyperlink{structimage}{image}} $\ast$ims, int n)
+\item 
+void \mbox{\hyperlink{image_8h_a87bd4f423134cfbcbc069e0ac457494a}{show\+\_\+image\+\_\+normalized}} (\mbox{\hyperlink{structimage}{image}} im, const char $\ast$name)
+\item 
+void \mbox{\hyperlink{image_8h_a0f21ecba23959fc3a0c39c6273ef3a07}{show\+\_\+images}} (\mbox{\hyperlink{structimage}{image}} $\ast$ims, int n, char $\ast$\mbox{\hyperlink{keyTalker_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+void \mbox{\hyperlink{image_8h_aca4506d6b501db162ba28243a3232fea}{show\+\_\+image\+\_\+layers}} (\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}}, char $\ast$name)
+\item 
+void \mbox{\hyperlink{image_8h_adae9e4347715c8392eed4a923dbc4928}{show\+\_\+image\+\_\+collapsed}} (\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{velTest_8cpp_a739e18b8b6d072d434ebcb6ca486abb0}{p}}, char $\ast$name)
+\item 
+void \mbox{\hyperlink{image_8h_ab5aa8b00fd5999a26623e97ab2e4939e}{print\+\_\+image}} (\mbox{\hyperlink{structimage}{image}} m)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_a28bb9f835989b2f7e908386421c52837}{make\+\_\+empty\+\_\+image}} (int w, int h, int c)
+\item 
+void \mbox{\hyperlink{image_8h_ad8288a211a8552fccfdd56b0a9049af0}{copy\+\_\+image\+\_\+into}} (\mbox{\hyperlink{structimage}{image}} src, \mbox{\hyperlink{structimage}{image}} dest)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{image_8h_a76e824c4e5202297b817c0aeba10944f}{get\+\_\+image\+\_\+layer}} (\mbox{\hyperlink{structimage}{image}} m, int l)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{image_8h_a520411eebcc10ed5d6efb6a7f109c29b}\label{image_8h_a520411eebcc10ed5d6efb6a7f109c29b}} 
+\index{image.h@{image.h}!collapse\_image\_layers@{collapse\_image\_layers}}
+\index{collapse\_image\_layers@{collapse\_image\_layers}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{collapse\_image\_layers()}{collapse\_image\_layers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} collapse\+\_\+image\+\_\+layers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{source,  }\item[{int}]{border }\end{DoxyParamCaption})}
+
+
+
+Definition at line 441 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ac559fad06b4db8eca4a22e31a0ad31e3}\label{image_8h_ac559fad06b4db8eca4a22e31a0ad31e3}} 
+\index{image.h@{image.h}!collapse\_images\_horz@{collapse\_images\_horz}}
+\index{collapse\_images\_horz@{collapse\_images\_horz}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{collapse\_images\_horz()}{collapse\_images\_horz()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} collapse\+\_\+images\+\_\+horz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}} $\ast$}]{ims,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1548 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a3d18634306b4fb03459c8ecc4102ec0d}\label{image_8h_a3d18634306b4fb03459c8ecc4102ec0d}} 
+\index{image.h@{image.h}!collapse\_images\_vert@{collapse\_images\_vert}}
+\index{collapse\_images\_vert@{collapse\_images\_vert}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{collapse\_images\_vert()}{collapse\_images\_vert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} collapse\+\_\+images\+\_\+vert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}} $\ast$}]{ims,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1513 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ad8288a211a8552fccfdd56b0a9049af0}\label{image_8h_ad8288a211a8552fccfdd56b0a9049af0}} 
+\index{image.h@{image.h}!copy\_image\_into@{copy\_image\_into}}
+\index{copy\_image\_into@{copy\_image\_into}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{copy\_image\_into()}{copy\_image\_into()}}
+{\footnotesize\ttfamily void copy\+\_\+image\+\_\+into (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{src,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{dest }\end{DoxyParamCaption})}
+
+
+
+Definition at line 514 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a937abd4132080239cdf564dfab812b5f}\label{image_8h_a937abd4132080239cdf564dfab812b5f}} 
+\index{image.h@{image.h}!distort\_image@{distort\_image}}
+\index{distort\_image@{distort\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{distort\_image()}{distort\_image()}}
+{\footnotesize\ttfamily void distort\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{float}]{hue,  }\item[{float}]{sat,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1315 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a00ada3426d4f8d491228b878ac08d56a}\label{image_8h_a00ada3426d4f8d491228b878ac08d56a}} 
+\index{image.h@{image.h}!draw\_bbox@{draw\_bbox}}
+\index{draw\_bbox@{draw\_bbox}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{draw\_bbox()}{draw\_bbox()}}
+{\footnotesize\ttfamily void draw\+\_\+bbox (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{a,  }\item[{\mbox{\hyperlink{structbox}{box}}}]{bbox,  }\item[{int}]{w,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a681daaccc6b6466cb24f407ed0b369b6}\label{image_8h_a681daaccc6b6466cb24f407ed0b369b6}} 
+\index{image.h@{image.h}!draw\_box@{draw\_box}}
+\index{draw\_box@{draw\_box}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{draw\_box()}{draw\_box()}}
+{\footnotesize\ttfamily void draw\+\_\+box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{a,  }\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 166 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a0320f25f8508fb74f62f151f2ffb0e73}\label{image_8h_a0320f25f8508fb74f62f151f2ffb0e73}} 
+\index{image.h@{image.h}!embed\_image@{embed\_image}}
+\index{embed\_image@{embed\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{embed\_image()}{embed\_image()}}
+{\footnotesize\ttfamily void embed\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{source,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{dest,  }\item[{int}]{dx,  }\item[{int}]{dy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 428 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_aac856339c78b97ca007639db5effcbf5}\label{image_8h_aac856339c78b97ca007639db5effcbf5}} 
+\index{image.h@{image.h}!exposure\_image@{exposure\_image}}
+\index{exposure\_image@{exposure\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{exposure\_image()}{exposure\_image()}}
+{\footnotesize\ttfamily void exposure\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{float}]{sat }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1307 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a2813bd82c2d03e2ad15fb37d7614392b}\label{image_8h_a2813bd82c2d03e2ad15fb37d7614392b}} 
+\index{image.h@{image.h}!get\_color@{get\_color}}
+\index{get\_color@{get\_color}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{get\_color()}{get\_color()}}
+{\footnotesize\ttfamily float get\+\_\+color (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{int}]{x,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a76e824c4e5202297b817c0aeba10944f}\label{image_8h_a76e824c4e5202297b817c0aeba10944f}} 
+\index{image.h@{image.h}!get\_image\_layer@{get\_image\_layer}}
+\index{get\_image\_layer@{get\_image\_layer}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{get\_image\_layer()}{get\_image\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+image\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{m,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1487 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ae600c0dc7e1152d5234e680f0a48a21f}\label{image_8h_ae600c0dc7e1152d5234e680f0a48a21f}} 
+\index{image.h@{image.h}!hsv\_to\_rgb@{hsv\_to\_rgb}}
+\index{hsv\_to\_rgb@{hsv\_to\_rgb}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{hsv\_to\_rgb()}{hsv\_to\_rgb()}}
+{\footnotesize\ttfamily void hsv\+\_\+to\+\_\+rgb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1149 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ad40ddbc8c117e8d4acef1ee5d54a948f}\label{image_8h_ad40ddbc8c117e8d4acef1ee5d54a948f}} 
+\index{image.h@{image.h}!image\_distance@{image\_distance}}
+\index{image\_distance@{image\_distance}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{image\_distance()}{image\_distance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} image\+\_\+distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{a,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 365 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ab02b4af717c0ad64b5f395c455390348}\label{image_8h_ab02b4af717c0ad64b5f395c455390348}} 
+\index{image.h@{image.h}!letterbox\_image\_into@{letterbox\_image\_into}}
+\index{letterbox\_image\_into@{letterbox\_image\_into}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{letterbox\_image\_into()}{letterbox\_image\_into()}}
+{\footnotesize\ttfamily void letterbox\+\_\+image\+\_\+into (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{boxed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 944 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a28bb9f835989b2f7e908386421c52837}\label{image_8h_a28bb9f835989b2f7e908386421c52837}} 
+\index{image.h@{image.h}!make\_empty\_image@{make\_empty\_image}}
+\index{make\_empty\_image@{make\_empty\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{make\_empty\_image()}{make\_empty\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} make\+\_\+empty\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 742 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a6c67f94fa4a0a2a7d5a1a8e291e6e38b}\label{image_8h_a6c67f94fa4a0a2a7d5a1a8e291e6e38b}} 
+\index{image.h@{image.h}!place\_image@{place\_image}}
+\index{place\_image@{place\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{place\_image()}{place\_image()}}
+{\footnotesize\ttfamily void place\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{dx,  }\item[{int}]{dy,  }\item[{\mbox{\hyperlink{structimage}{image}}}]{canvas }\end{DoxyParamCaption})}
+
+
+
+Definition at line 777 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ab5aa8b00fd5999a26623e97ab2e4939e}\label{image_8h_ab5aa8b00fd5999a26623e97ab2e4939e}} 
+\index{image.h@{image.h}!print\_image@{print\_image}}
+\index{print\_image@{print\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{print\_image()}{print\_image()}}
+{\footnotesize\ttfamily void print\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1496 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_af056322c4fb4fa6322c536b4d31287aa}\label{image_8h_af056322c4fb4fa6322c536b4d31287aa}} 
+\index{image.h@{image.h}!random\_augment\_args@{random\_augment\_args}}
+\index{random\_augment\_args@{random\_augment\_args}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{random\_augment\_args()}{random\_augment\_args()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaugment__args}{augment\+\_\+args}} random\+\_\+augment\+\_\+args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{int}]{low,  }\item[{int}]{high,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1021 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_aaf387b54e7bd2b26f13df3bcdd054dc6}\label{image_8h_aaf387b54e7bd2b26f13df3bcdd054dc6}} 
+\index{image.h@{image.h}!random\_augment\_image@{random\_augment\_image}}
+\index{random\_augment\_image@{random\_augment\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{random\_augment\_image()}{random\_augment\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} random\+\_\+augment\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{float}]{angle,  }\item[{float}]{aspect,  }\item[{int}]{low,  }\item[{int}]{high,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1048 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a16ccc5f4cbac3e5af1accdb9564b7f09}\label{image_8h_a16ccc5f4cbac3e5af1accdb9564b7f09}} 
+\index{image.h@{image.h}!random\_crop\_image@{random\_crop\_image}}
+\index{random\_crop\_image@{random\_crop\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{random\_crop\_image()}{random\_crop\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} random\+\_\+crop\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1013 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a4097f3a404ee4a00e380b602ca8f7241}\label{image_8h_a4097f3a404ee4a00e380b602ca8f7241}} 
+\index{image.h@{image.h}!resize\_max@{resize\_max}}
+\index{resize\_max@{resize\_max}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{resize\_max()}{resize\_max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} resize\+\_\+max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 981 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a8ba0e5a0a203cbff062f48743187c130}\label{image_8h_a8ba0e5a0a203cbff062f48743187c130}} 
+\index{image.h@{image.h}!rgb\_to\_hsv@{rgb\_to\_hsv}}
+\index{rgb\_to\_hsv@{rgb\_to\_hsv}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{rgb\_to\_hsv()}{rgb\_to\_hsv()}}
+{\footnotesize\ttfamily void rgb\+\_\+to\+\_\+hsv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1112 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a050c6b77b28e78d750a3482fcb01927f}\label{image_8h_a050c6b77b28e78d750a3482fcb01927f}} 
+\index{image.h@{image.h}!rgb\_to\_yuv@{rgb\_to\_yuv}}
+\index{rgb\_to\_yuv@{rgb\_to\_yuv}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{rgb\_to\_yuv()}{rgb\_to\_yuv()}}
+{\footnotesize\ttfamily void rgb\+\_\+to\+\_\+yuv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1088 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ad01bd28b7c51abe97fb4128806181a64}\label{image_8h_ad01bd28b7c51abe97fb4128806181a64}} 
+\index{image.h@{image.h}!rotate\_crop\_image@{rotate\_crop\_image}}
+\index{rotate\_crop\_image@{rotate\_crop\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{rotate\_crop\_image()}{rotate\_crop\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} rotate\+\_\+crop\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{float}]{rad,  }\item[{float}]{s,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{float}]{dx,  }\item[{float}]{dy,  }\item[{float}]{aspect }\end{DoxyParamCaption})}
+
+
+
+Definition at line 801 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_abb5117f25454ae5e2ba6e9c8ee0821aa}\label{image_8h_abb5117f25454ae5e2ba6e9c8ee0821aa}} 
+\index{image.h@{image.h}!saturate\_exposure\_image@{saturate\_exposure\_image}}
+\index{saturate\_exposure\_image@{saturate\_exposure\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{saturate\_exposure\_image()}{saturate\_exposure\_image()}}
+{\footnotesize\ttfamily void saturate\+\_\+exposure\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{float}]{sat,  }\item[{float}]{exposure }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1338 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ae7f1745db543dd8f176df95e9b94a13e}\label{image_8h_ae7f1745db543dd8f176df95e9b94a13e}} 
+\index{image.h@{image.h}!saturate\_image@{saturate\_image}}
+\index{saturate\_image@{saturate\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{saturate\_image()}{saturate\_image()}}
+{\footnotesize\ttfamily void saturate\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{float}]{sat }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1286 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a8ec7a748f76954ca8c78f19ae3e0002d}\label{image_8h_a8ec7a748f76954ca8c78f19ae3e0002d}} 
+\index{image.h@{image.h}!scale\_image@{scale\_image}}
+\index{scale\_image@{scale\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{scale\_image()}{scale\_image()}}
+{\footnotesize\ttfamily void scale\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{m,  }\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 851 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_adae9e4347715c8392eed4a923dbc4928}\label{image_8h_adae9e4347715c8392eed4a923dbc4928}} 
+\index{image.h@{image.h}!show\_image\_collapsed@{show\_image\_collapsed}}
+\index{show\_image\_collapsed@{show\_image\_collapsed}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{show\_image\_collapsed()}{show\_image\_collapsed()}}
+{\footnotesize\ttfamily void show\+\_\+image\+\_\+collapsed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{p,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 735 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_aca4506d6b501db162ba28243a3232fea}\label{image_8h_aca4506d6b501db162ba28243a3232fea}} 
+\index{image.h@{image.h}!show\_image\_layers@{show\_image\_layers}}
+\index{show\_image\_layers@{show\_image\_layers}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{show\_image\_layers()}{show\_image\_layers()}}
+{\footnotesize\ttfamily void show\+\_\+image\+\_\+layers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{p,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 723 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a87bd4f423134cfbcbc069e0ac457494a}\label{image_8h_a87bd4f423134cfbcbc069e0ac457494a}} 
+\index{image.h@{image.h}!show\_image\_normalized@{show\_image\_normalized}}
+\index{show\_image\_normalized@{show\_image\_normalized}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{show\_image\_normalized()}{show\_image\_normalized()}}
+{\footnotesize\ttfamily void show\+\_\+image\+\_\+normalized (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1584 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a0f21ecba23959fc3a0c39c6273ef3a07}\label{image_8h_a0f21ecba23959fc3a0c39c6273ef3a07}} 
+\index{image.h@{image.h}!show\_images@{show\_images}}
+\index{show\_images@{show\_images}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{show\_images()}{show\_images()}}
+{\footnotesize\ttfamily void show\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}} $\ast$}]{ims,  }\item[{int}]{n,  }\item[{char $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1592 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_ad6d1584ee81170a5dae88cc76594f1ec}\label{image_8h_ad6d1584ee81170a5dae88cc76594f1ec}} 
+\index{image.h@{image.h}!translate\_image@{translate\_image}}
+\index{translate\_image@{translate\_image}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{translate\_image()}{translate\_image()}}
+{\footnotesize\ttfamily void translate\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{m,  }\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 845 of file image.\+c.
+
+\mbox{\Hypertarget{image_8h_a44ce3c01e7bfa7c499a68a4d454700c8}\label{image_8h_a44ce3c01e7bfa7c499a68a4d454700c8}} 
+\index{image.h@{image.h}!write\_label@{write\_label}}
+\index{write\_label@{write\_label}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{write\_label()}{write\_label()}}
+{\footnotesize\ttfamily void write\+\_\+label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{a,  }\item[{int}]{r,  }\item[{int}]{c,  }\item[{\mbox{\hyperlink{structimage}{image}} $\ast$}]{characters,  }\item[{char $\ast$}]{string,  }\item[{float $\ast$}]{rgb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image_8h_ac021b5af8295cad3f244b101d0c5e49a}\label{image_8h_ac021b5af8295cad3f244b101d0c5e49a}} 
+\index{image.h@{image.h}!yuv\_to\_rgb@{yuv\_to\_rgb}}
+\index{yuv\_to\_rgb@{yuv\_to\_rgb}!image.h@{image.h}}
+\subsubsection{\texorpdfstring{yuv\_to\_rgb()}{yuv\_to\_rgb()}}
+{\footnotesize\ttfamily void yuv\+\_\+to\+\_\+rgb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}}}]{im }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1065 of file image.\+c.
+

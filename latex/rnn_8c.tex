@@ -1,0 +1,195 @@
+\hypertarget{rnn_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/rnn.c File Reference}
+\label{rnn_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/rnn.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/rnn.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfloat__pair}{float\+\_\+pair}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$$\ast$ \mbox{\hyperlink{rnn_8c_a0a7139b881fe23f75d819a460cd81b15}{load\+\_\+files}} (char $\ast$filename, int $\ast$n)
+\item 
+int $\ast$ \mbox{\hyperlink{rnn_8c_ab27ab34f130585e4052c8e978618e626}{read\+\_\+tokenized\+\_\+data}} (char $\ast$filename, size\+\_\+t $\ast$read)
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{rnn_8c_ae9d55a61c7bcbab5b1ab0560ee3f5db7}{read\+\_\+tokens}} (char $\ast$filename, size\+\_\+t $\ast$read)
+\item 
+\mbox{\hyperlink{structfloat__pair}{float\+\_\+pair}} \mbox{\hyperlink{rnn_8c_a82ac78648cd83a1938581521fb26133f}{get\+\_\+rnn\+\_\+token\+\_\+data}} (int $\ast$tokens, size\+\_\+t $\ast$offsets, int characters, size\+\_\+t len, int batch, int steps)
+\item 
+\mbox{\hyperlink{structfloat__pair}{float\+\_\+pair}} \mbox{\hyperlink{rnn_8c_afa5570b99713d0b832050cc88cf30368}{get\+\_\+seq2seq\+\_\+data}} (char $\ast$$\ast$source, char $\ast$$\ast$dest, int n, int characters, size\+\_\+t len, int batch, int steps)
+\item 
+\mbox{\hyperlink{structfloat__pair}{float\+\_\+pair}} \mbox{\hyperlink{rnn_8c_a6f434339093ab6ba43154b8b85624a8b}{get\+\_\+rnn\+\_\+data}} (unsigned char $\ast$text, size\+\_\+t $\ast$offsets, int characters, size\+\_\+t len, int batch, int steps)
+\item 
+void \mbox{\hyperlink{rnn_8c_a29452f6bf562d39cbf38df330b7d036e}{train\+\_\+char\+\_\+rnn}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, int clear, int tokenized)
+\item 
+void \mbox{\hyperlink{rnn_8c_ae28d5d5d624423fddf8dfa518e487814}{print\+\_\+symbol}} (int n, char $\ast$$\ast$tokens)
+\item 
+void \mbox{\hyperlink{rnn_8c_a83c8cf9106e2cf81b55677f13f480a68}{test\+\_\+char\+\_\+rnn}} (char $\ast$cfgfile, char $\ast$weightfile, int num, char $\ast$seed, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, int rseed, char $\ast$token\+\_\+file)
+\item 
+void \mbox{\hyperlink{rnn_8c_a44d1a4872e5dbd4dcc7219d316d8a0ce}{test\+\_\+tactic\+\_\+rnn\+\_\+multi}} (char $\ast$cfgfile, char $\ast$weightfile, int num, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, int rseed, char $\ast$token\+\_\+file)
+\item 
+void \mbox{\hyperlink{rnn_8c_a073f6bb832965a03274a7c44921d19af}{test\+\_\+tactic\+\_\+rnn}} (char $\ast$cfgfile, char $\ast$weightfile, int num, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, int rseed, char $\ast$token\+\_\+file)
+\item 
+void \mbox{\hyperlink{rnn_8c_a1d05f9a2f2ee793d0ce58ace171b9efa}{valid\+\_\+tactic\+\_\+rnn}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$seed)
+\item 
+void \mbox{\hyperlink{rnn_8c_a8245b631d7f334904524890d518391a8}{valid\+\_\+char\+\_\+rnn}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$seed)
+\item 
+void \mbox{\hyperlink{rnn_8c_ab6d6d01830e9a7ea70a2bb524f61998d}{vec\+\_\+char\+\_\+rnn}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$seed)
+\item 
+void \mbox{\hyperlink{rnn_8c_a7fd5ff39b30355662b36d8f1c3efae78}{run\+\_\+char\+\_\+rnn}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rnn_8c_a6f434339093ab6ba43154b8b85624a8b}\label{rnn_8c_a6f434339093ab6ba43154b8b85624a8b}} 
+\index{rnn.c@{rnn.c}!get\_rnn\_data@{get\_rnn\_data}}
+\index{get\_rnn\_data@{get\_rnn\_data}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{get\_rnn\_data()}{get\_rnn\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structfloat__pair}{float\+\_\+pair}} get\+\_\+rnn\+\_\+data (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{text,  }\item[{size\+\_\+t $\ast$}]{offsets,  }\item[{int}]{characters,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{batch,  }\item[{int}]{steps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 127 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a82ac78648cd83a1938581521fb26133f}\label{rnn_8c_a82ac78648cd83a1938581521fb26133f}} 
+\index{rnn.c@{rnn.c}!get\_rnn\_token\_data@{get\_rnn\_token\_data}}
+\index{get\_rnn\_token\_data@{get\_rnn\_token\_data}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{get\_rnn\_token\_data()}{get\_rnn\_token\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structfloat__pair}{float\+\_\+pair}} get\+\_\+rnn\+\_\+token\+\_\+data (\begin{DoxyParamCaption}\item[{int $\ast$}]{tokens,  }\item[{size\+\_\+t $\ast$}]{offsets,  }\item[{int}]{characters,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{batch,  }\item[{int}]{steps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_afa5570b99713d0b832050cc88cf30368}\label{rnn_8c_afa5570b99713d0b832050cc88cf30368}} 
+\index{rnn.c@{rnn.c}!get\_seq2seq\_data@{get\_seq2seq\_data}}
+\index{get\_seq2seq\_data@{get\_seq2seq\_data}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{get\_seq2seq\_data()}{get\_seq2seq\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structfloat__pair}{float\+\_\+pair}} get\+\_\+seq2seq\+\_\+data (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{source,  }\item[{char $\ast$$\ast$}]{dest,  }\item[{int}]{n,  }\item[{int}]{characters,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{batch,  }\item[{int}]{steps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 96 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a0a7139b881fe23f75d819a460cd81b15}\label{rnn_8c_a0a7139b881fe23f75d819a460cd81b15}} 
+\index{rnn.c@{rnn.c}!load\_files@{load\_files}}
+\index{load\_files@{load\_files}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{load\_files()}{load\_files()}}
+{\footnotesize\ttfamily unsigned char$\ast$$\ast$ load\+\_\+files (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_ae28d5d5d624423fddf8dfa518e487814}\label{rnn_8c_ae28d5d5d624423fddf8dfa518e487814}} 
+\index{rnn.c@{rnn.c}!print\_symbol@{print\_symbol}}
+\index{print\_symbol@{print\_symbol}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{print\_symbol()}{print\_symbol()}}
+{\footnotesize\ttfamily void print\+\_\+symbol (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$$\ast$}]{tokens }\end{DoxyParamCaption})}
+
+
+
+Definition at line 237 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_ab27ab34f130585e4052c8e978618e626}\label{rnn_8c_ab27ab34f130585e4052c8e978618e626}} 
+\index{rnn.c@{rnn.c}!read\_tokenized\_data@{read\_tokenized\_data}}
+\index{read\_tokenized\_data@{read\_tokenized\_data}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{read\_tokenized\_data()}{read\_tokenized\_data()}}
+{\footnotesize\ttfamily int$\ast$ read\+\_\+tokenized\+\_\+data (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{size\+\_\+t $\ast$}]{read }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_ae9d55a61c7bcbab5b1ab0560ee3f5db7}\label{rnn_8c_ae9d55a61c7bcbab5b1ab0560ee3f5db7}} 
+\index{rnn.c@{rnn.c}!read\_tokens@{read\_tokens}}
+\index{read\_tokens@{read\_tokens}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{read\_tokens()}{read\_tokens()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ read\+\_\+tokens (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{size\+\_\+t $\ast$}]{read }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a7fd5ff39b30355662b36d8f1c3efae78}\label{rnn_8c_a7fd5ff39b30355662b36d8f1c3efae78}} 
+\index{rnn.c@{rnn.c}!run\_char\_rnn@{run\_char\_rnn}}
+\index{run\_char\_rnn@{run\_char\_rnn}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{run\_char\_rnn()}{run\_char\_rnn()}}
+{\footnotesize\ttfamily void run\+\_\+char\+\_\+rnn (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 519 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a83c8cf9106e2cf81b55677f13f480a68}\label{rnn_8c_a83c8cf9106e2cf81b55677f13f480a68}} 
+\index{rnn.c@{rnn.c}!test\_char\_rnn@{test\_char\_rnn}}
+\index{test\_char\_rnn@{test\_char\_rnn}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{test\_char\_rnn()}{test\_char\_rnn()}}
+{\footnotesize\ttfamily void test\+\_\+char\+\_\+rnn (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{num,  }\item[{char $\ast$}]{seed,  }\item[{float}]{temp,  }\item[{int}]{rseed,  }\item[{char $\ast$}]{token\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Definition at line 245 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a073f6bb832965a03274a7c44921d19af}\label{rnn_8c_a073f6bb832965a03274a7c44921d19af}} 
+\index{rnn.c@{rnn.c}!test\_tactic\_rnn@{test\_tactic\_rnn}}
+\index{test\_tactic\_rnn@{test\_tactic\_rnn}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{test\_tactic\_rnn()}{test\_tactic\_rnn()}}
+{\footnotesize\ttfamily void test\+\_\+tactic\+\_\+rnn (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{num,  }\item[{float}]{temp,  }\item[{int}]{rseed,  }\item[{char $\ast$}]{token\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Definition at line 344 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a44d1a4872e5dbd4dcc7219d316d8a0ce}\label{rnn_8c_a44d1a4872e5dbd4dcc7219d316d8a0ce}} 
+\index{rnn.c@{rnn.c}!test\_tactic\_rnn\_multi@{test\_tactic\_rnn\_multi}}
+\index{test\_tactic\_rnn\_multi@{test\_tactic\_rnn\_multi}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{test\_tactic\_rnn\_multi()}{test\_tactic\_rnn\_multi()}}
+{\footnotesize\ttfamily void test\+\_\+tactic\+\_\+rnn\+\_\+multi (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int}]{num,  }\item[{float}]{temp,  }\item[{int}]{rseed,  }\item[{char $\ast$}]{token\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Definition at line 299 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a29452f6bf562d39cbf38df330b7d036e}\label{rnn_8c_a29452f6bf562d39cbf38df330b7d036e}} 
+\index{rnn.c@{rnn.c}!train\_char\_rnn@{train\_char\_rnn}}
+\index{train\_char\_rnn@{train\_char\_rnn}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{train\_char\_rnn()}{train\_char\_rnn()}}
+{\footnotesize\ttfamily void train\+\_\+char\+\_\+rnn (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{int}]{clear,  }\item[{int}]{tokenized }\end{DoxyParamCaption})}
+
+
+
+Definition at line 157 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a8245b631d7f334904524890d518391a8}\label{rnn_8c_a8245b631d7f334904524890d518391a8}} 
+\index{rnn.c@{rnn.c}!valid\_char\_rnn@{valid\_char\_rnn}}
+\index{valid\_char\_rnn@{valid\_char\_rnn}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{valid\_char\_rnn()}{valid\_char\_rnn()}}
+{\footnotesize\ttfamily void valid\+\_\+char\+\_\+rnn (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{seed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 435 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_a1d05f9a2f2ee793d0ce58ace171b9efa}\label{rnn_8c_a1d05f9a2f2ee793d0ce58ace171b9efa}} 
+\index{rnn.c@{rnn.c}!valid\_tactic\_rnn@{valid\_tactic\_rnn}}
+\index{valid\_tactic\_rnn@{valid\_tactic\_rnn}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{valid\_tactic\_rnn()}{valid\_tactic\_rnn()}}
+{\footnotesize\ttfamily void valid\+\_\+tactic\+\_\+rnn (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{seed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 386 of file rnn.\+c.
+
+\mbox{\Hypertarget{rnn_8c_ab6d6d01830e9a7ea70a2bb524f61998d}\label{rnn_8c_ab6d6d01830e9a7ea70a2bb524f61998d}} 
+\index{rnn.c@{rnn.c}!vec\_char\_rnn@{vec\_char\_rnn}}
+\index{vec\_char\_rnn@{vec\_char\_rnn}!rnn.c@{rnn.c}}
+\subsubsection{\texorpdfstring{vec\_char\_rnn()}{vec\_char\_rnn()}}
+{\footnotesize\ttfamily void vec\+\_\+char\+\_\+rnn (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{seed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 473 of file rnn.\+c.
+

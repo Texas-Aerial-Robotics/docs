@@ -1,0 +1,83 @@
+\hypertarget{activations_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/activations.h File Reference}
+\label{activations_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/activations.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/activations.h}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} \mbox{\hyperlink{activations_8h_a8ffef776df5bf3350dccbbe580287a20}{get\+\_\+activation}} (char $\ast$s)
+\item 
+char $\ast$ \mbox{\hyperlink{activations_8h_a2bc0a3b9240e0791be1fd34fa59db11d}{get\+\_\+activation\+\_\+string}} (\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} a)
+\item 
+float \mbox{\hyperlink{activations_8h_a031d574d016f6a31eae5bbddfbac3dc5}{activate}} (float \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} a)
+\item 
+float \mbox{\hyperlink{activations_8h_a9c24980bc3a95982aa908ff1d6f89ebd}{gradient}} (float \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} a)
+\item 
+void \mbox{\hyperlink{activations_8h_a849f0a9f9df2f434c57c71d5520c1d95}{gradient\+\_\+array}} (const float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const int n, const \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} a, float $\ast$delta)
+\item 
+void \mbox{\hyperlink{activations_8h_a9c58c2e7b5e7ea90cf75f18c97e78dc8}{activate\+\_\+array}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, const int n, const \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{activations_8h_a031d574d016f6a31eae5bbddfbac3dc5}\label{activations_8h_a031d574d016f6a31eae5bbddfbac3dc5}} 
+\index{activations.h@{activations.h}!activate@{activate}}
+\index{activate@{activate}!activations.h@{activations.h}}
+\subsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily float activate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file activations.\+c.
+
+\mbox{\Hypertarget{activations_8h_a9c58c2e7b5e7ea90cf75f18c97e78dc8}\label{activations_8h_a9c58c2e7b5e7ea90cf75f18c97e78dc8}} 
+\index{activations.h@{activations.h}!activate\_array@{activate\_array}}
+\index{activate\_array@{activate\_array}!activations.h@{activations.h}}
+\subsubsection{\texorpdfstring{activate\_array()}{activate\_array()}}
+{\footnotesize\ttfamily void activate\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{const int}]{n,  }\item[{const \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file activations.\+c.
+
+\mbox{\Hypertarget{activations_8h_a8ffef776df5bf3350dccbbe580287a20}\label{activations_8h_a8ffef776df5bf3350dccbbe580287a20}} 
+\index{activations.h@{activations.h}!get\_activation@{get\_activation}}
+\index{get\_activation@{get\_activation}!activations.h@{activations.h}}
+\subsubsection{\texorpdfstring{get\_activation()}{get\_activation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} get\+\_\+activation (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file activations.\+c.
+
+\mbox{\Hypertarget{activations_8h_a2bc0a3b9240e0791be1fd34fa59db11d}\label{activations_8h_a2bc0a3b9240e0791be1fd34fa59db11d}} 
+\index{activations.h@{activations.h}!get\_activation\_string@{get\_activation\_string}}
+\index{get\_activation\_string@{get\_activation\_string}!activations.h@{activations.h}}
+\subsubsection{\texorpdfstring{get\_activation\_string()}{get\_activation\_string()}}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+activation\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file activations.\+c.
+
+\mbox{\Hypertarget{activations_8h_a9c24980bc3a95982aa908ff1d6f89ebd}\label{activations_8h_a9c24980bc3a95982aa908ff1d6f89ebd}} 
+\index{activations.h@{activations.h}!gradient@{gradient}}
+\index{gradient@{gradient}!activations.h@{activations.h}}
+\subsubsection{\texorpdfstring{gradient()}{gradient()}}
+{\footnotesize\ttfamily float gradient (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file activations.\+c.
+
+\mbox{\Hypertarget{activations_8h_a849f0a9f9df2f434c57c71d5520c1d95}\label{activations_8h_a849f0a9f9df2f434c57c71d5520c1d95}} 
+\index{activations.h@{activations.h}!gradient\_array@{gradient\_array}}
+\index{gradient\_array@{gradient\_array}!activations.h@{activations.h}}
+\subsubsection{\texorpdfstring{gradient\_array()}{gradient\_array()}}
+{\footnotesize\ttfamily void gradient\+\_\+array (\begin{DoxyParamCaption}\item[{const float $\ast$}]{x,  }\item[{const int}]{n,  }\item[{const \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{a,  }\item[{float $\ast$}]{delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file activations.\+c.
+

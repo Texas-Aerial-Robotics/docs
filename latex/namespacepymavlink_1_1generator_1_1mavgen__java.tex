@@ -1,0 +1,140 @@
+\hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java}{}\section{pymavlink.\+generator.\+mavgen\+\_\+java Namespace Reference}
+\label{namespacepymavlink_1_1generator_1_1mavgen__java}\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavgen__java_1_1mav__include}{mav\+\_\+include}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a28c5498b088ff49d4396c50a899e12e5}{generate\+\_\+enums}} (basename, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a813b049b70acedf90a39e62dd608bad7}{generate\+\_\+\+C\+RC}} (directory, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a724ccefca61f69197f6cdfde059d7274}{generate\+\_\+message\+\_\+h}} (directory, m)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a02449b086b78cf9462077c13ba63a2f0}{generate\+\_\+\+M\+A\+V\+Link\+Message}} (directory, xml\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_ab7e11242a8e14499326d0ab7de04d9d1}{copy\+\_\+fixed\+\_\+headers}} (directory, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a23f35fe059a4de4d3ebbd2e148f86931}{mavfmt}} (field, type\+Info=False)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a73c50060fdb0745de2d34d37c3b5c22c}{generate\+\_\+one}} (basename, xml)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a1c6932c354d39a0d5ce72d1d905a73ae}{generate}} (basename, xml\+\_\+list)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen__java_a9811e8e58e02d015df7851ec8346e896}{t}} = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}    Parse a MAVLink protocol XML file and generate a Java implementation
+    
+    Copyright Andrew Tridgell 2011
+    Released under GNU GPL version 3 or later\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_ab7e11242a8e14499326d0ab7de04d9d1}\label{namespacepymavlink_1_1generator_1_1mavgen__java_ab7e11242a8e14499326d0ab7de04d9d1}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!copy\_fixed\_headers@{copy\_fixed\_headers}}
+\index{copy\_fixed\_headers@{copy\_fixed\_headers}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{copy\_fixed\_headers()}{copy\_fixed\_headers()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+copy\+\_\+fixed\+\_\+headers (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}copy the fixed protocol headers to the target directory\end{DoxyVerb}
+ 
+
+Definition at line 407 of file mavgen\+\_\+java.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a1c6932c354d39a0d5ce72d1d905a73ae}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a1c6932c354d39a0d5ce72d1d905a73ae}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!generate@{generate}}
+\index{generate@{generate}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+generate (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate complete MAVLink Java implemenation\end{DoxyVerb}
+ 
+
+Definition at line 626 of file mavgen\+\_\+java.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a813b049b70acedf90a39e62dd608bad7}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a813b049b70acedf90a39e62dd608bad7}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!generate\_CRC@{generate\_CRC}}
+\index{generate\_CRC@{generate\_CRC}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{generate\_CRC()}{generate\_CRC()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+generate\+\_\+\+C\+RC (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file mavgen\+\_\+java.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a28c5498b088ff49d4396c50a899e12e5}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a28c5498b088ff49d4396c50a899e12e5}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!generate\_enums@{generate\_enums}}
+\index{generate\_enums@{generate\_enums}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{generate\_enums()}{generate\_enums()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+generate\+\_\+enums (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate main header per XML file\end{DoxyVerb}
+ 
+
+Definition at line 18 of file mavgen\+\_\+java.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a02449b086b78cf9462077c13ba63a2f0}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a02449b086b78cf9462077c13ba63a2f0}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!generate\_MAVLinkMessage@{generate\_MAVLinkMessage}}
+\index{generate\_MAVLinkMessage@{generate\_MAVLinkMessage}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{generate\_MAVLinkMessage()}{generate\_MAVLinkMessage()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+generate\+\_\+\+M\+A\+V\+Link\+Message (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{xml\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 222 of file mavgen\+\_\+java.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a724ccefca61f69197f6cdfde059d7274}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a724ccefca61f69197f6cdfde059d7274}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!generate\_message\_h@{generate\_message\_h}}
+\index{generate\_message\_h@{generate\_message\_h}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{generate\_message\_h()}{generate\_message\_h()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+generate\+\_\+message\+\_\+h (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{m }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate per-message header for a XML file\end{DoxyVerb}
+ 
+
+Definition at line 127 of file mavgen\+\_\+java.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a73c50060fdb0745de2d34d37c3b5c22c}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a73c50060fdb0745de2d34d37c3b5c22c}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!generate\_one@{generate\_one}}
+\index{generate\_one@{generate\_one}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{generate\_one()}{generate\_one()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+generate\+\_\+one (\begin{DoxyParamCaption}\item[{}]{basename,  }\item[{}]{xml }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate headers for one XML file\end{DoxyVerb}
+ 
+
+Definition at line 453 of file mavgen\+\_\+java.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a23f35fe059a4de4d3ebbd2e148f86931}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a23f35fe059a4de4d3ebbd2e148f86931}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!mavfmt@{mavfmt}}
+\index{mavfmt@{mavfmt}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{mavfmt()}{mavfmt()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen\+\_\+java.\+mavfmt (\begin{DoxyParamCaption}\item[{}]{field,  }\item[{}]{type\+Info = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}work out the struct format for a type\end{DoxyVerb}
+ 
+
+Definition at line 431 of file mavgen\+\_\+java.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen__java_a9811e8e58e02d015df7851ec8346e896}\label{namespacepymavlink_1_1generator_1_1mavgen__java_a9811e8e58e02d015df7851ec8346e896}} 
+\index{pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}!t@{t}}
+\index{t@{t}!pymavlink.generator.mavgen\_java@{pymavlink.generator.mavgen\_java}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavgen\+\_\+java.\+t = \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavtemplate_1_1MAVTemplate}{mavtemplate.\+M\+A\+V\+Template}}()}
+
+
+
+Definition at line 16 of file mavgen\+\_\+java.\+py.
+

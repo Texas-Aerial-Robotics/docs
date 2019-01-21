@@ -1,0 +1,344 @@
+\hypertarget{mission7FlightCode_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Mission8\+\_\+\+Out\+Of\+Controls/src/mission7\+Flight\+Code.cpp File Reference}
+\label{mission7FlightCode_8cpp}\index{/home/eric/catkin\_ws/src/Mission8\_OutOfControls/src/mission7FlightCode.cpp@{/home/eric/catkin\_ws/src/Mission8\_OutOfControls/src/mission7FlightCode.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Float64.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+Bool.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Set\+Mode.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+State.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Position\+Target.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose2\+D.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Command\+T\+O\+L.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Laser\+Scan.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ros/duration.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}{state\+\_\+cb}} (const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_afa0f9061a6152b26289dd2c93b295847}{pose\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_a7904bc657e27f34a45a8b7bd594fbc8e}{mode\+\_\+cb}} (const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_ac02bc66977d69b6ca40c35c689b15289}{scan\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_a9c3baea5ae305330b4692ba0f8b23869}{set\+Heading}} (float heading)
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_ae70ce96a1c22c8518aa262a3232889d5}{set\+Heading\+\_\+cb}} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_af7166d52af865f29695cb0746d47918e}{set\+Destination}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_a13da7683d4a37f0a180cd00e3ad04ff0}{init\+\_\+ros}} ()
+\item 
+void \mbox{\hyperlink{mission7FlightCode_8cpp_ad855d0dc2b0026beae4b33caffdc7ac2}{waypoint\+\_\+update}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&msg)
+\item 
+int \mbox{\hyperlink{mission7FlightCode_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mavros\+\_\+msgs\+::\+State \mbox{\hyperlink{mission7FlightCode_8cpp_aa03a6f341db74b895fa5c862973dd941}{current\+\_\+state}}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{mission7FlightCode_8cpp_ab9674253569259608088097e713c6905}{current\+\_\+pose}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{mission7FlightCode_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}{waypoint}}
+\item 
+sensor\+\_\+msgs\+::\+Laser\+Scan \mbox{\hyperlink{mission7FlightCode_8cpp_a4ddf1a7e9c3afbd07ef62141e50ee3b6}{current\+\_\+2\+D\+\_\+scan}}
+\item 
+std\+\_\+msgs\+::\+String \mbox{\hyperlink{mission7FlightCode_8cpp_a15cc75999325ccc746ad616cc6ffcf63}{M\+O\+DE}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_a1bfd9feb2dd11b3f55fa3f191f021115}{G\+Y\+M\+\_\+\+O\+F\+F\+S\+ET}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_ab56799f110a6fbd87dc59c9c171516dc}{x\+\_\+min}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_a73fc13d83638687d92d5ccf9e4fe1722}{x\+\_\+max}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_a82405015dd45042774ac84009224bfe0}{y\+\_\+min}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_af518e87d5d4659e5d34c34c39253be31}{y\+\_\+max}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_ab7008d31ac4fa776d1bb38fa9aaf88d2}{z\+\_\+min}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_aff08dd48e7d75394795f798133985c94}{z\+\_\+max}}
+\item 
+float \mbox{\hyperlink{mission7FlightCode_8cpp_a04f048796d0d4e419e496b6193721e87}{current\+\_\+heading}}
+\item 
+double \mbox{\hyperlink{mission7FlightCode_8cpp_ad707d221b70a1d0ebe24cb530a3aa09c}{R\+U\+N\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+I\+ME}} = 0
+\item 
+bool \mbox{\hyperlink{mission7FlightCode_8cpp_a802a2f6341dc295ea76ed453b77293fc}{currently\+Avoiding}} = false
+\item 
+bool \mbox{\hyperlink{mission7FlightCode_8cpp_addf26ee3727868d6c79dd00ad259a8ed}{lidar\+Present}} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a13da7683d4a37f0a180cd00e3ad04ff0}\label{mission7FlightCode_8cpp_a13da7683d4a37f0a180cd00e3ad04ff0}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!init\_ros@{init\_ros}}
+\index{init\_ros@{init\_ros}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{init\_ros()}{init\_ros()}}
+{\footnotesize\ttfamily void init\+\_\+ros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 114 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{mission7FlightCode_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!main@{main}}
+\index{main@{main}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 153 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a7904bc657e27f34a45a8b7bd594fbc8e}\label{mission7FlightCode_8cpp_a7904bc657e27f34a45a8b7bd594fbc8e}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!mode\_cb@{mode\_cb}}
+\index{mode\_cb@{mode\_cb}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{mode\_cb()}{mode\_cb()}}
+{\footnotesize\ttfamily void mode\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_afa0f9061a6152b26289dd2c93b295847}\label{mission7FlightCode_8cpp_afa0f9061a6152b26289dd2c93b295847}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_ac02bc66977d69b6ca40c35c689b15289}\label{mission7FlightCode_8cpp_ac02bc66977d69b6ca40c35c689b15289}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!scan\_cb@{scan\_cb}}
+\index{scan\_cb@{scan\_cb}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{scan\_cb()}{scan\_cb()}}
+{\footnotesize\ttfamily void scan\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_af7166d52af865f29695cb0746d47918e}\label{mission7FlightCode_8cpp_af7166d52af865f29695cb0746d47918e}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!setDestination@{setDestination}}
+\index{setDestination@{setDestination}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{setDestination()}{setDestination()}}
+{\footnotesize\ttfamily void set\+Destination (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a9c3baea5ae305330b4692ba0f8b23869}\label{mission7FlightCode_8cpp_a9c3baea5ae305330b4692ba0f8b23869}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!setHeading@{setHeading}}
+\index{setHeading@{setHeading}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{setHeading()}{setHeading()}}
+{\footnotesize\ttfamily void set\+Heading (\begin{DoxyParamCaption}\item[{float}]{heading }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_ae70ce96a1c22c8518aa262a3232889d5}\label{mission7FlightCode_8cpp_ae70ce96a1c22c8518aa262a3232889d5}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!setHeading\_cb@{setHeading\_cb}}
+\index{setHeading\_cb@{setHeading\_cb}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{setHeading\_cb()}{setHeading\_cb()}}
+{\footnotesize\ttfamily void set\+Heading\+\_\+cb (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}\label{mission7FlightCode_8cpp_a05b0e3da49b65a1eb9907815a9a894a8}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!state\_cb@{state\_cb}}
+\index{state\_cb@{state\_cb}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{state\_cb()}{state\_cb()}}
+{\footnotesize\ttfamily void state\+\_\+cb (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+State\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_ad855d0dc2b0026beae4b33caffdc7ac2}\label{mission7FlightCode_8cpp_ad855d0dc2b0026beae4b33caffdc7ac2}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!waypoint\_update@{waypoint\_update}}
+\index{waypoint\_update@{waypoint\_update}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{waypoint\_update()}{waypoint\_update()}}
+{\footnotesize\ttfamily void waypoint\+\_\+update (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file mission7\+Flight\+Code.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a4ddf1a7e9c3afbd07ef62141e50ee3b6}\label{mission7FlightCode_8cpp_a4ddf1a7e9c3afbd07ef62141e50ee3b6}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!current\_2D\_scan@{current\_2D\_scan}}
+\index{current\_2D\_scan@{current\_2D\_scan}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{current\_2D\_scan}{current\_2D\_scan}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Laser\+Scan current\+\_\+2\+D\+\_\+scan}
+
+
+
+Definition at line 26 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a04f048796d0d4e419e496b6193721e87}\label{mission7FlightCode_8cpp_a04f048796d0d4e419e496b6193721e87}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!current\_heading@{current\_heading}}
+\index{current\_heading@{current\_heading}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{current\_heading}{current\_heading}}
+{\footnotesize\ttfamily float current\+\_\+heading}
+
+
+
+Definition at line 36 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_ab9674253569259608088097e713c6905}\label{mission7FlightCode_8cpp_ab9674253569259608088097e713c6905}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry current\+\_\+pose}
+
+
+
+Definition at line 24 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_aa03a6f341db74b895fa5c862973dd941}\label{mission7FlightCode_8cpp_aa03a6f341db74b895fa5c862973dd941}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily mavros\+\_\+msgs\+::\+State current\+\_\+state}
+
+
+
+Definition at line 23 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a802a2f6341dc295ea76ed453b77293fc}\label{mission7FlightCode_8cpp_a802a2f6341dc295ea76ed453b77293fc}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!currentlyAvoiding@{currentlyAvoiding}}
+\index{currentlyAvoiding@{currentlyAvoiding}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{currentlyAvoiding}{currentlyAvoiding}}
+{\footnotesize\ttfamily bool currently\+Avoiding = false}
+
+
+
+Definition at line 38 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a1bfd9feb2dd11b3f55fa3f191f021115}\label{mission7FlightCode_8cpp_a1bfd9feb2dd11b3f55fa3f191f021115}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!GYM\_OFFSET@{GYM\_OFFSET}}
+\index{GYM\_OFFSET@{GYM\_OFFSET}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{GYM\_OFFSET}{GYM\_OFFSET}}
+{\footnotesize\ttfamily float G\+Y\+M\+\_\+\+O\+F\+F\+S\+ET}
+
+
+
+Definition at line 29 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_addf26ee3727868d6c79dd00ad259a8ed}\label{mission7FlightCode_8cpp_addf26ee3727868d6c79dd00ad259a8ed}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!lidarPresent@{lidarPresent}}
+\index{lidarPresent@{lidarPresent}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{lidarPresent}{lidarPresent}}
+{\footnotesize\ttfamily bool lidar\+Present = true}
+
+
+
+Definition at line 39 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a15cc75999325ccc746ad616cc6ffcf63}\label{mission7FlightCode_8cpp_a15cc75999325ccc746ad616cc6ffcf63}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!MODE@{MODE}}
+\index{MODE@{MODE}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{MODE}{MODE}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+String M\+O\+DE}
+
+
+
+Definition at line 28 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_ad707d221b70a1d0ebe24cb530a3aa09c}\label{mission7FlightCode_8cpp_ad707d221b70a1d0ebe24cb530a3aa09c}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!RUN\_START\_TIME@{RUN\_START\_TIME}}
+\index{RUN\_START\_TIME@{RUN\_START\_TIME}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{RUN\_START\_TIME}{RUN\_START\_TIME}}
+{\footnotesize\ttfamily double R\+U\+N\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+I\+ME = 0}
+
+
+
+Definition at line 37 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}\label{mission7FlightCode_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{waypoint}{waypoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped waypoint}
+
+
+
+Definition at line 25 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a73fc13d83638687d92d5ccf9e4fe1722}\label{mission7FlightCode_8cpp_a73fc13d83638687d92d5ccf9e4fe1722}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!x\_max@{x\_max}}
+\index{x\_max@{x\_max}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{x\_max}{x\_max}}
+{\footnotesize\ttfamily float x\+\_\+max}
+
+
+
+Definition at line 31 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_ab56799f110a6fbd87dc59c9c171516dc}\label{mission7FlightCode_8cpp_ab56799f110a6fbd87dc59c9c171516dc}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!x\_min@{x\_min}}
+\index{x\_min@{x\_min}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{x\_min}{x\_min}}
+{\footnotesize\ttfamily float x\+\_\+min}
+
+
+
+Definition at line 30 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_af518e87d5d4659e5d34c34c39253be31}\label{mission7FlightCode_8cpp_af518e87d5d4659e5d34c34c39253be31}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!y\_max@{y\_max}}
+\index{y\_max@{y\_max}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{y\_max}{y\_max}}
+{\footnotesize\ttfamily float y\+\_\+max}
+
+
+
+Definition at line 33 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_a82405015dd45042774ac84009224bfe0}\label{mission7FlightCode_8cpp_a82405015dd45042774ac84009224bfe0}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!y\_min@{y\_min}}
+\index{y\_min@{y\_min}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{y\_min}{y\_min}}
+{\footnotesize\ttfamily float y\+\_\+min}
+
+
+
+Definition at line 32 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_aff08dd48e7d75394795f798133985c94}\label{mission7FlightCode_8cpp_aff08dd48e7d75394795f798133985c94}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!z\_max@{z\_max}}
+\index{z\_max@{z\_max}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{z\_max}{z\_max}}
+{\footnotesize\ttfamily float z\+\_\+max}
+
+
+
+Definition at line 35 of file mission7\+Flight\+Code.\+cpp.
+
+\mbox{\Hypertarget{mission7FlightCode_8cpp_ab7008d31ac4fa776d1bb38fa9aaf88d2}\label{mission7FlightCode_8cpp_ab7008d31ac4fa776d1bb38fa9aaf88d2}} 
+\index{mission7FlightCode.cpp@{mission7FlightCode.cpp}!z\_min@{z\_min}}
+\index{z\_min@{z\_min}!mission7FlightCode.cpp@{mission7FlightCode.cpp}}
+\subsubsection{\texorpdfstring{z\_min}{z\_min}}
+{\footnotesize\ttfamily float z\+\_\+min}
+
+
+
+Definition at line 34 of file mission7\+Flight\+Code.\+cpp.
+

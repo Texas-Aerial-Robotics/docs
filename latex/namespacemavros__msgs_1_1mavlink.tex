@@ -1,0 +1,65 @@
+\hypertarget{namespacemavros__msgs_1_1mavlink}{}\section{mavros\+\_\+msgs\+::mavlink Namespace Reference}
+\label{namespacemavros__msgs_1_1mavlink}\index{mavros\_msgs::mavlink@{mavros\_msgs::mavlink}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacemavros__msgs_1_1mavlink_ad83510319eb707cba00260e62ece77f5}{convert}} (const mavros\+\_\+msgs\+::\+Mavlink \&rmsg, \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} \&mmsg)
+\begin{DoxyCompactList}\small\item\em Convert mavros\+\_\+msgs/\+Mavlink message to mavlink\+\_\+message\+\_\+t. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemavros__msgs_1_1mavlink_ad5a4915ea26c60f70503efe0a344ee35}{convert}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} \&mmsg, mavros\+\_\+msgs\+::\+Mavlink \&rmsg, uint8\+\_\+t framing\+\_\+status=mavros\+\_\+msgs\+::\+Mavlink\+::\+F\+R\+A\+M\+I\+N\+G\+\_\+\+OK)
+\begin{DoxyCompactList}\small\item\em Convert mavlink\+\_\+message\+\_\+t to mavros/\+Mavlink. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacemavros__msgs_1_1mavlink_ad83510319eb707cba00260e62ece77f5}\label{namespacemavros__msgs_1_1mavlink_ad83510319eb707cba00260e62ece77f5}} 
+\index{mavros\_msgs::mavlink@{mavros\_msgs::mavlink}!convert@{convert}}
+\index{convert@{convert}!mavros\_msgs::mavlink@{mavros\_msgs::mavlink}}
+\subsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mavros\+\_\+msgs\+::mavlink\+::convert (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+Mavlink \&}]{rmsg,  }\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} \&}]{mmsg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert mavros\+\_\+msgs/\+Mavlink message to mavlink\+\_\+message\+\_\+t. 
+
+\begin{DoxyNote}{Note}
+signature vector should be empty for unsigned OR M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+B\+L\+O\+CK size for signed messages
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rmsg} & mavros\+\_\+msgs/\+Mavlink message \\
+\hline
+\mbox{\texttt{ out}}  & {\em mmsg} & mavlink\+\_\+message\+\_\+t struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file mavlink\+\_\+convert.\+h.
+
+\mbox{\Hypertarget{namespacemavros__msgs_1_1mavlink_ad5a4915ea26c60f70503efe0a344ee35}\label{namespacemavros__msgs_1_1mavlink_ad5a4915ea26c60f70503efe0a344ee35}} 
+\index{mavros\_msgs::mavlink@{mavros\_msgs::mavlink}!convert@{convert}}
+\index{convert@{convert}!mavros\_msgs::mavlink@{mavros\_msgs::mavlink}}
+\subsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool mavros\+\_\+msgs\+::mavlink\+::convert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} \&}]{mmsg,  }\item[{mavros\+\_\+msgs\+::\+Mavlink \&}]{rmsg,  }\item[{uint8\+\_\+t}]{framing\+\_\+status = {\ttfamily mavros\+\_\+msgs\+:\+:Mavlink\+:\+:FRAMING\+\_\+OK} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert mavlink\+\_\+message\+\_\+t to mavros/\+Mavlink. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mmsg} & mavlink\+\_\+message\+\_\+t struct \\
+\hline
+\mbox{\texttt{ out}}  & {\em rmsg} & mavros\+\_\+msgs/\+Mavlink message \\
+\hline
+\mbox{\texttt{ in}}  & {\em framing\+\_\+status} & framing parse result (OK, B\+A\+D\+\_\+\+C\+RC or B\+A\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, this convertion can\textquotesingle{}t fail 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file mavlink\+\_\+convert.\+h.
+

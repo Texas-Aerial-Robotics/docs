@@ -1,0 +1,202 @@
+\subsection*{Overview}
+
+This is a R\+OS package developed for object detection in camera images. You only look once (Y\+O\+LO) is a state-\/of-\/the-\/art, real-\/time object detection system. In the following R\+OS package you are able to use Y\+O\+LO (V3) on G\+PU and C\+PU. The pre-\/trained model of the convolutional neural network is able to detect pre-\/trained classes including the data set from V\+OC and C\+O\+CO (e.\+g. aeroplane, bicycle, bird, boat, bottle, bus, car, cat, chair, cow, dining table, dog, horse, motorbike, person, potted plant, sheep, sofa, train and tv monitor) or you can also create a network with your own detection objects. For more information about Y\+O\+LO, Darknet, available training data and training Y\+O\+LO see the following link\+: \href{http://pjreddie.com/darknet/yolo/}{\texttt{ Y\+O\+L\+O\+: Real-\/\+Time Object Detection}}.
+
+The Y\+O\+LO packages have been tested under R\+OS Kinetic and Ubuntu 16.\+04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
+
+$\ast$$\ast$\+Author\+: \href{https://sites.google.com/site/bjelonicmarko/}{\texttt{ Marko Bjelonic}}, \href{mailto:marko.bjelonic@mavt.ethz.ch}{\texttt{ marko.\+bjelonic@mavt.\+ethz.\+ch}}$\ast$$\ast$
+
+{\bfseries{Affiliation\+: \href{http://www.rsl.ethz.ch/}{\texttt{ Robotic Systems Lab}}, E\+TH Zurich}}
+
+ 
+
+Based on the \href{https://pjreddie.com/projects/pascal-voc-dataset-mirror/}{\texttt{ Pascal V\+OC}} 2012 dataset, Y\+O\+LO can detect the 20 Pascal object classes\+:
+
+
+\begin{DoxyItemize}
+\item person
+\item bird, cat, cow, dog, horse, sheep
+\item aeroplane, bicycle, boat, bus, car, motorbike, train
+\item bottle, chair, dining table, potted plant, sofa, tv/monitor
+\end{DoxyItemize}
+
+Based on the \href{http://cocodataset.org/\#home}{\texttt{ C\+O\+CO}} dataset, Y\+O\+LO can detect the 80 C\+O\+CO object classes\+:
+
+
+\begin{DoxyItemize}
+\item person
+\item bicycle, car, motorbike, aeroplane, bus, train, truck, boat
+\item traffic light, fire hydrant, stop sign, parking meter, bench
+\item cat, dog, horse, sheep, cow, elephant, bear, zebra, giraffe
+\item backpack, umbrella, handbag, tie, suitcase, frisbee, skis, snowboard, sports ball, kite, baseball bat, baseball glove, skateboard, surfboard, tennis racket
+\item bottle, wine glass, cup, fork, knife, spoon, bowl
+\item banana, apple, sandwich, orange, broccoli, carrot, hot dog, pizza, donut, cake
+\item chair, sofa, pottedplant, bed, diningtable, toilet, tvmonitor, laptop, mouse, remote, keyboard, cell phone, microwave, oven, toaster, sink, refrigerator, book, clock, vase, scissors, teddy bear, hair drier, toothbrush
+\end{DoxyItemize}
+
+\subsection*{Citing}
+
+The Y\+O\+LO methods used in this software are described in the paper\+: \href{https://arxiv.org/abs/1506.02640}{\texttt{ You Only Look Once\+: Unified, Real-\/\+Time Object Detection}}.
+
+If you are using Y\+O\+LO V3 for R\+OS, please add the following citation to your publication\+:
+
+M. Bjelonic, M. Hutter $\ast$$\ast$\char`\"{}\+Y\+O\+L\+O R\+O\+S\+: Real-\/\+Time Object Detection for R\+O\+S\char`\"{}$\ast$$\ast$, U\+RL\+: \href{https://github.com/leggedrobotics/darknet_ros,}{\texttt{ https\+://github.\+com/leggedrobotics/darknet\+\_\+ros,}} 2018. \begin{DoxyVerb}@misc{bjelonicYolo2018,
+  author = {Marko Bjelonic and Marco Hutter},
+  title = {{YOLO ROS}: Real-Time Object Detection for {ROS}},
+  howpublished = {\url{https://github.com/leggedrobotics/darknet_ros}},
+  year = {2016--2018},
+}
+\end{DoxyVerb}
+
+
+\subsection*{Installation}
+
+\subsubsection*{Dependencies}
+
+This software is built on the Robotic Operating System (\mbox{[}R\+OS\mbox{]}), which needs to be \href{http://wiki.ros.org}{\texttt{ installed}} first. Additionally, Y\+O\+LO for R\+OS depends on following software\+:
+
+
+\begin{DoxyItemize}
+\item \href{http://opencv.org/}{\texttt{ Open\+CV}} (computer vision library),
+\item \href{http://www.boost.org/}{\texttt{ boost}} (c++ library),
+\end{DoxyItemize}
+
+\subsubsection*{Building}
+
+\href{https://ci.leggedrobotics.com/job/github_leggedrobotics/job/darknet_ros/job/master/}{\texttt{ }}
+
+In order to install \mbox{\hyperlink{namespacedarknet__ros}{darknet\+\_\+ros}}, clone the latest version using S\+SH (see \href{https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html}{\texttt{ how to set up an S\+SH key}}) from this repository into your catkin workspace and compile the package using R\+OS. \begin{DoxyVerb}cd catkin_workspace/src
+git clone --recursive git@github.com:leggedrobotics/darknet_ros.git
+cd ../
+\end{DoxyVerb}
+
+
+To maximize performance, make sure to build in {\itshape Release} mode. You can specify the build type by setting \begin{DoxyVerb}catkin_make -DCMAKE_BUILD_TYPE=Release
+\end{DoxyVerb}
+
+
+or using the \href{http://catkin-tools.readthedocs.io/en/latest/index.html\#}{\texttt{ Catkin Command Line Tools}} \begin{DoxyVerb}catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release
+\end{DoxyVerb}
+
+
+Darknet on the C\+PU is fast (approximately 1.\+5 seconds on an Intel Core i7-\/6700\+HQ C\+PU @ 2.\+60\+G\+Hz × 8) but it\textquotesingle{}s like 500 times faster on G\+P\+U! You\textquotesingle{}ll have to have an Nvidia G\+PU and you\textquotesingle{}ll have to install C\+U\+DA. The C\+Make\+Lists.\+txt file automatically detects if you have C\+U\+DA installed or not. C\+U\+DA is a parallel computing platform and application programming interface (A\+PI) model created by Nvidia. If you do not have C\+U\+DA on your System the build process will switch to the C\+PU version of Y\+O\+LO. If you are compiling with C\+U\+DA, you might receive the following build error\+: \begin{DoxyVerb}nvcc fatal : Unsupported gpu architecture 'compute_61'.
+\end{DoxyVerb}
+
+
+This means that you need to check the compute capability (version) of your G\+PU. You can find a list of supported G\+P\+Us in C\+U\+DA here\+: \href{https://en.wikipedia.org/wiki/CUDA\#Supported_GPUs}{\texttt{ C\+U\+DA -\/ W\+I\+K\+I\+P\+E\+D\+IA}}. Simply find the compute capability of your G\+PU and add it into darknet\+\_\+ros/\+C\+Make\+Lists.\+txt. Simply add a similar line like \begin{DoxyVerb}-O3 -gencode arch=compute_62,code=sm_62
+\end{DoxyVerb}
+
+
+\subsubsection*{Download weights}
+
+The yolo-\/voc.\+weights and tiny-\/yolo-\/voc.\+weights are downloaded automatically in the C\+Make\+Lists.\+txt file. If you need to download them again, go into the weights folder and download the two pre-\/trained weights from the C\+O\+CO data set\+: \begin{DoxyVerb}cd catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/weights/
+wget http://pjreddie.com/media/files/yolov2.weights
+wget http://pjreddie.com/media/files/yolov2-tiny.weights
+\end{DoxyVerb}
+
+
+And weights from the V\+OC data set can be found here\+: \begin{DoxyVerb}wget http://pjreddie.com/media/files/yolov2-voc.weights
+wget http://pjreddie.com/media/files/yolov2-tiny-voc.weights
+\end{DoxyVerb}
+
+
+And the pre-\/trained weight from Y\+O\+LO v3 can be found here\+: \begin{DoxyVerb}wget http://pjreddie.com/media/files/yolov3-voc.weights
+wget http://pjreddie.com/media/files/yolov3.weights
+\end{DoxyVerb}
+
+
+\subsubsection*{Use your own detection objects}
+
+In order to use your own detection objects you need to provide your weights and your cfg file inside the directories\+: \begin{DoxyVerb}catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/weights/
+catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/cfg/
+\end{DoxyVerb}
+
+
+In addition, you need to create your config file for R\+OS where you define the names of the detection objects. You need to include it inside\+: \begin{DoxyVerb}catkin_workspace/src/darknet_ros/darknet_ros/config/
+\end{DoxyVerb}
+
+
+Then in the launch file you have to point to your new config file in the line\+: \begin{DoxyVerb}<rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/your_config_file.yaml"/>
+\end{DoxyVerb}
+
+
+\subsubsection*{Unit Tests}
+
+Run the unit tests using the \href{http://catkin-tools.readthedocs.io/en/latest/index.html\#}{\texttt{ Catkin Command Line Tools}} \begin{DoxyVerb}catkin build darknet_ros --no-deps --verbose --catkin-make-args run_tests
+\end{DoxyVerb}
+
+
+You will see the image above popping up.
+
+\subsection*{Basic Usage}
+
+In order to get Y\+O\+LO R\+OS\+: Real-\/\+Time Object Detection for R\+OS to run with your robot, you will need to adapt a few parameters. It is the easiest if duplicate and adapt all the parameter files that you need to change from the {\ttfamily darkned\+\_\+ros} package. These are specifically the parameter files in {\ttfamily config} and the launch file from the {\ttfamily launch} folder.
+
+\subsection*{Nodes}
+
+\subsubsection*{Node\+: \mbox{\hyperlink{namespacedarknet__ros}{darknet\+\_\+ros}}}
+
+This is the main Y\+O\+LO R\+OS\+: Real-\/\+Time Object Detection for R\+OS node. It uses the camera measurements to detect pre-\/learned objects in the frames.
+
+\subsubsection*{R\+OS related parameters}
+
+You can change the names and other parameters of the publishers, subscribers and actions inside {\ttfamily darkned\+\_\+ros/config/ros.\+yaml}.
+
+\paragraph*{Subscribed Topics}
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast${\ttfamily /camera\+\_\+reading}$\ast$$\ast$ (\mbox{[}sensor\+\_\+msgs/\+Image\mbox{]})
+
+The camera measurements.
+\end{DoxyItemize}
+
+\paragraph*{Published Topics}
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast${\ttfamily object\+\_\+detector}$\ast$$\ast$ (\mbox{[}std\+\_\+msgs\+::\+Int8\mbox{]})
+
+Publishes the number of detected objects.
+\item $\ast$$\ast${\ttfamily bounding\+\_\+boxes}$\ast$$\ast$ (\mbox{[}darknet\+\_\+ros\+\_\+msgs\+::\+Bounding\+Boxes\mbox{]})
+
+Publishes an array of bounding boxes that gives information of the position and size of the bounding box in pixel coordinates.
+\item $\ast$$\ast${\ttfamily detection\+\_\+image}$\ast$$\ast$ (\mbox{[}sensor\+\_\+msgs\+::\+Image\mbox{]})
+
+Publishes an image of the detection image including the bounding boxes.
+\end{DoxyItemize}
+
+\paragraph*{Actions}
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast${\ttfamily camera\+\_\+reading}$\ast$$\ast$ (\mbox{[}sensor\+\_\+msgs\+::\+Image\mbox{]})
+
+Sends an action with an image and the result is an array of bounding boxes.
+\end{DoxyItemize}
+
+\subsubsection*{Detection related parameters}
+
+You can change the parameters that are related to the detection by adding a new config file that looks similar to {\ttfamily darkned\+\_\+ros/config/yolo.\+yaml}.
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast${\ttfamily image\+\_\+view/enable\+\_\+opencv}$\ast$$\ast$ (bool)
+
+Enable or disable the open cv view of the detection image including the bounding boxes.
+\item $\ast$$\ast${\ttfamily image\+\_\+view/wait\+\_\+key\+\_\+delay}$\ast$$\ast$ (int)
+
+Wait key delay in ms of the open cv window.
+\item $\ast$$\ast${\ttfamily yolo\+\_\+model/config\+\_\+file/name}$\ast$$\ast$ (string)
+
+Name of the cfg file of the network that is used for detection. The code searches for this name inside {\ttfamily darkned\+\_\+ros/yolo\+\_\+network\+\_\+config/cfg/}.
+\item $\ast$$\ast${\ttfamily yolo\+\_\+model/weight\+\_\+file/name}$\ast$$\ast$ (string)
+
+Name of the weights file of the network that is used for detection. The code searches for this name inside {\ttfamily darkned\+\_\+ros/yolo\+\_\+network\+\_\+config/weights/}.
+\item $\ast$$\ast${\ttfamily yolo\+\_\+model/threshold/value}$\ast$$\ast$ (float)
+
+Threshold of the detection algorithm. It is defined between 0 and 1.
+\item $\ast$$\ast${\ttfamily yolo\+\_\+model/detection\+\_\+classes/names}$\ast$$\ast$ (array of strings)
+
+Detection names of the network used by the cfg and weights file inside {\ttfamily darkned\+\_\+ros/yolo\+\_\+network\+\_\+config/}. 
+\end{DoxyItemize}

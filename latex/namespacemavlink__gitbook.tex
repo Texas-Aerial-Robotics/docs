@@ -1,0 +1,270 @@
+\hypertarget{namespacemavlink__gitbook}{}\section{mavlink\+\_\+gitbook Namespace Reference}
+\label{namespacemavlink__gitbook}\index{mavlink\_gitbook@{mavlink\_gitbook}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemavlink__gitbook_a0401ef11ed769a42f321ee486f274039}{fix\+\_\+content\+\_\+in\+\_\+tags}} (input\+\_\+html)
+\begin{DoxyCompactList}\small\item\em BS puts each tag/content in its own line. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemavlink__gitbook_a9bc4614799f922b28688524e674ba96a}{fix\+\_\+include\+\_\+file\+\_\+extension}} (input\+\_\+html)
+\item 
+def \mbox{\hyperlink{namespacemavlink__gitbook_ac690fc1c1dea8fbf781656c303caace3}{strip\+\_\+text\+\_\+before\+\_\+string}} (original\+\_\+text, strip\+\_\+text)
+\item 
+def \mbox{\hyperlink{namespacemavlink__gitbook_aad1447f419d684664763e7e17fce7e2c}{inject\+\_\+top\+\_\+level\+\_\+docs}} (input\+\_\+html, filename)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_ac6c1e2257086f4c185a1dbe339b982ee}{xsl\+\_\+file\+\_\+name}} = \char`\"{}mavlink\+\_\+to\+\_\+html\+\_\+table\+\_\+gitbook.\+xsl\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_a77eba659d76a13449029b543069e297a}{xml\+\_\+message\+\_\+definitions\+\_\+dir\+\_\+name}} = \char`\"{}../message\+\_\+definitions/v1.\+0/\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_a038f966b01c8835bbafb0d301aafc036}{output\+\_\+dir}} = \char`\"{}./messages/\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_a62c09309bc68b41990e44200c18351c5}{index\+\_\+file\+\_\+name}} = \char`\"{}R\+E\+A\+D\+M\+E.\+md\char`\"{}
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_a815a3364aa4eed144f50b92449070e4d}{xsl\+\_\+file}} = content\+\_\+file.\+read()
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_a6fdcf2e9551166072265847a9efbcc9b}{xslt}} = E\+T.\+fromstring(\mbox{\hyperlink{namespacemavlink__gitbook_a815a3364aa4eed144f50b92449070e4d}{xsl\+\_\+file}})
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_a03742fa597e2b6b6fa05847955012350}{index\+\_\+text}} = \textquotesingle{}$<$!-\/-\/ T\+H\+IS F\+I\+LE IS A\+U\+TO-\/G\+E\+N\+E\+R\+A\+T\+ED (DO N\+OT U\+P\+D\+A\+TE G\+I\+T\+B\+O\+OK)\+: https\+://github.\+com/mavlink/mavlink/blob/master/doc/mavlink\+\_\+gitbook.\+py -\/-\/$>$\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_a290dd8831d31b5ea4959bbd4232dc591}{xml\+\_\+file\+\_\+name}} = \mbox{\hyperlink{namespacemavlink__gitbook_a77eba659d76a13449029b543069e297a}{xml\+\_\+message\+\_\+definitions\+\_\+dir\+\_\+name}}+file
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_ac775536f765d6de771c4504a54332d8b}{xml\+\_\+file}} = content\+\_\+file.\+read()
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_a5f783465a58c3fc0dc9a7c5513c06e77}{dom}} = E\+T.\+fromstring(\mbox{\hyperlink{namespacemavlink__gitbook_ac775536f765d6de771c4504a54332d8b}{xml\+\_\+file}})
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_a3dbbd9ffdef79cdd3d0bc10c5eac95e6}{transform}} = E\+T.\+X\+S\+LT(\mbox{\hyperlink{namespacemavlink__gitbook_a6fdcf2e9551166072265847a9efbcc9b}{xslt}})
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_a539be0135e50ed256965d635c039bbdf}{newdom}} = \mbox{\hyperlink{namespacemavlink__gitbook_a3dbbd9ffdef79cdd3d0bc10c5eac95e6}{transform}}(\mbox{\hyperlink{namespacemavlink__gitbook_a5f783465a58c3fc0dc9a7c5513c06e77}{dom}})
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_a92e67a31e7a0bf86bd2e071093781f53}{soup}} = bs(str(\mbox{\hyperlink{namespacemavlink__gitbook_a539be0135e50ed256965d635c039bbdf}{newdom}}), \char`\"{}lxml\char`\"{})
+\item 
+\mbox{\hyperlink{namespacemavlink__gitbook_acbe59884e9f0522fe46d6244b01a4dc6}{pretty\+H\+T\+ML}} = soup.\+prettify()
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_a65b46bdd34434cd895d50866a39e1fc5}{output\+\_\+file\+\_\+name}} = file.\+rsplit(\textquotesingle{}.\textquotesingle{},1)\mbox{[}0\mbox{]}+\char`\"{}.md\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacemavlink__gitbook_a2413062a1a5a2b6580e3bfa5b8240049}{output\+\_\+file\+\_\+name\+\_\+withdir}} = \mbox{\hyperlink{namespacemavlink__gitbook_a038f966b01c8835bbafb0d301aafc036}{output\+\_\+dir}}+\mbox{\hyperlink{namespacemavlink__gitbook_a65b46bdd34434cd895d50866a39e1fc5}{output\+\_\+file\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This script generates markdown files for all the MAVLink message definition XML at: 
+https://github.com/mavlink/mavlink/tree/master/message_definitions/v1.0
+  
+The files can be imported into a gitbook to display the messages as HTML
+
+The script runs on both Python2 and Python 3. The following libraries must be imported: lxml, requests, bs4.
+
+The file is run in mavlink/doc/ with no arguments. It writes the files to /messages/
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacemavlink__gitbook_a0401ef11ed769a42f321ee486f274039}\label{namespacemavlink__gitbook_a0401ef11ed769a42f321ee486f274039}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!fix\_content\_in\_tags@{fix\_content\_in\_tags}}
+\index{fix\_content\_in\_tags@{fix\_content\_in\_tags}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{fix\_content\_in\_tags()}{fix\_content\_in\_tags()}}
+{\footnotesize\ttfamily def mavlink\+\_\+gitbook.\+fix\+\_\+content\+\_\+in\+\_\+tags (\begin{DoxyParamCaption}\item[{}]{input\+\_\+html }\end{DoxyParamCaption})}
+
+
+
+BS puts each tag/content in its own line. 
+
+Gitbook generates anchors using the spaces/newlines. This puts displayed text content immediately within tags so that anchors/links generate properly 
+
+Definition at line 51 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a9bc4614799f922b28688524e674ba96a}\label{namespacemavlink__gitbook_a9bc4614799f922b28688524e674ba96a}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!fix\_include\_file\_extension@{fix\_include\_file\_extension}}
+\index{fix\_include\_file\_extension@{fix\_include\_file\_extension}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{fix\_include\_file\_extension()}{fix\_include\_file\_extension()}}
+{\footnotesize\ttfamily def mavlink\+\_\+gitbook.\+fix\+\_\+include\+\_\+file\+\_\+extension (\begin{DoxyParamCaption}\item[{}]{input\+\_\+html }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_aad1447f419d684664763e7e17fce7e2c}\label{namespacemavlink__gitbook_aad1447f419d684664763e7e17fce7e2c}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!inject\_top\_level\_docs@{inject\_top\_level\_docs}}
+\index{inject\_top\_level\_docs@{inject\_top\_level\_docs}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{inject\_top\_level\_docs()}{inject\_top\_level\_docs()}}
+{\footnotesize\ttfamily def mavlink\+\_\+gitbook.\+inject\+\_\+top\+\_\+level\+\_\+docs (\begin{DoxyParamCaption}\item[{}]{input\+\_\+html,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_ac690fc1c1dea8fbf781656c303caace3}\label{namespacemavlink__gitbook_ac690fc1c1dea8fbf781656c303caace3}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!strip\_text\_before\_string@{strip\_text\_before\_string}}
+\index{strip\_text\_before\_string@{strip\_text\_before\_string}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{strip\_text\_before\_string()}{strip\_text\_before\_string()}}
+{\footnotesize\ttfamily def mavlink\+\_\+gitbook.\+strip\+\_\+text\+\_\+before\+\_\+string (\begin{DoxyParamCaption}\item[{}]{original\+\_\+text,  }\item[{}]{strip\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file mavlink\+\_\+gitbook.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemavlink__gitbook_a5f783465a58c3fc0dc9a7c5513c06e77}\label{namespacemavlink__gitbook_a5f783465a58c3fc0dc9a7c5513c06e77}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!dom@{dom}}
+\index{dom@{dom}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{dom}{dom}}
+{\footnotesize\ttfamily mavlink\+\_\+gitbook.\+dom = E\+T.\+fromstring(\mbox{\hyperlink{namespacemavlink__gitbook_ac775536f765d6de771c4504a54332d8b}{xml\+\_\+file}})}
+
+
+
+Definition at line 111 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a62c09309bc68b41990e44200c18351c5}\label{namespacemavlink__gitbook_a62c09309bc68b41990e44200c18351c5}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!index\_file\_name@{index\_file\_name}}
+\index{index\_file\_name@{index\_file\_name}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{index\_file\_name}{index\_file\_name}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+index\+\_\+file\+\_\+name = \char`\"{}R\+E\+A\+D\+M\+E.\+md\char`\"{}}
+
+
+
+Definition at line 29 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a03742fa597e2b6b6fa05847955012350}\label{namespacemavlink__gitbook_a03742fa597e2b6b6fa05847955012350}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!index\_text@{index\_text}}
+\index{index\_text@{index\_text}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{index\_text}{index\_text}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+index\+\_\+text = \textquotesingle{}$<$!-\/-\/ T\+H\+IS F\+I\+LE IS A\+U\+TO-\/G\+E\+N\+E\+R\+A\+T\+ED (DO N\+OT U\+P\+D\+A\+TE G\+I\+T\+B\+O\+OK)\+: https\+://github.\+com/mavlink/mavlink/blob/master/doc/mavlink\+\_\+gitbook.\+py -\/-\/$>$\textquotesingle{}}
+
+
+
+Definition at line 38 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a539be0135e50ed256965d635c039bbdf}\label{namespacemavlink__gitbook_a539be0135e50ed256965d635c039bbdf}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!newdom@{newdom}}
+\index{newdom@{newdom}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{newdom}{newdom}}
+{\footnotesize\ttfamily mavlink\+\_\+gitbook.\+newdom = \mbox{\hyperlink{namespacemavlink__gitbook_a3dbbd9ffdef79cdd3d0bc10c5eac95e6}{transform}}(\mbox{\hyperlink{namespacemavlink__gitbook_a5f783465a58c3fc0dc9a7c5513c06e77}{dom}})}
+
+
+
+Definition at line 113 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a038f966b01c8835bbafb0d301aafc036}\label{namespacemavlink__gitbook_a038f966b01c8835bbafb0d301aafc036}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!output\_dir@{output\_dir}}
+\index{output\_dir@{output\_dir}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{output\_dir}{output\_dir}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+output\+\_\+dir = \char`\"{}./messages/\char`\"{}}
+
+
+
+Definition at line 24 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a65b46bdd34434cd895d50866a39e1fc5}\label{namespacemavlink__gitbook_a65b46bdd34434cd895d50866a39e1fc5}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!output\_file\_name@{output\_file\_name}}
+\index{output\_file\_name@{output\_file\_name}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{output\_file\_name}{output\_file\_name}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+output\+\_\+file\+\_\+name = file.\+rsplit(\textquotesingle{}.\textquotesingle{},1)\mbox{[}0\mbox{]}+\char`\"{}.md\char`\"{}}
+
+
+
+Definition at line 130 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a2413062a1a5a2b6580e3bfa5b8240049}\label{namespacemavlink__gitbook_a2413062a1a5a2b6580e3bfa5b8240049}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!output\_file\_name\_withdir@{output\_file\_name\_withdir}}
+\index{output\_file\_name\_withdir@{output\_file\_name\_withdir}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{output\_file\_name\_withdir}{output\_file\_name\_withdir}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+output\+\_\+file\+\_\+name\+\_\+withdir = \mbox{\hyperlink{namespacemavlink__gitbook_a038f966b01c8835bbafb0d301aafc036}{output\+\_\+dir}}+\mbox{\hyperlink{namespacemavlink__gitbook_a65b46bdd34434cd895d50866a39e1fc5}{output\+\_\+file\+\_\+name}}}
+
+
+
+Definition at line 131 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_acbe59884e9f0522fe46d6244b01a4dc6}\label{namespacemavlink__gitbook_acbe59884e9f0522fe46d6244b01a4dc6}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!prettyHTML@{prettyHTML}}
+\index{prettyHTML@{prettyHTML}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{prettyHTML}{prettyHTML}}
+{\footnotesize\ttfamily def mavlink\+\_\+gitbook.\+pretty\+H\+T\+ML = soup.\+prettify()}
+
+
+
+Definition at line 117 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a92e67a31e7a0bf86bd2e071093781f53}\label{namespacemavlink__gitbook_a92e67a31e7a0bf86bd2e071093781f53}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!soup@{soup}}
+\index{soup@{soup}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{soup}{soup}}
+{\footnotesize\ttfamily mavlink\+\_\+gitbook.\+soup = bs(str(\mbox{\hyperlink{namespacemavlink__gitbook_a539be0135e50ed256965d635c039bbdf}{newdom}}), \char`\"{}lxml\char`\"{})}
+
+
+
+Definition at line 116 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a3dbbd9ffdef79cdd3d0bc10c5eac95e6}\label{namespacemavlink__gitbook_a3dbbd9ffdef79cdd3d0bc10c5eac95e6}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!transform@{transform}}
+\index{transform@{transform}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily mavlink\+\_\+gitbook.\+transform = E\+T.\+X\+S\+LT(\mbox{\hyperlink{namespacemavlink__gitbook_a6fdcf2e9551166072265847a9efbcc9b}{xslt}})}
+
+
+
+Definition at line 112 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_ac775536f765d6de771c4504a54332d8b}\label{namespacemavlink__gitbook_ac775536f765d6de771c4504a54332d8b}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!xml\_file@{xml\_file}}
+\index{xml\_file@{xml\_file}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{xml\_file}{xml\_file}}
+{\footnotesize\ttfamily mavlink\+\_\+gitbook.\+xml\+\_\+file = content\+\_\+file.\+read()}
+
+
+
+Definition at line 110 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a290dd8831d31b5ea4959bbd4232dc591}\label{namespacemavlink__gitbook_a290dd8831d31b5ea4959bbd4232dc591}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!xml\_file\_name@{xml\_file\_name}}
+\index{xml\_file\_name@{xml\_file\_name}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{xml\_file\_name}{xml\_file\_name}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+xml\+\_\+file\+\_\+name = \mbox{\hyperlink{namespacemavlink__gitbook_a77eba659d76a13449029b543069e297a}{xml\+\_\+message\+\_\+definitions\+\_\+dir\+\_\+name}}+file}
+
+
+
+Definition at line 108 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a77eba659d76a13449029b543069e297a}\label{namespacemavlink__gitbook_a77eba659d76a13449029b543069e297a}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!xml\_message\_definitions\_dir\_name@{xml\_message\_definitions\_dir\_name}}
+\index{xml\_message\_definitions\_dir\_name@{xml\_message\_definitions\_dir\_name}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{xml\_message\_definitions\_dir\_name}{xml\_message\_definitions\_dir\_name}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+xml\+\_\+message\+\_\+definitions\+\_\+dir\+\_\+name = \char`\"{}../message\+\_\+definitions/v1.\+0/\char`\"{}}
+
+
+
+Definition at line 22 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a815a3364aa4eed144f50b92449070e4d}\label{namespacemavlink__gitbook_a815a3364aa4eed144f50b92449070e4d}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!xsl\_file@{xsl\_file}}
+\index{xsl\_file@{xsl\_file}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{xsl\_file}{xsl\_file}}
+{\footnotesize\ttfamily mavlink\+\_\+gitbook.\+xsl\+\_\+file = content\+\_\+file.\+read()}
+
+
+
+Definition at line 34 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_ac6c1e2257086f4c185a1dbe339b982ee}\label{namespacemavlink__gitbook_ac6c1e2257086f4c185a1dbe339b982ee}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!xsl\_file\_name@{xsl\_file\_name}}
+\index{xsl\_file\_name@{xsl\_file\_name}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{xsl\_file\_name}{xsl\_file\_name}}
+{\footnotesize\ttfamily string mavlink\+\_\+gitbook.\+xsl\+\_\+file\+\_\+name = \char`\"{}mavlink\+\_\+to\+\_\+html\+\_\+table\+\_\+gitbook.\+xsl\char`\"{}}
+
+
+
+Definition at line 21 of file mavlink\+\_\+gitbook.\+py.
+
+\mbox{\Hypertarget{namespacemavlink__gitbook_a6fdcf2e9551166072265847a9efbcc9b}\label{namespacemavlink__gitbook_a6fdcf2e9551166072265847a9efbcc9b}} 
+\index{mavlink\_gitbook@{mavlink\_gitbook}!xslt@{xslt}}
+\index{xslt@{xslt}!mavlink\_gitbook@{mavlink\_gitbook}}
+\subsubsection{\texorpdfstring{xslt}{xslt}}
+{\footnotesize\ttfamily mavlink\+\_\+gitbook.\+xslt = E\+T.\+fromstring(\mbox{\hyperlink{namespacemavlink__gitbook_a815a3364aa4eed144f50b92449070e4d}{xsl\+\_\+file}})}
+
+
+
+Definition at line 35 of file mavlink\+\_\+gitbook.\+py.
+

@@ -1,0 +1,560 @@
+\hypertarget{include__v0_89_2protocol_8h}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C/include\+\_\+v0.9/protocol.h File Reference}
+\label{include__v0_89_2protocol_8h}\index{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v0.9/protocol.h@{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v0.9/protocol.h}}
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mavlink\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mavlink\+\_\+helpers.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a8294f9c8a98c407a6f24e2de6ebecbba}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+E\+E\+D\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+AP}}~(\mbox{\hyperlink{mavlink__defaults_8h_a2db62f1ccd5d8ffb120d7689f207942f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+N\+D\+I\+AN}} != \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_af43ffe0aa4007fb568c277f8942eb759}{M\+A\+V\+L\+I\+N\+K\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}})
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a1378e871245e049d35394229752d79d7}{M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER}}~0
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a33f043343a6390ef58ea5351906a9d74}{M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+V\+O\+I\+D\+\_\+\+G\+C\+C\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+UG}}~defined(\+\_\+\+\_\+\+G\+N\+U\+C\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_aad5dd4313a4e19ae3bddccfbebda5b62}{M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+S\+S\+E\+RT}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_ab761006cae93e593accb4bc4f543413b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+A\+R\+T\+\_\+\+S\+E\+ND}}(chan,  length)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a18dca6a13e7d2a09fc80bd18e4f57367}{M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+N\+D\+\_\+\+U\+A\+R\+T\+\_\+\+S\+E\+ND}}(chan,  length)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}}~static inline
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a25eacf3d37971b0b54c67e338d9f481a}{\+\_\+mav\+\_\+put\+\_\+uint8\+\_\+t}}(buf,  wire\+\_\+offset,  b)~buf\mbox{[}wire\+\_\+offset\mbox{]} = (uint8\+\_\+t)b
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_af10c521f49722953319172c5dd3d030e}{\+\_\+mav\+\_\+put\+\_\+int8\+\_\+t}}(buf,  wire\+\_\+offset,  b)~buf\mbox{[}wire\+\_\+offset\mbox{]} = (int8\+\_\+t)b
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a9ce78106f21ac1c13c1242f5ad11612b}{\+\_\+mav\+\_\+put\+\_\+char}}(buf,  wire\+\_\+offset,  b)~buf\mbox{[}wire\+\_\+offset\mbox{]} = b
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a42a5eee59a41e8a52051491d7cf65ca9}{\+\_\+mav\+\_\+put\+\_\+uint16\+\_\+t}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+2(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_ae1c41175f07ee225c3f535005a46bf9b}{\+\_\+mav\+\_\+put\+\_\+int16\+\_\+t}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+2(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_ad4eb6d38fefd862941176a9072c1c1c5}{\+\_\+mav\+\_\+put\+\_\+uint32\+\_\+t}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+4(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a87d4bee416a127b8bbca5e68abb8928f}{\+\_\+mav\+\_\+put\+\_\+int32\+\_\+t}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+4(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a9efbc3b5ebcb74878f26fbef0939b013}{\+\_\+mav\+\_\+put\+\_\+uint64\+\_\+t}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+8(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a75b8a7e267c9e3b37c706378a8ae8599}{\+\_\+mav\+\_\+put\+\_\+int64\+\_\+t}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+8(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a7dc7a1d53caa88eafeb412ae3dfe7e48}{\+\_\+mav\+\_\+put\+\_\+float}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+4(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_ab99f10b1bf768f4122b1caa067d24ba8}{\+\_\+mav\+\_\+put\+\_\+double}}(buf,  wire\+\_\+offset,  b)~byte\+\_\+swap\+\_\+8(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a7b9a101961be6123bd351fb54832b82c}{\+\_\+\+M\+A\+V\+\_\+\+P\+U\+T\+\_\+\+A\+R\+R\+AY}}(T\+Y\+PE,  V)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a2ce2c9077675f00ed5854c12c6aa239a}{\+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+char}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}},  wire\+\_\+offset)~(char)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})\mbox{[}wire\+\_\+offset\mbox{]}
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a37f0a7aa03bb6a9d30316517e76f0e25}{\+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+int8\+\_\+t}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}},  wire\+\_\+offset)~(int8\+\_\+t)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})\mbox{[}wire\+\_\+offset\mbox{]}
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a125f5a7a107c19da567a08ebaaa08389}{\+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+uint8\+\_\+t}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}},  wire\+\_\+offset)~(uint8\+\_\+t)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})\mbox{[}wire\+\_\+offset\mbox{]}
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a148ead634653eb40dfa0644f11336d24}{\+\_\+\+M\+A\+V\+\_\+\+M\+S\+G\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}}(T\+Y\+PE,  S\+I\+ZE)
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2protocol_8h_a056ba05a9133c8e4362514ffc523a24b}{\+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+R\+R\+AY}}(T\+Y\+PE,  V)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$ \mbox{\hyperlink{include__v0_89_2protocol_8h_ac006d308067f48514ca5c0cf0b046c28}{mavlink\+\_\+get\+\_\+channel\+\_\+status}} (uint8\+\_\+t chan)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t \mbox{\hyperlink{include__v0_89_2protocol_8h_aa66131138fc02101dcc73b4b556ab422}{mavlink\+\_\+finalize\+\_\+message\+\_\+chan}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}, uint8\+\_\+t chan, uint8\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Finalize a M\+A\+V\+Link message with channel assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t \mbox{\hyperlink{include__v0_89_2protocol_8h_af3bea083c5ec83f5b6570b2bd4a817d0}{mavlink\+\_\+finalize\+\_\+message}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}, uint8\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Finalize a M\+A\+V\+Link message with M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0 as default channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{include__v0_89_2protocol_8h_a4cf2070546d162dc12b7e93ccac50ba1}{\+\_\+mav\+\_\+finalize\+\_\+message\+\_\+chan\+\_\+send}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709c}{mavlink\+\_\+channel\+\_\+t}} chan, uint8\+\_\+t msgid, const char $\ast$packet, uint8\+\_\+t length)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t \mbox{\hyperlink{include__v0_89_2protocol_8h_afea0a9befa84822fd62c2899ea0d849e}{mavlink\+\_\+msg\+\_\+to\+\_\+send\+\_\+buffer}} (uint8\+\_\+t $\ast$buffer, const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\begin{DoxyCompactList}\small\item\em Pack a message to send it over a serial byte stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{include__v0_89_2protocol_8h_ae7cbde569213151151d20c3766edd244}{mavlink\+\_\+start\+\_\+checksum}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{include__v0_89_2protocol_8h_a3293deb7b51f9a9f0b30bf56c8739593}{mavlink\+\_\+update\+\_\+checksum}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, uint8\+\_\+t c)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t \mbox{\hyperlink{include__v0_89_2protocol_8h_ad91e8323cefc65965574c09e72365d7d}{mavlink\+\_\+parse\+\_\+char}} (uint8\+\_\+t chan, uint8\+\_\+t c, \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$r\+\_\+message, \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$r\+\_\+mavlink\+\_\+status)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t \mbox{\hyperlink{include__v0_89_2protocol_8h_ad102a58f323758552a9c439c1ede4403}{put\+\_\+bitfield\+\_\+n\+\_\+by\+\_\+index}} (int32\+\_\+t b, uint8\+\_\+t bits, uint8\+\_\+t packet\+\_\+index, uint8\+\_\+t bit\+\_\+index, uint8\+\_\+t $\ast$r\+\_\+bit\+\_\+index, uint8\+\_\+t $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Put a bitfield of length 1-\/32 bit into the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a148ead634653eb40dfa0644f11336d24}\label{include__v0_89_2protocol_8h_a148ead634653eb40dfa0644f11336d24}} 
+\index{protocol.h@{protocol.h}!\_MAV\_MSG\_RETURN\_TYPE@{\_MAV\_MSG\_RETURN\_TYPE}}
+\index{\_MAV\_MSG\_RETURN\_TYPE@{\_MAV\_MSG\_RETURN\_TYPE}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_MAV\_MSG\_RETURN\_TYPE}{\_MAV\_MSG\_RETURN\_TYPE}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+M\+S\+G\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE,  }\item[{}]{S\+I\+ZE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} \textcolor{keyword}{inline} TYPE \_MAV\_RETURN\_\#\# TYPE(\textcolor{keyword}{const} \mbox{\hyperlink{struct____mavlink__message}{mavlink\_message\_t}} *\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}, uint8\_t ofs) \(\backslash\)}
+\DoxyCodeLine{\{ TYPE \mbox{\hyperlink{namespacedetector-scipy-opencv_a454d4a9590e11c36c21186a87d98a199}{r}}; byte\_swap\_\#\# SIZE((\textcolor{keywordtype}{char}*)\&\mbox{\hyperlink{namespacedetector-scipy-opencv_a454d4a9590e11c36c21186a87d98a199}{r}}, \&\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\_MAV\_PAYLOAD}}(\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}})[ofs]); \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacedetector-scipy-opencv_a454d4a9590e11c36c21186a87d98a199}{r}}; \}}
+
+\end{DoxyCode}
+
+
+Definition at line 231 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a7b9a101961be6123bd351fb54832b82c}\label{include__v0_89_2protocol_8h_a7b9a101961be6123bd351fb54832b82c}} 
+\index{protocol.h@{protocol.h}!\_MAV\_PUT\_ARRAY@{\_MAV\_PUT\_ARRAY}}
+\index{\_MAV\_PUT\_ARRAY@{\_MAV\_PUT\_ARRAY}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_MAV\_PUT\_ARRAY}{\_MAV\_PUT\_ARRAY}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+P\+U\+T\+\_\+\+A\+R\+R\+AY(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE,  }\item[{}]{V }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \_mav\_put\_ \#\# TYPE \#\#\_array(\textcolor{keywordtype}{char} *buf, uint8\_t wire\_offset, \textcolor{keyword}{const} TYPE *\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a71a94e54f6490e74e277b00e3e8c9680}{b}}, uint8\_t array\_length) \(\backslash\)}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{    if (\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a71a94e54f6490e74e277b00e3e8c9680}{b}} == NULL) \{ \(\backslash\)}
+\DoxyCodeLine{        memset(\&buf[wire\_offset], 0, array\_length*\textcolor{keyword}{sizeof}(TYPE)); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else} \{ \(\backslash\)}
+\DoxyCodeLine{        uint16\_t \mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}; \(\backslash\)}
+\DoxyCodeLine{        for (\mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}=0; \mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}<array\_length; \mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}++) \{ \(\backslash\)}
+\DoxyCodeLine{            \_mav\_put\_\#\# TYPE (buf, wire\_offset+(\mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}*\textcolor{keyword}{sizeof}(TYPE)), \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1sertotcp_a71a94e54f6490e74e277b00e3e8c9680}{b}}[\mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}]); \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 197 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a9ce78106f21ac1c13c1242f5ad11612b}\label{include__v0_89_2protocol_8h_a9ce78106f21ac1c13c1242f5ad11612b}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_char@{\_mav\_put\_char}}
+\index{\_mav\_put\_char@{\_mav\_put\_char}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_char}{\_mav\_put\_char}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+char(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~buf\mbox{[}wire\+\_\+offset\mbox{]} = b}
+
+
+
+Definition at line 126 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ab99f10b1bf768f4122b1caa067d24ba8}\label{include__v0_89_2protocol_8h_ab99f10b1bf768f4122b1caa067d24ba8}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_double@{\_mav\_put\_double}}
+\index{\_mav\_put\_double@{\_mav\_put\_double}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_double}{\_mav\_put\_double}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+double(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+8(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 136 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a7dc7a1d53caa88eafeb412ae3dfe7e48}\label{include__v0_89_2protocol_8h_a7dc7a1d53caa88eafeb412ae3dfe7e48}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_float@{\_mav\_put\_float}}
+\index{\_mav\_put\_float@{\_mav\_put\_float}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_float}{\_mav\_put\_float}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+float(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+4(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 135 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ae1c41175f07ee225c3f535005a46bf9b}\label{include__v0_89_2protocol_8h_ae1c41175f07ee225c3f535005a46bf9b}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_int16\_t@{\_mav\_put\_int16\_t}}
+\index{\_mav\_put\_int16\_t@{\_mav\_put\_int16\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_int16\_t}{\_mav\_put\_int16\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+int16\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+2(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 130 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a87d4bee416a127b8bbca5e68abb8928f}\label{include__v0_89_2protocol_8h_a87d4bee416a127b8bbca5e68abb8928f}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_int32\_t@{\_mav\_put\_int32\_t}}
+\index{\_mav\_put\_int32\_t@{\_mav\_put\_int32\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_int32\_t}{\_mav\_put\_int32\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+int32\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+4(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 132 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a75b8a7e267c9e3b37c706378a8ae8599}\label{include__v0_89_2protocol_8h_a75b8a7e267c9e3b37c706378a8ae8599}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_int64\_t@{\_mav\_put\_int64\_t}}
+\index{\_mav\_put\_int64\_t@{\_mav\_put\_int64\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_int64\_t}{\_mav\_put\_int64\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+int64\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+8(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 134 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_af10c521f49722953319172c5dd3d030e}\label{include__v0_89_2protocol_8h_af10c521f49722953319172c5dd3d030e}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_int8\_t@{\_mav\_put\_int8\_t}}
+\index{\_mav\_put\_int8\_t@{\_mav\_put\_int8\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_int8\_t}{\_mav\_put\_int8\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+int8\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~buf\mbox{[}wire\+\_\+offset\mbox{]} = (int8\+\_\+t)b}
+
+
+
+Definition at line 125 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a42a5eee59a41e8a52051491d7cf65ca9}\label{include__v0_89_2protocol_8h_a42a5eee59a41e8a52051491d7cf65ca9}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_uint16\_t@{\_mav\_put\_uint16\_t}}
+\index{\_mav\_put\_uint16\_t@{\_mav\_put\_uint16\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_uint16\_t}{\_mav\_put\_uint16\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+uint16\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+2(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 129 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ad4eb6d38fefd862941176a9072c1c1c5}\label{include__v0_89_2protocol_8h_ad4eb6d38fefd862941176a9072c1c1c5}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_uint32\_t@{\_mav\_put\_uint32\_t}}
+\index{\_mav\_put\_uint32\_t@{\_mav\_put\_uint32\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_uint32\_t}{\_mav\_put\_uint32\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+uint32\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+4(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 131 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a9efbc3b5ebcb74878f26fbef0939b013}\label{include__v0_89_2protocol_8h_a9efbc3b5ebcb74878f26fbef0939b013}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_uint64\_t@{\_mav\_put\_uint64\_t}}
+\index{\_mav\_put\_uint64\_t@{\_mav\_put\_uint64\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_uint64\_t}{\_mav\_put\_uint64\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+uint64\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~byte\+\_\+swap\+\_\+8(\&buf\mbox{[}wire\+\_\+offset\mbox{]}, (const char $\ast$)\&b)}
+
+
+
+Definition at line 133 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a25eacf3d37971b0b54c67e338d9f481a}\label{include__v0_89_2protocol_8h_a25eacf3d37971b0b54c67e338d9f481a}} 
+\index{protocol.h@{protocol.h}!\_mav\_put\_uint8\_t@{\_mav\_put\_uint8\_t}}
+\index{\_mav\_put\_uint8\_t@{\_mav\_put\_uint8\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_put\_uint8\_t}{\_mav\_put\_uint8\_t}}
+{\footnotesize\ttfamily \#define \+\_\+mav\+\_\+put\+\_\+uint8\+\_\+t(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{wire\+\_\+offset,  }\item[{}]{b }\end{DoxyParamCaption})~buf\mbox{[}wire\+\_\+offset\mbox{]} = (uint8\+\_\+t)b}
+
+
+
+Definition at line 124 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a056ba05a9133c8e4362514ffc523a24b}\label{include__v0_89_2protocol_8h_a056ba05a9133c8e4362514ffc523a24b}} 
+\index{protocol.h@{protocol.h}!\_MAV\_RETURN\_ARRAY@{\_MAV\_RETURN\_ARRAY}}
+\index{\_MAV\_RETURN\_ARRAY@{\_MAV\_RETURN\_ARRAY}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_MAV\_RETURN\_ARRAY}{\_MAV\_RETURN\_ARRAY}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+R\+R\+AY(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE,  }\item[{}]{V }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} \textcolor{keyword}{inline} uint16\_t \_MAV\_RETURN\_\#\# TYPE \#\#\_array(\textcolor{keyword}{const} \mbox{\hyperlink{struct____mavlink__message}{mavlink\_message\_t}} *\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}, TYPE *value, \(\backslash\)}
+\DoxyCodeLine{                             uint8\_t array\_length, uint8\_t wire\_offset) \(\backslash\)}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{    uint16\_t \mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}; \(\backslash\)}
+\DoxyCodeLine{    for (\mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}=0; \mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}<array\_length; \mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}++) \{ \(\backslash\)}
+\DoxyCodeLine{        value[\mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}] = \_MAV\_RETURN\_\#\# TYPE (\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}, wire\_offset+(\mbox{\hyperlink{pidWaypoint_8cpp_a1239420b8759f52cbab64225b82461e2}{i}}*\textcolor{keyword}{sizeof}(value[0]))); \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{    return array\_length*\textcolor{keyword}{sizeof}(value[0]); \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 294 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a2ce2c9077675f00ed5854c12c6aa239a}\label{include__v0_89_2protocol_8h_a2ce2c9077675f00ed5854c12c6aa239a}} 
+\index{protocol.h@{protocol.h}!\_MAV\_RETURN\_char@{\_MAV\_RETURN\_char}}
+\index{\_MAV\_RETURN\_char@{\_MAV\_RETURN\_char}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_MAV\_RETURN\_char}{\_MAV\_RETURN\_char}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+char(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}},  }\item[{}]{wire\+\_\+offset }\end{DoxyParamCaption})~(char)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})\mbox{[}wire\+\_\+offset\mbox{]}}
+
+
+
+Definition at line 226 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a37f0a7aa03bb6a9d30316517e76f0e25}\label{include__v0_89_2protocol_8h_a37f0a7aa03bb6a9d30316517e76f0e25}} 
+\index{protocol.h@{protocol.h}!\_MAV\_RETURN\_int8\_t@{\_MAV\_RETURN\_int8\_t}}
+\index{\_MAV\_RETURN\_int8\_t@{\_MAV\_RETURN\_int8\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_MAV\_RETURN\_int8\_t}{\_MAV\_RETURN\_int8\_t}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+int8\+\_\+t(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}},  }\item[{}]{wire\+\_\+offset }\end{DoxyParamCaption})~(int8\+\_\+t)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})\mbox{[}wire\+\_\+offset\mbox{]}}
+
+
+
+Definition at line 227 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a125f5a7a107c19da567a08ebaaa08389}\label{include__v0_89_2protocol_8h_a125f5a7a107c19da567a08ebaaa08389}} 
+\index{protocol.h@{protocol.h}!\_MAV\_RETURN\_uint8\_t@{\_MAV\_RETURN\_uint8\_t}}
+\index{\_MAV\_RETURN\_uint8\_t@{\_MAV\_RETURN\_uint8\_t}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_MAV\_RETURN\_uint8\_t}{\_MAV\_RETURN\_uint8\_t}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+uint8\+\_\+t(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}},  }\item[{}]{wire\+\_\+offset }\end{DoxyParamCaption})~(uint8\+\_\+t)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})\mbox{[}wire\+\_\+offset\mbox{]}}
+
+
+
+Definition at line 228 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_aad5dd4313a4e19ae3bddccfbebda5b62}\label{include__v0_89_2protocol_8h_aad5dd4313a4e19ae3bddccfbebda5b62}} 
+\index{protocol.h@{protocol.h}!MAVLINK\_ASSERT@{MAVLINK\_ASSERT}}
+\index{MAVLINK\_ASSERT@{MAVLINK\_ASSERT}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_ASSERT}{MAVLINK\_ASSERT}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a33f043343a6390ef58ea5351906a9d74}\label{include__v0_89_2protocol_8h_a33f043343a6390ef58ea5351906a9d74}} 
+\index{protocol.h@{protocol.h}!MAVLINK\_AVOID\_GCC\_STACK\_BUG@{MAVLINK\_AVOID\_GCC\_STACK\_BUG}}
+\index{MAVLINK\_AVOID\_GCC\_STACK\_BUG@{MAVLINK\_AVOID\_GCC\_STACK\_BUG}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_AVOID\_GCC\_STACK\_BUG}{MAVLINK\_AVOID\_GCC\_STACK\_BUG}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+V\+O\+I\+D\+\_\+\+G\+C\+C\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+UG~defined(\+\_\+\+\_\+\+G\+N\+U\+C\+\_\+\+\_\+)}
+
+
+
+Definition at line 22 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a18dca6a13e7d2a09fc80bd18e4f57367}\label{include__v0_89_2protocol_8h_a18dca6a13e7d2a09fc80bd18e4f57367}} 
+\index{protocol.h@{protocol.h}!MAVLINK\_END\_UART\_SEND@{MAVLINK\_END\_UART\_SEND}}
+\index{MAVLINK\_END\_UART\_SEND@{MAVLINK\_END\_UART\_SEND}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_END\_UART\_SEND}{MAVLINK\_END\_UART\_SEND}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+N\+D\+\_\+\+U\+A\+R\+T\+\_\+\+S\+E\+ND(\begin{DoxyParamCaption}\item[{}]{chan,  }\item[{}]{length }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a8201ad9cec6e1480d1f018161aaa5c6f}\label{include__v0_89_2protocol_8h_a8201ad9cec6e1480d1f018161aaa5c6f}} 
+\index{protocol.h@{protocol.h}!MAVLINK\_HELPER@{MAVLINK\_HELPER}}
+\index{MAVLINK\_HELPER@{MAVLINK\_HELPER}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_HELPER}{MAVLINK\_HELPER}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER~static inline}
+
+
+
+Definition at line 40 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a8294f9c8a98c407a6f24e2de6ebecbba}\label{include__v0_89_2protocol_8h_a8294f9c8a98c407a6f24e2de6ebecbba}} 
+\index{protocol.h@{protocol.h}!MAVLINK\_NEED\_BYTE\_SWAP@{MAVLINK\_NEED\_BYTE\_SWAP}}
+\index{MAVLINK\_NEED\_BYTE\_SWAP@{MAVLINK\_NEED\_BYTE\_SWAP}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_NEED\_BYTE\_SWAP}{MAVLINK\_NEED\_BYTE\_SWAP}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+E\+E\+D\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+W\+AP~(\mbox{\hyperlink{mavlink__defaults_8h_a2db62f1ccd5d8ffb120d7689f207942f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+N\+D\+I\+AN}} != \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_af43ffe0aa4007fb568c277f8942eb759}{M\+A\+V\+L\+I\+N\+K\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}})}
+
+
+
+Definition at line 14 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a1378e871245e049d35394229752d79d7}\label{include__v0_89_2protocol_8h_a1378e871245e049d35394229752d79d7}} 
+\index{protocol.h@{protocol.h}!MAVLINK\_STACK\_BUFFER@{MAVLINK\_STACK\_BUFFER}}
+\index{MAVLINK\_STACK\_BUFFER@{MAVLINK\_STACK\_BUFFER}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_STACK\_BUFFER}{MAVLINK\_STACK\_BUFFER}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+U\+F\+F\+ER~0}
+
+
+
+Definition at line 18 of file protocol.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ab761006cae93e593accb4bc4f543413b}\label{include__v0_89_2protocol_8h_ab761006cae93e593accb4bc4f543413b}} 
+\index{protocol.h@{protocol.h}!MAVLINK\_START\_UART\_SEND@{MAVLINK\_START\_UART\_SEND}}
+\index{MAVLINK\_START\_UART\_SEND@{MAVLINK\_START\_UART\_SEND}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_START\_UART\_SEND}{MAVLINK\_START\_UART\_SEND}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+R\+T\+\_\+\+U\+A\+R\+T\+\_\+\+S\+E\+ND(\begin{DoxyParamCaption}\item[{}]{chan,  }\item[{}]{length }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file protocol.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a4cf2070546d162dc12b7e93ccac50ba1}\label{include__v0_89_2protocol_8h_a4cf2070546d162dc12b7e93ccac50ba1}} 
+\index{protocol.h@{protocol.h}!\_mav\_finalize\_message\_chan\_send@{\_mav\_finalize\_message\_chan\_send}}
+\index{\_mav\_finalize\_message\_chan\_send@{\_mav\_finalize\_message\_chan\_send}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{\_mav\_finalize\_message\_chan\_send()}{\_mav\_finalize\_message\_chan\_send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \+\_\+mav\+\_\+finalize\+\_\+message\+\_\+chan\+\_\+send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709c}{mavlink\+\_\+channel\+\_\+t}}}]{chan,  }\item[{uint8\+\_\+t}]{msgid,  }\item[{const char $\ast$}]{packet,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_af3bea083c5ec83f5b6570b2bd4a817d0}\label{include__v0_89_2protocol_8h_af3bea083c5ec83f5b6570b2bd4a817d0}} 
+\index{protocol.h@{protocol.h}!mavlink\_finalize\_message@{mavlink\_finalize\_message}}
+\index{mavlink\_finalize\_message@{mavlink\_finalize\_message}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{mavlink\_finalize\_message()}{mavlink\_finalize\_message()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t mavlink\+\_\+finalize\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg,  }\item[{uint8\+\_\+t}]{system\+\_\+id,  }\item[{uint8\+\_\+t}]{component\+\_\+id,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Finalize a M\+A\+V\+Link message with M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0 as default channel. 
+
+
+
+Definition at line 89 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_aa66131138fc02101dcc73b4b556ab422}\label{include__v0_89_2protocol_8h_aa66131138fc02101dcc73b4b556ab422}} 
+\index{protocol.h@{protocol.h}!mavlink\_finalize\_message\_chan@{mavlink\_finalize\_message\_chan}}
+\index{mavlink\_finalize\_message\_chan@{mavlink\_finalize\_message\_chan}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{mavlink\_finalize\_message\_chan()}{mavlink\_finalize\_message\_chan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t mavlink\+\_\+finalize\+\_\+message\+\_\+chan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg,  }\item[{uint8\+\_\+t}]{system\+\_\+id,  }\item[{uint8\+\_\+t}]{component\+\_\+id,  }\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Finalize a M\+A\+V\+Link message with channel assignment. 
+
+This function calculates the checksum and sets length and aircraft id correctly. It assumes that the message id and the payload are already correctly set. This function can also be used if the message header has already been written before (as in mavlink\+\_\+msg\+\_\+xxx\+\_\+pack instead of mavlink\+\_\+msg\+\_\+xxx\+\_\+pack\+\_\+headerless), it just introduces little extra overhead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message to finalize \\
+\hline
+{\em system\+\_\+id} & Id of the sending (this) system, 1-\/127 \\
+\hline
+{\em length} & Message length \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ac006d308067f48514ca5c0cf0b046c28}\label{include__v0_89_2protocol_8h_ac006d308067f48514ca5c0cf0b046c28}} 
+\index{protocol.h@{protocol.h}!mavlink\_get\_channel\_status@{mavlink\_get\_channel\_status}}
+\index{mavlink\_get\_channel\_status@{mavlink\_get\_channel\_status}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{mavlink\_get\_channel\_status()}{mavlink\_get\_channel\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}}$\ast$ mavlink\+\_\+get\+\_\+channel\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{chan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_afea0a9befa84822fd62c2899ea0d849e}\label{include__v0_89_2protocol_8h_afea0a9befa84822fd62c2899ea0d849e}} 
+\index{protocol.h@{protocol.h}!mavlink\_msg\_to\_send\_buffer@{mavlink\_msg\_to\_send\_buffer}}
+\index{mavlink\_msg\_to\_send\_buffer@{mavlink\_msg\_to\_send\_buffer}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{mavlink\_msg\_to\_send\_buffer()}{mavlink\_msg\_to\_send\_buffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint16\+\_\+t mavlink\+\_\+msg\+\_\+to\+\_\+send\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Pack a message to send it over a serial byte stream. 
+
+
+
+Definition at line 157 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ad91e8323cefc65965574c09e72365d7d}\label{include__v0_89_2protocol_8h_ad91e8323cefc65965574c09e72365d7d}} 
+\index{protocol.h@{protocol.h}!mavlink\_parse\_char@{mavlink\_parse\_char}}
+\index{mavlink\_parse\_char@{mavlink\_parse\_char}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{mavlink\_parse\_char()}{mavlink\_parse\_char()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t mavlink\+\_\+parse\+\_\+char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{c,  }\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{r\+\_\+message,  }\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$}]{r\+\_\+mavlink\+\_\+status }\end{DoxyParamCaption})}
+
+This is a convenience function which handles the complete M\+A\+V\+Link parsing. the function will parse one byte at a time and return the complete packet once it could be successfully decoded. Checksum and other failures will be silently ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chan} & ID of the current channel. This allows to parse different channels with this function. a channel is not a physical message channel like a serial port, but a logic partition of the communication streams in this case. C\+O\+M\+M\+\_\+\+NB is the limit for the number of channels on M\+CU (e.\+g. A\+R\+M7), while C\+O\+M\+M\+\_\+\+N\+B\+\_\+\+H\+I\+GH is the limit for the number of channels in Linux/\+Windows \\
+\hline
+{\em c} & The char to barse\\
+\hline
+{\em return\+Msg} & N\+U\+LL if no message could be decoded, the message data else \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no message could be decoded, 1 else
+\end{DoxyReturn}
+A typical use scenario of this function call is\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <inttypes.h>} \textcolor{comment}{// For fixed-width uint8\_t type}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct____mavlink__message}{mavlink\_message\_t}} \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}};}
+\DoxyCodeLine{\textcolor{keywordtype}{int} chan = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while}(serial.bytesAvailable > 0)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  uint8\_t \textcolor{keywordtype}{byte} = serial.getNextByte();}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (\mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_ad91e8323cefc65965574c09e72365d7d}{mavlink\_parse\_char}}(chan, \textcolor{keywordtype}{byte}, \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}))}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"Received message with ID \%d, sequence: \%d from component \%d of system \%d"}, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.msgid, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.seq, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.compid, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.sysid);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+This is a convenience function which handles the complete M\+A\+V\+Link parsing. the function will parse one byte at a time and return the complete packet once it could be successfully decoded. This function will return 0 or 1.
+
+Messages are parsed into an internal buffer (one for each channel). When a complete message is received it is copies into $\ast$return\+Msg and the channel\textquotesingle{}s status is copied into $\ast$return\+Stats.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chan} & ID of the current channel. This allows to parse different channels with this function. a channel is not a physical message channel like a serial port, but a logic partition of the communication streams in this case. C\+O\+M\+M\+\_\+\+NB is the limit for the number of channels on M\+CU (e.\+g. A\+R\+M7), while C\+O\+M\+M\+\_\+\+N\+B\+\_\+\+H\+I\+GH is the limit for the number of channels in Linux/\+Windows \\
+\hline
+{\em c} & The char to parse\\
+\hline
+{\em return\+Msg} & N\+U\+LL if no message could be decoded, the message data else \\
+\hline
+{\em return\+Stats} & if a message was decoded, this is filled with the channel\textquotesingle{}s stats \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no message could be decoded or bad C\+RC, 1 on good message and C\+RC
+\end{DoxyReturn}
+A typical use scenario of this function call is\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <mavlink.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct____mavlink__message}{mavlink\_message\_t}} \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}};}
+\DoxyCodeLine{\textcolor{keywordtype}{int} chan = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while}(serial.bytesAvailable > 0)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  uint8\_t \textcolor{keywordtype}{byte} = serial.getNextByte();}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (\mbox{\hyperlink{include__v0_89_2mavlink__helpers_8h_ad91e8323cefc65965574c09e72365d7d}{mavlink\_parse\_char}}(chan, \textcolor{keywordtype}{byte}, \&\mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}))}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"Received message with ID \%d, sequence: \%d from component \%d of system \%d"}, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.msgid, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.seq, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.compid, \mbox{\hyperlink{keyTalker_8cpp_a42e49170b245aca1ab23bc7f907a585c}{msg}}.sysid);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ $<$ The currently decoded message
+
+$<$ The current decode status
+
+Definition at line 219 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ae7cbde569213151151d20c3766edd244}\label{include__v0_89_2protocol_8h_ae7cbde569213151151d20c3766edd244}} 
+\index{protocol.h@{protocol.h}!mavlink\_start\_checksum@{mavlink\_start\_checksum}}
+\index{mavlink\_start\_checksum@{mavlink\_start\_checksum}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{mavlink\_start\_checksum()}{mavlink\_start\_checksum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void mavlink\+\_\+start\+\_\+checksum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_a3293deb7b51f9a9f0b30bf56c8739593}\label{include__v0_89_2protocol_8h_a3293deb7b51f9a9f0b30bf56c8739593}} 
+\index{protocol.h@{protocol.h}!mavlink\_update\_checksum@{mavlink\_update\_checksum}}
+\index{mavlink\_update\_checksum@{mavlink\_update\_checksum}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{mavlink\_update\_checksum()}{mavlink\_update\_checksum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void mavlink\+\_\+update\+\_\+checksum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg,  }\item[{uint8\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 178 of file mavlink\+\_\+helpers.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2protocol_8h_ad102a58f323758552a9c439c1ede4403}\label{include__v0_89_2protocol_8h_ad102a58f323758552a9c439c1ede4403}} 
+\index{protocol.h@{protocol.h}!put\_bitfield\_n\_by\_index@{put\_bitfield\_n\_by\_index}}
+\index{put\_bitfield\_n\_by\_index@{put\_bitfield\_n\_by\_index}!protocol.h@{protocol.h}}
+\subsubsection{\texorpdfstring{put\_bitfield\_n\_by\_index()}{put\_bitfield\_n\_by\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t put\+\_\+bitfield\+\_\+n\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{bits,  }\item[{uint8\+\_\+t}]{packet\+\_\+index,  }\item[{uint8\+\_\+t}]{bit\+\_\+index,  }\item[{uint8\+\_\+t $\ast$}]{r\+\_\+bit\+\_\+index,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Put a bitfield of length 1-\/32 bit into the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & the value to add, will be encoded in the bitfield \\
+\hline
+{\em bits} & number of bits to use to encode b, e.\+g. 1 for boolean, 2, 3, etc. \\
+\hline
+{\em packet\+\_\+index} & the position in the packet (the index of the first byte to use) \\
+\hline
+{\em bit\+\_\+index} & the position in the byte (the index of the first bit to use) \\
+\hline
+{\em buffer} & packet buffer to write into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new position of the last used byte in the buffer 
+\end{DoxyReturn}
+
+
+Definition at line 420 of file mavlink\+\_\+helpers.\+h.
+

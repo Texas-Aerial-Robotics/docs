@@ -1,0 +1,459 @@
+\hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump}{}\section{pymavlink.\+tools.\+mavlogdump Namespace Reference}
+\label{namespacepymavlink_1_1tools_1_1mavlogdump}\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a6d6e4b627922cd7882784716f7f8db1f}{match\+\_\+type}} (mtype, patterns)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a5944af650a62ea2df82b07337e46c14a}{parser}} = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a9da9d09d43b823d7f0dbda7c0cd53b06}{dest}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a0d6aaf7db0ab044f6fccc41aef82b384}{action}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4059ef7894b5364373bb603635bda68c}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a6759c30206138cc486b4e4518b422f83}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}{None}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_addcfd2a4909e9a13151d343dd1988994}{type}} = m.\+get\+\_\+type()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a2fe404e5ba17834d53138cfe0a4fd638}{int}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad27718929cd610a9c09431db2ee5a519}{metavar}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a82cc95658402c05811fc36d24293de5f}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a1a3af4daa72962166a120b07458a1d2d}{filename}} = args.\+log
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a6cff93efb07e41fc83d0590b1c6d2da7}{mlog}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ac1b6c1536c0aa1b9e72138b338e2875d}{output}} = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}{None}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4adf6ef58d78f7724af78687dbb88a27}{types}} = args.\+types
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a303e0c1229846d262037f631d2356254}{nottypes}} = args.\+nottypes
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}{ext}} = os.\+path.\+splitext(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a1a3af4daa72962166a120b07458a1d2d}{filename}})\mbox{[}1\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_af56e6708a5dbbf02ca5b3497e4fc6aab}{isbin}} = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}{ext}} in \mbox{[}\textquotesingle{}.bin\textquotesingle{}, \textquotesingle{}.B\+IN\textquotesingle{}, \textquotesingle{}.px4log\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ae6ae5f3d617fddf9083caa61aa248e18}{islog}} = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}{ext}} in \mbox{[}\textquotesingle{}.log\textquotesingle{}, \textquotesingle{}.L\+OG\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a3ae8fff201f063e8f0036e4cfa1c8d1f}{istlog}} = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}{ext}} in \mbox{[}\textquotesingle{}.tlog\textquotesingle{}, \textquotesingle{}.T\+L\+OG\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a98d87b66146b93f20c0690e737b3cb8b}{csv\+\_\+sep}}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a8a7ca8e476c5e470f5fff33b76b6abb0}{fields}} = \mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a48f60cea754ecb290fd64f00e0ed6840}{timestamp}}\textquotesingle{}\mbox{]}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a939d06fcf84e8a17666d2f1503bc7ea5}{offsets}} = \{\}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a2fe404e5ba17834d53138cfe0a4fd638}{int}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a8b9296936da54456876bff3ebdea1772}{current\+Offset}} = 1
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ac7f442d05e751559a14b0ca409556f09}{type\+Class}} = \char`\"{}M\+A\+V\+Link\+\_\+\{0\}\+\_\+message\char`\"{}.format(type.\+lower())
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_afe3b16924e9b873155d166fd727643e3}{csv\+\_\+out}} = \mbox{[}\char`\"{}\char`\"{} for \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} in \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a8a7ca8e476c5e470f5fff33b76b6abb0}{fields}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a53ff4c2645da546179bd721de494e04a}{last\+\_\+timestamp}} = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}{None}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a1e9da64218374e9236ed3cd6fbe3046a}{available\+\_\+types}} = set()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad6f8303b7b10c5216189a5b97e662b84}{m}} = mlog.\+recv\+\_\+match(blocking=args.\+follow)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a48f60cea754ecb290fd64f00e0ed6840}{timestamp}} = getattr(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad6f8303b7b10c5216189a5b97e662b84}{m}}, \textquotesingle{}\+\_\+timestamp\textquotesingle{}, \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}{None}})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a85115ce0f3935727ee1721b7e8b8befe}{data}} = m.\+to\+\_\+dict()
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad3723a3a312a13fed34c390355d09a3d}{meta}} = \{\char`\"{}type\char`\"{}\+: m.\+get\+\_\+type(), \char`\"{}timestamp\char`\"{}\+: timestamp\}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4702d8d4cc541614f5245654255814b7}{out\+Msg}} = \{\char`\"{}meta\char`\"{}\+: meta, \char`\"{}data\char`\"{}\+: data\}
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a1479908be3a298d998f53d46ec01ccb2}{new\+Data}} = \mbox{[}str(\mbox{\hyperlink{structdata}{data}}\mbox{[}\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}\mbox{]}) if \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}} != \char`\"{}timestamp\char`\"{} else \char`\"{}\char`\"{} for \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}} in \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a8a7ca8e476c5e470f5fff33b76b6abb0}{fields}}\mbox{]}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a627870b1439e6436d74da8547ae782a6}{s}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}example program that dumps a Mavlink log file. The log file is
+assumed to be in the format that qgroundcontrol uses, which consists
+of a series of MAVLink packets, each with a 64 bit timestamp
+header. The timestamp is in microseconds since 1970 (unix epoch)
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a6d6e4b627922cd7882784716f7f8db1f}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a6d6e4b627922cd7882784716f7f8db1f}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!match\_type@{match\_type}}
+\index{match\_type@{match\_type}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{match\_type()}{match\_type()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+mavlogdump.\+match\+\_\+type (\begin{DoxyParamCaption}\item[{}]{mtype,  }\item[{}]{patterns }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return True if mtype matches pattern\end{DoxyVerb}
+ 
+
+Definition at line 86 of file mavlogdump.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a0d6aaf7db0ab044f6fccc41aef82b384}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a0d6aaf7db0ab044f6fccc41aef82b384}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!action@{action}}
+\index{action@{action}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+action}
+
+
+
+Definition at line 25 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a82cc95658402c05811fc36d24293de5f}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a82cc95658402c05811fc36d24293de5f}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!args@{args}}
+\index{args@{args}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 48 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a1e9da64218374e9236ed3cd6fbe3046a}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a1e9da64218374e9236ed3cd6fbe3046a}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!available\_types@{available\_types}}
+\index{available\_types@{available\_types}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{available\_types}{available\_types}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+available\+\_\+types = set()}
+
+
+
+Definition at line 124 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_afe3b16924e9b873155d166fd727643e3}\label{namespacepymavlink_1_1tools_1_1mavlogdump_afe3b16924e9b873155d166fd727643e3}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!csv\_out@{csv\_out}}
+\index{csv\_out@{csv\_out}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{csv\_out}{csv\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+mavlogdump.\+csv\+\_\+out = \mbox{[}\char`\"{}\char`\"{} for \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} in \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a8a7ca8e476c5e470f5fff33b76b6abb0}{fields}}\mbox{]}}
+
+
+
+Definition at line 112 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a98d87b66146b93f20c0690e737b3cb8b}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a98d87b66146b93f20c0690e737b3cb8b}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!csv\_sep@{csv\_sep}}
+\index{csv\_sep@{csv\_sep}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{csv\_sep}{csv\_sep}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+csv\+\_\+sep}
+
+
+
+Definition at line 84 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a8b9296936da54456876bff3ebdea1772}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a8b9296936da54456876bff3ebdea1772}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!currentOffset@{currentOffset}}
+\index{currentOffset@{currentOffset}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{currentOffset}{currentOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a2fe404e5ba17834d53138cfe0a4fd638}{int}} pymavlink.\+tools.\+mavlogdump.\+current\+Offset = 1}
+
+
+
+Definition at line 98 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a85115ce0f3935727ee1721b7e8b8befe}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a85115ce0f3935727ee1721b7e8b8befe}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!data@{data}}
+\index{data@{data}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+data = m.\+to\+\_\+dict()}
+
+
+
+Definition at line 191 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a6759c30206138cc486b4e4518b422f83}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a6759c30206138cc486b4e4518b422f83}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!default@{default}}
+\index{default@{default}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+default}
+
+
+
+Definition at line 29 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a9da9d09d43b823d7f0dbda7c0cd53b06}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a9da9d09d43b823d7f0dbda7c0cd53b06}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!dest@{dest}}
+\index{dest@{dest}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{dest}{dest}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+dest}
+
+
+
+Definition at line 25 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}\label{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!ext@{ext}}
+\index{ext@{ext}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{ext}{ext}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+ext = os.\+path.\+splitext(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a1a3af4daa72962166a120b07458a1d2d}{filename}})\mbox{[}1\mbox{]}}
+
+
+
+Definition at line 78 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a8a7ca8e476c5e470f5fff33b76b6abb0}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a8a7ca8e476c5e470f5fff33b76b6abb0}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!fields@{fields}}
+\index{fields@{fields}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{fields}{fields}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+mavlogdump.\+fields = \mbox{[}\textquotesingle{}\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a48f60cea754ecb290fd64f00e0ed6840}{timestamp}}\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 94 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a1a3af4daa72962166a120b07458a1d2d}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a1a3af4daa72962166a120b07458a1d2d}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!filename@{filename}}
+\index{filename@{filename}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+filename = args.\+log}
+
+
+
+Definition at line 59 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a4059ef7894b5364373bb603635bda68c}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a4059ef7894b5364373bb603635bda68c}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!help@{help}}
+\index{help@{help}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+help}
+
+
+
+Definition at line 25 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a2fe404e5ba17834d53138cfe0a4fd638}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a2fe404e5ba17834d53138cfe0a4fd638}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!int@{int}}
+\index{int@{int}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{int}{int}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+int}
+
+
+
+Definition at line 43 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_af56e6708a5dbbf02ca5b3497e4fc6aab}\label{namespacepymavlink_1_1tools_1_1mavlogdump_af56e6708a5dbbf02ca5b3497e4fc6aab}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!isbin@{isbin}}
+\index{isbin@{isbin}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{isbin}{isbin}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+isbin = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}{ext}} in \mbox{[}\textquotesingle{}.bin\textquotesingle{}, \textquotesingle{}.B\+IN\textquotesingle{}, \textquotesingle{}.px4log\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 79 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_ae6ae5f3d617fddf9083caa61aa248e18}\label{namespacepymavlink_1_1tools_1_1mavlogdump_ae6ae5f3d617fddf9083caa61aa248e18}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!islog@{islog}}
+\index{islog@{islog}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{islog}{islog}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+islog = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}{ext}} in \mbox{[}\textquotesingle{}.log\textquotesingle{}, \textquotesingle{}.L\+OG\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 80 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a3ae8fff201f063e8f0036e4cfa1c8d1f}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a3ae8fff201f063e8f0036e4cfa1c8d1f}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!istlog@{istlog}}
+\index{istlog@{istlog}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{istlog}{istlog}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+istlog = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad2aee23289790e6ed5482ef50c2c53b0}{ext}} in \mbox{[}\textquotesingle{}.tlog\textquotesingle{}, \textquotesingle{}.T\+L\+OG\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 81 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a53ff4c2645da546179bd721de494e04a}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a53ff4c2645da546179bd721de494e04a}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!last\_timestamp@{last\_timestamp}}
+\index{last\_timestamp@{last\_timestamp}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{last\_timestamp}{last\_timestamp}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+last\+\_\+timestamp = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}{None}}}
+
+
+
+Definition at line 121 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_ad6f8303b7b10c5216189a5b97e662b84}\label{namespacepymavlink_1_1tools_1_1mavlogdump_ad6f8303b7b10c5216189a5b97e662b84}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!m@{m}}
+\index{m@{m}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+m = mlog.\+recv\+\_\+match(blocking=args.\+follow)}
+
+
+
+Definition at line 128 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_ad3723a3a312a13fed34c390355d09a3d}\label{namespacepymavlink_1_1tools_1_1mavlogdump_ad3723a3a312a13fed34c390355d09a3d}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!meta@{meta}}
+\index{meta@{meta}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily dictionary pymavlink.\+tools.\+mavlogdump.\+meta = \{\char`\"{}type\char`\"{}\+: m.\+get\+\_\+type(), \char`\"{}timestamp\char`\"{}\+: timestamp\}}
+
+
+
+Definition at line 202 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_ad27718929cd610a9c09431db2ee5a519}\label{namespacepymavlink_1_1tools_1_1mavlogdump_ad27718929cd610a9c09431db2ee5a519}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!metavar@{metavar}}
+\index{metavar@{metavar}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{metavar}{metavar}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+metavar}
+
+
+
+Definition at line 47 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a6cff93efb07e41fc83d0590b1c6d2da7}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a6cff93efb07e41fc83d0590b1c6d2da7}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!mlog@{mlog}}
+\index{mlog@{mlog}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{mlog}{mlog}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+mlog}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  mavutil.mavlink\_connection(filename, planner\_format=args.planner,}
+\DoxyCodeLine{2                                   notimestamps=args.notimestamps,}
+\DoxyCodeLine{3                                   robust\_parsing=args.robust,}
+\DoxyCodeLine{4                                   dialect=args.dialect,}
+\DoxyCodeLine{5                                   zero\_time\_base=args.zero\_time\_base)}
+
+\end{DoxyCode}
+
+
+Definition at line 60 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a1479908be3a298d998f53d46ec01ccb2}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a1479908be3a298d998f53d46ec01ccb2}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!newData@{newData}}
+\index{newData@{newData}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{newData}{newData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+mavlogdump.\+new\+Data = \mbox{[}str(\mbox{\hyperlink{structdata}{data}}\mbox{[}\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}\mbox{]}) if \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}} != \char`\"{}timestamp\char`\"{} else \char`\"{}\char`\"{} for \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}} in \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a8a7ca8e476c5e470f5fff33b76b6abb0}{fields}}\mbox{]}}
+
+
+
+Definition at line 219 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!None@{None}}
+\index{None@{None}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{None}{None}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+None}
+
+
+
+Definition at line 29 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a303e0c1229846d262037f631d2356254}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a303e0c1229846d262037f631d2356254}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!nottypes@{nottypes}}
+\index{nottypes@{nottypes}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{nottypes}{nottypes}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+nottypes = args.\+nottypes}
+
+
+
+Definition at line 74 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a939d06fcf84e8a17666d2f1503bc7ea5}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a939d06fcf84e8a17666d2f1503bc7ea5}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!offsets@{offsets}}
+\index{offsets@{offsets}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{offsets}{offsets}}
+{\footnotesize\ttfamily dictionary pymavlink.\+tools.\+mavlogdump.\+offsets = \{\}}
+
+
+
+Definition at line 95 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a4702d8d4cc541614f5245654255814b7}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a4702d8d4cc541614f5245654255814b7}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!outMsg@{outMsg}}
+\index{outMsg@{outMsg}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{outMsg}{outMsg}}
+{\footnotesize\ttfamily dictionary pymavlink.\+tools.\+mavlogdump.\+out\+Msg = \{\char`\"{}meta\char`\"{}\+: meta, \char`\"{}data\char`\"{}\+: data\}}
+
+
+
+Definition at line 206 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_ac1b6c1536c0aa1b9e72138b338e2875d}\label{namespacepymavlink_1_1tools_1_1mavlogdump_ac1b6c1536c0aa1b9e72138b338e2875d}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!output@{output}}
+\index{output@{output}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+output = \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}{None}}}
+
+
+
+Definition at line 66 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a5944af650a62ea2df82b07337e46c14a}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a5944af650a62ea2df82b07337e46c14a}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!parser@{parser}}
+\index{parser@{parser}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+parser = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)}
+
+
+
+Definition at line 23 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a627870b1439e6436d74da8547ae782a6}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a627870b1439e6436d74da8547ae782a6}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!s@{s}}
+\index{s@{s}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily string pymavlink.\+tools.\+mavlogdump.\+s}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{"\%s.\%02u: \%s"} \% (time.strftime(\textcolor{stringliteral}{"\%Y-\%m-\%d \%H:\%M:\%S"},}
+\DoxyCodeLine{2                                            time.localtime(timestamp)),}
+\DoxyCodeLine{3                              \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a2fe404e5ba17834d53138cfe0a4fd638}{int}}(timestamp*100.0)\%100, m)}
+
+\end{DoxyCode}
+
+
+Definition at line 237 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a48f60cea754ecb290fd64f00e0ed6840}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a48f60cea754ecb290fd64f00e0ed6840}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+timestamp = getattr(\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_ad6f8303b7b10c5216189a5b97e662b84}{m}}, \textquotesingle{}\+\_\+timestamp\textquotesingle{}, \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1mavlogdump_a4f907ac5c5d06d13d8020f0969229a7e}{None}})}
+
+
+
+Definition at line 147 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_addcfd2a4909e9a13151d343dd1988994}\label{namespacepymavlink_1_1tools_1_1mavlogdump_addcfd2a4909e9a13151d343dd1988994}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!type@{type}}
+\index{type@{type}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+type = m.\+get\+\_\+type()}
+
+
+
+Definition at line 43 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_ac7f442d05e751559a14b0ca409556f09}\label{namespacepymavlink_1_1tools_1_1mavlogdump_ac7f442d05e751559a14b0ca409556f09}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!typeClass@{typeClass}}
+\index{typeClass@{typeClass}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{typeClass}{typeClass}}
+{\footnotesize\ttfamily string pymavlink.\+tools.\+mavlogdump.\+type\+Class = \char`\"{}M\+A\+V\+Link\+\_\+\{0\}\+\_\+message\char`\"{}.format(type.\+lower())}
+
+
+
+Definition at line 101 of file mavlogdump.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1mavlogdump_a4adf6ef58d78f7724af78687dbb88a27}\label{namespacepymavlink_1_1tools_1_1mavlogdump_a4adf6ef58d78f7724af78687dbb88a27}} 
+\index{pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}!types@{types}}
+\index{types@{types}!pymavlink.tools.mavlogdump@{pymavlink.tools.mavlogdump}}
+\subsubsection{\texorpdfstring{types}{types}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+mavlogdump.\+types = args.\+types}
+
+
+
+Definition at line 70 of file mavlogdump.\+py.
+

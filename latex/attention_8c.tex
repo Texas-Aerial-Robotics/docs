@@ -1,0 +1,95 @@
+\hypertarget{attention_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/attention.c File Reference}
+\label{attention_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/attention.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/attention.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{attention_8c_a4e626f9c8fdff822260ab299d98df5d6}{extend\+\_\+data\+\_\+truth}} (\mbox{\hyperlink{structdata}{data}} $\ast$\mbox{\hyperlink{velTest_8cpp_a76cd2b15a7b8954fcf0e73d5732e8e59}{d}}, int n, float val)
+\item 
+\mbox{\hyperlink{structmatrix}{matrix}} \mbox{\hyperlink{attention_8c_a25db1034bfe40ea9834e6f24ff8d66e6}{network\+\_\+loss\+\_\+data}} (\mbox{\hyperlink{structnetwork}{network}} $\ast$net, \mbox{\hyperlink{structdata}{data}} \mbox{\hyperlink{classtest}{test}})
+\item 
+void \mbox{\hyperlink{attention_8c_a964c33b46552a00f09b3ab7df5f9882c}{train\+\_\+attention}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, int $\ast$gpus, int ngpus, int clear)
+\item 
+void \mbox{\hyperlink{attention_8c_a2e8a21ede30f10cb93b631e38792c539}{validate\+\_\+attention\+\_\+single}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{attention_8c_a3e048f63787a47f3b826662af56c85e8}{validate\+\_\+attention\+\_\+multi}} (char $\ast$datacfg, char $\ast$filename, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{attention_8c_a54a2123873f85237803863aa95eac5d5}{predict\+\_\+attention}} (char $\ast$datacfg, char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, int top)
+\item 
+void \mbox{\hyperlink{attention_8c_abee9d6ee905e64e3dc7205486a15f375}{run\+\_\+attention}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{attention_8c_a4e626f9c8fdff822260ab299d98df5d6}\label{attention_8c_a4e626f9c8fdff822260ab299d98df5d6}} 
+\index{attention.c@{attention.c}!extend\_data\_truth@{extend\_data\_truth}}
+\index{extend\_data\_truth@{extend\_data\_truth}!attention.c@{attention.c}}
+\subsubsection{\texorpdfstring{extend\_data\_truth()}{extend\_data\_truth()}}
+{\footnotesize\ttfamily void extend\+\_\+data\+\_\+truth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdata}{data}} $\ast$}]{d,  }\item[{int}]{n,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file attention.\+c.
+
+\mbox{\Hypertarget{attention_8c_a25db1034bfe40ea9834e6f24ff8d66e6}\label{attention_8c_a25db1034bfe40ea9834e6f24ff8d66e6}} 
+\index{attention.c@{attention.c}!network\_loss\_data@{network\_loss\_data}}
+\index{network\_loss\_data@{network\_loss\_data}!attention.c@{attention.c}}
+\subsubsection{\texorpdfstring{network\_loss\_data()}{network\_loss\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmatrix}{matrix}} network\+\_\+loss\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnetwork}{network}} $\ast$}]{net,  }\item[{\mbox{\hyperlink{structdata}{data}}}]{test }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file attention.\+c.
+
+\mbox{\Hypertarget{attention_8c_a54a2123873f85237803863aa95eac5d5}\label{attention_8c_a54a2123873f85237803863aa95eac5d5}} 
+\index{attention.c@{attention.c}!predict\_attention@{predict\_attention}}
+\index{predict\_attention@{predict\_attention}!attention.c@{attention.c}}
+\subsubsection{\texorpdfstring{predict\_attention()}{predict\_attention()}}
+{\footnotesize\ttfamily void predict\+\_\+attention (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{int}]{top }\end{DoxyParamCaption})}
+
+
+
+Definition at line 382 of file attention.\+c.
+
+\mbox{\Hypertarget{attention_8c_abee9d6ee905e64e3dc7205486a15f375}\label{attention_8c_abee9d6ee905e64e3dc7205486a15f375}} 
+\index{attention.c@{attention.c}!run\_attention@{run\_attention}}
+\index{run\_attention@{run\_attention}!attention.c@{attention.c}}
+\subsubsection{\texorpdfstring{run\_attention()}{run\_attention()}}
+{\footnotesize\ttfamily void run\+\_\+attention (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 434 of file attention.\+c.
+
+\mbox{\Hypertarget{attention_8c_a964c33b46552a00f09b3ab7df5f9882c}\label{attention_8c_a964c33b46552a00f09b3ab7df5f9882c}} 
+\index{attention.c@{attention.c}!train\_attention@{train\_attention}}
+\index{train\_attention@{train\_attention}!attention.c@{attention.c}}
+\subsubsection{\texorpdfstring{train\_attention()}{train\_attention()}}
+{\footnotesize\ttfamily void train\+\_\+attention (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{int $\ast$}]{gpus,  }\item[{int}]{ngpus,  }\item[{int}]{clear }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file attention.\+c.
+
+\mbox{\Hypertarget{attention_8c_a3e048f63787a47f3b826662af56c85e8}\label{attention_8c_a3e048f63787a47f3b826662af56c85e8}} 
+\index{attention.c@{attention.c}!validate\_attention\_multi@{validate\_attention\_multi}}
+\index{validate\_attention\_multi@{validate\_attention\_multi}!attention.c@{attention.c}}
+\subsubsection{\texorpdfstring{validate\_attention\_multi()}{validate\_attention\_multi()}}
+{\footnotesize\ttfamily void validate\+\_\+attention\+\_\+multi (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 321 of file attention.\+c.
+
+\mbox{\Hypertarget{attention_8c_a2e8a21ede30f10cb93b631e38792c539}\label{attention_8c_a2e8a21ede30f10cb93b631e38792c539}} 
+\index{attention.c@{attention.c}!validate\_attention\_single@{validate\_attention\_single}}
+\index{validate\_attention\_single@{validate\_attention\_single}!attention.c@{attention.c}}
+\subsubsection{\texorpdfstring{validate\_attention\_single()}{validate\_attention\_single()}}
+{\footnotesize\ttfamily void validate\+\_\+attention\+\_\+single (\begin{DoxyParamCaption}\item[{char $\ast$}]{datacfg,  }\item[{char $\ast$}]{filename,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 233 of file attention.\+c.
+

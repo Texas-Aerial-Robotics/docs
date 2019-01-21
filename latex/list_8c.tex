@@ -1,0 +1,95 @@
+\hypertarget{list_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/list.c File Reference}
+\label{list_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/list.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/list.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{list_8c_a2e7ac341a0adc4e02a760a9807ba7db0}{make\+\_\+list}} ()
+\item 
+void $\ast$ \mbox{\hyperlink{list_8c_a35885fd30f031789e0844bb693b0b8fc}{list\+\_\+pop}} (\mbox{\hyperlink{structlist}{list}} $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_a4b177e1b5244311b3b9f5276c7f39946}{list\+\_\+insert}} (\mbox{\hyperlink{structlist}{list}} $\ast$l, void $\ast$val)
+\item 
+void \mbox{\hyperlink{list_8c_a12d054d5f2dfa6c0d777e2ceb7e4f89d}{free\+\_\+node}} (\mbox{\hyperlink{structnode}{node}} $\ast$n)
+\item 
+void \mbox{\hyperlink{list_8c_a919f01c7184ba8e6645264cc06516780}{free\+\_\+list}} (\mbox{\hyperlink{structlist}{list}} $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_a02b7489888a301031a0c8aa3d37a77b5}{free\+\_\+list\+\_\+contents}} (\mbox{\hyperlink{structlist}{list}} $\ast$l)
+\item 
+void $\ast$$\ast$ \mbox{\hyperlink{list_8c_a29e21d306ccd944370665f439d7ca37d}{list\+\_\+to\+\_\+array}} (\mbox{\hyperlink{structlist}{list}} $\ast$l)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{list_8c_a919f01c7184ba8e6645264cc06516780}\label{list_8c_a919f01c7184ba8e6645264cc06516780}} 
+\index{list.c@{list.c}!free\_list@{free\_list}}
+\index{free\_list@{free\_list}!list.c@{list.c}}
+\subsubsection{\texorpdfstring{free\_list()}{free\_list()}}
+{\footnotesize\ttfamily void free\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file list.\+c.
+
+\mbox{\Hypertarget{list_8c_a02b7489888a301031a0c8aa3d37a77b5}\label{list_8c_a02b7489888a301031a0c8aa3d37a77b5}} 
+\index{list.c@{list.c}!free\_list\_contents@{free\_list\_contents}}
+\index{free\_list\_contents@{free\_list\_contents}!list.c@{list.c}}
+\subsubsection{\texorpdfstring{free\_list\_contents()}{free\_list\_contents()}}
+{\footnotesize\ttfamily void free\+\_\+list\+\_\+contents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file list.\+c.
+
+\mbox{\Hypertarget{list_8c_a12d054d5f2dfa6c0d777e2ceb7e4f89d}\label{list_8c_a12d054d5f2dfa6c0d777e2ceb7e4f89d}} 
+\index{list.c@{list.c}!free\_node@{free\_node}}
+\index{free\_node@{free\_node}!list.c@{list.c}}
+\subsubsection{\texorpdfstring{free\_node()}{free\_node()}}
+{\footnotesize\ttfamily void free\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnode}{node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file list.\+c.
+
+\mbox{\Hypertarget{list_8c_a4b177e1b5244311b3b9f5276c7f39946}\label{list_8c_a4b177e1b5244311b3b9f5276c7f39946}} 
+\index{list.c@{list.c}!list\_insert@{list\_insert}}
+\index{list\_insert@{list\_insert}!list.c@{list.c}}
+\subsubsection{\texorpdfstring{list\_insert()}{list\_insert()}}
+{\footnotesize\ttfamily void list\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{l,  }\item[{void $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file list.\+c.
+
+\mbox{\Hypertarget{list_8c_a35885fd30f031789e0844bb693b0b8fc}\label{list_8c_a35885fd30f031789e0844bb693b0b8fc}} 
+\index{list.c@{list.c}!list\_pop@{list\_pop}}
+\index{list\_pop@{list\_pop}!list.c@{list.c}}
+\subsubsection{\texorpdfstring{list\_pop()}{list\_pop()}}
+{\footnotesize\ttfamily void$\ast$ list\+\_\+pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file list.\+c.
+
+\mbox{\Hypertarget{list_8c_a29e21d306ccd944370665f439d7ca37d}\label{list_8c_a29e21d306ccd944370665f439d7ca37d}} 
+\index{list.c@{list.c}!list\_to\_array@{list\_to\_array}}
+\index{list\_to\_array@{list\_to\_array}!list.c@{list.c}}
+\subsubsection{\texorpdfstring{list\_to\_array()}{list\_to\_array()}}
+{\footnotesize\ttfamily void$\ast$$\ast$ list\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist}{list}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file list.\+c.
+
+\mbox{\Hypertarget{list_8c_a2e7ac341a0adc4e02a760a9807ba7db0}\label{list_8c_a2e7ac341a0adc4e02a760a9807ba7db0}} 
+\index{list.c@{list.c}!make\_list@{make\_list}}
+\index{make\_list@{make\_list}!list.c@{list.c}}
+\subsubsection{\texorpdfstring{make\_list()}{make\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}}$\ast$ make\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file list.\+c.
+

@@ -1,0 +1,60 @@
+\hypertarget{mavros_2mavros_2include_2mavros_2utils_8h}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/include/mavros/utils.h File Reference}
+\label{mavros_2mavros_2include_2mavros_2utils_8h}\index{/home/eric/catkin\_ws/src/mavros/mavros/include/mavros/utils.h@{/home/eric/catkin\_ws/src/mavros/mavros/include/mavros/utils.h}}
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$mavconn/thread\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/mavlink\+\_\+convert.\+h$>$}\newline
+{\ttfamily \#include $<$mavconn/mavlink\+\_\+dialect.\+h$>$}\newline
+{\ttfamily \#include $<$ros/console.\+h$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1utils}{mavros\+::utils}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{mavros\+::utils\+::timesync\+\_\+mode}} \{ \mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7ab50339a10e1de285ac99d4c3990b8693}{mavros\+::utils\+::timesync\+\_\+mode\+::\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a2b45d810cc872a32caa6e524d97e1bc1}{mavros\+::utils\+::timesync\+\_\+mode\+::\+M\+A\+V\+L\+I\+NK}}, 
+\mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7a1136c8e00bec79c43c2c579ef03e934f}{mavros\+::utils\+::timesync\+\_\+mode\+::\+O\+N\+B\+O\+A\+RD}}, 
+\mbox{\hyperlink{group__mavutils_ggac7f53712a7627f397d0eb145c2a16cf7aeb8f4226b2bcd1848b8945edb9120428}{mavros\+::utils\+::timesync\+\_\+mode\+::\+P\+A\+S\+S\+T\+H\+R\+O\+U\+GH}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename \+\_\+T $>$ }\\constexpr std\+::underlying\+\_\+type$<$ \+\_\+T $>$\+::type \mbox{\hyperlink{group__mavutils_gaed9174e090ae0f75aeb9096b7cb6be56}{mavros\+::utils\+::enum\+\_\+value}} (\+\_\+T e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gac86aed43baa119369cb7eb523c7de067}{mavros\+::utils\+::to\+\_\+string}} (timesync\+\_\+mode e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga014455201c2903b835912e056c64d02f}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON e)
+\begin{DoxyCompactList}\small\item\em Retrieve alias of the orientation received by M\+A\+V\+Link msg. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaf790b7f7da119e86e0875c9def1f45aa}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gac2fb656a52c699748f929392f47523bf}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+T\+Y\+PE}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaafc0054ec09db1d1fd1560da7be6d265}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga3e1f543b99b1e237a90ccdad25bd3bdb}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+E\+S\+T\+I\+M\+A\+T\+O\+R\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga8e40158252eb7c24a59036afd35bf12b}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+A\+D\+S\+B\+\_\+\+A\+L\+T\+I\+T\+U\+D\+E\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gab8a1c172a6993c1b668f923e58da594f}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+A\+D\+S\+B\+\_\+\+E\+M\+I\+T\+T\+E\+R\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaa3707eb566a03171dd282eeb7d3ca512}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+R\+E\+S\+U\+LT e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_gaa89b7f807c7cf4be1a8d04377d8ad3bc}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+F\+R\+A\+ME}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__mavutils_ga5edcd4c7df23cca0ea720877f0fe4142}{mavros\+::utils\+::to\+\_\+string}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+N\+S\+OR e)
+\item 
+{\footnotesize template$<$typename \+\_\+T $>$ }\\std\+::string \mbox{\hyperlink{group__mavutils_ga80987ce0a2019df54e1fe62b7b53de7f}{mavros\+::utils\+::to\+\_\+string\+\_\+enum}} (int e)
+\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__mavutils_ga9f21cd4e0233c34591600f8809c4fb2b}{mavros\+::utils\+::sensor\+\_\+orientation\+\_\+matching}} (mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON \mbox{\hyperlink{structorientation}{orientation}})
+\begin{DoxyCompactList}\small\item\em Function to match the received orientation received by M\+A\+V\+Link msg and the rotation of the sensor relative to the F\+CU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mavutils_ga0dc70c024ad33cd50af1c9e9bcfaa0c1}{mavros\+::utils\+::sensor\+\_\+orientation\+\_\+from\+\_\+str}} (const std\+::string \&sensor\+\_\+orientation)
+\begin{DoxyCompactList}\small\item\em Retrieve sensor orientation number from alias name. \end{DoxyCompactList}\item 
+timesync\+\_\+mode \mbox{\hyperlink{group__mavutils_gaacb385ef1414eb5c38c20f4f4d91d321}{mavros\+::utils\+::timesync\+\_\+mode\+\_\+from\+\_\+str}} (const std\+::string \&mode)
+\begin{DoxyCompactList}\small\item\em Retreive timesync mode from name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{mavlink\+::common\+::\+M\+A\+V\+\_\+\+F\+R\+A\+ME}} \mbox{\hyperlink{group__mavutils_gaeecc00ce9cf4ea787c7309235e35cf8d}{mavros\+::utils\+::mav\+\_\+frame\+\_\+from\+\_\+str}} (const std\+::string \&mav\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Retreive M\+A\+V\+\_\+\+F\+R\+A\+ME from name. \end{DoxyCompactList}\end{DoxyCompactItemize}

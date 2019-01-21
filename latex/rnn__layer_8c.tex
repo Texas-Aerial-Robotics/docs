@@ -1,0 +1,66 @@
+\hypertarget{rnn__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/rnn\+\_\+layer.c File Reference}
+\label{rnn__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/rnn\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/rnn\_layer.c}}
+{\ttfamily \#include \char`\"{}rnn\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connected\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gemm.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{rnn__layer_8c_a03678a37818a63d16b5900f42500daaa}{make\+\_\+rnn\+\_\+layer}} (int batch, int inputs, int outputs, int steps, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} activation, int batch\+\_\+normalize, int adam)
+\item 
+void \mbox{\hyperlink{rnn__layer_8c_a60c152985aed791433025435f8001610}{update\+\_\+rnn\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\item 
+void \mbox{\hyperlink{rnn__layer_8c_ab0e6e3a00a31334156f3a178837218a8}{forward\+\_\+rnn\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{rnn__layer_8c_a05fc3a1b5aefb27605afc121072faa1a}{backward\+\_\+rnn\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rnn__layer_8c_a05fc3a1b5aefb27605afc121072faa1a}\label{rnn__layer_8c_a05fc3a1b5aefb27605afc121072faa1a}} 
+\index{rnn\_layer.c@{rnn\_layer.c}!backward\_rnn\_layer@{backward\_rnn\_layer}}
+\index{backward\_rnn\_layer@{backward\_rnn\_layer}!rnn\_layer.c@{rnn\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_rnn\_layer()}{backward\_rnn\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+rnn\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file rnn\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{rnn__layer_8c_ab0e6e3a00a31334156f3a178837218a8}\label{rnn__layer_8c_ab0e6e3a00a31334156f3a178837218a8}} 
+\index{rnn\_layer.c@{rnn\_layer.c}!forward\_rnn\_layer@{forward\_rnn\_layer}}
+\index{forward\_rnn\_layer@{forward\_rnn\_layer}!rnn\_layer.c@{rnn\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_rnn\_layer()}{forward\_rnn\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+rnn\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file rnn\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{rnn__layer_8c_a03678a37818a63d16b5900f42500daaa}\label{rnn__layer_8c_a03678a37818a63d16b5900f42500daaa}} 
+\index{rnn\_layer.c@{rnn\_layer.c}!make\_rnn\_layer@{make\_rnn\_layer}}
+\index{make\_rnn\_layer@{make\_rnn\_layer}!rnn\_layer.c@{rnn\_layer.c}}
+\subsubsection{\texorpdfstring{make\_rnn\_layer()}{make\_rnn\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+rnn\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{int}]{outputs,  }\item[{int}]{steps,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{activation,  }\item[{int}]{batch\+\_\+normalize,  }\item[{int}]{adam }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file rnn\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{rnn__layer_8c_a60c152985aed791433025435f8001610}\label{rnn__layer_8c_a60c152985aed791433025435f8001610}} 
+\index{rnn\_layer.c@{rnn\_layer.c}!update\_rnn\_layer@{update\_rnn\_layer}}
+\index{update\_rnn\_layer@{update\_rnn\_layer}!rnn\_layer.c@{rnn\_layer.c}}
+\subsubsection{\texorpdfstring{update\_rnn\_layer()}{update\_rnn\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+rnn\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file rnn\+\_\+layer.\+c.
+

@@ -1,0 +1,276 @@
+\hypertarget{classpymavlink_1_1mavextra_1_1DCM__State}{}\section{pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State Class Reference}
+\label{classpymavlink_1_1mavextra_1_1DCM__State}\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+Inheritance diagram for pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpymavlink_1_1mavextra_1_1DCM__State}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a1f20ca8f9381120815f5cf1eff5d19ae}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, roll, pitch, yaw)
+\item 
+def \mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a1d4bde9feb6f1b8ca501f96c914bac27}{update}} (self, \mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a811e975d99347cd0574347ca8fb82527}{gyro}}, \mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_af2a01ad15a9bbae4e42d7dfd4d34725f}{accel}}, \mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a4d04b8ef6413c3ddfe3256b94fd4af40}{mag}}, G\+PS)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a3367bfa8416e59425024c30355084064}{dcm}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a2f8b4848ff0164814d62b9e7350ad19b}{dcm2}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a4d04b8ef6413c3ddfe3256b94fd4af40}{mag}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a811e975d99347cd0574347ca8fb82527}{gyro}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_af2a01ad15a9bbae4e42d7dfd4d34725f}{accel}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a87bd8281f7ff13ac0766e867207cdf99}{gps}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a5ccb643559e6aa178a43bb8bd070458d}{rate}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a669196ce32d7d222e86e227648d999a4}{kp}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_acb1b3117b999fffa35a73bf4fa3ce1cf}{kp\+\_\+yaw}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_af4f366a0fe2808fa0a3618ab898984c9}{omega\+\_\+P}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a1dd12e84153fffce4852b2f695c99faf}{omega\+\_\+\+P\+\_\+yaw}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a8f84e96ad236ec88b7021c217e0793a1}{omega\+\_\+I}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a58b21b469aa1f0e4abc2d8043f5b7b09}{omega\+\_\+\+I\+\_\+sum}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_ad2908f8fe18ebea6209ab2be9f9e4be4}{omega\+\_\+\+I\+\_\+sum\+\_\+time}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a95544c6b3aafe46c2faf9e650bfe15a3}{omega}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_a6a4dfa55567c0993a4bfaac87540fcd9}{ra\+\_\+sum}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_ae6071d18abe3032886035efefb049eef}{last\+\_\+delta\+\_\+angle}}
+\item 
+\mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State_ad4c4248dd987046009832718babf1646}{last\+\_\+velocity}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}DCM state object\end{DoxyVerb}
+ 
+
+Definition at line 773 of file mavextra.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a1f20ca8f9381120815f5cf1eff5d19ae}\label{classpymavlink_1_1mavextra_1_1DCM__State_a1f20ca8f9381120815f5cf1eff5d19ae}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{roll,  }\item[{}]{pitch,  }\item[{}]{yaw }\end{DoxyParamCaption})}
+
+
+
+Definition at line 775 of file mavextra.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a1d4bde9feb6f1b8ca501f96c914bac27}\label{classpymavlink_1_1mavextra_1_1DCM__State_a1d4bde9feb6f1b8ca501f96c914bac27}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!update@{update}}
+\index{update@{update}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{gyro,  }\item[{}]{accel,  }\item[{}]{mag,  }\item[{}]{G\+PS }\end{DoxyParamCaption})}
+
+
+
+Definition at line 799 of file mavextra.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_af2a01ad15a9bbae4e42d7dfd4d34725f}\label{classpymavlink_1_1mavextra_1_1DCM__State_af2a01ad15a9bbae4e42d7dfd4d34725f}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!accel@{accel}}
+\index{accel@{accel}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{accel}{accel}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+accel}
+
+
+
+Definition at line 782 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a3367bfa8416e59425024c30355084064}\label{classpymavlink_1_1mavextra_1_1DCM__State_a3367bfa8416e59425024c30355084064}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!dcm@{dcm}}
+\index{dcm@{dcm}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{dcm}{dcm}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+dcm}
+
+
+
+Definition at line 776 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a2f8b4848ff0164814d62b9e7350ad19b}\label{classpymavlink_1_1mavextra_1_1DCM__State_a2f8b4848ff0164814d62b9e7350ad19b}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!dcm2@{dcm2}}
+\index{dcm2@{dcm2}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{dcm2}{dcm2}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+dcm2}
+
+
+
+Definition at line 777 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a87bd8281f7ff13ac0766e867207cdf99}\label{classpymavlink_1_1mavextra_1_1DCM__State_a87bd8281f7ff13ac0766e867207cdf99}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!gps@{gps}}
+\index{gps@{gps}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{gps}{gps}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+gps}
+
+
+
+Definition at line 783 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a811e975d99347cd0574347ca8fb82527}\label{classpymavlink_1_1mavextra_1_1DCM__State_a811e975d99347cd0574347ca8fb82527}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!gyro@{gyro}}
+\index{gyro@{gyro}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{gyro}{gyro}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+gyro}
+
+
+
+Definition at line 781 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a669196ce32d7d222e86e227648d999a4}\label{classpymavlink_1_1mavextra_1_1DCM__State_a669196ce32d7d222e86e227648d999a4}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!kp@{kp}}
+\index{kp@{kp}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{kp}{kp}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+kp}
+
+
+
+Definition at line 785 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_acb1b3117b999fffa35a73bf4fa3ce1cf}\label{classpymavlink_1_1mavextra_1_1DCM__State_acb1b3117b999fffa35a73bf4fa3ce1cf}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!kp\_yaw@{kp\_yaw}}
+\index{kp\_yaw@{kp\_yaw}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{kp\_yaw}{kp\_yaw}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+kp\+\_\+yaw}
+
+
+
+Definition at line 786 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_ae6071d18abe3032886035efefb049eef}\label{classpymavlink_1_1mavextra_1_1DCM__State_ae6071d18abe3032886035efefb049eef}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!last\_delta\_angle@{last\_delta\_angle}}
+\index{last\_delta\_angle@{last\_delta\_angle}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{last\_delta\_angle}{last\_delta\_angle}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+last\+\_\+delta\+\_\+angle}
+
+
+
+Definition at line 794 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_ad4c4248dd987046009832718babf1646}\label{classpymavlink_1_1mavextra_1_1DCM__State_ad4c4248dd987046009832718babf1646}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!last\_velocity@{last\_velocity}}
+\index{last\_velocity@{last\_velocity}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{last\_velocity}{last\_velocity}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+last\+\_\+velocity}
+
+
+
+Definition at line 795 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a4d04b8ef6413c3ddfe3256b94fd4af40}\label{classpymavlink_1_1mavextra_1_1DCM__State_a4d04b8ef6413c3ddfe3256b94fd4af40}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!mag@{mag}}
+\index{mag@{mag}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{mag}{mag}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+mag}
+
+
+
+Definition at line 780 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a95544c6b3aafe46c2faf9e650bfe15a3}\label{classpymavlink_1_1mavextra_1_1DCM__State_a95544c6b3aafe46c2faf9e650bfe15a3}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!omega@{omega}}
+\index{omega@{omega}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{omega}{omega}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+omega}
+
+
+
+Definition at line 792 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a8f84e96ad236ec88b7021c217e0793a1}\label{classpymavlink_1_1mavextra_1_1DCM__State_a8f84e96ad236ec88b7021c217e0793a1}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!omega\_I@{omega\_I}}
+\index{omega\_I@{omega\_I}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{omega\_I}{omega\_I}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+omega\+\_\+I}
+
+
+
+Definition at line 789 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a58b21b469aa1f0e4abc2d8043f5b7b09}\label{classpymavlink_1_1mavextra_1_1DCM__State_a58b21b469aa1f0e4abc2d8043f5b7b09}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!omega\_I\_sum@{omega\_I\_sum}}
+\index{omega\_I\_sum@{omega\_I\_sum}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{omega\_I\_sum}{omega\_I\_sum}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+omega\+\_\+\+I\+\_\+sum}
+
+
+
+Definition at line 790 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_ad2908f8fe18ebea6209ab2be9f9e4be4}\label{classpymavlink_1_1mavextra_1_1DCM__State_ad2908f8fe18ebea6209ab2be9f9e4be4}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!omega\_I\_sum\_time@{omega\_I\_sum\_time}}
+\index{omega\_I\_sum\_time@{omega\_I\_sum\_time}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{omega\_I\_sum\_time}{omega\_I\_sum\_time}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+omega\+\_\+\+I\+\_\+sum\+\_\+time}
+
+
+
+Definition at line 791 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_af4f366a0fe2808fa0a3618ab898984c9}\label{classpymavlink_1_1mavextra_1_1DCM__State_af4f366a0fe2808fa0a3618ab898984c9}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!omega\_P@{omega\_P}}
+\index{omega\_P@{omega\_P}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{omega\_P}{omega\_P}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+omega\+\_\+P}
+
+
+
+Definition at line 787 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a1dd12e84153fffce4852b2f695c99faf}\label{classpymavlink_1_1mavextra_1_1DCM__State_a1dd12e84153fffce4852b2f695c99faf}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!omega\_P\_yaw@{omega\_P\_yaw}}
+\index{omega\_P\_yaw@{omega\_P\_yaw}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{omega\_P\_yaw}{omega\_P\_yaw}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+omega\+\_\+\+P\+\_\+yaw}
+
+
+
+Definition at line 788 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a6a4dfa55567c0993a4bfaac87540fcd9}\label{classpymavlink_1_1mavextra_1_1DCM__State_a6a4dfa55567c0993a4bfaac87540fcd9}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!ra\_sum@{ra\_sum}}
+\index{ra\_sum@{ra\_sum}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{ra\_sum}{ra\_sum}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+ra\+\_\+sum}
+
+
+
+Definition at line 793 of file mavextra.\+py.
+
+\mbox{\Hypertarget{classpymavlink_1_1mavextra_1_1DCM__State_a5ccb643559e6aa178a43bb8bd070458d}\label{classpymavlink_1_1mavextra_1_1DCM__State_a5ccb643559e6aa178a43bb8bd070458d}} 
+\index{pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}!rate@{rate}}
+\index{rate@{rate}!pymavlink.mavextra.DCM\_State@{pymavlink.mavextra.DCM\_State}}
+\subsubsection{\texorpdfstring{rate}{rate}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+D\+C\+M\+\_\+\+State.\+rate}
+
+
+
+Definition at line 784 of file mavextra.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/\mbox{\hyperlink{mavextra_8py}{mavextra.\+py}}\end{DoxyCompactItemize}

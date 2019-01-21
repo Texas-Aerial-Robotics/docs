@@ -1,0 +1,73 @@
+\hypertarget{tree_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/tree.c File Reference}
+\label{tree_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/tree.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/tree.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tree_8c_ab9684f1163a4ec99b63ab1d2521919f8}{change\+\_\+leaves}} (\mbox{\hyperlink{structtree}{tree}} $\ast$t, char $\ast$leaf\+\_\+list)
+\item 
+float \mbox{\hyperlink{tree_8c_a4f7eed900e89ca83188960a695529f92}{get\+\_\+hierarchy\+\_\+probability}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, \mbox{\hyperlink{structtree}{tree}} $\ast$hier, int c, int stride)
+\item 
+void \mbox{\hyperlink{tree_8c_ae85a851ba734b49bbb5c13f232dd7f9e}{hierarchy\+\_\+predictions}} (float $\ast$predictions, int n, \mbox{\hyperlink{structtree}{tree}} $\ast$hier, int only\+\_\+leaves, int stride)
+\item 
+int \mbox{\hyperlink{tree_8c_a621b0e70c4d9fb119256ccbe1d6b968b}{hierarchy\+\_\+top\+\_\+prediction}} (float $\ast$predictions, \mbox{\hyperlink{structtree}{tree}} $\ast$hier, float thresh, int stride)
+\item 
+\mbox{\hyperlink{structtree}{tree}} $\ast$ \mbox{\hyperlink{tree_8c_a3cccde848b06d0d47221be0ae4ea6421}{read\+\_\+tree}} (char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tree_8c_ab9684f1163a4ec99b63ab1d2521919f8}\label{tree_8c_ab9684f1163a4ec99b63ab1d2521919f8}} 
+\index{tree.c@{tree.c}!change\_leaves@{change\_leaves}}
+\index{change\_leaves@{change\_leaves}!tree.c@{tree.c}}
+\subsubsection{\texorpdfstring{change\_leaves()}{change\_leaves()}}
+{\footnotesize\ttfamily void change\+\_\+leaves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{t,  }\item[{char $\ast$}]{leaf\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file tree.\+c.
+
+\mbox{\Hypertarget{tree_8c_a4f7eed900e89ca83188960a695529f92}\label{tree_8c_a4f7eed900e89ca83188960a695529f92}} 
+\index{tree.c@{tree.c}!get\_hierarchy\_probability@{get\_hierarchy\_probability}}
+\index{get\_hierarchy\_probability@{get\_hierarchy\_probability}!tree.c@{tree.c}}
+\subsubsection{\texorpdfstring{get\_hierarchy\_probability()}{get\_hierarchy\_probability()}}
+{\footnotesize\ttfamily float get\+\_\+hierarchy\+\_\+probability (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{hier,  }\item[{int}]{c,  }\item[{int}]{stride }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file tree.\+c.
+
+\mbox{\Hypertarget{tree_8c_ae85a851ba734b49bbb5c13f232dd7f9e}\label{tree_8c_ae85a851ba734b49bbb5c13f232dd7f9e}} 
+\index{tree.c@{tree.c}!hierarchy\_predictions@{hierarchy\_predictions}}
+\index{hierarchy\_predictions@{hierarchy\_predictions}!tree.c@{tree.c}}
+\subsubsection{\texorpdfstring{hierarchy\_predictions()}{hierarchy\_predictions()}}
+{\footnotesize\ttfamily void hierarchy\+\_\+predictions (\begin{DoxyParamCaption}\item[{float $\ast$}]{predictions,  }\item[{int}]{n,  }\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{hier,  }\item[{int}]{only\+\_\+leaves,  }\item[{int}]{stride }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file tree.\+c.
+
+\mbox{\Hypertarget{tree_8c_a621b0e70c4d9fb119256ccbe1d6b968b}\label{tree_8c_a621b0e70c4d9fb119256ccbe1d6b968b}} 
+\index{tree.c@{tree.c}!hierarchy\_top\_prediction@{hierarchy\_top\_prediction}}
+\index{hierarchy\_top\_prediction@{hierarchy\_top\_prediction}!tree.c@{tree.c}}
+\subsubsection{\texorpdfstring{hierarchy\_top\_prediction()}{hierarchy\_top\_prediction()}}
+{\footnotesize\ttfamily int hierarchy\+\_\+top\+\_\+prediction (\begin{DoxyParamCaption}\item[{float $\ast$}]{predictions,  }\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{hier,  }\item[{float}]{thresh,  }\item[{int}]{stride }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file tree.\+c.
+
+\mbox{\Hypertarget{tree_8c_a3cccde848b06d0d47221be0ae4ea6421}\label{tree_8c_a3cccde848b06d0d47221be0ae4ea6421}} 
+\index{tree.c@{tree.c}!read\_tree@{read\_tree}}
+\index{read\_tree@{read\_tree}!tree.c@{tree.c}}
+\subsubsection{\texorpdfstring{read\_tree()}{read\_tree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtree}{tree}}$\ast$ read\+\_\+tree (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file tree.\+c.
+

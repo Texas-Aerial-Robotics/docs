@@ -1,0 +1,82 @@
+\hypertarget{positionEstimate_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Mission8\+\_\+\+Out\+Of\+Controls/src/position\+Estimate.cpp File Reference}
+\label{positionEstimate_8cpp}\index{/home/eric/catkin\_ws/src/Mission8\_OutOfControls/src/positionEstimate.cpp@{/home/eric/catkin\_ws/src/Mission8\_OutOfControls/src/positionEstimate.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Transform\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Override\+R\+C\+In.\+h$>$}\newline
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Model\+States.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose.\+h$>$}\newline
+{\ttfamily \#include $<$tf/transform\+\_\+broadcaster.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{positionEstimate_8cpp_a7922cff845bf3066c95151de415da9ab}{model\+\_\+cb}} (const gazebo\+\_\+msgs\+::\+Model\+States\+::\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{positionEstimate_8cpp_afa0f9061a6152b26289dd2c93b295847}{pose\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
+\item 
+int \mbox{\hyperlink{positionEstimate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{positionEstimate_8cpp_a3d0c7085685bd9bdb621ac605a5f3626}{current\+Drone\+State}}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{positionEstimate_8cpp_af377ee9edba63eb0f097170558286d94}{current\+\_\+pose\+E\+KF}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{positionEstimate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{positionEstimate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{positionEstimate.cpp@{positionEstimate.cpp}!main@{main}}
+\index{main@{main}!positionEstimate.cpp@{positionEstimate.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file position\+Estimate.\+cpp.
+
+\mbox{\Hypertarget{positionEstimate_8cpp_a7922cff845bf3066c95151de415da9ab}\label{positionEstimate_8cpp_a7922cff845bf3066c95151de415da9ab}} 
+\index{positionEstimate.cpp@{positionEstimate.cpp}!model\_cb@{model\_cb}}
+\index{model\_cb@{model\_cb}!positionEstimate.cpp@{positionEstimate.cpp}}
+\subsubsection{\texorpdfstring{model\_cb()}{model\_cb()}}
+{\footnotesize\ttfamily void model\+\_\+cb (\begin{DoxyParamCaption}\item[{const gazebo\+\_\+msgs\+::\+Model\+States\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file position\+Estimate.\+cpp.
+
+\mbox{\Hypertarget{positionEstimate_8cpp_afa0f9061a6152b26289dd2c93b295847}\label{positionEstimate_8cpp_afa0f9061a6152b26289dd2c93b295847}} 
+\index{positionEstimate.cpp@{positionEstimate.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!positionEstimate.cpp@{positionEstimate.cpp}}
+\subsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file position\+Estimate.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{positionEstimate_8cpp_af377ee9edba63eb0f097170558286d94}\label{positionEstimate_8cpp_af377ee9edba63eb0f097170558286d94}} 
+\index{positionEstimate.cpp@{positionEstimate.cpp}!current\_poseEKF@{current\_poseEKF}}
+\index{current\_poseEKF@{current\_poseEKF}!positionEstimate.cpp@{positionEstimate.cpp}}
+\subsubsection{\texorpdfstring{current\_poseEKF}{current\_poseEKF}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry current\+\_\+pose\+E\+KF}
+
+
+
+Definition at line 40 of file position\+Estimate.\+cpp.
+
+\mbox{\Hypertarget{positionEstimate_8cpp_a3d0c7085685bd9bdb621ac605a5f3626}\label{positionEstimate_8cpp_a3d0c7085685bd9bdb621ac605a5f3626}} 
+\index{positionEstimate.cpp@{positionEstimate.cpp}!currentDroneState@{currentDroneState}}
+\index{currentDroneState@{currentDroneState}!positionEstimate.cpp@{positionEstimate.cpp}}
+\subsubsection{\texorpdfstring{currentDroneState}{currentDroneState}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped current\+Drone\+State}
+
+
+
+Definition at line 10 of file position\+Estimate.\+cpp.
+

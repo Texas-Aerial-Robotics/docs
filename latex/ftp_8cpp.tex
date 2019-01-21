@@ -1,0 +1,54 @@
+\hypertarget{ftp_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/plugins/ftp.cpp File Reference}
+\label{ftp_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros/src/plugins/ftp.cpp@{/home/eric/catkin\_ws/src/mavros/mavros/src/plugins/ftp.cpp}}
+
+
+F\+TP plugin.  
+
+
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$mavros/mavros\+\_\+plugin.\+h$>$}\newline
+{\ttfamily \#include $<$std\+\_\+srvs/\+Empty.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Entry.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+List.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Open.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Close.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Read.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Write.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Remove.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Make\+Dir.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Remove\+Dir.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Truncate.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Rename.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+File\+Checksum.\+h$>$}\newline
+{\ttfamily \#include $<$pluginlib/class\+\_\+list\+\_\+macros.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavros_1_1std__plugins_1_1FTPRequest}{mavros\+::std\+\_\+plugins\+::\+F\+T\+P\+Request}}
+\begin{DoxyCompactList}\small\item\em F\+TP Request message abstraction class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmavros_1_1std__plugins_1_1FTPRequest_1_1PayloadHeader}{mavros\+::std\+\_\+plugins\+::\+F\+T\+P\+Request\+::\+Payload\+Header}}
+\begin{DoxyCompactList}\small\item\em This is the payload which is in mavlink\+\_\+file\+\_\+transfer\+\_\+protocol\+\_\+t.\+payload. We pad the structure ourselves to 32 bit alignment to avoid usage of any pack pragmas. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavros_1_1std__plugins_1_1FTPPlugin}{mavros\+::std\+\_\+plugins\+::\+F\+T\+P\+Plugin}}
+\begin{DoxyCompactList}\small\item\em F\+TP plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1std__plugins}{mavros\+::std\+\_\+plugins}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__plugin_ga75baa5fe36b24b82bf055d7ded996c07}{S\+E\+R\+V\+I\+C\+E\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+E\+CK}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\+TP plugin. 
+
+\begin{DoxyAuthor}{Author}
+Vladimir Ermakov \href{mailto:vooon341@gmail.com}{\texttt{ vooon341@gmail.\+com}} 
+\end{DoxyAuthor}

@@ -1,0 +1,188 @@
+/ref control\+\_\+functions
+
+The Texas Aerial Robotics control A\+PI is designed to simplify the process of writing intelligent drone applications. The A\+PI is built off of mavros and mavlink. These two packages are middle men between the arducopter flight code on the pixhawk and our code on the jetson.
+
+\subsection*{List of functions.}
+
+\subsubsection*{\mbox{\hyperlink{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}{set\+\_\+destination(float x, float y, float z, float psi)}}}
+
+This function is used to command the drone to fly to a waypoint. These waypoints should be specified in the local reference frame. This is typically defined from the location the drone is launched. Psi is counter clockwise rotation following the drone’s reference frame defined by the x axis through the right side of the drone with the y axis through the front of the drone.
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{n/a}
+\end{DoxyCode}
+ \subsubsection*{\mbox{\hyperlink{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb682}{set\+\_\+heading(float psi)}}}
+
+This function is used to specify the drone’s heading in the local reference frame. Psi is counter clockwise rotation following the drone’s reference frame defined by the x axis through the right side of the drone with the y axis through the front of the drone.
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{n/a}
+\end{DoxyCode}
+ \subsubsection*{\mbox{\hyperlink{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}{wait4connect()}}}
+
+Wait for connect is a function that will hold the program until communication with the F\+CU is established.
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0 - connected to fcu }
+\DoxyCodeLine{-1 - failed to connect to drone}
+\end{DoxyCode}
+ \subsubsection*{\mbox{\hyperlink{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}{wait4start()}}}
+
+Wait for strat will hold the program until the user signals the F\+CU to enther mode guided. This is typically done from a switch on the safety pilot’s remote or from the ground control station.
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0 - mission started}
+\DoxyCodeLine{-1 - failed to start mission}
+\end{DoxyCode}
+ \subsubsection*{\mbox{\hyperlink{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}{initialize\+\_\+local\+\_\+frame()}}}
+
+This function will create a local reference frame based on the starting location of the drone. This is typically done right before takeoff. This reference frame is what all of the the set destination commands will be in reference to.
+
+\paragraph*{returns}
+
+0 -\/ frame initialized
+
+\subsubsection*{\mbox{\hyperlink{group__control__functions_gac0aa671c99c09687515ec5bb8891c7d2}{takeoff(float height)}}}
+
+The takeoff function will arm the drone and put the drone in a hover above the initial position.
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0 - nominal takeoff }
+\DoxyCodeLine{-1 - failed to arm }
+\DoxyCodeLine{-2 - failed to takeoff}
+\end{DoxyCode}
+ \subsubsection*{\mbox{\hyperlink{group__control__functions_ga54abc3f6eae022a8710bc0c2e1c54fbe}{check\+\_\+waypoint\+\_\+reached()}}}
+
+This function returns an int of 1 or 0. T\+His function can be used to check when to request the next waypoint in the mission.
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 - waypoint reached}
+\DoxyCodeLine{0 - waypoint not reached}
+\end{DoxyCode}
+ \subsubsection*{\mbox{\hyperlink{group__control__functions_ga52a11a139e56315de52d2ab439b0d203}{land()}}}
+
+this function changes the mode of the drone to land
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 - mode change successful}
+\DoxyCodeLine{0 - mode change not successful}
+\end{DoxyCode}
+ \subsubsection*{\mbox{\hyperlink{group__control__functions_gae693b071b5392f9253cdfc1f4f362fcc}{init\+\_\+publisher\+\_\+subscriber(ros\+::\+Node\+Handle nh)}}}
+
+This function is called at the beginning of a program and will start of the communication links to the F\+CU. The function requires the program\textquotesingle{}s ros nodehandle as an input
+
+\#\#\#\# returns 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{n/a}
+\end{DoxyCode}
+ \subsection*{List of Structures}
+
+\#\#\# \mbox{\hyperlink{structcontrol__api__waypoint}{control\+\_\+api\+\_\+waypoint}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float x}
+\DoxyCodeLine{float y}
+\DoxyCodeLine{float z}
+\DoxyCodeLine{float psi}
+\end{DoxyCode}
+
+
+\subsection*{Example Code}
+
+\mbox{\hyperlink{controlAPIExample_8cpp}{src/control\+A\+P\+I\+Example.\+cpp}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include <control\_functions.hpp>}
+\DoxyCodeLine{//include API }
+\DoxyCodeLine{}
+\DoxyCodeLine{int main(int argc, char** argv)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    //initialize ros }
+\DoxyCodeLine{    ros::init(argc, argv, "offb\_node");}
+\DoxyCodeLine{    ros::NodeHandle controlnode;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    //initialize control publisher/subscribers}
+\DoxyCodeLine{    init\_publisher\_subscriber(controlnode);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //specify some waypoints }
+\DoxyCodeLine{    std::vector<control\_api\_waypoint> waypointList;}
+\DoxyCodeLine{    control\_api\_waypoint nextWayPoint;}
+\DoxyCodeLine{    nextWayPoint.x = 0;}
+\DoxyCodeLine{    nextWayPoint.y = 0;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 0;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 5;}
+\DoxyCodeLine{    nextWayPoint.y = 0;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = -90;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 5;}
+\DoxyCodeLine{    nextWayPoint.y = 5;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 0;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 0;}
+\DoxyCodeLine{    nextWayPoint.y = 5;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 90;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{    nextWayPoint.x = 0;}
+\DoxyCodeLine{    nextWayPoint.y = 0;}
+\DoxyCodeLine{    nextWayPoint.z = 3;}
+\DoxyCodeLine{    nextWayPoint.psi = 180;}
+\DoxyCodeLine{    waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // wait for FCU connection}
+\DoxyCodeLine{    wait4connect();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //wait for used to switch to mode GUIDED}
+\DoxyCodeLine{    wait4start();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //create local reference frame }
+\DoxyCodeLine{    initialize\_local\_frame();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //request takeoff}
+\DoxyCodeLine{    takeoff(3);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //specify control loop rate. We recommend a low frequency to not over load the FCU with messages. Too many messages will cause the drone to be sluggish}
+\DoxyCodeLine{    ros::Rate rate(2.0);}
+\DoxyCodeLine{    int counter = 0;}
+\DoxyCodeLine{    while(ros::ok())}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        ros::spinOnce();}
+\DoxyCodeLine{        rate.sleep();}
+\DoxyCodeLine{        if(check\_waypoint\_reached() == 1)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            if (counter < waypointList.size())}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                set\_destination(waypointList[counter].x,waypointList[counter].y,waypointList[counter].z, waypointList[counter].psi);}
+\DoxyCodeLine{                counter++;  }
+\DoxyCodeLine{            \}else\{}
+\DoxyCodeLine{                //land after all waypoints are reached}
+\DoxyCodeLine{                land();}
+\DoxyCodeLine{            \}   }
+\DoxyCodeLine{        \}   }
+\DoxyCodeLine{        }
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ \#\#\# run example code 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch mission8\_sim droneOnly.launch}
+\DoxyCodeLine{\# New Terminal}
+\DoxyCodeLine{~/catkin\_ws/src/Mission8\_OutOfControls/scripts/startsim.sh}
+\DoxyCodeLine{\# New Terminal}
+\DoxyCodeLine{roslaunch out\_of\_controls apm.launch}
+\DoxyCodeLine{\# New Terminal }
+\DoxyCodeLine{roslaunch out\_of\_controls contolAPIExample.launch}
+\end{DoxyCode}
+ N\+O\+T\+E$\ast$$\ast$ you can tile gnome terminals by pressing {\ttfamily ctrl + shift + t} 

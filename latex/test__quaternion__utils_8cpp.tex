@@ -1,0 +1,155 @@
+\hypertarget{test__quaternion__utils_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/test/test\+\_\+quaternion\+\_\+utils.cpp File Reference}
+\label{test__quaternion__utils_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros/test/test\_quaternion\_utils.cpp@{/home/eric/catkin\_ws/src/mavros/mavros/test/test\_quaternion\_utils.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$mavros/frame\+\_\+tf.\+h$>$}\newline
+{\ttfamily \#include $<$tf2/\+Linear\+Math/\+Quaternion.\+h$>$}\newline
+{\ttfamily \#include $<$tf2/\+Linear\+Math/\+Matrix3x3.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__quaternion__utils_8cpp_ae4650fcdf1882fd3ca9429899246d2c7}{A\+S\+S\+E\+R\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON}}(q1,  q2,  epsilon)
+\item 
+\#define \mbox{\hyperlink{test__quaternion__utils_8cpp_accaa79f0b1b0522e19ce6b6556627328}{E\+X\+P\+E\+C\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON}}(q1,  q2,  epsilon)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__quaternion__utils_8cpp_aece4a8ca4eba5579e40a3419f344c25b}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+from\+\_\+rpy\+\_\+\+\_\+check\+\_\+compatibility)
+\item 
+\mbox{\hyperlink{test__quaternion__utils_8cpp_aa5140d5b995f2322384850cef155a251}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+from\+\_\+rpy\+\_\+\+\_\+paranoic\+\_\+check)
+\item 
+\mbox{\hyperlink{test__quaternion__utils_8cpp_a80362857cd4ecc555c60fcd9294f4ed5}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+to\+\_\+rpy\+\_\+\+\_\+123)
+\item 
+\mbox{\hyperlink{test__quaternion__utils_8cpp_a937552088e5a12c0fb52ad39747cdd58}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+to\+\_\+rpy\+\_\+\+\_\+pm\+\_\+pi)
+\item 
+\mbox{\hyperlink{test__quaternion__utils_8cpp_a1e10a5297c614bd82b2d35e391483065}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+get\+\_\+yaw\+\_\+\+\_\+123)
+\item 
+\mbox{\hyperlink{test__quaternion__utils_8cpp_ac8e3805700762be8547b73ef7cdd651b}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+get\+\_\+yaw\+\_\+\+\_\+pm\+\_\+pi)
+\item 
+\mbox{\hyperlink{test__quaternion__utils_8cpp_a8ee4990cbeffbafc017ed9e8416c3c42}{T\+E\+ST}} (F\+R\+A\+M\+E\+\_\+\+TF, quaternion\+\_\+to\+\_\+mavlink\+\_\+\+\_\+123)
+\item 
+int \mbox{\hyperlink{test__quaternion__utils_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_ae4650fcdf1882fd3ca9429899246d2c7}\label{test__quaternion__utils_8cpp_ae4650fcdf1882fd3ca9429899246d2c7}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!ASSERT\_QUATERNION@{ASSERT\_QUATERNION}}
+\index{ASSERT\_QUATERNION@{ASSERT\_QUATERNION}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{ASSERT\_QUATERNION}{ASSERT\_QUATERNION}}
+{\footnotesize\ttfamily \#define A\+S\+S\+E\+R\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON(\begin{DoxyParamCaption}\item[{}]{q1,  }\item[{}]{q2,  }\item[{}]{epsilon }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ASSERT\_NEAR(q1.w(), q2.w(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    ASSERT\_NEAR(q1.x(), q2.x(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    ASSERT\_NEAR(q1.y(), q2.y(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    ASSERT\_NEAR(q1.z(), q2.z(), epsilon)}
+
+\end{DoxyCode}
+
+
+Definition at line 21 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_accaa79f0b1b0522e19ce6b6556627328}\label{test__quaternion__utils_8cpp_accaa79f0b1b0522e19ce6b6556627328}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!EXPECT\_QUATERNION@{EXPECT\_QUATERNION}}
+\index{EXPECT\_QUATERNION@{EXPECT\_QUATERNION}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{EXPECT\_QUATERNION}{EXPECT\_QUATERNION}}
+{\footnotesize\ttfamily \#define E\+X\+P\+E\+C\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON(\begin{DoxyParamCaption}\item[{}]{q1,  }\item[{}]{q2,  }\item[{}]{epsilon }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{EXPECT\_NEAR(q1.w(), q2.w(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(q1.x(), q2.x(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(q1.y(), q2.y(), epsilon);   \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(q1.z(), q2.z(), epsilon)}
+
+\end{DoxyCode}
+
+
+Definition at line 27 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{test__quaternion__utils_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!main@{main}}
+\index{main@{main}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 165 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_aece4a8ca4eba5579e40a3419f344c25b}\label{test__quaternion__utils_8cpp_aece4a8ca4eba5579e40a3419f344c25b}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+from\+\_\+rpy\+\_\+\+\_\+check\+\_\+compatibility}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_aa5140d5b995f2322384850cef155a251}\label{test__quaternion__utils_8cpp_aa5140d5b995f2322384850cef155a251}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+from\+\_\+rpy\+\_\+\+\_\+paranoic\+\_\+check}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_a80362857cd4ecc555c60fcd9294f4ed5}\label{test__quaternion__utils_8cpp_a80362857cd4ecc555c60fcd9294f4ed5}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+to\+\_\+rpy\+\_\+\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_a937552088e5a12c0fb52ad39747cdd58}\label{test__quaternion__utils_8cpp_a937552088e5a12c0fb52ad39747cdd58}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+to\+\_\+rpy\+\_\+\+\_\+pm\+\_\+pi}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_a1e10a5297c614bd82b2d35e391483065}\label{test__quaternion__utils_8cpp_a1e10a5297c614bd82b2d35e391483065}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+get\+\_\+yaw\+\_\+\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_ac8e3805700762be8547b73ef7cdd651b}\label{test__quaternion__utils_8cpp_ac8e3805700762be8547b73ef7cdd651b}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+get\+\_\+yaw\+\_\+\+\_\+pm\+\_\+pi}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{test__quaternion__utils_8cpp_a8ee4990cbeffbafc017ed9e8416c3c42}\label{test__quaternion__utils_8cpp_a8ee4990cbeffbafc017ed9e8416c3c42}} 
+\index{test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_quaternion\_utils.cpp@{test\_quaternion\_utils.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{F\+R\+A\+M\+E\+\_\+\+TF}]{,  }\item[{quaternion\+\_\+to\+\_\+mavlink\+\_\+\+\_\+123}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file test\+\_\+quaternion\+\_\+utils.\+cpp.
+

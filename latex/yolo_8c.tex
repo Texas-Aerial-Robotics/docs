@@ -1,0 +1,99 @@
+\hypertarget{yolo_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/yolo.c File Reference}
+\label{yolo_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/yolo.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/yolo.c}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{yolo_8c_a9ecf779a5ff54201713a5fae5265cbe8}{train\+\_\+yolo}} (char $\ast$cfgfile, char $\ast$weightfile)
+\item 
+void \mbox{\hyperlink{yolo_8c_a1024c3a597ba268478871fa878eb66bd}{print\+\_\+yolo\+\_\+detections}} (F\+I\+LE $\ast$$\ast$fps, char $\ast$id, int total, int classes, int w, int h, \mbox{\hyperlink{structdetection}{detection}} $\ast$dets)
+\item 
+void \mbox{\hyperlink{yolo_8c_a0b68bc962707b1374d575dd8f553eb12}{validate\+\_\+yolo}} (char $\ast$cfg, char $\ast$weights)
+\item 
+void \mbox{\hyperlink{yolo_8c_aa2bf895bfb979720f72fd61c34c52a80}{validate\+\_\+yolo\+\_\+recall}} (char $\ast$cfg, char $\ast$weights)
+\item 
+void \mbox{\hyperlink{yolo_8c_ac1d1d478258afdb0266722f4a8571587}{test\+\_\+yolo}} (char $\ast$cfgfile, char $\ast$weightfile, char $\ast$filename, float thresh)
+\item 
+void \mbox{\hyperlink{yolo_8c_ae2af4814947b728e7cfafec8c446050e}{run\+\_\+yolo}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{yolo_8c_a80db1124a9ba15199e0cc2f205f54e76}{voc\+\_\+names}} \mbox{[}$\,$\mbox{]} = \{\char`\"{}aeroplane\char`\"{}, \char`\"{}bicycle\char`\"{}, \char`\"{}bird\char`\"{}, \char`\"{}boat\char`\"{}, \char`\"{}bottle\char`\"{}, \char`\"{}bus\char`\"{}, \char`\"{}car\char`\"{}, \char`\"{}cat\char`\"{}, \char`\"{}chair\char`\"{}, \char`\"{}cow\char`\"{}, \char`\"{}diningtable\char`\"{}, \char`\"{}dog\char`\"{}, \char`\"{}horse\char`\"{}, \char`\"{}motorbike\char`\"{}, \char`\"{}person\char`\"{}, \char`\"{}pottedplant\char`\"{}, \char`\"{}sheep\char`\"{}, \char`\"{}sofa\char`\"{}, \char`\"{}train\char`\"{}, \char`\"{}tvmonitor\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{yolo_8c_a1024c3a597ba268478871fa878eb66bd}\label{yolo_8c_a1024c3a597ba268478871fa878eb66bd}} 
+\index{yolo.c@{yolo.c}!print\_yolo\_detections@{print\_yolo\_detections}}
+\index{print\_yolo\_detections@{print\_yolo\_detections}!yolo.c@{yolo.c}}
+\subsubsection{\texorpdfstring{print\_yolo\_detections()}{print\_yolo\_detections()}}
+{\footnotesize\ttfamily void print\+\_\+yolo\+\_\+detections (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$$\ast$}]{fps,  }\item[{char $\ast$}]{id,  }\item[{int}]{total,  }\item[{int}]{classes,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{\mbox{\hyperlink{structdetection}{detection}} $\ast$}]{dets }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file yolo.\+c.
+
+\mbox{\Hypertarget{yolo_8c_ae2af4814947b728e7cfafec8c446050e}\label{yolo_8c_ae2af4814947b728e7cfafec8c446050e}} 
+\index{yolo.c@{yolo.c}!run\_yolo@{run\_yolo}}
+\index{run\_yolo@{run\_yolo}!yolo.c@{yolo.c}}
+\subsubsection{\texorpdfstring{run\_yolo()}{run\_yolo()}}
+{\footnotesize\ttfamily void run\+\_\+yolo (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 311 of file yolo.\+c.
+
+\mbox{\Hypertarget{yolo_8c_ac1d1d478258afdb0266722f4a8571587}\label{yolo_8c_ac1d1d478258afdb0266722f4a8571587}} 
+\index{yolo.c@{yolo.c}!test\_yolo@{test\_yolo}}
+\index{test\_yolo@{test\_yolo}!yolo.c@{yolo.c}}
+\subsubsection{\texorpdfstring{test\_yolo()}{test\_yolo()}}
+{\footnotesize\ttfamily void test\+\_\+yolo (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile,  }\item[{char $\ast$}]{filename,  }\item[{float}]{thresh }\end{DoxyParamCaption})}
+
+
+
+Definition at line 265 of file yolo.\+c.
+
+\mbox{\Hypertarget{yolo_8c_a9ecf779a5ff54201713a5fae5265cbe8}\label{yolo_8c_a9ecf779a5ff54201713a5fae5265cbe8}} 
+\index{yolo.c@{yolo.c}!train\_yolo@{train\_yolo}}
+\index{train\_yolo@{train\_yolo}!yolo.c@{yolo.c}}
+\subsubsection{\texorpdfstring{train\_yolo()}{train\_yolo()}}
+{\footnotesize\ttfamily void train\+\_\+yolo (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfgfile,  }\item[{char $\ast$}]{weightfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file yolo.\+c.
+
+\mbox{\Hypertarget{yolo_8c_a0b68bc962707b1374d575dd8f553eb12}\label{yolo_8c_a0b68bc962707b1374d575dd8f553eb12}} 
+\index{yolo.c@{yolo.c}!validate\_yolo@{validate\_yolo}}
+\index{validate\_yolo@{validate\_yolo}!yolo.c@{yolo.c}}
+\subsubsection{\texorpdfstring{validate\_yolo()}{validate\_yolo()}}
+{\footnotesize\ttfamily void validate\+\_\+yolo (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights }\end{DoxyParamCaption})}
+
+
+
+Definition at line 98 of file yolo.\+c.
+
+\mbox{\Hypertarget{yolo_8c_aa2bf895bfb979720f72fd61c34c52a80}\label{yolo_8c_aa2bf895bfb979720f72fd61c34c52a80}} 
+\index{yolo.c@{yolo.c}!validate\_yolo\_recall@{validate\_yolo\_recall}}
+\index{validate\_yolo\_recall@{validate\_yolo\_recall}!yolo.c@{yolo.c}}
+\subsubsection{\texorpdfstring{validate\_yolo\_recall()}{validate\_yolo\_recall()}}
+{\footnotesize\ttfamily void validate\+\_\+yolo\+\_\+recall (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weights }\end{DoxyParamCaption})}
+
+
+
+Definition at line 182 of file yolo.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{yolo_8c_a80db1124a9ba15199e0cc2f205f54e76}\label{yolo_8c_a80db1124a9ba15199e0cc2f205f54e76}} 
+\index{yolo.c@{yolo.c}!voc\_names@{voc\_names}}
+\index{voc\_names@{voc\_names}!yolo.c@{yolo.c}}
+\subsubsection{\texorpdfstring{voc\_names}{voc\_names}}
+{\footnotesize\ttfamily char$\ast$ voc\+\_\+names\mbox{[}$\,$\mbox{]} = \{\char`\"{}aeroplane\char`\"{}, \char`\"{}bicycle\char`\"{}, \char`\"{}bird\char`\"{}, \char`\"{}boat\char`\"{}, \char`\"{}bottle\char`\"{}, \char`\"{}bus\char`\"{}, \char`\"{}car\char`\"{}, \char`\"{}cat\char`\"{}, \char`\"{}chair\char`\"{}, \char`\"{}cow\char`\"{}, \char`\"{}diningtable\char`\"{}, \char`\"{}dog\char`\"{}, \char`\"{}horse\char`\"{}, \char`\"{}motorbike\char`\"{}, \char`\"{}person\char`\"{}, \char`\"{}pottedplant\char`\"{}, \char`\"{}sheep\char`\"{}, \char`\"{}sofa\char`\"{}, \char`\"{}train\char`\"{}, \char`\"{}tvmonitor\char`\"{}\}}
+
+
+
+Definition at line 3 of file yolo.\+c.
+

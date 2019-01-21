@@ -1,0 +1,54 @@
+\hypertarget{namespacemavros_1_1mavlink}{}\section{mavros.\+mavlink Namespace Reference}
+\label{namespacemavros_1_1mavlink}\index{mavros.mavlink@{mavros.mavlink}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1mavlink_a4b79e6de8d1e2e3b2cec94d36e5b0dca}{convert\+\_\+to\+\_\+bytes}} (\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1mavlink_a1be406085dd2e7230daf05c7e2877ae0}{convert\+\_\+to\+\_\+payload64}} (payload\+\_\+bytes)
+\item 
+def \mbox{\hyperlink{namespacemavros_1_1mavlink_a2ab39b2014ffed0a13abff04b4170fc3}{convert\+\_\+to\+\_\+rosmsg}} (mavmsg, stamp=None)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacemavros_1_1mavlink_a4b79e6de8d1e2e3b2cec94d36e5b0dca}\label{namespacemavros_1_1mavlink_a4b79e6de8d1e2e3b2cec94d36e5b0dca}} 
+\index{mavros.mavlink@{mavros.mavlink}!convert\_to\_bytes@{convert\_to\_bytes}}
+\index{convert\_to\_bytes@{convert\_to\_bytes}!mavros.mavlink@{mavros.mavlink}}
+\subsubsection{\texorpdfstring{convert\_to\_bytes()}{convert\_to\_bytes()}}
+{\footnotesize\ttfamily def mavros.\+mavlink.\+convert\+\_\+to\+\_\+bytes (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Re-builds the MAVLink byte stream from mavros_msgs/Mavlink messages.
+
+Support both v1.0 and v2.0.
+\end{DoxyVerb}
+ 
+
+Definition at line 18 of file mavlink.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1mavlink_a1be406085dd2e7230daf05c7e2877ae0}\label{namespacemavros_1_1mavlink_a1be406085dd2e7230daf05c7e2877ae0}} 
+\index{mavros.mavlink@{mavros.mavlink}!convert\_to\_payload64@{convert\_to\_payload64}}
+\index{convert\_to\_payload64@{convert\_to\_payload64}!mavros.mavlink@{mavros.mavlink}}
+\subsubsection{\texorpdfstring{convert\_to\_payload64()}{convert\_to\_payload64()}}
+{\footnotesize\ttfamily def mavros.\+mavlink.\+convert\+\_\+to\+\_\+payload64 (\begin{DoxyParamCaption}\item[{}]{payload\+\_\+bytes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert payload bytes to Mavlink.payload64
+\end{DoxyVerb}
+ 
+
+Definition at line 58 of file mavlink.\+py.
+
+\mbox{\Hypertarget{namespacemavros_1_1mavlink_a2ab39b2014ffed0a13abff04b4170fc3}\label{namespacemavros_1_1mavlink_a2ab39b2014ffed0a13abff04b4170fc3}} 
+\index{mavros.mavlink@{mavros.mavlink}!convert\_to\_rosmsg@{convert\_to\_rosmsg}}
+\index{convert\_to\_rosmsg@{convert\_to\_rosmsg}!mavros.mavlink@{mavros.mavlink}}
+\subsubsection{\texorpdfstring{convert\_to\_rosmsg()}{convert\_to\_rosmsg()}}
+{\footnotesize\ttfamily def mavros.\+mavlink.\+convert\+\_\+to\+\_\+rosmsg (\begin{DoxyParamCaption}\item[{}]{mavmsg,  }\item[{}]{stamp = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert pymavlink message to Mavlink.msg
+
+Currently supports MAVLink v1.0 only.
+\end{DoxyVerb}
+ 
+
+Definition at line 72 of file mavlink.\+py.
+

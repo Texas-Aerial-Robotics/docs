@@ -1,0 +1,55 @@
+\hypertarget{classmavconn_1_1MAVConnSerial}{}\section{mavconn\+::M\+A\+V\+Conn\+Serial Class Reference}
+\label{classmavconn_1_1MAVConnSerial}\index{mavconn::MAVConnSerial@{mavconn::MAVConnSerial}}
+
+
+Serial interface.  
+
+
+
+
+{\ttfamily \#include $<$serial.\+h$>$}
+
+Inheritance diagram for mavconn\+::M\+A\+V\+Conn\+Serial\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.866667cm]{classmavconn_1_1MAVConnSerial}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__mavconn_ga53b8b8d9fceab4d4a2767b3aa0a25462}{M\+A\+V\+Conn\+Serial}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE, std\+::string device=\mbox{\hyperlink{group__mavconn_ga3b2c35e0bfa1020060b2fde345d66f0e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+V\+I\+CE}}, unsigned baudrate=\mbox{\hyperlink{group__mavconn_gaf0dd28c4a6b236f2ec3092a1b35ff5df}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}, bool hwflow=false)
+\item 
+\mbox{\hyperlink{group__mavconn_ga63860bdb6f3eb8a5ef266fc99edd715d}{$\sim$\+M\+A\+V\+Conn\+Serial}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_gabacc69adc5d2d2f9cb3aa27907d83d5c}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga452a97c9cd256b591eee063a1927a93a}{send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message) override
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga7e251c28c05beb0becbe571f5f39c3bb}{send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga6073d6f88157f3b29ee519eafe16f8fd}{send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length) override
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mavconn_ga7b2ae62cddd41671b3312050f64b3036}{is\+\_\+open}} () override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga3b2c35e0bfa1020060b2fde345d66f0e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+V\+I\+CE}} = \char`\"{}/dev/tty\+A\+C\+M0\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gaf0dd28c4a6b236f2ec3092a1b35ff5df}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}} = 57600
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Serial interface. 
+
+Definition at line 29 of file serial.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/include/mavconn/\mbox{\hyperlink{serial_8h}{serial.\+h}}\item 
+/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/src/\mbox{\hyperlink{serial_8cpp}{serial.\+cpp}}\end{DoxyCompactItemize}

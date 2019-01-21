@@ -1,0 +1,44 @@
+\hypertarget{namespaceMavLink}{}\section{Mav\+Link Namespace Reference}
+\label{namespaceMavLink}\index{MavLink@{MavLink}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Byte\+Array\+Util}
+\item 
+class {\bfseries Framework\+Bit\+Converter}
+\begin{DoxyCompactList}\small\item\em converter from byte\mbox{[}\mbox{]} =$>$ primitive C\+LR types delegates to the .Net framework bitconverter for speed, and to avoid using unsafe pointer casting for Silverlight. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classMavLink_1_1Mavlink}{Mavlink}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMavLink_1_1Mavlink}{Mavlink}} communication class. \end{DoxyCompactList}\item 
+class {\bfseries Mavlink\+\_\+\+Crc}
+\begin{DoxyCompactList}\small\item\em Crc code copied/adapted from ardumega planner code \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classMavLink_1_1MavlinkPacket}{Mavlink\+Packet}}
+\item 
+class \mbox{\hyperlink{classMavLink_1_1PacketCRCFailEventArgs}{Packet\+C\+R\+C\+Fail\+Event\+Args}}
+\begin{DoxyCompactList}\small\item\em Describes an occurance when a packet fails C\+RC /summary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{namespaceMavLink_a8ed8a6701876b63e5bb9135a9897d679}{Packet\+C\+R\+C\+Fail\+Event\+Handler}} (object sender, \mbox{\hyperlink{classMavLink_1_1PacketCRCFailEventArgs}{Packet\+C\+R\+C\+Fail\+Event\+Args}} e)
+\begin{DoxyCompactList}\small\item\em Handler for an Packet\+Failed\+C\+RC Event /summary$>$ \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{namespaceMavLink_a78c17c9f049257b0626c8d377735666d}{Packet\+Received\+Event\+Handler}} (object sender, \mbox{\hyperlink{classMavLink_1_1MavlinkPacket}{Mavlink\+Packet}} e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceMavLink_a8ed8a6701876b63e5bb9135a9897d679}\label{namespaceMavLink_a8ed8a6701876b63e5bb9135a9897d679}} 
+\index{MavLink@{MavLink}!PacketCRCFailEventHandler@{PacketCRCFailEventHandler}}
+\index{PacketCRCFailEventHandler@{PacketCRCFailEventHandler}!MavLink@{MavLink}}
+\subsubsection{\texorpdfstring{PacketCRCFailEventHandler()}{PacketCRCFailEventHandler()}}
+{\footnotesize\ttfamily delegate void Mav\+Link.\+Packet\+C\+R\+C\+Fail\+Event\+Handler (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{\mbox{\hyperlink{classMavLink_1_1PacketCRCFailEventArgs}{Packet\+C\+R\+C\+Fail\+Event\+Args}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Handler for an Packet\+Failed\+C\+RC Event /summary$>$ 
+
+\mbox{\Hypertarget{namespaceMavLink_a78c17c9f049257b0626c8d377735666d}\label{namespaceMavLink_a78c17c9f049257b0626c8d377735666d}} 
+\index{MavLink@{MavLink}!PacketReceivedEventHandler@{PacketReceivedEventHandler}}
+\index{PacketReceivedEventHandler@{PacketReceivedEventHandler}!MavLink@{MavLink}}
+\subsubsection{\texorpdfstring{PacketReceivedEventHandler()}{PacketReceivedEventHandler()}}
+{\footnotesize\ttfamily delegate void Mav\+Link.\+Packet\+Received\+Event\+Handler (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{\mbox{\hyperlink{classMavLink_1_1MavlinkPacket}{Mavlink\+Packet}}}]{e }\end{DoxyParamCaption})}
+
+summary$>$ Represents a \mbox{\hyperlink{classMavLink_1_1Mavlink}{Mavlink}} message -\/ both the message object itself and the identified sending party /summary$>$ 

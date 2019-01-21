@@ -1,0 +1,108 @@
+\hypertarget{batchnorm__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/batchnorm\+\_\+layer.c File Reference}
+\label{batchnorm__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/batchnorm\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/batchnorm\_layer.c}}
+{\ttfamily \#include \char`\"{}convolutional\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}batchnorm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{batchnorm__layer_8c_a08ae8cf0672f794aeba5d835fe8679d6}{make\+\_\+batchnorm\+\_\+layer}} (int batch, int w, int h, int c)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8c_ad294f39c089d9017cbf8614bc584409d}{backward\+\_\+scale\+\_\+cpu}} (float $\ast$x\+\_\+norm, float $\ast$delta, int batch, int n, int size, float $\ast$scale\+\_\+updates)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8c_a87f9e84fdeb71dfa36fcd5fc6a65f4fb}{mean\+\_\+delta\+\_\+cpu}} (float $\ast$delta, float $\ast$variance, int batch, int filters, int spatial, float $\ast$mean\+\_\+delta)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8c_a5468ae76e1f7a1cfa35cf3c974d2ef8a}{variance\+\_\+delta\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float $\ast$delta, float $\ast$mean, float $\ast$variance, int batch, int filters, int spatial, float $\ast$variance\+\_\+delta)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8c_a85baa02a320f2f8e6939d775c38b357c}{normalize\+\_\+delta\+\_\+cpu}} (float $\ast$\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}, float $\ast$mean, float $\ast$variance, float $\ast$mean\+\_\+delta, float $\ast$variance\+\_\+delta, int batch, int filters, int spatial, float $\ast$delta)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8c_a5a0b7f657e62d946e1921c929e0d7fc2}{resize\+\_\+batchnorm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} $\ast$\mbox{\hyperlink{structlayer}{layer}}, int w, int h)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8c_a81e1c9cbb68e655da05845802d9cdea0}{forward\+\_\+batchnorm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{batchnorm__layer_8c_a82c768cb86812e916df726da7c514321}{backward\+\_\+batchnorm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{batchnorm__layer_8c_a82c768cb86812e916df726da7c514321}\label{batchnorm__layer_8c_a82c768cb86812e916df726da7c514321}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!backward\_batchnorm\_layer@{backward\_batchnorm\_layer}}
+\index{backward\_batchnorm\_layer@{backward\_batchnorm\_layer}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_batchnorm\_layer()}{backward\_batchnorm\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+batchnorm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 157 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8c_ad294f39c089d9017cbf8614bc584409d}\label{batchnorm__layer_8c_ad294f39c089d9017cbf8614bc584409d}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!backward\_scale\_cpu@{backward\_scale\_cpu}}
+\index{backward\_scale\_cpu@{backward\_scale\_cpu}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_scale\_cpu()}{backward\_scale\_cpu()}}
+{\footnotesize\ttfamily void backward\+\_\+scale\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x\+\_\+norm,  }\item[{float $\ast$}]{delta,  }\item[{int}]{batch,  }\item[{int}]{n,  }\item[{int}]{size,  }\item[{float $\ast$}]{scale\+\_\+updates }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8c_a81e1c9cbb68e655da05845802d9cdea0}\label{batchnorm__layer_8c_a81e1c9cbb68e655da05845802d9cdea0}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!forward\_batchnorm\_layer@{forward\_batchnorm\_layer}}
+\index{forward\_batchnorm\_layer@{forward\_batchnorm\_layer}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_batchnorm\_layer()}{forward\_batchnorm\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+batchnorm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 135 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8c_a08ae8cf0672f794aeba5d835fe8679d6}\label{batchnorm__layer_8c_a08ae8cf0672f794aeba5d835fe8679d6}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!make\_batchnorm\_layer@{make\_batchnorm\_layer}}
+\index{make\_batchnorm\_layer@{make\_batchnorm\_layer}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{make\_batchnorm\_layer()}{make\_batchnorm\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+batchnorm\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8c_a87f9e84fdeb71dfa36fcd5fc6a65f4fb}\label{batchnorm__layer_8c_a87f9e84fdeb71dfa36fcd5fc6a65f4fb}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!mean\_delta\_cpu@{mean\_delta\_cpu}}
+\index{mean\_delta\_cpu@{mean\_delta\_cpu}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{mean\_delta\_cpu()}{mean\_delta\_cpu()}}
+{\footnotesize\ttfamily void mean\+\_\+delta\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{variance,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{mean\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8c_a85baa02a320f2f8e6939d775c38b357c}\label{batchnorm__layer_8c_a85baa02a320f2f8e6939d775c38b357c}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!normalize\_delta\_cpu@{normalize\_delta\_cpu}}
+\index{normalize\_delta\_cpu@{normalize\_delta\_cpu}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{normalize\_delta\_cpu()}{normalize\_delta\_cpu()}}
+{\footnotesize\ttfamily void normalize\+\_\+delta\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{mean,  }\item[{float $\ast$}]{variance,  }\item[{float $\ast$}]{mean\+\_\+delta,  }\item[{float $\ast$}]{variance\+\_\+delta,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8c_a5a0b7f657e62d946e1921c929e0d7fc2}\label{batchnorm__layer_8c_a5a0b7f657e62d946e1921c929e0d7fc2}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!resize\_batchnorm\_layer@{resize\_batchnorm\_layer}}
+\index{resize\_batchnorm\_layer@{resize\_batchnorm\_layer}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{resize\_batchnorm\_layer()}{resize\_batchnorm\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+batchnorm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}} $\ast$}]{layer,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file batchnorm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{batchnorm__layer_8c_a5468ae76e1f7a1cfa35cf3c974d2ef8a}\label{batchnorm__layer_8c_a5468ae76e1f7a1cfa35cf3c974d2ef8a}} 
+\index{batchnorm\_layer.c@{batchnorm\_layer.c}!variance\_delta\_cpu@{variance\_delta\_cpu}}
+\index{variance\_delta\_cpu@{variance\_delta\_cpu}!batchnorm\_layer.c@{batchnorm\_layer.c}}
+\subsubsection{\texorpdfstring{variance\_delta\_cpu()}{variance\_delta\_cpu()}}
+{\footnotesize\ttfamily void variance\+\_\+delta\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{delta,  }\item[{float $\ast$}]{mean,  }\item[{float $\ast$}]{variance,  }\item[{int}]{batch,  }\item[{int}]{filters,  }\item[{int}]{spatial,  }\item[{float $\ast$}]{variance\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line 102 of file batchnorm\+\_\+layer.\+c.
+

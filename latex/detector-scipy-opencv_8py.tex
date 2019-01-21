@@ -1,0 +1,27 @@
+\hypertarget{detector-scipy-opencv_8py}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/examples/detector-\/scipy-\/opencv.py File Reference}
+\label{detector-scipy-opencv_8py}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/detector-\/scipy-\/opencv.py@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/examples/detector-\/scipy-\/opencv.py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedetector-scipy-opencv}{detector-\/scipy-\/opencv}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedetector-scipy-opencv_a21af42bac0599affdd209fb7ad6ace05}{detector-\/scipy-\/opencv.\+array\+\_\+to\+\_\+image}} (arr)
+\item 
+def \mbox{\hyperlink{namespacedetector-scipy-opencv_a965d0b9c768aaaf2cede0dd9e1148b1d}{detector-\/scipy-\/opencv.\+detect2}} (net, meta, \mbox{\hyperlink{structimage}{image}}, thresh=.\+5, hier\+\_\+thresh=.\+5, nms=.\+45)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_a5e661955bb33e5ddd0c20e700ef246b1}{detector-\/scipy-\/opencv.\+net}} = dn.\+load\+\_\+net(\char`\"{}cfg/tiny-\/yolo.\+cfg\char`\"{}, \char`\"{}tiny-\/yolo.\+weights\char`\"{}, 0)
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_aefa8c13d2324512c8b50817683901197}{detector-\/scipy-\/opencv.\+meta}} = dn.\+load\+\_\+meta(\char`\"{}cfg/coco.\+data\char`\"{})
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_a454d4a9590e11c36c21186a87d98a199}{detector-\/scipy-\/opencv.\+r}} = dn.\+detect(net, meta, \char`\"{}data/dog.\+jpg\char`\"{})
+\item 
+\mbox{\hyperlink{namespacedetector-scipy-opencv_a0472a36e7499b02302910f8ab212facb}{detector-\/scipy-\/opencv.\+arr}} = imread(\textquotesingle{}\mbox{\hyperlink{structdata}{data}}/dog.\+jpg\textquotesingle{})
+\item 
+def \mbox{\hyperlink{namespacedetector-scipy-opencv_a5f732f155542b878160190ca2240d4db}{detector-\/scipy-\/opencv.\+im}} = array\+\_\+to\+\_\+image(arr)
+\end{DoxyCompactItemize}

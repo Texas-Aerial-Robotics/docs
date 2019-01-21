@@ -1,0 +1,194 @@
+\hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro}{}\section{pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro Namespace Reference}
+\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro}\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1tools_1_1magfit__rotation__gyro_1_1Rotation}{Rotation}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_af1e9e314abb16f339b04627f6de1d866}{mag\+\_\+fixup}} (mag, A\+H\+R\+S\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON, C\+O\+M\+P\+A\+S\+S\+\_\+\+O\+R\+I\+E\+NT, C\+O\+M\+P\+A\+S\+S\+\_\+\+E\+X\+T\+E\+R\+N\+AL)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ace75078283945a476e29455cef312625}{add\+\_\+errors}} (mag, gyr, last\+\_\+mag, deltat, total\+\_\+error, \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a5c1736b19d46521b3acc4397d60cd1d7}{rotations}})
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ae8efb99d4a985344c87bdda430c85b7c}{magfit}} (logfile)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a8432b0357247a5eb4791c6296e678f22}{parser}} = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a3d689679b4cd3d263e2cca1ca1b1f8b5}{dest}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a4cdc3788f5093934f2722388d1463508}{action}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_aae9e0cf2f804dd771097e11c8327d328}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a7c2604e6f258e7f6aa3f8281e054aa5f}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ad09874ef50e2ba74d3128b3dfb17bff5}{type}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a4bcc06ecf610261f589da0ebc3606788}{float}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a210741e7197d467870e87988678947fa}{metavar}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ab0d530e5042786764b481c8e16edc038}{nargs}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a27834f9ffa92cdae1fa567e5898adb84}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a5c1736b19d46521b3acc4397d60cd1d7}{rotations}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}fit best estimate of magnetometer rotation to gyro data
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ace75078283945a476e29455cef312625}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ace75078283945a476e29455cef312625}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!add\_errors@{add\_errors}}
+\index{add\_errors@{add\_errors}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{add\_errors()}{add\_errors()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+add\+\_\+errors (\begin{DoxyParamCaption}\item[{}]{mag,  }\item[{}]{gyr,  }\item[{}]{last\+\_\+mag,  }\item[{}]{deltat,  }\item[{}]{total\+\_\+error,  }\item[{}]{rotations }\end{DoxyParamCaption})}
+
+
+
+Definition at line 92 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_af1e9e314abb16f339b04627f6de1d866}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_af1e9e314abb16f339b04627f6de1d866}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!mag\_fixup@{mag\_fixup}}
+\index{mag\_fixup@{mag\_fixup}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{mag\_fixup()}{mag\_fixup()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+mag\+\_\+fixup (\begin{DoxyParamCaption}\item[{}]{mag,  }\item[{}]{A\+H\+R\+S\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON,  }\item[{}]{C\+O\+M\+P\+A\+S\+S\+\_\+\+O\+R\+I\+E\+NT,  }\item[{}]{C\+O\+M\+P\+A\+S\+S\+\_\+\+E\+X\+T\+E\+R\+N\+AL }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}fixup a mag vector back to original value using AHRS and Compass orientation parameters\end{DoxyVerb}
+ 
+
+Definition at line 82 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ae8efb99d4a985344c87bdda430c85b7c}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ae8efb99d4a985344c87bdda430c85b7c}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!magfit@{magfit}}
+\index{magfit@{magfit}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{magfit()}{magfit()}}
+{\footnotesize\ttfamily def pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+magfit (\begin{DoxyParamCaption}\item[{}]{logfile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}find best magnetometer rotation fit to a log file\end{DoxyVerb}
+ 
+
+Definition at line 106 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a4cdc3788f5093934f2722388d1463508}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a4cdc3788f5093934f2722388d1463508}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!action@{action}}
+\index{action@{action}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+action}
+
+
+
+Definition at line 13 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a27834f9ffa92cdae1fa567e5898adb84}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a27834f9ffa92cdae1fa567e5898adb84}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!args@{args}}
+\index{args@{args}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 18 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a7c2604e6f258e7f6aa3f8281e054aa5f}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a7c2604e6f258e7f6aa3f8281e054aa5f}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!default@{default}}
+\index{default@{default}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+default}
+
+
+
+Definition at line 15 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a3d689679b4cd3d263e2cca1ca1b1f8b5}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a3d689679b4cd3d263e2cca1ca1b1f8b5}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!dest@{dest}}
+\index{dest@{dest}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{dest}{dest}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+dest}
+
+
+
+Definition at line 13 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a4bcc06ecf610261f589da0ebc3606788}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a4bcc06ecf610261f589da0ebc3606788}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!float@{float}}
+\index{float@{float}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{float}{float}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+float}
+
+
+
+Definition at line 15 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_aae9e0cf2f804dd771097e11c8327d328}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_aae9e0cf2f804dd771097e11c8327d328}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!help@{help}}
+\index{help@{help}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+help}
+
+
+
+Definition at line 13 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a210741e7197d467870e87988678947fa}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a210741e7197d467870e87988678947fa}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!metavar@{metavar}}
+\index{metavar@{metavar}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{metavar}{metavar}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+metavar}
+
+
+
+Definition at line 16 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ab0d530e5042786764b481c8e16edc038}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ab0d530e5042786764b481c8e16edc038}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!nargs@{nargs}}
+\index{nargs@{nargs}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+nargs}
+
+
+
+Definition at line 16 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a8432b0357247a5eb4791c6296e678f22}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a8432b0357247a5eb4791c6296e678f22}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!parser@{parser}}
+\index{parser@{parser}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+parser = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)}
+
+
+
+Definition at line 12 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a5c1736b19d46521b3acc4397d60cd1d7}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_a5c1736b19d46521b3acc4397d60cd1d7}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!rotations@{rotations}}
+\index{rotations@{rotations}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{rotations}{rotations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+rotations}
+
+
+
+Definition at line 41 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ad09874ef50e2ba74d3128b3dfb17bff5}\label{namespacepymavlink_1_1tools_1_1magfit__rotation__gyro_ad09874ef50e2ba74d3128b3dfb17bff5}} 
+\index{pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}!type@{type}}
+\index{type@{type}!pymavlink.tools.magfit\_rotation\_gyro@{pymavlink.tools.magfit\_rotation\_gyro}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily pymavlink.\+tools.\+magfit\+\_\+rotation\+\_\+gyro.\+type}
+
+
+
+Definition at line 15 of file magfit\+\_\+rotation\+\_\+gyro.\+py.
+

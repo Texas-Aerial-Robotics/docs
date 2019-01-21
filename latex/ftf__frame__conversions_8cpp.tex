@@ -1,0 +1,42 @@
+\hypertarget{ftf__frame__conversions_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/lib/ftf\+\_\+frame\+\_\+conversions.cpp File Reference}
+\label{ftf__frame__conversions_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros/src/lib/ftf\_frame\_conversions.cpp@{/home/eric/catkin\_ws/src/mavros/mavros/src/lib/ftf\_frame\_conversions.cpp}}
+{\ttfamily \#include $<$mavros/frame\+\_\+tf.\+h$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1ftf}{mavros\+::ftf}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1ftf_1_1detail}{mavros\+::ftf\+::detail}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__nodelib_ga510487eae2b1df3a44a6e645120b0389}{mavros\+::ftf\+::detail\+::\+Matrix6d}} = Eigen\+::\+Matrix$<$ double, 6, 6 $>$
+\begin{DoxyCompactList}\small\item\em Auxiliar matrices to Covariance transforms. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga8aed658f3bc8ce4b4d5776a82c8ef67e}{mavros\+::ftf\+::detail\+::\+Matrix9d}} = Eigen\+::\+Matrix$<$ double, 9, 9 $>$
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_gaf97e6d622ff4f400e54ebcdae75407ef}{mavros\+::ftf\+::detail\+::transform\+\_\+orientation}} (const Eigen\+::\+Quaterniond \&q, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform representation of attitude from 1 frame to another (e.\+g. transfrom attitude from representing from base\+\_\+link -\/$>$ N\+ED to representing base\+\_\+link -\/$>$ E\+NU) \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga93f1ca2f4ebdb2423f81d88b4fa77c62}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame. \end{DoxyCompactList}\item 
+Covariance3d \mbox{\hyperlink{group__nodelib_ga3a1e55d923c06a8914f7fe570dd42c9b}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Covariance3d \&cov, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform 3d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance6d \mbox{\hyperlink{group__nodelib_gaab4caf957e54695a814cedf5fc45aeb1}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Covariance6d \&cov, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform 6d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance9d \mbox{\hyperlink{group__nodelib_gacfea1c0d9ca98b288f6b8f2d17bc4fc0}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Covariance9d \&cov, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform 9d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga3907cb8493e1b0c7ae33dbc1e8185a88}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Eigen\+::\+Vector3d \&map\+\_\+origin, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame with additional map origin parameter. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga30dfcfe08b7c490b12664624277d2fe6}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame. \end{DoxyCompactList}\item 
+Covariance3d \mbox{\hyperlink{group__nodelib_ga767c8e2dd868f4d8bbd78c38662a17bb}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Covariance3d \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 3x3 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance6d \mbox{\hyperlink{group__nodelib_ga266710bc46b4a6e376a609c4486d39cb}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Covariance6d \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 6x6 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance9d \mbox{\hyperlink{group__nodelib_ga885808031ecb3f68701172b0e33f37cd}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Covariance9d \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 9x9 convariance expressed in one frame to another. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{gcs__bridge_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/gcs\+\_\+bridge.cpp File Reference}
+\label{gcs__bridge_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros/src/gcs\_bridge.cpp@{/home/eric/catkin\_ws/src/mavros/mavros/src/gcs\_bridge.cpp}}
+
+
+M\+A\+V\+R\+OS G\+CS proxy.  
+
+
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$ros/console.\+h$>$}\newline
+{\ttfamily \#include $<$mavros/utils.\+h$>$}\newline
+{\ttfamily \#include $<$mavros/mavlink\+\_\+diag.\+h$>$}\newline
+{\ttfamily \#include $<$mavconn/interface.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gcs__bridge_8cpp_a410dddb38b009d110a8eeff346521aba}{mavlink\+\_\+pub\+\_\+cb}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$mmsg, const \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{mavconn\+::\+Framing}} framing)
+\item 
+void \mbox{\hyperlink{gcs__bridge_8cpp_a84a9dec45fce6e8486fe814da5d1c747}{mavlink\+\_\+sub\+\_\+cb}} (const mavros\+\_\+msgs\+::\+Mavlink\+::\+Const\+Ptr \&rmsg)
+\item 
+int \mbox{\hyperlink{gcs__bridge_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{gcs__bridge_8cpp_a782491cd3d139c41d60052232b091948}{mavlink\+\_\+pub}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{gcs__bridge_8cpp_afb413e2bbab06cf17b7276ea5ac2f107}{mavlink\+\_\+sub}}
+\item 
+\mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{M\+A\+V\+Conn\+Interface\+::\+Ptr}} \mbox{\hyperlink{gcs__bridge_8cpp_a95891cfe14742be3a8dfaea5c6fde0b4}{gcs\+\_\+link}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+A\+V\+R\+OS G\+CS proxy. 
+
+\begin{DoxyAuthor}{Author}
+Vladimir Ermakov \href{mailto:vooon341@gmail.com}{\texttt{ vooon341@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gcs__bridge_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{gcs__bridge_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{gcs\_bridge.cpp@{gcs\_bridge.cpp}!main@{main}}
+\index{main@{main}!gcs\_bridge.cpp@{gcs\_bridge.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file gcs\+\_\+bridge.\+cpp.
+
+\mbox{\Hypertarget{gcs__bridge_8cpp_a410dddb38b009d110a8eeff346521aba}\label{gcs__bridge_8cpp_a410dddb38b009d110a8eeff346521aba}} 
+\index{gcs\_bridge.cpp@{gcs\_bridge.cpp}!mavlink\_pub\_cb@{mavlink\_pub\_cb}}
+\index{mavlink\_pub\_cb@{mavlink\_pub\_cb}!gcs\_bridge.cpp@{gcs\_bridge.cpp}}
+\subsubsection{\texorpdfstring{mavlink\_pub\_cb()}{mavlink\_pub\_cb()}}
+{\footnotesize\ttfamily void mavlink\+\_\+pub\+\_\+cb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{mmsg,  }\item[{const \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{mavconn\+::\+Framing}}}]{framing }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file gcs\+\_\+bridge.\+cpp.
+
+\mbox{\Hypertarget{gcs__bridge_8cpp_a84a9dec45fce6e8486fe814da5d1c747}\label{gcs__bridge_8cpp_a84a9dec45fce6e8486fe814da5d1c747}} 
+\index{gcs\_bridge.cpp@{gcs\_bridge.cpp}!mavlink\_sub\_cb@{mavlink\_sub\_cb}}
+\index{mavlink\_sub\_cb@{mavlink\_sub\_cb}!gcs\_bridge.cpp@{gcs\_bridge.cpp}}
+\subsubsection{\texorpdfstring{mavlink\_sub\_cb()}{mavlink\_sub\_cb()}}
+{\footnotesize\ttfamily void mavlink\+\_\+sub\+\_\+cb (\begin{DoxyParamCaption}\item[{const mavros\+\_\+msgs\+::\+Mavlink\+::\+Const\+Ptr \&}]{rmsg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file gcs\+\_\+bridge.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{gcs__bridge_8cpp_a95891cfe14742be3a8dfaea5c6fde0b4}\label{gcs__bridge_8cpp_a95891cfe14742be3a8dfaea5c6fde0b4}} 
+\index{gcs\_bridge.cpp@{gcs\_bridge.cpp}!gcs\_link@{gcs\_link}}
+\index{gcs\_link@{gcs\_link}!gcs\_bridge.cpp@{gcs\_bridge.cpp}}
+\subsubsection{\texorpdfstring{gcs\_link}{gcs\_link}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{M\+A\+V\+Conn\+Interface\+::\+Ptr}} gcs\+\_\+link}
+
+
+
+Definition at line 26 of file gcs\+\_\+bridge.\+cpp.
+
+\mbox{\Hypertarget{gcs__bridge_8cpp_a782491cd3d139c41d60052232b091948}\label{gcs__bridge_8cpp_a782491cd3d139c41d60052232b091948}} 
+\index{gcs\_bridge.cpp@{gcs\_bridge.cpp}!mavlink\_pub@{mavlink\_pub}}
+\index{mavlink\_pub@{mavlink\_pub}!gcs\_bridge.cpp@{gcs\_bridge.cpp}}
+\subsubsection{\texorpdfstring{mavlink\_pub}{mavlink\_pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher mavlink\+\_\+pub}
+
+
+
+Definition at line 24 of file gcs\+\_\+bridge.\+cpp.
+
+\mbox{\Hypertarget{gcs__bridge_8cpp_afb413e2bbab06cf17b7276ea5ac2f107}\label{gcs__bridge_8cpp_afb413e2bbab06cf17b7276ea5ac2f107}} 
+\index{gcs\_bridge.cpp@{gcs\_bridge.cpp}!mavlink\_sub@{mavlink\_sub}}
+\index{mavlink\_sub@{mavlink\_sub}!gcs\_bridge.cpp@{gcs\_bridge.cpp}}
+\subsubsection{\texorpdfstring{mavlink\_sub}{mavlink\_sub}}
+{\footnotesize\ttfamily ros\+::\+Subscriber mavlink\+\_\+sub}
+
+
+
+Definition at line 25 of file gcs\+\_\+bridge.\+cpp.
+

@@ -1,0 +1,116 @@
+\hypertarget{lin__reg_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Strat\+Node/src/lin\+\_\+reg.cpp File Reference}
+\label{lin__reg_8cpp}\index{/home/eric/catkin\_ws/src/StratNode/src/lin\_reg.cpp@{/home/eric/catkin\_ws/src/StratNode/src/lin\_reg.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lin__reg_8cpp_a5cb2fd7bfc59d0db65ee46e594b4bb55}{chatter\+Callback}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+int \mbox{\hyperlink{lin__reg_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+\_\+msgs\+::\+String \mbox{\hyperlink{lin__reg_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}
+\item 
+std\+::stringstream \mbox{\hyperlink{lin__reg_8cpp_a92211863a9a3dafb14ae33244777a229}{ss\+\_\+mode}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{lin__reg_8cpp_a7f39bd91d782823b2048dbb9f5f1b01e}{Roomba\+Pose}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{lin__reg_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}{waypoint}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{lin__reg_8cpp_ac3a805285b594b3948945bc1c374c69e}{newpoint}}
+\item 
+deque$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{lin__reg_8cpp_ae79b2703b63114d3a3b9f9a2a26fe542}{points}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lin__reg_8cpp_a5cb2fd7bfc59d0db65ee46e594b4bb55}\label{lin__reg_8cpp_a5cb2fd7bfc59d0db65ee46e594b4bb55}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!chatterCallback@{chatterCallback}}
+\index{chatterCallback@{chatterCallback}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{chatterCallback()}{chatterCallback()}}
+{\footnotesize\ttfamily void chatter\+Callback (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file lin\+\_\+reg.\+cpp.
+
+\mbox{\Hypertarget{lin__reg_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{lin__reg_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!main@{main}}
+\index{main@{main}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file lin\+\_\+reg.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{lin__reg_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}\label{lin__reg_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!msg@{msg}}
+\index{msg@{msg}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+String msg}
+
+
+
+Definition at line 11 of file lin\+\_\+reg.\+cpp.
+
+\mbox{\Hypertarget{lin__reg_8cpp_ac3a805285b594b3948945bc1c374c69e}\label{lin__reg_8cpp_ac3a805285b594b3948945bc1c374c69e}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!newpoint@{newpoint}}
+\index{newpoint@{newpoint}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{newpoint}{newpoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped newpoint}
+
+
+
+Definition at line 15 of file lin\+\_\+reg.\+cpp.
+
+\mbox{\Hypertarget{lin__reg_8cpp_ae79b2703b63114d3a3b9f9a2a26fe542}\label{lin__reg_8cpp_ae79b2703b63114d3a3b9f9a2a26fe542}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!points@{points}}
+\index{points@{points}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily deque$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ points}
+
+
+
+Definition at line 16 of file lin\+\_\+reg.\+cpp.
+
+\mbox{\Hypertarget{lin__reg_8cpp_a7f39bd91d782823b2048dbb9f5f1b01e}\label{lin__reg_8cpp_a7f39bd91d782823b2048dbb9f5f1b01e}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!RoombaPose@{RoombaPose}}
+\index{RoombaPose@{RoombaPose}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{RoombaPose}{RoombaPose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped Roomba\+Pose}
+
+
+
+Definition at line 13 of file lin\+\_\+reg.\+cpp.
+
+\mbox{\Hypertarget{lin__reg_8cpp_a92211863a9a3dafb14ae33244777a229}\label{lin__reg_8cpp_a92211863a9a3dafb14ae33244777a229}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!ss\_mode@{ss\_mode}}
+\index{ss\_mode@{ss\_mode}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{ss\_mode}{ss\_mode}}
+{\footnotesize\ttfamily std\+::stringstream ss\+\_\+mode}
+
+
+
+Definition at line 12 of file lin\+\_\+reg.\+cpp.
+
+\mbox{\Hypertarget{lin__reg_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}\label{lin__reg_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}} 
+\index{lin\_reg.cpp@{lin\_reg.cpp}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!lin\_reg.cpp@{lin\_reg.cpp}}
+\subsubsection{\texorpdfstring{waypoint}{waypoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped waypoint}
+
+
+
+Definition at line 14 of file lin\+\_\+reg.\+cpp.
+

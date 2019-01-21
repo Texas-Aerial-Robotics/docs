@@ -1,0 +1,69 @@
+\hypertarget{classmavros_1_1plugin_1_1PluginBase}{}\section{mavros\+::plugin\+::Plugin\+Base Class Reference}
+\label{classmavros_1_1plugin_1_1PluginBase}\index{mavros::plugin::PluginBase@{mavros::plugin::PluginBase}}
+
+
+M\+A\+V\+R\+OS Plugin base class.  
+
+
+
+
+{\ttfamily \#include $<$mavros\+\_\+plugin.\+h$>$}
+
+Inheritance diagram for mavros\+::plugin\+::Plugin\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classmavros_1_1plugin_1_1PluginBase}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__plugin_ga51d7c95b43e74aa68c80ebe6b171e383}{Handler\+Cb}} = \mbox{\hyperlink{group__mavconn_ga1d04ead963f1685f3aaf4b18ffb49ff7}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Received\+Cb}}
+\begin{DoxyCompactList}\small\item\em generic message handler callback \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__plugin_gab973eb02b8f26a7b2b9cea37924317f1}{Handler\+Info}} = std\+::tuple$<$ \mbox{\hyperlink{namespacemavlink_a98a1fe49b380ed1ea252d2c13bf3278d}{mavlink\+::msgid\+\_\+t}}, const char $\ast$, size\+\_\+t, \mbox{\hyperlink{group__plugin_ga51d7c95b43e74aa68c80ebe6b171e383}{Handler\+Cb}} $>$
+\begin{DoxyCompactList}\small\item\em Tuple\+: M\+SG ID, M\+SG N\+A\+ME, message type into hash\+\_\+code, message handler callback. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__plugin_ga8967d61fc77040e0c3ea5a4585d62a09}{Subscriptions}} = std\+::vector$<$ \mbox{\hyperlink{group__plugin_gab973eb02b8f26a7b2b9cea37924317f1}{Handler\+Info}} $>$
+\begin{DoxyCompactList}\small\item\em Subscriptions vector. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__plugin_ga61d4cf3cc97503da0157ead2ac68dc47}{Ptr}} = boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmavros_1_1plugin_1_1PluginBase}{Plugin\+Base}} $>$
+\item 
+using \mbox{\hyperlink{group__plugin_gaba13f33fe0f830b90b51bbe2d168f683}{Const\+Ptr}} = boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmavros_1_1plugin_1_1PluginBase}{Plugin\+Base}} const  $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{group__plugin_gad79dda3665b106d020b938fab5a6a5a5}{$\sim$\+Plugin\+Base}} ()
+\item 
+virtual void \mbox{\hyperlink{group__plugin_gad5313a41da4d26acbbabf008cdc21e82}{initialize}} (\mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} \&uas)
+\begin{DoxyCompactList}\small\item\em Plugin initializer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__plugin_ga8967d61fc77040e0c3ea5a4585d62a09}{Subscriptions}} \mbox{\hyperlink{group__plugin_gaf4e23fec6d7436a62cbf0942a2e5791c}{get\+\_\+subscriptions}} ()=0
+\begin{DoxyCompactList}\small\item\em Return vector of M\+A\+V\+Link message subscriptions (handlers) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__plugin_gac37e1a835763608688df9b6b6806917b}{Plugin\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Plugin constructor Should not do anything before \mbox{\hyperlink{group__plugin_gad5313a41da4d26acbbabf008cdc21e82}{initialize()}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$class \+\_\+C $>$ }\\\mbox{\hyperlink{group__plugin_gab973eb02b8f26a7b2b9cea37924317f1}{Handler\+Info}} \mbox{\hyperlink{group__plugin_gac7d70e0432c00220da41948757a35a50}{make\+\_\+handler}} (const \mbox{\hyperlink{namespacemavlink_a98a1fe49b380ed1ea252d2c13bf3278d}{mavlink\+::msgid\+\_\+t}} id, void(\+\_\+\+C\+::$\ast$fn)(const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, const \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{mavconn\+::\+Framing}} framing))
+\item 
+{\footnotesize template$<$class \+\_\+C , class \+\_\+T $>$ }\\\mbox{\hyperlink{group__plugin_gab973eb02b8f26a7b2b9cea37924317f1}{Handler\+Info}} \mbox{\hyperlink{group__plugin_ga04a415508e82a7cc8ec15ce8a04eac5e}{make\+\_\+handler}} (void(\+\_\+\+C\+::$\ast$fn)(const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$, \+\_\+T \&))
+\item 
+virtual void \mbox{\hyperlink{group__plugin_gadad2eaef432d01ad059a6edb40ab8443}{connection\+\_\+cb}} (bool connected)
+\item 
+void \mbox{\hyperlink{group__plugin_ga7b437229a6cd8d15a1a5c5aaff31683e}{enable\+\_\+connection\+\_\+cb}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} $\ast$ \mbox{\hyperlink{group__plugin_ga198ba0390b8d70025bfb7f9467ae3057}{m\+\_\+uas}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+A\+V\+R\+OS Plugin base class. 
+
+Definition at line 37 of file mavros\+\_\+plugin.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/include/mavros/\mbox{\hyperlink{mavros__plugin_8h}{mavros\+\_\+plugin.\+h}}\end{DoxyCompactItemize}

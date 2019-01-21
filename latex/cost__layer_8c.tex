@@ -1,0 +1,88 @@
+\hypertarget{cost__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/cost\+\_\+layer.c File Reference}
+\label{cost__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/cost\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/cost\_layer.c}}
+{\ttfamily \#include \char`\"{}cost\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{darknet_8h_a590358b1971d8e902008d6731f40e35c}{C\+O\+S\+T\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{cost__layer_8c_aa56424870fea9f9bf52f45da81aa8695}{get\+\_\+cost\+\_\+type}} (char $\ast$s)
+\item 
+char $\ast$ \mbox{\hyperlink{cost__layer_8c_a5c8a71a690106e17a147ce66698a1faf}{get\+\_\+cost\+\_\+string}} (\mbox{\hyperlink{darknet_8h_a590358b1971d8e902008d6731f40e35c}{C\+O\+S\+T\+\_\+\+T\+Y\+PE}} a)
+\item 
+\mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} \mbox{\hyperlink{cost__layer_8c_aedcafaaef6d0c7a0ecb93bb8c55ed53b}{make\+\_\+cost\+\_\+layer}} (int batch, int inputs, \mbox{\hyperlink{darknet_8h_a590358b1971d8e902008d6731f40e35c}{C\+O\+S\+T\+\_\+\+T\+Y\+PE}} cost\+\_\+type, float scale)
+\item 
+void \mbox{\hyperlink{cost__layer_8c_aa47c87d0d7e2b9f5be07ee2962698483}{resize\+\_\+cost\+\_\+layer}} (\mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} $\ast$l, int inputs)
+\item 
+void \mbox{\hyperlink{cost__layer_8c_a8a8d837167eb079d1ce6287fd7306e8a}{forward\+\_\+cost\+\_\+layer}} (\mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{cost__layer_8c_acef4814b1a24fb97c797781d1618ec81}{backward\+\_\+cost\+\_\+layer}} (const \mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cost__layer_8c_acef4814b1a24fb97c797781d1618ec81}\label{cost__layer_8c_acef4814b1a24fb97c797781d1618ec81}} 
+\index{cost\_layer.c@{cost\_layer.c}!backward\_cost\_layer@{backward\_cost\_layer}}
+\index{backward\_cost\_layer@{backward\_cost\_layer}!cost\_layer.c@{cost\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_cost\_layer()}{backward\_cost\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+cost\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file cost\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{cost__layer_8c_a8a8d837167eb079d1ce6287fd7306e8a}\label{cost__layer_8c_a8a8d837167eb079d1ce6287fd7306e8a}} 
+\index{cost\_layer.c@{cost\_layer.c}!forward\_cost\_layer@{forward\_cost\_layer}}
+\index{forward\_cost\_layer@{forward\_cost\_layer}!cost\_layer.c@{cost\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_cost\_layer()}{forward\_cost\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+cost\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file cost\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{cost__layer_8c_a5c8a71a690106e17a147ce66698a1faf}\label{cost__layer_8c_a5c8a71a690106e17a147ce66698a1faf}} 
+\index{cost\_layer.c@{cost\_layer.c}!get\_cost\_string@{get\_cost\_string}}
+\index{get\_cost\_string@{get\_cost\_string}!cost\_layer.c@{cost\_layer.c}}
+\subsubsection{\texorpdfstring{get\_cost\_string()}{get\_cost\_string()}}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+cost\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{darknet_8h_a590358b1971d8e902008d6731f40e35c}{C\+O\+S\+T\+\_\+\+T\+Y\+PE}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file cost\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{cost__layer_8c_aa56424870fea9f9bf52f45da81aa8695}\label{cost__layer_8c_aa56424870fea9f9bf52f45da81aa8695}} 
+\index{cost\_layer.c@{cost\_layer.c}!get\_cost\_type@{get\_cost\_type}}
+\index{get\_cost\_type@{get\_cost\_type}!cost\_layer.c@{cost\_layer.c}}
+\subsubsection{\texorpdfstring{get\_cost\_type()}{get\_cost\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{darknet_8h_a590358b1971d8e902008d6731f40e35c}{C\+O\+S\+T\+\_\+\+T\+Y\+PE}} get\+\_\+cost\+\_\+type (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file cost\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{cost__layer_8c_aedcafaaef6d0c7a0ecb93bb8c55ed53b}\label{cost__layer_8c_aedcafaaef6d0c7a0ecb93bb8c55ed53b}} 
+\index{cost\_layer.c@{cost\_layer.c}!make\_cost\_layer@{make\_cost\_layer}}
+\index{make\_cost\_layer@{make\_cost\_layer}!cost\_layer.c@{cost\_layer.c}}
+\subsubsection{\texorpdfstring{make\_cost\_layer()}{make\_cost\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} make\+\_\+cost\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{\mbox{\hyperlink{darknet_8h_a590358b1971d8e902008d6731f40e35c}{C\+O\+S\+T\+\_\+\+T\+Y\+PE}}}]{cost\+\_\+type,  }\item[{float}]{scale }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file cost\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{cost__layer_8c_aa47c87d0d7e2b9f5be07ee2962698483}\label{cost__layer_8c_aa47c87d0d7e2b9f5be07ee2962698483}} 
+\index{cost\_layer.c@{cost\_layer.c}!resize\_cost\_layer@{resize\_cost\_layer}}
+\index{resize\_cost\_layer@{resize\_cost\_layer}!cost\_layer.c@{cost\_layer.c}}
+\subsubsection{\texorpdfstring{resize\_cost\_layer()}{resize\_cost\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+cost\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cost__layer_8h_a590de8be62a2326805792547606f6890}{cost\+\_\+layer}} $\ast$}]{l,  }\item[{int}]{inputs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file cost\+\_\+layer.\+c.
+

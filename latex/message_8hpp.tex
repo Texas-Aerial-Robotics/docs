@@ -1,0 +1,94 @@
+\hypertarget{message_8hpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C\+P\+P11/include\+\_\+v2.0/message.hpp File Reference}
+\label{message_8hpp}\index{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/CPP11/include\_v2.0/message.hpp@{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/CPP11/include\_v2.0/message.hpp}}
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}mavlink\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mavlink\+\_\+helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msgmap.\+hpp\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}
+\item 
+struct \mbox{\hyperlink{structmavlink_1_1Message_1_1Info}{mavlink\+::\+Message\+::\+Info}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavlink}{mavlink}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}}~static inline
+\item 
+\#define \mbox{\hyperlink{message_8hpp_a94921b695696aee5e818953fcd6b52ad}{M\+A\+V\+L\+I\+N\+K\+\_\+\+U\+S\+E\+\_\+\+C\+X\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}}
+\item 
+\#define \mbox{\hyperlink{message_8hpp_acbf60d4ab187eca47971ed7279ddd937}{\+\_\+\+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+S\+\_\+\+H\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{message_8hpp_aa30543028a19d979ee17979d9fd8523c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+G\+E\+T\+\_\+\+M\+S\+G\+\_\+\+E\+N\+T\+RY}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacemavlink_a98a1fe49b380ed1ea252d2c13bf3278d}{mavlink\+::msgid\+\_\+t}} = uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmavlink_1_1Message}{Message}} ID type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_abf009bf897407a543e5209298ad82321}{mavlink\+\_\+msg\+\_\+entry\+\_\+t}} $\ast$ \mbox{\hyperlink{group__mavconn_ga5729c8752b868b9b15dc7154a66c4a14}{mavlink\+::mavlink\+\_\+get\+\_\+msg\+\_\+entry}} (uint32\+\_\+t msgid)
+\item 
+{\footnotesize template$<$size\+\_\+t \+\_\+N$>$ }\\std\+::string \mbox{\hyperlink{namespacemavlink_a3a4897758bbfeb0c28182fef6f3bc60f}{mavlink\+::to\+\_\+string}} (const std\+::array$<$ char, \+\_\+N $>$ \&a)
+\item 
+{\footnotesize template$<$typename \+\_\+T , size\+\_\+t \+\_\+N$>$ }\\std\+::string \mbox{\hyperlink{namespacemavlink_a9bf01b56d8e27c1ef4df5f0333aafedc}{mavlink\+::to\+\_\+string}} (const std\+::array$<$ \+\_\+T, \+\_\+N $>$ \&a)
+\item 
+{\footnotesize template$<$size\+\_\+t \+\_\+N$>$ }\\void \mbox{\hyperlink{namespacemavlink_a5840b5d0456297c5e6fe78b3f539baea}{mavlink\+::set\+\_\+string}} (std\+::array$<$ char, \+\_\+N $>$ \&a, const std\+::string \&s)
+\item 
+{\footnotesize template$<$size\+\_\+t \+\_\+N$>$ }\\void \mbox{\hyperlink{namespacemavlink_a8013d2f78a8d12109e9eb918a54b1cb5}{mavlink\+::set\+\_\+string\+\_\+z}} (std\+::array$<$ char, \+\_\+N $>$ \&a, const std\+::string \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{message_8hpp_acbf60d4ab187eca47971ed7279ddd937}\label{message_8hpp_acbf60d4ab187eca47971ed7279ddd937}} 
+\index{message.hpp@{message.hpp}!\_MAVLINK\_CONVERSIONS\_H\_@{\_MAVLINK\_CONVERSIONS\_H\_}}
+\index{\_MAVLINK\_CONVERSIONS\_H\_@{\_MAVLINK\_CONVERSIONS\_H\_}!message.hpp@{message.hpp}}
+\subsubsection{\texorpdfstring{\_MAVLINK\_CONVERSIONS\_H\_}{\_MAVLINK\_CONVERSIONS\_H\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+S\+\_\+\+H\+\_\+}
+
+
+
+Definition at line 17 of file message.\+hpp.
+
+\mbox{\Hypertarget{message_8hpp_aa30543028a19d979ee17979d9fd8523c}\label{message_8hpp_aa30543028a19d979ee17979d9fd8523c}} 
+\index{message.hpp@{message.hpp}!MAVLINK\_GET\_MSG\_ENTRY@{MAVLINK\_GET\_MSG\_ENTRY}}
+\index{MAVLINK\_GET\_MSG\_ENTRY@{MAVLINK\_GET\_MSG\_ENTRY}!message.hpp@{message.hpp}}
+\subsubsection{\texorpdfstring{MAVLINK\_GET\_MSG\_ENTRY}{MAVLINK\_GET\_MSG\_ENTRY}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+G\+E\+T\+\_\+\+M\+S\+G\+\_\+\+E\+N\+T\+RY}
+
+
+
+Definition at line 18 of file message.\+hpp.
+
+\mbox{\Hypertarget{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}\label{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}} 
+\index{message.hpp@{message.hpp}!MAVLINK\_HELPER@{MAVLINK\_HELPER}}
+\index{MAVLINK\_HELPER@{MAVLINK\_HELPER}!message.hpp@{message.hpp}}
+\subsubsection{\texorpdfstring{MAVLINK\_HELPER}{MAVLINK\_HELPER}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER~static inline}
+
+
+
+Definition at line 11 of file message.\+hpp.
+
+\mbox{\Hypertarget{message_8hpp_a94921b695696aee5e818953fcd6b52ad}\label{message_8hpp_a94921b695696aee5e818953fcd6b52ad}} 
+\index{message.hpp@{message.hpp}!MAVLINK\_USE\_CXX\_NAMESPACE@{MAVLINK\_USE\_CXX\_NAMESPACE}}
+\index{MAVLINK\_USE\_CXX\_NAMESPACE@{MAVLINK\_USE\_CXX\_NAMESPACE}!message.hpp@{message.hpp}}
+\subsubsection{\texorpdfstring{MAVLINK\_USE\_CXX\_NAMESPACE}{MAVLINK\_USE\_CXX\_NAMESPACE}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+U\+S\+E\+\_\+\+C\+X\+X\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}
+
+
+
+Definition at line 14 of file message.\+hpp.
+

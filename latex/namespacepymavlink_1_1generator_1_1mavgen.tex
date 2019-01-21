@@ -1,0 +1,139 @@
+\hypertarget{namespacepymavlink_1_1generator_1_1mavgen}{}\section{pymavlink.\+generator.\+mavgen Namespace Reference}
+\label{namespacepymavlink_1_1generator_1_1mavgen}\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1generator_1_1mavgen_1_1Opts}{Opts}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_a457749ca62432f0cf01d11d6a0a6e09e}{mavgen}} (opts, args)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_a9dcfcc3bcf015ac643dc9335255a40df}{mavgen\+\_\+python\+\_\+dialect}} (dialect, wire\+\_\+protocol)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_af0e7f6ac0244a7a893599550ae69a662}{schema\+File}} = os.\+path.\+join(os.\+path.\+dirname(os.\+path.\+realpath(\+\_\+\+\_\+file\+\_\+\+\_\+)), \char`\"{}mavschema.\+xsd\char`\"{})
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_abf74e4464cc281c1350dae3930435bed}{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+R\+E\+\_\+\+P\+R\+O\+T\+O\+C\+OL}} = \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_ab308d4fdc1b0fbcfa2789aa6af08f46e}{mavparse.\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+1\+\_\+0}}
+\item 
+string \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_a65f98f41c53e5f7e200dc0d29d5c145d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+A\+N\+G\+U\+A\+GE}} = \textquotesingle{}Python\textquotesingle{}
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_abd60aefad7485fc1278640acaa724ee5}{D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+I\+M\+IT}} = 200
+\item 
+bool \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_aee44fcfd95ce6860ecc9b4dc638b853b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+I\+D\+A\+TE}} = True
+\item 
+bool \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_aec8e6fd33aa2b796dbad37253958f2b2}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+R\+I\+C\+T\+\_\+\+U\+N\+I\+TS}} = False
+\item 
+\mbox{\hyperlink{structlist}{list}} \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavgen_aab04d5e3d392e7ed72368d0ee440437a}{supported\+Languages}} = \mbox{[}\char`\"{}C\char`\"{}, \char`\"{}CS\char`\"{}, \char`\"{}Java\+Script\char`\"{}, \char`\"{}Python\char`\"{}, \char`\"{}W\+Lua\char`\"{}, \char`\"{}ObjC\char`\"{}, \char`\"{}Swift\char`\"{}, \char`\"{}Java\char`\"{}, \char`\"{}\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}++11\char`\"{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}parse a MAVLink protocol XML file and generate a python implementation
+
+Copyright Andrew Tridgell 2011
+Released under GNU GPL version 3 or later\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_a457749ca62432f0cf01d11d6a0a6e09e}\label{namespacepymavlink_1_1generator_1_1mavgen_a457749ca62432f0cf01d11d6a0a6e09e}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!mavgen@{mavgen}}
+\index{mavgen@{mavgen}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{mavgen()}{mavgen()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen.\+mavgen (\begin{DoxyParamCaption}\item[{}]{opts,  }\item[{}]{args }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate mavlink message formatters and parsers (C and Python ) using options
+and args where args are a list of xml files. This function allows python
+scripts under Windows to control mavgen using the same interface as
+shell scripts under Unix\end{DoxyVerb}
+ 
+
+Definition at line 34 of file mavgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_a9dcfcc3bcf015ac643dc9335255a40df}\label{namespacepymavlink_1_1generator_1_1mavgen_a9dcfcc3bcf015ac643dc9335255a40df}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!mavgen\_python\_dialect@{mavgen\_python\_dialect}}
+\index{mavgen\_python\_dialect@{mavgen\_python\_dialect}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{mavgen\_python\_dialect()}{mavgen\_python\_dialect()}}
+{\footnotesize\ttfamily def pymavlink.\+generator.\+mavgen.\+mavgen\+\_\+python\+\_\+dialect (\begin{DoxyParamCaption}\item[{}]{dialect,  }\item[{}]{wire\+\_\+protocol }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generate the python code on the fly for a MAVLink dialect\end{DoxyVerb}
+ 
+
+Definition at line 185 of file mavgen.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_abd60aefad7485fc1278640acaa724ee5}\label{namespacepymavlink_1_1generator_1_1mavgen_abd60aefad7485fc1278640acaa724ee5}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!DEFAULT\_ERROR\_LIMIT@{DEFAULT\_ERROR\_LIMIT}}
+\index{DEFAULT\_ERROR\_LIMIT@{DEFAULT\_ERROR\_LIMIT}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{DEFAULT\_ERROR\_LIMIT}{DEFAULT\_ERROR\_LIMIT}}
+{\footnotesize\ttfamily int pymavlink.\+generator.\+mavgen.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+I\+M\+IT = 200}
+
+
+
+Definition at line 26 of file mavgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_a65f98f41c53e5f7e200dc0d29d5c145d}\label{namespacepymavlink_1_1generator_1_1mavgen_a65f98f41c53e5f7e200dc0d29d5c145d}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!DEFAULT\_LANGUAGE@{DEFAULT\_LANGUAGE}}
+\index{DEFAULT\_LANGUAGE@{DEFAULT\_LANGUAGE}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{DEFAULT\_LANGUAGE}{DEFAULT\_LANGUAGE}}
+{\footnotesize\ttfamily string pymavlink.\+generator.\+mavgen.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+A\+N\+G\+U\+A\+GE = \textquotesingle{}Python\textquotesingle{}}
+
+
+
+Definition at line 25 of file mavgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_aec8e6fd33aa2b796dbad37253958f2b2}\label{namespacepymavlink_1_1generator_1_1mavgen_aec8e6fd33aa2b796dbad37253958f2b2}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!DEFAULT\_STRICT\_UNITS@{DEFAULT\_STRICT\_UNITS}}
+\index{DEFAULT\_STRICT\_UNITS@{DEFAULT\_STRICT\_UNITS}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{DEFAULT\_STRICT\_UNITS}{DEFAULT\_STRICT\_UNITS}}
+{\footnotesize\ttfamily bool pymavlink.\+generator.\+mavgen.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+R\+I\+C\+T\+\_\+\+U\+N\+I\+TS = False}
+
+
+
+Definition at line 28 of file mavgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_aee44fcfd95ce6860ecc9b4dc638b853b}\label{namespacepymavlink_1_1generator_1_1mavgen_aee44fcfd95ce6860ecc9b4dc638b853b}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!DEFAULT\_VALIDATE@{DEFAULT\_VALIDATE}}
+\index{DEFAULT\_VALIDATE@{DEFAULT\_VALIDATE}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{DEFAULT\_VALIDATE}{DEFAULT\_VALIDATE}}
+{\footnotesize\ttfamily bool pymavlink.\+generator.\+mavgen.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+I\+D\+A\+TE = True}
+
+
+
+Definition at line 27 of file mavgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_abf74e4464cc281c1350dae3930435bed}\label{namespacepymavlink_1_1generator_1_1mavgen_abf74e4464cc281c1350dae3930435bed}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!DEFAULT\_WIRE\_PROTOCOL@{DEFAULT\_WIRE\_PROTOCOL}}
+\index{DEFAULT\_WIRE\_PROTOCOL@{DEFAULT\_WIRE\_PROTOCOL}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{DEFAULT\_WIRE\_PROTOCOL}{DEFAULT\_WIRE\_PROTOCOL}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavgen.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+R\+E\+\_\+\+P\+R\+O\+T\+O\+C\+OL = \mbox{\hyperlink{namespacepymavlink_1_1generator_1_1mavparse_ab308d4fdc1b0fbcfa2789aa6af08f46e}{mavparse.\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+1\+\_\+0}}}
+
+
+
+Definition at line 24 of file mavgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_af0e7f6ac0244a7a893599550ae69a662}\label{namespacepymavlink_1_1generator_1_1mavgen_af0e7f6ac0244a7a893599550ae69a662}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!schemaFile@{schemaFile}}
+\index{schemaFile@{schemaFile}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{schemaFile}{schemaFile}}
+{\footnotesize\ttfamily pymavlink.\+generator.\+mavgen.\+schema\+File = os.\+path.\+join(os.\+path.\+dirname(os.\+path.\+realpath(\+\_\+\+\_\+file\+\_\+\+\_\+)), \char`\"{}mavschema.\+xsd\char`\"{})}
+
+
+
+Definition at line 21 of file mavgen.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1generator_1_1mavgen_aab04d5e3d392e7ed72368d0ee440437a}\label{namespacepymavlink_1_1generator_1_1mavgen_aab04d5e3d392e7ed72368d0ee440437a}} 
+\index{pymavlink.generator.mavgen@{pymavlink.generator.mavgen}!supportedLanguages@{supportedLanguages}}
+\index{supportedLanguages@{supportedLanguages}!pymavlink.generator.mavgen@{pymavlink.generator.mavgen}}
+\subsubsection{\texorpdfstring{supportedLanguages}{supportedLanguages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}} pymavlink.\+generator.\+mavgen.\+supported\+Languages = \mbox{[}\char`\"{}C\char`\"{}, \char`\"{}CS\char`\"{}, \char`\"{}Java\+Script\char`\"{}, \char`\"{}Python\char`\"{}, \char`\"{}W\+Lua\char`\"{}, \char`\"{}ObjC\char`\"{}, \char`\"{}Swift\char`\"{}, \char`\"{}Java\char`\"{}, \char`\"{}\mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}++11\char`\"{}\mbox{]}}
+
+
+
+Definition at line 31 of file mavgen.\+py.
+

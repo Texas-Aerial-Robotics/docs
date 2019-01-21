@@ -1,0 +1,459 @@
+\hypertarget{darknet__ros_2darknet_2src_2utils_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/utils.h File Reference}
+\label{darknet__ros_2darknet_2src_2utils_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/utils.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/utils.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a590ccb21127652bd64009098104ddef5}{T\+I\+ME}}(a)
+\item 
+\#define \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a3b947f4b635461030ff2d87833e5049e}{T\+W\+O\+\_\+\+PI}}~6.\+2831853071795864769252866f
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_af89a5b997626c967e4716fd022aca7bb}{what\+\_\+time\+\_\+is\+\_\+it\+\_\+now}} ()
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a0ffcf3aef270870fe180405bc25cad50}{shuffle}} (void $\ast$arr, size\+\_\+t n, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a6d7f2250125f0cf3f16e5a7b7c1905a9}{sorta\+\_\+shuffle}} (void $\ast$arr, size\+\_\+t n, size\+\_\+t size, size\+\_\+t sections)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a8d316e671a183c19ac7631287b29050a}{free\+\_\+ptrs}} (void $\ast$$\ast$ptrs, int n)
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a6fa5fdc3d22a596fd2d21f012e5ec2c7}{alphanum\+\_\+to\+\_\+int}} (char c)
+\item 
+char \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a88c02ede12c15131e71a2387a9ef226f}{int\+\_\+to\+\_\+alphanum}} (int \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}})
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_aeb107bc4d07f192c90ee37806b26a1d4}{read\+\_\+int}} (int fd)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a71b198ba343751a3b889b92bfe9d5fd2}{write\+\_\+int}} (int fd, int n)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_ad4220decb86d761447a704e03423f160}{read\+\_\+all}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_ab256fc300495d1768adc2e8b7997a140}{write\+\_\+all}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_afccdb26cd63a87476385c10ada582642}{read\+\_\+all\+\_\+fail}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a1b877af1aab01bde49615e4ac0d45b27}{write\+\_\+all\+\_\+fail}} (int fd, char $\ast$buffer, size\+\_\+t bytes)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a1ba38c8a3123ae1289a73d9f70e17615}{find\+\_\+replace}} (char $\ast$str, char $\ast$orig, char $\ast$rep, char $\ast$output)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_acab41f0a0d61cac3b20102d02e897780}{malloc\+\_\+error}} ()
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_aecaee51f837bcfd8316ab68164620819}{file\+\_\+error}} (char $\ast$s)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a76299b86e144434260dcab80323ec9da}{strip}} (char $\ast$s)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a377b25b3b6d110d34bea9a85d0305917}{strip\+\_\+char}} (char $\ast$s, char bad)
+\item 
+\mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a3b0e9c0cc522f926d826a4e16f256435}{split\+\_\+str}} (char $\ast$s, char delim)
+\item 
+char $\ast$ \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a153eabd234972b240608df09cc4975d3}{fgetl}} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\hyperlink{structlist}{list}} $\ast$ \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_ac3aec3e73da4fa4dcb6be73993cc653b}{parse\+\_\+csv\+\_\+line}} (char $\ast$line)
+\item 
+char $\ast$ \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a4d27da4f6ddad5146c9190badd121a39}{copy\+\_\+string}} (char $\ast$s)
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a55df64d8a7f8b49ad351188c9872f43e}{count\+\_\+fields}} (char $\ast$line)
+\item 
+float $\ast$ \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_aa62de6e095bbf1d6b1048a339738a55d}{parse\+\_\+fields}} (char $\ast$line, int n)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a4c6ce94b4d4e13bf928eedbd5186e8fe}{translate\+\_\+array}} (float $\ast$a, int n, float s)
+\item 
+float \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_acdd3cf194fe55404d95585fcf50a1b4c}{constrain}} (float min, float max, float a)
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a5402a85f04198ed74b0ac1172b673a14}{constrain\+\_\+int}} (int a, int min, int max)
+\item 
+float \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_ae5e2a8baa8169333fae635a56852f4a8}{rand\+\_\+scale}} (float s)
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_ad3de83542e75e46f163db52544498f53}{rand\+\_\+int}} (int min, int max)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a2b0ce94853a05e81d956416164450c5e}{mean\+\_\+arrays}} (float $\ast$$\ast$a, int n, int els, float $\ast$avg)
+\item 
+float \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_ab103bec0ac7219b8766659a86555360d}{dist\+\_\+array}} (float $\ast$a, float $\ast$b, int n, int sub)
+\item 
+float $\ast$$\ast$ \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a04622a0ae5345a6b7dd9577e1cc7b13e}{one\+\_\+hot\+\_\+encode}} (float $\ast$a, int n, int k)
+\item 
+float \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_a375f4de29b8973c3e1b63bf49a5eb00e}{sec}} (clock\+\_\+t clocks)
+\item 
+void \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_ae211f70582950d61802e8ebc3ae0b665}{print\+\_\+statistics}} (float $\ast$a, int n)
+\item 
+int \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_aa86516fcc6a1cb2cd90c69bafc8cad1f}{int\+\_\+index}} (int $\ast$a, int val, int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a590ccb21127652bd64009098104ddef5}\label{darknet__ros_2darknet_2src_2utils_8h_a590ccb21127652bd64009098104ddef5}} 
+\index{utils.h@{utils.h}!TIME@{TIME}}
+\index{TIME@{TIME}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{TIME}{TIME}}
+{\footnotesize\ttfamily \#define T\+I\+ME(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    double start = \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_af89a5b997626c967e4716fd022aca7bb}{what\_time\_is\_it\_now}}(); \(\backslash\)}
+\DoxyCodeLine{    a; \(\backslash\)}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"\%s took: \%f seconds\(\backslash\)n"}, \#a, \mbox{\hyperlink{darknet__ros_2darknet_2src_2utils_8h_af89a5b997626c967e4716fd022aca7bb}{what\_time\_is\_it\_now}}() - start); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Definition at line 8 of file utils.\+h.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a3b947f4b635461030ff2d87833e5049e}\label{darknet__ros_2darknet_2src_2utils_8h_a3b947f4b635461030ff2d87833e5049e}} 
+\index{utils.h@{utils.h}!TWO\_PI@{TWO\_PI}}
+\index{TWO\_PI@{TWO\_PI}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{TWO\_PI}{TWO\_PI}}
+{\footnotesize\ttfamily \#define T\+W\+O\+\_\+\+PI~6.\+2831853071795864769252866f}
+
+
+
+Definition at line 15 of file utils.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a6fa5fdc3d22a596fd2d21f012e5ec2c7}\label{darknet__ros_2darknet_2src_2utils_8h_a6fa5fdc3d22a596fd2d21f012e5ec2c7}} 
+\index{utils.h@{utils.h}!alphanum\_to\_int@{alphanum\_to\_int}}
+\index{alphanum\_to\_int@{alphanum\_to\_int}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{alphanum\_to\_int()}{alphanum\_to\_int()}}
+{\footnotesize\ttfamily int alphanum\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 193 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_acdd3cf194fe55404d95585fcf50a1b4c}\label{darknet__ros_2darknet_2src_2utils_8h_acdd3cf194fe55404d95585fcf50a1b4c}} 
+\index{utils.h@{utils.h}!constrain@{constrain}}
+\index{constrain@{constrain}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{constrain()}{constrain()}}
+{\footnotesize\ttfamily float constrain (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 531 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a5402a85f04198ed74b0ac1172b673a14}\label{darknet__ros_2darknet_2src_2utils_8h_a5402a85f04198ed74b0ac1172b673a14}} 
+\index{utils.h@{utils.h}!constrain\_int@{constrain\_int}}
+\index{constrain\_int@{constrain\_int}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{constrain\_int()}{constrain\_int()}}
+{\footnotesize\ttfamily int constrain\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 524 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a4d27da4f6ddad5146c9190badd121a39}\label{darknet__ros_2darknet_2src_2utils_8h_a4d27da4f6ddad5146c9190badd121a39}} 
+\index{utils.h@{utils.h}!copy\_string@{copy\_string}}
+\index{copy\_string@{copy\_string}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{copy\_string()}{copy\_string()}}
+{\footnotesize\ttfamily char$\ast$ copy\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 423 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a55df64d8a7f8b49ad351188c9872f43e}\label{darknet__ros_2darknet_2src_2utils_8h_a55df64d8a7f8b49ad351188c9872f43e}} 
+\index{utils.h@{utils.h}!count\_fields@{count\_fields}}
+\index{count\_fields@{count\_fields}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{count\_fields()}{count\_fields()}}
+{\footnotesize\ttfamily int count\+\_\+fields (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 447 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_ab103bec0ac7219b8766659a86555360d}\label{darknet__ros_2darknet_2src_2utils_8h_ab103bec0ac7219b8766659a86555360d}} 
+\index{utils.h@{utils.h}!dist\_array@{dist\_array}}
+\index{dist\_array@{dist\_array}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{dist\_array()}{dist\_array()}}
+{\footnotesize\ttfamily float dist\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{float $\ast$}]{b,  }\item[{int}]{n,  }\item[{int}]{sub }\end{DoxyParamCaption})}
+
+
+
+Definition at line 538 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a153eabd234972b240608df09cc4975d3}\label{darknet__ros_2darknet_2src_2utils_8h_a153eabd234972b240608df09cc4975d3}} 
+\index{utils.h@{utils.h}!fgetl@{fgetl}}
+\index{fgetl@{fgetl}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{fgetl()}{fgetl()}}
+{\footnotesize\ttfamily char$\ast$ fgetl (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 335 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_aecaee51f837bcfd8316ab68164620819}\label{darknet__ros_2darknet_2src_2utils_8h_aecaee51f837bcfd8316ab68164620819}} 
+\index{utils.h@{utils.h}!file\_error@{file\_error}}
+\index{file\_error@{file\_error}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{file\_error()}{file\_error()}}
+{\footnotesize\ttfamily void file\+\_\+error (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 281 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a1ba38c8a3123ae1289a73d9f70e17615}\label{darknet__ros_2darknet_2src_2utils_8h_a1ba38c8a3123ae1289a73d9f70e17615}} 
+\index{utils.h@{utils.h}!find\_replace@{find\_replace}}
+\index{find\_replace@{find\_replace}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{find\_replace()}{find\_replace()}}
+{\footnotesize\ttfamily void find\+\_\+replace (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{char $\ast$}]{orig,  }\item[{char $\ast$}]{rep,  }\item[{char $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Definition at line 216 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a8d316e671a183c19ac7631287b29050a}\label{darknet__ros_2darknet_2src_2utils_8h_a8d316e671a183c19ac7631287b29050a}} 
+\index{utils.h@{utils.h}!free\_ptrs@{free\_ptrs}}
+\index{free\_ptrs@{free\_ptrs}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{free\_ptrs()}{free\_ptrs()}}
+{\footnotesize\ttfamily void free\+\_\+ptrs (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{ptrs,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 328 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_aa86516fcc6a1cb2cd90c69bafc8cad1f}\label{darknet__ros_2darknet_2src_2utils_8h_aa86516fcc6a1cb2cd90c69bafc8cad1f}} 
+\index{utils.h@{utils.h}!int\_index@{int\_index}}
+\index{int\_index@{int\_index}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{int\_index()}{int\_index()}}
+{\footnotesize\ttfamily int int\+\_\+index (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int}]{val,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 633 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a88c02ede12c15131e71a2387a9ef226f}\label{darknet__ros_2darknet_2src_2utils_8h_a88c02ede12c15131e71a2387a9ef226f}} 
+\index{utils.h@{utils.h}!int\_to\_alphanum@{int\_to\_alphanum}}
+\index{int\_to\_alphanum@{int\_to\_alphanum}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{int\_to\_alphanum()}{int\_to\_alphanum()}}
+{\footnotesize\ttfamily char int\+\_\+to\+\_\+alphanum (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_acab41f0a0d61cac3b20102d02e897780}\label{darknet__ros_2darknet_2src_2utils_8h_acab41f0a0d61cac3b20102d02e897780}} 
+\index{utils.h@{utils.h}!malloc\_error@{malloc\_error}}
+\index{malloc\_error@{malloc\_error}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{malloc\_error()}{malloc\_error()}}
+{\footnotesize\ttfamily void malloc\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 275 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a2b0ce94853a05e81d956416164450c5e}\label{darknet__ros_2darknet_2src_2utils_8h_a2b0ce94853a05e81d956416164450c5e}} 
+\index{utils.h@{utils.h}!mean\_arrays@{mean\_arrays}}
+\index{mean\_arrays@{mean\_arrays}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{mean\_arrays()}{mean\_arrays()}}
+{\footnotesize\ttfamily void mean\+\_\+arrays (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{a,  }\item[{int}]{n,  }\item[{int}]{els,  }\item[{float $\ast$}]{avg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 492 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a04622a0ae5345a6b7dd9577e1cc7b13e}\label{darknet__ros_2darknet_2src_2utils_8h_a04622a0ae5345a6b7dd9577e1cc7b13e}} 
+\index{utils.h@{utils.h}!one\_hot\_encode@{one\_hot\_encode}}
+\index{one\_hot\_encode@{one\_hot\_encode}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{one\_hot\_encode()}{one\_hot\_encode()}}
+{\footnotesize\ttfamily float$\ast$$\ast$ one\+\_\+hot\+\_\+encode (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line 715 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_ac3aec3e73da4fa4dcb6be73993cc653b}\label{darknet__ros_2darknet_2src_2utils_8h_ac3aec3e73da4fa4dcb6be73993cc653b}} 
+\index{utils.h@{utils.h}!parse\_csv\_line@{parse\_csv\_line}}
+\index{parse\_csv\_line@{parse\_csv\_line}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{parse\_csv\_line()}{parse\_csv\_line()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}}$\ast$ parse\+\_\+csv\+\_\+line (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 430 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_aa62de6e095bbf1d6b1048a339738a55d}\label{darknet__ros_2darknet_2src_2utils_8h_aa62de6e095bbf1d6b1048a339738a55d}} 
+\index{utils.h@{utils.h}!parse\_fields@{parse\_fields}}
+\index{parse\_fields@{parse\_fields}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{parse\_fields()}{parse\_fields()}}
+{\footnotesize\ttfamily float$\ast$ parse\+\_\+fields (\begin{DoxyParamCaption}\item[{char $\ast$}]{line,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 459 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_ae211f70582950d61802e8ebc3ae0b665}\label{darknet__ros_2darknet_2src_2utils_8h_ae211f70582950d61802e8ebc3ae0b665}} 
+\index{utils.h@{utils.h}!print\_statistics@{print\_statistics}}
+\index{print\_statistics@{print\_statistics}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{print\_statistics()}{print\_statistics()}}
+{\footnotesize\ttfamily void print\+\_\+statistics (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 507 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_ad3de83542e75e46f163db52544498f53}\label{darknet__ros_2darknet_2src_2utils_8h_ad3de83542e75e46f163db52544498f53}} 
+\index{utils.h@{utils.h}!rand\_int@{rand\_int}}
+\index{rand\_int@{rand\_int}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{rand\_int()}{rand\_int()}}
+{\footnotesize\ttfamily int rand\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line 642 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_ae5e2a8baa8169333fae635a56852f4a8}\label{darknet__ros_2darknet_2src_2utils_8h_ae5e2a8baa8169333fae635a56852f4a8}} 
+\index{utils.h@{utils.h}!rand\_scale@{rand\_scale}}
+\index{rand\_scale@{rand\_scale}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{rand\_scale()}{rand\_scale()}}
+{\footnotesize\ttfamily float rand\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 708 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_ad4220decb86d761447a704e03423f160}\label{darknet__ros_2darknet_2src_2utils_8h_ad4220decb86d761447a704e03423f160}} 
+\index{utils.h@{utils.h}!read\_all@{read\_all}}
+\index{read\_all@{read\_all}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{read\_all()}{read\_all()}}
+{\footnotesize\ttfamily void read\+\_\+all (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 402 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_afccdb26cd63a87476385c10ada582642}\label{darknet__ros_2darknet_2src_2utils_8h_afccdb26cd63a87476385c10ada582642}} 
+\index{utils.h@{utils.h}!read\_all\_fail@{read\_all\_fail}}
+\index{read\_all\_fail@{read\_all\_fail}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{read\_all\_fail()}{read\_all\_fail()}}
+{\footnotesize\ttfamily int read\+\_\+all\+\_\+fail (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 380 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_aeb107bc4d07f192c90ee37806b26a1d4}\label{darknet__ros_2darknet_2src_2utils_8h_aeb107bc4d07f192c90ee37806b26a1d4}} 
+\index{utils.h@{utils.h}!read\_int@{read\_int}}
+\index{read\_int@{read\_int}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{read\_int()}{read\_int()}}
+{\footnotesize\ttfamily int read\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 366 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a375f4de29b8973c3e1b63bf49a5eb00e}\label{darknet__ros_2darknet_2src_2utils_8h_a375f4de29b8973c3e1b63bf49a5eb00e}} 
+\index{utils.h@{utils.h}!sec@{sec}}
+\index{sec@{sec}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{sec()}{sec()}}
+{\footnotesize\ttfamily float sec (\begin{DoxyParamCaption}\item[{clock\+\_\+t}]{clocks }\end{DoxyParamCaption})}
+
+
+
+Definition at line 232 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a0ffcf3aef270870fe180405bc25cad50}\label{darknet__ros_2darknet_2src_2utils_8h_a0ffcf3aef270870fe180405bc25cad50}} 
+\index{utils.h@{utils.h}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily void shuffle (\begin{DoxyParamCaption}\item[{void $\ast$}]{arr,  }\item[{size\+\_\+t}]{n,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a6d7f2250125f0cf3f16e5a7b7c1905a9}\label{darknet__ros_2darknet_2src_2utils_8h_a6d7f2250125f0cf3f16e5a7b7c1905a9}} 
+\index{utils.h@{utils.h}!sorta\_shuffle@{sorta\_shuffle}}
+\index{sorta\_shuffle@{sorta\_shuffle}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{sorta\_shuffle()}{sorta\_shuffle()}}
+{\footnotesize\ttfamily void sorta\+\_\+shuffle (\begin{DoxyParamCaption}\item[{void $\ast$}]{arr,  }\item[{size\+\_\+t}]{n,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{sections }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a3b0e9c0cc522f926d826a4e16f256435}\label{darknet__ros_2darknet_2src_2utils_8h_a3b0e9c0cc522f926d826a4e16f256435}} 
+\index{utils.h@{utils.h}!split\_str@{split\_str}}
+\index{split\_str@{split\_str}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{split\_str()}{split\_str()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist}{list}}$\ast$ split\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{char}]{delim }\end{DoxyParamCaption})}
+
+
+
+Definition at line 287 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a76299b86e144434260dcab80323ec9da}\label{darknet__ros_2darknet_2src_2utils_8h_a76299b86e144434260dcab80323ec9da}} 
+\index{utils.h@{utils.h}!strip@{strip}}
+\index{strip@{strip}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{strip()}{strip()}}
+{\footnotesize\ttfamily void strip (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 302 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a377b25b3b6d110d34bea9a85d0305917}\label{darknet__ros_2darknet_2src_2utils_8h_a377b25b3b6d110d34bea9a85d0305917}} 
+\index{utils.h@{utils.h}!strip\_char@{strip\_char}}
+\index{strip\_char@{strip\_char}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{strip\_char()}{strip\_char()}}
+{\footnotesize\ttfamily void strip\+\_\+char (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{char}]{bad }\end{DoxyParamCaption})}
+
+
+
+Definition at line 315 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a4c6ce94b4d4e13bf928eedbd5186e8fe}\label{darknet__ros_2darknet_2src_2utils_8h_a4c6ce94b4d4e13bf928eedbd5186e8fe}} 
+\index{utils.h@{utils.h}!translate\_array@{translate\_array}}
+\index{translate\_array@{translate\_array}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{translate\_array()}{translate\_array()}}
+{\footnotesize\ttfamily void translate\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{a,  }\item[{int}]{n,  }\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 566 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_af89a5b997626c967e4716fd022aca7bb}\label{darknet__ros_2darknet_2src_2utils_8h_af89a5b997626c967e4716fd022aca7bb}} 
+\index{utils.h@{utils.h}!what\_time\_is\_it\_now@{what\_time\_is\_it\_now}}
+\index{what\_time\_is\_it\_now@{what\_time\_is\_it\_now}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{what\_time\_is\_it\_now()}{what\_time\_is\_it\_now()}}
+{\footnotesize\ttfamily double what\+\_\+time\+\_\+is\+\_\+it\+\_\+now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_ab256fc300495d1768adc2e8b7997a140}\label{darknet__ros_2darknet_2src_2utils_8h_ab256fc300495d1768adc2e8b7997a140}} 
+\index{utils.h@{utils.h}!write\_all@{write\_all}}
+\index{write\_all@{write\_all}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{write\_all()}{write\_all()}}
+{\footnotesize\ttfamily void write\+\_\+all (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 412 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a1b877af1aab01bde49615e4ac0d45b27}\label{darknet__ros_2darknet_2src_2utils_8h_a1b877af1aab01bde49615e4ac0d45b27}} 
+\index{utils.h@{utils.h}!write\_all\_fail@{write\_all\_fail}}
+\index{write\_all\_fail@{write\_all\_fail}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{write\_all\_fail()}{write\_all\_fail()}}
+{\footnotesize\ttfamily int write\+\_\+all\+\_\+fail (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 391 of file utils.\+c.
+
+\mbox{\Hypertarget{darknet__ros_2darknet_2src_2utils_8h_a71b198ba343751a3b889b92bfe9d5fd2}\label{darknet__ros_2darknet_2src_2utils_8h_a71b198ba343751a3b889b92bfe9d5fd2}} 
+\index{utils.h@{utils.h}!write\_int@{write\_int}}
+\index{write\_int@{write\_int}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{write\_int()}{write\_int()}}
+{\footnotesize\ttfamily void write\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 374 of file utils.\+c.
+

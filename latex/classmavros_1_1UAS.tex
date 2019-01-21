@@ -1,0 +1,164 @@
+\hypertarget{classmavros_1_1UAS}{}\section{mavros\+::U\+AS Class Reference}
+\label{classmavros_1_1UAS}\index{mavros::UAS@{mavros::UAS}}
+
+
+\mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} for plugins.  
+
+
+
+
+{\ttfamily \#include $<$mavros\+\_\+uas.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}{Connection\+Cb}} = std\+::function$<$ void(bool)$>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga823ce64cc07d60ff4b1405ca4e4b4e89}{lock\+\_\+guard}} = std\+::lock\+\_\+guard$<$ std\+::recursive\+\_\+mutex $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga8452368668995b87dd0cd51d4193c9ad}{unique\+\_\+lock}} = std\+::unique\+\_\+lock$<$ std\+::recursive\+\_\+mutex $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}{M\+A\+V\+\_\+\+T\+Y\+PE}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+T\+Y\+PE
+\item 
+using \mbox{\hyperlink{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT
+\item 
+using \mbox{\hyperlink{group__nodelib_gaa4ceb4f80ab2af120df172fcb47a7d65}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+AG}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+AG
+\item 
+using \mbox{\hyperlink{group__nodelib_ga85bd5a7930c4de36d657e1f8b890e19f}{M\+A\+V\+\_\+\+S\+T\+A\+TE}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE
+\item 
+using \mbox{\hyperlink{group__nodelib_ga866822300d407c623943a069e0db494a}{timesync\+\_\+mode}} = \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{utils\+::timesync\+\_\+mode}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__nodelib_ga73bb173cfb9914f380671cb0f3efb113}{U\+AS}} ()
+\item 
+\mbox{\hyperlink{group__nodelib_gab273c619e0a6433f1ea3291103ec3710}{$\sim$\+U\+AS}} ()
+\item 
+bool \mbox{\hyperlink{group__nodelib_gae5ac050d003fe823d5c483e7f636e91c}{is\+\_\+connected}} ()
+\begin{DoxyCompactList}\small\item\em Return connection status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gad353627789d9fa0e4cafb7fb8dad9b32}{update\+\_\+heartbeat}} (uint8\+\_\+t type\+\_\+, uint8\+\_\+t autopilot\+\_\+, uint8\+\_\+t base\+\_\+mode\+\_\+)
+\item 
+void \mbox{\hyperlink{group__nodelib_ga566ad54aab4ddea1c0e3756870fe9c91}{update\+\_\+connection\+\_\+status}} (bool conn\+\_\+)
+\item 
+void \mbox{\hyperlink{group__nodelib_gafb66aabf2079888fb4e1a07fcce2161c}{add\+\_\+connection\+\_\+change\+\_\+handler}} (\mbox{\hyperlink{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}{Connection\+Cb}} cb)
+\begin{DoxyCompactList}\small\item\em Add connection change handler callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}{M\+A\+V\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__nodelib_gaeac4cd692aff7e67498a1ad01ea95b9f}{get\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Returns vehicle type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}} \mbox{\hyperlink{group__nodelib_gad61deec4e10469fc9eb40dcc3a36aab1}{get\+\_\+autopilot}} ()
+\begin{DoxyCompactList}\small\item\em Returns autopilot type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gae941bfe1ef1afd1cb6608028a38e1c27}{get\+\_\+armed}} ()
+\begin{DoxyCompactList}\small\item\em Returns arming status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gae6fe5bb4dc5d02536c8b7970577b22d7}{get\+\_\+hil\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Returns H\+IL status. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__nodelib_ga9d8412c7b6aada6715ded8eefcd6a517}{get\+\_\+tgt\+\_\+system}} ()
+\begin{DoxyCompactList}\small\item\em Return communication target system. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__nodelib_ga1b874777bb6378d1fec2d3498f95884c}{get\+\_\+tgt\+\_\+component}} ()
+\begin{DoxyCompactList}\small\item\em Return communication target component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga87eb84159321497e07dc4c739bdb727d}{set\+\_\+tgt}} (uint8\+\_\+t sys, uint8\+\_\+t comp)
+\item 
+void \mbox{\hyperlink{group__nodelib_gaca39c9b4dfce83909e2bde0796564341}{update\+\_\+attitude\+\_\+imu\+\_\+enu}} (sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \&imu)
+\begin{DoxyCompactList}\small\item\em Store I\+MU data \mbox{[}E\+NU\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gacd6fc1ac631a90619d7f53fa5ab9b29d}{update\+\_\+attitude\+\_\+imu\+\_\+ned}} (sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \&imu)
+\begin{DoxyCompactList}\small\item\em Store I\+MU data \mbox{[}N\+ED\mbox{]}. \end{DoxyCompactList}\item 
+sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \mbox{\hyperlink{group__nodelib_ga191709b6e50268022d10e469a3897975}{get\+\_\+attitude\+\_\+imu\+\_\+enu}} ()
+\begin{DoxyCompactList}\small\item\em Get I\+MU data \mbox{[}E\+NU\mbox{]}. \end{DoxyCompactList}\item 
+sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \mbox{\hyperlink{group__nodelib_ga31440655ed2c55b927fb6e3ed66a41a1}{get\+\_\+attitude\+\_\+imu\+\_\+ned}} ()
+\begin{DoxyCompactList}\small\item\em Get I\+MU data \mbox{[}N\+ED\mbox{]}. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Quaternion \mbox{\hyperlink{group__nodelib_gada6bb75eadc7ce6ad379c5e3a24625b0}{get\+\_\+attitude\+\_\+orientation\+\_\+enu}} ()
+\begin{DoxyCompactList}\small\item\em Get Attitude orientation quaternion. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Quaternion \mbox{\hyperlink{group__nodelib_ga7524149188b866dfd044b2d6e03eb328}{get\+\_\+attitude\+\_\+orientation\+\_\+ned}} ()
+\begin{DoxyCompactList}\small\item\em Get Attitude orientation quaternion. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Vector3 \mbox{\hyperlink{group__nodelib_ga2386d8414c90fcd1d19832656eed1742}{get\+\_\+attitude\+\_\+angular\+\_\+velocity\+\_\+enu}} ()
+\begin{DoxyCompactList}\small\item\em Get angular velocity from I\+MU data. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Vector3 \mbox{\hyperlink{group__nodelib_gad8c9d0e754109b465ee25115ef55860e}{get\+\_\+attitude\+\_\+angular\+\_\+velocity\+\_\+ned}} ()
+\begin{DoxyCompactList}\small\item\em Get angular velocity from I\+MU data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga5230fcf5827b4a682efe35b91a66152b}{update\+\_\+gps\+\_\+fix\+\_\+epts}} (sensor\+\_\+msgs\+::\+Nav\+Sat\+Fix\+::\+Ptr \&fix, float eph, float epv, int fix\+\_\+type, int satellites\+\_\+visible)
+\begin{DoxyCompactList}\small\item\em Store G\+PS R\+AW data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga17cd0e13d3dce3ec697646bb543ba6e7}{get\+\_\+gps\+\_\+epts}} (float \&eph, float \&epv, int \&fix\+\_\+type, int \&satellites\+\_\+visible)
+\begin{DoxyCompactList}\small\item\em Returns E\+PH, E\+PV, Fix type and satellites visible. \end{DoxyCompactList}\item 
+sensor\+\_\+msgs\+::\+Nav\+Sat\+Fix\+::\+Ptr \mbox{\hyperlink{group__nodelib_gac4ba509d29c876694293856f39308625}{get\+\_\+gps\+\_\+fix}} ()
+\begin{DoxyCompactList}\small\item\em Retunrs last G\+PS R\+AW message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\double \mbox{\hyperlink{group__nodelib_ga4f50b74e553d2c2b2a3c4ea02213fd89}{geoid\+\_\+to\+\_\+ellipsoid\+\_\+height}} (T lla)
+\begin{DoxyCompactList}\small\item\em Conversion from height above geoid (A\+M\+SL) to height above ellipsoid (W\+G\+S-\/84) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\double \mbox{\hyperlink{group__nodelib_gaf8185c59b4aa8840717d676d247ea99d}{ellipsoid\+\_\+to\+\_\+geoid\+\_\+height}} (T lla)
+\begin{DoxyCompactList}\small\item\em Conversion from height above ellipsoid (W\+G\+S-\/84) to height above geoid (A\+M\+SL) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gab34a88daf20e38cb4ed8e26c6898704a}{publish\+\_\+static\+\_\+transform}} (const std\+::string \&frame\+\_\+id, const std\+::string \&child\+\_\+id, const Eigen\+::\+Affine3d \&tr)
+\begin{DoxyCompactList}\small\item\em Publishes static transform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga50b971d58f9196c4201a1a3213428e71}{set\+\_\+time\+\_\+offset}} (uint64\+\_\+t offset\+\_\+ns)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__nodelib_ga1f582ffa4b83892e65bf2abff10e86e1}{get\+\_\+time\+\_\+offset}} (void)
+\item 
+void \mbox{\hyperlink{group__nodelib_gafd550e12066507238346b5cf4814d688}{set\+\_\+timesync\+\_\+mode}} (\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} mode)
+\item 
+\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} \mbox{\hyperlink{group__nodelib_ga2284947568b4a2205a500d8c494ae7fa}{get\+\_\+timesync\+\_\+mode}} (void)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__nodelib_ga11f231ebf1dcdf015466ecec477c5795}{get\+\_\+capabilities}} ()
+\item 
+void \mbox{\hyperlink{group__nodelib_ga6e1867e65586363b66cc274a970c0660}{update\+\_\+capabilities}} (bool known, uint64\+\_\+t caps=0)
+\item 
+ros\+::\+Time \mbox{\hyperlink{group__nodelib_ga0fefb6563eb4fdd64b7b3ee2898f786e}{synchronise\+\_\+stamp}} (uint32\+\_\+t time\+\_\+boot\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Compute F\+CU message time from time\+\_\+boot\+\_\+ms or time\+\_\+usec field. \end{DoxyCompactList}\item 
+ros\+::\+Time \mbox{\hyperlink{group__nodelib_ga12c99ff6a2e51345ad813086f79bb2c1}{synchronise\+\_\+stamp}} (uint64\+\_\+t time\+\_\+usec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+\_\+msgs\+::\+Header \mbox{\hyperlink{group__nodelib_ga548327e4a73268424eb8a730be7e618d}{synchronized\+\_\+header}} (const std\+::string \&frame\+\_\+id, const T time\+\_\+stamp)
+\begin{DoxyCompactList}\small\item\em Create message header from time\+\_\+boot\+\_\+ms or time\+\_\+usec stamps and frame\+\_\+id. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \+\_\+T $>$ }\\void \mbox{\hyperlink{group__nodelib_ga1fb94a2e20412126b42bcb872a7d0845}{msg\+\_\+set\+\_\+target}} (\+\_\+T \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+bool \mbox{\hyperlink{group__nodelib_ga1ed3e59972054c99c9c5d7205bdbe3bc}{is\+\_\+my\+\_\+target}} (uint8\+\_\+t sysid, uint8\+\_\+t compid)
+\begin{DoxyCompactList}\small\item\em Check that sys/comp id\textquotesingle{}s is my target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gaed7b8a1d25613984a83837958b0dde67}{is\+\_\+my\+\_\+target}} (uint8\+\_\+t sysid)
+\begin{DoxyCompactList}\small\item\em Check that system id is my target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gad1a57410bba40929fd2aa443e8706695}{is\+\_\+ardupilotmega}} ()
+\begin{DoxyCompactList}\small\item\em Check that F\+CU is A\+PM. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_ga03c6f1128530da35612a7d40eb5cb5ad}{is\+\_\+px4}} ()
+\begin{DoxyCompactList}\small\item\em Check that F\+CU is P\+X4. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{group__nodelib_gaa60e637dbc000f32038c9d8ad58c678a}{str\+\_\+mode\+\_\+v10}} (uint8\+\_\+t base\+\_\+mode, uint32\+\_\+t custom\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Represent F\+CU mode as string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gaa280a5a875442cf0683860ff5849916a}{cmode\+\_\+from\+\_\+str}} (std\+::string cmode\+\_\+str, uint32\+\_\+t \&custom\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Lookup custom mode for given string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Ptr}} \mbox{\hyperlink{group__nodelib_gafc058c8fb3e90f26a88fdd808e1b3dac}{fcu\+\_\+link}}
+\begin{DoxyCompactList}\small\item\em M\+A\+V\+Link F\+CU device conection. \end{DoxyCompactList}\item 
+diagnostic\+\_\+updater\+::\+Updater \mbox{\hyperlink{group__nodelib_ga57e8229b5f18563820ff4ee5335d57a5}{diag\+\_\+updater}}
+\begin{DoxyCompactList}\small\item\em Mavros diagnostic updater. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Geographic\+Lib\+::\+Geoid $>$ \mbox{\hyperlink{group__nodelib_ga35622da9e1bf22e43b269fbcbce65c40}{egm96\+\_\+5}}
+\begin{DoxyCompactList}\small\item\em Geoid dataset used to convert between A\+M\+SL and W\+G\+S-\/84. \end{DoxyCompactList}\item 
+tf2\+\_\+ros\+::\+Buffer \mbox{\hyperlink{group__nodelib_ga9c221ed548579fd2008fd1ac4d2b13e3}{tf2\+\_\+buffer}}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Listener \mbox{\hyperlink{group__nodelib_gaa3606f3a1043f5a4666d2d922cbb170a}{tf2\+\_\+listener}}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Broadcaster \mbox{\hyperlink{group__nodelib_gaea0896a0daef68618142861b79395156}{tf2\+\_\+broadcaster}}
+\item 
+tf2\+\_\+ros\+::\+Static\+Transform\+Broadcaster \mbox{\hyperlink{group__nodelib_gad3a9ec1f5de439f1c43ade0b851bae38}{tf2\+\_\+static\+\_\+broadcaster}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} for plugins. 
+
+This class stores some useful data and provides fcu connection, mode stringify utilities.
+
+Currently it stores\+:
+\begin{DoxyItemize}
+\item F\+CU link interface
+\item F\+CU System \& Component ID pair
+\item Connection status ({\itshape mavplugin\+::\+System\+Status\+Plugin})
+\item Autopilot type ({\itshape mavplugin\+::\+System\+Status\+Plugin})
+\item Vehicle type ({\itshape mavplugin\+::\+System\+Status\+Plugin})
+\item I\+MU data ({\itshape mavplugin\+::\+I\+M\+U\+Pub\+Plugin})
+\item G\+PS data ({\itshape mavplugin\+::\+G\+P\+S\+Plugin}) 
+\end{DoxyItemize}
+
+Definition at line 66 of file mavros\+\_\+uas.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/include/mavros/\mbox{\hyperlink{mavros__uas_8h}{mavros\+\_\+uas.\+h}}\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/lib/\mbox{\hyperlink{uas__data_8cpp}{uas\+\_\+data.\+cpp}}\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/lib/\mbox{\hyperlink{uas__stringify_8cpp}{uas\+\_\+stringify.\+cpp}}\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/lib/\mbox{\hyperlink{uas__timesync_8cpp}{uas\+\_\+timesync.\+cpp}}\end{DoxyCompactItemize}

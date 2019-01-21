@@ -1,0 +1,256 @@
+\hypertarget{mavnative_8c}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/mavnative/mavnative.c File Reference}
+\label{mavnative_8c}\index{/home/eric/catkin\_ws/src/mavlink/pymavlink/mavnative/mavnative.c@{/home/eric/catkin\_ws/src/mavlink/pymavlink/mavnative/mavnative.c}}
+{\ttfamily \#include $<$Python.\+h$>$}\newline
+{\ttfamily \#include $<$structmember.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$setjmp.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mavlink\+\_\+defaults.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mavlink\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$protocol.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpy__field__info__t}{py\+\_\+field\+\_\+info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structpy__message__info__t}{py\+\_\+message\+\_\+info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structpy__message__t}{py\+\_\+message\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structNativeConnection}{Native\+Connection}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_a7f0176318fbc1e50ebc081b3bb30facd}{Py\+Byte\+String\+\_\+\+From\+String}}~Py\+String\+\_\+\+From\+String
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_abe5dbdc3e5998ed6c20b61303338d146}{Py\+Byte\+String\+\_\+\+From\+String\+And\+Size}}~Py\+String\+\_\+\+From\+String\+And\+Size
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_a00e16645a20206b5797122b586765f7e}{Py\+Byte\+String\+\_\+\+Concat\+And\+Del}}~Py\+String\+\_\+\+Concat\+And\+Del
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_a36dd739ad299e3b8d9ce634693155028}{M\+A\+V\+L\+I\+N\+K\+\_\+\+U\+S\+E\+\_\+\+C\+O\+N\+V\+E\+N\+I\+E\+N\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}}
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_aad5dd4313a4e19ae3bddccfbebda5b62}{M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+S\+S\+E\+RT}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})~assert(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_aa314d36e47734e461812d4ad7b19e773}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+RC}}(msgid)~py\+\_\+message\+\_\+info\mbox{[}msgid\mbox{]}.crc\+\_\+extra
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_ad146c4ac4a6eaeb2c956f6e7693f4230}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}}(msgid)~py\+\_\+message\+\_\+info\mbox{[}msgid\mbox{]}.len
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}~1
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}~0
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_ace14268a475335bd7a68b05afcb3d4b4}{mavdebug}}(x...)
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_ad143c0e5c99a1609d4fcbf48a3c48e74}{P\+Y\+T\+H\+O\+N\+\_\+\+E\+N\+T\+RY}}~if(!setjmp(python\+\_\+entry)) \{
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_a3eb8af7e541ff191b2430a79d96ad657}{P\+Y\+T\+H\+O\+N\+\_\+\+E\+X\+IT}}~\} \mbox{\hyperlink{mavlink_8php_a33f222928d1e5db001c1bb5b39a2ed2f}{else}} \{ return N\+U\+LL; \}
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_af9d2b22fc2df2c479bfd4228144790fb}{P\+Y\+T\+H\+O\+N\+\_\+\+E\+X\+I\+T\+\_\+\+I\+NT}}~\} \mbox{\hyperlink{mavlink_8php_a33f222928d1e5db001c1bb5b39a2ed2f}{else}} \{ return -\/1; \}
+\item 
+\#define \mbox{\hyperlink{mavnative_8c_afe670951b07f21fb591a61c88dd99243}{M\+O\+D\+\_\+\+R\+E\+T\+U\+RN}}(m)~return
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t \mbox{\hyperlink{mavnative_8c_a340be07d82374a1eee01d1d368886640}{py\+\_\+mavlink\+\_\+parse\+\_\+char}} (uint8\+\_\+t c, \mbox{\hyperlink{structpy__message__t}{py\+\_\+message\+\_\+t}} $\ast$pymsg, \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$\mbox{\hyperlink{keyTalker_8cpp_a6e27f49150e9a14580fb313cc2777e00}{status}})
+\item 
+void \mbox{\hyperlink{mavnative_8c_a57b8df4484e05cf13f92e11ab8f88e23}{\+\_\+\+\_\+assert\+\_\+fail}} (const char $\ast$\+\_\+\+\_\+assertion, const char $\ast$\+\_\+\+\_\+file, unsigned int \+\_\+\+\_\+line, const char $\ast$\+\_\+\+\_\+function)
+\item 
+Py\+M\+O\+D\+I\+N\+I\+T\+\_\+\+F\+U\+NC \mbox{\hyperlink{mavnative_8c_ab8d2bace4db4a8f20b28780be3679d18}{initmavnative}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mavnative_8c_aa93f0eb578d23995850d61f7d61c55c1}\label{mavnative_8c_aa93f0eb578d23995850d61f7d61c55c1}} 
+\index{mavnative.c@{mavnative.c}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{FALSE}{FALSE}}
+{\footnotesize\ttfamily \#define F\+A\+L\+SE~0}
+
+
+
+Definition at line 69 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_ace14268a475335bd7a68b05afcb3d4b4}\label{mavnative_8c_ace14268a475335bd7a68b05afcb3d4b4}} 
+\index{mavnative.c@{mavnative.c}!mavdebug@{mavdebug}}
+\index{mavdebug@{mavdebug}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{mavdebug}{mavdebug}}
+{\footnotesize\ttfamily \#define mavdebug(\begin{DoxyParamCaption}\item[{}]{x... }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_aad5dd4313a4e19ae3bddccfbebda5b62}\label{mavnative_8c_aad5dd4313a4e19ae3bddccfbebda5b62}} 
+\index{mavnative.c@{mavnative.c}!MAVLINK\_ASSERT@{MAVLINK\_ASSERT}}
+\index{MAVLINK\_ASSERT@{MAVLINK\_ASSERT}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{MAVLINK\_ASSERT}{MAVLINK\_ASSERT}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} }\end{DoxyParamCaption})~assert(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})}
+
+
+
+Definition at line 47 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_aa314d36e47734e461812d4ad7b19e773}\label{mavnative_8c_aa314d36e47734e461812d4ad7b19e773}} 
+\index{mavnative.c@{mavnative.c}!MAVLINK\_MESSAGE\_CRC@{MAVLINK\_MESSAGE\_CRC}}
+\index{MAVLINK\_MESSAGE\_CRC@{MAVLINK\_MESSAGE\_CRC}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{MAVLINK\_MESSAGE\_CRC}{MAVLINK\_MESSAGE\_CRC}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+RC(\begin{DoxyParamCaption}\item[{}]{msgid }\end{DoxyParamCaption})~py\+\_\+message\+\_\+info\mbox{[}msgid\mbox{]}.crc\+\_\+extra}
+
+
+
+Definition at line 55 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_ad146c4ac4a6eaeb2c956f6e7693f4230}\label{mavnative_8c_ad146c4ac4a6eaeb2c956f6e7693f4230}} 
+\index{mavnative.c@{mavnative.c}!MAVLINK\_MESSAGE\_LENGTH@{MAVLINK\_MESSAGE\_LENGTH}}
+\index{MAVLINK\_MESSAGE\_LENGTH@{MAVLINK\_MESSAGE\_LENGTH}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{MAVLINK\_MESSAGE\_LENGTH}{MAVLINK\_MESSAGE\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH(\begin{DoxyParamCaption}\item[{}]{msgid }\end{DoxyParamCaption})~py\+\_\+message\+\_\+info\mbox{[}msgid\mbox{]}.len}
+
+
+
+Definition at line 64 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_a36dd739ad299e3b8d9ce634693155028}\label{mavnative_8c_a36dd739ad299e3b8d9ce634693155028}} 
+\index{mavnative.c@{mavnative.c}!MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS@{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}}
+\index{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS@{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}{MAVLINK\_USE\_CONVENIENCE\_FUNCTIONS}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+U\+S\+E\+\_\+\+C\+O\+N\+V\+E\+N\+I\+E\+N\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}
+
+
+
+Definition at line 35 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_afe670951b07f21fb591a61c88dd99243}\label{mavnative_8c_afe670951b07f21fb591a61c88dd99243}} 
+\index{mavnative.c@{mavnative.c}!MOD\_RETURN@{MOD\_RETURN}}
+\index{MOD\_RETURN@{MOD\_RETURN}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{MOD\_RETURN}{MOD\_RETURN}}
+{\footnotesize\ttfamily \#define M\+O\+D\+\_\+\+R\+E\+T\+U\+RN(\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})~return}
+
+
+
+Definition at line 940 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_a00e16645a20206b5797122b586765f7e}\label{mavnative_8c_a00e16645a20206b5797122b586765f7e}} 
+\index{mavnative.c@{mavnative.c}!PyByteString\_ConcatAndDel@{PyByteString\_ConcatAndDel}}
+\index{PyByteString\_ConcatAndDel@{PyByteString\_ConcatAndDel}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{PyByteString\_ConcatAndDel}{PyByteString\_ConcatAndDel}}
+{\footnotesize\ttfamily \#define Py\+Byte\+String\+\_\+\+Concat\+And\+Del~Py\+String\+\_\+\+Concat\+And\+Del}
+
+
+
+Definition at line 30 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_a7f0176318fbc1e50ebc081b3bb30facd}\label{mavnative_8c_a7f0176318fbc1e50ebc081b3bb30facd}} 
+\index{mavnative.c@{mavnative.c}!PyByteString\_FromString@{PyByteString\_FromString}}
+\index{PyByteString\_FromString@{PyByteString\_FromString}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{PyByteString\_FromString}{PyByteString\_FromString}}
+{\footnotesize\ttfamily \#define Py\+Byte\+String\+\_\+\+From\+String~Py\+String\+\_\+\+From\+String}
+
+
+
+Definition at line 28 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_abe5dbdc3e5998ed6c20b61303338d146}\label{mavnative_8c_abe5dbdc3e5998ed6c20b61303338d146}} 
+\index{mavnative.c@{mavnative.c}!PyByteString\_FromStringAndSize@{PyByteString\_FromStringAndSize}}
+\index{PyByteString\_FromStringAndSize@{PyByteString\_FromStringAndSize}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{PyByteString\_FromStringAndSize}{PyByteString\_FromStringAndSize}}
+{\footnotesize\ttfamily \#define Py\+Byte\+String\+\_\+\+From\+String\+And\+Size~Py\+String\+\_\+\+From\+String\+And\+Size}
+
+
+
+Definition at line 29 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_ad143c0e5c99a1609d4fcbf48a3c48e74}\label{mavnative_8c_ad143c0e5c99a1609d4fcbf48a3c48e74}} 
+\index{mavnative.c@{mavnative.c}!PYTHON\_ENTRY@{PYTHON\_ENTRY}}
+\index{PYTHON\_ENTRY@{PYTHON\_ENTRY}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{PYTHON\_ENTRY}{PYTHON\_ENTRY}}
+{\footnotesize\ttfamily \#define P\+Y\+T\+H\+O\+N\+\_\+\+E\+N\+T\+RY~if(!setjmp(python\+\_\+entry)) \{}
+
+
+
+Definition at line 125 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_a3eb8af7e541ff191b2430a79d96ad657}\label{mavnative_8c_a3eb8af7e541ff191b2430a79d96ad657}} 
+\index{mavnative.c@{mavnative.c}!PYTHON\_EXIT@{PYTHON\_EXIT}}
+\index{PYTHON\_EXIT@{PYTHON\_EXIT}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{PYTHON\_EXIT}{PYTHON\_EXIT}}
+{\footnotesize\ttfamily \#define P\+Y\+T\+H\+O\+N\+\_\+\+E\+X\+IT~\} \mbox{\hyperlink{mavlink_8php_a33f222928d1e5db001c1bb5b39a2ed2f}{else}} \{ return N\+U\+LL; \}}
+
+
+
+Definition at line 126 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_af9d2b22fc2df2c479bfd4228144790fb}\label{mavnative_8c_af9d2b22fc2df2c479bfd4228144790fb}} 
+\index{mavnative.c@{mavnative.c}!PYTHON\_EXIT\_INT@{PYTHON\_EXIT\_INT}}
+\index{PYTHON\_EXIT\_INT@{PYTHON\_EXIT\_INT}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{PYTHON\_EXIT\_INT}{PYTHON\_EXIT\_INT}}
+{\footnotesize\ttfamily \#define P\+Y\+T\+H\+O\+N\+\_\+\+E\+X\+I\+T\+\_\+\+I\+NT~\} \mbox{\hyperlink{mavlink_8php_a33f222928d1e5db001c1bb5b39a2ed2f}{else}} \{ return -\/1; \}}
+
+
+
+Definition at line 127 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_aa8cecfc5c5c054d2875c03e77b7be15d}\label{mavnative_8c_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\index{mavnative.c@{mavnative.c}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{TRUE}{TRUE}}
+{\footnotesize\ttfamily \#define T\+R\+UE~1}
+
+
+
+Definition at line 68 of file mavnative.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mavnative_8c_a57b8df4484e05cf13f92e11ab8f88e23}\label{mavnative_8c_a57b8df4484e05cf13f92e11ab8f88e23}} 
+\index{mavnative.c@{mavnative.c}!\_\_assert\_fail@{\_\_assert\_fail}}
+\index{\_\_assert\_fail@{\_\_assert\_fail}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{\_\_assert\_fail()}{\_\_assert\_fail()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+assert\+\_\+fail (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+\+\_\+assertion,  }\item[{const char $\ast$}]{\+\_\+\+\_\+file,  }\item[{unsigned int}]{\+\_\+\+\_\+line,  }\item[{const char $\ast$}]{\+\_\+\+\_\+function }\end{DoxyParamCaption})}
+
+
+
+Definition at line 325 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_ab8d2bace4db4a8f20b28780be3679d18}\label{mavnative_8c_ab8d2bace4db4a8f20b28780be3679d18}} 
+\index{mavnative.c@{mavnative.c}!initmavnative@{initmavnative}}
+\index{initmavnative@{initmavnative}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{initmavnative()}{initmavnative()}}
+{\footnotesize\ttfamily Py\+M\+O\+D\+I\+N\+I\+T\+\_\+\+F\+U\+NC initmavnative (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 947 of file mavnative.\+c.
+
+\mbox{\Hypertarget{mavnative_8c_a340be07d82374a1eee01d1d368886640}\label{mavnative_8c_a340be07d82374a1eee01d1d368886640}} 
+\index{mavnative.c@{mavnative.c}!py\_mavlink\_parse\_char@{py\_mavlink\_parse\_char}}
+\index{py\_mavlink\_parse\_char@{py\_mavlink\_parse\_char}!mavnative.c@{mavnative.c}}
+\subsubsection{\texorpdfstring{py\_mavlink\_parse\_char()}{py\_mavlink\_parse\_char()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} uint8\+\_\+t py\+\_\+mavlink\+\_\+parse\+\_\+char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{c,  }\item[{\mbox{\hyperlink{structpy__message__t}{py\+\_\+message\+\_\+t}} $\ast$}]{pymsg,  }\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} $\ast$}]{status }\end{DoxyParamCaption})}
+
+(originally from mavlink\+\_\+helpers.\+h -\/ but now customized to not be channel based) This is a convenience function which handles the complete M\+A\+V\+Link parsing. the function will parse one byte at a time and return the complete packet once it could be successfully decoded. Checksum and other failures will be silently ignored.
+
+Messages are parsed into an internal buffer (one for each channel). When a complete message is received it is copies into $\ast$return\+Msg and the channel\textquotesingle{}s status is copied into $\ast$return\+Stats.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The char to parse\\
+\hline
+{\em return\+Msg} & N\+U\+LL if no message could be decoded, the message data else \\
+\hline
+{\em return\+Stats} & if a message was decoded, this is filled with the channel\textquotesingle{}s stats \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no message could be decoded, 1 else 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file mavnative.\+c.
+

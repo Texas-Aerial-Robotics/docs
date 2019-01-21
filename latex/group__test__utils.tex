@@ -1,0 +1,109 @@
+\hypertarget{group__test__utils}{}\section{Test\+\_\+utils}
+\label{group__test__utils}\index{Test\_utils@{Test\_utils}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepidcontroller}{pidcontroller}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpidcontroller_1_1PIDController}{pidcontroller\+::\+P\+I\+D\+Controller}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__test__utils_ga67cc314aa5b3b4e9c47ac414b3a4c008}{pidcontroller\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}} ()
+\item 
+\mbox{\hyperlink{group__test__utils_ga4ae30cc03173417fa6edb5c055966a3f}{pidcontroller\+::\+P\+I\+D\+Controller\+::$\sim$\+P\+I\+D\+Controller}} ()
+\item 
+void \mbox{\hyperlink{group__test__utils_ga845b866b1ae4b73e39e4ca42395750b3}{pidcontroller\+::\+P\+I\+D\+Controller\+::setup\+\_\+linvel\+\_\+pid}} (double p\+\_\+gain, double i\+\_\+gain, double d\+\_\+gain, double i\+\_\+max, double i\+\_\+min, const ros\+::\+Node\+Handle \&\mbox{\hyperlink{structnode}{node}})
+\begin{DoxyCompactList}\small\item\em Sets up the P\+ID values for computation of the linear velocities effort. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__test__utils_ga5d8a387440921ea68907364c0e1d7b5b}{pidcontroller\+::\+P\+I\+D\+Controller\+::setup\+\_\+yawrate\+\_\+pid}} (double p\+\_\+gain, double i\+\_\+gain, double d\+\_\+gain, double i\+\_\+max, double i\+\_\+min, const ros\+::\+Node\+Handle \&\mbox{\hyperlink{structnode}{node}})
+\begin{DoxyCompactList}\small\item\em Sets up the P\+ID values for computation of the yaw rate effort. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__test__utils_gac62955a265057681e6399488ced3471a}{pidcontroller\+::\+P\+I\+D\+Controller\+::compute\+\_\+linvel\+\_\+effort}} (Eigen\+::\+Vector3d goal, Eigen\+::\+Vector3d current, ros\+::\+Time last\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Computes the linear velocity effort to apply to each axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group__test__utils_gaee16eb0d9a067ac80a1d92e50991b60b}{pidcontroller\+::\+P\+I\+D\+Controller\+::compute\+\_\+yawrate\+\_\+effort}} (double goal, double current, ros\+::\+Time last\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Computes the yaw rate effort to apply. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__test__utils_gac62955a265057681e6399488ced3471a}\label{group__test__utils_gac62955a265057681e6399488ced3471a}} 
+\index{Test\_utils@{Test\_utils}!compute\_linvel\_effort@{compute\_linvel\_effort}}
+\index{compute\_linvel\_effort@{compute\_linvel\_effort}!Test\_utils@{Test\_utils}}
+\subsubsection{\texorpdfstring{compute\_linvel\_effort()}{compute\_linvel\_effort()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d P\+I\+D\+Controller\+::compute\+\_\+linvel\+\_\+effort (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{goal,  }\item[{Eigen\+::\+Vector3d}]{current,  }\item[{ros\+::\+Time}]{last\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Computes the linear velocity effort to apply to each axis. 
+
+
+
+Definition at line 55 of file pid\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{group__test__utils_gaee16eb0d9a067ac80a1d92e50991b60b}\label{group__test__utils_gaee16eb0d9a067ac80a1d92e50991b60b}} 
+\index{Test\_utils@{Test\_utils}!compute\_yawrate\_effort@{compute\_yawrate\_effort}}
+\index{compute\_yawrate\_effort@{compute\_yawrate\_effort}!Test\_utils@{Test\_utils}}
+\subsubsection{\texorpdfstring{compute\_yawrate\_effort()}{compute\_yawrate\_effort()}}
+{\footnotesize\ttfamily double P\+I\+D\+Controller\+::compute\+\_\+yawrate\+\_\+effort (\begin{DoxyParamCaption}\item[{double}]{goal,  }\item[{double}]{current,  }\item[{ros\+::\+Time}]{last\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Computes the yaw rate effort to apply. 
+
+
+
+Definition at line 63 of file pid\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{group__test__utils_ga67cc314aa5b3b4e9c47ac414b3a4c008}\label{group__test__utils_ga67cc314aa5b3b4e9c47ac414b3a4c008}} 
+\index{Test\_utils@{Test\_utils}!PIDController@{PIDController}}
+\index{PIDController@{PIDController}!Test\_utils@{Test\_utils}}
+\subsubsection{\texorpdfstring{PIDController()}{PIDController()}}
+{\footnotesize\ttfamily P\+I\+D\+Controller\+::\+P\+I\+D\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file pid\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{group__test__utils_ga845b866b1ae4b73e39e4ca42395750b3}\label{group__test__utils_ga845b866b1ae4b73e39e4ca42395750b3}} 
+\index{Test\_utils@{Test\_utils}!setup\_linvel\_pid@{setup\_linvel\_pid}}
+\index{setup\_linvel\_pid@{setup\_linvel\_pid}!Test\_utils@{Test\_utils}}
+\subsubsection{\texorpdfstring{setup\_linvel\_pid()}{setup\_linvel\_pid()}}
+{\footnotesize\ttfamily void P\+I\+D\+Controller\+::setup\+\_\+linvel\+\_\+pid (\begin{DoxyParamCaption}\item[{double}]{p\+\_\+gain,  }\item[{double}]{i\+\_\+gain,  }\item[{double}]{d\+\_\+gain,  }\item[{double}]{i\+\_\+max,  }\item[{double}]{i\+\_\+min,  }\item[{const ros\+::\+Node\+Handle \&}]{node }\end{DoxyParamCaption})}
+
+
+
+Sets up the P\+ID values for computation of the linear velocities effort. 
+
+
+
+Definition at line 21 of file pid\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{group__test__utils_ga5d8a387440921ea68907364c0e1d7b5b}\label{group__test__utils_ga5d8a387440921ea68907364c0e1d7b5b}} 
+\index{Test\_utils@{Test\_utils}!setup\_yawrate\_pid@{setup\_yawrate\_pid}}
+\index{setup\_yawrate\_pid@{setup\_yawrate\_pid}!Test\_utils@{Test\_utils}}
+\subsubsection{\texorpdfstring{setup\_yawrate\_pid()}{setup\_yawrate\_pid()}}
+{\footnotesize\ttfamily void P\+I\+D\+Controller\+::setup\+\_\+yawrate\+\_\+pid (\begin{DoxyParamCaption}\item[{double}]{p\+\_\+gain,  }\item[{double}]{i\+\_\+gain,  }\item[{double}]{d\+\_\+gain,  }\item[{double}]{i\+\_\+max,  }\item[{double}]{i\+\_\+min,  }\item[{const ros\+::\+Node\+Handle \&}]{node }\end{DoxyParamCaption})}
+
+
+
+Sets up the P\+ID values for computation of the yaw rate effort. 
+
+
+
+Definition at line 40 of file pid\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{group__test__utils_ga4ae30cc03173417fa6edb5c055966a3f}\label{group__test__utils_ga4ae30cc03173417fa6edb5c055966a3f}} 
+\index{Test\_utils@{Test\_utils}!````~PIDController@{$\sim$PIDController}}
+\index{````~PIDController@{$\sim$PIDController}!Test\_utils@{Test\_utils}}
+\subsubsection{\texorpdfstring{$\sim$PIDController()}{~PIDController()}}
+{\footnotesize\ttfamily pidcontroller\+::\+P\+I\+D\+Controller\+::$\sim$\+P\+I\+D\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 28 of file pid\+\_\+controller.\+h.
+

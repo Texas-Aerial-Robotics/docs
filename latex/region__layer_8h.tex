@@ -1,0 +1,59 @@
+\hypertarget{region__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/region\+\_\+layer.h File Reference}
+\label{region__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/region\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/region\_layer.h}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{region__layer_8h_adf8270bd92c2f250a4ceab2b98e37d37}{make\+\_\+region\+\_\+layer}} (int batch, int w, int h, int n, int classes, int coords)
+\item 
+void \mbox{\hyperlink{region__layer_8h_a7df2017786a6b8cc6dc6a15d5024d6b1}{forward\+\_\+region\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{region__layer_8h_a1823033f070004078252d6c00eb27039}{backward\+\_\+region\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{region__layer_8h_a882147a796b341f5ec5989f0e71b7797}{resize\+\_\+region\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} $\ast$l, int w, int h)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{region__layer_8h_a1823033f070004078252d6c00eb27039}\label{region__layer_8h_a1823033f070004078252d6c00eb27039}} 
+\index{region\_layer.h@{region\_layer.h}!backward\_region\_layer@{backward\_region\_layer}}
+\index{backward\_region\_layer@{backward\_region\_layer}!region\_layer.h@{region\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_region\_layer()}{backward\_region\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+region\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 323 of file region\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{region__layer_8h_a7df2017786a6b8cc6dc6a15d5024d6b1}\label{region__layer_8h_a7df2017786a6b8cc6dc6a15d5024d6b1}} 
+\index{region\_layer.h@{region\_layer.h}!forward\_region\_layer@{forward\_region\_layer}}
+\index{forward\_region\_layer@{forward\_region\_layer}!region\_layer.h@{region\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_region\_layer()}{forward\_region\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+region\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file region\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{region__layer_8h_adf8270bd92c2f250a4ceab2b98e37d37}\label{region__layer_8h_adf8270bd92c2f250a4ceab2b98e37d37}} 
+\index{region\_layer.h@{region\_layer.h}!make\_region\_layer@{make\_region\_layer}}
+\index{make\_region\_layer@{make\_region\_layer}!region\_layer.h@{region\_layer.h}}
+\subsubsection{\texorpdfstring{make\_region\_layer()}{make\_region\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+region\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{n,  }\item[{int}]{classes,  }\item[{int}]{coords }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file region\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{region__layer_8h_a882147a796b341f5ec5989f0e71b7797}\label{region__layer_8h_a882147a796b341f5ec5989f0e71b7797}} 
+\index{region\_layer.h@{region\_layer.h}!resize\_region\_layer@{resize\_region\_layer}}
+\index{resize\_region\_layer@{resize\_region\_layer}!region\_layer.h@{region\_layer.h}}
+\subsubsection{\texorpdfstring{resize\_region\_layer()}{resize\_region\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+region\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}} $\ast$}]{l,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file region\+\_\+layer.\+c.
+

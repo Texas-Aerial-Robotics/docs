@@ -1,0 +1,42 @@
+\hypertarget{classmavros_1_1plugin_1_1TF2ListenerMixin}{}\section{mavros\+::plugin\+::T\+F2\+Listener\+Mixin$<$ D $>$ Class Template Reference}
+\label{classmavros_1_1plugin_1_1TF2ListenerMixin}\index{mavros::plugin::TF2ListenerMixin$<$ D $>$@{mavros::plugin::TF2ListenerMixin$<$ D $>$}}
+
+
+This mixin adds T\+F2 listener thread to plugin.  
+
+
+
+
+{\ttfamily \#include $<$setpoint\+\_\+mixin.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__plugin_ga900fbf118417e6308394b803276bd257}{tf2\+\_\+start}} (const char $\ast$\+\_\+thd\+\_\+name, void(D\+::$\ast$cbp)(const geometry\+\_\+msgs\+::\+Transform\+Stamped \&))
+\begin{DoxyCompactList}\small\item\em start tf listener \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{group__plugin_gab0cf1ee9c93e92fdcabb98e9eba093c5}{tf2\+\_\+start}} (const char $\ast$\+\_\+thd\+\_\+name, message\+\_\+filters\+::\+Subscriber$<$ T $>$ \&topic\+\_\+sub, void(D\+::$\ast$cbp)(const geometry\+\_\+msgs\+::\+Transform\+Stamped \&, const typename T\+::\+Const\+Ptr \&))
+\begin{DoxyCompactList}\small\item\em start tf listener syncronized with another topic \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::thread \mbox{\hyperlink{group__plugin_ga5ac5c640e09c36aefab3741e96bcd3ab}{tf\+\_\+thread}}
+\item 
+std\+::string \mbox{\hyperlink{group__plugin_gaff209548a5d3a38bdbf724ba30f9bcbb}{tf\+\_\+thd\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class D$>$\newline
+class mavros\+::plugin\+::\+T\+F2\+Listener\+Mixin$<$ D $>$}
+
+This mixin adds T\+F2 listener thread to plugin. 
+
+It requires tf\+\_\+frame\+\_\+id, tf\+\_\+child\+\_\+frame\+\_\+id strings tf\+\_\+rate double and uas object pointer 
+
+Definition at line 167 of file setpoint\+\_\+mixin.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros/include/mavros/\mbox{\hyperlink{setpoint__mixin_8h}{setpoint\+\_\+mixin.\+h}}\end{DoxyCompactItemize}

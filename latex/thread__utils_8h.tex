@@ -1,0 +1,38 @@
+\hypertarget{thread__utils_8h}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/include/mavconn/thread\+\_\+utils.h File Reference}
+\label{thread__utils_8h}\index{/home/eric/catkin\_ws/src/mavros/libmavconn/include/mavconn/thread\_utils.h@{/home/eric/catkin\_ws/src/mavros/libmavconn/include/mavconn/thread\_utils.h}}
+
+
+some useful utils  
+
+
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavconn}{mavconn}}
+\item 
+ \mbox{\hyperlink{namespacemavconn_1_1utils}{mavconn\+::utils}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{group__mavutils_ga0d03da68919138512c198995276dd9ea}{mavconn\+::utils\+::format}} (const std\+::string \&fmt, Args ... args)
+\begin{DoxyCompactList}\small\item\em Make printf-\/formatted std\+::string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\bool \mbox{\hyperlink{group__mavutils_gac5ea11f12ae2183df1dc4a810ff0a87b}{mavconn\+::utils\+::set\+\_\+this\+\_\+thread\+\_\+name}} (const std\+::string \&name, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Set name to current thread, printf-\/like. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const std\+::string \mbox{\hyperlink{group__mavutils_ga6c132876dd85249684a7935fe0bc8f51}{mavconn\+::utils\+::to\+\_\+string\+\_\+ss}} (T \&obj)
+\begin{DoxyCompactList}\small\item\em Convert to string objects with operator $<$$<$. \end{DoxyCompactList}\item 
+constexpr size\+\_\+t \mbox{\hyperlink{group__mavutils_ga301ff0ee568776aa543ccaff3c1c039c}{mavconn\+::utils\+::operator\char`\"{}\char`\"{}\+\_\+\+KiB}} (unsigned long long sz)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+some useful utils 
+
+\begin{DoxyAuthor}{Author}
+Vladimir Ermakov \href{mailto:vooon341@gmail.com}{\texttt{ vooon341@gmail.\+com}} 
+\end{DoxyAuthor}

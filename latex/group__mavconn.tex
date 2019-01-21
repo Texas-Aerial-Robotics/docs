@@ -1,0 +1,2052 @@
+\hypertarget{group__mavconn}{}\section{Mavconn}
+\label{group__mavconn}\index{Mavconn@{Mavconn}}
+
+
+M\+A\+V\+Conn connection handling library.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavconn}{mavconn}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavconn_1_1DeviceError}{mavconn\+::\+Device\+Error}}
+\begin{DoxyCompactList}\small\item\em Common exception for communication error. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmavconn_1_1MAVConnInterface_1_1IOStat}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat}}
+\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}
+\begin{DoxyCompactList}\small\item\em Generic mavlink interface. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmavconn_1_1MsgBuffer}{mavconn\+::\+Msg\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Message buffer for internal use in libmavconn. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnSerial}{mavconn\+::\+M\+A\+V\+Conn\+Serial}}
+\begin{DoxyCompactList}\small\item\em Serial interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnTCPClient}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTCP}{T\+CP}} client interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnTCPServer}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTCP}{T\+CP}} server interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavconn_1_1MAVConnUDP}{mavconn\+::\+M\+A\+V\+Conn\+U\+DP}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUDP}{U\+DP}} interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mavconn_gaaf4116dec671bee3f8f1445f6c6a3ebe}{C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Debug}}(fmt, ...)~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+UG, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__mavconn_gaa587fd17781bdf24e813cb3c43eb8ff2}{C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Inform}}(fmt, ...)~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga57a50f2283a7b43395b93a31ac90461c}{C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Warn}}(fmt, ...)~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga78bfb8423a8c11242fba38b8b3952aa7}{C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Error}}(fmt, ...)~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga1f3837374fc2bc427cb2e9a574ed3c97}{M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+R\+E\+AM}}(link\+\_\+id)
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga72178fe89f317958886bb3233c6a9e42}{M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+N\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+R\+E\+AM}}(link\+\_\+id)
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}}~\char`\"{}mavconn\+: \char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}}~\char`\"{}mavconn\+: serial\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}{P\+F\+Xd}}~\mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}} \char`\"{}\%zu\+: \char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}}~\char`\"{}mavconn\+: tcp\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}{P\+F\+Xd}}~\mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}} \char`\"{}\%zu\+: \char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}}~\char`\"{}mavconn\+: udp\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}{P\+F\+Xd}}~\mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}} \char`\"{}\%zu\+: \char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__mavconn_gab7fe4e29d643505aafb15c532a9338d3}{mavconn\+::steady\+\_\+clock}} = std\+::chrono\+::steady\+\_\+clock
+\item 
+using \mbox{\hyperlink{group__mavconn_ga46feb20496b24d733abd4e68ef29bc90}{mavconn\+::lock\+\_\+guard}} = std\+::lock\+\_\+guard$<$ std\+::recursive\+\_\+mutex $>$
+\item 
+using \mbox{\hyperlink{group__mavconn_ga1d04ead963f1685f3aaf4b18ffb49ff7}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Received\+Cb}} = std\+::function$<$ void(const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message, const \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{Framing}} framing)$>$
+\item 
+using \mbox{\hyperlink{group__mavconn_ga6eef19e745c84f9b0b85d704b2e3e430}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Closed\+Cb}} = std\+::function$<$ void(void)$>$
+\item 
+using \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{M\+A\+V\+Conn\+Interface}} $>$
+\item 
+using \mbox{\hyperlink{group__mavconn_ga47036145ce30f67fcd830e28712216eb}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{M\+A\+V\+Conn\+Interface}} const  $>$
+\item 
+using \mbox{\hyperlink{group__mavconn_ga010ca3b237199e0ebb7b850b1f3ea0ba}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Weak\+Ptr}} = std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{M\+A\+V\+Conn\+Interface}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{mavconn\+::\+Framing}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a5ed4e9858ad8d239145ef285b6210a00}{mavconn\+::\+Framing\+::incomplete}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE, 
+\mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a444bcb3a3fcf8389296c49467f27e1d6}{mavconn\+::\+Framing\+::ok}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+OK, 
+\mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494abaf1c3d199daf5f5b444664b81a08749}{mavconn\+::\+Framing\+::bad\+\_\+crc}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+C\+RC, 
+\mbox{\hyperlink{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494adbfa03ea5df0b8979551ed84f97018e9}{mavconn\+::\+Framing\+::bad\+\_\+signature}} = mavlink\+::M\+A\+V\+L\+I\+N\+K\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE
+ \}
+\begin{DoxyCompactList}\small\item\em Rx packer framing status. (same as {\ttfamily mavlink\+::mavlink\+\_\+framing\+\_\+t}) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}{mavconn\+::\+Protocol}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3a3ffc64fa10df9a884ba82f3e49e8282e}{mavconn\+::\+Protocol\+::\+V10}} = 1, 
+\mbox{\hyperlink{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3aba9161e2ae9f747e361fa824ca0d0337}{mavconn\+::\+Protocol\+::\+V20}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em M\+A\+V\+Link protocol version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{group__mavconn_ga686d0d40b10a4d013dc09de32a43efaa}{mavconn\+::\+Device\+Error\+::\+Device\+Error}} (const char $\ast$module, T \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::string \mbox{\hyperlink{group__mavconn_ga76a9378a9bfc4f2b6f1b9c3ecb00ec9a}{mavconn\+::\+Device\+Error\+::make\+\_\+message}} (const char $\ast$module, T \mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+static std\+::string \mbox{\hyperlink{group__mavconn_gae998ec92e731b23abc43286b88fa84ca}{mavconn\+::\+Device\+Error\+::msg\+\_\+to\+\_\+string}} (const char $\ast$description)
+\item 
+static std\+::string \mbox{\hyperlink{group__mavconn_ga0422d27d75fd22d67cc678d9b92f9d95}{mavconn\+::\+Device\+Error\+::msg\+\_\+to\+\_\+string}} (int errnum)
+\item 
+static std\+::string \mbox{\hyperlink{group__mavconn_ga1a6103f0af6a0a451ae5af0ba190a50d}{mavconn\+::\+Device\+Error\+::msg\+\_\+to\+\_\+string}} (boost\+::system\+::system\+\_\+error \&err)
+\item 
+\mbox{\hyperlink{group__mavconn_ga9b64f95099f1be0b41ae1dd459db63bc}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+M\+A\+V\+Conn\+Interface}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE)
+\item 
+virtual void \mbox{\hyperlink{group__mavconn_ga7c1a5a89489e345a6621c327107293d8}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::close}} ()=0
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{group__mavconn_gad807cf7e1935548e0c7ba94943cbb7aa}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message)=0
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{group__mavconn_ga204ee5ba0dc31519b0ea7a9ac50d486c}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message)=0
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{group__mavconn_ga7d00279e176e9a6890ed47ab1ceeb597}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length)=0
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gabf049aebc9a9a9abfd36a1fb0034a433}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message\+\_\+ignore\+\_\+drop}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message)
+\begin{DoxyCompactList}\small\item\em Send message and ignore possible drop due to Tx queue limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gaafdea305c3cd449ac629f84598febbe0}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message\+\_\+ignore\+\_\+drop}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Send message and ignore possible drop due to Tx queue limit. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+::mavlink\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__mavconn_gaa3c7017b05ca60187122edf2ec196918}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+status}} ()
+\item 
+virtual \mbox{\hyperlink{structmavconn_1_1MAVConnInterface_1_1IOStat}{I\+O\+Stat}} \mbox{\hyperlink{group__mavconn_gab330e130b5cff0e1d6aa67742ffc79f4}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+iostat}} ()
+\item 
+virtual bool \mbox{\hyperlink{group__mavconn_ga135638c7c953c50bee3143a9e2b35416}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::is\+\_\+open}} ()=0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__mavconn_gac09eda5df4b4b82823429d9af6dddd44}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+system\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_gaf2828d99a65c8e631566e7fd564abac3}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::set\+\_\+system\+\_\+id}} (uint8\+\_\+t sysid)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__mavconn_gada7ecc7f6cffa0ecfc17f88327953223}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+component\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_gac3e7c34cdb6e8104959654ff49bd2497}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::set\+\_\+component\+\_\+id}} (uint8\+\_\+t compid)
+\item 
+void \mbox{\hyperlink{group__mavconn_gae78b30f23f5f1a94684761f7ddc0d2e2}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::set\+\_\+protocol\+\_\+version}} (\mbox{\hyperlink{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}{Protocol}} pver)
+\item 
+\mbox{\hyperlink{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}{Protocol}} \mbox{\hyperlink{group__mavconn_gaae320aaf19ca5b0c03b6febba5efdf1b}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+protocol\+\_\+version}} ()
+\item 
+static \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{Ptr}} \mbox{\hyperlink{group__mavconn_gad7b5a25103f1421a63839a1aa0f080dc}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::open\+\_\+url}} (std\+::string url, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE)
+\begin{DoxyCompactList}\small\item\em Construct connection from U\+RL. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{group__mavconn_ga443165dafa8e6827e340e92768a07a12}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+known\+\_\+dialects}} ()
+\item 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+::mavlink\+\_\+status\+\_\+t}} $\ast$ \mbox{\hyperlink{group__mavconn_ga2bb422475644d340b8116f7d67253dde}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+status\+\_\+p}} ()
+\item 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$ \mbox{\hyperlink{group__mavconn_gae9521a7ebe812821fcd15a63f1c12b10}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+buffer\+\_\+p}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_ga5086c8460510e92da4e86fb266cb5a8b}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::parse\+\_\+buffer}} (const char $\ast$pfx, uint8\+\_\+t $\ast$buf, const size\+\_\+t bufsize, size\+\_\+t bytes\+\_\+received)
+\item 
+void \mbox{\hyperlink{group__mavconn_gaabfc001375565bdafd47172374fcda0f}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::iostat\+\_\+tx\+\_\+add}} (size\+\_\+t bytes)
+\item 
+void \mbox{\hyperlink{group__mavconn_gab045ff5b6e55b96630f00e131e4d2c16}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::iostat\+\_\+rx\+\_\+add}} (size\+\_\+t bytes)
+\item 
+void \mbox{\hyperlink{group__mavconn_ga6edf345e262423905ecd6da2966d7b4f}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::log\+\_\+recv}} (const char $\ast$pfx, \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}, \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{Framing}} framing)
+\item 
+void \mbox{\hyperlink{group__mavconn_ga7a6bcc0b1c21c9016422e2c20b4b04d0}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::log\+\_\+send}} (const char $\ast$pfx, const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+void \mbox{\hyperlink{group__mavconn_ga52bf39da3102cf3376a801f5b0f647a5}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::log\+\_\+send\+\_\+obj}} (const char $\ast$pfx, const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+\mbox{\hyperlink{group__mavconn_ga64da82fdf707ca5304fda5e686fe4f11}{mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer}} ()
+\item 
+\mbox{\hyperlink{group__mavconn_ga202de878cea6b3fff8f8ef8c7f001cd5}{mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\begin{DoxyCompactList}\small\item\em Buffer constructor from mavlink\+\_\+message\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mavconn_ga8bcb63913aa131f1c054dc1e18a4d945}{mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&obj, \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+::mavlink\+\_\+status\+\_\+t}} $\ast$\mbox{\hyperlink{keyTalker_8cpp_a6e27f49150e9a14580fb313cc2777e00}{status}}, uint8\+\_\+t sysid, uint8\+\_\+t compid)
+\begin{DoxyCompactList}\small\item\em Buffer constructor for \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} derived object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mavconn_ga4555922debc003d9ba989aded6714fb5}{mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer}} (const uint8\+\_\+t $\ast$bytes, ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga564c27473f42c6cea687c8b5bbbb1621}{nbytes}})
+\begin{DoxyCompactList}\small\item\em Buffer constructor for send\+\_\+bytes() \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__mavconn_gac56cac6705c915b3c74c3d0b12c45939}{mavconn\+::\+Msg\+Buffer\+::$\sim$\+Msg\+Buffer}} ()
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__mavconn_ga0c971b3c0d8d540ccaf7e1929a5ecf07}{mavconn\+::\+Msg\+Buffer\+::dpos}} ()
+\item 
+ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga564c27473f42c6cea687c8b5bbbb1621}{mavconn\+::\+Msg\+Buffer\+::nbytes}} ()
+\item 
+\mbox{\hyperlink{group__mavconn_ga53b8b8d9fceab4d4a2767b3aa0a25462}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::\+M\+A\+V\+Conn\+Serial}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE, std\+::string device=\mbox{\hyperlink{group__mavconn_ga3b2c35e0bfa1020060b2fde345d66f0e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+V\+I\+CE}}, unsigned baudrate=\mbox{\hyperlink{group__mavconn_gaf0dd28c4a6b236f2ec3092a1b35ff5df}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}, bool hwflow=false)
+\item 
+\mbox{\hyperlink{group__mavconn_ga63860bdb6f3eb8a5ef266fc99edd715d}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::$\sim$\+M\+A\+V\+Conn\+Serial}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_gabacc69adc5d2d2f9cb3aa27907d83d5c}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::close}} () override
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga452a97c9cd256b591eee063a1927a93a}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message) override
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga7e251c28c05beb0becbe571f5f39c3bb}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga6073d6f88157f3b29ee519eafe16f8fd}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length) override
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mavconn_ga7b2ae62cddd41671b3312050f64b3036}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::is\+\_\+open}} () override
+\item 
+\mbox{\hyperlink{group__mavconn_ga930d7bcb750e00606a1ba406135f0020}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE, std\+::string server\+\_\+host=\mbox{\hyperlink{group__mavconn_ga25f08b85aaeacae255d37a898f978c42}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+H\+O\+ST}}, unsigned short server\+\_\+port=\mbox{\hyperlink{group__mavconn_ga3d9c438ece25a8aa6ae7af15341e7706}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}})
+\item 
+\mbox{\hyperlink{group__mavconn_ga93a7b76eccf987b4321f7bcc502001b8}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}, boost\+::asio\+::io\+\_\+service \&server\+\_\+io)
+\item 
+\mbox{\hyperlink{group__mavconn_gaa9e9ea305aaaa39aeb4bcb91328d47c5}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::$\sim$\+M\+A\+V\+Conn\+T\+C\+P\+Client}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_ga3128ab3303f5a303be12c2c9df1ee321}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::close}} () override
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga6f835299707df78f3694cef5853139d4}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message) override
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga1194ffc5b74604c5c432591751803f33}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gac327ab4a27b6de2da3c594d93c599312}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length) override
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mavconn_gadcabe763ecf8fc00e123fcf78af9eaf4}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::is\+\_\+open}} () override
+\item 
+\mbox{\hyperlink{group__mavconn_gad395465c3a85e4441cbccc84615cacb5}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE, std\+::string bind\+\_\+host=\mbox{\hyperlink{group__mavconn_gae043843ee4b947094ca58342c442c3b6}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}}, unsigned short bind\+\_\+port=\mbox{\hyperlink{group__mavconn_gacf9d47d0f198105f4a27c9668ba793b1}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}})
+\item 
+\mbox{\hyperlink{group__mavconn_gaee25f07913d08d976e205be3136d813c}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::$\sim$\+M\+A\+V\+Conn\+T\+C\+P\+Server}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_ga11e23cc16d8a8637583fbecc7bbe915b}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::close}} () override
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gacbae4efba2ed887e4a731ca60dceb0a6}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message) override
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga8e3d7a81031fe54f3326f2ea4ccfa2ef}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga4eedf8da39d9dee8cf84074d010ddf0d}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length) override
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+::mavlink\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__mavconn_gab139fa8d7e65c0de256f7d9dee0d0f30}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::get\+\_\+status}} () override
+\item 
+\mbox{\hyperlink{structmavconn_1_1MAVConnInterface_1_1IOStat}{I\+O\+Stat}} \mbox{\hyperlink{group__mavconn_ga7fd83c9a2233baa30aff24b6f3c8dd25}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::get\+\_\+iostat}} () override
+\item 
+bool \mbox{\hyperlink{group__mavconn_ga7bcb8a571a040f61ad2b61f002edc381}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::is\+\_\+open}} () override
+\item 
+\mbox{\hyperlink{group__mavconn_ga22deee111faac2fde80a0affc6c29245}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+M\+A\+V\+Conn\+U\+DP}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE, std\+::string bind\+\_\+host=\mbox{\hyperlink{group__mavconn_ga62467db7651e86bb5428c4288356f813}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}}, unsigned short bind\+\_\+port=\mbox{\hyperlink{group__mavconn_ga330f03ed06a3e027ec7be74426dc646b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}}, std\+::string remote\+\_\+host=\mbox{\hyperlink{group__mavconn_ga7a03f4b69e2791a742717516b6421466}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}}, unsigned short remote\+\_\+port=\mbox{\hyperlink{group__mavconn_ga25daeb4235691fdf52da1551bf93bc88}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+O\+RT}})
+\item 
+\mbox{\hyperlink{group__mavconn_gad9edacd1a8f5993cdcfb188f83e3ca49}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::$\sim$\+M\+A\+V\+Conn\+U\+DP}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_ga78a057400db4bf2240b00e29d4251dfe}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::close}} () override
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gae33a3895701a613a72d7fc1ab9bbb3d8}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message) override
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gae5e3ad4657f7aa9e970d0cb7a6bc367d}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga7a1a56365cb5355da86a6a6e2bb4bc8e}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length) override
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mavconn_ga496ff8d6806b35c993740cc05727f59c}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::is\+\_\+open}} () override
+\item 
+const \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_abf009bf897407a543e5209298ad82321}{mavlink\+\_\+msg\+\_\+entry\+\_\+t}} $\ast$ \mbox{\hyperlink{group__mavconn_ga5729c8752b868b9b15dc7154a66c4a14}{mavlink\+::mavlink\+\_\+get\+\_\+msg\+\_\+entry}} (uint32\+\_\+t msgid)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{group__mavconn_ga941de0f0d1968c6b2d272d5834d8f526}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::tx\+\_\+total\+\_\+bytes}}
+\begin{DoxyCompactList}\small\item\em total bytes transferred \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__mavconn_ga3f5e58792c58b0400dcd903c821e97cb}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::rx\+\_\+total\+\_\+bytes}}
+\begin{DoxyCompactList}\small\item\em total bytes received \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group__mavconn_gadbe490b44c012f629ee0dc0302c17a8b}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::tx\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em current transfer speed \mbox{[}B/s\mbox{]} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group__mavconn_gaf125917de0e57f9f394f038c71799fa0}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::rx\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em current receive speed \mbox{[}B/s\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mavconn_ga1d04ead963f1685f3aaf4b18ffb49ff7}{Received\+Cb}} \mbox{\hyperlink{group__mavconn_ga47d4ac1fa3ceb8797164b56c517f1ff8}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::message\+\_\+received\+\_\+cb}}
+\begin{DoxyCompactList}\small\item\em Message receive callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mavconn_ga6eef19e745c84f9b0b85d704b2e3e430}{Closed\+Cb}} \mbox{\hyperlink{group__mavconn_gaf00411ca9b9fbe3329804f22755dee05}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::port\+\_\+closed\+\_\+cb}}
+\begin{DoxyCompactList}\small\item\em Port closed notification callback. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__mavconn_ga2dc764873c9185f0399bf41fbadff32f}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::sys\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Connection System Id. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__mavconn_ga9f68651877ebc10d79f41925185d8553}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::comp\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Connection Component Id. \end{DoxyCompactList}\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{group__mavconn_ga1810847cbd773691c40b73e9ed24455d}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}} = \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} + 16
+\begin{DoxyCompactList}\small\item\em Maximum mavlink packet size + some extra bytes for padding. \end{DoxyCompactList}\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{group__mavconn_gaf5e70afd06413dba8c7aee46396f03a1}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE}} = 1000
+\begin{DoxyCompactList}\small\item\em Maximum count of transmission buffers. \end{DoxyCompactList}\item 
+static std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacemavlink_a98a1fe49b380ed1ea252d2c13bf3278d}{mavlink\+::msgid\+\_\+t}}, const \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_abf009bf897407a543e5209298ad82321}{mavlink\+::mavlink\+\_\+msg\+\_\+entry\+\_\+t}} $\ast$ $>$ \mbox{\hyperlink{group__mavconn_ga95f9336a3630ce53abf1611f5e8a061f}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::message\+\_\+entries}} \{\}
+\begin{DoxyCompactList}\small\item\em This map merge all dialect mavlink\+\_\+msg\+\_\+entry\+\_\+t structs. Needed for packet parser. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{group__mavconn_gab5e1164e0e16a986b4b8b07ac42149e5}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::conn\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Channel number used for logging. \end{DoxyCompactList}\item 
+static constexpr ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga7187a6a6dd41cfe0e92d2c59c81a0010}{mavconn\+::\+Msg\+Buffer\+::\+M\+A\+X\+\_\+\+S\+I\+ZE}} = \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} + 16
+\begin{DoxyCompactList}\small\item\em Maximum buffer size with padding for C\+RC bytes (280 + padding) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__mavconn_gafac3ddb58cafe6448ff6f046a73a66a5}{mavconn\+::\+Msg\+Buffer\+::data}} \mbox{[}\mbox{\hyperlink{group__mavconn_ga7187a6a6dd41cfe0e92d2c59c81a0010}{M\+A\+X\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+ssize\+\_\+t \mbox{\hyperlink{group__mavconn_ga712063584cbb6fa1ffb3cb30d0b2bd61}{mavconn\+::\+Msg\+Buffer\+::len}}
+\item 
+ssize\+\_\+t \mbox{\hyperlink{group__mavconn_gaf3493729d445b0f55b2ced8cfc5fa0f6}{mavconn\+::\+Msg\+Buffer\+::pos}}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga3b2c35e0bfa1020060b2fde345d66f0e}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+V\+I\+CE}} = \char`\"{}/dev/tty\+A\+C\+M0\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gaf0dd28c4a6b236f2ec3092a1b35ff5df}{mavconn\+::\+M\+A\+V\+Conn\+Serial\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}} = 57600
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga25f08b85aaeacae255d37a898f978c42}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+H\+O\+ST}} = \char`\"{}localhost\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga3d9c438ece25a8aa6ae7af15341e7706}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}} = 5760
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gae043843ee4b947094ca58342c442c3b6}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}} = \char`\"{}localhost\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gacf9d47d0f198105f4a27c9668ba793b1}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}} = 5760
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga62467db7651e86bb5428c4288356f813}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}} = \char`\"{}localhost\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga330f03ed06a3e027ec7be74426dc646b}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}} = 14555
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga7a03f4b69e2791a742717516b6421466}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}} = \char`\"{}\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga25daeb4235691fdf52da1551bf93bc88}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+O\+RT}} = 14550
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gae78adaaf99172a7aafead43dc2883cec}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}} = \char`\"{}$\ast$$\ast$$\ast$i want broadcast$\ast$$\ast$$\ast$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Markers for broadcast modes. Not valid domain names. \end{DoxyCompactList}\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gab9cc9895e36eefd3cd6e6fc7d4895c6f}{mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+P\+E\+R\+M\+A\+N\+E\+N\+T\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}} = \char`\"{}$\ast$$\ast$$\ast$permanent broadcast$\ast$$\ast$$\ast$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{group__mavconn_gaa93ce54993292c6350cf74aa47fde6cd}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}
+\item 
+const \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_abf009bf897407a543e5209298ad82321}{mavlink\+::mavlink\+\_\+msg\+\_\+entry\+\_\+t}} $\ast$ \mbox{\hyperlink{group__mavconn_gabc1b20a1cf82d2e9d432f0a5ac140630}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::mavlink\+::mavlink\+\_\+get\+\_\+msg\+\_\+entry}} (uint32\+\_\+t msgid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+A\+V\+Conn connection handling library. 
+
+This lib provide simple interface to M\+A\+V\+Link enabled devices such as autopilots. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__mavconn_gaaf4116dec671bee3f8f1445f6c6a3ebe}\label{group__mavconn_gaaf4116dec671bee3f8f1445f6c6a3ebe}} 
+\index{Mavconn@{Mavconn}!CONSOLE\_BRIDGE\_logDebug@{CONSOLE\_BRIDGE\_logDebug}}
+\index{CONSOLE\_BRIDGE\_logDebug@{CONSOLE\_BRIDGE\_logDebug}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{CONSOLE\_BRIDGE\_logDebug}{CONSOLE\_BRIDGE\_logDebug}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Debug(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+UG, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 39 of file console\+\_\+bridge\+\_\+compat.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga78bfb8423a8c11242fba38b8b3952aa7}\label{group__mavconn_ga78bfb8423a8c11242fba38b8b3952aa7}} 
+\index{Mavconn@{Mavconn}!CONSOLE\_BRIDGE\_logError@{CONSOLE\_BRIDGE\_logError}}
+\index{CONSOLE\_BRIDGE\_logError@{CONSOLE\_BRIDGE\_logError}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{CONSOLE\_BRIDGE\_logError}{CONSOLE\_BRIDGE\_logError}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Error(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 54 of file console\+\_\+bridge\+\_\+compat.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gaa587fd17781bdf24e813cb3c43eb8ff2}\label{group__mavconn_gaa587fd17781bdf24e813cb3c43eb8ff2}} 
+\index{Mavconn@{Mavconn}!CONSOLE\_BRIDGE\_logInform@{CONSOLE\_BRIDGE\_logInform}}
+\index{CONSOLE\_BRIDGE\_logInform@{CONSOLE\_BRIDGE\_logInform}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{CONSOLE\_BRIDGE\_logInform}{CONSOLE\_BRIDGE\_logInform}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Inform(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 44 of file console\+\_\+bridge\+\_\+compat.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga57a50f2283a7b43395b93a31ac90461c}\label{group__mavconn_ga57a50f2283a7b43395b93a31ac90461c}} 
+\index{Mavconn@{Mavconn}!CONSOLE\_BRIDGE\_logWarn@{CONSOLE\_BRIDGE\_logWarn}}
+\index{CONSOLE\_BRIDGE\_logWarn@{CONSOLE\_BRIDGE\_logWarn}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{CONSOLE\_BRIDGE\_logWarn}{CONSOLE\_BRIDGE\_logWarn}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+log\+Warn(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~console\+\_\+bridge\+::log(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, console\+\_\+bridge\+::\+C\+O\+N\+S\+O\+L\+E\+\_\+\+B\+R\+I\+D\+G\+E\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN, fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Definition at line 49 of file console\+\_\+bridge\+\_\+compat.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga72178fe89f317958886bb3233c6a9e42}\label{group__mavconn_ga72178fe89f317958886bb3233c6a9e42}} 
+\index{Mavconn@{Mavconn}!MAVLINK\_END\_SIGN\_STREAM@{MAVLINK\_END\_SIGN\_STREAM}}
+\index{MAVLINK\_END\_SIGN\_STREAM@{MAVLINK\_END\_SIGN\_STREAM}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVLINK\_END\_SIGN\_STREAM}{MAVLINK\_END\_SIGN\_STREAM}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+N\+D\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+R\+E\+AM(\begin{DoxyParamCaption}\item[{}]{link\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file mavlink\+\_\+dialect.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga1f3837374fc2bc427cb2e9a574ed3c97}\label{group__mavconn_ga1f3837374fc2bc427cb2e9a574ed3c97}} 
+\index{Mavconn@{Mavconn}!MAVLINK\_START\_SIGN\_STREAM@{MAVLINK\_START\_SIGN\_STREAM}}
+\index{MAVLINK\_START\_SIGN\_STREAM@{MAVLINK\_START\_SIGN\_STREAM}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVLINK\_START\_SIGN\_STREAM}{MAVLINK\_START\_SIGN\_STREAM}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+I\+G\+N\+\_\+\+S\+T\+R\+E\+AM(\begin{DoxyParamCaption}\item[{}]{link\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file mavlink\+\_\+dialect.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}\label{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}} 
+\index{Mavconn@{Mavconn}!PFX@{PFX}}
+\index{PFX@{PFX}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PFX}{PFX}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \#define P\+FX~\char`\"{}mavconn\+: \char`\"{}}
+
+
+
+Definition at line 29 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}\label{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}} 
+\index{Mavconn@{Mavconn}!PFX@{PFX}}
+\index{PFX@{PFX}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PFX}{PFX}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \#define P\+FX~\char`\"{}mavconn\+: udp\char`\"{}}
+
+
+
+Definition at line 34 of file udp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}\label{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}} 
+\index{Mavconn@{Mavconn}!PFX@{PFX}}
+\index{PFX@{PFX}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PFX}{PFX}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \#define P\+FX~\char`\"{}mavconn\+: tcp\char`\"{}}
+
+
+
+Definition at line 34 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}\label{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}} 
+\index{Mavconn@{Mavconn}!PFX@{PFX}}
+\index{PFX@{PFX}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PFX}{PFX}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \#define P\+FX~\char`\"{}mavconn\+: serial\char`\"{}}
+
+
+
+Definition at line 36 of file serial.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}\label{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}} 
+\index{Mavconn@{Mavconn}!PFXd@{PFXd}}
+\index{PFXd@{PFXd}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PFXd}{PFXd}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \#define P\+F\+Xd~\mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}} \char`\"{}\%zu\+: \char`\"{}}
+
+
+
+Definition at line 35 of file udp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}\label{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}} 
+\index{Mavconn@{Mavconn}!PFXd@{PFXd}}
+\index{PFXd@{PFXd}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PFXd}{PFXd}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \#define P\+F\+Xd~\mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}} \char`\"{}\%zu\+: \char`\"{}}
+
+
+
+Definition at line 35 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}\label{group__mavconn_ga9aa83a322c418c99083b35fddccd39e3}} 
+\index{Mavconn@{Mavconn}!PFXd@{PFXd}}
+\index{PFXd@{PFXd}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PFXd}{PFXd}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \#define P\+F\+Xd~\mbox{\hyperlink{group__mavconn_ga176e4c39a833f4d01f0ecd322c0f4343}{P\+FX}} \char`\"{}\%zu\+: \char`\"{}}
+
+
+
+Definition at line 37 of file serial.\+cpp.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__mavconn_ga6eef19e745c84f9b0b85d704b2e3e430}\label{group__mavconn_ga6eef19e745c84f9b0b85d704b2e3e430}} 
+\index{Mavconn@{Mavconn}!ClosedCb@{ClosedCb}}
+\index{ClosedCb@{ClosedCb}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{ClosedCb}{ClosedCb}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavconn_ga6eef19e745c84f9b0b85d704b2e3e430}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Closed\+Cb}} =  std\+::function$<$void (void)$>$}
+
+
+
+Definition at line 103 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga47036145ce30f67fcd830e28712216eb}\label{group__mavconn_ga47036145ce30f67fcd830e28712216eb}} 
+\index{Mavconn@{Mavconn}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavconn_ga47036145ce30f67fcd830e28712216eb}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{M\+A\+V\+Conn\+Interface}} const$>$}
+
+
+
+Definition at line 105 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga46feb20496b24d733abd4e68ef29bc90}\label{group__mavconn_ga46feb20496b24d733abd4e68ef29bc90}} 
+\index{Mavconn@{Mavconn}!lock\_guard@{lock\_guard}}
+\index{lock\_guard@{lock\_guard}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{lock\_guard}{lock\_guard}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavconn_ga46feb20496b24d733abd4e68ef29bc90}{mavconn\+::lock\+\_\+guard}} = typedef std\+::lock\+\_\+guard$<$std\+::recursive\+\_\+mutex$>$}
+
+
+
+Definition at line 42 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}\label{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}} 
+\index{Mavconn@{Mavconn}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{M\+A\+V\+Conn\+Interface}}$>$}
+
+
+
+Definition at line 104 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga1d04ead963f1685f3aaf4b18ffb49ff7}\label{group__mavconn_ga1d04ead963f1685f3aaf4b18ffb49ff7}} 
+\index{Mavconn@{Mavconn}!ReceivedCb@{ReceivedCb}}
+\index{ReceivedCb@{ReceivedCb}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{ReceivedCb}{ReceivedCb}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavconn_ga1d04ead963f1685f3aaf4b18ffb49ff7}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Received\+Cb}} =  std\+::function$<$void (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message, const \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{Framing}} framing)$>$}
+
+
+
+Definition at line 102 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gab7fe4e29d643505aafb15c532a9338d3}\label{group__mavconn_gab7fe4e29d643505aafb15c532a9338d3}} 
+\index{Mavconn@{Mavconn}!steady\_clock@{steady\_clock}}
+\index{steady\_clock@{steady\_clock}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{steady\_clock}{steady\_clock}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavconn_gab7fe4e29d643505aafb15c532a9338d3}{mavconn\+::steady\+\_\+clock}} = typedef std\+::chrono\+::steady\+\_\+clock}
+
+
+
+Definition at line 41 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga010ca3b237199e0ebb7b850b1f3ea0ba}\label{group__mavconn_ga010ca3b237199e0ebb7b850b1f3ea0ba}} 
+\index{Mavconn@{Mavconn}!WeakPtr@{WeakPtr}}
+\index{WeakPtr@{WeakPtr}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{WeakPtr}{WeakPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavconn_ga010ca3b237199e0ebb7b850b1f3ea0ba}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Weak\+Ptr}} =  std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classmavconn_1_1MAVConnInterface}{M\+A\+V\+Conn\+Interface}}$>$}
+
+
+
+Definition at line 106 of file interface.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}\label{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}} 
+\index{Mavconn@{Mavconn}!Framing@{Framing}}
+\index{Framing@{Framing}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{Framing}{Framing}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{mavconn\+::\+Framing}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Rx packer framing status. (same as {\ttfamily mavlink\+::mavlink\+\_\+framing\+\_\+t}) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{incomplete@{incomplete}!Mavconn@{Mavconn}}\index{Mavconn@{Mavconn}!incomplete@{incomplete}}}\mbox{\Hypertarget{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a5ed4e9858ad8d239145ef285b6210a00}\label{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a5ed4e9858ad8d239145ef285b6210a00}} 
+incomplete&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ok@{ok}!Mavconn@{Mavconn}}\index{Mavconn@{Mavconn}!ok@{ok}}}\mbox{\Hypertarget{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a444bcb3a3fcf8389296c49467f27e1d6}\label{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494a444bcb3a3fcf8389296c49467f27e1d6}} 
+ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bad\_crc@{bad\_crc}!Mavconn@{Mavconn}}\index{Mavconn@{Mavconn}!bad\_crc@{bad\_crc}}}\mbox{\Hypertarget{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494abaf1c3d199daf5f5b444664b81a08749}\label{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494abaf1c3d199daf5f5b444664b81a08749}} 
+bad\+\_\+crc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bad\_signature@{bad\_signature}!Mavconn@{Mavconn}}\index{Mavconn@{Mavconn}!bad\_signature@{bad\_signature}}}\mbox{\Hypertarget{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494adbfa03ea5df0b8979551ed84f97018e9}\label{group__mavconn_ggac93e6f8262bcc6008b4882ae6213f494adbfa03ea5df0b8979551ed84f97018e9}} 
+bad\+\_\+signature&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 48 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}\label{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}} 
+\index{Mavconn@{Mavconn}!Protocol@{Protocol}}
+\index{Protocol@{Protocol}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{Protocol}{Protocol}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}{mavconn\+::\+Protocol}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+M\+A\+V\+Link protocol version. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V10@{V10}!Mavconn@{Mavconn}}\index{Mavconn@{Mavconn}!V10@{V10}}}\mbox{\Hypertarget{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3a3ffc64fa10df9a884ba82f3e49e8282e}\label{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3a3ffc64fa10df9a884ba82f3e49e8282e}} 
+V10&M\+A\+V\+Link v1.\+0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V20@{V20}!Mavconn@{Mavconn}}\index{Mavconn@{Mavconn}!V20@{V20}}}\mbox{\Hypertarget{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3aba9161e2ae9f747e361fa824ca0d0337}\label{group__mavconn_ggae4e5498ebfd232dcad75be0f8a168ff3aba9161e2ae9f747e361fa824ca0d0337}} 
+V20&M\+A\+V\+Link v2.\+0. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 56 of file interface.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__mavconn_gabacc69adc5d2d2f9cb3aa27907d83d5c}\label{group__mavconn_gabacc69adc5d2d2f9cb3aa27907d83d5c}} 
+\index{Mavconn@{Mavconn}!close@{close}}
+\index{close@{close}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Serial\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close connection. 
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7c1a5a89489e345a6621c327107293d8}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 127 of file serial.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga78a057400db4bf2240b00e29d4251dfe}\label{group__mavconn_ga78a057400db4bf2240b00e29d4251dfe}} 
+\index{Mavconn@{Mavconn}!close@{close}}
+\index{close@{close}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close connection. 
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7c1a5a89489e345a6621c327107293d8}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 139 of file udp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga3128ab3303f5a303be12c2c9df1ee321}\label{group__mavconn_ga3128ab3303f5a303be12c2c9df1ee321}} 
+\index{Mavconn@{Mavconn}!close@{close}}
+\index{close@{close}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close connection. 
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7c1a5a89489e345a6621c327107293d8}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 132 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga11e23cc16d8a8637583fbecc7bbe915b}\label{group__mavconn_ga11e23cc16d8a8637583fbecc7bbe915b}} 
+\index{Mavconn@{Mavconn}!close@{close}}
+\index{close@{close}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close connection. 
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7c1a5a89489e345a6621c327107293d8}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 318 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga7c1a5a89489e345a6621c327107293d8}\label{group__mavconn_ga7c1a5a89489e345a6621c327107293d8}} 
+\index{Mavconn@{Mavconn}!close@{close}}
+\index{close@{close}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Close connection. 
+
+
+
+Implemented in \mbox{\hyperlink{group__mavconn_ga11e23cc16d8a8637583fbecc7bbe915b}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}, \mbox{\hyperlink{group__mavconn_ga3128ab3303f5a303be12c2c9df1ee321}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}}, \mbox{\hyperlink{group__mavconn_ga78a057400db4bf2240b00e29d4251dfe}{mavconn\+::\+M\+A\+V\+Conn\+U\+DP}}, and \mbox{\hyperlink{group__mavconn_gabacc69adc5d2d2f9cb3aa27907d83d5c}{mavconn\+::\+M\+A\+V\+Conn\+Serial}}.
+
+\mbox{\Hypertarget{group__mavconn_ga686d0d40b10a4d013dc09de32a43efaa}\label{group__mavconn_ga686d0d40b10a4d013dc09de32a43efaa}} 
+\index{Mavconn@{Mavconn}!DeviceError@{DeviceError}}
+\index{DeviceError@{DeviceError}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DeviceError()}{DeviceError()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+mavconn\+::\+Device\+Error\+::\+Device\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{module,  }\item[{T}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+@breif Construct error. 
+
+Definition at line 70 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga0c971b3c0d8d540ccaf7e1929a5ecf07}\label{group__mavconn_ga0c971b3c0d8d540ccaf7e1929a5ecf07}} 
+\index{Mavconn@{Mavconn}!dpos@{dpos}}
+\index{dpos@{dpos}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{dpos()}{dpos()}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ mavconn\+::\+Msg\+Buffer\+::dpos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 86 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gae9521a7ebe812821fcd15a63f1c12b10}\label{group__mavconn_gae9521a7ebe812821fcd15a63f1c12b10}} 
+\index{Mavconn@{Mavconn}!get\_buffer\_p@{get\_buffer\_p}}
+\index{get\_buffer\_p@{get\_buffer\_p}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_buffer\_p()}{get\_buffer\_p()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}}$\ast$ mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+buffer\+\_\+p (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 234 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gada7ecc7f6cffa0ecfc17f88327953223}\label{group__mavconn_gada7ecc7f6cffa0ecfc17f88327953223}} 
+\index{Mavconn@{Mavconn}!get\_component\_id@{get\_component\_id}}
+\index{get\_component\_id@{get\_component\_id}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_component\_id()}{get\_component\_id()}}
+{\footnotesize\ttfamily uint8\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+component\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 180 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga7fd83c9a2233baa30aff24b6f3c8dd25}\label{group__mavconn_ga7fd83c9a2233baa30aff24b6f3c8dd25}} 
+\index{Mavconn@{Mavconn}!get\_iostat@{get\_iostat}}
+\index{get\_iostat@{get\_iostat}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_iostat()}{get\_iostat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmavconn_1_1MAVConnInterface_1_1IOStat}{M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat}} mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::get\+\_\+iostat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{group__mavconn_gab330e130b5cff0e1d6aa67742ffc79f4}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 361 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gab330e130b5cff0e1d6aa67742ffc79f4}\label{group__mavconn_gab330e130b5cff0e1d6aa67742ffc79f4}} 
+\index{Mavconn@{Mavconn}!get\_iostat@{get\_iostat}}
+\index{get\_iostat@{get\_iostat}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_iostat()}{get\_iostat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmavconn_1_1MAVConnInterface_1_1IOStat}{M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat}} mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+iostat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{group__mavconn_ga7fd83c9a2233baa30aff24b6f3c8dd25}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}.
+
+
+
+Definition at line 60 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga443165dafa8e6827e340e92768a07a12}\label{group__mavconn_ga443165dafa8e6827e340e92768a07a12}} 
+\index{Mavconn@{Mavconn}!get\_known\_dialects@{get\_known\_dialects}}
+\index{get\_known\_dialects@{get\_known\_dialects}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_known\_dialects()}{get\_known\_dialects()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ M\+A\+V\+Conn\+Interface\+::get\+\_\+known\+\_\+dialects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 62 of file mavlink\+\_\+helpers.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gaae320aaf19ca5b0c03b6febba5efdf1b}\label{group__mavconn_gaae320aaf19ca5b0c03b6febba5efdf1b}} 
+\index{Mavconn@{Mavconn}!get\_protocol\_version@{get\_protocol\_version}}
+\index{get\_protocol\_version@{get\_protocol\_version}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_protocol\_version()}{get\_protocol\_version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}{Protocol}} mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+protocol\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gab139fa8d7e65c0de256f7d9dee0d0f30}\label{group__mavconn_gab139fa8d7e65c0de256f7d9dee0d0f30}} 
+\index{Mavconn@{Mavconn}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_status()}{get\_status()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{group__mavconn_gaa3c7017b05ca60187122edf2ec196918}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 337 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gaa3c7017b05ca60187122edf2ec196918}\label{group__mavconn_gaa3c7017b05ca60187122edf2ec196918}} 
+\index{Mavconn@{Mavconn}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_status()}{get\_status()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}} mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{group__mavconn_gab139fa8d7e65c0de256f7d9dee0d0f30}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}.
+
+
+
+Definition at line 55 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga2bb422475644d340b8116f7d67253dde}\label{group__mavconn_ga2bb422475644d340b8116f7d67253dde}} 
+\index{Mavconn@{Mavconn}!get\_status\_p@{get\_status\_p}}
+\index{get\_status\_p@{get\_status\_p}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_status\_p()}{get\_status\_p()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+::mavlink\+\_\+status\+\_\+t}}$\ast$ mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+status\+\_\+p (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 230 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gac09eda5df4b4b82823429d9af6dddd44}\label{group__mavconn_gac09eda5df4b4b82823429d9af6dddd44}} 
+\index{Mavconn@{Mavconn}!get\_system\_id@{get\_system\_id}}
+\index{get\_system\_id@{get\_system\_id}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{get\_system\_id()}{get\_system\_id()}}
+{\footnotesize\ttfamily uint8\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::get\+\_\+system\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 174 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gab045ff5b6e55b96630f00e131e4d2c16}\label{group__mavconn_gab045ff5b6e55b96630f00e131e4d2c16}} 
+\index{Mavconn@{Mavconn}!iostat\_rx\_add@{iostat\_rx\_add}}
+\index{iostat\_rx\_add@{iostat\_rx\_add}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{iostat\_rx\_add()}{iostat\_rx\_add()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::iostat\+\_\+rx\+\_\+add (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 90 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gaabfc001375565bdafd47172374fcda0f}\label{group__mavconn_gaabfc001375565bdafd47172374fcda0f}} 
+\index{Mavconn@{Mavconn}!iostat\_tx\_add@{iostat\_tx\_add}}
+\index{iostat\_tx\_add@{iostat\_tx\_add}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{iostat\_tx\_add()}{iostat\_tx\_add()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::iostat\+\_\+tx\+\_\+add (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 85 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga7b2ae62cddd41671b3312050f64b3036}\label{group__mavconn_ga7b2ae62cddd41671b3312050f64b3036}} 
+\index{Mavconn@{Mavconn}!is\_open@{is\_open}}
+\index{is\_open@{is\_open}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{is\_open()}{is\_open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bool mavconn\+::\+M\+A\+V\+Conn\+Serial\+::is\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga135638c7c953c50bee3143a9e2b35416}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 51 of file serial.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga496ff8d6806b35c993740cc05727f59c}\label{group__mavconn_ga496ff8d6806b35c993740cc05727f59c}} 
+\index{Mavconn@{Mavconn}!is\_open@{is\_open}}
+\index{is\_open@{is\_open}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{is\_open()}{is\_open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily bool mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::is\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga135638c7c953c50bee3143a9e2b35416}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 59 of file udp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gadcabe763ecf8fc00e123fcf78af9eaf4}\label{group__mavconn_gadcabe763ecf8fc00e123fcf78af9eaf4}} 
+\index{Mavconn@{Mavconn}!is\_open@{is\_open}}
+\index{is\_open@{is\_open}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{is\_open()}{is\_open()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily bool mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::is\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga135638c7c953c50bee3143a9e2b35416}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 60 of file tcp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga7bcb8a571a040f61ad2b61f002edc381}\label{group__mavconn_ga7bcb8a571a040f61ad2b61f002edc381}} 
+\index{Mavconn@{Mavconn}!is\_open@{is\_open}}
+\index{is\_open@{is\_open}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{is\_open()}{is\_open()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily bool mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::is\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga135638c7c953c50bee3143a9e2b35416}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 116 of file tcp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga135638c7c953c50bee3143a9e2b35416}\label{group__mavconn_ga135638c7c953c50bee3143a9e2b35416}} 
+\index{Mavconn@{Mavconn}!is\_open@{is\_open}}
+\index{is\_open@{is\_open}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{is\_open()}{is\_open()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual bool mavconn\+::\+M\+A\+V\+Conn\+Interface\+::is\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{group__mavconn_ga7bcb8a571a040f61ad2b61f002edc381}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}, \mbox{\hyperlink{group__mavconn_gadcabe763ecf8fc00e123fcf78af9eaf4}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}}, \mbox{\hyperlink{group__mavconn_ga496ff8d6806b35c993740cc05727f59c}{mavconn\+::\+M\+A\+V\+Conn\+U\+DP}}, and \mbox{\hyperlink{group__mavconn_ga7b2ae62cddd41671b3312050f64b3036}{mavconn\+::\+M\+A\+V\+Conn\+Serial}}.
+
+\mbox{\Hypertarget{group__mavconn_ga6edf345e262423905ecd6da2966d7b4f}\label{group__mavconn_ga6edf345e262423905ecd6da2966d7b4f}} 
+\index{Mavconn@{Mavconn}!log\_recv@{log\_recv}}
+\index{log\_recv@{log\_recv}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{log\_recv()}{log\_recv()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::log\+\_\+recv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pfx,  }\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} \&}]{msg,  }\item[{\mbox{\hyperlink{group__mavconn_gac93e6f8262bcc6008b4882ae6213f494}{Framing}}}]{framing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 128 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga7a6bcc0b1c21c9016422e2c20b4b04d0}\label{group__mavconn_ga7a6bcc0b1c21c9016422e2c20b4b04d0}} 
+\index{Mavconn@{Mavconn}!log\_send@{log\_send}}
+\index{log\_send@{log\_send}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{log\_send()}{log\_send()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::log\+\_\+send (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pfx,  }\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 143 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga52bf39da3102cf3376a801f5b0f647a5}\label{group__mavconn_ga52bf39da3102cf3376a801f5b0f647a5}} 
+\index{Mavconn@{Mavconn}!log\_send\_obj@{log\_send\_obj}}
+\index{log\_send\_obj@{log\_send\_obj}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{log\_send\_obj()}{log\_send\_obj()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::log\+\_\+send\+\_\+obj (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pfx,  }\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 153 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga76a9378a9bfc4f2b6f1b9c3ecb00ec9a}\label{group__mavconn_ga76a9378a9bfc4f2b6f1b9c3ecb00ec9a}} 
+\index{Mavconn@{Mavconn}!make\_message@{make\_message}}
+\index{make\_message@{make\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{make\_message()}{make\_message()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::string mavconn\+::\+Device\+Error\+::make\+\_\+message (\begin{DoxyParamCaption}\item[{const char $\ast$}]{module,  }\item[{T}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 75 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga9b64f95099f1be0b41ae1dd459db63bc}\label{group__mavconn_ga9b64f95099f1be0b41ae1dd459db63bc}} 
+\index{Mavconn@{Mavconn}!MAVConnInterface@{MAVConnInterface}}
+\index{MAVConnInterface@{MAVConnInterface}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVConnInterface()}{MAVConnInterface()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+M\+A\+V\+Conn\+Interface (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{system\+\_\+id = {\ttfamily 1},  }\item[{uint8\+\_\+t}]{component\+\_\+id = {\ttfamily MAV\+\_\+COMP\+\_\+ID\+\_\+UDP\+\_\+BRIDGE} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em system\+\_\+id} & sysid for send\+\_\+message \\
+\hline
+\mbox{\texttt{ in}}  & {\em component\+\_\+id} & compid for send\+\_\+message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga53b8b8d9fceab4d4a2767b3aa0a25462}\label{group__mavconn_ga53b8b8d9fceab4d4a2767b3aa0a25462}} 
+\index{Mavconn@{Mavconn}!MAVConnSerial@{MAVConnSerial}}
+\index{MAVConnSerial@{MAVConnSerial}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVConnSerial()}{MAVConnSerial()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+Serial\+::\+M\+A\+V\+Conn\+Serial (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{system\+\_\+id = {\ttfamily 1},  }\item[{uint8\+\_\+t}]{component\+\_\+id = {\ttfamily MAV\+\_\+COMP\+\_\+ID\+\_\+UDP\+\_\+BRIDGE},  }\item[{std\+::string}]{device = {\ttfamily \mbox{\hyperlink{group__mavconn_ga3b2c35e0bfa1020060b2fde345d66f0e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+V\+I\+CE}}},  }\item[{unsigned}]{baudrate = {\ttfamily \mbox{\hyperlink{group__mavconn_gaf0dd28c4a6b236f2ec3092a1b35ff5df}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}},  }\item[{bool}]{hwflow = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Open and run serial link.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device} & T\+TY device path \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & serial baudrate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file serial.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga930d7bcb750e00606a1ba406135f0020}\label{group__mavconn_ga930d7bcb750e00606a1ba406135f0020}} 
+\index{Mavconn@{Mavconn}!MAVConnTCPClient@{MAVConnTCPClient}}
+\index{MAVConnTCPClient@{MAVConnTCPClient}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVConnTCPClient()}{MAVConnTCPClient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{system\+\_\+id = {\ttfamily 1},  }\item[{uint8\+\_\+t}]{component\+\_\+id = {\ttfamily MAV\+\_\+COMP\+\_\+ID\+\_\+UDP\+\_\+BRIDGE},  }\item[{std\+::string}]{server\+\_\+host = {\ttfamily \mbox{\hyperlink{group__mavconn_ga25f08b85aaeacae255d37a898f978c42}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+H\+O\+ST}}},  }\item[{unsigned short}]{server\+\_\+port = {\ttfamily \mbox{\hyperlink{group__mavconn_ga3d9c438ece25a8aa6ae7af15341e7706}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}}} }\end{DoxyParamCaption})}
+
+Create generic \mbox{\hyperlink{classTCP}{T\+CP}} client (connect to the server) 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}id\mbox{]}} & server\+\_\+addr remote host \\
+\hline
+{\em \mbox{[}id\mbox{]}} & server\+\_\+port remote port \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga93a7b76eccf987b4321f7bcc502001b8}\label{group__mavconn_ga93a7b76eccf987b4321f7bcc502001b8}} 
+\index{Mavconn@{Mavconn}!MAVConnTCPClient@{MAVConnTCPClient}}
+\index{MAVConnTCPClient@{MAVConnTCPClient}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVConnTCPClient()}{MAVConnTCPClient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{system\+\_\+id,  }\item[{uint8\+\_\+t}]{component\+\_\+id,  }\item[{boost\+::asio\+::io\+\_\+service \&}]{server\+\_\+io }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Special client variation for use in \mbox{\hyperlink{classmavconn_1_1MAVConnTCPServer}{M\+A\+V\+Conn\+T\+C\+P\+Server}} 
+
+Definition at line 106 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gad395465c3a85e4441cbccc84615cacb5}\label{group__mavconn_gad395465c3a85e4441cbccc84615cacb5}} 
+\index{Mavconn@{Mavconn}!MAVConnTCPServer@{MAVConnTCPServer}}
+\index{MAVConnTCPServer@{MAVConnTCPServer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVConnTCPServer()}{MAVConnTCPServer()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{system\+\_\+id = {\ttfamily 1},  }\item[{uint8\+\_\+t}]{component\+\_\+id = {\ttfamily MAV\+\_\+COMP\+\_\+ID\+\_\+UDP\+\_\+BRIDGE},  }\item[{std\+::string}]{bind\+\_\+host = {\ttfamily \mbox{\hyperlink{group__mavconn_gae043843ee4b947094ca58342c442c3b6}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}}},  }\item[{unsigned short}]{bind\+\_\+port = {\ttfamily \mbox{\hyperlink{group__mavconn_gacf9d47d0f198105f4a27c9668ba793b1}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}id\mbox{]}} & server\+\_\+addr bind host \\
+\hline
+{\em \mbox{[}id\mbox{]}} & server\+\_\+port bind port \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 280 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga22deee111faac2fde80a0affc6c29245}\label{group__mavconn_ga22deee111faac2fde80a0affc6c29245}} 
+\index{Mavconn@{Mavconn}!MAVConnUDP@{MAVConnUDP}}
+\index{MAVConnUDP@{MAVConnUDP}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVConnUDP()}{MAVConnUDP()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+M\+A\+V\+Conn\+U\+DP (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{system\+\_\+id = {\ttfamily 1},  }\item[{uint8\+\_\+t}]{component\+\_\+id = {\ttfamily MAV\+\_\+COMP\+\_\+ID\+\_\+UDP\+\_\+BRIDGE},  }\item[{std\+::string}]{bind\+\_\+host = {\ttfamily \mbox{\hyperlink{group__mavconn_ga62467db7651e86bb5428c4288356f813}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}}},  }\item[{unsigned short}]{bind\+\_\+port = {\ttfamily \mbox{\hyperlink{group__mavconn_ga330f03ed06a3e027ec7be74426dc646b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}}},  }\item[{std\+::string}]{remote\+\_\+host = {\ttfamily \mbox{\hyperlink{group__mavconn_ga7a03f4b69e2791a742717516b6421466}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}}},  }\item[{unsigned short}]{remote\+\_\+port = {\ttfamily \mbox{\hyperlink{group__mavconn_ga25daeb4235691fdf52da1551bf93bc88}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+O\+RT}}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}id\mbox{]}} & bind\+\_\+host bind host \\
+\hline
+{\em \mbox{[}id\mbox{]}} & bind\+\_\+port bind port \\
+\hline
+{\em \mbox{[}id\mbox{]}} & remote\+\_\+host remote host (optional) \\
+\hline
+{\em \mbox{[}id\mbox{]}} & remote\+\_\+port remote port (optional) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file udp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga5729c8752b868b9b15dc7154a66c4a14}\label{group__mavconn_ga5729c8752b868b9b15dc7154a66c4a14}} 
+\index{Mavconn@{Mavconn}!mavlink\_get\_msg\_entry@{mavlink\_get\_msg\_entry}}
+\index{mavlink\_get\_msg\_entry@{mavlink\_get\_msg\_entry}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{mavlink\_get\_msg\_entry()}{mavlink\_get\_msg\_entry()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_abf009bf897407a543e5209298ad82321}{mavlink\+::mavlink\+\_\+msg\+\_\+entry\+\_\+t}} $\ast$ mavlink\+::mavlink\+\_\+get\+\_\+msg\+\_\+entry (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{msgid }\end{DoxyParamCaption})}
+
+Return message entry data for msgid.
+
+\begin{DoxyNote}{Note}
+user of M\+A\+V\+Link library should provide implementation for this function. Use mavlink\+:\+:$<$dialect-\/name$>$\+::\+M\+E\+S\+S\+A\+G\+E\+\_\+\+E\+N\+T\+R\+I\+ES array to make hash map.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+nullptr if message is unknown
+\end{DoxyReturn}
+Internal function to give access to message information such as additional crc byte. 
+
+Definition at line 34 of file mtest.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gae998ec92e731b23abc43286b88fa84ca}\label{group__mavconn_gae998ec92e731b23abc43286b88fa84ca}} 
+\index{Mavconn@{Mavconn}!msg\_to\_string@{msg\_to\_string}}
+\index{msg\_to\_string@{msg\_to\_string}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{msg\_to\_string()}{msg\_to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static std\+::string mavconn\+::\+Device\+Error\+::msg\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 81 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga0422d27d75fd22d67cc678d9b92f9d95}\label{group__mavconn_ga0422d27d75fd22d67cc678d9b92f9d95}} 
+\index{Mavconn@{Mavconn}!msg\_to\_string@{msg\_to\_string}}
+\index{msg\_to\_string@{msg\_to\_string}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{msg\_to\_string()}{msg\_to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static std\+::string mavconn\+::\+Device\+Error\+::msg\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{int}]{errnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 85 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga1a6103f0af6a0a451ae5af0ba190a50d}\label{group__mavconn_ga1a6103f0af6a0a451ae5af0ba190a50d}} 
+\index{Mavconn@{Mavconn}!msg\_to\_string@{msg\_to\_string}}
+\index{msg\_to\_string@{msg\_to\_string}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{msg\_to\_string()}{msg\_to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static std\+::string mavconn\+::\+Device\+Error\+::msg\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{boost\+::system\+::system\+\_\+error \&}]{err }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 89 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga64da82fdf707ca5304fda5e686fe4f11}\label{group__mavconn_ga64da82fdf707ca5304fda5e686fe4f11}} 
+\index{Mavconn@{Mavconn}!MsgBuffer@{MsgBuffer}}
+\index{MsgBuffer@{MsgBuffer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MsgBuffer()}{MsgBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga202de878cea6b3fff8f8ef8c7f001cd5}\label{group__mavconn_ga202de878cea6b3fff8f8ef8c7f001cd5}} 
+\index{Mavconn@{Mavconn}!MsgBuffer@{MsgBuffer}}
+\index{MsgBuffer@{MsgBuffer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MsgBuffer()}{MsgBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Buffer constructor from mavlink\+\_\+message\+\_\+t. 
+
+
+
+Definition at line 42 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga8bcb63913aa131f1c054dc1e18a4d945}\label{group__mavconn_ga8bcb63913aa131f1c054dc1e18a4d945}} 
+\index{Mavconn@{Mavconn}!MsgBuffer@{MsgBuffer}}
+\index{MsgBuffer@{MsgBuffer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MsgBuffer()}{MsgBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{obj,  }\item[{\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+::mavlink\+\_\+status\+\_\+t}} $\ast$}]{status,  }\item[{uint8\+\_\+t}]{sysid,  }\item[{uint8\+\_\+t}]{compid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer constructor for \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} derived object. 
+
+
+
+Definition at line 53 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga4555922debc003d9ba989aded6714fb5}\label{group__mavconn_ga4555922debc003d9ba989aded6714fb5}} 
+\index{Mavconn@{Mavconn}!MsgBuffer@{MsgBuffer}}
+\index{MsgBuffer@{MsgBuffer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MsgBuffer()}{MsgBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily mavconn\+::\+Msg\+Buffer\+::\+Msg\+Buffer (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{bytes,  }\item[{ssize\+\_\+t}]{nbytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer constructor for send\+\_\+bytes() 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nbytes} & should be less than M\+A\+X\+\_\+\+S\+I\+ZE \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga564c27473f42c6cea687c8b5bbbb1621}\label{group__mavconn_ga564c27473f42c6cea687c8b5bbbb1621}} 
+\index{Mavconn@{Mavconn}!nbytes@{nbytes}}
+\index{nbytes@{nbytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{nbytes()}{nbytes()}}
+{\footnotesize\ttfamily ssize\+\_\+t mavconn\+::\+Msg\+Buffer\+::nbytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 90 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gad7b5a25103f1421a63839a1aa0f080dc}\label{group__mavconn_gad7b5a25103f1421a63839a1aa0f080dc}} 
+\index{Mavconn@{Mavconn}!open\_url@{open\_url}}
+\index{open\_url@{open\_url}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{open\_url()}{open\_url()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{M\+A\+V\+Conn\+Interface\+::\+Ptr}} mavconn\+::\+M\+A\+V\+Conn\+Interface\+::open\+\_\+url (\begin{DoxyParamCaption}\item[{std\+::string}]{url,  }\item[{uint8\+\_\+t}]{system\+\_\+id = {\ttfamily 1},  }\item[{uint8\+\_\+t}]{component\+\_\+id = {\ttfamily MAV\+\_\+COMP\+\_\+ID\+\_\+UDP\+\_\+BRIDGE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Construct connection from U\+RL. 
+
+Supported U\+RL schemas\+:
+\begin{DoxyItemize}
+\item serial\+://
+\item udp\+://
+\item tcp\+://
+\item tcp-\/l\+://
+\end{DoxyItemize}
+
+Please see user\textquotesingle{}s documentation for details.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em url} & resource locator \\
+\hline
+\mbox{\texttt{ in}}  & {\em system\+\_\+id} & optional system id \\
+\hline
+\mbox{\texttt{ in}}  & {\em component\+\_\+id} & optional component id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape Ptr} to constructed interface class, or throw {\itshape \mbox{\hyperlink{classmavconn_1_1DeviceError}{Device\+Error}}} if error occured. 
+\end{DoxyReturn}
+
+
+Definition at line 345 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga5086c8460510e92da4e86fb266cb5a8b}\label{group__mavconn_ga5086c8460510e92da4e86fb266cb5a8b}} 
+\index{Mavconn@{Mavconn}!parse\_buffer@{parse\_buffer}}
+\index{parse\_buffer@{parse\_buffer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{parse\_buffer()}{parse\_buffer()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::parse\+\_\+buffer (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pfx,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const size\+\_\+t}]{bufsize,  }\item[{size\+\_\+t}]{bytes\+\_\+received }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse buffer and emit massage\+\_\+received. 
+
+Definition at line 95 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga6073d6f88157f3b29ee519eafe16f8fd}\label{group__mavconn_ga6073d6f88157f3b29ee519eafe16f8fd}} 
+\index{Mavconn@{Mavconn}!send\_bytes@{send\_bytes}}
+\index{send\_bytes@{send\_bytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_bytes()}{send\_bytes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Serial\+::send\+\_\+bytes (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{bytes,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send raw bytes (for some quirks) 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7d00279e176e9a6890ed47ab1ceeb597}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 147 of file serial.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga7a1a56365cb5355da86a6a6e2bb4bc8e}\label{group__mavconn_ga7a1a56365cb5355da86a6a6e2bb4bc8e}} 
+\index{Mavconn@{Mavconn}!send\_bytes@{send\_bytes}}
+\index{send\_bytes@{send\_bytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_bytes()}{send\_bytes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::send\+\_\+bytes (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{bytes,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send raw bytes (for some quirks) 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7d00279e176e9a6890ed47ab1ceeb597}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 160 of file udp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gac327ab4a27b6de2da3c594d93c599312}\label{group__mavconn_gac327ab4a27b6de2da3c594d93c599312}} 
+\index{Mavconn@{Mavconn}!send\_bytes@{send\_bytes}}
+\index{send\_bytes@{send\_bytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_bytes()}{send\_bytes()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::send\+\_\+bytes (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{bytes,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send raw bytes (for some quirks) 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7d00279e176e9a6890ed47ab1ceeb597}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 154 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga4eedf8da39d9dee8cf84074d010ddf0d}\label{group__mavconn_ga4eedf8da39d9dee8cf84074d010ddf0d}} 
+\index{Mavconn@{Mavconn}!send\_bytes@{send\_bytes}}
+\index{send\_bytes@{send\_bytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_bytes()}{send\_bytes()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::send\+\_\+bytes (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{bytes,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send raw bytes (for some quirks) 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga7d00279e176e9a6890ed47ab1ceeb597}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 384 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga7d00279e176e9a6890ed47ab1ceeb597}\label{group__mavconn_ga7d00279e176e9a6890ed47ab1ceeb597}} 
+\index{Mavconn@{Mavconn}!send\_bytes@{send\_bytes}}
+\index{send\_bytes@{send\_bytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_bytes()}{send\_bytes()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+bytes (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{bytes,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send raw bytes (for some quirks) 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{group__mavconn_ga4eedf8da39d9dee8cf84074d010ddf0d}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}, \mbox{\hyperlink{group__mavconn_gac327ab4a27b6de2da3c594d93c599312}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}}, \mbox{\hyperlink{group__mavconn_ga7a1a56365cb5355da86a6a6e2bb4bc8e}{mavconn\+::\+M\+A\+V\+Conn\+U\+DP}}, and \mbox{\hyperlink{group__mavconn_ga6073d6f88157f3b29ee519eafe16f8fd}{mavconn\+::\+M\+A\+V\+Conn\+Serial}}.
+
+\mbox{\Hypertarget{group__mavconn_ga452a97c9cd256b591eee063a1927a93a}\label{group__mavconn_ga452a97c9cd256b591eee063a1927a93a}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Serial\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (mavlink\+\_\+message\+\_\+t) 
+
+Can be used to forward messages from other connection channel.
+
+\begin{DoxyNote}{Note}
+Does not do finalization!
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_gad807cf7e1935548e0c7ba94943cbb7aa}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+\mbox{\Hypertarget{group__mavconn_ga7e251c28c05beb0becbe571f5f39c3bb}\label{group__mavconn_ga7e251c28c05beb0becbe571f5f39c3bb}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Serial\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) 
+
+Does serialization inside. System and Component ID = from this object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga204ee5ba0dc31519b0ea7a9ac50d486c}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 187 of file serial.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gae33a3895701a613a72d7fc1ab9bbb3d8}\label{group__mavconn_gae33a3895701a613a72d7fc1ab9bbb3d8}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (mavlink\+\_\+message\+\_\+t) 
+
+Can be used to forward messages from other connection channel.
+
+\begin{DoxyNote}{Note}
+Does not do finalization!
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_gad807cf7e1935548e0c7ba94943cbb7aa}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+\mbox{\Hypertarget{group__mavconn_ga6f835299707df78f3694cef5853139d4}\label{group__mavconn_ga6f835299707df78f3694cef5853139d4}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (mavlink\+\_\+message\+\_\+t) 
+
+Can be used to forward messages from other connection channel.
+
+\begin{DoxyNote}{Note}
+Does not do finalization!
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_gad807cf7e1935548e0c7ba94943cbb7aa}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+\mbox{\Hypertarget{group__mavconn_gae5e3ad4657f7aa9e970d0cb7a6bc367d}\label{group__mavconn_gae5e3ad4657f7aa9e970d0cb7a6bc367d}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) 
+
+Does serialization inside. System and Component ID = from this object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga204ee5ba0dc31519b0ea7a9ac50d486c}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 210 of file udp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_ga1194ffc5b74604c5c432591751803f33}\label{group__mavconn_ga1194ffc5b74604c5c432591751803f33}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) 
+
+Does serialization inside. System and Component ID = from this object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga204ee5ba0dc31519b0ea7a9ac50d486c}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 194 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gacbae4efba2ed887e4a731ca60dceb0a6}\label{group__mavconn_gacbae4efba2ed887e4a731ca60dceb0a6}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (mavlink\+\_\+message\+\_\+t) 
+
+Can be used to forward messages from other connection channel.
+
+\begin{DoxyNote}{Note}
+Does not do finalization!
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_gad807cf7e1935548e0c7ba94943cbb7aa}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+\mbox{\Hypertarget{group__mavconn_ga8e3d7a81031fe54f3326f2ea4ccfa2ef}\label{group__mavconn_ga8e3d7a81031fe54f3326f2ea4ccfa2ef}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) 
+
+Does serialization inside. System and Component ID = from this object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{group__mavconn_ga204ee5ba0dc31519b0ea7a9ac50d486c}{mavconn\+::\+M\+A\+V\+Conn\+Interface}}.
+
+
+
+Definition at line 400 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gad807cf7e1935548e0c7ba94943cbb7aa}\label{group__mavconn_gad807cf7e1935548e0c7ba94943cbb7aa}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily virtual void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send message (mavlink\+\_\+message\+\_\+t) 
+
+Can be used to forward messages from other connection channel.
+
+\begin{DoxyNote}{Note}
+Does not do finalization!
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{group__mavconn_gacbae4efba2ed887e4a731ca60dceb0a6}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}, \mbox{\hyperlink{group__mavconn_ga6f835299707df78f3694cef5853139d4}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}}, \mbox{\hyperlink{group__mavconn_gae33a3895701a613a72d7fc1ab9bbb3d8}{mavconn\+::\+M\+A\+V\+Conn\+U\+DP}}, and \mbox{\hyperlink{group__mavconn_ga452a97c9cd256b591eee063a1927a93a}{mavconn\+::\+M\+A\+V\+Conn\+Serial}}.
+
+\mbox{\Hypertarget{group__mavconn_ga204ee5ba0dc31519b0ea7a9ac50d486c}\label{group__mavconn_ga204ee5ba0dc31519b0ea7a9ac50d486c}} 
+\index{Mavconn@{Mavconn}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message()}{send\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily virtual void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) 
+
+Does serialization inside. System and Component ID = from this object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & On exceeding Tx queue limit (M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&message} & not changed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{group__mavconn_ga8e3d7a81031fe54f3326f2ea4ccfa2ef}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server}}, \mbox{\hyperlink{group__mavconn_ga1194ffc5b74604c5c432591751803f33}{mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client}}, \mbox{\hyperlink{group__mavconn_gae5e3ad4657f7aa9e970d0cb7a6bc367d}{mavconn\+::\+M\+A\+V\+Conn\+U\+DP}}, and \mbox{\hyperlink{group__mavconn_ga7e251c28c05beb0becbe571f5f39c3bb}{mavconn\+::\+M\+A\+V\+Conn\+Serial}}.
+
+\mbox{\Hypertarget{group__mavconn_gabf049aebc9a9a9abfd36a1fb0034a433}\label{group__mavconn_gabf049aebc9a9a9abfd36a1fb0034a433}} 
+\index{Mavconn@{Mavconn}!send\_message\_ignore\_drop@{send\_message\_ignore\_drop}}
+\index{send\_message\_ignore\_drop@{send\_message\_ignore\_drop}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message\_ignore\_drop()}{send\_message\_ignore\_drop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message\+\_\+ignore\+\_\+drop (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Send message and ignore possible drop due to Tx queue limit. 
+
+
+
+Definition at line 158 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gaafdea305c3cd449ac629f84598febbe0}\label{group__mavconn_gaafdea305c3cd449ac629f84598febbe0}} 
+\index{Mavconn@{Mavconn}!send\_message\_ignore\_drop@{send\_message\_ignore\_drop}}
+\index{send\_message\_ignore\_drop@{send\_message\_ignore\_drop}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{send\_message\_ignore\_drop()}{send\_message\_ignore\_drop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::send\+\_\+message\+\_\+ignore\+\_\+drop (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Send message and ignore possible drop due to Tx queue limit. 
+
+
+
+Definition at line 171 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gac3e7c34cdb6e8104959654ff49bd2497}\label{group__mavconn_gac3e7c34cdb6e8104959654ff49bd2497}} 
+\index{Mavconn@{Mavconn}!set\_component\_id@{set\_component\_id}}
+\index{set\_component\_id@{set\_component\_id}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{set\_component\_id()}{set\_component\_id()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::set\+\_\+component\+\_\+id (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{compid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 183 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gae78b30f23f5f1a94684761f7ddc0d2e2}\label{group__mavconn_gae78b30f23f5f1a94684761f7ddc0d2e2}} 
+\index{Mavconn@{Mavconn}!set\_protocol\_version@{set\_protocol\_version}}
+\index{set\_protocol\_version@{set\_protocol\_version}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{set\_protocol\_version()}{set\_protocol\_version()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::set\+\_\+protocol\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mavconn_gae4e5498ebfd232dcad75be0f8a168ff3}{Protocol}}}]{pver }\end{DoxyParamCaption})}
+
+Set protocol used for encoding mavlink\+::\+Mavlink messages. 
+
+Definition at line 184 of file interface.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gaf2828d99a65c8e631566e7fd564abac3}\label{group__mavconn_gaf2828d99a65c8e631566e7fd564abac3}} 
+\index{Mavconn@{Mavconn}!set\_system\_id@{set\_system\_id}}
+\index{set\_system\_id@{set\_system\_id}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{set\_system\_id()}{set\_system\_id()}}
+{\footnotesize\ttfamily void mavconn\+::\+M\+A\+V\+Conn\+Interface\+::set\+\_\+system\+\_\+id (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sysid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 177 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga63860bdb6f3eb8a5ef266fc99edd715d}\label{group__mavconn_ga63860bdb6f3eb8a5ef266fc99edd715d}} 
+\index{Mavconn@{Mavconn}!````~MAVConnSerial@{$\sim$MAVConnSerial}}
+\index{````~MAVConnSerial@{$\sim$MAVConnSerial}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{$\sim$MAVConnSerial()}{~MAVConnSerial()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+Serial\+::$\sim$\+M\+A\+V\+Conn\+Serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file serial.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gaa9e9ea305aaaa39aeb4bcb91328d47c5}\label{group__mavconn_gaa9e9ea305aaaa39aeb4bcb91328d47c5}} 
+\index{Mavconn@{Mavconn}!````~MAVConnTCPClient@{$\sim$MAVConnTCPClient}}
+\index{````~MAVConnTCPClient@{$\sim$MAVConnTCPClient}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{$\sim$MAVConnTCPClient()}{~MAVConnTCPClient()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::$\sim$\+M\+A\+V\+Conn\+T\+C\+P\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 126 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gaee25f07913d08d976e205be3136d813c}\label{group__mavconn_gaee25f07913d08d976e205be3136d813c}} 
+\index{Mavconn@{Mavconn}!````~MAVConnTCPServer@{$\sim$MAVConnTCPServer}}
+\index{````~MAVConnTCPServer@{$\sim$MAVConnTCPServer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{$\sim$MAVConnTCPServer()}{~MAVConnTCPServer()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::$\sim$\+M\+A\+V\+Conn\+T\+C\+P\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 312 of file tcp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gad9edacd1a8f5993cdcfb188f83e3ca49}\label{group__mavconn_gad9edacd1a8f5993cdcfb188f83e3ca49}} 
+\index{Mavconn@{Mavconn}!````~MAVConnUDP@{$\sim$MAVConnUDP}}
+\index{````~MAVConnUDP@{$\sim$MAVConnUDP}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{$\sim$MAVConnUDP()}{~MAVConnUDP()}}
+{\footnotesize\ttfamily mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::$\sim$\+M\+A\+V\+Conn\+U\+DP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file udp.\+cpp.
+
+\mbox{\Hypertarget{group__mavconn_gac56cac6705c915b3c74c3d0b12c45939}\label{group__mavconn_gac56cac6705c915b3c74c3d0b12c45939}} 
+\index{Mavconn@{Mavconn}!````~MsgBuffer@{$\sim$MsgBuffer}}
+\index{````~MsgBuffer@{$\sim$MsgBuffer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{$\sim$MsgBuffer()}{~MsgBuffer()}}
+{\footnotesize\ttfamily virtual mavconn\+::\+Msg\+Buffer\+::$\sim$\+Msg\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 81 of file msgbuffer.\+h.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__mavconn_gae78adaaf99172a7aafead43dc2883cec}\label{group__mavconn_gae78adaaf99172a7aafead43dc2883cec}} 
+\index{Mavconn@{Mavconn}!BROADCAST\_REMOTE\_HOST@{BROADCAST\_REMOTE\_HOST}}
+\index{BROADCAST\_REMOTE\_HOST@{BROADCAST\_REMOTE\_HOST}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{BROADCAST\_REMOTE\_HOST}{BROADCAST\_REMOTE\_HOST}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST = \char`\"{}$\ast$$\ast$$\ast$i want broadcast$\ast$$\ast$$\ast$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Markers for broadcast modes. Not valid domain names. 
+
+
+
+Definition at line 39 of file udp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga9f68651877ebc10d79f41925185d8553}\label{group__mavconn_ga9f68651877ebc10d79f41925185d8553}} 
+\index{Mavconn@{Mavconn}!comp\_id@{comp\_id}}
+\index{comp\_id@{comp\_id}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{comp\_id}{comp\_id}}
+{\footnotesize\ttfamily uint8\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::comp\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Connection Component Id. 
+
+
+
+Definition at line 217 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gab5e1164e0e16a986b4b8b07ac42149e5}\label{group__mavconn_gab5e1164e0e16a986b4b8b07ac42149e5}} 
+\index{Mavconn@{Mavconn}!conn\_id@{conn\_id}}
+\index{conn\_id@{conn\_id}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{conn\_id}{conn\_id}}
+{\footnotesize\ttfamily size\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::conn\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Channel number used for logging. 
+
+
+
+Definition at line 228 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gafac3ddb58cafe6448ff6f046a73a66a5}\label{group__mavconn_gafac3ddb58cafe6448ff6f046a73a66a5}} 
+\index{Mavconn@{Mavconn}!data@{data}}
+\index{data@{data}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t mavconn\+::\+Msg\+Buffer\+::data\mbox{[}\mbox{\hyperlink{group__mavconn_ga7187a6a6dd41cfe0e92d2c59c81a0010}{M\+A\+X\+\_\+\+S\+I\+ZE}}\mbox{]}}
+
+
+
+Definition at line 30 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gaf0dd28c4a6b236f2ec3092a1b35ff5df}\label{group__mavconn_gaf0dd28c4a6b236f2ec3092a1b35ff5df}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_BAUDRATE@{DEFAULT\_BAUDRATE}}
+\index{DEFAULT\_BAUDRATE@{DEFAULT\_BAUDRATE}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_BAUDRATE}{DEFAULT\_BAUDRATE}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+Serial\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE = 57600\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 33 of file serial.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga62467db7651e86bb5428c4288356f813}\label{group__mavconn_ga62467db7651e86bb5428c4288356f813}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_BIND\_HOST@{DEFAULT\_BIND\_HOST}}
+\index{DEFAULT\_BIND\_HOST@{DEFAULT\_BIND\_HOST}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_BIND\_HOST}{DEFAULT\_BIND\_HOST}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST = \char`\"{}localhost\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 34 of file udp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gae043843ee4b947094ca58342c442c3b6}\label{group__mavconn_gae043843ee4b947094ca58342c442c3b6}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_BIND\_HOST@{DEFAULT\_BIND\_HOST}}
+\index{DEFAULT\_BIND\_HOST@{DEFAULT\_BIND\_HOST}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_BIND\_HOST}{DEFAULT\_BIND\_HOST}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST = \char`\"{}localhost\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 97 of file tcp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga330f03ed06a3e027ec7be74426dc646b}\label{group__mavconn_ga330f03ed06a3e027ec7be74426dc646b}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_BIND\_PORT@{DEFAULT\_BIND\_PORT}}
+\index{DEFAULT\_BIND\_PORT@{DEFAULT\_BIND\_PORT}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_BIND\_PORT}{DEFAULT\_BIND\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT = 14555\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 35 of file udp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gacf9d47d0f198105f4a27c9668ba793b1}\label{group__mavconn_gacf9d47d0f198105f4a27c9668ba793b1}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_BIND\_PORT@{DEFAULT\_BIND\_PORT}}
+\index{DEFAULT\_BIND\_PORT@{DEFAULT\_BIND\_PORT}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_BIND\_PORT}{DEFAULT\_BIND\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Server\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT = 5760\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 98 of file tcp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga3b2c35e0bfa1020060b2fde345d66f0e}\label{group__mavconn_ga3b2c35e0bfa1020060b2fde345d66f0e}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_DEVICE@{DEFAULT\_DEVICE}}
+\index{DEFAULT\_DEVICE@{DEFAULT\_DEVICE}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_DEVICE}{DEFAULT\_DEVICE}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+Serial\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+V\+I\+CE = \char`\"{}/dev/tty\+A\+C\+M0\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 32 of file serial.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga7a03f4b69e2791a742717516b6421466}\label{group__mavconn_ga7a03f4b69e2791a742717516b6421466}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_REMOTE\_HOST@{DEFAULT\_REMOTE\_HOST}}
+\index{DEFAULT\_REMOTE\_HOST@{DEFAULT\_REMOTE\_HOST}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_REMOTE\_HOST}{DEFAULT\_REMOTE\_HOST}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 36 of file udp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga25daeb4235691fdf52da1551bf93bc88}\label{group__mavconn_ga25daeb4235691fdf52da1551bf93bc88}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_REMOTE\_PORT@{DEFAULT\_REMOTE\_PORT}}
+\index{DEFAULT\_REMOTE\_PORT@{DEFAULT\_REMOTE\_PORT}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_REMOTE\_PORT}{DEFAULT\_REMOTE\_PORT}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+O\+RT = 14550\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 37 of file udp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga25f08b85aaeacae255d37a898f978c42}\label{group__mavconn_ga25f08b85aaeacae255d37a898f978c42}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_SERVER\_HOST@{DEFAULT\_SERVER\_HOST}}
+\index{DEFAULT\_SERVER\_HOST@{DEFAULT\_SERVER\_HOST}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_SERVER\_HOST}{DEFAULT\_SERVER\_HOST}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+H\+O\+ST = \char`\"{}localhost\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 37 of file tcp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga3d9c438ece25a8aa6ae7af15341e7706}\label{group__mavconn_ga3d9c438ece25a8aa6ae7af15341e7706}} 
+\index{Mavconn@{Mavconn}!DEFAULT\_SERVER\_PORT@{DEFAULT\_SERVER\_PORT}}
+\index{DEFAULT\_SERVER\_PORT@{DEFAULT\_SERVER\_PORT}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{DEFAULT\_SERVER\_PORT}{DEFAULT\_SERVER\_PORT}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+T\+C\+P\+Client\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT = 5760\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 38 of file tcp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga712063584cbb6fa1ffb3cb30d0b2bd61}\label{group__mavconn_ga712063584cbb6fa1ffb3cb30d0b2bd61}} 
+\index{Mavconn@{Mavconn}!len@{len}}
+\index{len@{len}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily ssize\+\_\+t mavconn\+::\+Msg\+Buffer\+::len}
+
+
+
+Definition at line 31 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga1810847cbd773691c40b73e9ed24455d}\label{group__mavconn_ga1810847cbd773691c40b73e9ed24455d}} 
+\index{Mavconn@{Mavconn}!MAX\_PACKET\_SIZE@{MAX\_PACKET\_SIZE}}
+\index{MAX\_PACKET\_SIZE@{MAX\_PACKET\_SIZE}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAX\_PACKET\_SIZE}{MAX\_PACKET\_SIZE}}
+{\footnotesize\ttfamily constexpr size\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE = \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} + 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+Maximum mavlink packet size + some extra bytes for padding. 
+
+
+
+Definition at line 220 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga7187a6a6dd41cfe0e92d2c59c81a0010}\label{group__mavconn_ga7187a6a6dd41cfe0e92d2c59c81a0010}} 
+\index{Mavconn@{Mavconn}!MAX\_SIZE@{MAX\_SIZE}}
+\index{MAX\_SIZE@{MAX\_SIZE}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAX\_SIZE}{MAX\_SIZE}}
+{\footnotesize\ttfamily constexpr ssize\+\_\+t mavconn\+::\+Msg\+Buffer\+::\+M\+A\+X\+\_\+\+S\+I\+ZE = \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} + 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Maximum buffer size with padding for C\+RC bytes (280 + padding) 
+
+
+
+Definition at line 29 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gaf5e70afd06413dba8c7aee46396f03a1}\label{group__mavconn_gaf5e70afd06413dba8c7aee46396f03a1}} 
+\index{Mavconn@{Mavconn}!MAX\_TXQ\_SIZE@{MAX\_TXQ\_SIZE}}
+\index{MAX\_TXQ\_SIZE@{MAX\_TXQ\_SIZE}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAX\_TXQ\_SIZE}{MAX\_TXQ\_SIZE}}
+{\footnotesize\ttfamily constexpr size\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+M\+A\+X\+\_\+\+T\+X\+Q\+\_\+\+S\+I\+ZE = 1000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+Maximum count of transmission buffers. 
+
+
+
+Definition at line 222 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga95f9336a3630ce53abf1611f5e8a061f}\label{group__mavconn_ga95f9336a3630ce53abf1611f5e8a061f}} 
+\index{Mavconn@{Mavconn}!message\_entries@{message\_entries}}
+\index{message\_entries@{message\_entries}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{message\_entries}{message\_entries}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacemavlink_a98a1fe49b380ed1ea252d2c13bf3278d}{mavlink\+::msgid\+\_\+t}}, const \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_abf009bf897407a543e5209298ad82321}{mavlink\+::mavlink\+\_\+msg\+\_\+entry\+\_\+t}} $\ast$ $>$ mavconn\+::\+M\+A\+V\+Conn\+Interface\+::message\+\_\+entries \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+This map merge all dialect mavlink\+\_\+msg\+\_\+entry\+\_\+t structs. Needed for packet parser. 
+
+
+
+Definition at line 225 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga47d4ac1fa3ceb8797164b56c517f1ff8}\label{group__mavconn_ga47d4ac1fa3ceb8797164b56c517f1ff8}} 
+\index{Mavconn@{Mavconn}!message\_received\_cb@{message\_received\_cb}}
+\index{message\_received\_cb@{message\_received\_cb}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{message\_received\_cb}{message\_received\_cb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavconn_ga1d04ead963f1685f3aaf4b18ffb49ff7}{Received\+Cb}} mavconn\+::\+M\+A\+V\+Conn\+Interface\+::message\+\_\+received\+\_\+cb}
+
+
+
+Message receive callback. 
+
+
+
+Definition at line 166 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gab9cc9895e36eefd3cd6e6fc7d4895c6f}\label{group__mavconn_gab9cc9895e36eefd3cd6e6fc7d4895c6f}} 
+\index{Mavconn@{Mavconn}!PERMANENT\_BROADCAST\_REMOTE\_HOST@{PERMANENT\_BROADCAST\_REMOTE\_HOST}}
+\index{PERMANENT\_BROADCAST\_REMOTE\_HOST@{PERMANENT\_BROADCAST\_REMOTE\_HOST}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{PERMANENT\_BROADCAST\_REMOTE\_HOST}{PERMANENT\_BROADCAST\_REMOTE\_HOST}}
+{\footnotesize\ttfamily constexpr auto mavconn\+::\+M\+A\+V\+Conn\+U\+D\+P\+::\+P\+E\+R\+M\+A\+N\+E\+N\+T\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST = \char`\"{}$\ast$$\ast$$\ast$permanent broadcast$\ast$$\ast$$\ast$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 40 of file udp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gaf00411ca9b9fbe3329804f22755dee05}\label{group__mavconn_gaf00411ca9b9fbe3329804f22755dee05}} 
+\index{Mavconn@{Mavconn}!port\_closed\_cb@{port\_closed\_cb}}
+\index{port\_closed\_cb@{port\_closed\_cb}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{port\_closed\_cb}{port\_closed\_cb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavconn_ga6eef19e745c84f9b0b85d704b2e3e430}{Closed\+Cb}} mavconn\+::\+M\+A\+V\+Conn\+Interface\+::port\+\_\+closed\+\_\+cb}
+
+
+
+Port closed notification callback. 
+
+
+
+Definition at line 168 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gaf3493729d445b0f55b2ced8cfc5fa0f6}\label{group__mavconn_gaf3493729d445b0f55b2ced8cfc5fa0f6}} 
+\index{Mavconn@{Mavconn}!pos@{pos}}
+\index{pos@{pos}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily ssize\+\_\+t mavconn\+::\+Msg\+Buffer\+::pos}
+
+
+
+Definition at line 32 of file msgbuffer.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gaf125917de0e57f9f394f038c71799fa0}\label{group__mavconn_gaf125917de0e57f9f394f038c71799fa0}} 
+\index{Mavconn@{Mavconn}!rx\_speed@{rx\_speed}}
+\index{rx\_speed@{rx\_speed}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{rx\_speed}{rx\_speed}}
+{\footnotesize\ttfamily float mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::rx\+\_\+speed}
+
+
+
+current receive speed \mbox{[}B/s\mbox{]} 
+
+
+
+Definition at line 112 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga3f5e58792c58b0400dcd903c821e97cb}\label{group__mavconn_ga3f5e58792c58b0400dcd903c821e97cb}} 
+\index{Mavconn@{Mavconn}!rx\_total\_bytes@{rx\_total\_bytes}}
+\index{rx\_total\_bytes@{rx\_total\_bytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{rx\_total\_bytes}{rx\_total\_bytes}}
+{\footnotesize\ttfamily size\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::rx\+\_\+total\+\_\+bytes}
+
+
+
+total bytes received 
+
+
+
+Definition at line 110 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga2dc764873c9185f0399bf41fbadff32f}\label{group__mavconn_ga2dc764873c9185f0399bf41fbadff32f}} 
+\index{Mavconn@{Mavconn}!sys\_id@{sys\_id}}
+\index{sys\_id@{sys\_id}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{sys\_id}{sys\_id}}
+{\footnotesize\ttfamily uint8\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::sys\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Connection System Id. 
+
+
+
+Definition at line 216 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gadbe490b44c012f629ee0dc0302c17a8b}\label{group__mavconn_gadbe490b44c012f629ee0dc0302c17a8b}} 
+\index{Mavconn@{Mavconn}!tx\_speed@{tx\_speed}}
+\index{tx\_speed@{tx\_speed}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{tx\_speed}{tx\_speed}}
+{\footnotesize\ttfamily float mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::tx\+\_\+speed}
+
+
+
+current transfer speed \mbox{[}B/s\mbox{]} 
+
+
+
+Definition at line 111 of file interface.\+h.
+
+\mbox{\Hypertarget{group__mavconn_ga941de0f0d1968c6b2d272d5834d8f526}\label{group__mavconn_ga941de0f0d1968c6b2d272d5834d8f526}} 
+\index{Mavconn@{Mavconn}!tx\_total\_bytes@{tx\_total\_bytes}}
+\index{tx\_total\_bytes@{tx\_total\_bytes}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{tx\_total\_bytes}{tx\_total\_bytes}}
+{\footnotesize\ttfamily size\+\_\+t mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+I\+O\+Stat\+::tx\+\_\+total\+\_\+bytes}
+
+
+
+total bytes transferred 
+
+
+
+Definition at line 109 of file interface.\+h.
+
+
+
+\subsection{Friends}
+\mbox{\Hypertarget{group__mavconn_gaa93ce54993292c6350cf74aa47fde6cd}\label{group__mavconn_gaa93ce54993292c6350cf74aa47fde6cd}} 
+\index{Mavconn@{Mavconn}!MAVConnTCPServer@{MAVConnTCPServer}}
+\index{MAVConnTCPServer@{MAVConnTCPServer}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{MAVConnTCPServer}{MAVConnTCPServer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classmavconn_1_1MAVConnTCPServer}{M\+A\+V\+Conn\+T\+C\+P\+Server}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 65 of file tcp.\+h.
+
+\mbox{\Hypertarget{group__mavconn_gabc1b20a1cf82d2e9d432f0a5ac140630}\label{group__mavconn_gabc1b20a1cf82d2e9d432f0a5ac140630}} 
+\index{Mavconn@{Mavconn}!mavlink::mavlink\_get\_msg\_entry@{mavlink::mavlink\_get\_msg\_entry}}
+\index{mavlink::mavlink\_get\_msg\_entry@{mavlink::mavlink\_get\_msg\_entry}!Mavconn@{Mavconn}}
+\subsubsection{\texorpdfstring{mavlink::mavlink\_get\_msg\_entry}{mavlink::mavlink\_get\_msg\_entry}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_abf009bf897407a543e5209298ad82321}{mavlink\+::mavlink\+\_\+msg\+\_\+entry\+\_\+t}}$\ast$ \mbox{\hyperlink{group__mavconn_ga5729c8752b868b9b15dc7154a66c4a14}{mavlink\+::mavlink\+\_\+get\+\_\+msg\+\_\+entry}} (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{msgid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+

@@ -1,0 +1,106 @@
+\hypertarget{copter__visualization_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros\+\_\+extras/src/copter\+\_\+visualization.cpp File Reference}
+\label{copter__visualization_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros\_extras/src/copter\_visualization.cpp@{/home/eric/catkin\_ws/src/mavros/mavros\_extras/src/copter\_visualization.cpp}}
+
+
+Copter visualization.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$tf/tf.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$ros/console.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$visualization\+\_\+msgs/\+Marker.\+h$>$}\newline
+{\ttfamily \#include $<$visualization\+\_\+msgs/\+Marker\+Array.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{copter__visualization_8cpp_a9d333921866d6ec6daf42048643f62f1}{setpoint\+\_\+local\+\_\+pos\+\_\+sub\+\_\+cb}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&wp)
+\item 
+int \mbox{\hyperlink{copter__visualization_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{copter__visualization_8cpp_a6ab2f6a68fc39da57a1f0f22a0faf2b3}{track\+\_\+marker\+\_\+pub}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{copter__visualization_8cpp_a81560c566982ea79a937599b32bdbd05}{vehicle\+\_\+marker\+\_\+pub}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{copter__visualization_8cpp_a526a863e43c0cba2f867917a933d7672}{wp\+\_\+marker\+\_\+pub}}
+\item 
+boost\+::shared\+\_\+ptr$<$ visualization\+\_\+msgs\+::\+Marker\+Array $>$ \mbox{\hyperlink{copter__visualization_8cpp_af5bfa8c6521c65d73d1b4de0dd2d8270}{vehicle\+\_\+marker}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copter visualization. 
+
+\begin{DoxyAuthor}{Author}
+M.\+H.\+Kabir \href{mailto:mhkabir98@gmail.com}{\texttt{ mhkabir98@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{copter__visualization_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{copter__visualization_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{copter\_visualization.cpp@{copter\_visualization.cpp}!main@{main}}
+\index{main@{main}!copter\_visualization.cpp@{copter\_visualization.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 200 of file copter\+\_\+visualization.\+cpp.
+
+\mbox{\Hypertarget{copter__visualization_8cpp_a9d333921866d6ec6daf42048643f62f1}\label{copter__visualization_8cpp_a9d333921866d6ec6daf42048643f62f1}} 
+\index{copter\_visualization.cpp@{copter\_visualization.cpp}!setpoint\_local\_pos\_sub\_cb@{setpoint\_local\_pos\_sub\_cb}}
+\index{setpoint\_local\_pos\_sub\_cb@{setpoint\_local\_pos\_sub\_cb}!copter\_visualization.cpp@{copter\_visualization.cpp}}
+\subsubsection{\texorpdfstring{setpoint\_local\_pos\_sub\_cb()}{setpoint\_local\_pos\_sub\_cb()}}
+{\footnotesize\ttfamily void setpoint\+\_\+local\+\_\+pos\+\_\+sub\+\_\+cb (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{wp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 195 of file copter\+\_\+visualization.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{copter__visualization_8cpp_a6ab2f6a68fc39da57a1f0f22a0faf2b3}\label{copter__visualization_8cpp_a6ab2f6a68fc39da57a1f0f22a0faf2b3}} 
+\index{copter\_visualization.cpp@{copter\_visualization.cpp}!track\_marker\_pub@{track\_marker\_pub}}
+\index{track\_marker\_pub@{track\_marker\_pub}!copter\_visualization.cpp@{copter\_visualization.cpp}}
+\subsubsection{\texorpdfstring{track\_marker\_pub}{track\_marker\_pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher track\+\_\+marker\+\_\+pub}
+
+
+
+Definition at line 32 of file copter\+\_\+visualization.\+cpp.
+
+\mbox{\Hypertarget{copter__visualization_8cpp_af5bfa8c6521c65d73d1b4de0dd2d8270}\label{copter__visualization_8cpp_af5bfa8c6521c65d73d1b4de0dd2d8270}} 
+\index{copter\_visualization.cpp@{copter\_visualization.cpp}!vehicle\_marker@{vehicle\_marker}}
+\index{vehicle\_marker@{vehicle\_marker}!copter\_visualization.cpp@{copter\_visualization.cpp}}
+\subsubsection{\texorpdfstring{vehicle\_marker}{vehicle\_marker}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$visualization\+\_\+msgs\+::\+Marker\+Array$>$ vehicle\+\_\+marker}
+
+
+
+Definition at line 36 of file copter\+\_\+visualization.\+cpp.
+
+\mbox{\Hypertarget{copter__visualization_8cpp_a81560c566982ea79a937599b32bdbd05}\label{copter__visualization_8cpp_a81560c566982ea79a937599b32bdbd05}} 
+\index{copter\_visualization.cpp@{copter\_visualization.cpp}!vehicle\_marker\_pub@{vehicle\_marker\_pub}}
+\index{vehicle\_marker\_pub@{vehicle\_marker\_pub}!copter\_visualization.cpp@{copter\_visualization.cpp}}
+\subsubsection{\texorpdfstring{vehicle\_marker\_pub}{vehicle\_marker\_pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher vehicle\+\_\+marker\+\_\+pub}
+
+
+
+Definition at line 33 of file copter\+\_\+visualization.\+cpp.
+
+\mbox{\Hypertarget{copter__visualization_8cpp_a526a863e43c0cba2f867917a933d7672}\label{copter__visualization_8cpp_a526a863e43c0cba2f867917a933d7672}} 
+\index{copter\_visualization.cpp@{copter\_visualization.cpp}!wp\_marker\_pub@{wp\_marker\_pub}}
+\index{wp\_marker\_pub@{wp\_marker\_pub}!copter\_visualization.cpp@{copter\_visualization.cpp}}
+\subsubsection{\texorpdfstring{wp\_marker\_pub}{wp\_marker\_pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher wp\+\_\+marker\+\_\+pub}
+
+
+
+Definition at line 34 of file copter\+\_\+visualization.\+cpp.
+

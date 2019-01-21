@@ -1,0 +1,71 @@
+\hypertarget{yolo__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/yolo\+\_\+layer.h File Reference}
+\label{yolo__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/yolo\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/yolo\_layer.h}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{yolo__layer_8h_a4a9ca028686e3378f9decb6a695dfe0d}{make\+\_\+yolo\+\_\+layer}} (int batch, int w, int h, int n, int total, int $\ast$mask, int classes)
+\item 
+void \mbox{\hyperlink{yolo__layer_8h_a18b3b77640f400d520ee08b84965e2b8}{forward\+\_\+yolo\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{yolo__layer_8h_a5c096eb3f0feefe9acaf569cdc1041dd}{backward\+\_\+yolo\+\_\+layer}} (const \mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{yolo__layer_8h_ac72f25cf986ba9f2caafeb03f65beb91}{resize\+\_\+yolo\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} $\ast$l, int w, int h)
+\item 
+int \mbox{\hyperlink{yolo__layer_8h_acc10677be24b962862599711817a1a2a}{yolo\+\_\+num\+\_\+detections}} (\mbox{\hyperlink{structlayer}{layer}} l, float thresh)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{yolo__layer_8h_a5c096eb3f0feefe9acaf569cdc1041dd}\label{yolo__layer_8h_a5c096eb3f0feefe9acaf569cdc1041dd}} 
+\index{yolo\_layer.h@{yolo\_layer.h}!backward\_yolo\_layer@{backward\_yolo\_layer}}
+\index{backward\_yolo\_layer@{backward\_yolo\_layer}!yolo\_layer.h@{yolo\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_yolo\_layer()}{backward\_yolo\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+yolo\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 242 of file yolo\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{yolo__layer_8h_a18b3b77640f400d520ee08b84965e2b8}\label{yolo__layer_8h_a18b3b77640f400d520ee08b84965e2b8}} 
+\index{yolo\_layer.h@{yolo\_layer.h}!forward\_yolo\_layer@{forward\_yolo\_layer}}
+\index{forward\_yolo\_layer@{forward\_yolo\_layer}!yolo\_layer.h@{yolo\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_yolo\_layer()}{forward\_yolo\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+yolo\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 132 of file yolo\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{yolo__layer_8h_a4a9ca028686e3378f9decb6a695dfe0d}\label{yolo__layer_8h_a4a9ca028686e3378f9decb6a695dfe0d}} 
+\index{yolo\_layer.h@{yolo\_layer.h}!make\_yolo\_layer@{make\_yolo\_layer}}
+\index{make\_yolo\_layer@{make\_yolo\_layer}!yolo\_layer.h@{yolo\_layer.h}}
+\subsubsection{\texorpdfstring{make\_yolo\_layer()}{make\_yolo\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+yolo\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{n,  }\item[{int}]{total,  }\item[{int $\ast$}]{mask,  }\item[{int}]{classes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file yolo\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{yolo__layer_8h_ac72f25cf986ba9f2caafeb03f65beb91}\label{yolo__layer_8h_ac72f25cf986ba9f2caafeb03f65beb91}} 
+\index{yolo\_layer.h@{yolo\_layer.h}!resize\_yolo\_layer@{resize\_yolo\_layer}}
+\index{resize\_yolo\_layer@{resize\_yolo\_layer}!yolo\_layer.h@{yolo\_layer.h}}
+\subsubsection{\texorpdfstring{resize\_yolo\_layer()}{resize\_yolo\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+yolo\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}} $\ast$}]{l,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file yolo\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{yolo__layer_8h_acc10677be24b962862599711817a1a2a}\label{yolo__layer_8h_acc10677be24b962862599711817a1a2a}} 
+\index{yolo\_layer.h@{yolo\_layer.h}!yolo\_num\_detections@{yolo\_num\_detections}}
+\index{yolo\_num\_detections@{yolo\_num\_detections}!yolo\_layer.h@{yolo\_layer.h}}
+\subsubsection{\texorpdfstring{yolo\_num\_detections()}{yolo\_num\_detections()}}
+{\footnotesize\ttfamily int yolo\+\_\+num\+\_\+detections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{float}]{thresh }\end{DoxyParamCaption})}
+
+
+
+Definition at line 275 of file yolo\+\_\+layer.\+c.
+

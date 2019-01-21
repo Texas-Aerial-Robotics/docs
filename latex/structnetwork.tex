@@ -1,0 +1,672 @@
+\hypertarget{structnetwork}{}\section{network Struct Reference}
+\label{structnetwork}\index{network@{network}}
+
+
+{\ttfamily \#include $<$darknet.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structnetwork_a1c7625720955322d05924a075d013877}{n}}
+\item 
+int \mbox{\hyperlink{structnetwork_a04f448f3f8c3f1314e2b23b429bec827}{batch}}
+\item 
+size\+\_\+t $\ast$ \mbox{\hyperlink{structnetwork_aaa4dc3920fc905e52573172d45fccd45}{seen}}
+\item 
+int $\ast$ \mbox{\hyperlink{structnetwork_a185b52d74237f3cd32d2d0186d2d2f5b}{t}}
+\item 
+float \mbox{\hyperlink{structnetwork_a7b16b097d1814258e82b58d663692875}{epoch}}
+\item 
+int \mbox{\hyperlink{structnetwork_ab30643da07e0f787ee0cd2058cd41a6e}{subdivisions}}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} $\ast$ \mbox{\hyperlink{structnetwork_a9770423f88b722bafc9d1fd3c6091d75}{layers}}
+\item 
+float $\ast$ \mbox{\hyperlink{structnetwork_a274dce0db2d5175992eb3b273ab09df7}{output}}
+\item 
+\mbox{\hyperlink{darknet_8h_a9c2ce38711c59085616b738d2aa21184}{learning\+\_\+rate\+\_\+policy}} \mbox{\hyperlink{structnetwork_a78121635a0f0c3a1d9991390b4325dc3}{policy}}
+\item 
+float \mbox{\hyperlink{structnetwork_a978d3e339536cd6bea2270d49d93c35a}{learning\+\_\+rate}}
+\item 
+float \mbox{\hyperlink{structnetwork_a495c60ef821ca0ade1c42907c8bc90bf}{momentum}}
+\item 
+float \mbox{\hyperlink{structnetwork_a9afd53b100d35dc162e48118ef4f7eea}{decay}}
+\item 
+float \mbox{\hyperlink{structnetwork_a5460d67e44c0877ca016ed12925788fe}{gamma}}
+\item 
+float \mbox{\hyperlink{structnetwork_a0d9e7af8dde42e28a7fdb0e685b2f23b}{scale}}
+\item 
+float \mbox{\hyperlink{structnetwork_ae38f864b7b9966c38f1882f468131eda}{power}}
+\item 
+int \mbox{\hyperlink{structnetwork_abaf83235b5968fb68a2dc9215cc67c8c}{time\+\_\+steps}}
+\item 
+int \mbox{\hyperlink{structnetwork_a9ed08472400f140c49ecac3ecd1def87}{step}}
+\item 
+int \mbox{\hyperlink{structnetwork_a163b931990a5ac8f456884405de2192b}{max\+\_\+batches}}
+\item 
+float $\ast$ \mbox{\hyperlink{structnetwork_a64c1fa0153559f530cc815fb6b8a95c8}{scales}}
+\item 
+int $\ast$ \mbox{\hyperlink{structnetwork_a48fb87937b7ff22cf01875d8d5807cc2}{steps}}
+\item 
+int \mbox{\hyperlink{structnetwork_a6e656092c18afdc2bcb72f87d0ed2547}{num\+\_\+steps}}
+\item 
+int \mbox{\hyperlink{structnetwork_a1e0395e7cbcd9cd93d5c8621bb1a38aa}{burn\+\_\+in}}
+\item 
+int \mbox{\hyperlink{structnetwork_a7274661135ee8efe567aef0e9c0e40f9}{adam}}
+\item 
+float \mbox{\hyperlink{structnetwork_a6c56d5eccebbfd39c085766b94cd36b7}{B1}}
+\item 
+float \mbox{\hyperlink{structnetwork_a42ea583b98356e06dca647bf95520e5c}{B2}}
+\item 
+float \mbox{\hyperlink{structnetwork_a13a150c894a1f34f08b7f8dff7808ea7}{eps}}
+\item 
+int \mbox{\hyperlink{structnetwork_a529a36505548232d049abcb84fdcf389}{inputs}}
+\item 
+int \mbox{\hyperlink{structnetwork_a5268de11127a02d86e6f517cf3b3acc9}{outputs}}
+\item 
+int \mbox{\hyperlink{structnetwork_a794927f8c4d44cd8e85ff39e0d4c9939}{truths}}
+\item 
+int \mbox{\hyperlink{structnetwork_a6769bc5e23225cecf0a46eedba29719a}{notruth}}
+\item 
+int \mbox{\hyperlink{structnetwork_a0e57f4230f8ecb07bba0c97cf8f045c7}{h}}
+\item 
+int \mbox{\hyperlink{structnetwork_a944b83cb20da2454c6092e07b9a1d3e9}{w}}
+\item 
+int \mbox{\hyperlink{structnetwork_a05014921b926874b8a362aa83d98283a}{c}}
+\item 
+int \mbox{\hyperlink{structnetwork_af98abf1cccd7bfee97b9f7eae752687c}{max\+\_\+crop}}
+\item 
+int \mbox{\hyperlink{structnetwork_a9e52bfae3a850150ed2e32c10ab11bec}{min\+\_\+crop}}
+\item 
+float \mbox{\hyperlink{structnetwork_a181329911f37d2d5adce2290683a9897}{max\+\_\+ratio}}
+\item 
+float \mbox{\hyperlink{structnetwork_a395ccde63912c9272f91ee6c9af14784}{min\+\_\+ratio}}
+\item 
+int \mbox{\hyperlink{structnetwork_a87bf27881ed88606fae1b80f9049e4ca}{center}}
+\item 
+float \mbox{\hyperlink{structnetwork_abe286813534c121ee16da09c258eaf2e}{angle}}
+\item 
+float \mbox{\hyperlink{structnetwork_acaa88cf6c30100edff5dc061bfb226bb}{aspect}}
+\item 
+float \mbox{\hyperlink{structnetwork_a609572db2c14c55c6c261844cb33fa12}{exposure}}
+\item 
+float \mbox{\hyperlink{structnetwork_a9bbb55144a6eca464fbc122f97bf1af8}{saturation}}
+\item 
+float \mbox{\hyperlink{structnetwork_ae38058a4e1ad0a334026ecbe01f101f4}{hue}}
+\item 
+int \mbox{\hyperlink{structnetwork_a89dfdaa6178f338c250d7b6631476fa1}{random}}
+\item 
+int \mbox{\hyperlink{structnetwork_a8ba8b1354e8d018ac74920eb0cd882e8}{gpu\+\_\+index}}
+\item 
+\mbox{\hyperlink{structtree}{tree}} $\ast$ \mbox{\hyperlink{structnetwork_a36d6158f07498646e400bf6f7e20a705}{hierarchy}}
+\item 
+float $\ast$ \mbox{\hyperlink{structnetwork_a8f391155a3ceb60caf07d0ee6c6a93f2}{input}}
+\item 
+float $\ast$ \mbox{\hyperlink{structnetwork_a1453c2cf9a735bde55a281d698797a05}{truth}}
+\item 
+float $\ast$ \mbox{\hyperlink{structnetwork_a7787a7dde0eea2d91b208c23cdba6286}{delta}}
+\item 
+float $\ast$ \mbox{\hyperlink{structnetwork_a624719738b94a1d55de651f5dac16b79}{workspace}}
+\item 
+int \mbox{\hyperlink{structnetwork_a32e7b55fe8dfa07391b6cdce17b4a2c1}{train}}
+\item 
+int \mbox{\hyperlink{structnetwork_a67a4b2779829a2891b1e3194b4910334}{index}}
+\item 
+float $\ast$ \mbox{\hyperlink{structnetwork_ac80b4b4eeda5cf4cc4af5c2173d0ad31}{cost}}
+\item 
+float \mbox{\hyperlink{structnetwork_ac04afd1b20edc7f8734cf2eabe4b57f0}{clip}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 429 of file darknet.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structnetwork_a7274661135ee8efe567aef0e9c0e40f9}\label{structnetwork_a7274661135ee8efe567aef0e9c0e40f9}} 
+\index{network@{network}!adam@{adam}}
+\index{adam@{adam}!network@{network}}
+\subsubsection{\texorpdfstring{adam}{adam}}
+{\footnotesize\ttfamily int network\+::adam}
+
+
+
+Definition at line 454 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_abe286813534c121ee16da09c258eaf2e}\label{structnetwork_abe286813534c121ee16da09c258eaf2e}} 
+\index{network@{network}!angle@{angle}}
+\index{angle@{angle}!network@{network}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily float network\+::angle}
+
+
+
+Definition at line 469 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_acaa88cf6c30100edff5dc061bfb226bb}\label{structnetwork_acaa88cf6c30100edff5dc061bfb226bb}} 
+\index{network@{network}!aspect@{aspect}}
+\index{aspect@{aspect}!network@{network}}
+\subsubsection{\texorpdfstring{aspect}{aspect}}
+{\footnotesize\ttfamily float network\+::aspect}
+
+
+
+Definition at line 470 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a6c56d5eccebbfd39c085766b94cd36b7}\label{structnetwork_a6c56d5eccebbfd39c085766b94cd36b7}} 
+\index{network@{network}!B1@{B1}}
+\index{B1@{B1}!network@{network}}
+\subsubsection{\texorpdfstring{B1}{B1}}
+{\footnotesize\ttfamily float network\+::\+B1}
+
+
+
+Definition at line 455 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a42ea583b98356e06dca647bf95520e5c}\label{structnetwork_a42ea583b98356e06dca647bf95520e5c}} 
+\index{network@{network}!B2@{B2}}
+\index{B2@{B2}!network@{network}}
+\subsubsection{\texorpdfstring{B2}{B2}}
+{\footnotesize\ttfamily float network\+::\+B2}
+
+
+
+Definition at line 456 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a04f448f3f8c3f1314e2b23b429bec827}\label{structnetwork_a04f448f3f8c3f1314e2b23b429bec827}} 
+\index{network@{network}!batch@{batch}}
+\index{batch@{batch}!network@{network}}
+\subsubsection{\texorpdfstring{batch}{batch}}
+{\footnotesize\ttfamily int network\+::batch}
+
+
+
+Definition at line 431 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a1e0395e7cbcd9cd93d5c8621bb1a38aa}\label{structnetwork_a1e0395e7cbcd9cd93d5c8621bb1a38aa}} 
+\index{network@{network}!burn\_in@{burn\_in}}
+\index{burn\_in@{burn\_in}!network@{network}}
+\subsubsection{\texorpdfstring{burn\_in}{burn\_in}}
+{\footnotesize\ttfamily int network\+::burn\+\_\+in}
+
+
+
+Definition at line 452 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a05014921b926874b8a362aa83d98283a}\label{structnetwork_a05014921b926874b8a362aa83d98283a}} 
+\index{network@{network}!c@{c}}
+\index{c@{c}!network@{network}}
+\subsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int network\+::c}
+
+
+
+Definition at line 463 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a87bf27881ed88606fae1b80f9049e4ca}\label{structnetwork_a87bf27881ed88606fae1b80f9049e4ca}} 
+\index{network@{network}!center@{center}}
+\index{center@{center}!network@{network}}
+\subsubsection{\texorpdfstring{center}{center}}
+{\footnotesize\ttfamily int network\+::center}
+
+
+
+Definition at line 468 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_ac04afd1b20edc7f8734cf2eabe4b57f0}\label{structnetwork_ac04afd1b20edc7f8734cf2eabe4b57f0}} 
+\index{network@{network}!clip@{clip}}
+\index{clip@{clip}!network@{network}}
+\subsubsection{\texorpdfstring{clip}{clip}}
+{\footnotesize\ttfamily float network\+::clip}
+
+
+
+Definition at line 486 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_ac80b4b4eeda5cf4cc4af5c2173d0ad31}\label{structnetwork_ac80b4b4eeda5cf4cc4af5c2173d0ad31}} 
+\index{network@{network}!cost@{cost}}
+\index{cost@{cost}!network@{network}}
+\subsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily float$\ast$ network\+::cost}
+
+
+
+Definition at line 485 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a9afd53b100d35dc162e48118ef4f7eea}\label{structnetwork_a9afd53b100d35dc162e48118ef4f7eea}} 
+\index{network@{network}!decay@{decay}}
+\index{decay@{decay}!network@{network}}
+\subsubsection{\texorpdfstring{decay}{decay}}
+{\footnotesize\ttfamily float network\+::decay}
+
+
+
+Definition at line 442 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a7787a7dde0eea2d91b208c23cdba6286}\label{structnetwork_a7787a7dde0eea2d91b208c23cdba6286}} 
+\index{network@{network}!delta@{delta}}
+\index{delta@{delta}!network@{network}}
+\subsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily float$\ast$ network\+::delta}
+
+
+
+Definition at line 481 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a7b16b097d1814258e82b58d663692875}\label{structnetwork_a7b16b097d1814258e82b58d663692875}} 
+\index{network@{network}!epoch@{epoch}}
+\index{epoch@{epoch}!network@{network}}
+\subsubsection{\texorpdfstring{epoch}{epoch}}
+{\footnotesize\ttfamily float network\+::epoch}
+
+
+
+Definition at line 434 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a13a150c894a1f34f08b7f8dff7808ea7}\label{structnetwork_a13a150c894a1f34f08b7f8dff7808ea7}} 
+\index{network@{network}!eps@{eps}}
+\index{eps@{eps}!network@{network}}
+\subsubsection{\texorpdfstring{eps}{eps}}
+{\footnotesize\ttfamily float network\+::eps}
+
+
+
+Definition at line 457 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a609572db2c14c55c6c261844cb33fa12}\label{structnetwork_a609572db2c14c55c6c261844cb33fa12}} 
+\index{network@{network}!exposure@{exposure}}
+\index{exposure@{exposure}!network@{network}}
+\subsubsection{\texorpdfstring{exposure}{exposure}}
+{\footnotesize\ttfamily float network\+::exposure}
+
+
+
+Definition at line 471 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a5460d67e44c0877ca016ed12925788fe}\label{structnetwork_a5460d67e44c0877ca016ed12925788fe}} 
+\index{network@{network}!gamma@{gamma}}
+\index{gamma@{gamma}!network@{network}}
+\subsubsection{\texorpdfstring{gamma}{gamma}}
+{\footnotesize\ttfamily float network\+::gamma}
+
+
+
+Definition at line 443 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a8ba8b1354e8d018ac74920eb0cd882e8}\label{structnetwork_a8ba8b1354e8d018ac74920eb0cd882e8}} 
+\index{network@{network}!gpu\_index@{gpu\_index}}
+\index{gpu\_index@{gpu\_index}!network@{network}}
+\subsubsection{\texorpdfstring{gpu\_index}{gpu\_index}}
+{\footnotesize\ttfamily int network\+::gpu\+\_\+index}
+
+
+
+Definition at line 476 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a0e57f4230f8ecb07bba0c97cf8f045c7}\label{structnetwork_a0e57f4230f8ecb07bba0c97cf8f045c7}} 
+\index{network@{network}!h@{h}}
+\index{h@{h}!network@{network}}
+\subsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily int network\+::h}
+
+
+
+Definition at line 463 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a36d6158f07498646e400bf6f7e20a705}\label{structnetwork_a36d6158f07498646e400bf6f7e20a705}} 
+\index{network@{network}!hierarchy@{hierarchy}}
+\index{hierarchy@{hierarchy}!network@{network}}
+\subsubsection{\texorpdfstring{hierarchy}{hierarchy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtree}{tree}}$\ast$ network\+::hierarchy}
+
+
+
+Definition at line 477 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_ae38058a4e1ad0a334026ecbe01f101f4}\label{structnetwork_ae38058a4e1ad0a334026ecbe01f101f4}} 
+\index{network@{network}!hue@{hue}}
+\index{hue@{hue}!network@{network}}
+\subsubsection{\texorpdfstring{hue}{hue}}
+{\footnotesize\ttfamily float network\+::hue}
+
+
+
+Definition at line 473 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a67a4b2779829a2891b1e3194b4910334}\label{structnetwork_a67a4b2779829a2891b1e3194b4910334}} 
+\index{network@{network}!index@{index}}
+\index{index@{index}!network@{network}}
+\subsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily int network\+::index}
+
+
+
+Definition at line 484 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a8f391155a3ceb60caf07d0ee6c6a93f2}\label{structnetwork_a8f391155a3ceb60caf07d0ee6c6a93f2}} 
+\index{network@{network}!input@{input}}
+\index{input@{input}!network@{network}}
+\subsubsection{\texorpdfstring{input}{input}}
+{\footnotesize\ttfamily float$\ast$ network\+::input}
+
+
+
+Definition at line 479 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a529a36505548232d049abcb84fdcf389}\label{structnetwork_a529a36505548232d049abcb84fdcf389}} 
+\index{network@{network}!inputs@{inputs}}
+\index{inputs@{inputs}!network@{network}}
+\subsubsection{\texorpdfstring{inputs}{inputs}}
+{\footnotesize\ttfamily int network\+::inputs}
+
+
+
+Definition at line 459 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a9770423f88b722bafc9d1fd3c6091d75}\label{structnetwork_a9770423f88b722bafc9d1fd3c6091d75}} 
+\index{network@{network}!layers@{layers}}
+\index{layers@{layers}!network@{network}}
+\subsubsection{\texorpdfstring{layers}{layers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}}$\ast$ network\+::layers}
+
+
+
+Definition at line 436 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a978d3e339536cd6bea2270d49d93c35a}\label{structnetwork_a978d3e339536cd6bea2270d49d93c35a}} 
+\index{network@{network}!learning\_rate@{learning\_rate}}
+\index{learning\_rate@{learning\_rate}!network@{network}}
+\subsubsection{\texorpdfstring{learning\_rate}{learning\_rate}}
+{\footnotesize\ttfamily float network\+::learning\+\_\+rate}
+
+
+
+Definition at line 440 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a163b931990a5ac8f456884405de2192b}\label{structnetwork_a163b931990a5ac8f456884405de2192b}} 
+\index{network@{network}!max\_batches@{max\_batches}}
+\index{max\_batches@{max\_batches}!network@{network}}
+\subsubsection{\texorpdfstring{max\_batches}{max\_batches}}
+{\footnotesize\ttfamily int network\+::max\+\_\+batches}
+
+
+
+Definition at line 448 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_af98abf1cccd7bfee97b9f7eae752687c}\label{structnetwork_af98abf1cccd7bfee97b9f7eae752687c}} 
+\index{network@{network}!max\_crop@{max\_crop}}
+\index{max\_crop@{max\_crop}!network@{network}}
+\subsubsection{\texorpdfstring{max\_crop}{max\_crop}}
+{\footnotesize\ttfamily int network\+::max\+\_\+crop}
+
+
+
+Definition at line 464 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a181329911f37d2d5adce2290683a9897}\label{structnetwork_a181329911f37d2d5adce2290683a9897}} 
+\index{network@{network}!max\_ratio@{max\_ratio}}
+\index{max\_ratio@{max\_ratio}!network@{network}}
+\subsubsection{\texorpdfstring{max\_ratio}{max\_ratio}}
+{\footnotesize\ttfamily float network\+::max\+\_\+ratio}
+
+
+
+Definition at line 466 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a9e52bfae3a850150ed2e32c10ab11bec}\label{structnetwork_a9e52bfae3a850150ed2e32c10ab11bec}} 
+\index{network@{network}!min\_crop@{min\_crop}}
+\index{min\_crop@{min\_crop}!network@{network}}
+\subsubsection{\texorpdfstring{min\_crop}{min\_crop}}
+{\footnotesize\ttfamily int network\+::min\+\_\+crop}
+
+
+
+Definition at line 465 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a395ccde63912c9272f91ee6c9af14784}\label{structnetwork_a395ccde63912c9272f91ee6c9af14784}} 
+\index{network@{network}!min\_ratio@{min\_ratio}}
+\index{min\_ratio@{min\_ratio}!network@{network}}
+\subsubsection{\texorpdfstring{min\_ratio}{min\_ratio}}
+{\footnotesize\ttfamily float network\+::min\+\_\+ratio}
+
+
+
+Definition at line 467 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a495c60ef821ca0ade1c42907c8bc90bf}\label{structnetwork_a495c60ef821ca0ade1c42907c8bc90bf}} 
+\index{network@{network}!momentum@{momentum}}
+\index{momentum@{momentum}!network@{network}}
+\subsubsection{\texorpdfstring{momentum}{momentum}}
+{\footnotesize\ttfamily float network\+::momentum}
+
+
+
+Definition at line 441 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a1c7625720955322d05924a075d013877}\label{structnetwork_a1c7625720955322d05924a075d013877}} 
+\index{network@{network}!n@{n}}
+\index{n@{n}!network@{network}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int network\+::n}
+
+
+
+Definition at line 430 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a6769bc5e23225cecf0a46eedba29719a}\label{structnetwork_a6769bc5e23225cecf0a46eedba29719a}} 
+\index{network@{network}!notruth@{notruth}}
+\index{notruth@{notruth}!network@{network}}
+\subsubsection{\texorpdfstring{notruth}{notruth}}
+{\footnotesize\ttfamily int network\+::notruth}
+
+
+
+Definition at line 462 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a6e656092c18afdc2bcb72f87d0ed2547}\label{structnetwork_a6e656092c18afdc2bcb72f87d0ed2547}} 
+\index{network@{network}!num\_steps@{num\_steps}}
+\index{num\_steps@{num\_steps}!network@{network}}
+\subsubsection{\texorpdfstring{num\_steps}{num\_steps}}
+{\footnotesize\ttfamily int network\+::num\+\_\+steps}
+
+
+
+Definition at line 451 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a274dce0db2d5175992eb3b273ab09df7}\label{structnetwork_a274dce0db2d5175992eb3b273ab09df7}} 
+\index{network@{network}!output@{output}}
+\index{output@{output}!network@{network}}
+\subsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily float$\ast$ network\+::output}
+
+
+
+Definition at line 437 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a5268de11127a02d86e6f517cf3b3acc9}\label{structnetwork_a5268de11127a02d86e6f517cf3b3acc9}} 
+\index{network@{network}!outputs@{outputs}}
+\index{outputs@{outputs}!network@{network}}
+\subsubsection{\texorpdfstring{outputs}{outputs}}
+{\footnotesize\ttfamily int network\+::outputs}
+
+
+
+Definition at line 460 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a78121635a0f0c3a1d9991390b4325dc3}\label{structnetwork_a78121635a0f0c3a1d9991390b4325dc3}} 
+\index{network@{network}!policy@{policy}}
+\index{policy@{policy}!network@{network}}
+\subsubsection{\texorpdfstring{policy}{policy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{darknet_8h_a9c2ce38711c59085616b738d2aa21184}{learning\+\_\+rate\+\_\+policy}} network\+::policy}
+
+
+
+Definition at line 438 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_ae38f864b7b9966c38f1882f468131eda}\label{structnetwork_ae38f864b7b9966c38f1882f468131eda}} 
+\index{network@{network}!power@{power}}
+\index{power@{power}!network@{network}}
+\subsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily float network\+::power}
+
+
+
+Definition at line 445 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a89dfdaa6178f338c250d7b6631476fa1}\label{structnetwork_a89dfdaa6178f338c250d7b6631476fa1}} 
+\index{network@{network}!random@{random}}
+\index{random@{random}!network@{network}}
+\subsubsection{\texorpdfstring{random}{random}}
+{\footnotesize\ttfamily int network\+::random}
+
+
+
+Definition at line 474 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a9bbb55144a6eca464fbc122f97bf1af8}\label{structnetwork_a9bbb55144a6eca464fbc122f97bf1af8}} 
+\index{network@{network}!saturation@{saturation}}
+\index{saturation@{saturation}!network@{network}}
+\subsubsection{\texorpdfstring{saturation}{saturation}}
+{\footnotesize\ttfamily float network\+::saturation}
+
+
+
+Definition at line 472 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a0d9e7af8dde42e28a7fdb0e685b2f23b}\label{structnetwork_a0d9e7af8dde42e28a7fdb0e685b2f23b}} 
+\index{network@{network}!scale@{scale}}
+\index{scale@{scale}!network@{network}}
+\subsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily float network\+::scale}
+
+
+
+Definition at line 444 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a64c1fa0153559f530cc815fb6b8a95c8}\label{structnetwork_a64c1fa0153559f530cc815fb6b8a95c8}} 
+\index{network@{network}!scales@{scales}}
+\index{scales@{scales}!network@{network}}
+\subsubsection{\texorpdfstring{scales}{scales}}
+{\footnotesize\ttfamily float$\ast$ network\+::scales}
+
+
+
+Definition at line 449 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_aaa4dc3920fc905e52573172d45fccd45}\label{structnetwork_aaa4dc3920fc905e52573172d45fccd45}} 
+\index{network@{network}!seen@{seen}}
+\index{seen@{seen}!network@{network}}
+\subsubsection{\texorpdfstring{seen}{seen}}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ network\+::seen}
+
+
+
+Definition at line 432 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a9ed08472400f140c49ecac3ecd1def87}\label{structnetwork_a9ed08472400f140c49ecac3ecd1def87}} 
+\index{network@{network}!step@{step}}
+\index{step@{step}!network@{network}}
+\subsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily int network\+::step}
+
+
+
+Definition at line 447 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a48fb87937b7ff22cf01875d8d5807cc2}\label{structnetwork_a48fb87937b7ff22cf01875d8d5807cc2}} 
+\index{network@{network}!steps@{steps}}
+\index{steps@{steps}!network@{network}}
+\subsubsection{\texorpdfstring{steps}{steps}}
+{\footnotesize\ttfamily int$\ast$ network\+::steps}
+
+
+
+Definition at line 450 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_ab30643da07e0f787ee0cd2058cd41a6e}\label{structnetwork_ab30643da07e0f787ee0cd2058cd41a6e}} 
+\index{network@{network}!subdivisions@{subdivisions}}
+\index{subdivisions@{subdivisions}!network@{network}}
+\subsubsection{\texorpdfstring{subdivisions}{subdivisions}}
+{\footnotesize\ttfamily int network\+::subdivisions}
+
+
+
+Definition at line 435 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a185b52d74237f3cd32d2d0186d2d2f5b}\label{structnetwork_a185b52d74237f3cd32d2d0186d2d2f5b}} 
+\index{network@{network}!t@{t}}
+\index{t@{t}!network@{network}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily int$\ast$ network\+::t}
+
+
+
+Definition at line 433 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_abaf83235b5968fb68a2dc9215cc67c8c}\label{structnetwork_abaf83235b5968fb68a2dc9215cc67c8c}} 
+\index{network@{network}!time\_steps@{time\_steps}}
+\index{time\_steps@{time\_steps}!network@{network}}
+\subsubsection{\texorpdfstring{time\_steps}{time\_steps}}
+{\footnotesize\ttfamily int network\+::time\+\_\+steps}
+
+
+
+Definition at line 446 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a32e7b55fe8dfa07391b6cdce17b4a2c1}\label{structnetwork_a32e7b55fe8dfa07391b6cdce17b4a2c1}} 
+\index{network@{network}!train@{train}}
+\index{train@{train}!network@{network}}
+\subsubsection{\texorpdfstring{train}{train}}
+{\footnotesize\ttfamily int network\+::train}
+
+
+
+Definition at line 483 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a1453c2cf9a735bde55a281d698797a05}\label{structnetwork_a1453c2cf9a735bde55a281d698797a05}} 
+\index{network@{network}!truth@{truth}}
+\index{truth@{truth}!network@{network}}
+\subsubsection{\texorpdfstring{truth}{truth}}
+{\footnotesize\ttfamily float$\ast$ network\+::truth}
+
+
+
+Definition at line 480 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a794927f8c4d44cd8e85ff39e0d4c9939}\label{structnetwork_a794927f8c4d44cd8e85ff39e0d4c9939}} 
+\index{network@{network}!truths@{truths}}
+\index{truths@{truths}!network@{network}}
+\subsubsection{\texorpdfstring{truths}{truths}}
+{\footnotesize\ttfamily int network\+::truths}
+
+
+
+Definition at line 461 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a944b83cb20da2454c6092e07b9a1d3e9}\label{structnetwork_a944b83cb20da2454c6092e07b9a1d3e9}} 
+\index{network@{network}!w@{w}}
+\index{w@{w}!network@{network}}
+\subsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily int network\+::w}
+
+
+
+Definition at line 463 of file darknet.\+h.
+
+\mbox{\Hypertarget{structnetwork_a624719738b94a1d55de651f5dac16b79}\label{structnetwork_a624719738b94a1d55de651f5dac16b79}} 
+\index{network@{network}!workspace@{workspace}}
+\index{workspace@{workspace}!network@{network}}
+\subsubsection{\texorpdfstring{workspace}{workspace}}
+{\footnotesize\ttfamily float$\ast$ network\+::workspace}
+
+
+
+Definition at line 482 of file darknet.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/include/\mbox{\hyperlink{darknet_8h}{darknet.\+h}}\end{DoxyCompactItemize}

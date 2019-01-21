@@ -1,0 +1,62 @@
+\hypertarget{box_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/box.h File Reference}
+\label{box_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/box.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/box.h}}
+{\ttfamily \#include \char`\"{}darknet.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdbox}{dbox}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{box_8h_a6ac422ecf58a8311afa95c9bbd701ac8}{box\+\_\+rmse}} (\mbox{\hyperlink{structbox}{box}} a, \mbox{\hyperlink{structbox}{box}} b)
+\item 
+\mbox{\hyperlink{structdbox}{dbox}} \mbox{\hyperlink{box_8h_a15facf6a91a4b408bb26ad32d0413673}{diou}} (\mbox{\hyperlink{structbox}{box}} a, \mbox{\hyperlink{structbox}{box}} b)
+\item 
+\mbox{\hyperlink{structbox}{box}} \mbox{\hyperlink{box_8h_a3f03cdff65f176b2f77ee92346f2a7fe}{decode\+\_\+box}} (\mbox{\hyperlink{structbox}{box}} b, \mbox{\hyperlink{structbox}{box}} anchor)
+\item 
+\mbox{\hyperlink{structbox}{box}} \mbox{\hyperlink{box_8h_a23847cb8fe7a4a099fa65441b9b5ed59}{encode\+\_\+box}} (\mbox{\hyperlink{structbox}{box}} b, \mbox{\hyperlink{structbox}{box}} anchor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{box_8h_a6ac422ecf58a8311afa95c9bbd701ac8}\label{box_8h_a6ac422ecf58a8311afa95c9bbd701ac8}} 
+\index{box.h@{box.h}!box\_rmse@{box\_rmse}}
+\index{box\_rmse@{box\_rmse}!box.h@{box.h}}
+\subsubsection{\texorpdfstring{box\_rmse()}{box\_rmse()}}
+{\footnotesize\ttfamily float box\+\_\+rmse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbox}{box}}}]{a,  }\item[{\mbox{\hyperlink{structbox}{box}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 184 of file box.\+c.
+
+\mbox{\Hypertarget{box_8h_a3f03cdff65f176b2f77ee92346f2a7fe}\label{box_8h_a3f03cdff65f176b2f77ee92346f2a7fe}} 
+\index{box.h@{box.h}!decode\_box@{decode\_box}}
+\index{decode\_box@{decode\_box}!box.h@{box.h}}
+\subsubsection{\texorpdfstring{decode\_box()}{decode\_box()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbox}{box}} decode\+\_\+box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbox}{box}}}]{b,  }\item[{\mbox{\hyperlink{structbox}{box}}}]{anchor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 349 of file box.\+c.
+
+\mbox{\Hypertarget{box_8h_a15facf6a91a4b408bb26ad32d0413673}\label{box_8h_a15facf6a91a4b408bb26ad32d0413673}} 
+\index{box.h@{box.h}!diou@{diou}}
+\index{diou@{diou}!box.h@{box.h}}
+\subsubsection{\texorpdfstring{diou()}{diou()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdbox}{dbox}} diou (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbox}{box}}}]{a,  }\item[{\mbox{\hyperlink{structbox}{box}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 295 of file box.\+c.
+
+\mbox{\Hypertarget{box_8h_a23847cb8fe7a4a099fa65441b9b5ed59}\label{box_8h_a23847cb8fe7a4a099fa65441b9b5ed59}} 
+\index{box.h@{box.h}!encode\_box@{encode\_box}}
+\index{encode\_box@{encode\_box}!box.h@{box.h}}
+\subsubsection{\texorpdfstring{encode\_box()}{encode\_box()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbox}{box}} encode\+\_\+box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbox}{box}}}]{b,  }\item[{\mbox{\hyperlink{structbox}{box}}}]{anchor }\end{DoxyParamCaption})}
+
+
+
+Definition at line 339 of file box.\+c.
+

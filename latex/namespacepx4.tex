@@ -1,0 +1,65 @@
+\hypertarget{namespacepx4}{}\section{px4 Namespace Reference}
+\label{namespacepx4}\index{px4@{px4}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionpx4_1_1custom__mode}{custom\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em P\+X4 custom mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacepx4_ae0bfd8420118dc5e08dce97b1e4a5cca}{define\+\_\+mode}} (enum \mbox{\hyperlink{unionpx4_1_1custom__mode_ad9d2a8e78d275f102f16fa30fd46bc82}{custom\+\_\+mode\+::\+M\+A\+I\+N\+\_\+\+M\+O\+DE}} mm, uint8\+\_\+t sm=0)
+\begin{DoxyCompactList}\small\item\em helper function to define any mode as uint32\+\_\+t constant \end{DoxyCompactList}\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacepx4_ab0934a78cd94a32af9dd05c559911b78}{define\+\_\+mode\+\_\+auto}} (enum \mbox{\hyperlink{unionpx4_1_1custom__mode_af4b9497eeaa602d1677ab9f2c2b16931}{custom\+\_\+mode\+::\+S\+U\+B\+\_\+\+M\+O\+D\+E\+\_\+\+A\+U\+TO}} sm)
+\begin{DoxyCompactList}\small\item\em helper function to define auto mode as uint32\+\_\+t constant \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepx4_ae0bfd8420118dc5e08dce97b1e4a5cca}\label{namespacepx4_ae0bfd8420118dc5e08dce97b1e4a5cca}} 
+\index{px4@{px4}!define\_mode@{define\_mode}}
+\index{define\_mode@{define\_mode}!px4@{px4}}
+\subsubsection{\texorpdfstring{define\_mode()}{define\_mode()}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t px4\+::define\+\_\+mode (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{unionpx4_1_1custom__mode_ad9d2a8e78d275f102f16fa30fd46bc82}{custom\+\_\+mode\+::\+M\+A\+I\+N\+\_\+\+M\+O\+DE}}}]{mm,  }\item[{uint8\+\_\+t}]{sm = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+helper function to define any mode as uint32\+\_\+t constant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mm} & main mode \\
+\hline
+{\em sm} & sub mode (currently used only in auto mode) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t representation 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file px4\+\_\+custom\+\_\+mode.\+h.
+
+\mbox{\Hypertarget{namespacepx4_ab0934a78cd94a32af9dd05c559911b78}\label{namespacepx4_ab0934a78cd94a32af9dd05c559911b78}} 
+\index{px4@{px4}!define\_mode\_auto@{define\_mode\_auto}}
+\index{define\_mode\_auto@{define\_mode\_auto}!px4@{px4}}
+\subsubsection{\texorpdfstring{define\_mode\_auto()}{define\_mode\_auto()}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t px4\+::define\+\_\+mode\+\_\+auto (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{unionpx4_1_1custom__mode_af4b9497eeaa602d1677ab9f2c2b16931}{custom\+\_\+mode\+::\+S\+U\+B\+\_\+\+M\+O\+D\+E\+\_\+\+A\+U\+TO}}}]{sm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+helper function to define auto mode as uint32\+\_\+t constant 
+
+Same as {\itshape define\+\_\+mode(custom\+\_\+mode\+::\+M\+A\+I\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+U\+T\+O, sm)} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sm} & auto sub mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t representation 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file px4\+\_\+custom\+\_\+mode.\+h.
+

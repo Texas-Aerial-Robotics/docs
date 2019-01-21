@@ -1,0 +1,2100 @@
+\hypertarget{group__nodelib}{}\section{Nodelib}
+\label{group__nodelib}\index{Nodelib@{Nodelib}}
+
+
+M\+A\+V\+R\+OS node implementation.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1ftf}{mavros\+::ftf}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1ftf_1_1detail}{mavros\+::ftf\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1utils}{mavros\+::utils}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavros_1_1MavlinkDiag}{mavros\+::\+Mavlink\+Diag}}
+\item 
+class \mbox{\hyperlink{classmavros_1_1MavRos}{mavros\+::\+Mav\+Ros}}
+\begin{DoxyCompactList}\small\item\em M\+A\+V\+R\+OS node class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmavros_1_1UAS}{mavros\+::\+U\+AS}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmavros_1_1UAS}{U\+AS}} for plugins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__nodelib_ga5c6dea8a8974af64cc76329a179a014d}{U\+A\+S\+\_\+\+F\+CU}}(uasobjptr)~((uasobjptr)-\/$>$fcu\+\_\+link)
+\begin{DoxyCompactList}\small\item\em helper accessor to F\+CU link interface \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__nodelib_ga51a676b860891367c27584276967f1d4}{U\+A\+S\+\_\+\+D\+I\+AG}}(uasobjptr)~((uasobjptr)-\/$>$diag\+\_\+updater)
+\begin{DoxyCompactList}\small\item\em helper accessor to diagnostic updater \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{mavros\+::ftf\+::\+Covariance3d}} = sensor\+\_\+msgs\+::\+Imu\+::\+\_\+angular\+\_\+velocity\+\_\+covariance\+\_\+type
+\begin{DoxyCompactList}\small\item\em Type matching rosmsg for 3x3 covariance matrix. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{mavros\+::ftf\+::\+Covariance6d}} = geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+::\+\_\+covariance\+\_\+type
+\begin{DoxyCompactList}\small\item\em Type matching rosmsg for 6x6 covariance matrix. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{mavros\+::ftf\+::\+Covariance9d}} = boost\+::array$<$ double, 81 $>$
+\begin{DoxyCompactList}\small\item\em Type matching rosmsg for 9x9 covariance matrix. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_gabafbfa3aa489d1c304f320a417ce91d1}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance3d}} = Eigen\+::\+Map$<$ Eigen\+::\+Matrix$<$ double, 3, 3, Eigen\+::\+Row\+Major $>$ $>$
+\begin{DoxyCompactList}\small\item\em Eigen\+::\+Map for Covariance3d. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga05212907ea66649136fdbe0ecea29224}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance3d}} = Eigen\+::\+Map$<$ const Eigen\+::\+Matrix$<$ double, 3, 3, Eigen\+::\+Row\+Major $>$ $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga5d26d0ee661868a02a4fd476856757e3}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance6d}} = Eigen\+::\+Map$<$ Eigen\+::\+Matrix$<$ double, 6, 6, Eigen\+::\+Row\+Major $>$ $>$
+\begin{DoxyCompactList}\small\item\em Eigen\+::\+Map for Covariance6d. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga5e718b36aa6575dc90187729b5c96f4c}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance6d}} = Eigen\+::\+Map$<$ const Eigen\+::\+Matrix$<$ double, 6, 6, Eigen\+::\+Row\+Major $>$ $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga69e67d58da05f220a6e938fdccdf5a07}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance9d}} = Eigen\+::\+Map$<$ Eigen\+::\+Matrix$<$ double, 9, 9, Eigen\+::\+Row\+Major $>$ $>$
+\begin{DoxyCompactList}\small\item\em Eigen\+::\+Map for Covariance9d. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga74be5c2cc6a60a7c17ab1286a1106643}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance9d}} = Eigen\+::\+Map$<$ const Eigen\+::\+Matrix$<$ double, 9, 9, Eigen\+::\+Row\+Major $>$ $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}{mavros\+::\+U\+A\+S\+::\+Connection\+Cb}} = std\+::function$<$ void(bool)$>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga823ce64cc07d60ff4b1405ca4e4b4e89}{mavros\+::\+U\+A\+S\+::lock\+\_\+guard}} = std\+::lock\+\_\+guard$<$ std\+::recursive\+\_\+mutex $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga8452368668995b87dd0cd51d4193c9ad}{mavros\+::\+U\+A\+S\+::unique\+\_\+lock}} = std\+::unique\+\_\+lock$<$ std\+::recursive\+\_\+mutex $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+T\+Y\+PE}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+T\+Y\+PE
+\item 
+using \mbox{\hyperlink{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT
+\item 
+using \mbox{\hyperlink{group__nodelib_gaa4ceb4f80ab2af120df172fcb47a7d65}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+AG}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+AG
+\item 
+using \mbox{\hyperlink{group__nodelib_ga85bd5a7930c4de36d657e1f8b890e19f}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE
+\item 
+using \mbox{\hyperlink{group__nodelib_ga866822300d407c623943a069e0db494a}{mavros\+::\+U\+A\+S\+::timesync\+\_\+mode}} = \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{utils\+::timesync\+\_\+mode}}
+\item 
+using \mbox{\hyperlink{group__nodelib_ga5f662b76cd833191017cb702a0d49986}{mavros\+::utils\+::\+Orientation\+Pair}} = std\+::pair$<$ const std\+::string, const Eigen\+::\+Quaterniond $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga510487eae2b1df3a44a6e645120b0389}{mavros\+::ftf\+::detail\+::\+Matrix6d}} = Eigen\+::\+Matrix$<$ double, 6, 6 $>$
+\begin{DoxyCompactList}\small\item\em Auxiliar matrices to Covariance transforms. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga8aed658f3bc8ce4b4d5776a82c8ef67e}{mavros\+::ftf\+::detail\+::\+Matrix9d}} = Eigen\+::\+Matrix$<$ double, 9, 9 $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{mavros\+::ftf\+::\+Static\+TF}} \{ \newline
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63a54ebbdd04042b8ac08b760aedb956d2c}{mavros\+::ftf\+::\+Static\+T\+F\+::\+N\+E\+D\+\_\+\+T\+O\+\_\+\+E\+NU}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ae769945757a52e40e0bdeffb65ef82c5}{mavros\+::ftf\+::\+Static\+T\+F\+::\+E\+N\+U\+\_\+\+T\+O\+\_\+\+N\+ED}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ab9e9881bc4e56047c35acaf00ba7a06a}{mavros\+::ftf\+::\+Static\+T\+F\+::\+A\+I\+R\+C\+R\+A\+F\+T\+\_\+\+T\+O\+\_\+\+B\+A\+S\+E\+L\+I\+NK}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ad6c3de7e2c38d9686e41a621ccfcfa86}{mavros\+::ftf\+::\+Static\+T\+F\+::\+B\+A\+S\+E\+L\+I\+N\+K\+\_\+\+T\+O\+\_\+\+A\+I\+R\+C\+R\+A\+FT}}, 
+\newline
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ac0ec6eeec303cc411db7d439dbde623c}{mavros\+::ftf\+::\+Static\+T\+F\+::\+E\+C\+E\+F\+\_\+\+T\+O\+\_\+\+E\+NU}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63a50787c17df83b45631e5bcd831ae1ee8}{mavros\+::ftf\+::\+Static\+T\+F\+::\+E\+N\+U\+\_\+\+T\+O\+\_\+\+E\+C\+EF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Orientation transform options when applying rotations to data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_gaf97e6d622ff4f400e54ebcdae75407ef}{mavros\+::ftf\+::detail\+::transform\+\_\+orientation}} (const Eigen\+::\+Quaterniond \&q, const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}} transform)
+\begin{DoxyCompactList}\small\item\em Transform representation of attitude from 1 frame to another (e.\+g. transfrom attitude from representing from base\+\_\+link -\/$>$ N\+ED to representing base\+\_\+link -\/$>$ E\+NU) \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga30dfcfe08b7c490b12664624277d2fe6}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} \mbox{\hyperlink{group__nodelib_ga767c8e2dd868f4d8bbd78c38662a17bb}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 3x3 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} \mbox{\hyperlink{group__nodelib_ga266710bc46b4a6e376a609c4486d39cb}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 6x6 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} \mbox{\hyperlink{group__nodelib_ga885808031ecb3f68701172b0e33f37cd}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 9x9 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga93f1ca2f4ebdb2423f81d88b4fa77c62}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}} transform)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} \mbox{\hyperlink{group__nodelib_ga3a1e55d923c06a8914f7fe570dd42c9b}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} \&cov, const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}} transform)
+\begin{DoxyCompactList}\small\item\em Transform 3d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} \mbox{\hyperlink{group__nodelib_gaab4caf957e54695a814cedf5fc45aeb1}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} \&cov, const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}} transform)
+\begin{DoxyCompactList}\small\item\em Transform 6d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} \mbox{\hyperlink{group__nodelib_gacfea1c0d9ca98b288f6b8f2d17bc4fc0}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} \&cov, const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}} transform)
+\begin{DoxyCompactList}\small\item\em Transform 9d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga3907cb8493e1b0c7ae33dbc1e8185a88}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Eigen\+::\+Vector3d \&map\+\_\+origin, const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}} transform)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame with additional map origin parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga3c14c70db9b58d2aef2d9f84395bb876}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+ned\+\_\+enu}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT N\+ED frame to attitude represented W\+RT E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga60f73ab88fd56337bf2572fe696d1d04}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+enu\+\_\+ned}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT E\+NU frame to attitude represented W\+RT N\+ED frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga01f847ac9369bb566b8f671ce7a9ec7c}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+aircraft\+\_\+baselink}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT aircraft frame to attitude represented W\+RT base\+\_\+link frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga52af05306da40938392b1536064458af}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+baselink\+\_\+aircraft}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT baselink frame to attitude represented W\+RT body frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga190188b4899aab8fde4d65de949535c9}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+ned\+\_\+enu}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in N\+ED to E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga789377f76104cb6f7665ad368dbba1c9}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+ned}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU to N\+ED frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_gad724ac71858730a830ae77b9dd480aaf}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+baselink}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in Aircraft frame to Baselink frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga8e8a38a1f75dd0007204a206a6745193}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+baselink\+\_\+aircraft}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in Baselink frame to Aircraft frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_gaa1d1407cbddfd1481e147680e92acab8}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+ecef\+\_\+enu}} (const T \&in, const T \&map\+\_\+origin)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+C\+EF frame to E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga8f46c9063053398c558624755757f1e2}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+ecef}} (const T \&in, const T \&map\+\_\+origin)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU frame to E\+C\+EF frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_gaabef5de6c7b391794c35c75dd1232194}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+ned}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in aircraft frame to N\+ED frame. Assumes quaternion represents rotation from aircraft frame to N\+ED frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga916fb57c10ef6a7109585245f512d4b2}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+ned\+\_\+aircraft}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in N\+ED to aircraft frame. Assumes quaternion represents rotation from N\+ED to aircraft frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga501a41c3a2de7186f4ed602a0399a75b}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+enu}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in aircraft frame to E\+NU frame. Assumes quaternion represents rotation from aircraft frame to E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga669df732714ea8b69f228efba9f05dbb}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+aircraft}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU to aircraft frame. Assumes quaternion represents rotation from E\+NU to aircraft frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga2f2546cf431334a76e19fdd3800f286d}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+baselink}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU to base\+\_\+link frame. Assumes quaternion represents rotation from E\+NU to base\+\_\+link frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga59326acc337daa1ce44d56ee6acff76b}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+baselink\+\_\+enu}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in baselink to E\+NU frame. Assumes quaternion represents rotation from basel\+\_\+link to E\+NU frame. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_ga1f1d174745db801a82766fa0839b17e1}{mavros\+::ftf\+::quaternion\+\_\+from\+\_\+rpy}} (const Eigen\+::\+Vector3d \&rpy)
+\begin{DoxyCompactList}\small\item\em Convert euler angles to quaternion. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_ga97ccf75c02bae67e6fa6fd98b804d735}{mavros\+::ftf\+::quaternion\+\_\+from\+\_\+rpy}} (const double roll, const double pitch, const double yaw)
+\begin{DoxyCompactList}\small\item\em Convert euler angles to quaternion. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga75c2e15dab0c54198e7f1e620744fb80}{mavros\+::ftf\+::quaternion\+\_\+to\+\_\+rpy}} (const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Convert quaternion to euler angles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gad1544765df8671798047de7800adb1b3}{mavros\+::ftf\+::quaternion\+\_\+to\+\_\+rpy}} (const Eigen\+::\+Quaterniond \&q, double \&roll, double \&pitch, double \&yaw)
+\begin{DoxyCompactList}\small\item\em Convert quaternion to euler angles. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group__nodelib_ga6649411f7b10eb37f33afb1d3d67dfea}{mavros\+::ftf\+::quaternion\+\_\+get\+\_\+yaw}} (const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Get Yaw angle from quaternion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gac76089b997c4e184d99bec74603a35ad}{mavros\+::ftf\+::quaternion\+\_\+to\+\_\+mavlink}} (const Eigen\+::\+Quaterniond \&q, std\+::array$<$ float, 4 $>$ \&qmsg)
+\begin{DoxyCompactList}\small\item\em Store Quaternion to M\+A\+V\+Link float\mbox{[}4\mbox{]} format. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_ga0f57da8dc483d45ac139607498cb5de4}{mavros\+::ftf\+::mavlink\+\_\+to\+\_\+quaternion}} (const std\+::array$<$ float, 4 $>$ \&q)
+\begin{DoxyCompactList}\small\item\em Convert Mavlink float\mbox{[}4\mbox{]} quaternion to Eigen. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , std\+::size\+\_\+t S\+I\+ZE$>$ }\\void \mbox{\hyperlink{group__nodelib_ga8fc39ebb720c494bf3aad9d0ccdc8c60}{mavros\+::ftf\+::covariance\+\_\+to\+\_\+mavlink}} (const T \&cov, std\+::array$<$ float, S\+I\+ZE $>$ \&covmsg)
+\begin{DoxyCompactList}\small\item\em Convert covariance matrix to M\+A\+V\+Link float\mbox{[}n\mbox{]} format. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , std\+::size\+\_\+t A\+R\+R\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{group__nodelib_ga70fe3c62c321522cd8786aa9ca163e2b}{mavros\+::ftf\+::covariance\+\_\+urt\+\_\+to\+\_\+mavlink}} (const T \&covmap, std\+::array$<$ float, A\+R\+R\+\_\+\+S\+I\+ZE $>$ \&covmsg)
+\begin{DoxyCompactList}\small\item\em Convert upper right triangular of a covariance matrix to M\+A\+V\+Link float\mbox{[}n\mbox{]} format. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga2bd453f7d2dafb3814b5312e788e2e35}{mavros\+::ftf\+::to\+\_\+eigen}} (const geometry\+\_\+msgs\+::\+Point r)
+\begin{DoxyCompactList}\small\item\em Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Point to Eigen\+::\+Vector3d. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_gaa967b677c7a130cb95621988a4987fab}{mavros\+::ftf\+::to\+\_\+eigen}} (const geometry\+\_\+msgs\+::\+Vector3 r)
+\begin{DoxyCompactList}\small\item\em Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Vector3 to Eigen\+::\+Vector3d. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_gab3357177e153e9bc233d96ac595c6a5f}{mavros\+::ftf\+::to\+\_\+eigen}} (const geometry\+\_\+msgs\+::\+Quaternion r)
+\begin{DoxyCompactList}\small\item\em Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Quaternion to Eigen\+::\+Quaterniond. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_ga7e52b64de8101152cb7da231bb6f0e6b}{mavros\+::\+Mavlink\+Diag\+::\+Mavlink\+Diag}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{group__nodelib_gae5789a005615261233f253b00366693a}{mavros\+::\+Mavlink\+Diag\+::run}} (diagnostic\+\_\+updater\+::\+Diagnostic\+Status\+Wrapper \&stat)
+\item 
+void \mbox{\hyperlink{group__nodelib_gaac672d37b57dc4d73ec73de04ea436ed}{mavros\+::\+Mavlink\+Diag\+::set\+\_\+mavconn}} (const \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Ptr}} \&link)
+\item 
+void \mbox{\hyperlink{group__nodelib_ga53b91990e409eb66ad3dfcc6cefa0435}{mavros\+::\+Mavlink\+Diag\+::set\+\_\+connection\+\_\+status}} (bool connected)
+\item 
+\mbox{\hyperlink{group__nodelib_gaa8188d2a9ae2324e2a91f2ec12077715}{mavros\+::\+Mav\+Ros\+::\+Mav\+Ros}} ()
+\item 
+\mbox{\hyperlink{group__nodelib_ga34b0d289748daac51cfc675e50def27c}{mavros\+::\+Mav\+Ros\+::$\sim$\+Mav\+Ros}} ()
+\item 
+void \mbox{\hyperlink{group__nodelib_ga0ab105c6877addaf2149bac6371746e0}{mavros\+::\+Mav\+Ros\+::spin}} ()
+\item 
+\mbox{\hyperlink{group__nodelib_ga73bb173cfb9914f380671cb0f3efb113}{mavros\+::\+U\+A\+S\+::\+U\+AS}} ()
+\item 
+\mbox{\hyperlink{group__nodelib_gab273c619e0a6433f1ea3291103ec3710}{mavros\+::\+U\+A\+S\+::$\sim$\+U\+AS}} ()
+\item 
+bool \mbox{\hyperlink{group__nodelib_gae5ac050d003fe823d5c483e7f636e91c}{mavros\+::\+U\+A\+S\+::is\+\_\+connected}} ()
+\begin{DoxyCompactList}\small\item\em Return connection status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gad353627789d9fa0e4cafb7fb8dad9b32}{mavros\+::\+U\+A\+S\+::update\+\_\+heartbeat}} (uint8\+\_\+t type\+\_\+, uint8\+\_\+t autopilot\+\_\+, uint8\+\_\+t base\+\_\+mode\+\_\+)
+\item 
+void \mbox{\hyperlink{group__nodelib_ga566ad54aab4ddea1c0e3756870fe9c91}{mavros\+::\+U\+A\+S\+::update\+\_\+connection\+\_\+status}} (bool conn\+\_\+)
+\item 
+void \mbox{\hyperlink{group__nodelib_gafb66aabf2079888fb4e1a07fcce2161c}{mavros\+::\+U\+A\+S\+::add\+\_\+connection\+\_\+change\+\_\+handler}} (\mbox{\hyperlink{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}{Connection\+Cb}} cb)
+\begin{DoxyCompactList}\small\item\em Add connection change handler callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}{M\+A\+V\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__nodelib_gaeac4cd692aff7e67498a1ad01ea95b9f}{mavros\+::\+U\+A\+S\+::get\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Returns vehicle type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}} \mbox{\hyperlink{group__nodelib_gad61deec4e10469fc9eb40dcc3a36aab1}{mavros\+::\+U\+A\+S\+::get\+\_\+autopilot}} ()
+\begin{DoxyCompactList}\small\item\em Returns autopilot type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gae941bfe1ef1afd1cb6608028a38e1c27}{mavros\+::\+U\+A\+S\+::get\+\_\+armed}} ()
+\begin{DoxyCompactList}\small\item\em Returns arming status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gae6fe5bb4dc5d02536c8b7970577b22d7}{mavros\+::\+U\+A\+S\+::get\+\_\+hil\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Returns H\+IL status. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__nodelib_ga9d8412c7b6aada6715ded8eefcd6a517}{mavros\+::\+U\+A\+S\+::get\+\_\+tgt\+\_\+system}} ()
+\begin{DoxyCompactList}\small\item\em Return communication target system. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__nodelib_ga1b874777bb6378d1fec2d3498f95884c}{mavros\+::\+U\+A\+S\+::get\+\_\+tgt\+\_\+component}} ()
+\begin{DoxyCompactList}\small\item\em Return communication target component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga87eb84159321497e07dc4c739bdb727d}{mavros\+::\+U\+A\+S\+::set\+\_\+tgt}} (uint8\+\_\+t sys, uint8\+\_\+t comp)
+\item 
+void \mbox{\hyperlink{group__nodelib_gaca39c9b4dfce83909e2bde0796564341}{mavros\+::\+U\+A\+S\+::update\+\_\+attitude\+\_\+imu\+\_\+enu}} (sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \&imu)
+\begin{DoxyCompactList}\small\item\em Store I\+MU data \mbox{[}E\+NU\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gacd6fc1ac631a90619d7f53fa5ab9b29d}{mavros\+::\+U\+A\+S\+::update\+\_\+attitude\+\_\+imu\+\_\+ned}} (sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \&imu)
+\begin{DoxyCompactList}\small\item\em Store I\+MU data \mbox{[}N\+ED\mbox{]}. \end{DoxyCompactList}\item 
+sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \mbox{\hyperlink{group__nodelib_ga191709b6e50268022d10e469a3897975}{mavros\+::\+U\+A\+S\+::get\+\_\+attitude\+\_\+imu\+\_\+enu}} ()
+\begin{DoxyCompactList}\small\item\em Get I\+MU data \mbox{[}E\+NU\mbox{]}. \end{DoxyCompactList}\item 
+sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \mbox{\hyperlink{group__nodelib_ga31440655ed2c55b927fb6e3ed66a41a1}{mavros\+::\+U\+A\+S\+::get\+\_\+attitude\+\_\+imu\+\_\+ned}} ()
+\begin{DoxyCompactList}\small\item\em Get I\+MU data \mbox{[}N\+ED\mbox{]}. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Quaternion \mbox{\hyperlink{group__nodelib_gada6bb75eadc7ce6ad379c5e3a24625b0}{mavros\+::\+U\+A\+S\+::get\+\_\+attitude\+\_\+orientation\+\_\+enu}} ()
+\begin{DoxyCompactList}\small\item\em Get Attitude orientation quaternion. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Quaternion \mbox{\hyperlink{group__nodelib_ga7524149188b866dfd044b2d6e03eb328}{mavros\+::\+U\+A\+S\+::get\+\_\+attitude\+\_\+orientation\+\_\+ned}} ()
+\begin{DoxyCompactList}\small\item\em Get Attitude orientation quaternion. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Vector3 \mbox{\hyperlink{group__nodelib_ga2386d8414c90fcd1d19832656eed1742}{mavros\+::\+U\+A\+S\+::get\+\_\+attitude\+\_\+angular\+\_\+velocity\+\_\+enu}} ()
+\begin{DoxyCompactList}\small\item\em Get angular velocity from I\+MU data. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Vector3 \mbox{\hyperlink{group__nodelib_gad8c9d0e754109b465ee25115ef55860e}{mavros\+::\+U\+A\+S\+::get\+\_\+attitude\+\_\+angular\+\_\+velocity\+\_\+ned}} ()
+\begin{DoxyCompactList}\small\item\em Get angular velocity from I\+MU data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga5230fcf5827b4a682efe35b91a66152b}{mavros\+::\+U\+A\+S\+::update\+\_\+gps\+\_\+fix\+\_\+epts}} (sensor\+\_\+msgs\+::\+Nav\+Sat\+Fix\+::\+Ptr \&fix, float eph, float epv, int fix\+\_\+type, int satellites\+\_\+visible)
+\begin{DoxyCompactList}\small\item\em Store G\+PS R\+AW data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga17cd0e13d3dce3ec697646bb543ba6e7}{mavros\+::\+U\+A\+S\+::get\+\_\+gps\+\_\+epts}} (float \&eph, float \&epv, int \&fix\+\_\+type, int \&satellites\+\_\+visible)
+\begin{DoxyCompactList}\small\item\em Returns E\+PH, E\+PV, Fix type and satellites visible. \end{DoxyCompactList}\item 
+sensor\+\_\+msgs\+::\+Nav\+Sat\+Fix\+::\+Ptr \mbox{\hyperlink{group__nodelib_gac4ba509d29c876694293856f39308625}{mavros\+::\+U\+A\+S\+::get\+\_\+gps\+\_\+fix}} ()
+\begin{DoxyCompactList}\small\item\em Retunrs last G\+PS R\+AW message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\double \mbox{\hyperlink{group__nodelib_ga4f50b74e553d2c2b2a3c4ea02213fd89}{mavros\+::\+U\+A\+S\+::geoid\+\_\+to\+\_\+ellipsoid\+\_\+height}} (T lla)
+\begin{DoxyCompactList}\small\item\em Conversion from height above geoid (A\+M\+SL) to height above ellipsoid (W\+G\+S-\/84) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\double \mbox{\hyperlink{group__nodelib_gaf8185c59b4aa8840717d676d247ea99d}{mavros\+::\+U\+A\+S\+::ellipsoid\+\_\+to\+\_\+geoid\+\_\+height}} (T lla)
+\begin{DoxyCompactList}\small\item\em Conversion from height above ellipsoid (W\+G\+S-\/84) to height above geoid (A\+M\+SL) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gab34a88daf20e38cb4ed8e26c6898704a}{mavros\+::\+U\+A\+S\+::publish\+\_\+static\+\_\+transform}} (const std\+::string \&frame\+\_\+id, const std\+::string \&child\+\_\+id, const Eigen\+::\+Affine3d \&tr)
+\begin{DoxyCompactList}\small\item\em Publishes static transform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_ga50b971d58f9196c4201a1a3213428e71}{mavros\+::\+U\+A\+S\+::set\+\_\+time\+\_\+offset}} (uint64\+\_\+t offset\+\_\+ns)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__nodelib_ga1f582ffa4b83892e65bf2abff10e86e1}{mavros\+::\+U\+A\+S\+::get\+\_\+time\+\_\+offset}} (void)
+\item 
+void \mbox{\hyperlink{group__nodelib_gafd550e12066507238346b5cf4814d688}{mavros\+::\+U\+A\+S\+::set\+\_\+timesync\+\_\+mode}} (\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} mode)
+\item 
+\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} \mbox{\hyperlink{group__nodelib_ga2284947568b4a2205a500d8c494ae7fa}{mavros\+::\+U\+A\+S\+::get\+\_\+timesync\+\_\+mode}} (void)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__nodelib_ga11f231ebf1dcdf015466ecec477c5795}{mavros\+::\+U\+A\+S\+::get\+\_\+capabilities}} ()
+\item 
+void \mbox{\hyperlink{group__nodelib_ga6e1867e65586363b66cc274a970c0660}{mavros\+::\+U\+A\+S\+::update\+\_\+capabilities}} (bool known, uint64\+\_\+t caps=0)
+\item 
+ros\+::\+Time \mbox{\hyperlink{group__nodelib_ga0fefb6563eb4fdd64b7b3ee2898f786e}{mavros\+::\+U\+A\+S\+::synchronise\+\_\+stamp}} (uint32\+\_\+t time\+\_\+boot\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Compute F\+CU message time from time\+\_\+boot\+\_\+ms or time\+\_\+usec field. \end{DoxyCompactList}\item 
+ros\+::\+Time \mbox{\hyperlink{group__nodelib_ga12c99ff6a2e51345ad813086f79bb2c1}{mavros\+::\+U\+A\+S\+::synchronise\+\_\+stamp}} (uint64\+\_\+t time\+\_\+usec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+\_\+msgs\+::\+Header \mbox{\hyperlink{group__nodelib_ga548327e4a73268424eb8a730be7e618d}{mavros\+::\+U\+A\+S\+::synchronized\+\_\+header}} (const std\+::string \&frame\+\_\+id, const T time\+\_\+stamp)
+\begin{DoxyCompactList}\small\item\em Create message header from time\+\_\+boot\+\_\+ms or time\+\_\+usec stamps and frame\+\_\+id. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \+\_\+T $>$ }\\void \mbox{\hyperlink{group__nodelib_ga1fb94a2e20412126b42bcb872a7d0845}{mavros\+::\+U\+A\+S\+::msg\+\_\+set\+\_\+target}} (\+\_\+T \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+bool \mbox{\hyperlink{group__nodelib_ga1ed3e59972054c99c9c5d7205bdbe3bc}{mavros\+::\+U\+A\+S\+::is\+\_\+my\+\_\+target}} (uint8\+\_\+t sysid, uint8\+\_\+t compid)
+\begin{DoxyCompactList}\small\item\em Check that sys/comp id\textquotesingle{}s is my target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gaed7b8a1d25613984a83837958b0dde67}{mavros\+::\+U\+A\+S\+::is\+\_\+my\+\_\+target}} (uint8\+\_\+t sysid)
+\begin{DoxyCompactList}\small\item\em Check that system id is my target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gad1a57410bba40929fd2aa443e8706695}{mavros\+::\+U\+A\+S\+::is\+\_\+ardupilotmega}} ()
+\begin{DoxyCompactList}\small\item\em Check that F\+CU is A\+PM. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_ga03c6f1128530da35612a7d40eb5cb5ad}{mavros\+::\+U\+A\+S\+::is\+\_\+px4}} ()
+\begin{DoxyCompactList}\small\item\em Check that F\+CU is P\+X4. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{group__nodelib_gaa60e637dbc000f32038c9d8ad58c678a}{mavros\+::\+U\+A\+S\+::str\+\_\+mode\+\_\+v10}} (uint8\+\_\+t base\+\_\+mode, uint32\+\_\+t custom\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Represent F\+CU mode as string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__nodelib_gaa280a5a875442cf0683860ff5849916a}{mavros\+::\+U\+A\+S\+::cmode\+\_\+from\+\_\+str}} (std\+::string cmode\+\_\+str, uint32\+\_\+t \&custom\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Lookup custom mode for given string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{group__nodelib_ga9e44e56802676785fc349d1d5b808b4c}{mavros\+::utils\+::to\+\_\+string}} (M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON \mbox{\hyperlink{structorientation}{orientation}})
+\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_ga4a6acaf5ab9bea03955ceb53971e2aab}{mavros\+::utils\+::sensor\+\_\+orientation\+\_\+matching}} (M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON \mbox{\hyperlink{structorientation}{orientation}})
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_gae43f4bc89e45c8218d19cce11c2092bc}{mavros\+::utils\+::to\+\_\+string}} (M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_ga7867559a9a91c6dbc4c7e32e6cc3e018}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}{M\+A\+V\+\_\+\+T\+Y\+PE}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_ga6c5689b022d0d0b05dfae454aa234013}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}{M\+A\+V\+\_\+\+S\+T\+A\+TE}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_ga84bd1657cfa53e03354e352f2e90e993}{mavros\+::utils\+::to\+\_\+string}} (A\+D\+S\+B\+\_\+\+A\+L\+T\+I\+T\+U\+D\+E\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_gabc30a3ebb411640d92d95e1e2e50be24}{mavros\+::utils\+::to\+\_\+string}} (A\+D\+S\+B\+\_\+\+E\+M\+I\+T\+T\+E\+R\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_ga0e38ef0fd30a43511190d569fdca799a}{mavros\+::utils\+::to\+\_\+string}} (M\+A\+V\+\_\+\+E\+S\+T\+I\+M\+A\+T\+O\+R\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_gacb77da537287a4ebf732b8b04832466e}{mavros\+::utils\+::to\+\_\+string}} (G\+P\+S\+\_\+\+F\+I\+X\+\_\+\+T\+Y\+PE e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_ga239f977f7399f313bdb3bdb5b10d5e82}{mavros\+::utils\+::to\+\_\+string}} (M\+A\+V\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+R\+E\+S\+U\+LT e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_gab4f14da7e17442ff8985ce2789c9a298}{mavros\+::utils\+::to\+\_\+string}} (\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{M\+A\+V\+\_\+\+F\+R\+A\+ME}} e)
+\item 
+std\+::string \mbox{\hyperlink{group__nodelib_gaaea3adb4b5c17eaa45a8088779b1a8fc}{mavros\+::utils\+::to\+\_\+string}} (M\+A\+V\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+N\+S\+OR e)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Ptr}} \mbox{\hyperlink{group__nodelib_gafc058c8fb3e90f26a88fdd808e1b3dac}{mavros\+::\+U\+A\+S\+::fcu\+\_\+link}}
+\begin{DoxyCompactList}\small\item\em M\+A\+V\+Link F\+CU device conection. \end{DoxyCompactList}\item 
+diagnostic\+\_\+updater\+::\+Updater \mbox{\hyperlink{group__nodelib_ga57e8229b5f18563820ff4ee5335d57a5}{mavros\+::\+U\+A\+S\+::diag\+\_\+updater}}
+\begin{DoxyCompactList}\small\item\em Mavros diagnostic updater. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Geographic\+Lib\+::\+Geoid $>$ \mbox{\hyperlink{group__nodelib_ga35622da9e1bf22e43b269fbcbce65c40}{mavros\+::\+U\+A\+S\+::egm96\+\_\+5}}
+\begin{DoxyCompactList}\small\item\em Geoid dataset used to convert between A\+M\+SL and W\+G\+S-\/84. \end{DoxyCompactList}\item 
+tf2\+\_\+ros\+::\+Buffer \mbox{\hyperlink{group__nodelib_ga9c221ed548579fd2008fd1ac4d2b13e3}{mavros\+::\+U\+A\+S\+::tf2\+\_\+buffer}}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Listener \mbox{\hyperlink{group__nodelib_gaa3606f3a1043f5a4666d2d922cbb170a}{mavros\+::\+U\+A\+S\+::tf2\+\_\+listener}}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Broadcaster \mbox{\hyperlink{group__nodelib_gaea0896a0daef68618142861b79395156}{mavros\+::\+U\+A\+S\+::tf2\+\_\+broadcaster}}
+\item 
+tf2\+\_\+ros\+::\+Static\+Transform\+Broadcaster \mbox{\hyperlink{group__nodelib_gad3a9ec1f5de439f1c43ade0b851bae38}{mavros\+::\+U\+A\+S\+::tf2\+\_\+static\+\_\+broadcaster}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+A\+V\+R\+OS node implementation. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__nodelib_ga51a676b860891367c27584276967f1d4}\label{group__nodelib_ga51a676b860891367c27584276967f1d4}} 
+\index{Nodelib@{Nodelib}!UAS\_DIAG@{UAS\_DIAG}}
+\index{UAS\_DIAG@{UAS\_DIAG}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{UAS\_DIAG}{UAS\_DIAG}}
+{\footnotesize\ttfamily \#define U\+A\+S\+\_\+\+D\+I\+AG(\begin{DoxyParamCaption}\item[{}]{uasobjptr }\end{DoxyParamCaption})~((uasobjptr)-\/$>$diag\+\_\+updater)}
+
+
+
+helper accessor to diagnostic updater 
+
+
+
+Definition at line 47 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga5c6dea8a8974af64cc76329a179a014d}\label{group__nodelib_ga5c6dea8a8974af64cc76329a179a014d}} 
+\index{Nodelib@{Nodelib}!UAS\_FCU@{UAS\_FCU}}
+\index{UAS\_FCU@{UAS\_FCU}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{UAS\_FCU}{UAS\_FCU}}
+{\footnotesize\ttfamily \#define U\+A\+S\+\_\+\+F\+CU(\begin{DoxyParamCaption}\item[{}]{uasobjptr }\end{DoxyParamCaption})~((uasobjptr)-\/$>$fcu\+\_\+link)}
+
+
+
+helper accessor to F\+CU link interface 
+
+
+
+Definition at line 41 of file mavros\+\_\+uas.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}\label{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}} 
+\index{Nodelib@{Nodelib}!ConnectionCb@{ConnectionCb}}
+\index{ConnectionCb@{ConnectionCb}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{ConnectionCb}{ConnectionCb}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}{mavros\+::\+U\+A\+S\+::\+Connection\+Cb}} =  std\+::function$<$void(bool)$>$}
+
+
+
+Definition at line 68 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}\label{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}} 
+\index{Nodelib@{Nodelib}!Covariance3d@{Covariance3d}}
+\index{Covariance3d@{Covariance3d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{Covariance3d}{Covariance3d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{mavros\+::ftf\+::\+Covariance3d}} = typedef sensor\+\_\+msgs\+::\+Imu\+::\+\_\+angular\+\_\+velocity\+\_\+covariance\+\_\+type}
+
+
+
+Type matching rosmsg for 3x3 covariance matrix. 
+
+
+
+Definition at line 37 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}\label{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}} 
+\index{Nodelib@{Nodelib}!Covariance6d@{Covariance6d}}
+\index{Covariance6d@{Covariance6d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{Covariance6d}{Covariance6d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{mavros\+::ftf\+::\+Covariance6d}} = typedef geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+::\+\_\+covariance\+\_\+type}
+
+
+
+Type matching rosmsg for 6x6 covariance matrix. 
+
+
+
+Definition at line 40 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}\label{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}} 
+\index{Nodelib@{Nodelib}!Covariance9d@{Covariance9d}}
+\index{Covariance9d@{Covariance9d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{Covariance9d}{Covariance9d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{mavros\+::ftf\+::\+Covariance9d}} = typedef boost\+::array$<$double, 81$>$}
+
+
+
+Type matching rosmsg for 9x9 covariance matrix. 
+
+
+
+Definition at line 43 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga05212907ea66649136fdbe0ecea29224}\label{group__nodelib_ga05212907ea66649136fdbe0ecea29224}} 
+\index{Nodelib@{Nodelib}!EigenMapConstCovariance3d@{EigenMapConstCovariance3d}}
+\index{EigenMapConstCovariance3d@{EigenMapConstCovariance3d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{EigenMapConstCovariance3d}{EigenMapConstCovariance3d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga05212907ea66649136fdbe0ecea29224}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance3d}} = typedef Eigen\+::\+Map$<$const Eigen\+::\+Matrix$<$double, 3, 3, Eigen\+::\+Row\+Major$>$ $>$}
+
+
+
+Definition at line 47 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga5e718b36aa6575dc90187729b5c96f4c}\label{group__nodelib_ga5e718b36aa6575dc90187729b5c96f4c}} 
+\index{Nodelib@{Nodelib}!EigenMapConstCovariance6d@{EigenMapConstCovariance6d}}
+\index{EigenMapConstCovariance6d@{EigenMapConstCovariance6d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{EigenMapConstCovariance6d}{EigenMapConstCovariance6d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga5e718b36aa6575dc90187729b5c96f4c}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance6d}} = typedef Eigen\+::\+Map$<$const Eigen\+::\+Matrix$<$double, 6, 6, Eigen\+::\+Row\+Major$>$ $>$}
+
+
+
+Definition at line 51 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga74be5c2cc6a60a7c17ab1286a1106643}\label{group__nodelib_ga74be5c2cc6a60a7c17ab1286a1106643}} 
+\index{Nodelib@{Nodelib}!EigenMapConstCovariance9d@{EigenMapConstCovariance9d}}
+\index{EigenMapConstCovariance9d@{EigenMapConstCovariance9d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{EigenMapConstCovariance9d}{EigenMapConstCovariance9d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga74be5c2cc6a60a7c17ab1286a1106643}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance9d}} = typedef Eigen\+::\+Map$<$const Eigen\+::\+Matrix$<$double, 9, 9, Eigen\+::\+Row\+Major$>$ $>$}
+
+
+
+Definition at line 55 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gabafbfa3aa489d1c304f320a417ce91d1}\label{group__nodelib_gabafbfa3aa489d1c304f320a417ce91d1}} 
+\index{Nodelib@{Nodelib}!EigenMapCovariance3d@{EigenMapCovariance3d}}
+\index{EigenMapCovariance3d@{EigenMapCovariance3d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{EigenMapCovariance3d}{EigenMapCovariance3d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_gabafbfa3aa489d1c304f320a417ce91d1}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance3d}} = typedef Eigen\+::\+Map$<$Eigen\+::\+Matrix$<$double, 3, 3, Eigen\+::\+Row\+Major$>$ $>$}
+
+
+
+Eigen\+::\+Map for Covariance3d. 
+
+
+
+Definition at line 46 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga5d26d0ee661868a02a4fd476856757e3}\label{group__nodelib_ga5d26d0ee661868a02a4fd476856757e3}} 
+\index{Nodelib@{Nodelib}!EigenMapCovariance6d@{EigenMapCovariance6d}}
+\index{EigenMapCovariance6d@{EigenMapCovariance6d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{EigenMapCovariance6d}{EigenMapCovariance6d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga5d26d0ee661868a02a4fd476856757e3}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance6d}} = typedef Eigen\+::\+Map$<$Eigen\+::\+Matrix$<$double, 6, 6, Eigen\+::\+Row\+Major$>$ $>$}
+
+
+
+Eigen\+::\+Map for Covariance6d. 
+
+
+
+Definition at line 50 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga69e67d58da05f220a6e938fdccdf5a07}\label{group__nodelib_ga69e67d58da05f220a6e938fdccdf5a07}} 
+\index{Nodelib@{Nodelib}!EigenMapCovariance9d@{EigenMapCovariance9d}}
+\index{EigenMapCovariance9d@{EigenMapCovariance9d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{EigenMapCovariance9d}{EigenMapCovariance9d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga69e67d58da05f220a6e938fdccdf5a07}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance9d}} = typedef Eigen\+::\+Map$<$Eigen\+::\+Matrix$<$double, 9, 9, Eigen\+::\+Row\+Major$>$ $>$}
+
+
+
+Eigen\+::\+Map for Covariance9d. 
+
+
+
+Definition at line 54 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga823ce64cc07d60ff4b1405ca4e4b4e89}\label{group__nodelib_ga823ce64cc07d60ff4b1405ca4e4b4e89}} 
+\index{Nodelib@{Nodelib}!lock\_guard@{lock\_guard}}
+\index{lock\_guard@{lock\_guard}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{lock\_guard}{lock\_guard}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga823ce64cc07d60ff4b1405ca4e4b4e89}{mavros\+::\+U\+A\+S\+::lock\+\_\+guard}} =  std\+::lock\+\_\+guard$<$std\+::recursive\+\_\+mutex$>$}
+
+
+
+Definition at line 69 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga510487eae2b1df3a44a6e645120b0389}\label{group__nodelib_ga510487eae2b1df3a44a6e645120b0389}} 
+\index{Nodelib@{Nodelib}!Matrix6d@{Matrix6d}}
+\index{Matrix6d@{Matrix6d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{Matrix6d}{Matrix6d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga510487eae2b1df3a44a6e645120b0389}{mavros\+::ftf\+::detail\+::\+Matrix6d}} = typedef Eigen\+::\+Matrix$<$double, 6, 6$>$}
+
+
+
+Auxiliar matrices to Covariance transforms. 
+
+
+
+Definition at line 62 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga8aed658f3bc8ce4b4d5776a82c8ef67e}\label{group__nodelib_ga8aed658f3bc8ce4b4d5776a82c8ef67e}} 
+\index{Nodelib@{Nodelib}!Matrix9d@{Matrix9d}}
+\index{Matrix9d@{Matrix9d}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{Matrix9d}{Matrix9d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga8aed658f3bc8ce4b4d5776a82c8ef67e}{mavros\+::ftf\+::detail\+::\+Matrix9d}} = typedef Eigen\+::\+Matrix$<$double, 9, 9$>$}
+
+
+
+Definition at line 63 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}\label{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}} 
+\index{Nodelib@{Nodelib}!MAV\_AUTOPILOT@{MAV\_AUTOPILOT}}
+\index{MAV\_AUTOPILOT@{MAV\_AUTOPILOT}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{MAV\_AUTOPILOT}{MAV\_AUTOPILOT}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}} =  mavlink\+::common\+::\+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}
+
+
+
+Definition at line 74 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaa4ceb4f80ab2af120df172fcb47a7d65}\label{group__nodelib_gaa4ceb4f80ab2af120df172fcb47a7d65}} 
+\index{Nodelib@{Nodelib}!MAV\_MODE\_FLAG@{MAV\_MODE\_FLAG}}
+\index{MAV\_MODE\_FLAG@{MAV\_MODE\_FLAG}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{MAV\_MODE\_FLAG}{MAV\_MODE\_FLAG}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_gaa4ceb4f80ab2af120df172fcb47a7d65}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+AG}} =  mavlink\+::common\+::\+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+F\+L\+AG}
+
+
+
+Definition at line 75 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga85bd5a7930c4de36d657e1f8b890e19f}\label{group__nodelib_ga85bd5a7930c4de36d657e1f8b890e19f}} 
+\index{Nodelib@{Nodelib}!MAV\_STATE@{MAV\_STATE}}
+\index{MAV\_STATE@{MAV\_STATE}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{MAV\_STATE}{MAV\_STATE}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga85bd5a7930c4de36d657e1f8b890e19f}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE}} =  mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+T\+A\+TE}
+
+
+
+Definition at line 76 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}\label{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}} 
+\index{Nodelib@{Nodelib}!MAV\_TYPE@{MAV\_TYPE}}
+\index{MAV\_TYPE@{MAV\_TYPE}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{MAV\_TYPE}{MAV\_TYPE}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}{mavros\+::\+U\+A\+S\+::\+M\+A\+V\+\_\+\+T\+Y\+PE}} =  mavlink\+::common\+::\+M\+A\+V\+\_\+\+T\+Y\+PE}
+
+
+
+Definition at line 73 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga5f662b76cd833191017cb702a0d49986}\label{group__nodelib_ga5f662b76cd833191017cb702a0d49986}} 
+\index{Nodelib@{Nodelib}!OrientationPair@{OrientationPair}}
+\index{OrientationPair@{OrientationPair}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{OrientationPair}{OrientationPair}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga5f662b76cd833191017cb702a0d49986}{mavros\+::utils\+::\+Orientation\+Pair}} = typedef std\+::pair$<$const std\+::string, const Eigen\+::\+Quaterniond$>$}
+
+
+
+Definition at line 27 of file enum\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga866822300d407c623943a069e0db494a}\label{group__nodelib_ga866822300d407c623943a069e0db494a}} 
+\index{Nodelib@{Nodelib}!timesync\_mode@{timesync\_mode}}
+\index{timesync\_mode@{timesync\_mode}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{timesync\_mode}{timesync\_mode}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{mavros\+::\+U\+A\+S\+::timesync\+\_\+mode}} =  \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{utils\+::timesync\+\_\+mode}}}
+
+
+
+Definition at line 77 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga8452368668995b87dd0cd51d4193c9ad}\label{group__nodelib_ga8452368668995b87dd0cd51d4193c9ad}} 
+\index{Nodelib@{Nodelib}!unique\_lock@{unique\_lock}}
+\index{unique\_lock@{unique\_lock}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{unique\_lock}{unique\_lock}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{group__nodelib_ga8452368668995b87dd0cd51d4193c9ad}{mavros\+::\+U\+A\+S\+::unique\+\_\+lock}} =  std\+::unique\+\_\+lock$<$std\+::recursive\+\_\+mutex$>$}
+
+
+
+Definition at line 70 of file mavros\+\_\+uas.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__nodelib_gacff0983128574bbbe115917b13e57a63}\label{group__nodelib_gacff0983128574bbbe115917b13e57a63}} 
+\index{Nodelib@{Nodelib}!StaticTF@{StaticTF}}
+\index{StaticTF@{StaticTF}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{StaticTF}{StaticTF}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{mavros\+::ftf\+::\+Static\+TF}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Orientation transform options when applying rotations to data. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NED\_TO\_ENU@{NED\_TO\_ENU}!Nodelib@{Nodelib}}\index{Nodelib@{Nodelib}!NED\_TO\_ENU@{NED\_TO\_ENU}}}\mbox{\Hypertarget{group__nodelib_ggacff0983128574bbbe115917b13e57a63a54ebbdd04042b8ac08b760aedb956d2c}\label{group__nodelib_ggacff0983128574bbbe115917b13e57a63a54ebbdd04042b8ac08b760aedb956d2c}} 
+N\+E\+D\+\_\+\+T\+O\+\_\+\+E\+NU&will change orientation from being expressed W\+RT N\+ED frame to W\+RT E\+NU frame \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENU\_TO\_NED@{ENU\_TO\_NED}!Nodelib@{Nodelib}}\index{Nodelib@{Nodelib}!ENU\_TO\_NED@{ENU\_TO\_NED}}}\mbox{\Hypertarget{group__nodelib_ggacff0983128574bbbe115917b13e57a63ae769945757a52e40e0bdeffb65ef82c5}\label{group__nodelib_ggacff0983128574bbbe115917b13e57a63ae769945757a52e40e0bdeffb65ef82c5}} 
+E\+N\+U\+\_\+\+T\+O\+\_\+\+N\+ED&change from expressed W\+RT E\+NU frame to W\+RT N\+ED frame \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AIRCRAFT\_TO\_BASELINK@{AIRCRAFT\_TO\_BASELINK}!Nodelib@{Nodelib}}\index{Nodelib@{Nodelib}!AIRCRAFT\_TO\_BASELINK@{AIRCRAFT\_TO\_BASELINK}}}\mbox{\Hypertarget{group__nodelib_ggacff0983128574bbbe115917b13e57a63ab9e9881bc4e56047c35acaf00ba7a06a}\label{group__nodelib_ggacff0983128574bbbe115917b13e57a63ab9e9881bc4e56047c35acaf00ba7a06a}} 
+A\+I\+R\+C\+R\+A\+F\+T\+\_\+\+T\+O\+\_\+\+B\+A\+S\+E\+L\+I\+NK&change from expressed W\+RT aircraft frame to W\+RT to baselink frame \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BASELINK\_TO\_AIRCRAFT@{BASELINK\_TO\_AIRCRAFT}!Nodelib@{Nodelib}}\index{Nodelib@{Nodelib}!BASELINK\_TO\_AIRCRAFT@{BASELINK\_TO\_AIRCRAFT}}}\mbox{\Hypertarget{group__nodelib_ggacff0983128574bbbe115917b13e57a63ad6c3de7e2c38d9686e41a621ccfcfa86}\label{group__nodelib_ggacff0983128574bbbe115917b13e57a63ad6c3de7e2c38d9686e41a621ccfcfa86}} 
+B\+A\+S\+E\+L\+I\+N\+K\+\_\+\+T\+O\+\_\+\+A\+I\+R\+C\+R\+A\+FT&change from expressed W\+RT baselnk to W\+RT aircraft \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ECEF\_TO\_ENU@{ECEF\_TO\_ENU}!Nodelib@{Nodelib}}\index{Nodelib@{Nodelib}!ECEF\_TO\_ENU@{ECEF\_TO\_ENU}}}\mbox{\Hypertarget{group__nodelib_ggacff0983128574bbbe115917b13e57a63ac0ec6eeec303cc411db7d439dbde623c}\label{group__nodelib_ggacff0983128574bbbe115917b13e57a63ac0ec6eeec303cc411db7d439dbde623c}} 
+E\+C\+E\+F\+\_\+\+T\+O\+\_\+\+E\+NU&change from expressed W\+RT E\+C\+EF frame to W\+RT E\+NU frame \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENU\_TO\_ECEF@{ENU\_TO\_ECEF}!Nodelib@{Nodelib}}\index{Nodelib@{Nodelib}!ENU\_TO\_ECEF@{ENU\_TO\_ECEF}}}\mbox{\Hypertarget{group__nodelib_ggacff0983128574bbbe115917b13e57a63a50787c17df83b45631e5bcd831ae1ee8}\label{group__nodelib_ggacff0983128574bbbe115917b13e57a63a50787c17df83b45631e5bcd831ae1ee8}} 
+E\+N\+U\+\_\+\+T\+O\+\_\+\+E\+C\+EF&change from expressed W\+RT E\+NU frame to W\+RT E\+C\+EF frame \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 60 of file frame\+\_\+tf.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__nodelib_gafb66aabf2079888fb4e1a07fcce2161c}\label{group__nodelib_gafb66aabf2079888fb4e1a07fcce2161c}} 
+\index{Nodelib@{Nodelib}!add\_connection\_change\_handler@{add\_connection\_change\_handler}}
+\index{add\_connection\_change\_handler@{add\_connection\_change\_handler}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{add\_connection\_change\_handler()}{add\_connection\_change\_handler()}}
+{\footnotesize\ttfamily void U\+A\+S\+::add\+\_\+connection\+\_\+change\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__nodelib_gae26d7ffaa66c0d7996857ca12600dab5}{U\+A\+S\+::\+Connection\+Cb}}}]{cb }\end{DoxyParamCaption})}
+
+
+
+Add connection change handler callback. 
+
+
+
+Definition at line 79 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gaa280a5a875442cf0683860ff5849916a}\label{group__nodelib_gaa280a5a875442cf0683860ff5849916a}} 
+\index{Nodelib@{Nodelib}!cmode\_from\_str@{cmode\_from\_str}}
+\index{cmode\_from\_str@{cmode\_from\_str}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{cmode\_from\_str()}{cmode\_from\_str()}}
+{\footnotesize\ttfamily bool U\+A\+S\+::cmode\+\_\+from\+\_\+str (\begin{DoxyParamCaption}\item[{std\+::string}]{cmode\+\_\+str,  }\item[{uint32\+\_\+t \&}]{custom\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Lookup custom mode for given string. 
+
+Complimentary to {\itshape \mbox{\hyperlink{group__nodelib_gaa60e637dbc000f32038c9d8ad58c678a}{str\+\_\+mode\+\_\+v10()}}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cmode\+\_\+str} & string representation of mode \\
+\hline
+\mbox{\texttt{ out}}  & {\em custom\+\_\+mode} & decoded value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 250 of file uas\+\_\+stringify.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga8fc39ebb720c494bf3aad9d0ccdc8c60}\label{group__nodelib_ga8fc39ebb720c494bf3aad9d0ccdc8c60}} 
+\index{Nodelib@{Nodelib}!covariance\_to\_mavlink@{covariance\_to\_mavlink}}
+\index{covariance\_to\_mavlink@{covariance\_to\_mavlink}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{covariance\_to\_mavlink()}{covariance\_to\_mavlink()}}
+{\footnotesize\ttfamily template$<$class T , std\+::size\+\_\+t S\+I\+ZE$>$ \\
+void mavros\+::ftf\+::covariance\+\_\+to\+\_\+mavlink (\begin{DoxyParamCaption}\item[{const T \&}]{cov,  }\item[{std\+::array$<$ float, S\+I\+ZE $>$ \&}]{covmsg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert covariance matrix to M\+A\+V\+Link float\mbox{[}n\mbox{]} format. 
+
+
+
+Definition at line 364 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga70fe3c62c321522cd8786aa9ca163e2b}\label{group__nodelib_ga70fe3c62c321522cd8786aa9ca163e2b}} 
+\index{Nodelib@{Nodelib}!covariance\_urt\_to\_mavlink@{covariance\_urt\_to\_mavlink}}
+\index{covariance\_urt\_to\_mavlink@{covariance\_urt\_to\_mavlink}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{covariance\_urt\_to\_mavlink()}{covariance\_urt\_to\_mavlink()}}
+{\footnotesize\ttfamily template$<$class T , std\+::size\+\_\+t A\+R\+R\+\_\+\+S\+I\+ZE$>$ \\
+void mavros\+::ftf\+::covariance\+\_\+urt\+\_\+to\+\_\+mavlink (\begin{DoxyParamCaption}\item[{const T \&}]{covmap,  }\item[{std\+::array$<$ float, A\+R\+R\+\_\+\+S\+I\+ZE $>$ \&}]{covmsg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert upper right triangular of a covariance matrix to M\+A\+V\+Link float\mbox{[}n\mbox{]} format. 
+
+
+
+Definition at line 373 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaf8185c59b4aa8840717d676d247ea99d}\label{group__nodelib_gaf8185c59b4aa8840717d676d247ea99d}} 
+\index{Nodelib@{Nodelib}!ellipsoid\_to\_geoid\_height@{ellipsoid\_to\_geoid\_height}}
+\index{ellipsoid\_to\_geoid\_height@{ellipsoid\_to\_geoid\_height}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{ellipsoid\_to\_geoid\_height()}{ellipsoid\_to\_geoid\_height()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double mavros\+::\+U\+A\+S\+::ellipsoid\+\_\+to\+\_\+geoid\+\_\+height (\begin{DoxyParamCaption}\item[{T}]{lla }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Conversion from height above ellipsoid (W\+G\+S-\/84) to height above geoid (A\+M\+SL) 
+
+
+
+Definition at line 259 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga4f50b74e553d2c2b2a3c4ea02213fd89}\label{group__nodelib_ga4f50b74e553d2c2b2a3c4ea02213fd89}} 
+\index{Nodelib@{Nodelib}!geoid\_to\_ellipsoid\_height@{geoid\_to\_ellipsoid\_height}}
+\index{geoid\_to\_ellipsoid\_height@{geoid\_to\_ellipsoid\_height}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{geoid\_to\_ellipsoid\_height()}{geoid\_to\_ellipsoid\_height()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double mavros\+::\+U\+A\+S\+::geoid\+\_\+to\+\_\+ellipsoid\+\_\+height (\begin{DoxyParamCaption}\item[{T}]{lla }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Conversion from height above geoid (A\+M\+SL) to height above ellipsoid (W\+G\+S-\/84) 
+
+
+
+Definition at line 246 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gae941bfe1ef1afd1cb6608028a38e1c27}\label{group__nodelib_gae941bfe1ef1afd1cb6608028a38e1c27}} 
+\index{Nodelib@{Nodelib}!get\_armed@{get\_armed}}
+\index{get\_armed@{get\_armed}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_armed()}{get\_armed()}}
+{\footnotesize\ttfamily bool mavros\+::\+U\+A\+S\+::get\+\_\+armed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns arming status. 
+
+\begin{DoxyNote}{Note}
+There may be race condition between S\+E\+T\+\_\+\+M\+O\+DE and H\+E\+A\+R\+T\+B\+E\+AT. 
+\end{DoxyNote}
+
+
+Definition at line 137 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga2386d8414c90fcd1d19832656eed1742}\label{group__nodelib_ga2386d8414c90fcd1d19832656eed1742}} 
+\index{Nodelib@{Nodelib}!get\_attitude\_angular\_velocity\_enu@{get\_attitude\_angular\_velocity\_enu}}
+\index{get\_attitude\_angular\_velocity\_enu@{get\_attitude\_angular\_velocity\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_attitude\_angular\_velocity\_enu()}{get\_attitude\_angular\_velocity\_enu()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Vector3 U\+A\+S\+::get\+\_\+attitude\+\_\+angular\+\_\+velocity\+\_\+enu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get angular velocity from I\+MU data. 
+
+\begin{DoxyReturn}{Returns}
+vector3 \mbox{[}E\+NU\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gad8c9d0e754109b465ee25115ef55860e}\label{group__nodelib_gad8c9d0e754109b465ee25115ef55860e}} 
+\index{Nodelib@{Nodelib}!get\_attitude\_angular\_velocity\_ned@{get\_attitude\_angular\_velocity\_ned}}
+\index{get\_attitude\_angular\_velocity\_ned@{get\_attitude\_angular\_velocity\_ned}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_attitude\_angular\_velocity\_ned()}{get\_attitude\_angular\_velocity\_ned()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Vector3 U\+A\+S\+::get\+\_\+attitude\+\_\+angular\+\_\+velocity\+\_\+ned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get angular velocity from I\+MU data. 
+
+\begin{DoxyReturn}{Returns}
+vector3 \mbox{[}N\+ED\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 176 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga191709b6e50268022d10e469a3897975}\label{group__nodelib_ga191709b6e50268022d10e469a3897975}} 
+\index{Nodelib@{Nodelib}!get\_attitude\_imu\_enu@{get\_attitude\_imu\_enu}}
+\index{get\_attitude\_imu\_enu@{get\_attitude\_imu\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_attitude\_imu\_enu()}{get\_attitude\_imu\_enu()}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Imu\+::\+Ptr U\+A\+S\+::get\+\_\+attitude\+\_\+imu\+\_\+enu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get I\+MU data \mbox{[}E\+NU\mbox{]}. 
+
+
+
+Definition at line 125 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga31440655ed2c55b927fb6e3ed66a41a1}\label{group__nodelib_ga31440655ed2c55b927fb6e3ed66a41a1}} 
+\index{Nodelib@{Nodelib}!get\_attitude\_imu\_ned@{get\_attitude\_imu\_ned}}
+\index{get\_attitude\_imu\_ned@{get\_attitude\_imu\_ned}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_attitude\_imu\_ned()}{get\_attitude\_imu\_ned()}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Imu\+::\+Ptr U\+A\+S\+::get\+\_\+attitude\+\_\+imu\+\_\+ned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get I\+MU data \mbox{[}N\+ED\mbox{]}. 
+
+
+
+Definition at line 131 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gada6bb75eadc7ce6ad379c5e3a24625b0}\label{group__nodelib_gada6bb75eadc7ce6ad379c5e3a24625b0}} 
+\index{Nodelib@{Nodelib}!get\_attitude\_orientation\_enu@{get\_attitude\_orientation\_enu}}
+\index{get\_attitude\_orientation\_enu@{get\_attitude\_orientation\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_attitude\_orientation\_enu()}{get\_attitude\_orientation\_enu()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Quaternion U\+A\+S\+::get\+\_\+attitude\+\_\+orientation\+\_\+enu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get Attitude orientation quaternion. 
+
+\begin{DoxyReturn}{Returns}
+orientation quaternion \mbox{[}E\+NU\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga7524149188b866dfd044b2d6e03eb328}\label{group__nodelib_ga7524149188b866dfd044b2d6e03eb328}} 
+\index{Nodelib@{Nodelib}!get\_attitude\_orientation\_ned@{get\_attitude\_orientation\_ned}}
+\index{get\_attitude\_orientation\_ned@{get\_attitude\_orientation\_ned}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_attitude\_orientation\_ned()}{get\_attitude\_orientation\_ned()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Quaternion U\+A\+S\+::get\+\_\+attitude\+\_\+orientation\+\_\+ned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get Attitude orientation quaternion. 
+
+\begin{DoxyReturn}{Returns}
+orientation quaternion \mbox{[}N\+ED\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gad61deec4e10469fc9eb40dcc3a36aab1}\label{group__nodelib_gad61deec4e10469fc9eb40dcc3a36aab1}} 
+\index{Nodelib@{Nodelib}!get\_autopilot@{get\_autopilot}}
+\index{get\_autopilot@{get\_autopilot}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_autopilot()}{get\_autopilot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_gab6b5a708dff72c3923fd71d8d4730e3e}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}} mavros\+::\+U\+A\+S\+::get\+\_\+autopilot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns autopilot type. 
+
+
+
+Definition at line 127 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga11f231ebf1dcdf015466ecec477c5795}\label{group__nodelib_ga11f231ebf1dcdf015466ecec477c5795}} 
+\index{Nodelib@{Nodelib}!get\_capabilities@{get\_capabilities}}
+\index{get\_capabilities@{get\_capabilities}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_capabilities()}{get\_capabilities()}}
+{\footnotesize\ttfamily uint64\+\_\+t U\+A\+S\+::get\+\_\+capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga17cd0e13d3dce3ec697646bb543ba6e7}\label{group__nodelib_ga17cd0e13d3dce3ec697646bb543ba6e7}} 
+\index{Nodelib@{Nodelib}!get\_gps\_epts@{get\_gps\_epts}}
+\index{get\_gps\_epts@{get\_gps\_epts}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_gps\_epts()}{get\_gps\_epts()}}
+{\footnotesize\ttfamily void U\+A\+S\+::get\+\_\+gps\+\_\+epts (\begin{DoxyParamCaption}\item[{float \&}]{eph,  }\item[{float \&}]{epv,  }\item[{int \&}]{fix\+\_\+type,  }\item[{int \&}]{satellites\+\_\+visible }\end{DoxyParamCaption})}
+
+
+
+Returns E\+PH, E\+PV, Fix type and satellites visible. 
+
+
+
+Definition at line 206 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gac4ba509d29c876694293856f39308625}\label{group__nodelib_gac4ba509d29c876694293856f39308625}} 
+\index{Nodelib@{Nodelib}!get\_gps\_fix@{get\_gps\_fix}}
+\index{get\_gps\_fix@{get\_gps\_fix}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_gps\_fix()}{get\_gps\_fix()}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Nav\+Sat\+Fix\+::\+Ptr U\+A\+S\+::get\+\_\+gps\+\_\+fix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retunrs last G\+PS R\+AW message. 
+
+
+
+Definition at line 217 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gae6fe5bb4dc5d02536c8b7970577b22d7}\label{group__nodelib_gae6fe5bb4dc5d02536c8b7970577b22d7}} 
+\index{Nodelib@{Nodelib}!get\_hil\_state@{get\_hil\_state}}
+\index{get\_hil\_state@{get\_hil\_state}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_hil\_state()}{get\_hil\_state()}}
+{\footnotesize\ttfamily bool mavros\+::\+U\+A\+S\+::get\+\_\+hil\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns H\+IL status. 
+
+
+
+Definition at line 145 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga1b874777bb6378d1fec2d3498f95884c}\label{group__nodelib_ga1b874777bb6378d1fec2d3498f95884c}} 
+\index{Nodelib@{Nodelib}!get\_tgt\_component@{get\_tgt\_component}}
+\index{get\_tgt\_component@{get\_tgt\_component}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_tgt\_component()}{get\_tgt\_component()}}
+{\footnotesize\ttfamily uint8\+\_\+t mavros\+::\+U\+A\+S\+::get\+\_\+tgt\+\_\+component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return communication target component. 
+
+
+
+Definition at line 162 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga9d8412c7b6aada6715ded8eefcd6a517}\label{group__nodelib_ga9d8412c7b6aada6715ded8eefcd6a517}} 
+\index{Nodelib@{Nodelib}!get\_tgt\_system@{get\_tgt\_system}}
+\index{get\_tgt\_system@{get\_tgt\_system}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_tgt\_system()}{get\_tgt\_system()}}
+{\footnotesize\ttfamily uint8\+\_\+t mavros\+::\+U\+A\+S\+::get\+\_\+tgt\+\_\+system (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return communication target system. 
+
+
+
+Definition at line 155 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga1f582ffa4b83892e65bf2abff10e86e1}\label{group__nodelib_ga1f582ffa4b83892e65bf2abff10e86e1}} 
+\index{Nodelib@{Nodelib}!get\_time\_offset@{get\_time\_offset}}
+\index{get\_time\_offset@{get\_time\_offset}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_time\_offset()}{get\_time\_offset()}}
+{\footnotesize\ttfamily uint64\+\_\+t mavros\+::\+U\+A\+S\+::get\+\_\+time\+\_\+offset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 289 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga2284947568b4a2205a500d8c494ae7fa}\label{group__nodelib_ga2284947568b4a2205a500d8c494ae7fa}} 
+\index{Nodelib@{Nodelib}!get\_timesync\_mode@{get\_timesync\_mode}}
+\index{get\_timesync\_mode@{get\_timesync\_mode}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_timesync\_mode()}{get\_timesync\_mode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}} mavros\+::\+U\+A\+S\+::get\+\_\+timesync\+\_\+mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 297 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaeac4cd692aff7e67498a1ad01ea95b9f}\label{group__nodelib_gaeac4cd692aff7e67498a1ad01ea95b9f}} 
+\index{Nodelib@{Nodelib}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_ga96b408110c3646b92bef49d32ed1c84b}{M\+A\+V\+\_\+\+T\+Y\+PE}} mavros\+::\+U\+A\+S\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns vehicle type. 
+
+
+
+Definition at line 119 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gad1a57410bba40929fd2aa443e8706695}\label{group__nodelib_gad1a57410bba40929fd2aa443e8706695}} 
+\index{Nodelib@{Nodelib}!is\_ardupilotmega@{is\_ardupilotmega}}
+\index{is\_ardupilotmega@{is\_ardupilotmega}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{is\_ardupilotmega()}{is\_ardupilotmega()}}
+{\footnotesize\ttfamily bool mavros\+::\+U\+A\+S\+::is\+\_\+ardupilotmega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check that F\+CU is A\+PM. 
+
+
+
+Definition at line 360 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gae5ac050d003fe823d5c483e7f636e91c}\label{group__nodelib_gae5ac050d003fe823d5c483e7f636e91c}} 
+\index{Nodelib@{Nodelib}!is\_connected@{is\_connected}}
+\index{is\_connected@{is\_connected}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{is\_connected()}{is\_connected()}}
+{\footnotesize\ttfamily bool mavros\+::\+U\+A\+S\+::is\+\_\+connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return connection status. 
+
+
+
+Definition at line 95 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga1ed3e59972054c99c9c5d7205bdbe3bc}\label{group__nodelib_ga1ed3e59972054c99c9c5d7205bdbe3bc}} 
+\index{Nodelib@{Nodelib}!is\_my\_target@{is\_my\_target}}
+\index{is\_my\_target@{is\_my\_target}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{is\_my\_target()}{is\_my\_target()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mavros\+::\+U\+A\+S\+::is\+\_\+my\+\_\+target (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sysid,  }\item[{uint8\+\_\+t}]{compid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check that sys/comp id\textquotesingle{}s is my target. 
+
+
+
+Definition at line 346 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaed7b8a1d25613984a83837958b0dde67}\label{group__nodelib_gaed7b8a1d25613984a83837958b0dde67}} 
+\index{Nodelib@{Nodelib}!is\_my\_target@{is\_my\_target}}
+\index{is\_my\_target@{is\_my\_target}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{is\_my\_target()}{is\_my\_target()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool mavros\+::\+U\+A\+S\+::is\+\_\+my\+\_\+target (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sysid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check that system id is my target. 
+
+
+
+Definition at line 353 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga03c6f1128530da35612a7d40eb5cb5ad}\label{group__nodelib_ga03c6f1128530da35612a7d40eb5cb5ad}} 
+\index{Nodelib@{Nodelib}!is\_px4@{is\_px4}}
+\index{is\_px4@{is\_px4}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{is\_px4()}{is\_px4()}}
+{\footnotesize\ttfamily bool mavros\+::\+U\+A\+S\+::is\+\_\+px4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check that F\+CU is P\+X4. 
+
+
+
+Definition at line 367 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga0f57da8dc483d45ac139607498cb5de4}\label{group__nodelib_ga0f57da8dc483d45ac139607498cb5de4}} 
+\index{Nodelib@{Nodelib}!mavlink\_to\_quaternion@{mavlink\_to\_quaternion}}
+\index{mavlink\_to\_quaternion@{mavlink\_to\_quaternion}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{mavlink\_to\_quaternion()}{mavlink\_to\_quaternion()}}
+{\footnotesize\ttfamily Eigen\+::\+Quaterniond mavros\+::ftf\+::mavlink\+\_\+to\+\_\+quaternion (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 4 $>$ \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert Mavlink float\mbox{[}4\mbox{]} quaternion to Eigen. 
+
+
+
+Definition at line 355 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga7e52b64de8101152cb7da231bb6f0e6b}\label{group__nodelib_ga7e52b64de8101152cb7da231bb6f0e6b}} 
+\index{Nodelib@{Nodelib}!MavlinkDiag@{MavlinkDiag}}
+\index{MavlinkDiag@{MavlinkDiag}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{MavlinkDiag()}{MavlinkDiag()}}
+{\footnotesize\ttfamily Mavlink\+Diag\+::\+Mavlink\+Diag (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 18 of file mavlink\+\_\+diag.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gaa8188d2a9ae2324e2a91f2ec12077715}\label{group__nodelib_gaa8188d2a9ae2324e2a91f2ec12077715}} 
+\index{Nodelib@{Nodelib}!MavRos@{MavRos}}
+\index{MavRos@{MavRos}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{MavRos()}{MavRos()}}
+{\footnotesize\ttfamily Mav\+Ros\+::\+Mav\+Ros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file mavros.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga1fb94a2e20412126b42bcb872a7d0845}\label{group__nodelib_ga1fb94a2e20412126b42bcb872a7d0845}} 
+\index{Nodelib@{Nodelib}!msg\_set\_target@{msg\_set\_target}}
+\index{msg\_set\_target@{msg\_set\_target}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{msg\_set\_target()}{msg\_set\_target()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+void mavros\+::\+U\+A\+S\+::msg\+\_\+set\+\_\+target (\begin{DoxyParamCaption}\item[{\+\_\+T \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Helper template to set target id\textquotesingle{}s of message. 
+
+Definition at line 338 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gab34a88daf20e38cb4ed8e26c6898704a}\label{group__nodelib_gab34a88daf20e38cb4ed8e26c6898704a}} 
+\index{Nodelib@{Nodelib}!publish\_static\_transform@{publish\_static\_transform}}
+\index{publish\_static\_transform@{publish\_static\_transform}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{publish\_static\_transform()}{publish\_static\_transform()}}
+{\footnotesize\ttfamily void U\+A\+S\+::publish\+\_\+static\+\_\+transform (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{frame\+\_\+id,  }\item[{const std\+::string \&}]{child\+\_\+id,  }\item[{const Eigen\+::\+Affine3d \&}]{tr }\end{DoxyParamCaption})}
+
+
+
+Publishes static transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & parent frame for transform \\
+\hline
+{\em child\+\_\+id} & child frame for transform \\
+\hline
+{\em tr} & transform \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 226 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga1f1d174745db801a82766fa0839b17e1}\label{group__nodelib_ga1f1d174745db801a82766fa0839b17e1}} 
+\index{Nodelib@{Nodelib}!quaternion\_from\_rpy@{quaternion\_from\_rpy}}
+\index{quaternion\_from\_rpy@{quaternion\_from\_rpy}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{quaternion\_from\_rpy()}{quaternion\_from\_rpy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Quaterniond mavros\+::ftf\+::quaternion\+\_\+from\+\_\+rpy (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{rpy }\end{DoxyParamCaption})}
+
+
+
+Convert euler angles to quaternion. 
+
+
+
+Definition at line 27 of file ftf\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga97ccf75c02bae67e6fa6fd98b804d735}\label{group__nodelib_ga97ccf75c02bae67e6fa6fd98b804d735}} 
+\index{Nodelib@{Nodelib}!quaternion\_from\_rpy@{quaternion\_from\_rpy}}
+\index{quaternion\_from\_rpy@{quaternion\_from\_rpy}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{quaternion\_from\_rpy()}{quaternion\_from\_rpy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Quaterniond mavros\+::ftf\+::quaternion\+\_\+from\+\_\+rpy (\begin{DoxyParamCaption}\item[{const double}]{roll,  }\item[{const double}]{pitch,  }\item[{const double}]{yaw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert euler angles to quaternion. 
+
+\begin{DoxyReturn}{Returns}
+quaternion, same as {\itshape tf\+::quaternion\+From\+R\+P\+Y()} but in Eigen format. 
+\end{DoxyReturn}
+
+
+Definition at line 309 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga6649411f7b10eb37f33afb1d3d67dfea}\label{group__nodelib_ga6649411f7b10eb37f33afb1d3d67dfea}} 
+\index{Nodelib@{Nodelib}!quaternion\_get\_yaw@{quaternion\_get\_yaw}}
+\index{quaternion\_get\_yaw@{quaternion\_get\_yaw}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{quaternion\_get\_yaw()}{quaternion\_get\_yaw()}}
+{\footnotesize\ttfamily double mavros\+::ftf\+::quaternion\+\_\+get\+\_\+yaw (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Get Yaw angle from quaternion. 
+
+Replacement function for {\itshape tf\+::get\+Yaw()} 
+
+Definition at line 43 of file ftf\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gac76089b997c4e184d99bec74603a35ad}\label{group__nodelib_gac76089b997c4e184d99bec74603a35ad}} 
+\index{Nodelib@{Nodelib}!quaternion\_to\_mavlink@{quaternion\_to\_mavlink}}
+\index{quaternion\_to\_mavlink@{quaternion\_to\_mavlink}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{quaternion\_to\_mavlink()}{quaternion\_to\_mavlink()}}
+{\footnotesize\ttfamily void mavros\+::ftf\+::quaternion\+\_\+to\+\_\+mavlink (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Quaterniond \&}]{q,  }\item[{std\+::array$<$ float, 4 $>$ \&}]{qmsg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store Quaternion to M\+A\+V\+Link float\mbox{[}4\mbox{]} format. 
+
+M\+A\+V\+Link uses wxyz order, wile Eigen\+::\+Quaterniond uses xyzw internal order, so it can\textquotesingle{}t be stored to array using Eigen\+::\+Map. 
+
+Definition at line 344 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga75c2e15dab0c54198e7f1e620744fb80}\label{group__nodelib_ga75c2e15dab0c54198e7f1e620744fb80}} 
+\index{Nodelib@{Nodelib}!quaternion\_to\_rpy@{quaternion\_to\_rpy}}
+\index{quaternion\_to\_rpy@{quaternion\_to\_rpy}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{quaternion\_to\_rpy()}{quaternion\_to\_rpy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d mavros\+::ftf\+::quaternion\+\_\+to\+\_\+rpy (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Convert quaternion to euler angles. 
+
+Reverse operation to {\itshape \mbox{\hyperlink{group__nodelib_ga1f1d174745db801a82766fa0839b17e1}{quaternion\+\_\+from\+\_\+rpy()}}} 
+
+Definition at line 37 of file ftf\+\_\+quaternion\+\_\+utils.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gad1544765df8671798047de7800adb1b3}\label{group__nodelib_gad1544765df8671798047de7800adb1b3}} 
+\index{Nodelib@{Nodelib}!quaternion\_to\_rpy@{quaternion\_to\_rpy}}
+\index{quaternion\_to\_rpy@{quaternion\_to\_rpy}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{quaternion\_to\_rpy()}{quaternion\_to\_rpy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mavros\+::ftf\+::quaternion\+\_\+to\+\_\+rpy (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Quaterniond \&}]{q,  }\item[{double \&}]{roll,  }\item[{double \&}]{pitch,  }\item[{double \&}]{yaw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert quaternion to euler angles. 
+
+
+
+Definition at line 323 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gae5789a005615261233f253b00366693a}\label{group__nodelib_gae5789a005615261233f253b00366693a}} 
+\index{Nodelib@{Nodelib}!run@{run}}
+\index{run@{run}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Mavlink\+Diag\+::run (\begin{DoxyParamCaption}\item[{diagnostic\+\_\+updater\+::\+Diagnostic\+Status\+Wrapper \&}]{stat }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file mavlink\+\_\+diag.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga4a6acaf5ab9bea03955ceb53971e2aab}\label{group__nodelib_ga4a6acaf5ab9bea03955ceb53971e2aab}} 
+\index{Nodelib@{Nodelib}!sensor\_orientation\_matching@{sensor\_orientation\_matching}}
+\index{sensor\_orientation\_matching@{sensor\_orientation\_matching}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{sensor\_orientation\_matching()}{sensor\_orientation\_matching()}}
+{\footnotesize\ttfamily Eigen\+::\+Quaterniond mavros\+::utils\+::sensor\+\_\+orientation\+\_\+matching (\begin{DoxyParamCaption}\item[{M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file enum\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga53b91990e409eb66ad3dfcc6cefa0435}\label{group__nodelib_ga53b91990e409eb66ad3dfcc6cefa0435}} 
+\index{Nodelib@{Nodelib}!set\_connection\_status@{set\_connection\_status}}
+\index{set\_connection\_status@{set\_connection\_status}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{set\_connection\_status()}{set\_connection\_status()}}
+{\footnotesize\ttfamily void mavros\+::\+Mavlink\+Diag\+::set\+\_\+connection\+\_\+status (\begin{DoxyParamCaption}\item[{bool}]{connected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file mavlink\+\_\+diag.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaac672d37b57dc4d73ec73de04ea436ed}\label{group__nodelib_gaac672d37b57dc4d73ec73de04ea436ed}} 
+\index{Nodelib@{Nodelib}!set\_mavconn@{set\_mavconn}}
+\index{set\_mavconn@{set\_mavconn}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{set\_mavconn()}{set\_mavconn()}}
+{\footnotesize\ttfamily void mavros\+::\+Mavlink\+Diag\+::set\+\_\+mavconn (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Ptr}} \&}]{link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file mavlink\+\_\+diag.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga87eb84159321497e07dc4c739bdb727d}\label{group__nodelib_ga87eb84159321497e07dc4c739bdb727d}} 
+\index{Nodelib@{Nodelib}!set\_tgt@{set\_tgt}}
+\index{set\_tgt@{set\_tgt}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{set\_tgt()}{set\_tgt()}}
+{\footnotesize\ttfamily void mavros\+::\+U\+A\+S\+::set\+\_\+tgt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sys,  }\item[{uint8\+\_\+t}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 166 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga50b971d58f9196c4201a1a3213428e71}\label{group__nodelib_ga50b971d58f9196c4201a1a3213428e71}} 
+\index{Nodelib@{Nodelib}!set\_time\_offset@{set\_time\_offset}}
+\index{set\_time\_offset@{set\_time\_offset}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{set\_time\_offset()}{set\_time\_offset()}}
+{\footnotesize\ttfamily void mavros\+::\+U\+A\+S\+::set\+\_\+time\+\_\+offset (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{offset\+\_\+ns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 285 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gafd550e12066507238346b5cf4814d688}\label{group__nodelib_gafd550e12066507238346b5cf4814d688}} 
+\index{Nodelib@{Nodelib}!set\_timesync\_mode@{set\_timesync\_mode}}
+\index{set\_timesync\_mode@{set\_timesync\_mode}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{set\_timesync\_mode()}{set\_timesync\_mode()}}
+{\footnotesize\ttfamily void mavros\+::\+U\+A\+S\+::set\+\_\+timesync\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mavutils_gac7f53712a7627f397d0eb145c2a16cf7}{timesync\+\_\+mode}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 293 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga0ab105c6877addaf2149bac6371746e0}\label{group__nodelib_ga0ab105c6877addaf2149bac6371746e0}} 
+\index{Nodelib@{Nodelib}!spin@{spin}}
+\index{spin@{spin}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{spin()}{spin()}}
+{\footnotesize\ttfamily void Mav\+Ros\+::spin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 186 of file mavros.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gaa60e637dbc000f32038c9d8ad58c678a}\label{group__nodelib_gaa60e637dbc000f32038c9d8ad58c678a}} 
+\index{Nodelib@{Nodelib}!str\_mode\_v10@{str\_mode\_v10}}
+\index{str\_mode\_v10@{str\_mode\_v10}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{str\_mode\_v10()}{str\_mode\_v10()}}
+{\footnotesize\ttfamily std\+::string U\+A\+S\+::str\+\_\+mode\+\_\+v10 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{base\+\_\+mode,  }\item[{uint32\+\_\+t}]{custom\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Represent F\+CU mode as string. 
+
+Port pymavlink mavutil.\+mode\+\_\+string\+\_\+v10
+
+Supported F\+CU\textquotesingle{}s\+:
+\begin{DoxyItemize}
+\item A\+PM\+:Plane
+\item A\+PM\+:Copter
+\item P\+X4
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em base\+\_\+mode} & base mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em custom\+\_\+mode} & custom mode data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 185 of file uas\+\_\+stringify.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga0fefb6563eb4fdd64b7b3ee2898f786e}\label{group__nodelib_ga0fefb6563eb4fdd64b7b3ee2898f786e}} 
+\index{Nodelib@{Nodelib}!synchronise\_stamp@{synchronise\_stamp}}
+\index{synchronise\_stamp@{synchronise\_stamp}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{synchronise\_stamp()}{synchronise\_stamp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ros\+::\+Time U\+A\+S\+::synchronise\+\_\+stamp (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time\+\_\+boot\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+Compute F\+CU message time from time\+\_\+boot\+\_\+ms or time\+\_\+usec field. 
+
+Uses time\+\_\+offset for calculation
+
+\begin{DoxyReturn}{Returns}
+F\+CU time if it is known else current wall time. 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file uas\+\_\+timesync.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga12c99ff6a2e51345ad813086f79bb2c1}\label{group__nodelib_ga12c99ff6a2e51345ad813086f79bb2c1}} 
+\index{Nodelib@{Nodelib}!synchronise\_stamp@{synchronise\_stamp}}
+\index{synchronise\_stamp@{synchronise\_stamp}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{synchronise\_stamp()}{synchronise\_stamp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ros\+::\+Time U\+A\+S\+::synchronise\+\_\+stamp (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{time\+\_\+usec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file uas\+\_\+timesync.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga548327e4a73268424eb8a730be7e618d}\label{group__nodelib_ga548327e4a73268424eb8a730be7e618d}} 
+\index{Nodelib@{Nodelib}!synchronized\_header@{synchronized\_header}}
+\index{synchronized\_header@{synchronized\_header}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{synchronized\_header()}{synchronized\_header()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+\_\+msgs\+::\+Header mavros\+::\+U\+A\+S\+::synchronized\+\_\+header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{frame\+\_\+id,  }\item[{const T}]{time\+\_\+stamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create message header from time\+\_\+boot\+\_\+ms or time\+\_\+usec stamps and frame\+\_\+id. 
+
+Setting frame\+\_\+id and stamp are pretty common, this little helper should reduce L\+OC.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em frame\+\_\+id} & frame for header \\
+\hline
+\mbox{\texttt{ in}}  & {\em time\+\_\+stamp} & mavlink message time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Header with syncronized stamp and frame id 
+\end{DoxyReturn}
+
+
+Definition at line 325 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga2bd453f7d2dafb3814b5312e788e2e35}\label{group__nodelib_ga2bd453f7d2dafb3814b5312e788e2e35}} 
+\index{Nodelib@{Nodelib}!to\_eigen@{to\_eigen}}
+\index{to\_eigen@{to\_eigen}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_eigen()}{to\_eigen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d mavros\+::ftf\+::to\+\_\+eigen (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Point to Eigen\+::\+Vector3d. 
+
+
+
+Definition at line 400 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaa967b677c7a130cb95621988a4987fab}\label{group__nodelib_gaa967b677c7a130cb95621988a4987fab}} 
+\index{Nodelib@{Nodelib}!to\_eigen@{to\_eigen}}
+\index{to\_eigen@{to\_eigen}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_eigen()}{to\_eigen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d mavros\+::ftf\+::to\+\_\+eigen (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Vector3 to Eigen\+::\+Vector3d. 
+
+
+
+Definition at line 404 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gab3357177e153e9bc233d96ac595c6a5f}\label{group__nodelib_gab3357177e153e9bc233d96ac595c6a5f}} 
+\index{Nodelib@{Nodelib}!to\_eigen@{to\_eigen}}
+\index{to\_eigen@{to\_eigen}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_eigen()}{to\_eigen()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Quaterniond mavros\+::ftf\+::to\+\_\+eigen (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Quaternion}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Quaternion to Eigen\+::\+Quaterniond. 
+
+
+
+Definition at line 408 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gae43f4bc89e45c8218d19cce11c2092bc}\label{group__nodelib_gae43f4bc89e45c8218d19cce11c2092bc}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+OT}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga9e44e56802676785fc349d1d5b808b4c}\label{group__nodelib_ga9e44e56802676785fc349d1d5b808b4c}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file enum\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga7867559a9a91c6dbc4c7e32e6cc3e018}\label{group__nodelib_ga7867559a9a91c6dbc4c7e32e6cc3e018}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}{M\+A\+V\+\_\+\+T\+Y\+PE}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 171 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga6c5689b022d0d0b05dfae454aa234013}\label{group__nodelib_ga6c5689b022d0d0b05dfae454aa234013}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}{M\+A\+V\+\_\+\+S\+T\+A\+TE}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 208 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga84bd1657cfa53e03354e352f2e90e993}\label{group__nodelib_ga84bd1657cfa53e03354e352f2e90e993}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{A\+D\+S\+B\+\_\+\+A\+L\+T\+I\+T\+U\+D\+E\+\_\+\+T\+Y\+PE}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 288 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gabc30a3ebb411640d92d95e1e2e50be24}\label{group__nodelib_gabc30a3ebb411640d92d95e1e2e50be24}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{A\+D\+S\+B\+\_\+\+E\+M\+I\+T\+T\+E\+R\+\_\+\+T\+Y\+PE}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 326 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga0e38ef0fd30a43511190d569fdca799a}\label{group__nodelib_ga0e38ef0fd30a43511190d569fdca799a}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{M\+A\+V\+\_\+\+E\+S\+T\+I\+M\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 349 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gacb77da537287a4ebf732b8b04832466e}\label{group__nodelib_gacb77da537287a4ebf732b8b04832466e}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{G\+P\+S\+\_\+\+F\+I\+X\+\_\+\+T\+Y\+PE}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 376 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga239f977f7399f313bdb3bdb5b10d5e82}\label{group__nodelib_ga239f977f7399f313bdb3bdb5b10d5e82}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{M\+A\+V\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+R\+E\+S\+U\+LT}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 419 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gab4f14da7e17442ff8985ce2789c9a298}\label{group__nodelib_gab4f14da7e17442ff8985ce2789c9a298}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{M\+A\+V\+\_\+\+F\+R\+A\+ME}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 457 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gaaea3adb4b5c17eaa45a8088779b1a8fc}\label{group__nodelib_gaaea3adb4b5c17eaa45a8088779b1a8fc}} 
+\index{Nodelib@{Nodelib}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+{\footnotesize\ttfamily std\+::string mavros\+::utils\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{M\+A\+V\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+N\+S\+OR}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 493 of file enum\+\_\+to\+\_\+string.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga30dfcfe08b7c490b12664624277d2fe6}\label{group__nodelib_ga30dfcfe08b7c490b12664624277d2fe6}} 
+\index{Nodelib@{Nodelib}!transform\_frame@{transform\_frame}}
+\index{transform\_frame@{transform\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame()}{transform\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d mavros\+::ftf\+::detail\+::transform\+\_\+frame (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{vec,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Transform data expressed in one frame to another frame. 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 211 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga767c8e2dd868f4d8bbd78c38662a17bb}\label{group__nodelib_ga767c8e2dd868f4d8bbd78c38662a17bb}} 
+\index{Nodelib@{Nodelib}!transform\_frame@{transform\_frame}}
+\index{transform\_frame@{transform\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame()}{transform\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} mavros\+::ftf\+::detail\+::transform\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} \&}]{cov,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Transform 3x3 convariance expressed in one frame to another. 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 217 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga266710bc46b4a6e376a609c4486d39cb}\label{group__nodelib_ga266710bc46b4a6e376a609c4486d39cb}} 
+\index{Nodelib@{Nodelib}!transform\_frame@{transform\_frame}}
+\index{transform\_frame@{transform\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame()}{transform\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} mavros\+::ftf\+::detail\+::transform\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} \&}]{cov,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Transform 6x6 convariance expressed in one frame to another. 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 227 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga885808031ecb3f68701172b0e33f37cd}\label{group__nodelib_ga885808031ecb3f68701172b0e33f37cd}} 
+\index{Nodelib@{Nodelib}!transform\_frame@{transform\_frame}}
+\index{transform\_frame@{transform\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame()}{transform\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} mavros\+::ftf\+::detail\+::transform\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} \&}]{cov,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Transform 9x9 convariance expressed in one frame to another. 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 242 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gad724ac71858730a830ae77b9dd480aaf}\label{group__nodelib_gad724ac71858730a830ae77b9dd480aaf}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_aircraft\_baselink@{transform\_frame\_aircraft\_baselink}}
+\index{transform\_frame\_aircraft\_baselink@{transform\_frame\_aircraft\_baselink}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_aircraft\_baselink()}{transform\_frame\_aircraft\_baselink()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+baselink (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in Aircraft frame to Baselink frame. 
+
+
+
+Definition at line 205 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga501a41c3a2de7186f4ed602a0399a75b}\label{group__nodelib_ga501a41c3a2de7186f4ed602a0399a75b}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_aircraft\_enu@{transform\_frame\_aircraft\_enu}}
+\index{transform\_frame\_aircraft\_enu@{transform\_frame\_aircraft\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_aircraft\_enu()}{transform\_frame\_aircraft\_enu()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+enu (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in aircraft frame to E\+NU frame. Assumes quaternion represents rotation from aircraft frame to E\+NU frame. 
+
+
+
+Definition at line 265 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaabef5de6c7b391794c35c75dd1232194}\label{group__nodelib_gaabef5de6c7b391794c35c75dd1232194}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_aircraft\_ned@{transform\_frame\_aircraft\_ned}}
+\index{transform\_frame\_aircraft\_ned@{transform\_frame\_aircraft\_ned}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_aircraft\_ned()}{transform\_frame\_aircraft\_ned()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+ned (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in aircraft frame to N\+ED frame. Assumes quaternion represents rotation from aircraft frame to N\+ED frame. 
+
+
+
+Definition at line 247 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga8e8a38a1f75dd0007204a206a6745193}\label{group__nodelib_ga8e8a38a1f75dd0007204a206a6745193}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_baselink\_aircraft@{transform\_frame\_baselink\_aircraft}}
+\index{transform\_frame\_baselink\_aircraft@{transform\_frame\_baselink\_aircraft}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_baselink\_aircraft()}{transform\_frame\_baselink\_aircraft()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+baselink\+\_\+aircraft (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in Baselink frame to Aircraft frame. 
+
+
+
+Definition at line 214 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga59326acc337daa1ce44d56ee6acff76b}\label{group__nodelib_ga59326acc337daa1ce44d56ee6acff76b}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_baselink\_enu@{transform\_frame\_baselink\_enu}}
+\index{transform\_frame\_baselink\_enu@{transform\_frame\_baselink\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_baselink\_enu()}{transform\_frame\_baselink\_enu()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+baselink\+\_\+enu (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in baselink to E\+NU frame. Assumes quaternion represents rotation from basel\+\_\+link to E\+NU frame. 
+
+
+
+Definition at line 292 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaa1d1407cbddfd1481e147680e92acab8}\label{group__nodelib_gaa1d1407cbddfd1481e147680e92acab8}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_ecef\_enu@{transform\_frame\_ecef\_enu}}
+\index{transform\_frame\_ecef\_enu@{transform\_frame\_ecef\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_ecef\_enu()}{transform\_frame\_ecef\_enu()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+ecef\+\_\+enu (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const T \&}]{map\+\_\+origin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in E\+C\+EF frame to E\+NU frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & local E\+C\+EF coordinates \mbox{[}m\mbox{]} \\
+\hline
+{\em map\+\_\+origin} & geodetic origin \mbox{[}lla\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+local E\+NU coordinates \mbox{[}m\mbox{]}. 
+\end{DoxyReturn}
+
+
+Definition at line 226 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga669df732714ea8b69f228efba9f05dbb}\label{group__nodelib_ga669df732714ea8b69f228efba9f05dbb}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_enu\_aircraft@{transform\_frame\_enu\_aircraft}}
+\index{transform\_frame\_enu\_aircraft@{transform\_frame\_enu\_aircraft}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_enu\_aircraft()}{transform\_frame\_enu\_aircraft()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+aircraft (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in E\+NU to aircraft frame. Assumes quaternion represents rotation from E\+NU to aircraft frame. 
+
+
+
+Definition at line 274 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga2f2546cf431334a76e19fdd3800f286d}\label{group__nodelib_ga2f2546cf431334a76e19fdd3800f286d}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_enu\_baselink@{transform\_frame\_enu\_baselink}}
+\index{transform\_frame\_enu\_baselink@{transform\_frame\_enu\_baselink}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_enu\_baselink()}{transform\_frame\_enu\_baselink()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+baselink (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in E\+NU to base\+\_\+link frame. Assumes quaternion represents rotation from E\+NU to base\+\_\+link frame. 
+
+
+
+Definition at line 283 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga8f46c9063053398c558624755757f1e2}\label{group__nodelib_ga8f46c9063053398c558624755757f1e2}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_enu\_ecef@{transform\_frame\_enu\_ecef}}
+\index{transform\_frame\_enu\_ecef@{transform\_frame\_enu\_ecef}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_enu\_ecef()}{transform\_frame\_enu\_ecef()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+ecef (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const T \&}]{map\+\_\+origin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in E\+NU frame to E\+C\+EF frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & local E\+NU coordinates \mbox{[}m\mbox{]} \\
+\hline
+{\em map\+\_\+origin} & geodetic origin \mbox{[}lla\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+local E\+C\+EF coordinates \mbox{[}m\mbox{]}. 
+\end{DoxyReturn}
+
+
+Definition at line 238 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga789377f76104cb6f7665ad368dbba1c9}\label{group__nodelib_ga789377f76104cb6f7665ad368dbba1c9}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_enu\_ned@{transform\_frame\_enu\_ned}}
+\index{transform\_frame\_enu\_ned@{transform\_frame\_enu\_ned}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_enu\_ned()}{transform\_frame\_enu\_ned()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+ned (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in E\+NU to N\+ED frame. 
+
+
+
+Definition at line 196 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga916fb57c10ef6a7109585245f512d4b2}\label{group__nodelib_ga916fb57c10ef6a7109585245f512d4b2}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_ned\_aircraft@{transform\_frame\_ned\_aircraft}}
+\index{transform\_frame\_ned\_aircraft@{transform\_frame\_ned\_aircraft}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_ned\_aircraft()}{transform\_frame\_ned\_aircraft()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+ned\+\_\+aircraft (\begin{DoxyParamCaption}\item[{const T \&}]{in,  }\item[{const Eigen\+::\+Quaterniond \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in N\+ED to aircraft frame. Assumes quaternion represents rotation from N\+ED to aircraft frame. 
+
+
+
+Definition at line 256 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga190188b4899aab8fde4d65de949535c9}\label{group__nodelib_ga190188b4899aab8fde4d65de949535c9}} 
+\index{Nodelib@{Nodelib}!transform\_frame\_ned\_enu@{transform\_frame\_ned\_enu}}
+\index{transform\_frame\_ned\_enu@{transform\_frame\_ned\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_frame\_ned\_enu()}{transform\_frame\_ned\_enu()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+frame\+\_\+ned\+\_\+enu (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform data expressed in N\+ED to E\+NU frame. 
+
+
+
+Definition at line 187 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaf97e6d622ff4f400e54ebcdae75407ef}\label{group__nodelib_gaf97e6d622ff4f400e54ebcdae75407ef}} 
+\index{Nodelib@{Nodelib}!transform\_orientation@{transform\_orientation}}
+\index{transform\_orientation@{transform\_orientation}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_orientation()}{transform\_orientation()}}
+{\footnotesize\ttfamily Eigen\+::\+Quaterniond mavros\+::ftf\+::detail\+::transform\+\_\+orientation (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Quaterniond \&}]{q,  }\item[{const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}}}]{transform }\end{DoxyParamCaption})}
+
+
+
+Transform representation of attitude from 1 frame to another (e.\+g. transfrom attitude from representing from base\+\_\+link -\/$>$ N\+ED to representing base\+\_\+link -\/$>$ E\+NU) 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 66 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga01f847ac9369bb566b8f671ce7a9ec7c}\label{group__nodelib_ga01f847ac9369bb566b8f671ce7a9ec7c}} 
+\index{Nodelib@{Nodelib}!transform\_orientation\_aircraft\_baselink@{transform\_orientation\_aircraft\_baselink}}
+\index{transform\_orientation\_aircraft\_baselink@{transform\_orientation\_aircraft\_baselink}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_orientation\_aircraft\_baselink()}{transform\_orientation\_aircraft\_baselink()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+orientation\+\_\+aircraft\+\_\+baselink (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform from attitude represented W\+RT aircraft frame to attitude represented W\+RT base\+\_\+link frame. 
+
+
+
+Definition at line 170 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga52af05306da40938392b1536064458af}\label{group__nodelib_ga52af05306da40938392b1536064458af}} 
+\index{Nodelib@{Nodelib}!transform\_orientation\_baselink\_aircraft@{transform\_orientation\_baselink\_aircraft}}
+\index{transform\_orientation\_baselink\_aircraft@{transform\_orientation\_baselink\_aircraft}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_orientation\_baselink\_aircraft()}{transform\_orientation\_baselink\_aircraft()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+orientation\+\_\+baselink\+\_\+aircraft (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform from attitude represented W\+RT baselink frame to attitude represented W\+RT body frame. 
+
+
+
+Definition at line 179 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga60f73ab88fd56337bf2572fe696d1d04}\label{group__nodelib_ga60f73ab88fd56337bf2572fe696d1d04}} 
+\index{Nodelib@{Nodelib}!transform\_orientation\_enu\_ned@{transform\_orientation\_enu\_ned}}
+\index{transform\_orientation\_enu\_ned@{transform\_orientation\_enu\_ned}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_orientation\_enu\_ned()}{transform\_orientation\_enu\_ned()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+orientation\+\_\+enu\+\_\+ned (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform from attitude represented W\+RT E\+NU frame to attitude represented W\+RT N\+ED frame. 
+
+
+
+Definition at line 161 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga3c14c70db9b58d2aef2d9f84395bb876}\label{group__nodelib_ga3c14c70db9b58d2aef2d9f84395bb876}} 
+\index{Nodelib@{Nodelib}!transform\_orientation\_ned\_enu@{transform\_orientation\_ned\_enu}}
+\index{transform\_orientation\_ned\_enu@{transform\_orientation\_ned\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_orientation\_ned\_enu()}{transform\_orientation\_ned\_enu()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T mavros\+::ftf\+::transform\+\_\+orientation\+\_\+ned\+\_\+enu (\begin{DoxyParamCaption}\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform from attitude represented W\+RT N\+ED frame to attitude represented W\+RT E\+NU frame. 
+
+
+
+Definition at line 152 of file frame\+\_\+tf.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga93f1ca2f4ebdb2423f81d88b4fa77c62}\label{group__nodelib_ga93f1ca2f4ebdb2423f81d88b4fa77c62}} 
+\index{Nodelib@{Nodelib}!transform\_static\_frame@{transform\_static\_frame}}
+\index{transform\_static\_frame@{transform\_static\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_static\_frame()}{transform\_static\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{vec,  }\item[{const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}}}]{transform }\end{DoxyParamCaption})}
+
+
+
+Transform data expressed in one frame to another frame. 
+
+General function. Please use specialized variants. 
+
+Definition at line 82 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga3a1e55d923c06a8914f7fe570dd42c9b}\label{group__nodelib_ga3a1e55d923c06a8914f7fe570dd42c9b}} 
+\index{Nodelib@{Nodelib}!transform\_static\_frame@{transform\_static\_frame}}
+\index{transform\_static\_frame@{transform\_static\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_static\_frame()}{transform\_static\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{Covariance3d}} \&}]{cov,  }\item[{const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}}}]{transform }\end{DoxyParamCaption})}
+
+
+
+Transform 3d convariance expressed in one frame to another. 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 95 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gaab4caf957e54695a814cedf5fc45aeb1}\label{group__nodelib_gaab4caf957e54695a814cedf5fc45aeb1}} 
+\index{Nodelib@{Nodelib}!transform\_static\_frame@{transform\_static\_frame}}
+\index{transform\_static\_frame@{transform\_static\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_static\_frame()}{transform\_static\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{Covariance6d}} \&}]{cov,  }\item[{const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}}}]{transform }\end{DoxyParamCaption})}
+
+
+
+Transform 6d convariance expressed in one frame to another. 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 114 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gacfea1c0d9ca98b288f6b8f2d17bc4fc0}\label{group__nodelib_gacfea1c0d9ca98b288f6b8f2d17bc4fc0}} 
+\index{Nodelib@{Nodelib}!transform\_static\_frame@{transform\_static\_frame}}
+\index{transform\_static\_frame@{transform\_static\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_static\_frame()}{transform\_static\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{Covariance9d}} \&}]{cov,  }\item[{const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}}}]{transform }\end{DoxyParamCaption})}
+
+
+
+Transform 9d convariance expressed in one frame to another. 
+
+General function. Please use specialized enu-\/ned and ned-\/enu variants. 
+
+Definition at line 141 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga3907cb8493e1b0c7ae33dbc1e8185a88}\label{group__nodelib_ga3907cb8493e1b0c7ae33dbc1e8185a88}} 
+\index{Nodelib@{Nodelib}!transform\_static\_frame@{transform\_static\_frame}}
+\index{transform\_static\_frame@{transform\_static\_frame}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{transform\_static\_frame()}{transform\_static\_frame()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{vec,  }\item[{const Eigen\+::\+Vector3d \&}]{map\+\_\+origin,  }\item[{const \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{Static\+TF}}}]{transform }\end{DoxyParamCaption})}
+
+
+
+Transform data expressed in one frame to another frame with additional map origin parameter. 
+
+General function. Please use specialized variants. Degrees to radians
+
+Compute transform from E\+C\+EF to E\+NU\+: \href{http://www.navipedia.net/index.php/Transformations_between_ECEF_and_ENU_coordinates}{\texttt{ http\+://www.\+navipedia.\+net/index.\+php/\+Transformations\+\_\+between\+\_\+\+E\+C\+E\+F\+\_\+and\+\_\+\+E\+N\+U\+\_\+coordinates}} ϕ = latitude λ = longitude The rotation is composed by a counter-\/clockwise rotation over the Z-\/axis by an angle of 90 + λ followed by a counter-\/clockwise rotation over the east-\/axis by an angle of 90 -\/ ϕ. R = \mbox{[}-\/sinλ cosλ 0.\+0 -\/cosλ$\ast$sinϕ -\/sinλ$\ast$sinϕ cosϕ cosλ$\ast$cosϕ sinλ$\ast$cosϕ sinϕ \mbox{]} \mbox{[}East, North, Up\mbox{]} = R $\ast$ \mbox{[}∂x, ∂y, ∂z\mbox{]} where both \mbox{[}East, North, Up\mbox{]} and \mbox{[}∂x, ∂y, ∂z\mbox{]} are local coordinates relative to map origin.
+
+Degrees to radians
+
+Compute transform from E\+C\+EF to E\+NU\+: \href{http://www.navipedia.net/index.php/Transformations_between_ECEF_and_ENU_coordinates}{\texttt{ http\+://www.\+navipedia.\+net/index.\+php/\+Transformations\+\_\+between\+\_\+\+E\+C\+E\+F\+\_\+and\+\_\+\+E\+N\+U\+\_\+coordinates}} ϕ = latitude λ = longitude The rotation is composed by a counter-\/clockwise rotation over the Z-\/axis by an angle of 90 + λ followed by a counter-\/clockwise rotation over the east-\/axis by an angle of 90 -\/ ϕ. R = \mbox{[}-\/sinλ cosλ 0.\+0 -\/cosλ$\ast$sinϕ -\/sinλ$\ast$sinϕ cosϕ cosλ$\ast$cosϕ sinλ$\ast$cosϕ sinϕ \mbox{]} \mbox{[}East, North, Up\mbox{]} = R $\ast$ \mbox{[}∂x, ∂y, ∂z\mbox{]} where both \mbox{[}East, North, Up\mbox{]} and \mbox{[}∂x, ∂y, ∂z\mbox{]} are local coordinates relative to map origin.
+
+Definition at line 170 of file ftf\+\_\+frame\+\_\+conversions.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga73bb173cfb9914f380671cb0f3efb113}\label{group__nodelib_ga73bb173cfb9914f380671cb0f3efb113}} 
+\index{Nodelib@{Nodelib}!UAS@{UAS}}
+\index{UAS@{UAS}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{UAS()}{UAS()}}
+{\footnotesize\ttfamily U\+A\+S\+::\+U\+AS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gaca39c9b4dfce83909e2bde0796564341}\label{group__nodelib_gaca39c9b4dfce83909e2bde0796564341}} 
+\index{Nodelib@{Nodelib}!update\_attitude\_imu\_enu@{update\_attitude\_imu\_enu}}
+\index{update\_attitude\_imu\_enu@{update\_attitude\_imu\_enu}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{update\_attitude\_imu\_enu()}{update\_attitude\_imu\_enu()}}
+{\footnotesize\ttfamily void U\+A\+S\+::update\+\_\+attitude\+\_\+imu\+\_\+enu (\begin{DoxyParamCaption}\item[{sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \&}]{imu }\end{DoxyParamCaption})}
+
+
+
+Store I\+MU data \mbox{[}E\+NU\mbox{]}. 
+
+
+
+Definition at line 113 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gacd6fc1ac631a90619d7f53fa5ab9b29d}\label{group__nodelib_gacd6fc1ac631a90619d7f53fa5ab9b29d}} 
+\index{Nodelib@{Nodelib}!update\_attitude\_imu\_ned@{update\_attitude\_imu\_ned}}
+\index{update\_attitude\_imu\_ned@{update\_attitude\_imu\_ned}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{update\_attitude\_imu\_ned()}{update\_attitude\_imu\_ned()}}
+{\footnotesize\ttfamily void U\+A\+S\+::update\+\_\+attitude\+\_\+imu\+\_\+ned (\begin{DoxyParamCaption}\item[{sensor\+\_\+msgs\+::\+Imu\+::\+Ptr \&}]{imu }\end{DoxyParamCaption})}
+
+
+
+Store I\+MU data \mbox{[}N\+ED\mbox{]}. 
+
+
+
+Definition at line 119 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga6e1867e65586363b66cc274a970c0660}\label{group__nodelib_ga6e1867e65586363b66cc274a970c0660}} 
+\index{Nodelib@{Nodelib}!update\_capabilities@{update\_capabilities}}
+\index{update\_capabilities@{update\_capabilities}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{update\_capabilities()}{update\_capabilities()}}
+{\footnotesize\ttfamily void U\+A\+S\+::update\+\_\+capabilities (\begin{DoxyParamCaption}\item[{bool}]{known,  }\item[{uint64\+\_\+t}]{caps = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 104 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga566ad54aab4ddea1c0e3756870fe9c91}\label{group__nodelib_ga566ad54aab4ddea1c0e3756870fe9c91}} 
+\index{Nodelib@{Nodelib}!update\_connection\_status@{update\_connection\_status}}
+\index{update\_connection\_status@{update\_connection\_status}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{update\_connection\_status()}{update\_connection\_status()}}
+{\footnotesize\ttfamily void U\+A\+S\+::update\+\_\+connection\+\_\+status (\begin{DoxyParamCaption}\item[{bool}]{conn\+\_\+ }\end{DoxyParamCaption})}
+
+Update autopilot connection status (every H\+E\+A\+R\+T\+B\+E\+A\+T/conn\+\_\+timeout) 
+
+Definition at line 68 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga5230fcf5827b4a682efe35b91a66152b}\label{group__nodelib_ga5230fcf5827b4a682efe35b91a66152b}} 
+\index{Nodelib@{Nodelib}!update\_gps\_fix\_epts@{update\_gps\_fix\_epts}}
+\index{update\_gps\_fix\_epts@{update\_gps\_fix\_epts}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{update\_gps\_fix\_epts()}{update\_gps\_fix\_epts()}}
+{\footnotesize\ttfamily void U\+A\+S\+::update\+\_\+gps\+\_\+fix\+\_\+epts (\begin{DoxyParamCaption}\item[{sensor\+\_\+msgs\+::\+Nav\+Sat\+Fix\+::\+Ptr \&}]{fix,  }\item[{float}]{eph,  }\item[{float}]{epv,  }\item[{int}]{fix\+\_\+type,  }\item[{int}]{satellites\+\_\+visible }\end{DoxyParamCaption})}
+
+
+
+Store G\+PS R\+AW data. 
+
+
+
+Definition at line 192 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_gad353627789d9fa0e4cafb7fb8dad9b32}\label{group__nodelib_gad353627789d9fa0e4cafb7fb8dad9b32}} 
+\index{Nodelib@{Nodelib}!update\_heartbeat@{update\_heartbeat}}
+\index{update\_heartbeat@{update\_heartbeat}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{update\_heartbeat()}{update\_heartbeat()}}
+{\footnotesize\ttfamily void U\+A\+S\+::update\+\_\+heartbeat (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{type\+\_\+,  }\item[{uint8\+\_\+t}]{autopilot\+\_\+,  }\item[{uint8\+\_\+t}]{base\+\_\+mode\+\_\+ }\end{DoxyParamCaption})}
+
+Update autopilot type on every H\+E\+A\+R\+T\+B\+E\+AT 
+
+Definition at line 61 of file uas\+\_\+data.\+cpp.
+
+\mbox{\Hypertarget{group__nodelib_ga34b0d289748daac51cfc675e50def27c}\label{group__nodelib_ga34b0d289748daac51cfc675e50def27c}} 
+\index{Nodelib@{Nodelib}!````~MavRos@{$\sim$MavRos}}
+\index{````~MavRos@{$\sim$MavRos}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{$\sim$MavRos()}{~MavRos()}}
+{\footnotesize\ttfamily mavros\+::\+Mav\+Ros\+::$\sim$\+Mav\+Ros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file mavros.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gab273c619e0a6433f1ea3291103ec3710}\label{group__nodelib_gab273c619e0a6433f1ea3291103ec3710}} 
+\index{Nodelib@{Nodelib}!````~UAS@{$\sim$UAS}}
+\index{````~UAS@{$\sim$UAS}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{$\sim$UAS()}{~UAS()}}
+{\footnotesize\ttfamily mavros\+::\+U\+A\+S\+::$\sim$\+U\+AS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 80 of file mavros\+\_\+uas.\+h.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__nodelib_ga57e8229b5f18563820ff4ee5335d57a5}\label{group__nodelib_ga57e8229b5f18563820ff4ee5335d57a5}} 
+\index{Nodelib@{Nodelib}!diag\_updater@{diag\_updater}}
+\index{diag\_updater@{diag\_updater}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{diag\_updater}{diag\_updater}}
+{\footnotesize\ttfamily diagnostic\+\_\+updater\+::\+Updater mavros\+::\+U\+A\+S\+::diag\+\_\+updater}
+
+
+
+Mavros diagnostic updater. 
+
+
+
+Definition at line 90 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga35622da9e1bf22e43b269fbcbce65c40}\label{group__nodelib_ga35622da9e1bf22e43b269fbcbce65c40}} 
+\index{Nodelib@{Nodelib}!egm96\_5@{egm96\_5}}
+\index{egm96\_5@{egm96\_5}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{egm96\_5}{egm96\_5}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Geographic\+Lib\+::\+Geoid$>$ mavros\+::\+U\+A\+S\+::egm96\+\_\+5}
+
+
+
+Geoid dataset used to convert between A\+M\+SL and W\+G\+S-\/84. 
+
+That class loads egm96\+\_\+5 dataset to R\+AM, it is about 24 MiB. 
+
+Definition at line 239 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gafc058c8fb3e90f26a88fdd808e1b3dac}\label{group__nodelib_gafc058c8fb3e90f26a88fdd808e1b3dac}} 
+\index{Nodelib@{Nodelib}!fcu\_link@{fcu\_link}}
+\index{fcu\_link@{fcu\_link}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{fcu\_link}{fcu\_link}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mavconn_gaff41078b805e1d8f85ed6fd2d87711ce}{mavconn\+::\+M\+A\+V\+Conn\+Interface\+::\+Ptr}} mavros\+::\+U\+A\+S\+::fcu\+\_\+link}
+
+
+
+M\+A\+V\+Link F\+CU device conection. 
+
+
+
+Definition at line 80 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaea0896a0daef68618142861b79395156}\label{group__nodelib_gaea0896a0daef68618142861b79395156}} 
+\index{Nodelib@{Nodelib}!tf2\_broadcaster@{tf2\_broadcaster}}
+\index{tf2\_broadcaster@{tf2\_broadcaster}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{tf2\_broadcaster}{tf2\_broadcaster}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Transform\+Broadcaster mavros\+::\+U\+A\+S\+::tf2\+\_\+broadcaster}
+
+
+
+Definition at line 271 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_ga9c221ed548579fd2008fd1ac4d2b13e3}\label{group__nodelib_ga9c221ed548579fd2008fd1ac4d2b13e3}} 
+\index{Nodelib@{Nodelib}!tf2\_buffer@{tf2\_buffer}}
+\index{tf2\_buffer@{tf2\_buffer}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{tf2\_buffer}{tf2\_buffer}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer mavros\+::\+U\+A\+S\+::tf2\+\_\+buffer}
+
+
+
+Definition at line 269 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gaa3606f3a1043f5a4666d2d922cbb170a}\label{group__nodelib_gaa3606f3a1043f5a4666d2d922cbb170a}} 
+\index{Nodelib@{Nodelib}!tf2\_listener@{tf2\_listener}}
+\index{tf2\_listener@{tf2\_listener}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{tf2\_listener}{tf2\_listener}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Transform\+Listener mavros\+::\+U\+A\+S\+::tf2\+\_\+listener}
+
+
+
+Definition at line 270 of file mavros\+\_\+uas.\+h.
+
+\mbox{\Hypertarget{group__nodelib_gad3a9ec1f5de439f1c43ade0b851bae38}\label{group__nodelib_gad3a9ec1f5de439f1c43ade0b851bae38}} 
+\index{Nodelib@{Nodelib}!tf2\_static\_broadcaster@{tf2\_static\_broadcaster}}
+\index{tf2\_static\_broadcaster@{tf2\_static\_broadcaster}!Nodelib@{Nodelib}}
+\subsubsection{\texorpdfstring{tf2\_static\_broadcaster}{tf2\_static\_broadcaster}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Static\+Transform\+Broadcaster mavros\+::\+U\+A\+S\+::tf2\+\_\+static\+\_\+broadcaster}
+
+
+
+Definition at line 272 of file mavros\+\_\+uas.\+h.
+

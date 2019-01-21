@@ -1,0 +1,83 @@
+\hypertarget{maxpool__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/maxpool\+\_\+layer.c File Reference}
+\label{maxpool__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/maxpool\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/maxpool\_layer.c}}
+{\ttfamily \#include \char`\"{}maxpool\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{maxpool__layer_8c_a356b5d417d8a6e8c566a720c7c844d93}{get\+\_\+maxpool\+\_\+image}} (\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{maxpool__layer_8c_a74bc00b4e5ebeacc0664e4dc48edc469}{get\+\_\+maxpool\+\_\+delta}} (\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} \mbox{\hyperlink{maxpool__layer_8c_aab71b9c66f18d8c10077462a76344a46}{make\+\_\+maxpool\+\_\+layer}} (int batch, int h, int w, int c, int size, int stride, int padding)
+\item 
+void \mbox{\hyperlink{maxpool__layer_8c_a46551094c5c40c7e88aec13f5dbd80e8}{resize\+\_\+maxpool\+\_\+layer}} (\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} $\ast$l, int w, int h)
+\item 
+void \mbox{\hyperlink{maxpool__layer_8c_ad29869a0764197e9287713fbfb442cb3}{forward\+\_\+maxpool\+\_\+layer}} (const \mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{maxpool__layer_8c_a3e55da397b2063586b3efaa806560517}{backward\+\_\+maxpool\+\_\+layer}} (const \mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{maxpool__layer_8c_a3e55da397b2063586b3efaa806560517}\label{maxpool__layer_8c_a3e55da397b2063586b3efaa806560517}} 
+\index{maxpool\_layer.c@{maxpool\_layer.c}!backward\_maxpool\_layer@{backward\_maxpool\_layer}}
+\index{backward\_maxpool\_layer@{backward\_maxpool\_layer}!maxpool\_layer.c@{maxpool\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_maxpool\_layer()}{backward\_maxpool\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+maxpool\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file maxpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{maxpool__layer_8c_ad29869a0764197e9287713fbfb442cb3}\label{maxpool__layer_8c_ad29869a0764197e9287713fbfb442cb3}} 
+\index{maxpool\_layer.c@{maxpool\_layer.c}!forward\_maxpool\_layer@{forward\_maxpool\_layer}}
+\index{forward\_maxpool\_layer@{forward\_maxpool\_layer}!maxpool\_layer.c@{maxpool\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_maxpool\_layer()}{forward\_maxpool\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+maxpool\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 79 of file maxpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{maxpool__layer_8c_a74bc00b4e5ebeacc0664e4dc48edc469}\label{maxpool__layer_8c_a74bc00b4e5ebeacc0664e4dc48edc469}} 
+\index{maxpool\_layer.c@{maxpool\_layer.c}!get\_maxpool\_delta@{get\_maxpool\_delta}}
+\index{get\_maxpool\_delta@{get\_maxpool\_delta}!maxpool\_layer.c@{maxpool\_layer.c}}
+\subsubsection{\texorpdfstring{get\_maxpool\_delta()}{get\_maxpool\_delta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+maxpool\+\_\+delta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file maxpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{maxpool__layer_8c_a356b5d417d8a6e8c566a720c7c844d93}\label{maxpool__layer_8c_a356b5d417d8a6e8c566a720c7c844d93}} 
+\index{maxpool\_layer.c@{maxpool\_layer.c}!get\_maxpool\_image@{get\_maxpool\_image}}
+\index{get\_maxpool\_image@{get\_maxpool\_image}!maxpool\_layer.c@{maxpool\_layer.c}}
+\subsubsection{\texorpdfstring{get\_maxpool\_image()}{get\_maxpool\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+maxpool\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file maxpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{maxpool__layer_8c_aab71b9c66f18d8c10077462a76344a46}\label{maxpool__layer_8c_aab71b9c66f18d8c10077462a76344a46}} 
+\index{maxpool\_layer.c@{maxpool\_layer.c}!make\_maxpool\_layer@{make\_maxpool\_layer}}
+\index{make\_maxpool\_layer@{make\_maxpool\_layer}!maxpool\_layer.c@{maxpool\_layer.c}}
+\subsubsection{\texorpdfstring{make\_maxpool\_layer()}{make\_maxpool\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} make\+\_\+maxpool\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{h,  }\item[{int}]{w,  }\item[{int}]{c,  }\item[{int}]{size,  }\item[{int}]{stride,  }\item[{int}]{padding }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file maxpool\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{maxpool__layer_8c_a46551094c5c40c7e88aec13f5dbd80e8}\label{maxpool__layer_8c_a46551094c5c40c7e88aec13f5dbd80e8}} 
+\index{maxpool\_layer.c@{maxpool\_layer.c}!resize\_maxpool\_layer@{resize\_maxpool\_layer}}
+\index{resize\_maxpool\_layer@{resize\_maxpool\_layer}!maxpool\_layer.c@{maxpool\_layer.c}}
+\subsubsection{\texorpdfstring{resize\_maxpool\_layer()}{resize\_maxpool\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+maxpool\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{maxpool__layer_8h_af2680c241702216bb2104740f7f631d0}{maxpool\+\_\+layer}} $\ast$}]{l,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file maxpool\+\_\+layer.\+c.
+

@@ -1,0 +1,110 @@
+\hypertarget{mavlink_8php}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/doc/mavlink.php File Reference}
+\label{mavlink_8php}\index{/home/eric/catkin\_ws/src/mavlink/doc/mavlink.php@{/home/eric/catkin\_ws/src/mavlink/doc/mavlink.php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mavlink_8php_a6a37156e263b8771c328e65e8ed50a00}{\$xml\+\_\+file\+\_\+name}} = \char`\"{}https\+://raw.\+github.\+com/mavlink/mavlink/master/message\+\_\+definitions/v1.\+0/common.\+xml\char`\"{}
+\item 
+\mbox{\hyperlink{mavlink_8php_a3c56457e5925d0714518b8d02072e54b}{\$xsl\+\_\+file\+\_\+name}} = \char`\"{}https\+://raw.\+github.\+com/mavlink/mavlink/master/doc/mavlink\+\_\+to\+\_\+html\+\_\+table.\+xsl\char`\"{}
+\item 
+\mbox{\hyperlink{mavlink_8php_aa108d9d91e700ac530401dd363b0723b}{\$xml}} = file\+\_\+get\+\_\+contents(\$xml\+\_\+file\+\_\+name)
+\item 
+\mbox{\hyperlink{mavlink_8php_a9c4d77053c2d34a9ef513cb3f9cc6dbf}{\$xml\+\_\+doc}} = new Dom\+Document
+\item 
+\mbox{\hyperlink{mavlink_8php_ad9e3770eadb2e480192f3558b655f4f2}{\$xsl}} = file\+\_\+get\+\_\+contents(\$xsl\+\_\+file\+\_\+name)
+\item 
+\mbox{\hyperlink{mavlink_8php_a0191bf1e4de19c8651ca09ed76d867b3}{\$xsl\+\_\+doc}} = new Dom\+Document
+\item 
+\mbox{\hyperlink{mavlink_8php_a4bddc543900c2c6eea663bd9130f1929}{\$xsltproc}} = new Xslt\+Processor()
+\item 
+if(\$html=\$xsltproc-\/$>$transform\+To\+X\+ML(\$xml\+\_\+doc)) \mbox{\hyperlink{mavlink_8php_a33f222928d1e5db001c1bb5b39a2ed2f}{else}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{mavlink_8php_aa108d9d91e700ac530401dd363b0723b}\label{mavlink_8php_aa108d9d91e700ac530401dd363b0723b}} 
+\index{mavlink.php@{mavlink.php}!\$xml@{\$xml}}
+\index{\$xml@{\$xml}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{\$xml}{$xml}}
+{\footnotesize\ttfamily \$xml = file\+\_\+get\+\_\+contents(\$xml\+\_\+file\+\_\+name)}
+
+
+
+Definition at line 17 of file mavlink.\+php.
+
+\mbox{\Hypertarget{mavlink_8php_a9c4d77053c2d34a9ef513cb3f9cc6dbf}\label{mavlink_8php_a9c4d77053c2d34a9ef513cb3f9cc6dbf}} 
+\index{mavlink.php@{mavlink.php}!\$xml\_doc@{\$xml\_doc}}
+\index{\$xml\_doc@{\$xml\_doc}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{\$xml\_doc}{$xml\_doc}}
+{\footnotesize\ttfamily \$xml\+\_\+doc = new Dom\+Document}
+
+
+
+Definition at line 18 of file mavlink.\+php.
+
+\mbox{\Hypertarget{mavlink_8php_a6a37156e263b8771c328e65e8ed50a00}\label{mavlink_8php_a6a37156e263b8771c328e65e8ed50a00}} 
+\index{mavlink.php@{mavlink.php}!\$xml\_file\_name@{\$xml\_file\_name}}
+\index{\$xml\_file\_name@{\$xml\_file\_name}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{\$xml\_file\_name}{$xml\_file\_name}}
+{\footnotesize\ttfamily \$xml\+\_\+file\+\_\+name = \char`\"{}https\+://raw.\+github.\+com/mavlink/mavlink/master/message\+\_\+definitions/v1.\+0/common.\+xml\char`\"{}}
+
+
+
+Definition at line 9 of file mavlink.\+php.
+
+\mbox{\Hypertarget{mavlink_8php_ad9e3770eadb2e480192f3558b655f4f2}\label{mavlink_8php_ad9e3770eadb2e480192f3558b655f4f2}} 
+\index{mavlink.php@{mavlink.php}!\$xsl@{\$xsl}}
+\index{\$xsl@{\$xsl}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{\$xsl}{$xsl}}
+{\footnotesize\ttfamily \$xsl = file\+\_\+get\+\_\+contents(\$xsl\+\_\+file\+\_\+name)}
+
+
+
+Definition at line 22 of file mavlink.\+php.
+
+\mbox{\Hypertarget{mavlink_8php_a0191bf1e4de19c8651ca09ed76d867b3}\label{mavlink_8php_a0191bf1e4de19c8651ca09ed76d867b3}} 
+\index{mavlink.php@{mavlink.php}!\$xsl\_doc@{\$xsl\_doc}}
+\index{\$xsl\_doc@{\$xsl\_doc}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{\$xsl\_doc}{$xsl\_doc}}
+{\footnotesize\ttfamily \$xsl\+\_\+doc = new Dom\+Document}
+
+
+
+Definition at line 23 of file mavlink.\+php.
+
+\mbox{\Hypertarget{mavlink_8php_a3c56457e5925d0714518b8d02072e54b}\label{mavlink_8php_a3c56457e5925d0714518b8d02072e54b}} 
+\index{mavlink.php@{mavlink.php}!\$xsl\_file\_name@{\$xsl\_file\_name}}
+\index{\$xsl\_file\_name@{\$xsl\_file\_name}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{\$xsl\_file\_name}{$xsl\_file\_name}}
+{\footnotesize\ttfamily \$xsl\+\_\+file\+\_\+name = \char`\"{}https\+://raw.\+github.\+com/mavlink/mavlink/master/doc/mavlink\+\_\+to\+\_\+html\+\_\+table.\+xsl\char`\"{}}
+
+
+
+Definition at line 14 of file mavlink.\+php.
+
+\mbox{\Hypertarget{mavlink_8php_a4bddc543900c2c6eea663bd9130f1929}\label{mavlink_8php_a4bddc543900c2c6eea663bd9130f1929}} 
+\index{mavlink.php@{mavlink.php}!\$xsltproc@{\$xsltproc}}
+\index{\$xsltproc@{\$xsltproc}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{\$xsltproc}{$xsltproc}}
+{\footnotesize\ttfamily \$xsltproc = new Xslt\+Processor()}
+
+
+
+Definition at line 26 of file mavlink.\+php.
+
+\mbox{\Hypertarget{mavlink_8php_a33f222928d1e5db001c1bb5b39a2ed2f}\label{mavlink_8php_a33f222928d1e5db001c1bb5b39a2ed2f}} 
+\index{mavlink.php@{mavlink.php}!else@{else}}
+\index{else@{else}!mavlink.php@{mavlink.php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if ( \$html=\$xsltproc-\/$>$transform\+To\+X\+ML( \$xml\+\_\+doc)) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  trigger\_error(\textcolor{stringliteral}{"XSL transformation failed"},E\_USER\_ERROR)}
+
+\end{DoxyCode}
+
+
+Definition at line 50 of file mavlink.\+php.
+

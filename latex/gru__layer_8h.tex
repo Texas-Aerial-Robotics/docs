@@ -1,0 +1,59 @@
+\hypertarget{gru__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/gru\+\_\+layer.h File Reference}
+\label{gru__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/gru\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/gru\_layer.h}}
+{\ttfamily \#include \char`\"{}activations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{gru__layer_8h_aea3ebe91b3f13b33b31b13c0c90ccd24}{make\+\_\+gru\+\_\+layer}} (int batch, int inputs, int outputs, int steps, int batch\+\_\+normalize, int adam)
+\item 
+void \mbox{\hyperlink{gru__layer_8h_ad0512ed6006bfe5417b4478b115438a1}{forward\+\_\+gru\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} state)
+\item 
+void \mbox{\hyperlink{gru__layer_8h_aab37fd41aafaa4e459e15668307d9352}{backward\+\_\+gru\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} state)
+\item 
+void \mbox{\hyperlink{gru__layer_8h_ad8669fc34871a3200cda3c79f55fb0f9}{update\+\_\+gru\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gru__layer_8h_aab37fd41aafaa4e459e15668307d9352}\label{gru__layer_8h_aab37fd41aafaa4e459e15668307d9352}} 
+\index{gru\_layer.h@{gru\_layer.h}!backward\_gru\_layer@{backward\_gru\_layer}}
+\index{backward\_gru\_layer@{backward\_gru\_layer}!gru\_layer.h@{gru\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_gru\_layer()}{backward\_gru\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+gru\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 204 of file gru\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{gru__layer_8h_ad0512ed6006bfe5417b4478b115438a1}\label{gru__layer_8h_ad0512ed6006bfe5417b4478b115438a1}} 
+\index{gru\_layer.h@{gru\_layer.h}!forward\_gru\_layer@{forward\_gru\_layer}}
+\index{forward\_gru\_layer@{forward\_gru\_layer}!gru\_layer.h@{gru\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_gru\_layer()}{forward\_gru\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+gru\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file gru\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{gru__layer_8h_aea3ebe91b3f13b33b31b13c0c90ccd24}\label{gru__layer_8h_aea3ebe91b3f13b33b31b13c0c90ccd24}} 
+\index{gru\_layer.h@{gru\_layer.h}!make\_gru\_layer@{make\_gru\_layer}}
+\index{make\_gru\_layer@{make\_gru\_layer}!gru\_layer.h@{gru\_layer.h}}
+\subsubsection{\texorpdfstring{make\_gru\_layer()}{make\_gru\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+gru\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{int}]{outputs,  }\item[{int}]{steps,  }\item[{int}]{batch\+\_\+normalize,  }\item[{int}]{adam }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file gru\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{gru__layer_8h_ad8669fc34871a3200cda3c79f55fb0f9}\label{gru__layer_8h_ad8669fc34871a3200cda3c79f55fb0f9}} 
+\index{gru\_layer.h@{gru\_layer.h}!update\_gru\_layer@{update\_gru\_layer}}
+\index{update\_gru\_layer@{update\_gru\_layer}!gru\_layer.h@{gru\_layer.h}}
+\subsubsection{\texorpdfstring{update\_gru\_layer()}{update\_gru\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+gru\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file gru\+\_\+layer.\+c.
+

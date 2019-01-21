@@ -1,0 +1,68 @@
+\hypertarget{classmavconn_1_1MAVConnUDP}{}\section{mavconn\+::M\+A\+V\+Conn\+U\+DP Class Reference}
+\label{classmavconn_1_1MAVConnUDP}\index{mavconn::MAVConnUDP@{mavconn::MAVConnUDP}}
+
+
+\mbox{\hyperlink{classUDP}{U\+DP}} interface.  
+
+
+
+
+{\ttfamily \#include $<$udp.\+h$>$}
+
+Inheritance diagram for mavconn\+::M\+A\+V\+Conn\+U\+DP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.917808cm]{classmavconn_1_1MAVConnUDP}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__mavconn_ga22deee111faac2fde80a0affc6c29245}{M\+A\+V\+Conn\+U\+DP}} (uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_a83150acb88d810ae6864b4c125324ed6}{system\+\_\+id}}=1, uint8\+\_\+t \mbox{\hyperlink{setHome_8cpp_adc84285d5da2c4fa9721d0a32d5e41a7}{component\+\_\+id}}=M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE, std\+::string bind\+\_\+host=\mbox{\hyperlink{group__mavconn_ga62467db7651e86bb5428c4288356f813}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}}, unsigned short bind\+\_\+port=\mbox{\hyperlink{group__mavconn_ga330f03ed06a3e027ec7be74426dc646b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}}, std\+::string remote\+\_\+host=\mbox{\hyperlink{group__mavconn_ga7a03f4b69e2791a742717516b6421466}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}}, unsigned short remote\+\_\+port=\mbox{\hyperlink{group__mavconn_ga25daeb4235691fdf52da1551bf93bc88}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+O\+RT}})
+\item 
+\mbox{\hyperlink{group__mavconn_gad9edacd1a8f5993cdcfb188f83e3ca49}{$\sim$\+M\+A\+V\+Conn\+U\+DP}} ()
+\item 
+void \mbox{\hyperlink{group__mavconn_ga78a057400db4bf2240b00e29d4251dfe}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gae33a3895701a613a72d7fc1ab9bbb3d8}{send\+\_\+message}} (const \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+::mavlink\+\_\+message\+\_\+t}} $\ast$message) override
+\begin{DoxyCompactList}\small\item\em Send message (mavlink\+\_\+message\+\_\+t) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_gae5e3ad4657f7aa9e970d0cb7a6bc367d}{send\+\_\+message}} (const \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}} \&message) override
+\begin{DoxyCompactList}\small\item\em Send message (child of \mbox{\hyperlink{structmavlink_1_1Message}{mavlink\+::\+Message}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mavconn_ga7a1a56365cb5355da86a6a6e2bb4bc8e}{send\+\_\+bytes}} (const uint8\+\_\+t $\ast$bytes, size\+\_\+t length) override
+\begin{DoxyCompactList}\small\item\em Send raw bytes (for some quirks) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mavconn_ga496ff8d6806b35c993740cc05727f59c}{is\+\_\+open}} () override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga62467db7651e86bb5428c4288356f813}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+H\+O\+ST}} = \char`\"{}localhost\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga330f03ed06a3e027ec7be74426dc646b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+RT}} = 14555
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga7a03f4b69e2791a742717516b6421466}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}} = \char`\"{}\char`\"{}
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_ga25daeb4235691fdf52da1551bf93bc88}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+O\+RT}} = 14550
+\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gae78adaaf99172a7aafead43dc2883cec}{B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}} = \char`\"{}$\ast$$\ast$$\ast$i want broadcast$\ast$$\ast$$\ast$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Markers for broadcast modes. Not valid domain names. \end{DoxyCompactList}\item 
+static constexpr auto \mbox{\hyperlink{group__mavconn_gab9cc9895e36eefd3cd6e6fc7d4895c6f}{P\+E\+R\+M\+A\+N\+E\+N\+T\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+H\+O\+ST}} = \char`\"{}$\ast$$\ast$$\ast$permanent broadcast$\ast$$\ast$$\ast$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classUDP}{U\+DP}} interface. 
+
+\begin{DoxyNote}{Note}
+I\+Pv4 only 
+\end{DoxyNote}
+
+
+Definition at line 31 of file udp.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/include/mavconn/\mbox{\hyperlink{udp_8h}{udp.\+h}}\item 
+/home/eric/catkin\+\_\+ws/src/mavros/libmavconn/src/\mbox{\hyperlink{udp_8cpp}{udp.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,247 @@
+\hypertarget{mavlink__sha256_8h}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C/include\+\_\+v2.0/mavlink\+\_\+sha256.h File Reference}
+\label{mavlink__sha256_8h}\index{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v2.0/mavlink\_sha256.h@{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v2.0/mavlink\_sha256.h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmavlink__sha256__ctx}{mavlink\+\_\+sha256\+\_\+ctx}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_ab0a0d1ad13c7e4d3cb38c89f7127c85a}{Ch}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},  \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}},  \mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})~(((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) \& (\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}})) $^\wedge$ (($\sim$(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})) \& (\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})))
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a447cd1d7fb703b62666400976be24bf3}{Maj}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},  \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}},  \mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})~(((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) \& (\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}})) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) \& (\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}) \& (\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})))
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},  n)~(((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})$>$$>$(n)) $\vert$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) $<$$<$ (32 -\/ (n))))
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a613f88ad88919b6ed21ff223070f9a21}{Sigma0}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},2)  $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},13) $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},22))
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a6d34508d6d962274083fcd992fb4e340}{Sigma1}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},6)  $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},11) $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},25))
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a672bd39bdf2f6dc295a23ddd109175ff}{sigma0}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},7)  $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},18) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})$>$$>$3))
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a0347251dc63b7abe5d4c500544c24a97}{sigma1}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},17) $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},19) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})$>$$>$10))
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}{A}}~m-\/$>$counter\mbox{[}0\mbox{]}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}{B}}~m-\/$>$counter\mbox{[}1\mbox{]}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}{C}}~m-\/$>$counter\mbox{[}2\mbox{]}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_af316c33cc298530f245e8b55330e86b5}{D}}~m-\/$>$counter\mbox{[}3\mbox{]}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a07484107e6d9fdf38b53edf631d6511d}{E}}~m-\/$>$counter\mbox{[}4\mbox{]}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_a42257a545daf5b7933d6e8f96adc74f2}{F}}~m-\/$>$counter\mbox{[}5\mbox{]}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_aed9ea78689ecce0b7264c02c7f8a9a54}{G}}~m-\/$>$counter\mbox{[}6\mbox{]}
+\item 
+\#define \mbox{\hyperlink{mavlink__sha256_8h_abec92cc72a096640b821b8cd56a02495}{H}}~m-\/$>$counter\mbox{[}7\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{mavlink__sha256_8h_a90934c0020a1cfa42a64223510770aa7}{mavlink\+\_\+sha256\+\_\+init}} (\mbox{\hyperlink{structmavlink__sha256__ctx}{mavlink\+\_\+sha256\+\_\+ctx}} $\ast$m)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{mavlink__sha256_8h_a35f7fe5c2f55141716914e9ff8f59b69}{mavlink\+\_\+sha256\+\_\+update}} (\mbox{\hyperlink{structmavlink__sha256__ctx}{mavlink\+\_\+sha256\+\_\+ctx}} $\ast$m, const void $\ast$v, uint32\+\_\+t len)
+\item 
+\mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void \mbox{\hyperlink{mavlink__sha256_8h_ad78a650bcfef77e0a4c4133c09f428d8}{mavlink\+\_\+sha256\+\_\+final\+\_\+48}} (\mbox{\hyperlink{structmavlink__sha256__ctx}{mavlink\+\_\+sha256\+\_\+ctx}} $\ast$m, uint8\+\_\+t result\mbox{[}6\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}\label{mavlink__sha256_8h_a955f504eccf76b4eb2489c0adab03121}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!A@{A}}
+\index{A@{A}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily \#define A~m-\/$>$counter\mbox{[}0\mbox{]}}
+
+
+
+Definition at line 72 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}\label{mavlink__sha256_8h_a111da81ae5883147168bbb8366377b10}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!B@{B}}
+\index{B@{B}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily \#define B~m-\/$>$counter\mbox{[}1\mbox{]}}
+
+
+
+Definition at line 73 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}\label{mavlink__sha256_8h_ac4cf4b2ab929bd23951a8676eeac086b}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!C@{C}}
+\index{C@{C}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily \#define C~m-\/$>$counter\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 74 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_ab0a0d1ad13c7e4d3cb38c89f7127c85a}\label{mavlink__sha256_8h_ab0a0d1ad13c7e4d3cb38c89f7127c85a}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!Ch@{Ch}}
+\index{Ch@{Ch}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{Ch}{Ch}}
+{\footnotesize\ttfamily \#define Ch(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},  }\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}},  }\item[{}]{\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}} }\end{DoxyParamCaption})~(((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) \& (\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}})) $^\wedge$ (($\sim$(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})) \& (\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})))}
+
+
+
+Definition at line 62 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_af316c33cc298530f245e8b55330e86b5}\label{mavlink__sha256_8h_af316c33cc298530f245e8b55330e86b5}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!D@{D}}
+\index{D@{D}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily \#define D~m-\/$>$counter\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 75 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a07484107e6d9fdf38b53edf631d6511d}\label{mavlink__sha256_8h_a07484107e6d9fdf38b53edf631d6511d}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!E@{E}}
+\index{E@{E}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{E}{E}}
+{\footnotesize\ttfamily \#define E~m-\/$>$counter\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 76 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a42257a545daf5b7933d6e8f96adc74f2}\label{mavlink__sha256_8h_a42257a545daf5b7933d6e8f96adc74f2}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!F@{F}}
+\index{F@{F}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{F}{F}}
+{\footnotesize\ttfamily \#define F~m-\/$>$counter\mbox{[}5\mbox{]}}
+
+
+
+Definition at line 77 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_aed9ea78689ecce0b7264c02c7f8a9a54}\label{mavlink__sha256_8h_aed9ea78689ecce0b7264c02c7f8a9a54}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!G@{G}}
+\index{G@{G}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily \#define G~m-\/$>$counter\mbox{[}6\mbox{]}}
+
+
+
+Definition at line 78 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_abec92cc72a096640b821b8cd56a02495}\label{mavlink__sha256_8h_abec92cc72a096640b821b8cd56a02495}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!H@{H}}
+\index{H@{H}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily \#define H~m-\/$>$counter\mbox{[}7\mbox{]}}
+
+
+
+Definition at line 79 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a447cd1d7fb703b62666400976be24bf3}\label{mavlink__sha256_8h_a447cd1d7fb703b62666400976be24bf3}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!Maj@{Maj}}
+\index{Maj@{Maj}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{Maj}{Maj}}
+{\footnotesize\ttfamily \#define Maj(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},  }\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}},  }\item[{}]{\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}} }\end{DoxyParamCaption})~(((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) \& (\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}})) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) \& (\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}) \& (\mbox{\hyperlink{keyTalker_8cpp_ab3e6ed577a7c669c19de1f9c1b46c872}{z}})))}
+
+
+
+Definition at line 63 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a8201ad9cec6e1480d1f018161aaa5c6f}\label{mavlink__sha256_8h_a8201ad9cec6e1480d1f018161aaa5c6f}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!MAVLINK\_HELPER@{MAVLINK\_HELPER}}
+\index{MAVLINK\_HELPER@{MAVLINK\_HELPER}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_HELPER}{MAVLINK\_HELPER}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}
+
+
+
+Definition at line 50 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}\label{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!ROTR@{ROTR}}
+\index{ROTR@{ROTR}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{ROTR}{ROTR}}
+{\footnotesize\ttfamily \#define R\+O\+TR(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},  }\item[{}]{n }\end{DoxyParamCaption})~(((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})$>$$>$(n)) $\vert$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}) $<$$<$ (32 -\/ (n))))}
+
+
+
+Definition at line 65 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a613f88ad88919b6ed21ff223070f9a21}\label{mavlink__sha256_8h_a613f88ad88919b6ed21ff223070f9a21}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!Sigma0@{Sigma0}}
+\index{Sigma0@{Sigma0}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{Sigma0}{Sigma0}}
+{\footnotesize\ttfamily \#define Sigma0(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},2)  $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},13) $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},22))}
+
+
+
+Definition at line 67 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a672bd39bdf2f6dc295a23ddd109175ff}\label{mavlink__sha256_8h_a672bd39bdf2f6dc295a23ddd109175ff}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!sigma0@{sigma0}}
+\index{sigma0@{sigma0}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{sigma0}{sigma0}}
+{\footnotesize\ttfamily \#define sigma0(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},7)  $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},18) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})$>$$>$3))}
+
+
+
+Definition at line 69 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a6d34508d6d962274083fcd992fb4e340}\label{mavlink__sha256_8h_a6d34508d6d962274083fcd992fb4e340}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!Sigma1@{Sigma1}}
+\index{Sigma1@{Sigma1}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{Sigma1}{Sigma1}}
+{\footnotesize\ttfamily \#define Sigma1(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},6)  $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},11) $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},25))}
+
+
+
+Definition at line 68 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a0347251dc63b7abe5d4c500544c24a97}\label{mavlink__sha256_8h_a0347251dc63b7abe5d4c500544c24a97}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!sigma1@{sigma1}}
+\index{sigma1@{sigma1}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{sigma1}{sigma1}}
+{\footnotesize\ttfamily \#define sigma1(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},17) $^\wedge$ \mbox{\hyperlink{mavlink__sha256_8h_a47a06d6e229d50d2b1a326ec58123cae}{R\+O\+TR}}(\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}},19) $^\wedge$ ((\mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}})$>$$>$10))}
+
+
+
+Definition at line 70 of file mavlink\+\_\+sha256.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mavlink__sha256_8h_ad78a650bcfef77e0a4c4133c09f428d8}\label{mavlink__sha256_8h_ad78a650bcfef77e0a4c4133c09f428d8}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!mavlink\_sha256\_final\_48@{mavlink\_sha256\_final\_48}}
+\index{mavlink\_sha256\_final\_48@{mavlink\_sha256\_final\_48}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{mavlink\_sha256\_final\_48()}{mavlink\_sha256\_final\_48()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void mavlink\+\_\+sha256\+\_\+final\+\_\+48 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmavlink__sha256__ctx}{mavlink\+\_\+sha256\+\_\+ctx}} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{result\mbox{[}6\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 201 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a90934c0020a1cfa42a64223510770aa7}\label{mavlink__sha256_8h_a90934c0020a1cfa42a64223510770aa7}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!mavlink\_sha256\_init@{mavlink\_sha256\_init}}
+\index{mavlink\_sha256\_init@{mavlink\_sha256\_init}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{mavlink\_sha256\_init()}{mavlink\_sha256\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void mavlink\+\_\+sha256\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmavlink__sha256__ctx}{mavlink\+\_\+sha256\+\_\+ctx}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file mavlink\+\_\+sha256.\+h.
+
+\mbox{\Hypertarget{mavlink__sha256_8h_a35f7fe5c2f55141716914e9ff8f59b69}\label{mavlink__sha256_8h_a35f7fe5c2f55141716914e9ff8f59b69}} 
+\index{mavlink\_sha256.h@{mavlink\_sha256.h}!mavlink\_sha256\_update@{mavlink\_sha256\_update}}
+\index{mavlink\_sha256\_update@{mavlink\_sha256\_update}!mavlink\_sha256.h@{mavlink\_sha256.h}}
+\subsubsection{\texorpdfstring{mavlink\_sha256\_update()}{mavlink\_sha256\_update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{message_8hpp_a8201ad9cec6e1480d1f018161aaa5c6f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+H\+E\+L\+P\+ER}} void mavlink\+\_\+sha256\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmavlink__sha256__ctx}{mavlink\+\_\+sha256\+\_\+ctx}} $\ast$}]{m,  }\item[{const void $\ast$}]{v,  }\item[{uint32\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 161 of file mavlink\+\_\+sha256.\+h.
+

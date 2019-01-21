@@ -1,0 +1,185 @@
+\hypertarget{namespacepymavlink_1_1examples_1_1bwtest}{}\section{pymavlink.\+examples.\+bwtest Namespace Reference}
+\label{namespacepymavlink_1_1examples_1_1bwtest}\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_afe076f1a3d008cd525c26a2a33b3d97f}{parser}} = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_afbde17ba1802e5962a67d9e3977f29c7}{type}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a8fd8509719d18e925ccec358a8dc0682}{help}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a77a2ab871e0aaf94ccf5bc881a5dbba4}{default}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a75801b54e117a46a4f239b09fc2c27b6}{required}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a66efa427cd2ab3c171e5342a383659ae}{True}}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a033827b08f1d3dac4a810807b931550e}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a992c5d2dd65ab9fdb16be40008f497a6}{master}} = \mbox{\hyperlink{namespacepymavlink_1_1mavutil_aa6c4b8861f86ef3bb746fa0fab241c93}{mavutil.\+mavlink\+\_\+connection}}(args.\+device, baud=args.\+baudrate)
+\begin{DoxyCompactList}\small\item\em M\+AV related code starts here \#\#\#. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_ad07e8a9178e3d4eddfb8db5f9525467f}{t1}} = time.\+time()
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a8337b9d2eb5466652348f85a132fdec6}{counts}} = \{\}
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a005de8de5862bdd85d1299177ee51f58}{bytes\+\_\+sent}} = 0
+\item 
+int \mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_ab55375291b155b2a2607fd48014a0d97}{bytes\+\_\+recv}} = 0
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_a9e476130bb8cd37d293f893416517e55}{m}} = master.\+recv\+\_\+msg()
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1examples_1_1bwtest_aedbe1ae71ec87c7d11ca85658f4b81de}{t2}} = time.\+time()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}check bandwidth of link
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a033827b08f1d3dac4a810807b931550e}\label{namespacepymavlink_1_1examples_1_1bwtest_a033827b08f1d3dac4a810807b931550e}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!args@{args}}
+\index{args@{args}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line 18 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_ab55375291b155b2a2607fd48014a0d97}\label{namespacepymavlink_1_1examples_1_1bwtest_ab55375291b155b2a2607fd48014a0d97}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!bytes\_recv@{bytes\_recv}}
+\index{bytes\_recv@{bytes\_recv}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{bytes\_recv}{bytes\_recv}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+bytes\+\_\+recv = 0}
+
+
+
+Definition at line 30 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a005de8de5862bdd85d1299177ee51f58}\label{namespacepymavlink_1_1examples_1_1bwtest_a005de8de5862bdd85d1299177ee51f58}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!bytes\_sent@{bytes\_sent}}
+\index{bytes\_sent@{bytes\_sent}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{bytes\_sent}{bytes\_sent}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+bytes\+\_\+sent = 0}
+
+
+
+Definition at line 29 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a8337b9d2eb5466652348f85a132fdec6}\label{namespacepymavlink_1_1examples_1_1bwtest_a8337b9d2eb5466652348f85a132fdec6}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!counts@{counts}}
+\index{counts@{counts}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{counts}{counts}}
+{\footnotesize\ttfamily dictionary pymavlink.\+examples.\+bwtest.\+counts = \{\}}
+
+
+
+Definition at line 27 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a77a2ab871e0aaf94ccf5bc881a5dbba4}\label{namespacepymavlink_1_1examples_1_1bwtest_a77a2ab871e0aaf94ccf5bc881a5dbba4}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!default@{default}}
+\index{default@{default}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+default}
+
+
+
+Definition at line 16 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a8fd8509719d18e925ccec358a8dc0682}\label{namespacepymavlink_1_1examples_1_1bwtest_a8fd8509719d18e925ccec358a8dc0682}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!help@{help}}
+\index{help@{help}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+help}
+
+
+
+Definition at line 16 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a9e476130bb8cd37d293f893416517e55}\label{namespacepymavlink_1_1examples_1_1bwtest_a9e476130bb8cd37d293f893416517e55}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!m@{m}}
+\index{m@{m}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+m = master.\+recv\+\_\+msg()}
+
+
+
+Definition at line 45 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a992c5d2dd65ab9fdb16be40008f497a6}\label{namespacepymavlink_1_1examples_1_1bwtest_a992c5d2dd65ab9fdb16be40008f497a6}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!master@{master}}
+\index{master@{master}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{master}{master}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+master = \mbox{\hyperlink{namespacepymavlink_1_1mavutil_aa6c4b8861f86ef3bb746fa0fab241c93}{mavutil.\+mavlink\+\_\+connection}}(args.\+device, baud=args.\+baudrate)}
+
+
+
+M\+AV related code starts here \#\#\#. 
+
+
+
+Definition at line 23 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_afe076f1a3d008cd525c26a2a33b3d97f}\label{namespacepymavlink_1_1examples_1_1bwtest_afe076f1a3d008cd525c26a2a33b3d97f}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!parser@{parser}}
+\index{parser@{parser}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+parser = Argument\+Parser(description=\+\_\+\+\_\+doc\+\_\+\+\_\+)}
+
+
+
+Definition at line 13 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a75801b54e117a46a4f239b09fc2c27b6}\label{namespacepymavlink_1_1examples_1_1bwtest_a75801b54e117a46a4f239b09fc2c27b6}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!required@{required}}
+\index{required@{required}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{required}{required}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+required}
+
+
+
+Definition at line 17 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_ad07e8a9178e3d4eddfb8db5f9525467f}\label{namespacepymavlink_1_1examples_1_1bwtest_ad07e8a9178e3d4eddfb8db5f9525467f}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!t1@{t1}}
+\index{t1@{t1}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{t1}{t1}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+t1 = time.\+time()}
+
+
+
+Definition at line 25 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_aedbe1ae71ec87c7d11ca85658f4b81de}\label{namespacepymavlink_1_1examples_1_1bwtest_aedbe1ae71ec87c7d11ca85658f4b81de}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!t2@{t2}}
+\index{t2@{t2}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{t2}{t2}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+t2 = time.\+time()}
+
+
+
+Definition at line 56 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_a66efa427cd2ab3c171e5342a383659ae}\label{namespacepymavlink_1_1examples_1_1bwtest_a66efa427cd2ab3c171e5342a383659ae}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!True@{True}}
+\index{True@{True}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+True}
+
+
+
+Definition at line 17 of file bwtest.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1examples_1_1bwtest_afbde17ba1802e5962a67d9e3977f29c7}\label{namespacepymavlink_1_1examples_1_1bwtest_afbde17ba1802e5962a67d9e3977f29c7}} 
+\index{pymavlink.examples.bwtest@{pymavlink.examples.bwtest}!type@{type}}
+\index{type@{type}!pymavlink.examples.bwtest@{pymavlink.examples.bwtest}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily pymavlink.\+examples.\+bwtest.\+type}
+
+
+
+Definition at line 15 of file bwtest.\+py.
+

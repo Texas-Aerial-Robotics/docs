@@ -1,0 +1,225 @@
+\hypertarget{test__sensor__orientation_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/test/test\+\_\+sensor\+\_\+orientation.cpp File Reference}
+\label{test__sensor__orientation_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros/test/test\_sensor\_orientation.cpp@{/home/eric/catkin\_ws/src/mavros/mavros/test/test\_sensor\_orientation.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$mavros/utils.\+h$>$}\newline
+{\ttfamily \#include $<$mavros/frame\+\_\+tf.\+h$>$}\newline
+{\ttfamily \#include $<$mavconn/mavlink\+\_\+dialect.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__sensor__orientation_8cpp_a9b173d338487480340f524877e6a2700}{E\+X\+P\+E\+C\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON}}(exp,  res)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{test__sensor__orientation_8cpp_a1858b816abd527c7cd91bf2d3f20cc80}{SO}} = mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a2d6eb22273368c57bb37785235bf6e4d}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+matching\+\_\+\+\_\+none)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_aa358083929430fa4e1816d5a5de34140}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+matching\+\_\+\+\_\+roll\+\_\+180)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a948a9105d42ac5e725de9f29a0f8beb3}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+matching\+\_\+\+\_\+roll\+\_\+180\+\_\+yaw\+\_\+90)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a66b28cc2af3b9bb07cf16baec13513c2}{T\+E\+ST}} (U\+T\+I\+LS, to\+\_\+string\+\_\+\+\_\+none)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_ac5a4b7639f5871d251a350868814b5c1}{T\+E\+ST}} (U\+T\+I\+LS, to\+\_\+string\+\_\+\+\_\+roll\+\_\+180)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a331be5229f497b9bfbd588b39898f6bc}{T\+E\+ST}} (U\+T\+I\+LS, to\+\_\+string\+\_\+\+\_\+roll\+\_\+180\+\_\+yaw\+\_\+90)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_af0661b2f30d3af227a8e454bfe98c5aa}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+none)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_ade9aa7fefdebdf5ee52ddbd663cfa0ce}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+unknown)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a7e29a224f91f4b8b806c999c39bf5156}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+number)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_adbf7ddbc8ab59c432eea77dddcda2049}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+wrong\+\_\+number)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a3be31cf94783bfb0ae358ea4246ac7a3}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+roll\+\_\+180)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a63e6683649b5802ac6c2cf46a04b9515}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+roll\+\_\+180\+\_\+yaw\+\_\+90)
+\item 
+\mbox{\hyperlink{test__sensor__orientation_8cpp_a446c45688f0fb8cfc6468918f9ec3132}{T\+E\+ST}} (U\+T\+I\+LS, sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+last\+\_\+element\+\_\+roll\+\_\+90\+\_\+yaw\+\_\+270)
+\item 
+int \mbox{\hyperlink{test__sensor__orientation_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a9b173d338487480340f524877e6a2700}\label{test__sensor__orientation_8cpp_a9b173d338487480340f524877e6a2700}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!EXPECT\_QUATERNION@{EXPECT\_QUATERNION}}
+\index{EXPECT\_QUATERNION@{EXPECT\_QUATERNION}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{EXPECT\_QUATERNION}{EXPECT\_QUATERNION}}
+{\footnotesize\ttfamily \#define E\+X\+P\+E\+C\+T\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+ON(\begin{DoxyParamCaption}\item[{}]{exp,  }\item[{}]{res }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{EXPECT\_NEAR(exp.w(), \mbox{\hyperlink{namespacesha256__test_a5fc8e677b8f139f063e53d27b5880f7e}{res}}.w(), epsilon); \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(exp.x(), \mbox{\hyperlink{namespacesha256__test_a5fc8e677b8f139f063e53d27b5880f7e}{res}}.x(), epsilon); \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(exp.y(), \mbox{\hyperlink{namespacesha256__test_a5fc8e677b8f139f063e53d27b5880f7e}{res}}.y(), epsilon); \(\backslash\)}
+\DoxyCodeLine{    EXPECT\_NEAR(exp.z(), \mbox{\hyperlink{namespacesha256__test_a5fc8e677b8f139f063e53d27b5880f7e}{res}}.z(), epsilon)}
+
+\end{DoxyCode}
+
+
+Definition at line 20 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a1858b816abd527c7cd91bf2d3f20cc80}\label{test__sensor__orientation_8cpp_a1858b816abd527c7cd91bf2d3f20cc80}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!SO@{SO}}
+\index{SO@{SO}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{SO}{SO}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{test__sensor__orientation_8cpp_a1858b816abd527c7cd91bf2d3f20cc80}{SO}} =  mavlink\+::common\+::\+M\+A\+V\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}
+
+
+
+Definition at line 16 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{test__sensor__orientation_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!main@{main}}
+\index{main@{main}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a2d6eb22273368c57bb37785235bf6e4d}\label{test__sensor__orientation_8cpp_a2d6eb22273368c57bb37785235bf6e4d}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+matching\+\_\+\+\_\+none}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_aa358083929430fa4e1816d5a5de34140}\label{test__sensor__orientation_8cpp_aa358083929430fa4e1816d5a5de34140}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+matching\+\_\+\+\_\+roll\+\_\+180}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a948a9105d42ac5e725de9f29a0f8beb3}\label{test__sensor__orientation_8cpp_a948a9105d42ac5e725de9f29a0f8beb3}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+matching\+\_\+\+\_\+roll\+\_\+180\+\_\+yaw\+\_\+90}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a66b28cc2af3b9bb07cf16baec13513c2}\label{test__sensor__orientation_8cpp_a66b28cc2af3b9bb07cf16baec13513c2}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{to\+\_\+string\+\_\+\+\_\+none}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_ac5a4b7639f5871d251a350868814b5c1}\label{test__sensor__orientation_8cpp_ac5a4b7639f5871d251a350868814b5c1}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{to\+\_\+string\+\_\+\+\_\+roll\+\_\+180}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a331be5229f497b9bfbd588b39898f6bc}\label{test__sensor__orientation_8cpp_a331be5229f497b9bfbd588b39898f6bc}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{to\+\_\+string\+\_\+\+\_\+roll\+\_\+180\+\_\+yaw\+\_\+90}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_af0661b2f30d3af227a8e454bfe98c5aa}\label{test__sensor__orientation_8cpp_af0661b2f30d3af227a8e454bfe98c5aa}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+none}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_ade9aa7fefdebdf5ee52ddbd663cfa0ce}\label{test__sensor__orientation_8cpp_ade9aa7fefdebdf5ee52ddbd663cfa0ce}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+unknown}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a7e29a224f91f4b8b806c999c39bf5156}\label{test__sensor__orientation_8cpp_a7e29a224f91f4b8b806c999c39bf5156}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+number}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 75 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_adbf7ddbc8ab59c432eea77dddcda2049}\label{test__sensor__orientation_8cpp_adbf7ddbc8ab59c432eea77dddcda2049}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+wrong\+\_\+number}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a3be31cf94783bfb0ae358ea4246ac7a3}\label{test__sensor__orientation_8cpp_a3be31cf94783bfb0ae358ea4246ac7a3}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+roll\+\_\+180}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a63e6683649b5802ac6c2cf46a04b9515}\label{test__sensor__orientation_8cpp_a63e6683649b5802ac6c2cf46a04b9515}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+roll\+\_\+180\+\_\+yaw\+\_\+90}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+
+\mbox{\Hypertarget{test__sensor__orientation_8cpp_a446c45688f0fb8cfc6468918f9ec3132}\label{test__sensor__orientation_8cpp_a446c45688f0fb8cfc6468918f9ec3132}} 
+\index{test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_sensor\_orientation.cpp@{test\_sensor\_orientation.cpp}}
+\subsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/13]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{U\+T\+I\+LS}]{,  }\item[{sensor\+\_\+orientation\+\_\+from\+\_\+str\+\_\+\+\_\+last\+\_\+element\+\_\+roll\+\_\+90\+\_\+yaw\+\_\+270}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 96 of file test\+\_\+sensor\+\_\+orientation.\+cpp.
+

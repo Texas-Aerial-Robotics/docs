@@ -1,0 +1,72 @@
+\hypertarget{softmax__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/softmax\+\_\+layer.h File Reference}
+\label{softmax__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/softmax\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/softmax\_layer.h}}
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{softmax__layer_8h_a246de34228e1ef70754d083b568eba1a}{softmax\+\_\+array}} (float $\ast$input, int n, float \mbox{\hyperlink{stratnode_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}}, float $\ast$output)
+\item 
+\mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}} \mbox{\hyperlink{softmax__layer_8h_a8cff8d62542982029c5187d95241059b}{make\+\_\+softmax\+\_\+layer}} (int batch, int inputs, int groups)
+\item 
+void \mbox{\hyperlink{softmax__layer_8h_a38543b2625d6695718b3b57d61f354e6}{forward\+\_\+softmax\+\_\+layer}} (const \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{softmax__layer_8h_a555b5ca092347b190432e90d7d89125a}{backward\+\_\+softmax\+\_\+layer}} (const \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}\label{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}} 
+\index{softmax\_layer.h@{softmax\_layer.h}!softmax\_layer@{softmax\_layer}}
+\index{softmax\_layer@{softmax\_layer}!softmax\_layer.h@{softmax\_layer.h}}
+\subsubsection{\texorpdfstring{softmax\_layer}{softmax\_layer}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}}}
+
+
+
+Definition at line 6 of file softmax\+\_\+layer.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{softmax__layer_8h_a555b5ca092347b190432e90d7d89125a}\label{softmax__layer_8h_a555b5ca092347b190432e90d7d89125a}} 
+\index{softmax\_layer.h@{softmax\_layer.h}!backward\_softmax\_layer@{backward\_softmax\_layer}}
+\index{backward\_softmax\_layer@{backward\_softmax\_layer}!softmax\_layer.h@{softmax\_layer.h}}
+\subsubsection{\texorpdfstring{backward\_softmax\_layer()}{backward\_softmax\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+softmax\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file softmax\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{softmax__layer_8h_a38543b2625d6695718b3b57d61f354e6}\label{softmax__layer_8h_a38543b2625d6695718b3b57d61f354e6}} 
+\index{softmax\_layer.h@{softmax\_layer.h}!forward\_softmax\_layer@{forward\_softmax\_layer}}
+\index{forward\_softmax\_layer@{forward\_softmax\_layer}!softmax\_layer.h@{softmax\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_softmax\_layer()}{forward\_softmax\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+softmax\+\_\+layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file softmax\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{softmax__layer_8h_a8cff8d62542982029c5187d95241059b}\label{softmax__layer_8h_a8cff8d62542982029c5187d95241059b}} 
+\index{softmax\_layer.h@{softmax\_layer.h}!make\_softmax\_layer@{make\_softmax\_layer}}
+\index{make\_softmax\_layer@{make\_softmax\_layer}!softmax\_layer.h@{softmax\_layer.h}}
+\subsubsection{\texorpdfstring{make\_softmax\_layer()}{make\_softmax\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{softmax__layer_8h_aa78f145c1fcb83ebd29188f78fd8f170}{softmax\+\_\+layer}} make\+\_\+softmax\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{int}]{groups }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file softmax\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{softmax__layer_8h_a246de34228e1ef70754d083b568eba1a}\label{softmax__layer_8h_a246de34228e1ef70754d083b568eba1a}} 
+\index{softmax\_layer.h@{softmax\_layer.h}!softmax\_array@{softmax\_array}}
+\index{softmax\_array@{softmax\_array}!softmax\_layer.h@{softmax\_layer.h}}
+\subsubsection{\texorpdfstring{softmax\_array()}{softmax\_array()}}
+{\footnotesize\ttfamily void softmax\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{input,  }\item[{int}]{n,  }\item[{float}]{temp,  }\item[{float $\ast$}]{output }\end{DoxyParamCaption})}
+

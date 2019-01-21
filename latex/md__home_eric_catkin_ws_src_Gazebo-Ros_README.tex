@@ -1,0 +1,49 @@
+This repo is a ros package which couples our romba simulator to the ardupilot S\+I\+TL sim as well as other ros-\/gazebo plugins
+
+Please install the following dependencies to get the simulator to run
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install ros-kinetic-gazebo-ros ros-kinetic-gazebo-plugins}
+\end{DoxyCode}
+
+
+\subsection*{Instructions}
+
+clone in Computations repo
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/Computations.git}
+\end{DoxyCode}
+
+
+Add the following to your bashrc to use the roomba plugins
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export GAZEBO\_MODEL\_PATH=\$\{GAZEBO\_MODEL\_PATH\}:~/Computations/roomba\_host/models}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export GAZEBO\_PLUGIN\_PATH=\$\{GAZEBO\_PLUGIN\_PATH\}:~/Computations/roomba\_host/build}
+\end{DoxyCode}
+
+
+\subsection*{To view camera plugin}
+
+install image view
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install ros-kinetic-image-view}
+\end{DoxyCode}
+
+
+To view camera footage 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun image\_view image\_view image:=/webcam/image\_raw}
+\end{DoxyCode}
+ 

@@ -1,0 +1,1601 @@
+\hypertarget{include__v0_89_2mavlink__types_8h}{}\section{/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C/include\+\_\+v0.9/mavlink\+\_\+types.h File Reference}
+\label{include__v0_89_2mavlink__types_8h}\index{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v0.9/mavlink\_types.h@{/home/eric/catkin\_ws/src/mavlink/pymavlink/generator/C/include\_v0.9/mavlink\_types.h}}
+{\ttfamily \#include \char`\"{}inttypes.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structparam__union}{param\+\_\+union}}
+\item 
+struct \mbox{\hyperlink{struct____mavlink__system}{\+\_\+\+\_\+mavlink\+\_\+system}}
+\item 
+struct \mbox{\hyperlink{struct____mavlink__message}{\+\_\+\+\_\+mavlink\+\_\+message}}
+\item 
+struct \mbox{\hyperlink{struct____mavlink__extended__message}{\+\_\+\+\_\+mavlink\+\_\+extended\+\_\+message}}
+\item 
+struct \mbox{\hyperlink{struct____mavlink__field__info}{\+\_\+\+\_\+mavlink\+\_\+field\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{struct____mavlink__message__info}{\+\_\+\+\_\+mavlink\+\_\+message\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{struct____mavlink__status}{\+\_\+\+\_\+mavlink\+\_\+status}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_acdb4be921d71a2d1c5b63467c58bd08e}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN}}~255
+\begin{DoxyCompactList}\small\item\em Maximum payload length. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a21225a1e59e8bf4ebf886ee85894108c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+R\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}}~5
+\begin{DoxyCompactList}\small\item\em Length of core header (of the comm. layer)\+: message length (1 byte) + message sequence (1 byte) + message system id (1 byte) + message component id (1 byte) + message type id (1 byte) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a8089e674d6fef4c793a249289f4ca862}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+T\+ES}}~(\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a21225a1e59e8bf4ebf886ee85894108c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+R\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}} + 1)
+\begin{DoxyCompactList}\small\item\em Length of all header bytes, including core and checksum. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a0c5e0f95542a7073907027c431fa9351}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES}}~2
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a47b7d9e3d7e370f8def7826f39b295d9}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+N\+O\+N\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+B\+Y\+T\+ES}}~(\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a8089e674d6fef4c793a249289f4ca862}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+T\+ES}} + \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a0c5e0f95542a7073907027c431fa9351}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES}})
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}}~(\mbox{\hyperlink{testmav_8c_acdb4be921d71a2d1c5b63467c58bd08e}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN}} + \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a47b7d9e3d7e370f8def7826f39b295d9}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+N\+O\+N\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+B\+Y\+T\+ES}})
+\begin{DoxyCompactList}\small\item\em Maximum packet length. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a350503786189ba88d8ef6875b9af9888}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+S\+G\+\_\+\+I\+D\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE}}~255
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a1da9ce3bd6ab7d707f3ac81953f45309}{M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}}~14
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a16d466b63f1f0901e8c77e328f490b71}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}}~2048
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a03fb68f36575eb133e3c046f55295837}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN}}~(\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a16d466b63f1f0901e8c77e328f490b71}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} -\/ \mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a1da9ce3bd6ab7d707f3ac81953f45309}{M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}} -\/ \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a47b7d9e3d7e370f8def7826f39b295d9}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+N\+O\+N\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+B\+Y\+T\+ES}})
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a27984b8945d505a56168731dc3cac63a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+F\+I\+E\+L\+DS}}~64
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})~((const char $\ast$)(\&((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$payload64\mbox{[}0\mbox{]})))
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a7669822824250e6b1a46627f70c9e3ce}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+N\+O\+N\+\_\+\+C\+O\+N\+ST}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})~((char $\ast$)(\&((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$payload64\mbox{[}0\mbox{]})))
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a27d6e3790999e8f43b7929901b6526ea}{mavlink\+\_\+ck\+\_\+a}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})~$\ast$((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$len + (uint8\+\_\+t $\ast$)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a7669822824250e6b1a46627f70c9e3ce}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+N\+O\+N\+\_\+\+C\+O\+N\+ST}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}))
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ace276f8ae1f6abd493787bc94367edc3}{mavlink\+\_\+ck\+\_\+b}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})~$\ast$(((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$len+(uint16\+\_\+t)1) + (uint8\+\_\+t $\ast$)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a7669822824250e6b1a46627f70c9e3ce}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+N\+O\+N\+\_\+\+C\+O\+N\+ST}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}))
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aff625e94451bf446bdd56f5d0e081077}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+\+N\+U\+M\+\_\+\+B\+U\+F\+F\+E\+RS}}~4
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a2f40ba558552f7e45c3075c21cfada9b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}}~0
+\item 
+\#define \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_af43ffe0aa4007fb568c277f8942eb759}{M\+A\+V\+L\+I\+N\+K\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structparam__union}{param\+\_\+union}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a1bfc816b2c3b11ee88cf643f491c957c}{mavlink\+\_\+param\+\_\+union\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct____mavlink__system}{\+\_\+\+\_\+mavlink\+\_\+system}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a2aac9d99a53a399e495b95c18bb736c6}{mavlink\+\_\+system\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct____mavlink__message}{\+\_\+\+\_\+mavlink\+\_\+message}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct____mavlink__extended__message}{\+\_\+\+\_\+mavlink\+\_\+extended\+\_\+message}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a2fb0ed65898193d6a151bd54553f24bf}{mavlink\+\_\+extended\+\_\+message\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct____mavlink__field__info}{\+\_\+\+\_\+mavlink\+\_\+field\+\_\+info}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a00291ed73cb08731cbcccb8dc974ac95}{mavlink\+\_\+field\+\_\+info\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct____mavlink__message__info}{\+\_\+\+\_\+mavlink\+\_\+message\+\_\+info}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac6313dd5faf3ddc3185ba9a8e5a70d5c}{mavlink\+\_\+message\+\_\+info\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct____mavlink__status}{\+\_\+\+\_\+mavlink\+\_\+status}} \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986f}{M\+A\+V\+\_\+\+C\+L\+A\+SS}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fab006114bae87cbde231ead57ba2dd700}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+IC}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa614183f00430c5a78ba9fc88e2eb9fdc}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+I\+X\+H\+A\+WK}} = 1, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa24e410f1a22cec77d053717fe4a6ded4}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+L\+U\+GS}} = 2, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa89310859b8b9988b949ff6e0468d8bdd}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+R\+D\+U\+P\+I\+L\+O\+T\+M\+E\+GA}} = 3, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fadd3a8ba817624756276f1f9bda667d65}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+O\+P\+E\+N\+P\+I\+L\+OT}} = 4, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa44c85b45907b7572b062f79a7dbdcb19}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+S\+\_\+\+O\+N\+LY}} = 5, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986faa0c270041e5eaf75d2bdf5662ab20d7d}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+N\+A\+V\+I\+G\+A\+T\+I\+O\+N\+\_\+\+O\+N\+LY}} = 6, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa9a48963e1d84c2e0380064f3b37c9add}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+F\+U\+LL}} = 7, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fac653ecf59ba1f983819a0eff8b86abe5}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+O\+NE}} = 8, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa2876e46c4971d49bc61c802dac5ca1b6}{M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+NB}}
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705e}{M\+A\+V\+\_\+\+A\+C\+T\+I\+ON}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ead687accc91f3a7fa1079abf13cefd4a2}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+H\+O\+LD}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eac51b233de6991c25106e72912ae423d5}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+M\+O\+T\+O\+R\+S\+\_\+\+S\+T\+A\+RT}} = 1, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaa706cb7f6dcce106917e3050770a8898}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+A\+U\+N\+CH}} = 2, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab2294a2ccf5e68f6592a31b733afcfd5}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+T\+U\+RN}} = 3, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea818f553ae2a19d7121af2ff205cac5ec}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+M\+C\+Y\+\_\+\+L\+A\+ND}} = 4, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9f52159828b458ab1a6434e5d6558b5e}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+M\+C\+Y\+\_\+\+K\+I\+LL}} = 5, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea946a9eb1e543c204a2e11a9fc00a0368}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+F\+I\+R\+M\+\_\+\+K\+I\+LL}} = 6, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9c434dbe45f918bac7aa25cd433f10da}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+UE}} = 7, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ead24145c27ced813770de16761571b841}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+M\+O\+T\+O\+R\+S\+\_\+\+S\+T\+OP}} = 8, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea7841f4c34643f31dcb8174e7e498edd1}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+H\+A\+LT}} = 9, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea6b9173237b8167e9805e36632aa3da5a}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+H\+U\+T\+D\+O\+WN}} = 10, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea0784c101c25dec19223888488526273b}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+B\+O\+OT}} = 11, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea591d32e3ee410ae02c8b1479804609f8}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+M\+A\+N\+U\+AL}} = 12, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea7c5f7246b4c6ea73bf2de220b7ec1bb5}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+A\+U\+TO}} = 13, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea238cc4451f5c5e590b666091cb975b90}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+R\+E\+AD}} = 14, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea566663bd5c44f2d7aaeee5ead6abc5c9}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+W\+R\+I\+TE}} = 15, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea005e1b8395e62ca7a1ec2653c888914b}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+RC}} = 16, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab4e90f53662ef1191a600ba8e48681ec}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+G\+Y\+RO}} = 17, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eacc5f72a4f59da0fef7daa6250111c34a}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+M\+AG}} = 18, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea24b4f08dc829faf22568e34e249ac69f}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+A\+CC}} = 19, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eae6d5ae61b80eaeff1e52e4d7c0724c85}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+P\+R\+E\+S\+S\+U\+RE}} = 20, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9b22fbe560b64605fa0cbd0f6a2e6f24}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+C\+\_\+\+S\+T\+A\+RT}} = 21, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaee4ecac755a9e877aa9255e5e3ba5423}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+C\+\_\+\+P\+A\+U\+SE}} = 22, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea34bedb3094503b61efb32f4935d866f5}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+C\+\_\+\+S\+T\+OP}} = 23, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea201aedb9f14e84f3dc360364c1f7cb1d}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+A\+K\+E\+O\+FF}} = 24, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea92e257ab6beaaa57e5eff2be60d19ea9}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+N\+A\+V\+I\+G\+A\+TE}} = 25, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea62f27c09f495bd75f08b1a06035dafc4}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+A\+ND}} = 26, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4f92f27a8446a12b881e6161eb7f8c8a}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+I\+T\+ER}} = 27, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eadc20e88edd6405eab2fbd04a89e0d3f3}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+O\+R\+I\+G\+IN}} = 28, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab9eba7b3a10096df90cd1e00ed9b2076}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+ON}} = 29, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4ec28214d414bcfe4ca835906e9e9509}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+O\+FF}} = 30, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9f87d88de2b525eeaba235781198ff8a}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+E\+T\+\_\+\+I\+M\+A\+GE}} = 31, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea1d0ab68f41baf34917ef4667711ff05c}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+V\+I\+D\+E\+O\+\_\+\+S\+T\+A\+RT}} = 32, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4940be951f418153999922a7dba9d909}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+V\+I\+D\+E\+O\+\_\+\+S\+T\+OP}} = 33, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaa6388b4492b9f093fc46e8d6267f9cba}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+AP}} = 34, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaf4f1fe2bf50c3c7f2dbd137ecb2ba76c}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+L\+AN}} = 35, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea2e7e868eed436a72ac080a056958da97}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+C\+O\+M\+M\+A\+ND}} = 36, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaef4ec93a551ef51448ad4b062f6c02eb}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+A\+S\+C\+E\+N\+D\+\_\+\+A\+T\+\_\+\+R\+A\+TE}} = 37, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4549fbe8e6af64078311921fa250b151}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+M\+O\+DE}} = 38, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea0deecc2a12679c85605dd6c0b5016fbf}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+I\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+U\+R\+NS}} = 39, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea6980fb34376b368c40720283a0d9d5e5}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+I\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+ME}} = 40, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea08c753801918a509e3c0a46d7e403515}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+R\+T\+\_\+\+H\+I\+L\+S\+IM}} = 41, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaf492c98b109e5091bb7c570169873092}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+O\+P\+\_\+\+H\+I\+L\+S\+IM}} = 42, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea37021d1fba3b1954513544c71e2156fb}{M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+NB}}
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbab}{M\+A\+V\+\_\+\+M\+O\+DE}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba9bda33b30b2acc21f3bd475cdf649ce2}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+U\+N\+I\+N\+IT}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba9bda32b3c72f78091b630e8fd2827f61}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+C\+K\+ED}} = 1, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabac5ebe81d4cd37d4eac4f78ab4458c396}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+AL}} = 2, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba861009fb273c8aa97488225036bde3b2}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+G\+U\+I\+D\+ED}} = 3, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabaa7c13ea51fa3bd12c5b1e6f21bf88975}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+A\+U\+TO}} = 4, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabacbd1683bf129afcde5651141eb97e9a7}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+T\+E\+S\+T1}} = 5, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba13c04f6eb3398a50702c9858ee28f6f4}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+T\+E\+S\+T2}} = 6, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabadb3c2d4ad5659b37bcfcc970ecf77b64}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+T\+E\+S\+T3}} = 7, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba17f9bf4eb45e908d8f52a657f72d89b1}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+A\+DY}} = 8, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbababc362f9e663c2a152f01ca23b12b7240}{M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+R\+C\+\_\+\+T\+R\+A\+I\+N\+I\+NG}} = 9
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}{M\+A\+V\+\_\+\+S\+T\+A\+TE}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba75dd938ec17258846d5bef7357030bf0}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba0ff6eb6bb40152a34ab7c4d3aabe65fd}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+OT}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba760ec73c5b1b2f0037b1e2a6376503b2}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+NG}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbad69722cf6292e09ad9b636987a9c4bb6}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+N\+D\+BY}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba3321eca253d688977042fe637dd79666}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+C\+T\+I\+VE}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba712e11f581cca8d64e11ae1fb8fd5c09}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+R\+I\+T\+I\+C\+AL}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba6b76ceaeac2330867ad799c878a723de}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+M\+E\+R\+G\+E\+N\+CY}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbaa000c9351937a4ab79b2ac9cc025bd26}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+L\+S\+IM}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbabeabd77947cfce2cf8b0282a30e36652}{M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+O\+W\+E\+R\+O\+FF}}
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35}{M\+A\+V\+\_\+\+N\+AV}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35aaecbca3b40902ebd917c2d5445b91345}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+G\+R\+O\+U\+N\+D\+ED}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a11b5fb53abd1e5e2361dcd35d9cd65f9}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+I\+F\+T\+O\+FF}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a00f4b26e3b09b13de7a2566d8cf5fe87}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+H\+O\+LD}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35ab46f56d8ce5c173ebce920139c6e36be}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+W\+A\+Y\+P\+O\+I\+NT}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a6d07d79d9da3e1dda93dfe9e16345bec}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+V\+E\+C\+T\+OR}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a45c5c1ac8ceb7d807107908055fb98f2}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+I\+NG}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a4f8e95b87b90e6819461d08365b8eb3b}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+A\+N\+D\+I\+NG}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35af5041ff614be5e07a08bcb062e96a74f}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+O\+ST}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a4942fe63410f8acb32163070c562b3ec}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+O\+I\+T\+ER}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35ae54456ac4a520fd5d50319cb712d2c3a}{M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+F\+R\+E\+E\+\_\+\+D\+R\+I\+FT}}
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}{M\+A\+V\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af9b4df8808aa1e589ec65cf402aaa7fc}{M\+A\+V\+\_\+\+G\+E\+N\+E\+R\+IC}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28ae195f23eb8123df0fc1bd110cc11318e}{M\+A\+V\+\_\+\+F\+I\+X\+E\+D\+\_\+\+W\+I\+NG}} = 1, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af7dc42049f80ac562a02f20df77f071f}{M\+A\+V\+\_\+\+Q\+U\+A\+D\+R\+O\+T\+OR}} = 2, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28abe0d1cde5855d44ff6aa10ab473a1835}{M\+A\+V\+\_\+\+C\+O\+A\+X\+I\+AL}} = 3, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a8c2fb4ade26ff6f2e9d5520c7eaef67d}{M\+A\+V\+\_\+\+H\+E\+L\+I\+C\+O\+P\+T\+ER}} = 4, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a62e5d00ad72c01412daf2a80ddeccada}{M\+A\+V\+\_\+\+G\+R\+O\+U\+ND}} = 5, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28aaa9ca8a57cc0d6bbd4d290c1789b5b84}{O\+CU}} = 6, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a3f444597266b2234e5c41b89e1f3039c}{M\+A\+V\+\_\+\+A\+I\+R\+S\+H\+IP}} = 7, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af3c0933df2bb2fa3b6240a8997ff6404}{M\+A\+V\+\_\+\+F\+R\+E\+E\+\_\+\+B\+A\+L\+L\+O\+ON}} = 8, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a5613a36b0976334663b2b4d3a2671b65}{M\+A\+V\+\_\+\+R\+O\+C\+K\+ET}} = 9, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a5c4a0e3ec6379890e07fa7f2c84a3e5d}{U\+G\+V\+\_\+\+G\+R\+O\+U\+N\+D\+\_\+\+R\+O\+V\+ER}} = 10, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a189fa1873791069c091aa3b2d3aecf5c}{U\+G\+V\+\_\+\+S\+U\+R\+F\+A\+C\+E\+\_\+\+S\+H\+IP}} = 11
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64c}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64ca8fd74e980c05eedaa8ec3bf687b832ae}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+G\+E\+N\+E\+R\+IC}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64caf6584f986a5fc7af0c43017b693d7575}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+P\+I\+X\+H\+A\+WK}} = 1, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64caac16e86eb14ab0c9e98526886c5518ef}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+S\+L\+U\+GS}} = 2, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64cabcd0ae4d5261a36f5acbaafb99420b60}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+A\+R\+D\+U\+P\+I\+L\+O\+T\+M\+E\+GA}} = 3, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64ca50fa6dc1506e436c824b49740e72228f}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+N\+O\+NE}} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5d}{M\+A\+V\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5dadec5075d3a419e590a7e0b9b046e860d}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+G\+PS}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da14c1564ea1345ca849c1b2211977e195}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+P\+L\+A\+N\+N\+ER}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da29f77921488a3a85fb5e862b37eab878}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+B\+L\+O\+B\+T\+R\+A\+C\+K\+ER}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da682befe9bfabf0726bed20bc6d2bfa94}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+P\+A\+T\+H\+P\+L\+A\+N\+N\+ER}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da5f2b82857fc61c29d66f258ec3a63b9a}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+A\+I\+R\+S\+L\+AM}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da916fb7afe6740abfd76270aa84c25e45}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+M\+A\+P\+P\+ER}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da66ff42b69c7232769f8a10281bd33c19}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+C\+A\+M\+E\+RA}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da27a9b9a229b123b6354739719b6a6821}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+R\+A\+D\+IO}} = 68, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da56b2918e840d040eb61c67735b1e8040}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+I\+MU}} = 200, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da9c8458ce99f9915deadab1c142afdecb}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+I\+M\+U\+\_\+2}} = 201, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da5a69ca0519a887b2870f0e28389d642a}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+I\+M\+U\+\_\+3}} = 202, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da339bc7880869b2295b7bffc024b8f026}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE}} = 240, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5dad4bae7b33888158400c9f84cd23c57c8}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+A\+R\+T\+\_\+\+B\+R\+I\+D\+GE}} = 241, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da39078947f391e6cfcf4ccbbd10d4edd1}{M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+O\+N\+T\+R\+OL}} = 250
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{M\+A\+V\+\_\+\+F\+R\+A\+ME}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617ac82354d51f25cf0132d358d473dbff59}{M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+G\+L\+O\+B\+AL}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a3baa0c7c49cb7e8451521ba35fe668af}{M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+L\+O\+C\+AL}} = 1, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a705a25dd764490c206129c782e78b2ef}{M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+M\+I\+S\+S\+I\+ON}} = 2, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a6c1091c1bd170974248a55d52a4ca19a}{M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+A\+LT}} = 3, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617ad2da562e8681994c26d594b1e0affa14}{M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+E\+NU}} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa68b6b511ca7c692035d0360dbc024d1c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+J\+P\+EG}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa8d4cdb3931a8738b747874b29b1b4dde}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+B\+MP}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa9552ab3c0186ddee4645a6cb6afb954d}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+R\+A\+W8U}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa6316df28253da275ffec204763d2cae4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+R\+A\+W32U}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa802d28f5188734c114745e5cd8af0cd4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+P\+GM}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa998e249155dc058ef52b159a42e336a6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+P\+NG}}
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4}{mavlink\+\_\+message\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+AR}} = 0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8\+\_\+T}} = 1, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T8\+\_\+T}} = 2, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T16\+\_\+T}} = 3, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T16\+\_\+T}} = 4, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32\+\_\+T}} = 5, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T32\+\_\+T}} = 6, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T64\+\_\+T}} = 7, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T64\+\_\+T}} = 8, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT}} = 9, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE}} = 10, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+AR}} = 0, 
+\newline
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8\+\_\+T}} = 1, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T8\+\_\+T}} = 2, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T16\+\_\+T}} = 3, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T16\+\_\+T}} = 4, 
+\newline
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32\+\_\+T}} = 5, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T32\+\_\+T}} = 6, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T64\+\_\+T}} = 7, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T64\+\_\+T}} = 8, 
+\newline
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT}} = 9, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE}} = 10, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+AR}} = 0, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8\+\_\+T}} = 1, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T8\+\_\+T}} = 2, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T16\+\_\+T}} = 3, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T16\+\_\+T}} = 4, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32\+\_\+T}} = 5, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T32\+\_\+T}} = 6, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T64\+\_\+T}} = 7, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T64\+\_\+T}} = 8, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT}} = 9, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}{M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE}} = 10
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709c}{mavlink\+\_\+channel\+\_\+t}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+1}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+2}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+3}}, 
+\newline
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+1}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+2}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+3}}, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+1}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+2}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+3}}
+ \}
+\item 
+enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1}{mavlink\+\_\+parse\+\_\+state\+\_\+t}} \{ \newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT}} =0, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+TX}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+EQ}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+L\+E\+N\+G\+TH}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+Y\+S\+ID}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+ID}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a3d02f008622944ee1591881d49954370}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+ID}}, 
+\newline
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+P\+A\+Y\+L\+O\+AD}}, 
+\mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+R\+C1}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT}} =0, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE}}, 
+\newline
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+TX}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+EQ}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+L\+E\+N\+G\+TH}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+Y\+S\+ID}}, 
+\newline
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+ID}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a3d02f008622944ee1591881d49954370}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+ID}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+P\+A\+Y\+L\+O\+AD}}, 
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+R\+C1}}, 
+\newline
+\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aae8c53898458dbd2f91e194b99ee8e68}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+B\+A\+D\+\_\+\+C\+R\+C1}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT}} =0, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+TX}}, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+L\+E\+N\+G\+TH}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a518457f4678af167fae567adbd6beab1}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+\_\+\+F\+L\+A\+GS}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a76bada2b3d4366042154c7cf7dcb31f8}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+F\+L\+A\+GS}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+EQ}}, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+Y\+S\+ID}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+ID}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a1219128bff8717007397ad3957414093}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+I\+D1}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aa064720fcc66e5393294f6086fe5333f}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+I\+D2}}, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a2e59b10e893077c17d4839ab079dc9ea}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+I\+D3}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+P\+A\+Y\+L\+O\+AD}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+R\+C1}}, 
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aae8c53898458dbd2f91e194b99ee8e68}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+B\+A\+D\+\_\+\+C\+R\+C1}}, 
+\newline
+\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a9eb5c868cdc345361a3ecded133af6cb}{M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+W\+A\+IT}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}\label{include__v0_89_2mavlink__types_8h_a619f28e6ade58d4cfce6668feeb85b36}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!\_MAV\_PAYLOAD@{\_MAV\_PAYLOAD}}
+\index{\_MAV\_PAYLOAD@{\_MAV\_PAYLOAD}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{\_MAV\_PAYLOAD}{\_MAV\_PAYLOAD}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+AD(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}} }\end{DoxyParamCaption})~((const char $\ast$)(\&((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$payload64\mbox{[}0\mbox{]})))}
+
+
+
+Definition at line 268 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a7669822824250e6b1a46627f70c9e3ce}\label{include__v0_89_2mavlink__types_8h_a7669822824250e6b1a46627f70c9e3ce}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!\_MAV\_PAYLOAD\_NON\_CONST@{\_MAV\_PAYLOAD\_NON\_CONST}}
+\index{\_MAV\_PAYLOAD\_NON\_CONST@{\_MAV\_PAYLOAD\_NON\_CONST}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{\_MAV\_PAYLOAD\_NON\_CONST}{\_MAV\_PAYLOAD\_NON\_CONST}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+N\+O\+N\+\_\+\+C\+O\+N\+ST(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}} }\end{DoxyParamCaption})~((char $\ast$)(\&((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$payload64\mbox{[}0\mbox{]})))}
+
+
+
+Definition at line 269 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a2f40ba558552f7e45c3075c21cfada9b}\label{include__v0_89_2mavlink__types_8h_a2f40ba558552f7e45c3075c21cfada9b}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_BIG\_ENDIAN@{MAVLINK\_BIG\_ENDIAN}}
+\index{MAVLINK\_BIG\_ENDIAN@{MAVLINK\_BIG\_ENDIAN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_BIG\_ENDIAN}{MAVLINK\_BIG\_ENDIAN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN~0}
+
+
+
+Definition at line 320 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a27d6e3790999e8f43b7929901b6526ea}\label{include__v0_89_2mavlink__types_8h_a27d6e3790999e8f43b7929901b6526ea}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_ck\_a@{mavlink\_ck\_a}}
+\index{mavlink\_ck\_a@{mavlink\_ck\_a}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_ck\_a}{mavlink\_ck\_a}}
+{\footnotesize\ttfamily \#define mavlink\+\_\+ck\+\_\+a(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}} }\end{DoxyParamCaption})~$\ast$((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$len + (uint8\+\_\+t $\ast$)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a7669822824250e6b1a46627f70c9e3ce}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+N\+O\+N\+\_\+\+C\+O\+N\+ST}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}))}
+
+
+
+Definition at line 272 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ace276f8ae1f6abd493787bc94367edc3}\label{include__v0_89_2mavlink__types_8h_ace276f8ae1f6abd493787bc94367edc3}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_ck\_b@{mavlink\_ck\_b}}
+\index{mavlink\_ck\_b@{mavlink\_ck\_b}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_ck\_b}{mavlink\_ck\_b}}
+{\footnotesize\ttfamily \#define mavlink\+\_\+ck\+\_\+b(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}} }\end{DoxyParamCaption})~$\ast$(((\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})-\/$>$len+(uint16\+\_\+t)1) + (uint8\+\_\+t $\ast$)\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a7669822824250e6b1a46627f70c9e3ce}{\+\_\+\+M\+A\+V\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+N\+O\+N\+\_\+\+C\+O\+N\+ST}}(\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}}))}
+
+
+
+Definition at line 273 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aff625e94451bf446bdd56f5d0e081077}\label{include__v0_89_2mavlink__types_8h_aff625e94451bf446bdd56f5d0e081077}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_NUM\_BUFFERS@{MAVLINK\_COMM\_NUM\_BUFFERS}}
+\index{MAVLINK\_COMM\_NUM\_BUFFERS@{MAVLINK\_COMM\_NUM\_BUFFERS}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_COMM\_NUM\_BUFFERS}{MAVLINK\_COMM\_NUM\_BUFFERS}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+\+N\+U\+M\+\_\+\+B\+U\+F\+F\+E\+RS~4}
+
+
+
+Definition at line 291 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a21225a1e59e8bf4ebf886ee85894108c}\label{include__v0_89_2mavlink__types_8h_a21225a1e59e8bf4ebf886ee85894108c}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_CORE\_HEADER\_LEN@{MAVLINK\_CORE\_HEADER\_LEN}}
+\index{MAVLINK\_CORE\_HEADER\_LEN@{MAVLINK\_CORE\_HEADER\_LEN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_CORE\_HEADER\_LEN}{MAVLINK\_CORE\_HEADER\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+R\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN~5}
+
+
+
+Length of core header (of the comm. layer)\+: message length (1 byte) + message sequence (1 byte) + message system id (1 byte) + message component id (1 byte) + message type id (1 byte) 
+
+
+
+Definition at line 176 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a1da9ce3bd6ab7d707f3ac81953f45309}\label{include__v0_89_2mavlink__types_8h_a1da9ce3bd6ab7d707f3ac81953f45309}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_EXTENDED\_HEADER\_LEN@{MAVLINK\_EXTENDED\_HEADER\_LEN}}
+\index{MAVLINK\_EXTENDED\_HEADER\_LEN@{MAVLINK\_EXTENDED\_HEADER\_LEN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_EXTENDED\_HEADER\_LEN}{MAVLINK\_EXTENDED\_HEADER\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN~14}
+
+
+
+Definition at line 184 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_af43ffe0aa4007fb568c277f8942eb759}\label{include__v0_89_2mavlink__types_8h_af43ffe0aa4007fb568c277f8942eb759}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_LITTLE\_ENDIAN@{MAVLINK\_LITTLE\_ENDIAN}}
+\index{MAVLINK\_LITTLE\_ENDIAN@{MAVLINK\_LITTLE\_ENDIAN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_LITTLE\_ENDIAN}{MAVLINK\_LITTLE\_ENDIAN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN~1}
+
+
+
+Definition at line 321 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a16d466b63f1f0901e8c77e328f490b71}\label{include__v0_89_2mavlink__types_8h_a16d466b63f1f0901e8c77e328f490b71}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_MAX\_EXTENDED\_PACKET\_LEN@{MAVLINK\_MAX\_EXTENDED\_PACKET\_LEN}}
+\index{MAVLINK\_MAX\_EXTENDED\_PACKET\_LEN@{MAVLINK\_MAX\_EXTENDED\_PACKET\_LEN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_MAX\_EXTENDED\_PACKET\_LEN}{MAVLINK\_MAX\_EXTENDED\_PACKET\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN~2048}
+
+
+
+Definition at line 191 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a03fb68f36575eb133e3c046f55295837}\label{include__v0_89_2mavlink__types_8h_a03fb68f36575eb133e3c046f55295837}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_MAX\_EXTENDED\_PAYLOAD\_LEN@{MAVLINK\_MAX\_EXTENDED\_PAYLOAD\_LEN}}
+\index{MAVLINK\_MAX\_EXTENDED\_PAYLOAD\_LEN@{MAVLINK\_MAX\_EXTENDED\_PAYLOAD\_LEN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_MAX\_EXTENDED\_PAYLOAD\_LEN}{MAVLINK\_MAX\_EXTENDED\_PAYLOAD\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN~(\mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a16d466b63f1f0901e8c77e328f490b71}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN}} -\/ \mbox{\hyperlink{include__v1_80_2mavlink__types_8h_a1da9ce3bd6ab7d707f3ac81953f45309}{M\+A\+V\+L\+I\+N\+K\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}} -\/ \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a47b7d9e3d7e370f8def7826f39b295d9}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+N\+O\+N\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+B\+Y\+T\+ES}})}
+
+
+
+Definition at line 194 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a27984b8945d505a56168731dc3cac63a}\label{include__v0_89_2mavlink__types_8h_a27984b8945d505a56168731dc3cac63a}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_MAX\_FIELDS@{MAVLINK\_MAX\_FIELDS}}
+\index{MAVLINK\_MAX\_FIELDS@{MAVLINK\_MAX\_FIELDS}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_MAX\_FIELDS}{MAVLINK\_MAX\_FIELDS}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+F\+I\+E\+L\+DS~64}
+
+
+
+Definition at line 249 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}\label{include__v0_89_2mavlink__types_8h_a473ed646f44ca10001777e8f150508a6}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_MAX\_PACKET\_LEN@{MAVLINK\_MAX\_PACKET\_LEN}}
+\index{MAVLINK\_MAX\_PACKET\_LEN@{MAVLINK\_MAX\_PACKET\_LEN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_MAX\_PACKET\_LEN}{MAVLINK\_MAX\_PACKET\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+EN~(\mbox{\hyperlink{testmav_8c_acdb4be921d71a2d1c5b63467c58bd08e}{M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN}} + \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a47b7d9e3d7e370f8def7826f39b295d9}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+N\+O\+N\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+B\+Y\+T\+ES}})}
+
+
+
+Maximum packet length. 
+
+
+
+Definition at line 181 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_acdb4be921d71a2d1c5b63467c58bd08e}\label{include__v0_89_2mavlink__types_8h_acdb4be921d71a2d1c5b63467c58bd08e}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_MAX\_PAYLOAD\_LEN@{MAVLINK\_MAX\_PAYLOAD\_LEN}}
+\index{MAVLINK\_MAX\_PAYLOAD\_LEN@{MAVLINK\_MAX\_PAYLOAD\_LEN}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_MAX\_PAYLOAD\_LEN}{MAVLINK\_MAX\_PAYLOAD\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+A\+X\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+L\+EN~255}
+
+
+
+Maximum payload length. 
+
+
+
+Definition at line 173 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a350503786189ba88d8ef6875b9af9888}\label{include__v0_89_2mavlink__types_8h_a350503786189ba88d8ef6875b9af9888}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_MSG\_ID\_EXTENDED\_MESSAGE@{MAVLINK\_MSG\_ID\_EXTENDED\_MESSAGE}}
+\index{MAVLINK\_MSG\_ID\_EXTENDED\_MESSAGE@{MAVLINK\_MSG\_ID\_EXTENDED\_MESSAGE}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_MSG\_ID\_EXTENDED\_MESSAGE}{MAVLINK\_MSG\_ID\_EXTENDED\_MESSAGE}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+M\+S\+G\+\_\+\+I\+D\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE~255}
+
+
+
+Definition at line 183 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a0c5e0f95542a7073907027c431fa9351}\label{include__v0_89_2mavlink__types_8h_a0c5e0f95542a7073907027c431fa9351}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_NUM\_CHECKSUM\_BYTES@{MAVLINK\_NUM\_CHECKSUM\_BYTES}}
+\index{MAVLINK\_NUM\_CHECKSUM\_BYTES@{MAVLINK\_NUM\_CHECKSUM\_BYTES}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_NUM\_CHECKSUM\_BYTES}{MAVLINK\_NUM\_CHECKSUM\_BYTES}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES~2}
+
+
+
+Definition at line 178 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a8089e674d6fef4c793a249289f4ca862}\label{include__v0_89_2mavlink__types_8h_a8089e674d6fef4c793a249289f4ca862}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_NUM\_HEADER\_BYTES@{MAVLINK\_NUM\_HEADER\_BYTES}}
+\index{MAVLINK\_NUM\_HEADER\_BYTES@{MAVLINK\_NUM\_HEADER\_BYTES}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_NUM\_HEADER\_BYTES}{MAVLINK\_NUM\_HEADER\_BYTES}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+T\+ES~(\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a21225a1e59e8bf4ebf886ee85894108c}{M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+R\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}} + 1)}
+
+
+
+Length of all header bytes, including core and checksum. 
+
+
+
+Definition at line 177 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a47b7d9e3d7e370f8def7826f39b295d9}\label{include__v0_89_2mavlink__types_8h_a47b7d9e3d7e370f8def7826f39b295d9}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_NUM\_NON\_PAYLOAD\_BYTES@{MAVLINK\_NUM\_NON\_PAYLOAD\_BYTES}}
+\index{MAVLINK\_NUM\_NON\_PAYLOAD\_BYTES@{MAVLINK\_NUM\_NON\_PAYLOAD\_BYTES}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_NUM\_NON\_PAYLOAD\_BYTES}{MAVLINK\_NUM\_NON\_PAYLOAD\_BYTES}}
+{\footnotesize\ttfamily \#define M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+N\+O\+N\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+B\+Y\+T\+ES~(\mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a8089e674d6fef4c793a249289f4ca862}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+T\+ES}} + \mbox{\hyperlink{include__v2_80_2mavlink__types_8h_a0c5e0f95542a7073907027c431fa9351}{M\+A\+V\+L\+I\+N\+K\+\_\+\+N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES}})}
+
+
+
+Definition at line 179 of file mavlink\+\_\+types.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a2fb0ed65898193d6a151bd54553f24bf}\label{include__v0_89_2mavlink__types_8h_a2fb0ed65898193d6a151bd54553f24bf}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_extended\_message\_t@{mavlink\_extended\_message\_t}}
+\index{mavlink\_extended\_message\_t@{mavlink\_extended\_message\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_extended\_message\_t}{mavlink\_extended\_message\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct____mavlink__extended__message}{\+\_\+\+\_\+mavlink\+\_\+extended\+\_\+message}}  \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a2fb0ed65898193d6a151bd54553f24bf}{mavlink\+\_\+extended\+\_\+message\+\_\+t}}}
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a00291ed73cb08731cbcccb8dc974ac95}\label{include__v0_89_2mavlink__types_8h_a00291ed73cb08731cbcccb8dc974ac95}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_field\_info\_t@{mavlink\_field\_info\_t}}
+\index{mavlink\_field\_info\_t@{mavlink\_field\_info\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_field\_info\_t}{mavlink\_field\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct____mavlink__field__info}{\+\_\+\+\_\+mavlink\+\_\+field\+\_\+info}}  \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a00291ed73cb08731cbcccb8dc974ac95}{mavlink\+\_\+field\+\_\+info\+\_\+t}}}
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ac6313dd5faf3ddc3185ba9a8e5a70d5c}\label{include__v0_89_2mavlink__types_8h_ac6313dd5faf3ddc3185ba9a8e5a70d5c}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_message\_info\_t@{mavlink\_message\_info\_t}}
+\index{mavlink\_message\_info\_t@{mavlink\_message\_info\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_message\_info\_t}{mavlink\_message\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct____mavlink__message__info}{\+\_\+\+\_\+mavlink\+\_\+message\+\_\+info}}  \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac6313dd5faf3ddc3185ba9a8e5a70d5c}{mavlink\+\_\+message\+\_\+info\+\_\+t}}}
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}\label{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_message\_t@{mavlink\_message\_t}}
+\index{mavlink\_message\_t@{mavlink\_message\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_message\_t}{mavlink\_message\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct____mavlink__message}{\+\_\+\+\_\+mavlink\+\_\+message}}  \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a63b963764c09dc72f4910c1521e325b9}{mavlink\+\_\+message\+\_\+t}}}
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a1bfc816b2c3b11ee88cf643f491c957c}\label{include__v0_89_2mavlink__types_8h_a1bfc816b2c3b11ee88cf643f491c957c}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_param\_union\_t@{mavlink\_param\_union\_t}}
+\index{mavlink\_param\_union\_t@{mavlink\_param\_union\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_param\_union\_t}{mavlink\_param\_union\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structparam__union}{param\+\_\+union}}  \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a1bfc816b2c3b11ee88cf643f491c957c}{mavlink\+\_\+param\+\_\+union\+\_\+t}}}
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}\label{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_status\_t@{mavlink\_status\_t}}
+\index{mavlink\_status\_t@{mavlink\_status\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_status\_t}{mavlink\_status\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct____mavlink__status}{\+\_\+\+\_\+mavlink\+\_\+status}}  \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aec6f7af3879252822d8fb108e97aafc2}{mavlink\+\_\+status\+\_\+t}}}
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a2aac9d99a53a399e495b95c18bb736c6}\label{include__v0_89_2mavlink__types_8h_a2aac9d99a53a399e495b95c18bb736c6}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_system\_t@{mavlink\_system\_t}}
+\index{mavlink\_system\_t@{mavlink\_system\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_system\_t}{mavlink\_system\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct____mavlink__system}{\+\_\+\+\_\+mavlink\+\_\+system}}  \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a2aac9d99a53a399e495b95c18bb736c6}{mavlink\+\_\+system\+\_\+t}}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705e}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705e}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION@{MAV\_ACTION}}
+\index{MAV\_ACTION@{MAV\_ACTION}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_ACTION}{MAV\_ACTION}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705e}{M\+A\+V\+\_\+\+A\+C\+T\+I\+ON}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_HOLD@{MAV\_ACTION\_HOLD}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_HOLD@{MAV\_ACTION\_HOLD}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ead687accc91f3a7fa1079abf13cefd4a2}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ead687accc91f3a7fa1079abf13cefd4a2}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+H\+O\+LD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_MOTORS\_START@{MAV\_ACTION\_MOTORS\_START}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_MOTORS\_START@{MAV\_ACTION\_MOTORS\_START}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eac51b233de6991c25106e72912ae423d5}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eac51b233de6991c25106e72912ae423d5}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+M\+O\+T\+O\+R\+S\+\_\+\+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_LAUNCH@{MAV\_ACTION\_LAUNCH}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_LAUNCH@{MAV\_ACTION\_LAUNCH}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaa706cb7f6dcce106917e3050770a8898}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaa706cb7f6dcce106917e3050770a8898}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+A\+U\+N\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_RETURN@{MAV\_ACTION\_RETURN}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_RETURN@{MAV\_ACTION\_RETURN}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab2294a2ccf5e68f6592a31b733afcfd5}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab2294a2ccf5e68f6592a31b733afcfd5}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+T\+U\+RN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_EMCY\_LAND@{MAV\_ACTION\_EMCY\_LAND}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_EMCY\_LAND@{MAV\_ACTION\_EMCY\_LAND}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea818f553ae2a19d7121af2ff205cac5ec}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea818f553ae2a19d7121af2ff205cac5ec}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+M\+C\+Y\+\_\+\+L\+A\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_EMCY\_KILL@{MAV\_ACTION\_EMCY\_KILL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_EMCY\_KILL@{MAV\_ACTION\_EMCY\_KILL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9f52159828b458ab1a6434e5d6558b5e}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9f52159828b458ab1a6434e5d6558b5e}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+M\+C\+Y\+\_\+\+K\+I\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CONFIRM\_KILL@{MAV\_ACTION\_CONFIRM\_KILL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CONFIRM\_KILL@{MAV\_ACTION\_CONFIRM\_KILL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea946a9eb1e543c204a2e11a9fc00a0368}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea946a9eb1e543c204a2e11a9fc00a0368}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+F\+I\+R\+M\+\_\+\+K\+I\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CONTINUE@{MAV\_ACTION\_CONTINUE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CONTINUE@{MAV\_ACTION\_CONTINUE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9c434dbe45f918bac7aa25cd433f10da}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9c434dbe45f918bac7aa25cd433f10da}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_MOTORS\_STOP@{MAV\_ACTION\_MOTORS\_STOP}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_MOTORS\_STOP@{MAV\_ACTION\_MOTORS\_STOP}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ead24145c27ced813770de16761571b841}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ead24145c27ced813770de16761571b841}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+M\+O\+T\+O\+R\+S\+\_\+\+S\+T\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_HALT@{MAV\_ACTION\_HALT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_HALT@{MAV\_ACTION\_HALT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea7841f4c34643f31dcb8174e7e498edd1}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea7841f4c34643f31dcb8174e7e498edd1}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+H\+A\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_SHUTDOWN@{MAV\_ACTION\_SHUTDOWN}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_SHUTDOWN@{MAV\_ACTION\_SHUTDOWN}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea6b9173237b8167e9805e36632aa3da5a}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea6b9173237b8167e9805e36632aa3da5a}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+H\+U\+T\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_REBOOT@{MAV\_ACTION\_REBOOT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_REBOOT@{MAV\_ACTION\_REBOOT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea0784c101c25dec19223888488526273b}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea0784c101c25dec19223888488526273b}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+B\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_SET\_MANUAL@{MAV\_ACTION\_SET\_MANUAL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_SET\_MANUAL@{MAV\_ACTION\_SET\_MANUAL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea591d32e3ee410ae02c8b1479804609f8}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea591d32e3ee410ae02c8b1479804609f8}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+M\+A\+N\+U\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_SET\_AUTO@{MAV\_ACTION\_SET\_AUTO}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_SET\_AUTO@{MAV\_ACTION\_SET\_AUTO}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea7c5f7246b4c6ea73bf2de220b7ec1bb5}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea7c5f7246b4c6ea73bf2de220b7ec1bb5}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+A\+U\+TO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_STORAGE\_READ@{MAV\_ACTION\_STORAGE\_READ}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_STORAGE\_READ@{MAV\_ACTION\_STORAGE\_READ}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea238cc4451f5c5e590b666091cb975b90}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea238cc4451f5c5e590b666091cb975b90}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+R\+E\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_STORAGE\_WRITE@{MAV\_ACTION\_STORAGE\_WRITE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_STORAGE\_WRITE@{MAV\_ACTION\_STORAGE\_WRITE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea566663bd5c44f2d7aaeee5ead6abc5c9}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea566663bd5c44f2d7aaeee5ead6abc5c9}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+W\+R\+I\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CALIBRATE\_RC@{MAV\_ACTION\_CALIBRATE\_RC}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CALIBRATE\_RC@{MAV\_ACTION\_CALIBRATE\_RC}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea005e1b8395e62ca7a1ec2653c888914b}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea005e1b8395e62ca7a1ec2653c888914b}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+RC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CALIBRATE\_GYRO@{MAV\_ACTION\_CALIBRATE\_GYRO}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CALIBRATE\_GYRO@{MAV\_ACTION\_CALIBRATE\_GYRO}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab4e90f53662ef1191a600ba8e48681ec}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab4e90f53662ef1191a600ba8e48681ec}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+G\+Y\+RO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CALIBRATE\_MAG@{MAV\_ACTION\_CALIBRATE\_MAG}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CALIBRATE\_MAG@{MAV\_ACTION\_CALIBRATE\_MAG}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eacc5f72a4f59da0fef7daa6250111c34a}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eacc5f72a4f59da0fef7daa6250111c34a}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+M\+AG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CALIBRATE\_ACC@{MAV\_ACTION\_CALIBRATE\_ACC}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CALIBRATE\_ACC@{MAV\_ACTION\_CALIBRATE\_ACC}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea24b4f08dc829faf22568e34e249ac69f}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea24b4f08dc829faf22568e34e249ac69f}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+A\+CC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CALIBRATE\_PRESSURE@{MAV\_ACTION\_CALIBRATE\_PRESSURE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CALIBRATE\_PRESSURE@{MAV\_ACTION\_CALIBRATE\_PRESSURE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eae6d5ae61b80eaeff1e52e4d7c0724c85}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eae6d5ae61b80eaeff1e52e4d7c0724c85}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+E\+\_\+\+P\+R\+E\+S\+S\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_REC\_START@{MAV\_ACTION\_REC\_START}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_REC\_START@{MAV\_ACTION\_REC\_START}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9b22fbe560b64605fa0cbd0f6a2e6f24}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9b22fbe560b64605fa0cbd0f6a2e6f24}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+C\+\_\+\+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_REC\_PAUSE@{MAV\_ACTION\_REC\_PAUSE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_REC\_PAUSE@{MAV\_ACTION\_REC\_PAUSE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaee4ecac755a9e877aa9255e5e3ba5423}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaee4ecac755a9e877aa9255e5e3ba5423}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+C\+\_\+\+P\+A\+U\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_REC\_STOP@{MAV\_ACTION\_REC\_STOP}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_REC\_STOP@{MAV\_ACTION\_REC\_STOP}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea34bedb3094503b61efb32f4935d866f5}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea34bedb3094503b61efb32f4935d866f5}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+C\+\_\+\+S\+T\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_TAKEOFF@{MAV\_ACTION\_TAKEOFF}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_TAKEOFF@{MAV\_ACTION\_TAKEOFF}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea201aedb9f14e84f3dc360364c1f7cb1d}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea201aedb9f14e84f3dc360364c1f7cb1d}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+A\+K\+E\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_NAVIGATE@{MAV\_ACTION\_NAVIGATE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_NAVIGATE@{MAV\_ACTION\_NAVIGATE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea92e257ab6beaaa57e5eff2be60d19ea9}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea92e257ab6beaaa57e5eff2be60d19ea9}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+N\+A\+V\+I\+G\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_LAND@{MAV\_ACTION\_LAND}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_LAND@{MAV\_ACTION\_LAND}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea62f27c09f495bd75f08b1a06035dafc4}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea62f27c09f495bd75f08b1a06035dafc4}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+A\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_LOITER@{MAV\_ACTION\_LOITER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_LOITER@{MAV\_ACTION\_LOITER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4f92f27a8446a12b881e6161eb7f8c8a}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4f92f27a8446a12b881e6161eb7f8c8a}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+I\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_SET\_ORIGIN@{MAV\_ACTION\_SET\_ORIGIN}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_SET\_ORIGIN@{MAV\_ACTION\_SET\_ORIGIN}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eadc20e88edd6405eab2fbd04a89e0d3f3}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eadc20e88edd6405eab2fbd04a89e0d3f3}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+O\+R\+I\+G\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_RELAY\_ON@{MAV\_ACTION\_RELAY\_ON}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_RELAY\_ON@{MAV\_ACTION\_RELAY\_ON}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab9eba7b3a10096df90cd1e00ed9b2076}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eab9eba7b3a10096df90cd1e00ed9b2076}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_RELAY\_OFF@{MAV\_ACTION\_RELAY\_OFF}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_RELAY\_OFF@{MAV\_ACTION\_RELAY\_OFF}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4ec28214d414bcfe4ca835906e9e9509}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4ec28214d414bcfe4ca835906e9e9509}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_GET\_IMAGE@{MAV\_ACTION\_GET\_IMAGE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_GET\_IMAGE@{MAV\_ACTION\_GET\_IMAGE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9f87d88de2b525eeaba235781198ff8a}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea9f87d88de2b525eeaba235781198ff8a}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+E\+T\+\_\+\+I\+M\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_VIDEO\_START@{MAV\_ACTION\_VIDEO\_START}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_VIDEO\_START@{MAV\_ACTION\_VIDEO\_START}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea1d0ab68f41baf34917ef4667711ff05c}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea1d0ab68f41baf34917ef4667711ff05c}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+V\+I\+D\+E\+O\+\_\+\+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_VIDEO\_STOP@{MAV\_ACTION\_VIDEO\_STOP}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_VIDEO\_STOP@{MAV\_ACTION\_VIDEO\_STOP}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4940be951f418153999922a7dba9d909}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4940be951f418153999922a7dba9d909}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+V\+I\+D\+E\+O\+\_\+\+S\+T\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_RESET\_MAP@{MAV\_ACTION\_RESET\_MAP}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_RESET\_MAP@{MAV\_ACTION\_RESET\_MAP}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaa6388b4492b9f093fc46e8d6267f9cba}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaa6388b4492b9f093fc46e8d6267f9cba}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+T\+\_\+\+M\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_RESET\_PLAN@{MAV\_ACTION\_RESET\_PLAN}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_RESET\_PLAN@{MAV\_ACTION\_RESET\_PLAN}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaf4f1fe2bf50c3c7f2dbd137ecb2ba76c}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaf4f1fe2bf50c3c7f2dbd137ecb2ba76c}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+T\+\_\+\+P\+L\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_DELAY\_BEFORE\_COMMAND@{MAV\_ACTION\_DELAY\_BEFORE\_COMMAND}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_DELAY\_BEFORE\_COMMAND@{MAV\_ACTION\_DELAY\_BEFORE\_COMMAND}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea2e7e868eed436a72ac080a056958da97}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea2e7e868eed436a72ac080a056958da97}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+C\+O\+M\+M\+A\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_ASCEND\_AT\_RATE@{MAV\_ACTION\_ASCEND\_AT\_RATE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_ASCEND\_AT\_RATE@{MAV\_ACTION\_ASCEND\_AT\_RATE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaef4ec93a551ef51448ad4b062f6c02eb}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaef4ec93a551ef51448ad4b062f6c02eb}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+A\+S\+C\+E\+N\+D\+\_\+\+A\+T\+\_\+\+R\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_CHANGE\_MODE@{MAV\_ACTION\_CHANGE\_MODE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_CHANGE\_MODE@{MAV\_ACTION\_CHANGE\_MODE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4549fbe8e6af64078311921fa250b151}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea4549fbe8e6af64078311921fa250b151}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+M\+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_LOITER\_MAX\_TURNS@{MAV\_ACTION\_LOITER\_MAX\_TURNS}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_LOITER\_MAX\_TURNS@{MAV\_ACTION\_LOITER\_MAX\_TURNS}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea0deecc2a12679c85605dd6c0b5016fbf}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea0deecc2a12679c85605dd6c0b5016fbf}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+I\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+U\+R\+NS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_LOITER\_MAX\_TIME@{MAV\_ACTION\_LOITER\_MAX\_TIME}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_LOITER\_MAX\_TIME@{MAV\_ACTION\_LOITER\_MAX\_TIME}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea6980fb34376b368c40720283a0d9d5e5}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea6980fb34376b368c40720283a0d9d5e5}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+I\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_START\_HILSIM@{MAV\_ACTION\_START\_HILSIM}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_START\_HILSIM@{MAV\_ACTION\_START\_HILSIM}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea08c753801918a509e3c0a46d7e403515}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea08c753801918a509e3c0a46d7e403515}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+R\+T\+\_\+\+H\+I\+L\+S\+IM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_STOP\_HILSIM@{MAV\_ACTION\_STOP\_HILSIM}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_STOP\_HILSIM@{MAV\_ACTION\_STOP\_HILSIM}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaf492c98b109e5091bb7c570169873092}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705eaf492c98b109e5091bb7c570169873092}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+S\+T\+O\+P\+\_\+\+H\+I\+L\+S\+IM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ACTION\_NB@{MAV\_ACTION\_NB}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ACTION\_NB@{MAV\_ACTION\_NB}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea37021d1fba3b1954513544c71e2156fb}\label{include__v0_89_2mavlink__types_8h_a821cd4b78c31fcf937df2c32729b705ea37021d1fba3b1954513544c71e2156fb}} 
+M\+A\+V\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+NB&Number of M\+AV actions. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 20 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64c}\label{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64c}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_AUTOPILOT\_TYPE@{MAV\_AUTOPILOT\_TYPE}}
+\index{MAV\_AUTOPILOT\_TYPE@{MAV\_AUTOPILOT\_TYPE}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_AUTOPILOT\_TYPE}{MAV\_AUTOPILOT\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64c}{M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_AUTOPILOT\_GENERIC@{MAV\_AUTOPILOT\_GENERIC}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_AUTOPILOT\_GENERIC@{MAV\_AUTOPILOT\_GENERIC}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64ca8fd74e980c05eedaa8ec3bf687b832ae}\label{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64ca8fd74e980c05eedaa8ec3bf687b832ae}} 
+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+G\+E\+N\+E\+R\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_AUTOPILOT\_PIXHAWK@{MAV\_AUTOPILOT\_PIXHAWK}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_AUTOPILOT\_PIXHAWK@{MAV\_AUTOPILOT\_PIXHAWK}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64caf6584f986a5fc7af0c43017b693d7575}\label{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64caf6584f986a5fc7af0c43017b693d7575}} 
+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+P\+I\+X\+H\+A\+WK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_AUTOPILOT\_SLUGS@{MAV\_AUTOPILOT\_SLUGS}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_AUTOPILOT\_SLUGS@{MAV\_AUTOPILOT\_SLUGS}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64caac16e86eb14ab0c9e98526886c5518ef}\label{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64caac16e86eb14ab0c9e98526886c5518ef}} 
+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+S\+L\+U\+GS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_AUTOPILOT\_ARDUPILOTMEGA@{MAV\_AUTOPILOT\_ARDUPILOTMEGA}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_AUTOPILOT\_ARDUPILOTMEGA@{MAV\_AUTOPILOT\_ARDUPILOTMEGA}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64cabcd0ae4d5261a36f5acbaafb99420b60}\label{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64cabcd0ae4d5261a36f5acbaafb99420b60}} 
+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+A\+R\+D\+U\+P\+I\+L\+O\+T\+M\+E\+GA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_AUTOPILOT\_NONE@{MAV\_AUTOPILOT\_NONE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_AUTOPILOT\_NONE@{MAV\_AUTOPILOT\_NONE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64ca50fa6dc1506e436c824b49740e72228f}\label{include__v0_89_2mavlink__types_8h_ac5cf273e3e936105d8e93dd3d483f64ca50fa6dc1506e436c824b49740e72228f}} 
+M\+A\+V\+\_\+\+A\+U\+T\+O\+P\+I\+L\+O\+T\+\_\+\+N\+O\+NE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 125 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986f}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986f}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS@{MAV\_CLASS}}
+\index{MAV\_CLASS@{MAV\_CLASS}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_CLASS}{MAV\_CLASS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986f}{M\+A\+V\+\_\+\+C\+L\+A\+SS}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_GENERIC@{MAV\_CLASS\_GENERIC}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_GENERIC@{MAV\_CLASS\_GENERIC}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fab006114bae87cbde231ead57ba2dd700}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fab006114bae87cbde231ead57ba2dd700}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+IC&Generic autopilot, full support for everything. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_PIXHAWK@{MAV\_CLASS\_PIXHAWK}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_PIXHAWK@{MAV\_CLASS\_PIXHAWK}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa614183f00430c5a78ba9fc88e2eb9fdc}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa614183f00430c5a78ba9fc88e2eb9fdc}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+I\+X\+H\+A\+WK&P\+I\+X\+H\+A\+WK autopilot, \href{http://pixhawk.ethz.ch}{\texttt{ http\+://pixhawk.\+ethz.\+ch}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_SLUGS@{MAV\_CLASS\_SLUGS}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_SLUGS@{MAV\_CLASS\_SLUGS}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa24e410f1a22cec77d053717fe4a6ded4}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa24e410f1a22cec77d053717fe4a6ded4}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+L\+U\+GS&S\+L\+U\+GS autopilot, \href{http://slugsuav.soe.ucsc.edu}{\texttt{ http\+://slugsuav.\+soe.\+ucsc.\+edu}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_ARDUPILOTMEGA@{MAV\_CLASS\_ARDUPILOTMEGA}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_ARDUPILOTMEGA@{MAV\_CLASS\_ARDUPILOTMEGA}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa89310859b8b9988b949ff6e0468d8bdd}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa89310859b8b9988b949ff6e0468d8bdd}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+R\+D\+U\+P\+I\+L\+O\+T\+M\+E\+GA&Ardu\+Pilot\+Mega / Ardu\+Copter, \href{http://diydrones.com}{\texttt{ http\+://diydrones.\+com}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_OPENPILOT@{MAV\_CLASS\_OPENPILOT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_OPENPILOT@{MAV\_CLASS\_OPENPILOT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fadd3a8ba817624756276f1f9bda667d65}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fadd3a8ba817624756276f1f9bda667d65}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+O\+P\+E\+N\+P\+I\+L\+OT&Open\+Pilot, \href{http://openpilot.org}{\texttt{ http\+://openpilot.\+org}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_GENERIC\_MISSION\_WAYPOINTS\_ONLY@{MAV\_CLASS\_GENERIC\_MISSION\_WAYPOINTS\_ONLY}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_GENERIC\_MISSION\_WAYPOINTS\_ONLY@{MAV\_CLASS\_GENERIC\_MISSION\_WAYPOINTS\_ONLY}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa44c85b45907b7572b062f79a7dbdcb19}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa44c85b45907b7572b062f79a7dbdcb19}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+S\+\_\+\+O\+N\+LY&Generic autopilot only supporting simple waypoints. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_GENERIC\_MISSION\_NAVIGATION\_ONLY@{MAV\_CLASS\_GENERIC\_MISSION\_NAVIGATION\_ONLY}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_GENERIC\_MISSION\_NAVIGATION\_ONLY@{MAV\_CLASS\_GENERIC\_MISSION\_NAVIGATION\_ONLY}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986faa0c270041e5eaf75d2bdf5662ab20d7d}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986faa0c270041e5eaf75d2bdf5662ab20d7d}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+N\+A\+V\+I\+G\+A\+T\+I\+O\+N\+\_\+\+O\+N\+LY&Generic autopilot supporting waypoints and other simple navigation commands. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_GENERIC\_MISSION\_FULL@{MAV\_CLASS\_GENERIC\_MISSION\_FULL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_GENERIC\_MISSION\_FULL@{MAV\_CLASS\_GENERIC\_MISSION\_FULL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa9a48963e1d84c2e0380064f3b37c9add}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa9a48963e1d84c2e0380064f3b37c9add}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+M\+I\+S\+S\+I\+O\+N\+\_\+\+F\+U\+LL&Generic autopilot supporting the full mission command set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_NONE@{MAV\_CLASS\_NONE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_NONE@{MAV\_CLASS\_NONE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fac653ecf59ba1f983819a0eff8b86abe5}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fac653ecf59ba1f983819a0eff8b86abe5}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+O\+NE&No valid autopilot. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_CLASS\_NB@{MAV\_CLASS\_NB}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_CLASS\_NB@{MAV\_CLASS\_NB}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa2876e46c4971d49bc61c802dac5ca1b6}\label{include__v0_89_2mavlink__types_8h_ad7e096e3e48e8028c9418d62a54e986fa2876e46c4971d49bc61c802dac5ca1b6}} 
+M\+A\+V\+\_\+\+C\+L\+A\+S\+S\+\_\+\+NB&Number of autopilot classes. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 6 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5d}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5d}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMPONENT@{MAV\_COMPONENT}}
+\index{MAV\_COMPONENT@{MAV\_COMPONENT}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_COMPONENT}{MAV\_COMPONENT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5d}{M\+A\+V\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_GPS@{MAV\_COMP\_ID\_GPS}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_GPS@{MAV\_COMP\_ID\_GPS}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5dadec5075d3a419e590a7e0b9b046e860d}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5dadec5075d3a419e590a7e0b9b046e860d}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+G\+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_WAYPOINTPLANNER@{MAV\_COMP\_ID\_WAYPOINTPLANNER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_WAYPOINTPLANNER@{MAV\_COMP\_ID\_WAYPOINTPLANNER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da14c1564ea1345ca849c1b2211977e195}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da14c1564ea1345ca849c1b2211977e195}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+P\+L\+A\+N\+N\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_BLOBTRACKER@{MAV\_COMP\_ID\_BLOBTRACKER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_BLOBTRACKER@{MAV\_COMP\_ID\_BLOBTRACKER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da29f77921488a3a85fb5e862b37eab878}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da29f77921488a3a85fb5e862b37eab878}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+B\+L\+O\+B\+T\+R\+A\+C\+K\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_PATHPLANNER@{MAV\_COMP\_ID\_PATHPLANNER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_PATHPLANNER@{MAV\_COMP\_ID\_PATHPLANNER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da682befe9bfabf0726bed20bc6d2bfa94}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da682befe9bfabf0726bed20bc6d2bfa94}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+P\+A\+T\+H\+P\+L\+A\+N\+N\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_AIRSLAM@{MAV\_COMP\_ID\_AIRSLAM}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_AIRSLAM@{MAV\_COMP\_ID\_AIRSLAM}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da5f2b82857fc61c29d66f258ec3a63b9a}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da5f2b82857fc61c29d66f258ec3a63b9a}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+A\+I\+R\+S\+L\+AM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_MAPPER@{MAV\_COMP\_ID\_MAPPER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_MAPPER@{MAV\_COMP\_ID\_MAPPER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da916fb7afe6740abfd76270aa84c25e45}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da916fb7afe6740abfd76270aa84c25e45}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+M\+A\+P\+P\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_CAMERA@{MAV\_COMP\_ID\_CAMERA}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_CAMERA@{MAV\_COMP\_ID\_CAMERA}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da66ff42b69c7232769f8a10281bd33c19}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da66ff42b69c7232769f8a10281bd33c19}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+C\+A\+M\+E\+RA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_RADIO@{MAV\_COMP\_ID\_RADIO}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_RADIO@{MAV\_COMP\_ID\_RADIO}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da27a9b9a229b123b6354739719b6a6821}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da27a9b9a229b123b6354739719b6a6821}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+R\+A\+D\+IO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_IMU@{MAV\_COMP\_ID\_IMU}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_IMU@{MAV\_COMP\_ID\_IMU}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da56b2918e840d040eb61c67735b1e8040}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da56b2918e840d040eb61c67735b1e8040}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+I\+MU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_IMU\_2@{MAV\_COMP\_ID\_IMU\_2}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_IMU\_2@{MAV\_COMP\_ID\_IMU\_2}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da9c8458ce99f9915deadab1c142afdecb}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da9c8458ce99f9915deadab1c142afdecb}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+I\+M\+U\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_IMU\_3@{MAV\_COMP\_ID\_IMU\_3}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_IMU\_3@{MAV\_COMP\_ID\_IMU\_3}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da5a69ca0519a887b2870f0e28389d642a}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da5a69ca0519a887b2870f0e28389d642a}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+I\+M\+U\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_UDP\_BRIDGE@{MAV\_COMP\_ID\_UDP\_BRIDGE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_UDP\_BRIDGE@{MAV\_COMP\_ID\_UDP\_BRIDGE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da339bc7880869b2295b7bffc024b8f026}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da339bc7880869b2295b7bffc024b8f026}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+D\+P\+\_\+\+B\+R\+I\+D\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_UART\_BRIDGE@{MAV\_COMP\_ID\_UART\_BRIDGE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_UART\_BRIDGE@{MAV\_COMP\_ID\_UART\_BRIDGE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5dad4bae7b33888158400c9f84cd23c57c8}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5dad4bae7b33888158400c9f84cd23c57c8}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+U\+A\+R\+T\+\_\+\+B\+R\+I\+D\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COMP\_ID\_SYSTEM\_CONTROL@{MAV\_COMP\_ID\_SYSTEM\_CONTROL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COMP\_ID\_SYSTEM\_CONTROL@{MAV\_COMP\_ID\_SYSTEM\_CONTROL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da39078947f391e6cfcf4ccbbd10d4edd1}\label{include__v0_89_2mavlink__types_8h_a441d65e499381efbd6da4afeab901a5da39078947f391e6cfcf4ccbbd10d4edd1}} 
+M\+A\+V\+\_\+\+C\+O\+M\+P\+\_\+\+I\+D\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+O\+N\+T\+R\+OL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 134 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}\label{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FRAME@{MAV\_FRAME}}
+\index{MAV\_FRAME@{MAV\_FRAME}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_FRAME}{MAV\_FRAME}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617}{M\+A\+V\+\_\+\+F\+R\+A\+ME}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_FRAME\_GLOBAL@{MAV\_FRAME\_GLOBAL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FRAME\_GLOBAL@{MAV\_FRAME\_GLOBAL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617ac82354d51f25cf0132d358d473dbff59}\label{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617ac82354d51f25cf0132d358d473dbff59}} 
+M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+G\+L\+O\+B\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_FRAME\_LOCAL@{MAV\_FRAME\_LOCAL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FRAME\_LOCAL@{MAV\_FRAME\_LOCAL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a3baa0c7c49cb7e8451521ba35fe668af}\label{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a3baa0c7c49cb7e8451521ba35fe668af}} 
+M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+L\+O\+C\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_FRAME\_MISSION@{MAV\_FRAME\_MISSION}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FRAME\_MISSION@{MAV\_FRAME\_MISSION}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a705a25dd764490c206129c782e78b2ef}\label{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a705a25dd764490c206129c782e78b2ef}} 
+M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+M\+I\+S\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_FRAME\_GLOBAL\_RELATIVE\_ALT@{MAV\_FRAME\_GLOBAL\_RELATIVE\_ALT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FRAME\_GLOBAL\_RELATIVE\_ALT@{MAV\_FRAME\_GLOBAL\_RELATIVE\_ALT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a6c1091c1bd170974248a55d52a4ca19a}\label{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617a6c1091c1bd170974248a55d52a4ca19a}} 
+M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+A\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_FRAME\_LOCAL\_ENU@{MAV\_FRAME\_LOCAL\_ENU}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FRAME\_LOCAL\_ENU@{MAV\_FRAME\_LOCAL\_ENU}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617ad2da562e8681994c26d594b1e0affa14}\label{include__v0_89_2mavlink__types_8h_aae9266d97d838a375605b69000c60617ad2da562e8681994c26d594b1e0affa14}} 
+M\+A\+V\+\_\+\+F\+R\+A\+M\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+E\+NU&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 152 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbab}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbab}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE@{MAV\_MODE}}
+\index{MAV\_MODE@{MAV\_MODE}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_MODE}{MAV\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbab}{M\+A\+V\+\_\+\+M\+O\+DE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_UNINIT@{MAV\_MODE\_UNINIT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_UNINIT@{MAV\_MODE\_UNINIT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba9bda33b30b2acc21f3bd475cdf649ce2}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba9bda33b30b2acc21f3bd475cdf649ce2}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+U\+N\+I\+N\+IT&System is in undefined state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_LOCKED@{MAV\_MODE\_LOCKED}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_LOCKED@{MAV\_MODE\_LOCKED}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba9bda32b3c72f78091b630e8fd2827f61}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba9bda32b3c72f78091b630e8fd2827f61}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+C\+K\+ED&Motors are blocked, system is safe. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_MANUAL@{MAV\_MODE\_MANUAL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_MANUAL@{MAV\_MODE\_MANUAL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabac5ebe81d4cd37d4eac4f78ab4458c396}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabac5ebe81d4cd37d4eac4f78ab4458c396}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+N\+U\+AL&System is allowed to be active, under manual (RC) control. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_GUIDED@{MAV\_MODE\_GUIDED}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_GUIDED@{MAV\_MODE\_GUIDED}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba861009fb273c8aa97488225036bde3b2}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba861009fb273c8aa97488225036bde3b2}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+G\+U\+I\+D\+ED&System is allowed to be active, under autonomous control, manual setpoint. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_AUTO@{MAV\_MODE\_AUTO}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_AUTO@{MAV\_MODE\_AUTO}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabaa7c13ea51fa3bd12c5b1e6f21bf88975}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabaa7c13ea51fa3bd12c5b1e6f21bf88975}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+A\+U\+TO&System is allowed to be active, under autonomous control and navigation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_TEST1@{MAV\_MODE\_TEST1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_TEST1@{MAV\_MODE\_TEST1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabacbd1683bf129afcde5651141eb97e9a7}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabacbd1683bf129afcde5651141eb97e9a7}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+T\+E\+S\+T1&Generic test mode, for custom use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_TEST2@{MAV\_MODE\_TEST2}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_TEST2@{MAV\_MODE\_TEST2}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba13c04f6eb3398a50702c9858ee28f6f4}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba13c04f6eb3398a50702c9858ee28f6f4}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+T\+E\+S\+T2&Generic test mode, for custom use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_TEST3@{MAV\_MODE\_TEST3}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_TEST3@{MAV\_MODE\_TEST3}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabadb3c2d4ad5659b37bcfcc970ecf77b64}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbabadb3c2d4ad5659b37bcfcc970ecf77b64}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+T\+E\+S\+T3&Generic test mode, for custom use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_READY@{MAV\_MODE\_READY}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_READY@{MAV\_MODE\_READY}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba17f9bf4eb45e908d8f52a657f72d89b1}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbaba17f9bf4eb45e908d8f52a657f72d89b1}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+A\+DY&System is ready, motors are unblocked, but controllers are inactive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_MODE\_RC\_TRAINING@{MAV\_MODE\_RC\_TRAINING}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_MODE\_RC\_TRAINING@{MAV\_MODE\_RC\_TRAINING}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbababc362f9e663c2a152f01ca23b12b7240}\label{include__v0_89_2mavlink__types_8h_a56fcc51bb6c948022f43cc94b439fbababc362f9e663c2a152f01ca23b12b7240}} 
+M\+A\+V\+\_\+\+M\+O\+D\+E\+\_\+\+R\+C\+\_\+\+T\+R\+A\+I\+N\+I\+NG&System is blocked, only RC valued are read and reported back. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 68 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV@{MAV\_NAV}}
+\index{MAV\_NAV@{MAV\_NAV}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_NAV}{MAV\_NAV}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35}{M\+A\+V\+\_\+\+N\+AV}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_GROUNDED@{MAV\_NAV\_GROUNDED}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_GROUNDED@{MAV\_NAV\_GROUNDED}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35aaecbca3b40902ebd917c2d5445b91345}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35aaecbca3b40902ebd917c2d5445b91345}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+G\+R\+O\+U\+N\+D\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_LIFTOFF@{MAV\_NAV\_LIFTOFF}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_LIFTOFF@{MAV\_NAV\_LIFTOFF}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a11b5fb53abd1e5e2361dcd35d9cd65f9}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a11b5fb53abd1e5e2361dcd35d9cd65f9}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+I\+F\+T\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_HOLD@{MAV\_NAV\_HOLD}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_HOLD@{MAV\_NAV\_HOLD}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a00f4b26e3b09b13de7a2566d8cf5fe87}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a00f4b26e3b09b13de7a2566d8cf5fe87}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+H\+O\+LD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_WAYPOINT@{MAV\_NAV\_WAYPOINT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_WAYPOINT@{MAV\_NAV\_WAYPOINT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35ab46f56d8ce5c173ebce920139c6e36be}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35ab46f56d8ce5c173ebce920139c6e36be}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+W\+A\+Y\+P\+O\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_VECTOR@{MAV\_NAV\_VECTOR}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_VECTOR@{MAV\_NAV\_VECTOR}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a6d07d79d9da3e1dda93dfe9e16345bec}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a6d07d79d9da3e1dda93dfe9e16345bec}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+V\+E\+C\+T\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_RETURNING@{MAV\_NAV\_RETURNING}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_RETURNING@{MAV\_NAV\_RETURNING}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a45c5c1ac8ceb7d807107908055fb98f2}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a45c5c1ac8ceb7d807107908055fb98f2}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+R\+E\+T\+U\+R\+N\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_LANDING@{MAV\_NAV\_LANDING}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_LANDING@{MAV\_NAV\_LANDING}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a4f8e95b87b90e6819461d08365b8eb3b}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a4f8e95b87b90e6819461d08365b8eb3b}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+A\+N\+D\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_LOST@{MAV\_NAV\_LOST}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_LOST@{MAV\_NAV\_LOST}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35af5041ff614be5e07a08bcb062e96a74f}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35af5041ff614be5e07a08bcb062e96a74f}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+O\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_LOITER@{MAV\_NAV\_LOITER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_LOITER@{MAV\_NAV\_LOITER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a4942fe63410f8acb32163070c562b3ec}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35a4942fe63410f8acb32163070c562b3ec}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+L\+O\+I\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_NAV\_FREE\_DRIFT@{MAV\_NAV\_FREE\_DRIFT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_NAV\_FREE\_DRIFT@{MAV\_NAV\_FREE\_DRIFT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35ae54456ac4a520fd5d50319cb712d2c3a}\label{include__v0_89_2mavlink__types_8h_a9e84f894decf77d0aa342ee965a44e35ae54456ac4a520fd5d50319cb712d2c3a}} 
+M\+A\+V\+\_\+\+N\+A\+V\+\_\+\+F\+R\+E\+E\+\_\+\+D\+R\+I\+FT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 95 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE@{MAV\_STATE}}
+\index{MAV\_STATE@{MAV\_STATE}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_STATE}{MAV\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bb}{M\+A\+V\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_UNINIT@{MAV\_STATE\_UNINIT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_UNINIT@{MAV\_STATE\_UNINIT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba75dd938ec17258846d5bef7357030bf0}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba75dd938ec17258846d5bef7357030bf0}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_BOOT@{MAV\_STATE\_BOOT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_BOOT@{MAV\_STATE\_BOOT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba0ff6eb6bb40152a34ab7c4d3aabe65fd}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba0ff6eb6bb40152a34ab7c4d3aabe65fd}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_CALIBRATING@{MAV\_STATE\_CALIBRATING}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_CALIBRATING@{MAV\_STATE\_CALIBRATING}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba760ec73c5b1b2f0037b1e2a6376503b2}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba760ec73c5b1b2f0037b1e2a6376503b2}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_STANDBY@{MAV\_STATE\_STANDBY}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_STANDBY@{MAV\_STATE\_STANDBY}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbad69722cf6292e09ad9b636987a9c4bb6}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbad69722cf6292e09ad9b636987a9c4bb6}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+N\+D\+BY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_ACTIVE@{MAV\_STATE\_ACTIVE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_ACTIVE@{MAV\_STATE\_ACTIVE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba3321eca253d688977042fe637dd79666}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba3321eca253d688977042fe637dd79666}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+C\+T\+I\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_CRITICAL@{MAV\_STATE\_CRITICAL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_CRITICAL@{MAV\_STATE\_CRITICAL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba712e11f581cca8d64e11ae1fb8fd5c09}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba712e11f581cca8d64e11ae1fb8fd5c09}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+R\+I\+T\+I\+C\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_EMERGENCY@{MAV\_STATE\_EMERGENCY}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_EMERGENCY@{MAV\_STATE\_EMERGENCY}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba6b76ceaeac2330867ad799c878a723de}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bba6b76ceaeac2330867ad799c878a723de}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+M\+E\+R\+G\+E\+N\+CY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_HILSIM@{MAV\_STATE\_HILSIM}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_HILSIM@{MAV\_STATE\_HILSIM}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbaa000c9351937a4ab79b2ac9cc025bd26}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbaa000c9351937a4ab79b2ac9cc025bd26}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+L\+S\+IM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_STATE\_POWEROFF@{MAV\_STATE\_POWEROFF}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_STATE\_POWEROFF@{MAV\_STATE\_POWEROFF}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbabeabd77947cfce2cf8b0282a30e36652}\label{include__v0_89_2mavlink__types_8h_a3ca5e79cdc1f95d953a6d1d7ab1e90bbabeabd77947cfce2cf8b0282a30e36652}} 
+M\+A\+V\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+O\+W\+E\+R\+O\+FF&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 82 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_TYPE@{MAV\_TYPE}}
+\index{MAV\_TYPE@{MAV\_TYPE}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAV\_TYPE}{MAV\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28}{M\+A\+V\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_GENERIC@{MAV\_GENERIC}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_GENERIC@{MAV\_GENERIC}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af9b4df8808aa1e589ec65cf402aaa7fc}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af9b4df8808aa1e589ec65cf402aaa7fc}} 
+M\+A\+V\+\_\+\+G\+E\+N\+E\+R\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_FIXED\_WING@{MAV\_FIXED\_WING}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FIXED\_WING@{MAV\_FIXED\_WING}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28ae195f23eb8123df0fc1bd110cc11318e}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28ae195f23eb8123df0fc1bd110cc11318e}} 
+M\+A\+V\+\_\+\+F\+I\+X\+E\+D\+\_\+\+W\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_QUADROTOR@{MAV\_QUADROTOR}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_QUADROTOR@{MAV\_QUADROTOR}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af7dc42049f80ac562a02f20df77f071f}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af7dc42049f80ac562a02f20df77f071f}} 
+M\+A\+V\+\_\+\+Q\+U\+A\+D\+R\+O\+T\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_COAXIAL@{MAV\_COAXIAL}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_COAXIAL@{MAV\_COAXIAL}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28abe0d1cde5855d44ff6aa10ab473a1835}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28abe0d1cde5855d44ff6aa10ab473a1835}} 
+M\+A\+V\+\_\+\+C\+O\+A\+X\+I\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_HELICOPTER@{MAV\_HELICOPTER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_HELICOPTER@{MAV\_HELICOPTER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a8c2fb4ade26ff6f2e9d5520c7eaef67d}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a8c2fb4ade26ff6f2e9d5520c7eaef67d}} 
+M\+A\+V\+\_\+\+H\+E\+L\+I\+C\+O\+P\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_GROUND@{MAV\_GROUND}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_GROUND@{MAV\_GROUND}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a62e5d00ad72c01412daf2a80ddeccada}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a62e5d00ad72c01412daf2a80ddeccada}} 
+M\+A\+V\+\_\+\+G\+R\+O\+U\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OCU@{OCU}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!OCU@{OCU}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28aaa9ca8a57cc0d6bbd4d290c1789b5b84}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28aaa9ca8a57cc0d6bbd4d290c1789b5b84}} 
+O\+CU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_AIRSHIP@{MAV\_AIRSHIP}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_AIRSHIP@{MAV\_AIRSHIP}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a3f444597266b2234e5c41b89e1f3039c}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a3f444597266b2234e5c41b89e1f3039c}} 
+M\+A\+V\+\_\+\+A\+I\+R\+S\+H\+IP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_FREE\_BALLOON@{MAV\_FREE\_BALLOON}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_FREE\_BALLOON@{MAV\_FREE\_BALLOON}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af3c0933df2bb2fa3b6240a8997ff6404}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28af3c0933df2bb2fa3b6240a8997ff6404}} 
+M\+A\+V\+\_\+\+F\+R\+E\+E\+\_\+\+B\+A\+L\+L\+O\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAV\_ROCKET@{MAV\_ROCKET}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAV\_ROCKET@{MAV\_ROCKET}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a5613a36b0976334663b2b4d3a2671b65}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a5613a36b0976334663b2b4d3a2671b65}} 
+M\+A\+V\+\_\+\+R\+O\+C\+K\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UGV\_GROUND\_ROVER@{UGV\_GROUND\_ROVER}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!UGV\_GROUND\_ROVER@{UGV\_GROUND\_ROVER}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a5c4a0e3ec6379890e07fa7f2c84a3e5d}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a5c4a0e3ec6379890e07fa7f2c84a3e5d}} 
+U\+G\+V\+\_\+\+G\+R\+O\+U\+N\+D\+\_\+\+R\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UGV\_SURFACE\_SHIP@{UGV\_SURFACE\_SHIP}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!UGV\_SURFACE\_SHIP@{UGV\_SURFACE\_SHIP}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a189fa1873791069c091aa3b2d3aecf5c}\label{include__v0_89_2mavlink__types_8h_aaf404a9fdbd4c9a05d6cab18790dbb28a189fa1873791069c091aa3b2d3aecf5c}} 
+U\+G\+V\+\_\+\+S\+U\+R\+F\+A\+C\+E\+\_\+\+S\+H\+IP&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 109 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709c}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709c}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_channel\_t@{mavlink\_channel\_t}}
+\index{mavlink\_channel\_t@{mavlink\_channel\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_channel\_t}{mavlink\_channel\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709c}{mavlink\+\_\+channel\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_0@{MAVLINK\_COMM\_0}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_0@{MAVLINK\_COMM\_0}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_1@{MAVLINK\_COMM\_1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_1@{MAVLINK\_COMM\_1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_2@{MAVLINK\_COMM\_2}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_2@{MAVLINK\_COMM\_2}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_3@{MAVLINK\_COMM\_3}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_3@{MAVLINK\_COMM\_3}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_0@{MAVLINK\_COMM\_0}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_0@{MAVLINK\_COMM\_0}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_1@{MAVLINK\_COMM\_1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_1@{MAVLINK\_COMM\_1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_2@{MAVLINK\_COMM\_2}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_2@{MAVLINK\_COMM\_2}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_3@{MAVLINK\_COMM\_3}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_3@{MAVLINK\_COMM\_3}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_0@{MAVLINK\_COMM\_0}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_0@{MAVLINK\_COMM\_0}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cae41095bf35dfe1b8cbf7a683301e449a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_1@{MAVLINK\_COMM\_1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_1@{MAVLINK\_COMM\_1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca333615f0071d83f94eb5e259cf03beec}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_2@{MAVLINK\_COMM\_2}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_2@{MAVLINK\_COMM\_2}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709ca86fccd015796023025f884dd9ab9f82c}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_COMM\_3@{MAVLINK\_COMM\_3}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_COMM\_3@{MAVLINK\_COMM\_3}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}\label{include__v0_89_2mavlink__types_8h_aa0f38d2f21462ce9ff37bfb2fb43709cade5be55c8319d8ef6e2753449dc4392a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+C\+O\+M\+M\+\_\+3&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 275 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92a}\label{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92a}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_DATA\_STREAM\_TYPE@{MAVLINK\_DATA\_STREAM\_TYPE}}
+\index{MAVLINK\_DATA\_STREAM\_TYPE@{MAVLINK\_DATA\_STREAM\_TYPE}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{MAVLINK\_DATA\_STREAM\_TYPE}{MAVLINK\_DATA\_STREAM\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92a}{M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_DATA\_STREAM\_IMG\_JPEG@{MAVLINK\_DATA\_STREAM\_IMG\_JPEG}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_DATA\_STREAM\_IMG\_JPEG@{MAVLINK\_DATA\_STREAM\_IMG\_JPEG}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa68b6b511ca7c692035d0360dbc024d1c}\label{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa68b6b511ca7c692035d0360dbc024d1c}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+J\+P\+EG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_DATA\_STREAM\_IMG\_BMP@{MAVLINK\_DATA\_STREAM\_IMG\_BMP}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_DATA\_STREAM\_IMG\_BMP@{MAVLINK\_DATA\_STREAM\_IMG\_BMP}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa8d4cdb3931a8738b747874b29b1b4dde}\label{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa8d4cdb3931a8738b747874b29b1b4dde}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+B\+MP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_DATA\_STREAM\_IMG\_RAW8U@{MAVLINK\_DATA\_STREAM\_IMG\_RAW8U}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_DATA\_STREAM\_IMG\_RAW8U@{MAVLINK\_DATA\_STREAM\_IMG\_RAW8U}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa9552ab3c0186ddee4645a6cb6afb954d}\label{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa9552ab3c0186ddee4645a6cb6afb954d}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+R\+A\+W8U&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_DATA\_STREAM\_IMG\_RAW32U@{MAVLINK\_DATA\_STREAM\_IMG\_RAW32U}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_DATA\_STREAM\_IMG\_RAW32U@{MAVLINK\_DATA\_STREAM\_IMG\_RAW32U}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa6316df28253da275ffec204763d2cae4}\label{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa6316df28253da275ffec204763d2cae4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+R\+A\+W32U&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_DATA\_STREAM\_IMG\_PGM@{MAVLINK\_DATA\_STREAM\_IMG\_PGM}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_DATA\_STREAM\_IMG\_PGM@{MAVLINK\_DATA\_STREAM\_IMG\_PGM}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa802d28f5188734c114745e5cd8af0cd4}\label{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa802d28f5188734c114745e5cd8af0cd4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+P\+GM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_DATA\_STREAM\_IMG\_PNG@{MAVLINK\_DATA\_STREAM\_IMG\_PNG}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_DATA\_STREAM\_IMG\_PNG@{MAVLINK\_DATA\_STREAM\_IMG\_PNG}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa998e249155dc058ef52b159a42e336a6}\label{include__v0_89_2mavlink__types_8h_a6f8e3d6ae1ea274402add6de1990d92aa998e249155dc058ef52b159a42e336a6}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+M\+G\+\_\+\+P\+NG&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 161 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_message\_type\_t@{mavlink\_message\_type\_t}}
+\index{mavlink\_message\_type\_t@{mavlink\_message\_type\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_message\_type\_t}{mavlink\_message\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4}{mavlink\+\_\+message\+\_\+type\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_CHAR@{MAVLINK\_TYPE\_CHAR}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_CHAR@{MAVLINK\_TYPE\_CHAR}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT8\_T@{MAVLINK\_TYPE\_UINT8\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT8\_T@{MAVLINK\_TYPE\_UINT8\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT8\_T@{MAVLINK\_TYPE\_INT8\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT8\_T@{MAVLINK\_TYPE\_INT8\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T8\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT16\_T@{MAVLINK\_TYPE\_UINT16\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT16\_T@{MAVLINK\_TYPE\_UINT16\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T16\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT16\_T@{MAVLINK\_TYPE\_INT16\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT16\_T@{MAVLINK\_TYPE\_INT16\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T16\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT32\_T@{MAVLINK\_TYPE\_UINT32\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT32\_T@{MAVLINK\_TYPE\_UINT32\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT32\_T@{MAVLINK\_TYPE\_INT32\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT32\_T@{MAVLINK\_TYPE\_INT32\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T32\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT64\_T@{MAVLINK\_TYPE\_UINT64\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT64\_T@{MAVLINK\_TYPE\_UINT64\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T64\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT64\_T@{MAVLINK\_TYPE\_INT64\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT64\_T@{MAVLINK\_TYPE\_INT64\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T64\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_FLOAT@{MAVLINK\_TYPE\_FLOAT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_FLOAT@{MAVLINK\_TYPE\_FLOAT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_DOUBLE@{MAVLINK\_TYPE\_DOUBLE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_DOUBLE@{MAVLINK\_TYPE\_DOUBLE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_CHAR@{MAVLINK\_TYPE\_CHAR}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_CHAR@{MAVLINK\_TYPE\_CHAR}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT8\_T@{MAVLINK\_TYPE\_UINT8\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT8\_T@{MAVLINK\_TYPE\_UINT8\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT8\_T@{MAVLINK\_TYPE\_INT8\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT8\_T@{MAVLINK\_TYPE\_INT8\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T8\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT16\_T@{MAVLINK\_TYPE\_UINT16\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT16\_T@{MAVLINK\_TYPE\_UINT16\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T16\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT16\_T@{MAVLINK\_TYPE\_INT16\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT16\_T@{MAVLINK\_TYPE\_INT16\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T16\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT32\_T@{MAVLINK\_TYPE\_UINT32\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT32\_T@{MAVLINK\_TYPE\_UINT32\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT32\_T@{MAVLINK\_TYPE\_INT32\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT32\_T@{MAVLINK\_TYPE\_INT32\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T32\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT64\_T@{MAVLINK\_TYPE\_UINT64\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT64\_T@{MAVLINK\_TYPE\_UINT64\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T64\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT64\_T@{MAVLINK\_TYPE\_INT64\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT64\_T@{MAVLINK\_TYPE\_INT64\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T64\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_FLOAT@{MAVLINK\_TYPE\_FLOAT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_FLOAT@{MAVLINK\_TYPE\_FLOAT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_DOUBLE@{MAVLINK\_TYPE\_DOUBLE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_DOUBLE@{MAVLINK\_TYPE\_DOUBLE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_CHAR@{MAVLINK\_TYPE\_CHAR}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_CHAR@{MAVLINK\_TYPE\_CHAR}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a205452ad3d1ab60bf6df4487957eca90}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT8\_T@{MAVLINK\_TYPE\_UINT8\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT8\_T@{MAVLINK\_TYPE\_UINT8\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a73bf311e4bfddf3a00632bb7553eaa84}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT8\_T@{MAVLINK\_TYPE\_INT8\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT8\_T@{MAVLINK\_TYPE\_INT8\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aadfce75c32e04fc5d552c06e222bc19a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T8\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT16\_T@{MAVLINK\_TYPE\_UINT16\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT16\_T@{MAVLINK\_TYPE\_UINT16\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ac4c6864786bfcce3a9bd2f40572c90a4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T16\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT16\_T@{MAVLINK\_TYPE\_INT16\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT16\_T@{MAVLINK\_TYPE\_INT16\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4aa77d38eacfce4c9d610a531423957a96}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T16\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT32\_T@{MAVLINK\_TYPE\_UINT32\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT32\_T@{MAVLINK\_TYPE\_UINT32\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ade8fcbd09eb9c44492650baf961e6d2b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT32\_T@{MAVLINK\_TYPE\_INT32\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT32\_T@{MAVLINK\_TYPE\_INT32\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4af803883af3fbcaa9065749974a4d728a}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T32\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_UINT64\_T@{MAVLINK\_TYPE\_UINT64\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_UINT64\_T@{MAVLINK\_TYPE\_UINT64\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4a12ee339a067a942cd309d69946fbd00b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T64\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_INT64\_T@{MAVLINK\_TYPE\_INT64\_T}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_INT64\_T@{MAVLINK\_TYPE\_INT64\_T}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae88c9564e4c18e4cf5c067db21faf166}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T64\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_FLOAT@{MAVLINK\_TYPE\_FLOAT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_FLOAT@{MAVLINK\_TYPE\_FLOAT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4ae5f4d04c343191b5a24b28743a115385}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_TYPE\_DOUBLE@{MAVLINK\_TYPE\_DOUBLE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_TYPE\_DOUBLE@{MAVLINK\_TYPE\_DOUBLE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}\label{include__v0_89_2mavlink__types_8h_ab6045b7adc25bdc05a5011a91dc645a4acb93481e0938a2be06955904639bcef4}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 235 of file mavlink\+\_\+types.\+h.
+
+\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1}} 
+\index{mavlink\_types.h@{mavlink\_types.h}!mavlink\_parse\_state\_t@{mavlink\_parse\_state\_t}}
+\index{mavlink\_parse\_state\_t@{mavlink\_parse\_state\_t}!mavlink\_types.h@{mavlink\_types.h}}
+\subsubsection{\texorpdfstring{mavlink\_parse\_state\_t}{mavlink\_parse\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1}{mavlink\+\_\+parse\+\_\+state\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_UNINIT@{MAVLINK\_PARSE\_STATE\_UNINIT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_UNINIT@{MAVLINK\_PARSE\_STATE\_UNINIT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_IDLE@{MAVLINK\_PARSE\_STATE\_IDLE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_IDLE@{MAVLINK\_PARSE\_STATE\_IDLE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_STX@{MAVLINK\_PARSE\_STATE\_GOT\_STX}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_STX@{MAVLINK\_PARSE\_STATE\_GOT\_STX}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+TX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_SEQ@{MAVLINK\_PARSE\_STATE\_GOT\_SEQ}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_SEQ@{MAVLINK\_PARSE\_STATE\_GOT\_SEQ}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH@{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_LENGTH@{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+L\+E\+N\+G\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_SYSID@{MAVLINK\_PARSE\_STATE\_GOT\_SYSID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_SYSID@{MAVLINK\_PARSE\_STATE\_GOT\_SYSID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+Y\+S\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_COMPID@{MAVLINK\_PARSE\_STATE\_GOT\_COMPID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_COMPID@{MAVLINK\_PARSE\_STATE\_GOT\_COMPID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_MSGID@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_MSGID@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a3d02f008622944ee1591881d49954370}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a3d02f008622944ee1591881d49954370}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD@{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD@{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+P\+A\+Y\+L\+O\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_CRC1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_CRC1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+R\+C1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_UNINIT@{MAVLINK\_PARSE\_STATE\_UNINIT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_UNINIT@{MAVLINK\_PARSE\_STATE\_UNINIT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_IDLE@{MAVLINK\_PARSE\_STATE\_IDLE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_IDLE@{MAVLINK\_PARSE\_STATE\_IDLE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_STX@{MAVLINK\_PARSE\_STATE\_GOT\_STX}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_STX@{MAVLINK\_PARSE\_STATE\_GOT\_STX}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+TX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_SEQ@{MAVLINK\_PARSE\_STATE\_GOT\_SEQ}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_SEQ@{MAVLINK\_PARSE\_STATE\_GOT\_SEQ}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH@{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_LENGTH@{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+L\+E\+N\+G\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_SYSID@{MAVLINK\_PARSE\_STATE\_GOT\_SYSID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_SYSID@{MAVLINK\_PARSE\_STATE\_GOT\_SYSID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+Y\+S\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_COMPID@{MAVLINK\_PARSE\_STATE\_GOT\_COMPID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_COMPID@{MAVLINK\_PARSE\_STATE\_GOT\_COMPID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_MSGID@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_MSGID@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a3d02f008622944ee1591881d49954370}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a3d02f008622944ee1591881d49954370}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD@{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD@{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+P\+A\+Y\+L\+O\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_CRC1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_CRC1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+R\+C1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aae8c53898458dbd2f91e194b99ee8e68}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aae8c53898458dbd2f91e194b99ee8e68}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+B\+A\+D\+\_\+\+C\+R\+C1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_UNINIT@{MAVLINK\_PARSE\_STATE\_UNINIT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_UNINIT@{MAVLINK\_PARSE\_STATE\_UNINIT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a939d196b8931cc1955518f4f7a43bfb7}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+U\+N\+I\+N\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_IDLE@{MAVLINK\_PARSE\_STATE\_IDLE}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_IDLE@{MAVLINK\_PARSE\_STATE\_IDLE}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a0b9cd6ff26b5b2a126182a7897456444}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+D\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_STX@{MAVLINK\_PARSE\_STATE\_GOT\_STX}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_STX@{MAVLINK\_PARSE\_STATE\_GOT\_STX}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aafe7ca693d7a00daa3ced9c8fe3c0f8b}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+TX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH@{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_LENGTH@{MAVLINK\_PARSE\_STATE\_GOT\_LENGTH}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a4b9ad9e12be9111207da32d6630d91d7}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+L\+E\+N\+G\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_INCOMPAT\_FLAGS@{MAVLINK\_PARSE\_STATE\_GOT\_INCOMPAT\_FLAGS}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_INCOMPAT\_FLAGS@{MAVLINK\_PARSE\_STATE\_GOT\_INCOMPAT\_FLAGS}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a518457f4678af167fae567adbd6beab1}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a518457f4678af167fae567adbd6beab1}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+\_\+\+F\+L\+A\+GS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_COMPAT\_FLAGS@{MAVLINK\_PARSE\_STATE\_GOT\_COMPAT\_FLAGS}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_COMPAT\_FLAGS@{MAVLINK\_PARSE\_STATE\_GOT\_COMPAT\_FLAGS}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a76bada2b3d4366042154c7cf7dcb31f8}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a76bada2b3d4366042154c7cf7dcb31f8}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+F\+L\+A\+GS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_SEQ@{MAVLINK\_PARSE\_STATE\_GOT\_SEQ}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_SEQ@{MAVLINK\_PARSE\_STATE\_GOT\_SEQ}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a32d7342759d61c0cbb956aeb09b065cb}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_SYSID@{MAVLINK\_PARSE\_STATE\_GOT\_SYSID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_SYSID@{MAVLINK\_PARSE\_STATE\_GOT\_SYSID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6eff5ca7b6c333bda21347e31cce0430}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+S\+Y\+S\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_COMPID@{MAVLINK\_PARSE\_STATE\_GOT\_COMPID}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_COMPID@{MAVLINK\_PARSE\_STATE\_GOT\_COMPID}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1abdacceb394b783c6beb689b1f25fb6f6}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+O\+M\+P\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_MSGID1@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_MSGID1@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a1219128bff8717007397ad3957414093}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a1219128bff8717007397ad3957414093}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+I\+D1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_MSGID2@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID2}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_MSGID2@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID2}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aa064720fcc66e5393294f6086fe5333f}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aa064720fcc66e5393294f6086fe5333f}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+I\+D2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_MSGID3@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID3}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_MSGID3@{MAVLINK\_PARSE\_STATE\_GOT\_MSGID3}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a2e59b10e893077c17d4839ab079dc9ea}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a2e59b10e893077c17d4839ab079dc9ea}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+M\+S\+G\+I\+D3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD@{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD@{MAVLINK\_PARSE\_STATE\_GOT\_PAYLOAD}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a70250545e55394bc86332ff29f82e8bf}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+P\+A\+Y\+L\+O\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_CRC1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_CRC1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a6da96e625309597402e5e97699207469}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+C\+R\+C1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1@{MAVLINK\_PARSE\_STATE\_GOT\_BAD\_CRC1}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aae8c53898458dbd2f91e194b99ee8e68}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1aae8c53898458dbd2f91e194b99ee8e68}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+O\+T\+\_\+\+B\+A\+D\+\_\+\+C\+R\+C1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAVLINK\_PARSE\_STATE\_SIGNATURE\_WAIT@{MAVLINK\_PARSE\_STATE\_SIGNATURE\_WAIT}!mavlink\_types.h@{mavlink\_types.h}}\index{mavlink\_types.h@{mavlink\_types.h}!MAVLINK\_PARSE\_STATE\_SIGNATURE\_WAIT@{MAVLINK\_PARSE\_STATE\_SIGNATURE\_WAIT}}}\mbox{\Hypertarget{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a9eb5c868cdc345361a3ecded133af6cb}\label{include__v0_89_2mavlink__types_8h_a4eeb14ddb07e997fe1d671d6823e35a1a9eb5c868cdc345361a3ecded133af6cb}} 
+M\+A\+V\+L\+I\+N\+K\+\_\+\+P\+A\+R\+S\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+W\+A\+IT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 295 of file mavlink\+\_\+types.\+h.
+

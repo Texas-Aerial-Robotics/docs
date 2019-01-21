@@ -1,0 +1,120 @@
+\hypertarget{RoombaBoomba_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Strat\+Node/src/\+Roomba\+Boomba.cpp File Reference}
+\label{RoombaBoomba_8cpp}\index{/home/eric/catkin\_ws/src/StratNode/src/RoombaBoomba.cpp@{/home/eric/catkin\_ws/src/StratNode/src/RoombaBoomba.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Poses.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Pose.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$rosgraph\+\_\+msgs/\+Clock.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}matplotlibcpp.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classquad}{quad}}
+\item 
+class \mbox{\hyperlink{classTargetRoomba}{Target\+Roomba}}
+\item 
+class \mbox{\hyperlink{classObstacleRoomba}{Obstacle\+Roomba}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{RoombaBoomba_8cpp_a43150a70bceda540ba26b1ad473634ef}{waypoint\+\_\+cb}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+int \mbox{\hyperlink{RoombaBoomba_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{RoombaBoomba_8cpp_a4bb77e26eac363f2fb939fe919e6fd02}{roombax}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{RoombaBoomba_8cpp_aa3d5e6ea1a9862c28e4d7c530896fd93}{obstaclex}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{RoombaBoomba_8cpp_a0cdf94fa7c3414611e5eddde765ffcc1}{roombay}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{RoombaBoomba_8cpp_ab7b78ecc0a2e33544cb8dc87d7ef2640}{obstacley}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{RoombaBoomba_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}{waypoint}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{RoombaBoomba_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{RoombaBoomba_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{RoombaBoomba.cpp@{RoombaBoomba.cpp}!main@{main}}
+\index{main@{main}!RoombaBoomba.cpp@{RoombaBoomba.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file Roomba\+Boomba.\+cpp.
+
+\mbox{\Hypertarget{RoombaBoomba_8cpp_a43150a70bceda540ba26b1ad473634ef}\label{RoombaBoomba_8cpp_a43150a70bceda540ba26b1ad473634ef}} 
+\index{RoombaBoomba.cpp@{RoombaBoomba.cpp}!waypoint\_cb@{waypoint\_cb}}
+\index{waypoint\_cb@{waypoint\_cb}!RoombaBoomba.cpp@{RoombaBoomba.cpp}}
+\subsubsection{\texorpdfstring{waypoint\_cb()}{waypoint\_cb()}}
+{\footnotesize\ttfamily void waypoint\+\_\+cb (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Roomba\+Boomba.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{RoombaBoomba_8cpp_aa3d5e6ea1a9862c28e4d7c530896fd93}\label{RoombaBoomba_8cpp_aa3d5e6ea1a9862c28e4d7c530896fd93}} 
+\index{RoombaBoomba.cpp@{RoombaBoomba.cpp}!obstaclex@{obstaclex}}
+\index{obstaclex@{obstaclex}!RoombaBoomba.cpp@{RoombaBoomba.cpp}}
+\subsubsection{\texorpdfstring{obstaclex}{obstaclex}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ obstaclex}
+
+
+
+Definition at line 17 of file Roomba\+Boomba.\+cpp.
+
+\mbox{\Hypertarget{RoombaBoomba_8cpp_ab7b78ecc0a2e33544cb8dc87d7ef2640}\label{RoombaBoomba_8cpp_ab7b78ecc0a2e33544cb8dc87d7ef2640}} 
+\index{RoombaBoomba.cpp@{RoombaBoomba.cpp}!obstacley@{obstacley}}
+\index{obstacley@{obstacley}!RoombaBoomba.cpp@{RoombaBoomba.cpp}}
+\subsubsection{\texorpdfstring{obstacley}{obstacley}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ obstacley}
+
+
+
+Definition at line 17 of file Roomba\+Boomba.\+cpp.
+
+\mbox{\Hypertarget{RoombaBoomba_8cpp_a4bb77e26eac363f2fb939fe919e6fd02}\label{RoombaBoomba_8cpp_a4bb77e26eac363f2fb939fe919e6fd02}} 
+\index{RoombaBoomba.cpp@{RoombaBoomba.cpp}!roombax@{roombax}}
+\index{roombax@{roombax}!RoombaBoomba.cpp@{RoombaBoomba.cpp}}
+\subsubsection{\texorpdfstring{roombax}{roombax}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ roombax}
+
+
+
+Definition at line 17 of file Roomba\+Boomba.\+cpp.
+
+\mbox{\Hypertarget{RoombaBoomba_8cpp_a0cdf94fa7c3414611e5eddde765ffcc1}\label{RoombaBoomba_8cpp_a0cdf94fa7c3414611e5eddde765ffcc1}} 
+\index{RoombaBoomba.cpp@{RoombaBoomba.cpp}!roombay@{roombay}}
+\index{roombay@{roombay}!RoombaBoomba.cpp@{RoombaBoomba.cpp}}
+\subsubsection{\texorpdfstring{roombay}{roombay}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ roombay}
+
+
+
+Definition at line 17 of file Roomba\+Boomba.\+cpp.
+
+\mbox{\Hypertarget{RoombaBoomba_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}\label{RoombaBoomba_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}} 
+\index{RoombaBoomba.cpp@{RoombaBoomba.cpp}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!RoombaBoomba.cpp@{RoombaBoomba.cpp}}
+\subsubsection{\texorpdfstring{waypoint}{waypoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped waypoint}
+
+
+
+Definition at line 18 of file Roomba\+Boomba.\+cpp.
+

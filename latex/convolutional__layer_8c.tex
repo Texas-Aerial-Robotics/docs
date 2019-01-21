@@ -1,0 +1,281 @@
+\hypertarget{convolutional__layer_8c}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/convolutional\+\_\+layer.c File Reference}
+\label{convolutional__layer_8c}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/convolutional\_layer.c@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/convolutional\_layer.c}}
+{\ttfamily \#include \char`\"{}convolutional\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}batchnorm\+\_\+layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}im2col.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}col2im.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gemm.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a00eb21237b64c4f49eabe4e7f3f2cef1}{swap\+\_\+binary}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} $\ast$l)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_aa2ba9c5688fe3b221afba283cd60dd04}{binarize\+\_\+weights}} (float $\ast$weights, int n, int size, float $\ast$binary)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a5c0bcad43fbcf2b264e33b007e283953}{binarize\+\_\+cpu}} (float $\ast$input, int n, float $\ast$binary)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_ab0773bc29fbd5de7f3f89533535f3a6b}{binarize\+\_\+input}} (float $\ast$input, int n, int size, float $\ast$binary)
+\item 
+int \mbox{\hyperlink{convolutional__layer_8c_a4e3f4ec3fb327f0072ae7feec101e20d}{convolutional\+\_\+out\+\_\+height}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l)
+\item 
+int \mbox{\hyperlink{convolutional__layer_8c_a8dd3db32f1bca91f42f9b755ab05810a}{convolutional\+\_\+out\+\_\+width}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{convolutional__layer_8c_ac42e3b85ed2690decac4214fe8c302fc}{get\+\_\+convolutional\+\_\+image}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{convolutional__layer_8c_a4ec851cd49b213363fed1002ff3ab398}{get\+\_\+convolutional\+\_\+delta}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} \mbox{\hyperlink{convolutional__layer_8c_a38ffd1e70d78652f3ae174aef2eaac27}{make\+\_\+convolutional\+\_\+layer}} (int batch, int h, int w, int c, int n, int groups, int size, int stride, int padding, \mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}} activation, int batch\+\_\+normalize, int binary, int xnor, int adam)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_aa48893181b794b4ef14f013390f999e2}{denormalize\+\_\+convolutional\+\_\+layer}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_ab4e8bb8b50e2058d861892bed77238de}{resize\+\_\+convolutional\+\_\+layer}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} $\ast$l, int w, int h)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_ad6cf2da6713f5eb405eb21cb5bfe8dc9}{add\+\_\+bias}} (float $\ast$output, float $\ast$biases, int batch, int n, int size)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_ad2afef6b2dde26f2a1098e42f8b48e8f}{scale\+\_\+bias}} (float $\ast$output, float $\ast$scales, int batch, int n, int size)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a3fe122b5a5807135e39655276f708d98}{backward\+\_\+bias}} (float $\ast$bias\+\_\+updates, float $\ast$delta, int batch, int n, int size)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a16768cfb8fcfc0365499fc2013e66fc7}{forward\+\_\+convolutional\+\_\+layer}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a0db2cf09de4cf3d7221aa956989ddaba}{backward\+\_\+convolutional\+\_\+layer}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a363978ec28588ed4b1f2aa363bd40529}{update\+\_\+convolutional\+\_\+layer}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\item 
+\mbox{\hyperlink{structimage}{image}} \mbox{\hyperlink{convolutional__layer_8c_ac75c4e8ba3158b823ea2e08142a84d55}{get\+\_\+convolutional\+\_\+weight}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l, int \mbox{\hyperlink{velTest_8cpp_a1239420b8759f52cbab64225b82461e2}{i}})
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a1f0aba3f00cb0554384cc88998a67609}{rgbgr\+\_\+weights}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l)
+\item 
+void \mbox{\hyperlink{convolutional__layer_8c_a2b8d3bb34b2aa7c6c729f32a96d1ebc1}{rescale\+\_\+weights}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l, float scale, float trans)
+\item 
+\mbox{\hyperlink{structimage}{image}} $\ast$ \mbox{\hyperlink{convolutional__layer_8c_af088157c9ed8d74f29dd0b271ab3f1f3}{get\+\_\+weights}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l)
+\item 
+\mbox{\hyperlink{structimage}{image}} $\ast$ \mbox{\hyperlink{convolutional__layer_8c_a8fd17b6886740796e0f45eb9196c4525}{visualize\+\_\+convolutional\+\_\+layer}} (\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} l, char $\ast$\mbox{\hyperlink{keyTalker_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, \mbox{\hyperlink{structimage}{image}} $\ast$prev\+\_\+weights)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{convolutional__layer_8c_ad6cf2da6713f5eb405eb21cb5bfe8dc9}\label{convolutional__layer_8c_ad6cf2da6713f5eb405eb21cb5bfe8dc9}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!add\_bias@{add\_bias}}
+\index{add\_bias@{add\_bias}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{add\_bias()}{add\_bias()}}
+{\footnotesize\ttfamily void add\+\_\+bias (\begin{DoxyParamCaption}\item[{float $\ast$}]{output,  }\item[{float $\ast$}]{biases,  }\item[{int}]{batch,  }\item[{int}]{n,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 411 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a3fe122b5a5807135e39655276f708d98}\label{convolutional__layer_8c_a3fe122b5a5807135e39655276f708d98}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!backward\_bias@{backward\_bias}}
+\index{backward\_bias@{backward\_bias}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_bias()}{backward\_bias()}}
+{\footnotesize\ttfamily void backward\+\_\+bias (\begin{DoxyParamCaption}\item[{float $\ast$}]{bias\+\_\+updates,  }\item[{float $\ast$}]{delta,  }\item[{int}]{batch,  }\item[{int}]{n,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 435 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a0db2cf09de4cf3d7221aa956989ddaba}\label{convolutional__layer_8c_a0db2cf09de4cf3d7221aa956989ddaba}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!backward\_convolutional\_layer@{backward\_convolutional\_layer}}
+\index{backward\_convolutional\_layer@{backward\_convolutional\_layer}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{backward\_convolutional\_layer()}{backward\_convolutional\_layer()}}
+{\footnotesize\ttfamily void backward\+\_\+convolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 483 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a5c0bcad43fbcf2b264e33b007e283953}\label{convolutional__layer_8c_a5c0bcad43fbcf2b264e33b007e283953}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!binarize\_cpu@{binarize\_cpu}}
+\index{binarize\_cpu@{binarize\_cpu}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{binarize\_cpu()}{binarize\_cpu()}}
+{\footnotesize\ttfamily void binarize\+\_\+cpu (\begin{DoxyParamCaption}\item[{float $\ast$}]{input,  }\item[{int}]{n,  }\item[{float $\ast$}]{binary }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_ab0773bc29fbd5de7f3f89533535f3a6b}\label{convolutional__layer_8c_ab0773bc29fbd5de7f3f89533535f3a6b}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!binarize\_input@{binarize\_input}}
+\index{binarize\_input@{binarize\_input}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{binarize\_input()}{binarize\_input()}}
+{\footnotesize\ttfamily void binarize\+\_\+input (\begin{DoxyParamCaption}\item[{float $\ast$}]{input,  }\item[{int}]{n,  }\item[{int}]{size,  }\item[{float $\ast$}]{binary }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_aa2ba9c5688fe3b221afba283cd60dd04}\label{convolutional__layer_8c_aa2ba9c5688fe3b221afba283cd60dd04}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!binarize\_weights@{binarize\_weights}}
+\index{binarize\_weights@{binarize\_weights}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{binarize\_weights()}{binarize\_weights()}}
+{\footnotesize\ttfamily void binarize\+\_\+weights (\begin{DoxyParamCaption}\item[{float $\ast$}]{weights,  }\item[{int}]{n,  }\item[{int}]{size,  }\item[{float $\ast$}]{binary }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a4e3f4ec3fb327f0072ae7feec101e20d}\label{convolutional__layer_8c_a4e3f4ec3fb327f0072ae7feec101e20d}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!convolutional\_out\_height@{convolutional\_out\_height}}
+\index{convolutional\_out\_height@{convolutional\_out\_height}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{convolutional\_out\_height()}{convolutional\_out\_height()}}
+{\footnotesize\ttfamily int convolutional\+\_\+out\+\_\+height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a8dd3db32f1bca91f42f9b755ab05810a}\label{convolutional__layer_8c_a8dd3db32f1bca91f42f9b755ab05810a}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!convolutional\_out\_width@{convolutional\_out\_width}}
+\index{convolutional\_out\_width@{convolutional\_out\_width}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{convolutional\_out\_width()}{convolutional\_out\_width()}}
+{\footnotesize\ttfamily int convolutional\+\_\+out\+\_\+width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_aa48893181b794b4ef14f013390f999e2}\label{convolutional__layer_8c_aa48893181b794b4ef14f013390f999e2}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!denormalize\_convolutional\_layer@{denormalize\_convolutional\_layer}}
+\index{denormalize\_convolutional\_layer@{denormalize\_convolutional\_layer}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{denormalize\_convolutional\_layer()}{denormalize\_convolutional\_layer()}}
+{\footnotesize\ttfamily void denormalize\+\_\+convolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 330 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a16768cfb8fcfc0365499fc2013e66fc7}\label{convolutional__layer_8c_a16768cfb8fcfc0365499fc2013e66fc7}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!forward\_convolutional\_layer@{forward\_convolutional\_layer}}
+\index{forward\_convolutional\_layer@{forward\_convolutional\_layer}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{forward\_convolutional\_layer()}{forward\_convolutional\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+convolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 445 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a4ec851cd49b213363fed1002ff3ab398}\label{convolutional__layer_8c_a4ec851cd49b213363fed1002ff3ab398}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!get\_convolutional\_delta@{get\_convolutional\_delta}}
+\index{get\_convolutional\_delta@{get\_convolutional\_delta}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{get\_convolutional\_delta()}{get\_convolutional\_delta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+convolutional\+\_\+delta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_ac42e3b85ed2690decac4214fe8c302fc}\label{convolutional__layer_8c_ac42e3b85ed2690decac4214fe8c302fc}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!get\_convolutional\_image@{get\_convolutional\_image}}
+\index{get\_convolutional\_image@{get\_convolutional\_image}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{get\_convolutional\_image()}{get\_convolutional\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+convolutional\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_ac75c4e8ba3158b823ea2e08142a84d55}\label{convolutional__layer_8c_ac75c4e8ba3158b823ea2e08142a84d55}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!get\_convolutional\_weight@{get\_convolutional\_weight}}
+\index{get\_convolutional\_weight@{get\_convolutional\_weight}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{get\_convolutional\_weight()}{get\_convolutional\_weight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}} get\+\_\+convolutional\+\_\+weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 545 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_af088157c9ed8d74f29dd0b271ab3f1f3}\label{convolutional__layer_8c_af088157c9ed8d74f29dd0b271ab3f1f3}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!get\_weights@{get\_weights}}
+\index{get\_weights@{get\_weights}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{get\_weights()}{get\_weights()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}}$\ast$ get\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 577 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a38ffd1e70d78652f3ae174aef2eaac27}\label{convolutional__layer_8c_a38ffd1e70d78652f3ae174aef2eaac27}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!make\_convolutional\_layer@{make\_convolutional\_layer}}
+\index{make\_convolutional\_layer@{make\_convolutional\_layer}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{make\_convolutional\_layer()}{make\_convolutional\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} make\+\_\+convolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{h,  }\item[{int}]{w,  }\item[{int}]{c,  }\item[{int}]{n,  }\item[{int}]{groups,  }\item[{int}]{size,  }\item[{int}]{stride,  }\item[{int}]{padding,  }\item[{\mbox{\hyperlink{darknet_8h_aea09b678fab8ab931902378cbbd79032}{A\+C\+T\+I\+V\+A\+T\+I\+ON}}}]{activation,  }\item[{int}]{batch\+\_\+normalize,  }\item[{int}]{binary,  }\item[{int}]{xnor,  }\item[{int}]{adam }\end{DoxyParamCaption})}
+
+
+
+Definition at line 176 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a2b8d3bb34b2aa7c6c729f32a96d1ebc1}\label{convolutional__layer_8c_a2b8d3bb34b2aa7c6c729f32a96d1ebc1}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!rescale\_weights@{rescale\_weights}}
+\index{rescale\_weights@{rescale\_weights}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{rescale\_weights()}{rescale\_weights()}}
+{\footnotesize\ttfamily void rescale\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l,  }\item[{float}]{scale,  }\item[{float}]{trans }\end{DoxyParamCaption})}
+
+
+
+Definition at line 564 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_ab4e8bb8b50e2058d861892bed77238de}\label{convolutional__layer_8c_ab4e8bb8b50e2058d861892bed77238de}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!resize\_convolutional\_layer@{resize\_convolutional\_layer}}
+\index{resize\_convolutional\_layer@{resize\_convolutional\_layer}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{resize\_convolutional\_layer()}{resize\_convolutional\_layer()}}
+{\footnotesize\ttfamily void resize\+\_\+convolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} $\ast$}]{l,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 370 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a1f0aba3f00cb0554384cc88998a67609}\label{convolutional__layer_8c_a1f0aba3f00cb0554384cc88998a67609}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!rgbgr\_weights@{rgbgr\_weights}}
+\index{rgbgr\_weights@{rgbgr\_weights}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{rgbgr\_weights()}{rgbgr\_weights()}}
+{\footnotesize\ttfamily void rgbgr\+\_\+weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 553 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_ad2afef6b2dde26f2a1098e42f8b48e8f}\label{convolutional__layer_8c_ad2afef6b2dde26f2a1098e42f8b48e8f}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!scale\_bias@{scale\_bias}}
+\index{scale\_bias@{scale\_bias}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{scale\_bias()}{scale\_bias()}}
+{\footnotesize\ttfamily void scale\+\_\+bias (\begin{DoxyParamCaption}\item[{float $\ast$}]{output,  }\item[{float $\ast$}]{scales,  }\item[{int}]{batch,  }\item[{int}]{n,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 423 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a00eb21237b64c4f49eabe4e7f3f2cef1}\label{convolutional__layer_8c_a00eb21237b64c4f49eabe4e7f3f2cef1}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!swap\_binary@{swap\_binary}}
+\index{swap\_binary@{swap\_binary}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{swap\_binary()}{swap\_binary()}}
+{\footnotesize\ttfamily void swap\+\_\+binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a363978ec28588ed4b1f2aa363bd40529}\label{convolutional__layer_8c_a363978ec28588ed4b1f2aa363bd40529}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!update\_convolutional\_layer@{update\_convolutional\_layer}}
+\index{update\_convolutional\_layer@{update\_convolutional\_layer}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{update\_convolutional\_layer()}{update\_convolutional\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+convolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 524 of file convolutional\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{convolutional__layer_8c_a8fd17b6886740796e0f45eb9196c4525}\label{convolutional__layer_8c_a8fd17b6886740796e0f45eb9196c4525}} 
+\index{convolutional\_layer.c@{convolutional\_layer.c}!visualize\_convolutional\_layer@{visualize\_convolutional\_layer}}
+\index{visualize\_convolutional\_layer@{visualize\_convolutional\_layer}!convolutional\_layer.c@{convolutional\_layer.c}}
+\subsubsection{\texorpdfstring{visualize\_convolutional\_layer()}{visualize\_convolutional\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimage}{image}}$\ast$ visualize\+\_\+convolutional\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{convolutional__layer_8h_a3d5c19fbd473fc9ef62fec3f3a31b318}{convolutional\+\_\+layer}}}]{l,  }\item[{char $\ast$}]{window,  }\item[{\mbox{\hyperlink{structimage}{image}} $\ast$}]{prev\+\_\+weights }\end{DoxyParamCaption})}
+
+
+
+Definition at line 594 of file convolutional\+\_\+layer.\+c.
+

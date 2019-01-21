@@ -1,0 +1,50 @@
+\hypertarget{setpoint__attitude_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/src/plugins/setpoint\+\_\+attitude.cpp File Reference}
+\label{setpoint__attitude_8cpp}\index{/home/eric/catkin\_ws/src/mavros/mavros/src/plugins/setpoint\_attitude.cpp@{/home/eric/catkin\_ws/src/mavros/mavros/src/plugins/setpoint\_attitude.cpp}}
+
+
+Setpoint\+Attitude plugin.  
+
+
+{\ttfamily \#include $<$mavros/mavros\+\_\+plugin.\+h$>$}\newline
+{\ttfamily \#include $<$mavros/setpoint\+\_\+mixin.\+h$>$}\newline
+{\ttfamily \#include $<$eigen\+\_\+conversions/eigen\+\_\+msg.\+h$>$}\newline
+{\ttfamily \#include $<$message\+\_\+filters/subscriber.\+h$>$}\newline
+{\ttfamily \#include $<$message\+\_\+filters/synchronizer.\+h$>$}\newline
+{\ttfamily \#include $<$message\+\_\+filters/sync\+\_\+policies/approximate\+\_\+time.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$mavros\+\_\+msgs/\+Thrust.\+h$>$}\newline
+{\ttfamily \#include $<$pluginlib/class\+\_\+list\+\_\+macros.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmavros_1_1std__plugins_1_1SetpointAttitudePlugin}{mavros\+::std\+\_\+plugins\+::\+Setpoint\+Attitude\+Plugin}}
+\begin{DoxyCompactList}\small\item\em Setpoint attitude plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1std__plugins}{mavros\+::std\+\_\+plugins}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__plugin_ga48ed4062810bb42590cbed0b4e0dc237}{mavros\+::std\+\_\+plugins\+::\+Sync\+Pose\+Thrust\+Policy}} = message\+\_\+filters\+::sync\+\_\+policies\+::\+Approximate\+Time$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped, mavros\+\_\+msgs\+::\+Thrust $>$
+\item 
+using \mbox{\hyperlink{group__plugin_gacfaec844da30bf9462d4583c55fa64e1}{mavros\+::std\+\_\+plugins\+::\+Sync\+Twist\+Thrust\+Policy}} = message\+\_\+filters\+::sync\+\_\+policies\+::\+Approximate\+Time$<$ geometry\+\_\+msgs\+::\+Twist\+Stamped, mavros\+\_\+msgs\+::\+Thrust $>$
+\item 
+using \mbox{\hyperlink{group__plugin_gab78f646d4cfccf2c656a3aeb2605cad1}{mavros\+::std\+\_\+plugins\+::\+Sync\+Pose\+Thrust}} = message\+\_\+filters\+::\+Synchronizer$<$ Sync\+Pose\+Thrust\+Policy $>$
+\item 
+using \mbox{\hyperlink{group__plugin_ga4a8954a9b71d632e038309fa85fe5bb2}{mavros\+::std\+\_\+plugins\+::\+Sync\+Twist\+Thrust}} = message\+\_\+filters\+::\+Synchronizer$<$ Sync\+Twist\+Thrust\+Policy $>$
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Setpoint\+Attitude plugin. 
+
+\begin{DoxyAuthor}{Author}
+Nuno Marques \href{mailto:n.marques21@hotmail.com}{\texttt{ n.\+marques21@hotmail.\+com}} 
+
+Vladimir Ermakov \href{mailto:vooon341@gmail.com}{\texttt{ vooon341@gmail.\+com}} 
+\end{DoxyAuthor}

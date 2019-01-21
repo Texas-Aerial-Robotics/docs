@@ -1,0 +1,208 @@
+\hypertarget{classMavLink_1_1Mavlink}{}\section{Mav\+Link.\+Mavlink Class Reference}
+\label{classMavLink_1_1Mavlink}\index{MavLink.Mavlink@{MavLink.Mavlink}}
+
+
+\mbox{\hyperlink{classMavLink_1_1Mavlink}{Mavlink}} communication class.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMavLink_1_1Mavlink_afe31f241e14b7a9df43494c3f777055f}{Mavlink}} ()
+\begin{DoxyCompactList}\small\item\em Create a new Mavlink\+Link Object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMavLink_1_1Mavlink_a2a1e66a440c767a640c92f00bdf5354d}{Parse\+Bytes}} (byte\mbox{[}$\,$\mbox{]} newly\+Received)
+\item 
+byte \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classMavLink_1_1Mavlink_a62a72045b3c41e9aade642a94af528aa}{Send}} (\mbox{\hyperlink{classMavLink_1_1MavlinkPacket}{Mavlink\+Packet}} mavlink\+Packet)
+\item 
+Mavlink\+Message \mbox{\hyperlink{classMavLink_1_1Mavlink_aeffd42986158db41e1e7151ae5d899f3}{Deserialize}} (byte\mbox{[}$\,$\mbox{]} bytes, int offset)
+\item 
+byte \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classMavLink_1_1Mavlink_ac10d67e2fbfb6e4ef9bc905b5ef2206b}{Serialize}} (Mavlink\+Message message, int system\+Id, int component\+Id)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+byte \mbox{\hyperlink{classMavLink_1_1Mavlink_a0bba1cc5192a639aead91672c03fdd96}{tx\+Packet\+Sequence}}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+U\+Int32 \mbox{\hyperlink{classMavLink_1_1Mavlink_a5fb529a26ee8250d83fac7a1be30a041}{Packets\+Received}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of packets successfully received so far \end{DoxyCompactList}\item 
+U\+Int32 \mbox{\hyperlink{classMavLink_1_1Mavlink_a85571c31a47c311ac883279e8dcd02c9}{Bad\+Crc\+Packets\+Received}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of packets which have been rejected due to a failed crc \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceMavLink_a78c17c9f049257b0626c8d377735666d}{Packet\+Received\+Event\+Handler}} \mbox{\hyperlink{classMavLink_1_1Mavlink_ae5657dc889b9cbc7ce2c03d1cd5f7e73}{Packet\+Received}}
+\begin{DoxyCompactList}\small\item\em Event raised when a message is decoded successfully \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceMavLink_a8ed8a6701876b63e5bb9135a9897d679}{Packet\+C\+R\+C\+Fail\+Event\+Handler}} \mbox{\hyperlink{classMavLink_1_1Mavlink_ac73a6b5c5f3ecd09964ec630225fabdd}{Packet\+Failed\+C\+RC}}
+\begin{DoxyCompactList}\small\item\em Raised when a packet does not pass C\+RC \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceMavLink_a8ed8a6701876b63e5bb9135a9897d679}{Packet\+C\+R\+C\+Fail\+Event\+Handler}} \mbox{\hyperlink{classMavLink_1_1Mavlink_a88f743816b644b0d36b05c188a452fab}{Bytes\+Unused}}
+\begin{DoxyCompactList}\small\item\em Raised when a number of bytes are passed over and cannot be used to decode a packet \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classMavLink_1_1Mavlink}{Mavlink}} communication class. 
+
+Keeps track of state across send and receive of packets. User of this class can just send \mbox{\hyperlink{classMavLink_1_1Mavlink}{Mavlink}} Messsages, and receive them by feeding this class bytes off the wire as they arrive 
+
+Definition at line 15 of file Mavlink.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_afe31f241e14b7a9df43494c3f777055f}\label{classMavLink_1_1Mavlink_afe31f241e14b7a9df43494c3f777055f}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!Mavlink@{Mavlink}}
+\index{Mavlink@{Mavlink}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{Mavlink()}{Mavlink()}}
+{\footnotesize\ttfamily Mav\+Link.\+Mavlink.\+Mavlink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new Mavlink\+Link Object 
+
+
+
+Definition at line 53 of file Mavlink.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_aeffd42986158db41e1e7151ae5d899f3}\label{classMavLink_1_1Mavlink_aeffd42986158db41e1e7151ae5d899f3}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{Deserialize()}{Deserialize()}}
+{\footnotesize\ttfamily Mavlink\+Message Mav\+Link.\+Mavlink.\+Deserialize (\begin{DoxyParamCaption}\item[{byte \mbox{[}$\,$\mbox{]}}]{bytes,  }\item[{int}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 310 of file Mavlink.\+cs.
+
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_a2a1e66a440c767a640c92f00bdf5354d}\label{classMavLink_1_1Mavlink_a2a1e66a440c767a640c92f00bdf5354d}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!ParseBytes@{ParseBytes}}
+\index{ParseBytes@{ParseBytes}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{ParseBytes()}{ParseBytes()}}
+{\footnotesize\ttfamily void Mav\+Link.\+Mavlink.\+Parse\+Bytes (\begin{DoxyParamCaption}\item[{byte \mbox{[}$\,$\mbox{]}}]{newly\+Received }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+Process latest bytes from the stream. Received packets will be raised in the event 
+
+Definition at line 63 of file Mavlink.\+cs.
+
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_a62a72045b3c41e9aade642a94af528aa}\label{classMavLink_1_1Mavlink_a62a72045b3c41e9aade642a94af528aa}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!Send@{Send}}
+\index{Send@{Send}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Mav\+Link.\+Mavlink.\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMavLink_1_1MavlinkPacket}{Mavlink\+Packet}}}]{mavlink\+Packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 228 of file Mavlink.\+cs.
+
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_ac10d67e2fbfb6e4ef9bc905b5ef2206b}\label{classMavLink_1_1Mavlink_ac10d67e2fbfb6e4ef9bc905b5ef2206b}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} Mav\+Link.\+Mavlink.\+Serialize (\begin{DoxyParamCaption}\item[{Mavlink\+Message}]{message,  }\item[{int}]{system\+Id,  }\item[{int}]{component\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 318 of file Mavlink.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_a0bba1cc5192a639aead91672c03fdd96}\label{classMavLink_1_1Mavlink_a0bba1cc5192a639aead91672c03fdd96}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!txPacketSequence@{txPacketSequence}}
+\index{txPacketSequence@{txPacketSequence}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{txPacketSequence}{txPacketSequence}}
+{\footnotesize\ttfamily byte Mav\+Link.\+Mavlink.\+tx\+Packet\+Sequence}
+
+
+
+Definition at line 48 of file Mavlink.\+cs.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_a85571c31a47c311ac883279e8dcd02c9}\label{classMavLink_1_1Mavlink_a85571c31a47c311ac883279e8dcd02c9}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!BadCrcPacketsReceived@{BadCrcPacketsReceived}}
+\index{BadCrcPacketsReceived@{BadCrcPacketsReceived}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{BadCrcPacketsReceived}{BadCrcPacketsReceived}}
+{\footnotesize\ttfamily U\+Int32 Mav\+Link.\+Mavlink.\+Bad\+Crc\+Packets\+Received\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Total number of packets which have been rejected due to a failed crc 
+
+
+
+Definition at line 32 of file Mavlink.\+cs.
+
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_a5fb529a26ee8250d83fac7a1be30a041}\label{classMavLink_1_1Mavlink_a5fb529a26ee8250d83fac7a1be30a041}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!PacketsReceived@{PacketsReceived}}
+\index{PacketsReceived@{PacketsReceived}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{PacketsReceived}{PacketsReceived}}
+{\footnotesize\ttfamily U\+Int32 Mav\+Link.\+Mavlink.\+Packets\+Received\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Total number of packets successfully received so far 
+
+
+
+Definition at line 27 of file Mavlink.\+cs.
+
+
+
+\subsection{Event Documentation}
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_a88f743816b644b0d36b05c188a452fab}\label{classMavLink_1_1Mavlink_a88f743816b644b0d36b05c188a452fab}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!BytesUnused@{BytesUnused}}
+\index{BytesUnused@{BytesUnused}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{BytesUnused}{BytesUnused}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceMavLink_a8ed8a6701876b63e5bb9135a9897d679}{Packet\+C\+R\+C\+Fail\+Event\+Handler}} Mav\+Link.\+Mavlink.\+Bytes\+Unused}
+
+
+
+Raised when a number of bytes are passed over and cannot be used to decode a packet 
+
+
+
+Definition at line 43 of file Mavlink.\+cs.
+
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_ac73a6b5c5f3ecd09964ec630225fabdd}\label{classMavLink_1_1Mavlink_ac73a6b5c5f3ecd09964ec630225fabdd}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!PacketFailedCRC@{PacketFailedCRC}}
+\index{PacketFailedCRC@{PacketFailedCRC}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{PacketFailedCRC}{PacketFailedCRC}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceMavLink_a8ed8a6701876b63e5bb9135a9897d679}{Packet\+C\+R\+C\+Fail\+Event\+Handler}} Mav\+Link.\+Mavlink.\+Packet\+Failed\+C\+RC}
+
+
+
+Raised when a packet does not pass C\+RC 
+
+
+
+Definition at line 37 of file Mavlink.\+cs.
+
+\mbox{\Hypertarget{classMavLink_1_1Mavlink_ae5657dc889b9cbc7ce2c03d1cd5f7e73}\label{classMavLink_1_1Mavlink_ae5657dc889b9cbc7ce2c03d1cd5f7e73}} 
+\index{MavLink.Mavlink@{MavLink.Mavlink}!PacketReceived@{PacketReceived}}
+\index{PacketReceived@{PacketReceived}!MavLink.Mavlink@{MavLink.Mavlink}}
+\subsubsection{\texorpdfstring{PacketReceived}{PacketReceived}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceMavLink_a78c17c9f049257b0626c8d377735666d}{Packet\+Received\+Event\+Handler}} Mav\+Link.\+Mavlink.\+Packet\+Received}
+
+
+
+Event raised when a message is decoded successfully 
+
+
+
+Definition at line 22 of file Mavlink.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavlink/pymavlink/generator/\+C\+S/common/\mbox{\hyperlink{Mavlink_8cs}{Mavlink.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+\hypertarget{lstm__layer_8h}{}\section{/home/eric/catkin\+\_\+ws/src/darknet\+\_\+ros/darknet/src/lstm\+\_\+layer.h File Reference}
+\label{lstm__layer_8h}\index{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/lstm\_layer.h@{/home/eric/catkin\_ws/src/darknet\_ros/darknet/src/lstm\_layer.h}}
+{\ttfamily \#include \char`\"{}activations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}network.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lstm__layer_8h_a9eb27e94dddf5106a6eca773540242a9}{U\+S\+ET}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlayer}{layer}} \mbox{\hyperlink{lstm__layer_8h_a2e2ef73f1844febdde30fa9f8a85f775}{make\+\_\+lstm\+\_\+layer}} (int batch, int inputs, int outputs, int steps, int batch\+\_\+normalize, int adam)
+\item 
+void \mbox{\hyperlink{lstm__layer_8h_a160a04685a9be23cd14fce83b9cc5e04}{forward\+\_\+lstm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structnetwork}{network}} net)
+\item 
+void \mbox{\hyperlink{lstm__layer_8h_a989a440afc90df095509fb685e44d144}{update\+\_\+lstm\+\_\+layer}} (\mbox{\hyperlink{structlayer}{layer}} l, \mbox{\hyperlink{structupdate__args}{update\+\_\+args}} a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lstm__layer_8h_a9eb27e94dddf5106a6eca773540242a9}\label{lstm__layer_8h_a9eb27e94dddf5106a6eca773540242a9}} 
+\index{lstm\_layer.h@{lstm\_layer.h}!USET@{USET}}
+\index{USET@{USET}!lstm\_layer.h@{lstm\_layer.h}}
+\subsubsection{\texorpdfstring{USET}{USET}}
+{\footnotesize\ttfamily \#define U\+S\+ET}
+
+
+
+Definition at line 7 of file lstm\+\_\+layer.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lstm__layer_8h_a160a04685a9be23cd14fce83b9cc5e04}\label{lstm__layer_8h_a160a04685a9be23cd14fce83b9cc5e04}} 
+\index{lstm\_layer.h@{lstm\_layer.h}!forward\_lstm\_layer@{forward\_lstm\_layer}}
+\index{forward\_lstm\_layer@{forward\_lstm\_layer}!lstm\_layer.h@{lstm\_layer.h}}
+\subsubsection{\texorpdfstring{forward\_lstm\_layer()}{forward\_lstm\_layer()}}
+{\footnotesize\ttfamily void forward\+\_\+lstm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structnetwork}{network}}}]{net }\end{DoxyParamCaption})}
+
+
+
+Definition at line 156 of file lstm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{lstm__layer_8h_a2e2ef73f1844febdde30fa9f8a85f775}\label{lstm__layer_8h_a2e2ef73f1844febdde30fa9f8a85f775}} 
+\index{lstm\_layer.h@{lstm\_layer.h}!make\_lstm\_layer@{make\_lstm\_layer}}
+\index{make\_lstm\_layer@{make\_lstm\_layer}!lstm\_layer.h@{lstm\_layer.h}}
+\subsubsection{\texorpdfstring{make\_lstm\_layer()}{make\_lstm\_layer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlayer}{layer}} make\+\_\+lstm\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{batch,  }\item[{int}]{inputs,  }\item[{int}]{outputs,  }\item[{int}]{steps,  }\item[{int}]{batch\+\_\+normalize,  }\item[{int}]{adam }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file lstm\+\_\+layer.\+c.
+
+\mbox{\Hypertarget{lstm__layer_8h_a989a440afc90df095509fb685e44d144}\label{lstm__layer_8h_a989a440afc90df095509fb685e44d144}} 
+\index{lstm\_layer.h@{lstm\_layer.h}!update\_lstm\_layer@{update\_lstm\_layer}}
+\index{update\_lstm\_layer@{update\_lstm\_layer}!lstm\_layer.h@{lstm\_layer.h}}
+\subsubsection{\texorpdfstring{update\_lstm\_layer()}{update\_lstm\_layer()}}
+{\footnotesize\ttfamily void update\+\_\+lstm\+\_\+layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlayer}{layer}}}]{l,  }\item[{\mbox{\hyperlink{structupdate__args}{update\+\_\+args}}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 144 of file lstm\+\_\+layer.\+c.
+

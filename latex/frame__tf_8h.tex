@@ -1,0 +1,150 @@
+\hypertarget{frame__tf_8h}{}\section{/home/eric/catkin\+\_\+ws/src/mavros/mavros/include/mavros/frame\+\_\+tf.h File Reference}
+\label{frame__tf_8h}\index{/home/eric/catkin\_ws/src/mavros/mavros/include/mavros/frame\_tf.h@{/home/eric/catkin\_ws/src/mavros/mavros/include/mavros/frame\_tf.h}}
+
+
+Frame transformation utilities.  
+
+
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Eigen$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$ros/assert.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Imu.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Point.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Vector3.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Quaternion.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+With\+Covariance.\+h$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemavros}{mavros}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1ftf}{mavros\+::ftf}}
+\item 
+ \mbox{\hyperlink{namespacemavros_1_1ftf_1_1detail}{mavros\+::ftf\+::detail}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{group__nodelib_ga56776cc8f5410a6bfeafa085fcd6fe30}{mavros\+::ftf\+::\+Covariance3d}} = sensor\+\_\+msgs\+::\+Imu\+::\+\_\+angular\+\_\+velocity\+\_\+covariance\+\_\+type
+\begin{DoxyCompactList}\small\item\em Type matching rosmsg for 3x3 covariance matrix. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_gadc24a922dd3f6a7ff0d7aed9bda42bca}{mavros\+::ftf\+::\+Covariance6d}} = geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+::\+\_\+covariance\+\_\+type
+\begin{DoxyCompactList}\small\item\em Type matching rosmsg for 6x6 covariance matrix. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga6df3c37d3cd74b3e6919e734575bb9b7}{mavros\+::ftf\+::\+Covariance9d}} = boost\+::array$<$ double, 81 $>$
+\begin{DoxyCompactList}\small\item\em Type matching rosmsg for 9x9 covariance matrix. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_gabafbfa3aa489d1c304f320a417ce91d1}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance3d}} = Eigen\+::\+Map$<$ Eigen\+::\+Matrix$<$ double, 3, 3, Eigen\+::\+Row\+Major $>$ $>$
+\begin{DoxyCompactList}\small\item\em Eigen\+::\+Map for Covariance3d. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga05212907ea66649136fdbe0ecea29224}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance3d}} = Eigen\+::\+Map$<$ const Eigen\+::\+Matrix$<$ double, 3, 3, Eigen\+::\+Row\+Major $>$ $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga5d26d0ee661868a02a4fd476856757e3}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance6d}} = Eigen\+::\+Map$<$ Eigen\+::\+Matrix$<$ double, 6, 6, Eigen\+::\+Row\+Major $>$ $>$
+\begin{DoxyCompactList}\small\item\em Eigen\+::\+Map for Covariance6d. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga5e718b36aa6575dc90187729b5c96f4c}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance6d}} = Eigen\+::\+Map$<$ const Eigen\+::\+Matrix$<$ double, 6, 6, Eigen\+::\+Row\+Major $>$ $>$
+\item 
+using \mbox{\hyperlink{group__nodelib_ga69e67d58da05f220a6e938fdccdf5a07}{mavros\+::ftf\+::\+Eigen\+Map\+Covariance9d}} = Eigen\+::\+Map$<$ Eigen\+::\+Matrix$<$ double, 9, 9, Eigen\+::\+Row\+Major $>$ $>$
+\begin{DoxyCompactList}\small\item\em Eigen\+::\+Map for Covariance9d. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{group__nodelib_ga74be5c2cc6a60a7c17ab1286a1106643}{mavros\+::ftf\+::\+Eigen\+Map\+Const\+Covariance9d}} = Eigen\+::\+Map$<$ const Eigen\+::\+Matrix$<$ double, 9, 9, Eigen\+::\+Row\+Major $>$ $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__nodelib_gacff0983128574bbbe115917b13e57a63}{mavros\+::ftf\+::\+Static\+TF}} \{ \newline
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63a54ebbdd04042b8ac08b760aedb956d2c}{mavros\+::ftf\+::\+Static\+T\+F\+::\+N\+E\+D\+\_\+\+T\+O\+\_\+\+E\+NU}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ae769945757a52e40e0bdeffb65ef82c5}{mavros\+::ftf\+::\+Static\+T\+F\+::\+E\+N\+U\+\_\+\+T\+O\+\_\+\+N\+ED}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ab9e9881bc4e56047c35acaf00ba7a06a}{mavros\+::ftf\+::\+Static\+T\+F\+::\+A\+I\+R\+C\+R\+A\+F\+T\+\_\+\+T\+O\+\_\+\+B\+A\+S\+E\+L\+I\+NK}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ad6c3de7e2c38d9686e41a621ccfcfa86}{mavros\+::ftf\+::\+Static\+T\+F\+::\+B\+A\+S\+E\+L\+I\+N\+K\+\_\+\+T\+O\+\_\+\+A\+I\+R\+C\+R\+A\+FT}}, 
+\newline
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63ac0ec6eeec303cc411db7d439dbde623c}{mavros\+::ftf\+::\+Static\+T\+F\+::\+E\+C\+E\+F\+\_\+\+T\+O\+\_\+\+E\+NU}}, 
+\mbox{\hyperlink{group__nodelib_ggacff0983128574bbbe115917b13e57a63a50787c17df83b45631e5bcd831ae1ee8}{mavros\+::ftf\+::\+Static\+T\+F\+::\+E\+N\+U\+\_\+\+T\+O\+\_\+\+E\+C\+EF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Orientation transform options when applying rotations to data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_gaf97e6d622ff4f400e54ebcdae75407ef}{mavros\+::ftf\+::detail\+::transform\+\_\+orientation}} (const Eigen\+::\+Quaterniond \&q, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform representation of attitude from 1 frame to another (e.\+g. transfrom attitude from representing from base\+\_\+link -\/$>$ N\+ED to representing base\+\_\+link -\/$>$ E\+NU) \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga30dfcfe08b7c490b12664624277d2fe6}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame. \end{DoxyCompactList}\item 
+Covariance3d \mbox{\hyperlink{group__nodelib_ga767c8e2dd868f4d8bbd78c38662a17bb}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Covariance3d \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 3x3 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance6d \mbox{\hyperlink{group__nodelib_ga266710bc46b4a6e376a609c4486d39cb}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Covariance6d \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 6x6 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance9d \mbox{\hyperlink{group__nodelib_ga885808031ecb3f68701172b0e33f37cd}{mavros\+::ftf\+::detail\+::transform\+\_\+frame}} (const Covariance9d \&cov, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform 9x9 convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga93f1ca2f4ebdb2423f81d88b4fa77c62}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame. \end{DoxyCompactList}\item 
+Covariance3d \mbox{\hyperlink{group__nodelib_ga3a1e55d923c06a8914f7fe570dd42c9b}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Covariance3d \&cov, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform 3d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance6d \mbox{\hyperlink{group__nodelib_gaab4caf957e54695a814cedf5fc45aeb1}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Covariance6d \&cov, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform 6d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Covariance9d \mbox{\hyperlink{group__nodelib_gacfea1c0d9ca98b288f6b8f2d17bc4fc0}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Covariance9d \&cov, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform 9d convariance expressed in one frame to another. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga3907cb8493e1b0c7ae33dbc1e8185a88}{mavros\+::ftf\+::detail\+::transform\+\_\+static\+\_\+frame}} (const Eigen\+::\+Vector3d \&vec, const Eigen\+::\+Vector3d \&map\+\_\+origin, const Static\+TF transform)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in one frame to another frame with additional map origin parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga3c14c70db9b58d2aef2d9f84395bb876}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+ned\+\_\+enu}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT N\+ED frame to attitude represented W\+RT E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga60f73ab88fd56337bf2572fe696d1d04}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+enu\+\_\+ned}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT E\+NU frame to attitude represented W\+RT N\+ED frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga01f847ac9369bb566b8f671ce7a9ec7c}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+aircraft\+\_\+baselink}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT aircraft frame to attitude represented W\+RT base\+\_\+link frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga52af05306da40938392b1536064458af}{mavros\+::ftf\+::transform\+\_\+orientation\+\_\+baselink\+\_\+aircraft}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform from attitude represented W\+RT baselink frame to attitude represented W\+RT body frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga190188b4899aab8fde4d65de949535c9}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+ned\+\_\+enu}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in N\+ED to E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga789377f76104cb6f7665ad368dbba1c9}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+ned}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU to N\+ED frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_gad724ac71858730a830ae77b9dd480aaf}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+baselink}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in Aircraft frame to Baselink frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga8e8a38a1f75dd0007204a206a6745193}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+baselink\+\_\+aircraft}} (const T \&in)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in Baselink frame to Aircraft frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_gaa1d1407cbddfd1481e147680e92acab8}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+ecef\+\_\+enu}} (const T \&in, const T \&map\+\_\+origin)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+C\+EF frame to E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga8f46c9063053398c558624755757f1e2}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+ecef}} (const T \&in, const T \&map\+\_\+origin)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU frame to E\+C\+EF frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_gaabef5de6c7b391794c35c75dd1232194}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+ned}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in aircraft frame to N\+ED frame. Assumes quaternion represents rotation from aircraft frame to N\+ED frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga916fb57c10ef6a7109585245f512d4b2}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+ned\+\_\+aircraft}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in N\+ED to aircraft frame. Assumes quaternion represents rotation from N\+ED to aircraft frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga501a41c3a2de7186f4ed602a0399a75b}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+aircraft\+\_\+enu}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in aircraft frame to E\+NU frame. Assumes quaternion represents rotation from aircraft frame to E\+NU frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga669df732714ea8b69f228efba9f05dbb}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+aircraft}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU to aircraft frame. Assumes quaternion represents rotation from E\+NU to aircraft frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga2f2546cf431334a76e19fdd3800f286d}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+enu\+\_\+baselink}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in E\+NU to base\+\_\+link frame. Assumes quaternion represents rotation from E\+NU to base\+\_\+link frame. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{group__nodelib_ga59326acc337daa1ce44d56ee6acff76b}{mavros\+::ftf\+::transform\+\_\+frame\+\_\+baselink\+\_\+enu}} (const T \&in, const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Transform data expressed in baselink to E\+NU frame. Assumes quaternion represents rotation from basel\+\_\+link to E\+NU frame. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_ga1f1d174745db801a82766fa0839b17e1}{mavros\+::ftf\+::quaternion\+\_\+from\+\_\+rpy}} (const Eigen\+::\+Vector3d \&rpy)
+\begin{DoxyCompactList}\small\item\em Convert euler angles to quaternion. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_ga97ccf75c02bae67e6fa6fd98b804d735}{mavros\+::ftf\+::quaternion\+\_\+from\+\_\+rpy}} (const double roll, const double pitch, const double yaw)
+\begin{DoxyCompactList}\small\item\em Convert euler angles to quaternion. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga75c2e15dab0c54198e7f1e620744fb80}{mavros\+::ftf\+::quaternion\+\_\+to\+\_\+rpy}} (const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Convert quaternion to euler angles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gad1544765df8671798047de7800adb1b3}{mavros\+::ftf\+::quaternion\+\_\+to\+\_\+rpy}} (const Eigen\+::\+Quaterniond \&q, double \&roll, double \&pitch, double \&yaw)
+\begin{DoxyCompactList}\small\item\em Convert quaternion to euler angles. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group__nodelib_ga6649411f7b10eb37f33afb1d3d67dfea}{mavros\+::ftf\+::quaternion\+\_\+get\+\_\+yaw}} (const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em Get Yaw angle from quaternion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__nodelib_gac76089b997c4e184d99bec74603a35ad}{mavros\+::ftf\+::quaternion\+\_\+to\+\_\+mavlink}} (const Eigen\+::\+Quaterniond \&q, std\+::array$<$ float, 4 $>$ \&qmsg)
+\begin{DoxyCompactList}\small\item\em Store Quaternion to M\+A\+V\+Link float\mbox{[}4\mbox{]} format. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_ga0f57da8dc483d45ac139607498cb5de4}{mavros\+::ftf\+::mavlink\+\_\+to\+\_\+quaternion}} (const std\+::array$<$ float, 4 $>$ \&q)
+\begin{DoxyCompactList}\small\item\em Convert Mavlink float\mbox{[}4\mbox{]} quaternion to Eigen. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , std\+::size\+\_\+t S\+I\+ZE$>$ }\\void \mbox{\hyperlink{group__nodelib_ga8fc39ebb720c494bf3aad9d0ccdc8c60}{mavros\+::ftf\+::covariance\+\_\+to\+\_\+mavlink}} (const T \&cov, std\+::array$<$ float, S\+I\+ZE $>$ \&covmsg)
+\begin{DoxyCompactList}\small\item\em Convert covariance matrix to M\+A\+V\+Link float\mbox{[}n\mbox{]} format. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , std\+::size\+\_\+t A\+R\+R\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{group__nodelib_ga70fe3c62c321522cd8786aa9ca163e2b}{mavros\+::ftf\+::covariance\+\_\+urt\+\_\+to\+\_\+mavlink}} (const T \&covmap, std\+::array$<$ float, A\+R\+R\+\_\+\+S\+I\+ZE $>$ \&covmsg)
+\begin{DoxyCompactList}\small\item\em Convert upper right triangular of a covariance matrix to M\+A\+V\+Link float\mbox{[}n\mbox{]} format. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_ga2bd453f7d2dafb3814b5312e788e2e35}{mavros\+::ftf\+::to\+\_\+eigen}} (const geometry\+\_\+msgs\+::\+Point r)
+\begin{DoxyCompactList}\small\item\em Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Point to Eigen\+::\+Vector3d. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{group__nodelib_gaa967b677c7a130cb95621988a4987fab}{mavros\+::ftf\+::to\+\_\+eigen}} (const geometry\+\_\+msgs\+::\+Vector3 r)
+\begin{DoxyCompactList}\small\item\em Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Vector3 to Eigen\+::\+Vector3d. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \mbox{\hyperlink{group__nodelib_gab3357177e153e9bc233d96ac595c6a5f}{mavros\+::ftf\+::to\+\_\+eigen}} (const geometry\+\_\+msgs\+::\+Quaternion r)
+\begin{DoxyCompactList}\small\item\em Helper to convert common R\+OS geometry\+\_\+msgs\+::\+Quaternion to Eigen\+::\+Quaterniond. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Frame transformation utilities. 
+
+\begin{DoxyAuthor}{Author}
+Vladimir Ermakov \href{mailto:vooon341@gmail.com}{\texttt{ vooon341@gmail.\+com}} 
+
+Eddy Scott \href{mailto:scott.edward@aurora.aero}{\texttt{ scott.\+edward@aurora.\+aero}} 
+
+Nuno Marques \href{mailto:n.marques21@hotmail.com}{\texttt{ n.\+marques21@hotmail.\+com}} 
+\end{DoxyAuthor}

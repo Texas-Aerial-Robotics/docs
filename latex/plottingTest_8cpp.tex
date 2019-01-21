@@ -1,0 +1,94 @@
+\hypertarget{plottingTest_8cpp}{}\section{/home/eric/catkin\+\_\+ws/src/\+Strat\+Node/src/plotting\+Test.cpp File Reference}
+\label{plottingTest_8cpp}\index{/home/eric/catkin\_ws/src/StratNode/src/plottingTest.cpp@{/home/eric/catkin\_ws/src/StratNode/src/plottingTest.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Poses.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transformations\+\_\+ros/roomba\+Pose.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}matplotlibcpp.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{plottingTest_8cpp_a378a9ba3a0eab533a255fedbcc1536d8}{chatter\+Callback}} (const transformations\+\_\+ros\+::roomba\+Poses\+::\+Const\+Ptr \&\mbox{\hyperlink{stratnode_8cpp_a82cfe4ed9bc9e1b07c8bf209c324d85b}{msg}})
+\item 
+int \mbox{\hyperlink{plottingTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}{x}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}{y}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{plottingTest_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}{waypoint}}
+\item 
+transformations\+\_\+ros\+::roomba\+Poses \mbox{\hyperlink{plottingTest_8cpp_ac0874ef8b36e5e415a5fdb850ff472f6}{roomba\+Positions}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{plottingTest_8cpp_a378a9ba3a0eab533a255fedbcc1536d8}\label{plottingTest_8cpp_a378a9ba3a0eab533a255fedbcc1536d8}} 
+\index{plottingTest.cpp@{plottingTest.cpp}!chatterCallback@{chatterCallback}}
+\index{chatterCallback@{chatterCallback}!plottingTest.cpp@{plottingTest.cpp}}
+\subsubsection{\texorpdfstring{chatterCallback()}{chatterCallback()}}
+{\footnotesize\ttfamily void chatter\+Callback (\begin{DoxyParamCaption}\item[{const transformations\+\_\+ros\+::roomba\+Poses\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file plotting\+Test.\+cpp.
+
+\mbox{\Hypertarget{plottingTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{plottingTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{plottingTest.cpp@{plottingTest.cpp}!main@{main}}
+\index{main@{main}!plottingTest.cpp@{plottingTest.cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file plotting\+Test.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{plottingTest_8cpp_ac0874ef8b36e5e415a5fdb850ff472f6}\label{plottingTest_8cpp_ac0874ef8b36e5e415a5fdb850ff472f6}} 
+\index{plottingTest.cpp@{plottingTest.cpp}!roombaPositions@{roombaPositions}}
+\index{roombaPositions@{roombaPositions}!plottingTest.cpp@{plottingTest.cpp}}
+\subsubsection{\texorpdfstring{roombaPositions}{roombaPositions}}
+{\footnotesize\ttfamily transformations\+\_\+ros\+::roomba\+Poses roomba\+Positions}
+
+
+
+Definition at line 14 of file plotting\+Test.\+cpp.
+
+\mbox{\Hypertarget{plottingTest_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}\label{plottingTest_8cpp_aa4390e7b823c95c4e2bebd1506fc2159}} 
+\index{plottingTest.cpp@{plottingTest.cpp}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!plottingTest.cpp@{plottingTest.cpp}}
+\subsubsection{\texorpdfstring{waypoint}{waypoint}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped waypoint}
+
+
+
+Definition at line 13 of file plotting\+Test.\+cpp.
+
+\mbox{\Hypertarget{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}\label{plottingTest_8cpp_aa0155849a1850c1edcfe7bce685b08f1}} 
+\index{plottingTest.cpp@{plottingTest.cpp}!x@{x}}
+\index{x@{x}!plottingTest.cpp@{plottingTest.cpp}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ x}
+
+
+
+Definition at line 11 of file plotting\+Test.\+cpp.
+
+\mbox{\Hypertarget{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}\label{plottingTest_8cpp_a64d0474b77956c0e971da1b6cb1ddacd}} 
+\index{plottingTest.cpp@{plottingTest.cpp}!y@{y}}
+\index{y@{y}!plottingTest.cpp@{plottingTest.cpp}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ y}
+
+
+
+Definition at line 11 of file plotting\+Test.\+cpp.
+

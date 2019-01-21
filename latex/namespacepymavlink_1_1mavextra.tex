@@ -1,0 +1,1315 @@
+\hypertarget{namespacepymavlink_1_1mavextra}{}\section{pymavlink.\+mavextra Namespace Reference}
+\label{namespacepymavlink_1_1mavextra}\index{pymavlink.mavextra@{pymavlink.mavextra}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1mavextra_1_1DCM__State}{D\+C\+M\+\_\+\+State}}
+\item 
+class \mbox{\hyperlink{classpymavlink_1_1mavextra_1_1PX4__State}{P\+X4\+\_\+\+State}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a763fb9e3242f5ec9ec1fec177c4e50ae}{kmh}} (mps)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_abb4bb839562172e4585d794e68856b14}{altitude}} (S\+C\+A\+L\+E\+D\+\_\+\+P\+R\+E\+S\+S\+U\+RE, ground\+\_\+pressure=None, ground\+\_\+temp=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_af5dcda30d85d910c246199de4189750f}{altitude2}} (S\+C\+A\+L\+E\+D\+\_\+\+P\+R\+E\+S\+S\+U\+RE, ground\+\_\+pressure=None, ground\+\_\+temp=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aa27cdc29ee82e3515eace9a8a98c331b}{mag\+\_\+heading}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, declination=None, S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS=None, ofs=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aed3e1ad61d9f219e180e9e3ac94764fe}{mag\+\_\+heading\+\_\+motors}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, declination, S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS, ofs, S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW, motor\+\_\+ofs)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ae2c6b9c7ca47d69bc730cfc544c41b62}{mag\+\_\+field}} (R\+A\+W\+\_\+\+I\+MU, S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS=None, ofs=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a4bdc6d85f92efa62d773a8609aabaa32}{mag\+\_\+field\+\_\+df}} (M\+AG, ofs=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a5c02a6aebf8c43eef46c2aad3b75623a}{get\+\_\+motor\+\_\+offsets}} (S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW, ofs, motor\+\_\+ofs)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_afd8e63b1dd36777b854b99782f284831}{mag\+\_\+field\+\_\+motors}} (R\+A\+W\+\_\+\+I\+MU, S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS, ofs, S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW, motor\+\_\+ofs)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a4c518cade632dd29062b09b919c4f9e1}{angle\+\_\+diff}} (angle1, angle2)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a3953775074e771143256576a19fab8d3}{average}} (var, key, N)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aaee8500fc795534b56fc2ba040dafb4d}{second\+\_\+derivative\+\_\+5}} (var, key)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a47da2a88a30ba6ca85072ffa2eabd255}{second\+\_\+derivative\+\_\+9}} (var, key)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ae160af64a51d6e6c620fc12450857585}{lowpass}} (var, key, factor)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ab3215121238bdf76cb714ad349d6a17b}{diff}} (var, key)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a551bb6b34664f22c30ff4eb6342bfd64}{delta}} (var, key, tusec=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a96f32826ccd7a2296e5bb5664d77a9ce}{delta\+\_\+angle}} (var, key, tusec=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a1a001cccb29771aea954d733377c92f9}{roll\+\_\+estimate}} (R\+A\+W\+\_\+\+I\+MU, G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT=None, A\+T\+T\+I\+T\+U\+DE=None, S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS=None, ofs=None, mul=None, \mbox{\hyperlink{nightmare_8c_acd159186e193428cba70578a92bafed2}{smooth}}=0.\+7)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a571222d19bb4574669698dcb01912fb7}{pitch\+\_\+estimate}} (R\+A\+W\+\_\+\+I\+MU, G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT=None, A\+T\+T\+I\+T\+U\+DE=None, S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS=None, ofs=None, mul=None, \mbox{\hyperlink{nightmare_8c_acd159186e193428cba70578a92bafed2}{smooth}}=0.\+7)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a28d2ae204e94f85443cb66a3f4231d80}{rotation}} (A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a55bf2db7a98272c74d86e6e721afddb1}{mag\+\_\+rotation}} (R\+A\+W\+\_\+\+I\+MU, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aa2959db40d0a944e4b7f46e3128df872}{mag\+\_\+yaw}} (R\+A\+W\+\_\+\+I\+MU, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a34628d19d224246f6da064562dc71b85}{mag\+\_\+pitch}} (R\+A\+W\+\_\+\+I\+MU, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ae68ad6b7e203ece0fbb43d292c9e4c31}{mag\+\_\+roll}} (R\+A\+W\+\_\+\+I\+MU, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ad27113b5ac550f5a63766348b74641eb}{expected\+\_\+mag}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aaae8d1963031a79098cf818d480e0756}{mag\+\_\+discrepancy}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, inclination, declination=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a38cfb9a7f119e04fd6abee84eaca3adc}{mag\+\_\+inclination}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, declination=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aebb19fbb4880427930fb3c19ec91b01d}{expected\+\_\+magx}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a961c101c8246849d791424520b2439e7}{expected\+\_\+magy}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a9c3e49062cce7a6cf181d0ed8a0e0692}{expected\+\_\+magz}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE, inclination, declination)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a762c44817d971674ece6d3c0cd90eedd}{gravity}} (R\+A\+W\+\_\+\+I\+MU, S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS=None, ofs=None, mul=None, \mbox{\hyperlink{nightmare_8c_acd159186e193428cba70578a92bafed2}{smooth}}=0.\+7)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a600c961891b95309d492b08f957d1bf4}{pitch\+\_\+sim}} (S\+I\+M\+S\+T\+A\+TE, G\+P\+S\+\_\+\+R\+AW)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a3bab8b877b7cecdc6fbece56106fd74a}{distance\+\_\+two}} (G\+P\+S\+\_\+\+R\+A\+W1, G\+P\+S\+\_\+\+R\+A\+W2, horizontal=True)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a263fad301c730511059b3c9bb58248d8}{distance\+\_\+home}} (G\+P\+S\+\_\+\+R\+AW)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a4a70f6c6e6d7fa829901749b7e3d5546}{sawtooth}} (A\+T\+T\+I\+T\+U\+DE, amplitude=2.\+0, period=5.\+0)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a4d7617fb1541d638db0023fd663c59fd}{rate\+\_\+of\+\_\+turn}} (\mbox{\hyperlink{darknet_8c_a4c45f1bb571fe1f3c52c4f7b7d858f8d}{speed}}, bank)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_abe7eb91429847abe6333b64f2fa5b39e}{wingloading}} (bank)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a769a373b481f0c8aa24565a18f141e66}{airspeed}} (V\+F\+R\+\_\+\+H\+UD, ratio=None, used\+\_\+ratio=None, offset=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a7d43fc6d74cca81b49d9528bfbe97193}{E\+A\+S2\+T\+AS}} (A\+R\+SP, G\+PS, B\+A\+RO, ground\+\_\+temp=25)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a9bc2701bc2b4da0a2e4ee303c7cecf65}{airspeed\+\_\+ratio}} (V\+F\+R\+\_\+\+H\+UD)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a7e374b6fd195ee7b8efbffb17cbf84b7}{airspeed\+\_\+voltage}} (V\+F\+R\+\_\+\+H\+UD, ratio=None)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ada9a5936b18dd8a99085b06b9b687573}{earth\+\_\+rates}} (A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ad1a6d8f7d2affd450da8c9a6a3d36e05}{roll\+\_\+rate}} (A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aee61cc54c7330f81c44bc7d477e18f3a}{pitch\+\_\+rate}} (A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_af1b42c28fc778624954bc9bb5307fcf6}{yaw\+\_\+rate}} (A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a42f6635bebc5b76277d38e5dcbdd8c4f}{gps\+\_\+velocity}} (G\+L\+O\+B\+A\+L\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+I\+NT)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aee56305fd91e4db7b5b0a35725659c1c}{gps\+\_\+velocity\+\_\+old}} (G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aee6ba92874105e32ba57d9449475661d}{gps\+\_\+velocity\+\_\+body}} (G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT, A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a3c2fd630569590cbbdb6fc602eb242b4}{earth\+\_\+accel}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ad31722417bd0b051505d2a9f7e70183a}{earth\+\_\+gyro}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ac195697770b7a0067e109293778a73e1}{airspeed\+\_\+energy\+\_\+error}} (N\+A\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+O\+U\+T\+P\+UT, V\+F\+R\+\_\+\+H\+UD)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a5b8fa5473a3b0961f0a53ab1edd02dc1}{energy\+\_\+error}} (N\+A\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+O\+U\+T\+P\+UT, V\+F\+R\+\_\+\+H\+UD)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a2cf4432c48b582f8471874e3ae33de17}{rover\+\_\+turn\+\_\+circle}} (S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a06610d38e6694c31c2fdbaafd57eae54}{rover\+\_\+yaw\+\_\+rate}} (V\+F\+R\+\_\+\+H\+UD, S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a55bf23fb8b11c2e546dddb4eab80eae0}{rover\+\_\+lat\+\_\+accel}} (V\+F\+R\+\_\+\+H\+UD, S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_adf962a14bd3df2e4c752b3ac3c016674}{demix1}} (servo1, servo2, gain=0.\+5)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_acb35268957b8dd904a70309763ab2c95}{demix2}} (servo1, servo2, gain=0.\+5)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ae33f40df072016fd86d881d715a57f91}{mixer}} (servo1, servo2, mixtype=1, gain=0.\+5)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ae2ac3b544989ec220c6ef351e7ef5204}{mix1}} (servo1, servo2, mixtype=1, gain=0.\+5)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a9917a9cc993bdb7a607478dbb089111d}{mix2}} (servo1, servo2, mixtype=1, gain=0.\+5)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a85414a40febdc276343f85e8ee63d3b4}{wrap\+\_\+180}} (angle)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ace15c40f51a7caffd4a6364bb0afea52}{wrap\+\_\+360}} (angle)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a602868624e22e520d6376334c46aed97}{D\+C\+M\+\_\+update}} (\mbox{\hyperlink{side__camera__transform_8cpp_af4c1686b93c23e8b4b698c82c66845f4}{I\+MU}}, A\+TT, M\+AG, G\+PS)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a80093b7c26c5a448b247049fa10a203d}{P\+X4\+\_\+update}} (\mbox{\hyperlink{side__camera__transform_8cpp_af4c1686b93c23e8b4b698c82c66845f4}{I\+MU}}, A\+TT)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a6430a3ecdcd4b86e25851749bb4069b0}{downsample}} (N)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a00f2c88d67afcae53f725e0d8105adb1}{armed}} (H\+E\+A\+R\+T\+B\+E\+AT)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a8d3483c735e242ad8bb46001dae2284a}{rotation\+\_\+df}} (A\+TT)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_abaf31a27857e3a949ad5166c35d11773}{rotation2}} (A\+H\+R\+S2)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a2e8ffaaf018bdd21bcc0dac891e88407}{earth\+\_\+accel2}} (R\+A\+W\+\_\+\+I\+MU, A\+T\+T\+I\+T\+U\+DE)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a51880208595cc665f7dd2af3e44390f2}{earth\+\_\+accel\+\_\+df}} (\mbox{\hyperlink{side__camera__transform_8cpp_af4c1686b93c23e8b4b698c82c66845f4}{I\+MU}}, A\+TT)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a40df15a3e1e1a67b2bb53a0b73d48d63}{earth\+\_\+accel2\+\_\+df}} (\mbox{\hyperlink{side__camera__transform_8cpp_af4c1686b93c23e8b4b698c82c66845f4}{I\+MU}}, I\+M\+U2, A\+TT)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a283e68b9dcd503bfedb6431c4815660c}{gps\+\_\+velocity\+\_\+df}} (G\+PS)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a4967f5a9f9d809005b0c7ec3ee25415c}{distance\+\_\+gps2}} (G\+PS, G\+P\+S2)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ab34a549c8b911b6455f2d641af495192}{wrap\+\_\+valid\+\_\+longitude}} (lon)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_addedb30f8a88b98176fe226bfed8aaad}{gps\+\_\+newpos}} (lat, lon, bearing, distance)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ac5d6283932b9abee57818ce1c5a8b2c2}{gps\+\_\+offset}} (lat, lon, east, north)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a0982fb72ae1fd1006e089debf6b98440}{ekf1\+\_\+pos}} (E\+K\+F1)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a60cc24d55dd20230db0faa61038e6cf7}{quat\+\_\+to\+\_\+euler}} (q)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_afe052544879bef855464ba48b3fe55f6}{euler\+\_\+to\+\_\+quat}} (e)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a44f4f12a741cc819b9197e09e78b4e78}{rotate\+\_\+quat}} (attitude, roll, pitch, yaw)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_af6a04d0089b64397af521e72dfa6f82f}{qroll}} (M\+SG)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_abdee678a41670fcef22b100ca3ce611d}{qpitch}} (M\+SG)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a77216052108c7a04c334dfcb3cb24107}{qyaw}} (M\+SG)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a93e763e24f8b66e8051ec933eceaf449}{euler\+\_\+rotated}} (M\+SG, roll, pitch, yaw)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_ae817df92c23b96ec6e16093c368e729b}{euler\+\_\+p90}} (M\+SG)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_aaf860983d6c5bb5c19ddc01a98d542dd}{qroll\+\_\+p90}} (M\+SG)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a260bdd8eafc90dc550972d28ba227c1a}{qpitch\+\_\+p90}} (M\+SG)
+\item 
+def \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a7c38a6a073239c53cd485cdac0df5aad}{qyaw\+\_\+p90}} (M\+SG)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a76fcc483634240cbd986407ea04000e3}{average\+\_\+data}} = \{\}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a3254820968ce29e97fb197680e5df9bc}{derivative\+\_\+data}} = \{\}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a2c90308cee880c46b9082f786cba6adb}{lowpass\+\_\+data}} = \{\}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a53b67713abd456bc6ced90ccf8603937}{last\+\_\+diff}} = \{\}
+\item 
+dictionary \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a50e8a351722d68416745064f2c9927fb}{last\+\_\+delta}} = \{\}
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1mavextra_adf8ad01a6deb47c3593112e41af683d5}{first\+\_\+fix}} = None
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1mavextra_af3b8d2455323dd429c14e6fa95e10e12}{dcm\+\_\+state}} = None
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1mavextra_adf55d806751f41104a7c778b38c2d7e6}{px4\+\_\+state}} = None
+\item 
+float \mbox{\hyperlink{namespacepymavlink_1_1mavextra_a0d623e5b8a6a2ee5f295e0d5c14fd01b}{radius\+\_\+of\+\_\+earth}} = 6378100.\+0
+\item 
+\mbox{\hyperlink{namespacepymavlink_1_1mavextra_a80175ecaee74959808255a74533fdbb5}{ekf\+\_\+home}} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}useful extra functions for use by mavlink clients
+
+Copyright Andrew Tridgell 2011
+Released under GNU GPL version 3 or later
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a769a373b481f0c8aa24565a18f141e66}\label{namespacepymavlink_1_1mavextra_a769a373b481f0c8aa24565a18f141e66}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!airspeed@{airspeed}}
+\index{airspeed@{airspeed}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{airspeed()}{airspeed()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+airspeed (\begin{DoxyParamCaption}\item[{}]{V\+F\+R\+\_\+\+H\+UD,  }\item[{}]{ratio = {\ttfamily None},  }\item[{}]{used\+\_\+ratio = {\ttfamily None},  }\item[{}]{offset = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}recompute airspeed with a different ARSPD_RATIO\end{DoxyVerb}
+ 
+
+Definition at line 533 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ac195697770b7a0067e109293778a73e1}\label{namespacepymavlink_1_1mavextra_ac195697770b7a0067e109293778a73e1}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!airspeed\_energy\_error@{airspeed\_energy\_error}}
+\index{airspeed\_energy\_error@{airspeed\_energy\_error}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{airspeed\_energy\_error()}{airspeed\_energy\_error()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+airspeed\+\_\+energy\+\_\+error (\begin{DoxyParamCaption}\item[{}]{N\+A\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+O\+U\+T\+P\+UT,  }\item[{}]{V\+F\+R\+\_\+\+H\+UD }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return airspeed energy error matching APM internals
+This is positive when we are going too slow
+\end{DoxyVerb}
+ 
+
+Definition at line 655 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a9bc2701bc2b4da0a2e4ee303c7cecf65}\label{namespacepymavlink_1_1mavextra_a9bc2701bc2b4da0a2e4ee303c7cecf65}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!airspeed\_ratio@{airspeed\_ratio}}
+\index{airspeed\_ratio@{airspeed\_ratio}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{airspeed\_ratio()}{airspeed\_ratio()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+airspeed\+\_\+ratio (\begin{DoxyParamCaption}\item[{}]{V\+F\+R\+\_\+\+H\+UD }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}recompute airspeed with a different ARSPD_RATIO\end{DoxyVerb}
+ 
+
+Definition at line 563 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a7e374b6fd195ee7b8efbffb17cbf84b7}\label{namespacepymavlink_1_1mavextra_a7e374b6fd195ee7b8efbffb17cbf84b7}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!airspeed\_voltage@{airspeed\_voltage}}
+\index{airspeed\_voltage@{airspeed\_voltage}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{airspeed\_voltage()}{airspeed\_voltage()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+airspeed\+\_\+voltage (\begin{DoxyParamCaption}\item[{}]{V\+F\+R\+\_\+\+H\+UD,  }\item[{}]{ratio = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}back-calculate the voltage the airspeed sensor must have seen\end{DoxyVerb}
+ 
+
+Definition at line 571 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_abb4bb839562172e4585d794e68856b14}\label{namespacepymavlink_1_1mavextra_abb4bb839562172e4585d794e68856b14}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!altitude@{altitude}}
+\index{altitude@{altitude}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{altitude()}{altitude()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+altitude (\begin{DoxyParamCaption}\item[{}]{S\+C\+A\+L\+E\+D\+\_\+\+P\+R\+E\+S\+S\+U\+RE,  }\item[{}]{ground\+\_\+pressure = {\ttfamily None},  }\item[{}]{ground\+\_\+temp = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate barometric altitude\end{DoxyVerb}
+ 
+
+Definition at line 31 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_af5dcda30d85d910c246199de4189750f}\label{namespacepymavlink_1_1mavextra_af5dcda30d85d910c246199de4189750f}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!altitude2@{altitude2}}
+\index{altitude2@{altitude2}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{altitude2()}{altitude2()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+altitude2 (\begin{DoxyParamCaption}\item[{}]{S\+C\+A\+L\+E\+D\+\_\+\+P\+R\+E\+S\+S\+U\+RE,  }\item[{}]{ground\+\_\+pressure = {\ttfamily None},  }\item[{}]{ground\+\_\+temp = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate barometric altitude\end{DoxyVerb}
+ 
+
+Definition at line 45 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a4c518cade632dd29062b09b919c4f9e1}\label{namespacepymavlink_1_1mavextra_a4c518cade632dd29062b09b919c4f9e1}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!angle\_diff@{angle\_diff}}
+\index{angle\_diff@{angle\_diff}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{angle\_diff()}{angle\_diff()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+angle\+\_\+diff (\begin{DoxyParamCaption}\item[{}]{angle1,  }\item[{}]{angle2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}show the difference between two angles in degrees\end{DoxyVerb}
+ 
+
+Definition at line 161 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a00f2c88d67afcae53f725e0d8105adb1}\label{namespacepymavlink_1_1mavextra_a00f2c88d67afcae53f725e0d8105adb1}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!armed@{armed}}
+\index{armed@{armed}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{armed()}{armed()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+armed (\begin{DoxyParamCaption}\item[{}]{H\+E\+A\+R\+T\+B\+E\+AT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return 1 if armed, 0 if not\end{DoxyVerb}
+ 
+
+Definition at line 873 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a3953775074e771143256576a19fab8d3}\label{namespacepymavlink_1_1mavextra_a3953775074e771143256576a19fab8d3}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!average@{average}}
+\index{average@{average}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+average (\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{key,  }\item[{}]{N }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}average over N points\end{DoxyVerb}
+ 
+
+Definition at line 172 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a602868624e22e520d6376334c46aed97}\label{namespacepymavlink_1_1mavextra_a602868624e22e520d6376334c46aed97}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!DCM\_update@{DCM\_update}}
+\index{DCM\_update@{DCM\_update}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{DCM\_update()}{DCM\_update()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+D\+C\+M\+\_\+update (\begin{DoxyParamCaption}\item[{}]{I\+MU,  }\item[{}]{A\+TT,  }\item[{}]{M\+AG,  }\item[{}]{G\+PS }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}implement full DCM system\end{DoxyVerb}
+ 
+
+Definition at line 819 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a551bb6b34664f22c30ff4eb6342bfd64}\label{namespacepymavlink_1_1mavextra_a551bb6b34664f22c30ff4eb6342bfd64}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!delta@{delta}}
+\index{delta@{delta}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{delta()}{delta()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+delta (\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{key,  }\item[{}]{tusec = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate slope\end{DoxyVerb}
+ 
+
+Definition at line 249 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a96f32826ccd7a2296e5bb5664d77a9ce}\label{namespacepymavlink_1_1mavextra_a96f32826ccd7a2296e5bb5664d77a9ce}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!delta\_angle@{delta\_angle}}
+\index{delta\_angle@{delta\_angle}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{delta\_angle()}{delta\_angle()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+delta\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{key,  }\item[{}]{tusec = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate slope of an angle\end{DoxyVerb}
+ 
+
+Definition at line 269 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_adf962a14bd3df2e4c752b3ac3c016674}\label{namespacepymavlink_1_1mavextra_adf962a14bd3df2e4c752b3ac3c016674}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!demix1@{demix1}}
+\index{demix1@{demix1}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{demix1()}{demix1()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+demix1 (\begin{DoxyParamCaption}\item[{}]{servo1,  }\item[{}]{servo2,  }\item[{}]{gain = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}de-mix a mixed servo output\end{DoxyVerb}
+ 
+
+Definition at line 709 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_acb35268957b8dd904a70309763ab2c95}\label{namespacepymavlink_1_1mavextra_acb35268957b8dd904a70309763ab2c95}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!demix2@{demix2}}
+\index{demix2@{demix2}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{demix2()}{demix2()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+demix2 (\begin{DoxyParamCaption}\item[{}]{servo1,  }\item[{}]{servo2,  }\item[{}]{gain = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}de-mix a mixed servo output\end{DoxyVerb}
+ 
+
+Definition at line 717 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ab3215121238bdf76cb714ad349d6a17b}\label{namespacepymavlink_1_1mavextra_ab3215121238bdf76cb714ad349d6a17b}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!diff@{diff}}
+\index{diff@{diff}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{diff()}{diff()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+diff (\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate differences between values\end{DoxyVerb}
+ 
+
+Definition at line 236 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a4967f5a9f9d809005b0c7ec3ee25415c}\label{namespacepymavlink_1_1mavextra_a4967f5a9f9d809005b0c7ec3ee25415c}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!distance\_gps2@{distance\_gps2}}
+\index{distance\_gps2@{distance\_gps2}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{distance\_gps2()}{distance\_gps2()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+distance\+\_\+gps2 (\begin{DoxyParamCaption}\item[{}]{G\+PS,  }\item[{}]{G\+P\+S2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}distance between two points\end{DoxyVerb}
+ 
+
+Definition at line 923 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a263fad301c730511059b3c9bb58248d8}\label{namespacepymavlink_1_1mavextra_a263fad301c730511059b3c9bb58248d8}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!distance\_home@{distance\_home}}
+\index{distance\_home@{distance\_home}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{distance\_home()}{distance\_home()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+distance\+\_\+home (\begin{DoxyParamCaption}\item[{}]{G\+P\+S\+\_\+\+R\+AW }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}distance from first fix point\end{DoxyVerb}
+ 
+
+Definition at line 501 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a3bab8b877b7cecdc6fbece56106fd74a}\label{namespacepymavlink_1_1mavextra_a3bab8b877b7cecdc6fbece56106fd74a}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!distance\_two@{distance\_two}}
+\index{distance\_two@{distance\_two}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{distance\_two()}{distance\_two()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+distance\+\_\+two (\begin{DoxyParamCaption}\item[{}]{G\+P\+S\+\_\+\+R\+A\+W1,  }\item[{}]{G\+P\+S\+\_\+\+R\+A\+W2,  }\item[{}]{horizontal = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}distance between two points\end{DoxyVerb}
+ 
+
+Definition at line 465 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a6430a3ecdcd4b86e25851749bb4069b0}\label{namespacepymavlink_1_1mavextra_a6430a3ecdcd4b86e25851749bb4069b0}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!downsample@{downsample}}
+\index{downsample@{downsample}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{downsample()}{downsample()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+downsample (\begin{DoxyParamCaption}\item[{}]{N }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}conditional that is true on every Nth sample\end{DoxyVerb}
+ 
+
+Definition at line 867 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a3c2fd630569590cbbdb6fc602eb242b4}\label{namespacepymavlink_1_1mavextra_a3c2fd630569590cbbdb6fc602eb242b4}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!earth\_accel@{earth\_accel}}
+\index{earth\_accel@{earth\_accel}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{earth\_accel()}{earth\_accel()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+earth\+\_\+accel (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return earth frame acceleration vector\end{DoxyVerb}
+ 
+
+Definition at line 643 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a2e8ffaaf018bdd21bcc0dac891e88407}\label{namespacepymavlink_1_1mavextra_a2e8ffaaf018bdd21bcc0dac891e88407}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!earth\_accel2@{earth\_accel2}}
+\index{earth\_accel2@{earth\_accel2}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{earth\_accel2()}{earth\_accel2()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+earth\+\_\+accel2 (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return earth frame acceleration vector from AHRS2\end{DoxyVerb}
+ 
+
+Definition at line 897 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a40df15a3e1e1a67b2bb53a0b73d48d63}\label{namespacepymavlink_1_1mavextra_a40df15a3e1e1a67b2bb53a0b73d48d63}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!earth\_accel2\_df@{earth\_accel2\_df}}
+\index{earth\_accel2\_df@{earth\_accel2\_df}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{earth\_accel2\_df()}{earth\_accel2\_df()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+earth\+\_\+accel2\+\_\+df (\begin{DoxyParamCaption}\item[{}]{I\+MU,  }\item[{}]{I\+M\+U2,  }\item[{}]{A\+TT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return earth frame acceleration vector from df log\end{DoxyVerb}
+ 
+
+Definition at line 909 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a51880208595cc665f7dd2af3e44390f2}\label{namespacepymavlink_1_1mavextra_a51880208595cc665f7dd2af3e44390f2}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!earth\_accel\_df@{earth\_accel\_df}}
+\index{earth\_accel\_df@{earth\_accel\_df}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{earth\_accel\_df()}{earth\_accel\_df()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+earth\+\_\+accel\+\_\+df (\begin{DoxyParamCaption}\item[{}]{I\+MU,  }\item[{}]{A\+TT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return earth frame acceleration vector from df log\end{DoxyVerb}
+ 
+
+Definition at line 903 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ad31722417bd0b051505d2a9f7e70183a}\label{namespacepymavlink_1_1mavextra_ad31722417bd0b051505d2a9f7e70183a}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!earth\_gyro@{earth\_gyro}}
+\index{earth\_gyro@{earth\_gyro}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{earth\_gyro()}{earth\_gyro()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+earth\+\_\+gyro (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return earth frame gyro vector\end{DoxyVerb}
+ 
+
+Definition at line 649 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ada9a5936b18dd8a99085b06b9b687573}\label{namespacepymavlink_1_1mavextra_ada9a5936b18dd8a99085b06b9b687573}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!earth\_rates@{earth\_rates}}
+\index{earth\_rates@{earth\_rates}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{earth\_rates()}{earth\_rates()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+earth\+\_\+rates (\begin{DoxyParamCaption}\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return angular velocities in earth frame\end{DoxyVerb}
+ 
+
+Definition at line 592 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a7d43fc6d74cca81b49d9528bfbe97193}\label{namespacepymavlink_1_1mavextra_a7d43fc6d74cca81b49d9528bfbe97193}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!EAS2TAS@{EAS2TAS}}
+\index{EAS2TAS@{EAS2TAS}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{EAS2TAS()}{EAS2TAS()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+E\+A\+S2\+T\+AS (\begin{DoxyParamCaption}\item[{}]{A\+R\+SP,  }\item[{}]{G\+PS,  }\item[{}]{B\+A\+RO,  }\item[{}]{ground\+\_\+temp = {\ttfamily 25} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}EAS2TAS from ARSP.Temp\end{DoxyVerb}
+ 
+
+Definition at line 557 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a0982fb72ae1fd1006e089debf6b98440}\label{namespacepymavlink_1_1mavextra_a0982fb72ae1fd1006e089debf6b98440}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!ekf1\_pos@{ekf1\_pos}}
+\index{ekf1\_pos@{ekf1\_pos}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{ekf1\_pos()}{ekf1\_pos()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+ekf1\+\_\+pos (\begin{DoxyParamCaption}\item[{}]{E\+K\+F1 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate EKF position when EKF disabled\end{DoxyVerb}
+ 
+
+Definition at line 965 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a5b8fa5473a3b0961f0a53ab1edd02dc1}\label{namespacepymavlink_1_1mavextra_a5b8fa5473a3b0961f0a53ab1edd02dc1}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!energy\_error@{energy\_error}}
+\index{energy\_error@{energy\_error}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{energy\_error()}{energy\_error()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+energy\+\_\+error (\begin{DoxyParamCaption}\item[{}]{N\+A\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+O\+U\+T\+P\+UT,  }\item[{}]{V\+F\+R\+\_\+\+H\+UD }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return energy error matching APM internals
+This is positive when we are too low or going too slow
+\end{DoxyVerb}
+ 
+
+Definition at line 665 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ae817df92c23b96ec6e16093c368e729b}\label{namespacepymavlink_1_1mavextra_ae817df92c23b96ec6e16093c368e729b}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!euler\_p90@{euler\_p90}}
+\index{euler\_p90@{euler\_p90}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{euler\_p90()}{euler\_p90()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+euler\+\_\+p90 (\begin{DoxyParamCaption}\item[{}]{M\+SG }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return eulers in radians from quaternion for view at pitch 90\end{DoxyVerb}
+ 
+
+Definition at line 1036 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a93e763e24f8b66e8051ec933eceaf449}\label{namespacepymavlink_1_1mavextra_a93e763e24f8b66e8051ec933eceaf449}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!euler\_rotated@{euler\_rotated}}
+\index{euler\_rotated@{euler\_rotated}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{euler\_rotated()}{euler\_rotated()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+euler\+\_\+rotated (\begin{DoxyParamCaption}\item[{}]{M\+SG,  }\item[{}]{roll,  }\item[{}]{pitch,  }\item[{}]{yaw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return eulers in radians from quaternion for view at given attitude in euler radians\end{DoxyVerb}
+ 
+
+Definition at line 1028 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_afe052544879bef855464ba48b3fe55f6}\label{namespacepymavlink_1_1mavextra_afe052544879bef855464ba48b3fe55f6}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!euler\_to\_quat@{euler\_to\_quat}}
+\index{euler\_to\_quat@{euler\_to\_quat}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{euler\_to\_quat()}{euler\_to\_quat()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+euler\+\_\+to\+\_\+quat (\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get quaternion from euler angles
+:param e: euler angles [roll, pitch, yaw]
+:returns: quaternion [w, x, y , z]
+\end{DoxyVerb}
+ 
+
+Definition at line 987 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ad27113b5ac550f5a63766348b74641eb}\label{namespacepymavlink_1_1mavextra_ad27113b5ac550f5a63766348b74641eb}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!expected\_mag@{expected\_mag}}
+\index{expected\_mag@{expected\_mag}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{expected\_mag()}{expected\_mag()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+expected\+\_\+mag (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return expected mag vector\end{DoxyVerb}
+ 
+
+Definition at line 377 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aebb19fbb4880427930fb3c19ec91b01d}\label{namespacepymavlink_1_1mavextra_aebb19fbb4880427930fb3c19ec91b01d}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!expected\_magx@{expected\_magx}}
+\index{expected\_magx@{expected\_magx}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{expected\_magx()}{expected\_magx()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+expected\+\_\+magx (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate  from mag\end{DoxyVerb}
+ 
+
+Definition at line 414 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a961c101c8246849d791424520b2439e7}\label{namespacepymavlink_1_1mavextra_a961c101c8246849d791424520b2439e7}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!expected\_magy@{expected\_magy}}
+\index{expected\_magy@{expected\_magy}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{expected\_magy()}{expected\_magy()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+expected\+\_\+magy (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate  from mag\end{DoxyVerb}
+ 
+
+Definition at line 419 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a9c3e49062cce7a6cf181d0ed8a0e0692}\label{namespacepymavlink_1_1mavextra_a9c3e49062cce7a6cf181d0ed8a0e0692}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!expected\_magz@{expected\_magz}}
+\index{expected\_magz@{expected\_magz}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{expected\_magz()}{expected\_magz()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+expected\+\_\+magz (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate  from mag\end{DoxyVerb}
+ 
+
+Definition at line 424 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a5c02a6aebf8c43eef46c2aad3b75623a}\label{namespacepymavlink_1_1mavextra_a5c02a6aebf8c43eef46c2aad3b75623a}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!get\_motor\_offsets@{get\_motor\_offsets}}
+\index{get\_motor\_offsets@{get\_motor\_offsets}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{get\_motor\_offsets()}{get\_motor\_offsets()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+get\+\_\+motor\+\_\+offsets (\begin{DoxyParamCaption}\item[{}]{S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW,  }\item[{}]{ofs,  }\item[{}]{motor\+\_\+ofs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate magnetic field strength from raw magnetometer\end{DoxyVerb}
+ 
+
+Definition at line 124 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_addedb30f8a88b98176fe226bfed8aaad}\label{namespacepymavlink_1_1mavextra_addedb30f8a88b98176fe226bfed8aaad}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!gps\_newpos@{gps\_newpos}}
+\index{gps\_newpos@{gps\_newpos}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{gps\_newpos()}{gps\_newpos()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+gps\+\_\+newpos (\begin{DoxyParamCaption}\item[{}]{lat,  }\item[{}]{lon,  }\item[{}]{bearing,  }\item[{}]{distance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}extrapolate latitude/longitude given a heading and distance
+thanks to http://www.movable-type.co.uk/scripts/latlong.html
+\end{DoxyVerb}
+ 
+
+Definition at line 939 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ac5d6283932b9abee57818ce1c5a8b2c2}\label{namespacepymavlink_1_1mavextra_ac5d6283932b9abee57818ce1c5a8b2c2}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!gps\_offset@{gps\_offset}}
+\index{gps\_offset@{gps\_offset}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{gps\_offset()}{gps\_offset()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+gps\+\_\+offset (\begin{DoxyParamCaption}\item[{}]{lat,  }\item[{}]{lon,  }\item[{}]{east,  }\item[{}]{north }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return new lat/lon after moving east/north
+by the given number of meters\end{DoxyVerb}
+ 
+
+Definition at line 955 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a42f6635bebc5b76277d38e5dcbdd8c4f}\label{namespacepymavlink_1_1mavextra_a42f6635bebc5b76277d38e5dcbdd8c4f}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!gps\_velocity@{gps\_velocity}}
+\index{gps\_velocity@{gps\_velocity}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{gps\_velocity()}{gps\_velocity()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+gps\+\_\+velocity (\begin{DoxyParamCaption}\item[{}]{G\+L\+O\+B\+A\+L\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+I\+NT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return GPS velocity vector\end{DoxyVerb}
+ 
+
+Definition at line 626 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aee6ba92874105e32ba57d9449475661d}\label{namespacepymavlink_1_1mavextra_aee6ba92874105e32ba57d9449475661d}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!gps\_velocity\_body@{gps\_velocity\_body}}
+\index{gps\_velocity\_body@{gps\_velocity\_body}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{gps\_velocity\_body()}{gps\_velocity\_body()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+gps\+\_\+velocity\+\_\+body (\begin{DoxyParamCaption}\item[{}]{G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return GPS velocity vector in body frame\end{DoxyVerb}
+ 
+
+Definition at line 636 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a283e68b9dcd503bfedb6431c4815660c}\label{namespacepymavlink_1_1mavextra_a283e68b9dcd503bfedb6431c4815660c}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!gps\_velocity\_df@{gps\_velocity\_df}}
+\index{gps\_velocity\_df@{gps\_velocity\_df}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{gps\_velocity\_df()}{gps\_velocity\_df()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+gps\+\_\+velocity\+\_\+df (\begin{DoxyParamCaption}\item[{}]{G\+PS }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return GPS velocity vector\end{DoxyVerb}
+ 
+
+Definition at line 917 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aee56305fd91e4db7b5b0a35725659c1c}\label{namespacepymavlink_1_1mavextra_aee56305fd91e4db7b5b0a35725659c1c}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!gps\_velocity\_old@{gps\_velocity\_old}}
+\index{gps\_velocity\_old@{gps\_velocity\_old}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{gps\_velocity\_old()}{gps\_velocity\_old()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+gps\+\_\+velocity\+\_\+old (\begin{DoxyParamCaption}\item[{}]{G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return GPS velocity vector\end{DoxyVerb}
+ 
+
+Definition at line 631 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a762c44817d971674ece6d3c0cd90eedd}\label{namespacepymavlink_1_1mavextra_a762c44817d971674ece6d3c0cd90eedd}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!gravity@{gravity}}
+\index{gravity@{gravity}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{gravity()}{gravity()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+gravity (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS = {\ttfamily None},  }\item[{}]{ofs = {\ttfamily None},  }\item[{}]{mul = {\ttfamily None},  }\item[{}]{smooth = {\ttfamily 0.7} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate pitch from accelerometer\end{DoxyVerb}
+ 
+
+Definition at line 429 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a763fb9e3242f5ec9ec1fec177c4e50ae}\label{namespacepymavlink_1_1mavextra_a763fb9e3242f5ec9ec1fec177c4e50ae}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!kmh@{kmh}}
+\index{kmh@{kmh}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{kmh()}{kmh()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+kmh (\begin{DoxyParamCaption}\item[{}]{mps }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}convert m/s to Km/h\end{DoxyVerb}
+ 
+
+Definition at line 27 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ae160af64a51d6e6c620fc12450857585}\label{namespacepymavlink_1_1mavextra_ae160af64a51d6e6c620fc12450857585}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!lowpass@{lowpass}}
+\index{lowpass@{lowpass}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{lowpass()}{lowpass()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+lowpass (\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{key,  }\item[{}]{factor }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}a simple lowpass filter\end{DoxyVerb}
+ 
+
+Definition at line 225 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aaae8d1963031a79098cf818d480e0756}\label{namespacepymavlink_1_1mavextra_aaae8d1963031a79098cf818d480e0756}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_discrepancy@{mag\_discrepancy}}
+\index{mag\_discrepancy@{mag\_discrepancy}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_discrepancy()}{mag\_discrepancy()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+discrepancy (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{inclination,  }\item[{}]{declination = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}give the magnitude of the discrepancy between observed and expected magnetic field\end{DoxyVerb}
+ 
+
+Definition at line 390 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ae2c6b9c7ca47d69bc730cfc544c41b62}\label{namespacepymavlink_1_1mavextra_ae2c6b9c7ca47d69bc730cfc544c41b62}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_field@{mag\_field}}
+\index{mag\_field@{mag\_field}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_field()}{mag\_field()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+field (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS = {\ttfamily None},  }\item[{}]{ofs = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate magnetic field strength from raw magnetometer\end{DoxyVerb}
+ 
+
+Definition at line 105 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a4bdc6d85f92efa62d773a8609aabaa32}\label{namespacepymavlink_1_1mavextra_a4bdc6d85f92efa62d773a8609aabaa32}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_field\_df@{mag\_field\_df}}
+\index{mag\_field\_df@{mag\_field\_df}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_field\_df()}{mag\_field\_df()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+field\+\_\+df (\begin{DoxyParamCaption}\item[{}]{M\+AG,  }\item[{}]{ofs = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate magnetic field strength from raw magnetometer (dataflash version)\end{DoxyVerb}
+ 
+
+Definition at line 116 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_afd8e63b1dd36777b854b99782f284831}\label{namespacepymavlink_1_1mavextra_afd8e63b1dd36777b854b99782f284831}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_field\_motors@{mag\_field\_motors}}
+\index{mag\_field\_motors@{mag\_field\_motors}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_field\_motors()}{mag\_field\_motors()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+field\+\_\+motors (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS,  }\item[{}]{ofs,  }\item[{}]{S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW,  }\item[{}]{motor\+\_\+ofs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate magnetic field strength from raw magnetometer\end{DoxyVerb}
+ 
+
+Definition at line 147 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aa27cdc29ee82e3515eace9a8a98c331b}\label{namespacepymavlink_1_1mavextra_aa27cdc29ee82e3515eace9a8a98c331b}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_heading@{mag\_heading}}
+\index{mag\_heading@{mag\_heading}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_heading()}{mag\_heading()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+heading (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{declination = {\ttfamily None},  }\item[{}]{S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS = {\ttfamily None},  }\item[{}]{ofs = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate heading from raw magnetometer\end{DoxyVerb}
+ 
+
+Definition at line 59 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aed3e1ad61d9f219e180e9e3ac94764fe}\label{namespacepymavlink_1_1mavextra_aed3e1ad61d9f219e180e9e3ac94764fe}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_heading\_motors@{mag\_heading\_motors}}
+\index{mag\_heading\_motors@{mag\_heading\_motors}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_heading\_motors()}{mag\_heading\_motors()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+heading\+\_\+motors (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{declination,  }\item[{}]{S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS,  }\item[{}]{ofs,  }\item[{}]{S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW,  }\item[{}]{motor\+\_\+ofs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}calculate heading from raw magnetometer\end{DoxyVerb}
+ 
+
+Definition at line 83 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a38cfb9a7f119e04fd6abee84eaca3adc}\label{namespacepymavlink_1_1mavextra_a38cfb9a7f119e04fd6abee84eaca3adc}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_inclination@{mag\_inclination}}
+\index{mag\_inclination@{mag\_inclination}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_inclination()}{mag\_inclination()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+inclination (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{declination = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}give the magnitude of the discrepancy between observed and expected magnetic field\end{DoxyVerb}
+ 
+
+Definition at line 400 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a34628d19d224246f6da064562dc71b85}\label{namespacepymavlink_1_1mavextra_a34628d19d224246f6da064562dc71b85}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_pitch@{mag\_pitch}}
+\index{mag\_pitch@{mag\_pitch}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_pitch()}{mag\_pitch()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+pitch (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate pithc from mag\end{DoxyVerb}
+ 
+
+Definition at line 365 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ae68ad6b7e203ece0fbb43d292c9e4c31}\label{namespacepymavlink_1_1mavextra_ae68ad6b7e203ece0fbb43d292c9e4c31}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_roll@{mag\_roll}}
+\index{mag\_roll@{mag\_roll}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_roll()}{mag\_roll()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+roll (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate roll from mag\end{DoxyVerb}
+ 
+
+Definition at line 371 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a55bf2db7a98272c74d86e6e721afddb1}\label{namespacepymavlink_1_1mavextra_a55bf2db7a98272c74d86e6e721afddb1}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_rotation@{mag\_rotation}}
+\index{mag\_rotation@{mag\_rotation}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_rotation()}{mag\_rotation()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+rotation (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return an attitude rotation matrix that is consistent with the current mag
+   vector\end{DoxyVerb}
+ 
+
+Definition at line 343 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aa2959db40d0a944e4b7f46e3128df872}\label{namespacepymavlink_1_1mavextra_aa2959db40d0a944e4b7f46e3128df872}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mag\_yaw@{mag\_yaw}}
+\index{mag\_yaw@{mag\_yaw}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mag\_yaw()}{mag\_yaw()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mag\+\_\+yaw (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{inclination,  }\item[{}]{declination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate yaw from mag\end{DoxyVerb}
+ 
+
+Definition at line 356 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ae2ac3b544989ec220c6ef351e7ef5204}\label{namespacepymavlink_1_1mavextra_ae2ac3b544989ec220c6ef351e7ef5204}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mix1@{mix1}}
+\index{mix1@{mix1}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mix1()}{mix1()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mix1 (\begin{DoxyParamCaption}\item[{}]{servo1,  }\item[{}]{servo2,  }\item[{}]{mixtype = {\ttfamily 1},  }\item[{}]{gain = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}de-mix a mixed servo output\end{DoxyVerb}
+ 
+
+Definition at line 748 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a9917a9cc993bdb7a607478dbb089111d}\label{namespacepymavlink_1_1mavextra_a9917a9cc993bdb7a607478dbb089111d}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mix2@{mix2}}
+\index{mix2@{mix2}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mix2()}{mix2()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mix2 (\begin{DoxyParamCaption}\item[{}]{servo1,  }\item[{}]{servo2,  }\item[{}]{mixtype = {\ttfamily 1},  }\item[{}]{gain = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}de-mix a mixed servo output\end{DoxyVerb}
+ 
+
+Definition at line 753 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ae33f40df072016fd86d881d715a57f91}\label{namespacepymavlink_1_1mavextra_ae33f40df072016fd86d881d715a57f91}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!mixer@{mixer}}
+\index{mixer@{mixer}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{mixer()}{mixer()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+mixer (\begin{DoxyParamCaption}\item[{}]{servo1,  }\item[{}]{servo2,  }\item[{}]{mixtype = {\ttfamily 1},  }\item[{}]{gain = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}mix two servos\end{DoxyVerb}
+ 
+
+Definition at line 725 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a571222d19bb4574669698dcb01912fb7}\label{namespacepymavlink_1_1mavextra_a571222d19bb4574669698dcb01912fb7}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!pitch\_estimate@{pitch\_estimate}}
+\index{pitch\_estimate@{pitch\_estimate}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{pitch\_estimate()}{pitch\_estimate()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+pitch\+\_\+estimate (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT = {\ttfamily None},  }\item[{}]{A\+T\+T\+I\+T\+U\+DE = {\ttfamily None},  }\item[{}]{S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS = {\ttfamily None},  }\item[{}]{ofs = {\ttfamily None},  }\item[{}]{mul = {\ttfamily None},  }\item[{}]{smooth = {\ttfamily 0.7} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate pitch from accelerometer\end{DoxyVerb}
+ 
+
+Definition at line 316 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aee61cc54c7330f81c44bc7d477e18f3a}\label{namespacepymavlink_1_1mavextra_aee61cc54c7330f81c44bc7d477e18f3a}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!pitch\_rate@{pitch\_rate}}
+\index{pitch\_rate@{pitch\_rate}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{pitch\_rate()}{pitch\_rate()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+pitch\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return pitch rate in earth frame\end{DoxyVerb}
+ 
+
+Definition at line 615 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a600c961891b95309d492b08f957d1bf4}\label{namespacepymavlink_1_1mavextra_a600c961891b95309d492b08f957d1bf4}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!pitch\_sim@{pitch\_sim}}
+\index{pitch\_sim@{pitch\_sim}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{pitch\_sim()}{pitch\_sim()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+pitch\+\_\+sim (\begin{DoxyParamCaption}\item[{}]{S\+I\+M\+S\+T\+A\+TE,  }\item[{}]{G\+P\+S\+\_\+\+R\+AW }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate pitch from SIMSTATE accels\end{DoxyVerb}
+ 
+
+Definition at line 454 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a80093b7c26c5a448b247049fa10a203d}\label{namespacepymavlink_1_1mavextra_a80093b7c26c5a448b247049fa10a203d}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!PX4\_update@{PX4\_update}}
+\index{PX4\_update@{PX4\_update}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{PX4\_update()}{PX4\_update()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+P\+X4\+\_\+update (\begin{DoxyParamCaption}\item[{}]{I\+MU,  }\item[{}]{A\+TT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}implement full DCM using PX4 native SD log data\end{DoxyVerb}
+ 
+
+Definition at line 854 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_abdee678a41670fcef22b100ca3ce611d}\label{namespacepymavlink_1_1mavextra_abdee678a41670fcef22b100ca3ce611d}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!qpitch@{qpitch}}
+\index{qpitch@{qpitch}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{qpitch()}{qpitch()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+qpitch (\begin{DoxyParamCaption}\item[{}]{M\+SG }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return quaternion pitch in degrees\end{DoxyVerb}
+ 
+
+Definition at line 1017 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a260bdd8eafc90dc550972d28ba227c1a}\label{namespacepymavlink_1_1mavextra_a260bdd8eafc90dc550972d28ba227c1a}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!qpitch\_p90@{qpitch\_p90}}
+\index{qpitch\_p90@{qpitch\_p90}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{qpitch\_p90()}{qpitch\_p90()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+qpitch\+\_\+p90 (\begin{DoxyParamCaption}\item[{}]{M\+SG }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return quaternion roll in degrees for view at pitch 90\end{DoxyVerb}
+ 
+
+Definition at line 1044 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_af6a04d0089b64397af521e72dfa6f82f}\label{namespacepymavlink_1_1mavextra_af6a04d0089b64397af521e72dfa6f82f}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!qroll@{qroll}}
+\index{qroll@{qroll}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{qroll()}{qroll()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+qroll (\begin{DoxyParamCaption}\item[{}]{M\+SG }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return quaternion roll in degrees\end{DoxyVerb}
+ 
+
+Definition at line 1011 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aaf860983d6c5bb5c19ddc01a98d542dd}\label{namespacepymavlink_1_1mavextra_aaf860983d6c5bb5c19ddc01a98d542dd}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!qroll\_p90@{qroll\_p90}}
+\index{qroll\_p90@{qroll\_p90}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{qroll\_p90()}{qroll\_p90()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+qroll\+\_\+p90 (\begin{DoxyParamCaption}\item[{}]{M\+SG }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return quaternion roll in degrees for view at pitch 90\end{DoxyVerb}
+ 
+
+Definition at line 1040 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a60cc24d55dd20230db0faa61038e6cf7}\label{namespacepymavlink_1_1mavextra_a60cc24d55dd20230db0faa61038e6cf7}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!quat\_to\_euler@{quat\_to\_euler}}
+\index{quat\_to\_euler@{quat\_to\_euler}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{quat\_to\_euler()}{quat\_to\_euler()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+quat\+\_\+to\+\_\+euler (\begin{DoxyParamCaption}\item[{}]{q }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get Euler angles from a quaternion
+:param q: quaternion [w, x, y , z]
+:returns: euler angles [roll, pitch, yaw]
+\end{DoxyVerb}
+ 
+
+Definition at line 978 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a77216052108c7a04c334dfcb3cb24107}\label{namespacepymavlink_1_1mavextra_a77216052108c7a04c334dfcb3cb24107}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!qyaw@{qyaw}}
+\index{qyaw@{qyaw}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{qyaw()}{qyaw()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+qyaw (\begin{DoxyParamCaption}\item[{}]{M\+SG }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return quaternion yaw in degrees\end{DoxyVerb}
+ 
+
+Definition at line 1023 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a7c38a6a073239c53cd485cdac0df5aad}\label{namespacepymavlink_1_1mavextra_a7c38a6a073239c53cd485cdac0df5aad}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!qyaw\_p90@{qyaw\_p90}}
+\index{qyaw\_p90@{qyaw\_p90}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{qyaw\_p90()}{qyaw\_p90()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+qyaw\+\_\+p90 (\begin{DoxyParamCaption}\item[{}]{M\+SG }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return quaternion roll in degrees for view at pitch 90\end{DoxyVerb}
+ 
+
+Definition at line 1048 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a4d7617fb1541d638db0023fd663c59fd}\label{namespacepymavlink_1_1mavextra_a4d7617fb1541d638db0023fd663c59fd}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rate\_of\_turn@{rate\_of\_turn}}
+\index{rate\_of\_turn@{rate\_of\_turn}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rate\_of\_turn()}{rate\_of\_turn()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rate\+\_\+of\+\_\+turn (\begin{DoxyParamCaption}\item[{}]{speed,  }\item[{}]{bank }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return expected rate of turn in degrees/s for given speed in m/s and
+   bank angle in degrees\end{DoxyVerb}
+ 
+
+Definition at line 521 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a1a001cccb29771aea954d733377c92f9}\label{namespacepymavlink_1_1mavextra_a1a001cccb29771aea954d733377c92f9}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!roll\_estimate@{roll\_estimate}}
+\index{roll\_estimate@{roll\_estimate}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{roll\_estimate()}{roll\_estimate()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+roll\+\_\+estimate (\begin{DoxyParamCaption}\item[{}]{R\+A\+W\+\_\+\+I\+MU,  }\item[{}]{G\+P\+S\+\_\+\+R\+A\+W\+\_\+\+I\+NT = {\ttfamily None},  }\item[{}]{A\+T\+T\+I\+T\+U\+DE = {\ttfamily None},  }\item[{}]{S\+E\+N\+S\+O\+R\+\_\+\+O\+F\+F\+S\+E\+TS = {\ttfamily None},  }\item[{}]{ofs = {\ttfamily None},  }\item[{}]{mul = {\ttfamily None},  }\item[{}]{smooth = {\ttfamily 0.7} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}estimate roll from accelerometer\end{DoxyVerb}
+ 
+
+Definition at line 295 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ad1a6d8f7d2affd450da8c9a6a3d36e05}\label{namespacepymavlink_1_1mavextra_ad1a6d8f7d2affd450da8c9a6a3d36e05}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!roll\_rate@{roll\_rate}}
+\index{roll\_rate@{roll\_rate}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{roll\_rate()}{roll\_rate()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+roll\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return roll rate in earth frame\end{DoxyVerb}
+ 
+
+Definition at line 610 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a44f4f12a741cc819b9197e09e78b4e78}\label{namespacepymavlink_1_1mavextra_a44f4f12a741cc819b9197e09e78b4e78}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rotate\_quat@{rotate\_quat}}
+\index{rotate\_quat@{rotate\_quat}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rotate\_quat()}{rotate\_quat()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rotate\+\_\+quat (\begin{DoxyParamCaption}\item[{}]{attitude,  }\item[{}]{roll,  }\item[{}]{pitch,  }\item[{}]{yaw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns rotated quaternion
+:param attitude: quaternion [w, x, y , z]
+:param roll: rotation in rad
+:param pitch: rotation in rad
+:param yaw: rotation in rad
+:returns: quaternion [w, x, y , z]
+\end{DoxyVerb}
+ 
+
+Definition at line 996 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a28d2ae204e94f85443cb66a3f4231d80}\label{namespacepymavlink_1_1mavextra_a28d2ae204e94f85443cb66a3f4231d80}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rotation@{rotation}}
+\index{rotation@{rotation}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rotation (\begin{DoxyParamCaption}\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return the current DCM rotation matrix\end{DoxyVerb}
+ 
+
+Definition at line 337 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_abaf31a27857e3a949ad5166c35d11773}\label{namespacepymavlink_1_1mavextra_abaf31a27857e3a949ad5166c35d11773}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rotation2@{rotation2}}
+\index{rotation2@{rotation2}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rotation2()}{rotation2()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rotation2 (\begin{DoxyParamCaption}\item[{}]{A\+H\+R\+S2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return the current DCM rotation matrix\end{DoxyVerb}
+ 
+
+Definition at line 891 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a8d3483c735e242ad8bb46001dae2284a}\label{namespacepymavlink_1_1mavextra_a8d3483c735e242ad8bb46001dae2284a}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rotation\_df@{rotation\_df}}
+\index{rotation\_df@{rotation\_df}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rotation\_df()}{rotation\_df()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rotation\+\_\+df (\begin{DoxyParamCaption}\item[{}]{A\+TT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return the current DCM rotation matrix\end{DoxyVerb}
+ 
+
+Definition at line 885 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a55bf23fb8b11c2e546dddb4eab80eae0}\label{namespacepymavlink_1_1mavextra_a55bf23fb8b11c2e546dddb4eab80eae0}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rover\_lat\_accel@{rover\_lat\_accel}}
+\index{rover\_lat\_accel@{rover\_lat\_accel}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rover\_lat\_accel()}{rover\_lat\_accel()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rover\+\_\+lat\+\_\+accel (\begin{DoxyParamCaption}\item[{}]{V\+F\+R\+\_\+\+H\+UD,  }\item[{}]{S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return lateral acceleration in m/s/s\end{DoxyVerb}
+ 
+
+Definition at line 701 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a2cf4432c48b582f8471874e3ae33de17}\label{namespacepymavlink_1_1mavextra_a2cf4432c48b582f8471874e3ae33de17}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rover\_turn\_circle@{rover\_turn\_circle}}
+\index{rover\_turn\_circle@{rover\_turn\_circle}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rover\_turn\_circle()}{rover\_turn\_circle()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rover\+\_\+turn\+\_\+circle (\begin{DoxyParamCaption}\item[{}]{S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return turning circle (diameter) in meters for steering_angle in degrees
+\end{DoxyVerb}
+ 
+
+Definition at line 674 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a06610d38e6694c31c2fdbaafd57eae54}\label{namespacepymavlink_1_1mavextra_a06610d38e6694c31c2fdbaafd57eae54}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!rover\_yaw\_rate@{rover\_yaw\_rate}}
+\index{rover\_yaw\_rate@{rover\_yaw\_rate}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{rover\_yaw\_rate()}{rover\_yaw\_rate()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+rover\+\_\+yaw\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{V\+F\+R\+\_\+\+H\+UD,  }\item[{}]{S\+E\+R\+V\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+AW }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return yaw rate in degrees/second given steering_angle and speed\end{DoxyVerb}
+ 
+
+Definition at line 687 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a4a70f6c6e6d7fa829901749b7e3d5546}\label{namespacepymavlink_1_1mavextra_a4a70f6c6e6d7fa829901749b7e3d5546}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!sawtooth@{sawtooth}}
+\index{sawtooth@{sawtooth}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{sawtooth()}{sawtooth()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+sawtooth (\begin{DoxyParamCaption}\item[{}]{A\+T\+T\+I\+T\+U\+DE,  }\item[{}]{amplitude = {\ttfamily 2.0},  }\item[{}]{period = {\ttfamily 5.0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}sawtooth pattern based on uptime\end{DoxyVerb}
+ 
+
+Definition at line 513 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_aaee8500fc795534b56fc2ba040dafb4d}\label{namespacepymavlink_1_1mavextra_aaee8500fc795534b56fc2ba040dafb4d}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!second\_derivative\_5@{second\_derivative\_5}}
+\index{second\_derivative\_5@{second\_derivative\_5}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{second\_derivative\_5()}{second\_derivative\_5()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+second\+\_\+derivative\+\_\+5 (\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}5 point 2nd derivative\end{DoxyVerb}
+ 
+
+Definition at line 184 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a47da2a88a30ba6ca85072ffa2eabd255}\label{namespacepymavlink_1_1mavextra_a47da2a88a30ba6ca85072ffa2eabd255}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!second\_derivative\_9@{second\_derivative\_9}}
+\index{second\_derivative\_9@{second\_derivative\_9}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{second\_derivative\_9()}{second\_derivative\_9()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+second\+\_\+derivative\+\_\+9 (\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}9 point 2nd derivative\end{DoxyVerb}
+ 
+
+Definition at line 203 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_abe7eb91429847abe6333b64f2fa5b39e}\label{namespacepymavlink_1_1mavextra_abe7eb91429847abe6333b64f2fa5b39e}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!wingloading@{wingloading}}
+\index{wingloading@{wingloading}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{wingloading()}{wingloading()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+wingloading (\begin{DoxyParamCaption}\item[{}]{bank }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return expected wing loading factor for a bank angle in radians\end{DoxyVerb}
+ 
+
+Definition at line 529 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a85414a40febdc276343f85e8ee63d3b4}\label{namespacepymavlink_1_1mavextra_a85414a40febdc276343f85e8ee63d3b4}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!wrap\_180@{wrap\_180}}
+\index{wrap\_180@{wrap\_180}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{wrap\_180()}{wrap\_180()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+wrap\+\_\+180 (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 758 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ace15c40f51a7caffd4a6364bb0afea52}\label{namespacepymavlink_1_1mavextra_ace15c40f51a7caffd4a6364bb0afea52}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!wrap\_360@{wrap\_360}}
+\index{wrap\_360@{wrap\_360}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{wrap\_360()}{wrap\_360()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+wrap\+\_\+360 (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 766 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_ab34a549c8b911b6455f2d641af495192}\label{namespacepymavlink_1_1mavextra_ab34a549c8b911b6455f2d641af495192}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!wrap\_valid\_longitude@{wrap\_valid\_longitude}}
+\index{wrap\_valid\_longitude@{wrap\_valid\_longitude}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{wrap\_valid\_longitude()}{wrap\_valid\_longitude()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+wrap\+\_\+valid\+\_\+longitude (\begin{DoxyParamCaption}\item[{}]{lon }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wrap a longitude value around to always have a value in the range
+    [-180, +180) i.e 0 => 0, 1 => 1, -1 => -1, 181 => -179, -181 => 179
+\end{DoxyVerb}
+ 
+
+Definition at line 933 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_af1b42c28fc778624954bc9bb5307fcf6}\label{namespacepymavlink_1_1mavextra_af1b42c28fc778624954bc9bb5307fcf6}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!yaw\_rate@{yaw\_rate}}
+\index{yaw\_rate@{yaw\_rate}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{yaw\_rate()}{yaw\_rate()}}
+{\footnotesize\ttfamily def pymavlink.\+mavextra.\+yaw\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{A\+T\+T\+I\+T\+U\+DE }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return yaw rate in earth frame\end{DoxyVerb}
+ 
+
+Definition at line 620 of file mavextra.\+py.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a76fcc483634240cbd986407ea04000e3}\label{namespacepymavlink_1_1mavextra_a76fcc483634240cbd986407ea04000e3}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!average\_data@{average\_data}}
+\index{average\_data@{average\_data}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{average\_data}{average\_data}}
+{\footnotesize\ttfamily dictionary pymavlink.\+mavextra.\+average\+\_\+data = \{\}}
+
+
+
+Definition at line 170 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_af3b8d2455323dd429c14e6fa95e10e12}\label{namespacepymavlink_1_1mavextra_af3b8d2455323dd429c14e6fa95e10e12}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!dcm\_state@{dcm\_state}}
+\index{dcm\_state@{dcm\_state}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{dcm\_state}{dcm\_state}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+dcm\+\_\+state = None}
+
+
+
+Definition at line 817 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a3254820968ce29e97fb197680e5df9bc}\label{namespacepymavlink_1_1mavextra_a3254820968ce29e97fb197680e5df9bc}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!derivative\_data@{derivative\_data}}
+\index{derivative\_data@{derivative\_data}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{derivative\_data}{derivative\_data}}
+{\footnotesize\ttfamily dictionary pymavlink.\+mavextra.\+derivative\+\_\+data = \{\}}
+
+
+
+Definition at line 182 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a80175ecaee74959808255a74533fdbb5}\label{namespacepymavlink_1_1mavextra_a80175ecaee74959808255a74533fdbb5}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!ekf\_home@{ekf\_home}}
+\index{ekf\_home@{ekf\_home}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{ekf\_home}{ekf\_home}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+ekf\+\_\+home = None}
+
+
+
+Definition at line 963 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_adf8ad01a6deb47c3593112e41af683d5}\label{namespacepymavlink_1_1mavextra_adf8ad01a6deb47c3593112e41af683d5}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!first\_fix@{first\_fix}}
+\index{first\_fix@{first\_fix}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{first\_fix}{first\_fix}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+first\+\_\+fix = None}
+
+
+
+Definition at line 499 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a50e8a351722d68416745064f2c9927fb}\label{namespacepymavlink_1_1mavextra_a50e8a351722d68416745064f2c9927fb}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!last\_delta@{last\_delta}}
+\index{last\_delta@{last\_delta}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{last\_delta}{last\_delta}}
+{\footnotesize\ttfamily dictionary pymavlink.\+mavextra.\+last\+\_\+delta = \{\}}
+
+
+
+Definition at line 247 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a53b67713abd456bc6ced90ccf8603937}\label{namespacepymavlink_1_1mavextra_a53b67713abd456bc6ced90ccf8603937}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!last\_diff@{last\_diff}}
+\index{last\_diff@{last\_diff}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{last\_diff}{last\_diff}}
+{\footnotesize\ttfamily dictionary pymavlink.\+mavextra.\+last\+\_\+diff = \{\}}
+
+
+
+Definition at line 234 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a2c90308cee880c46b9082f786cba6adb}\label{namespacepymavlink_1_1mavextra_a2c90308cee880c46b9082f786cba6adb}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!lowpass\_data@{lowpass\_data}}
+\index{lowpass\_data@{lowpass\_data}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{lowpass\_data}{lowpass\_data}}
+{\footnotesize\ttfamily dictionary pymavlink.\+mavextra.\+lowpass\+\_\+data = \{\}}
+
+
+
+Definition at line 223 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_adf55d806751f41104a7c778b38c2d7e6}\label{namespacepymavlink_1_1mavextra_adf55d806751f41104a7c778b38c2d7e6}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!px4\_state@{px4\_state}}
+\index{px4\_state@{px4\_state}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{px4\_state}{px4\_state}}
+{\footnotesize\ttfamily pymavlink.\+mavextra.\+px4\+\_\+state = None}
+
+
+
+Definition at line 852 of file mavextra.\+py.
+
+\mbox{\Hypertarget{namespacepymavlink_1_1mavextra_a0d623e5b8a6a2ee5f295e0d5c14fd01b}\label{namespacepymavlink_1_1mavextra_a0d623e5b8a6a2ee5f295e0d5c14fd01b}} 
+\index{pymavlink.mavextra@{pymavlink.mavextra}!radius\_of\_earth@{radius\_of\_earth}}
+\index{radius\_of\_earth@{radius\_of\_earth}!pymavlink.mavextra@{pymavlink.mavextra}}
+\subsubsection{\texorpdfstring{radius\_of\_earth}{radius\_of\_earth}}
+{\footnotesize\ttfamily float pymavlink.\+mavextra.\+radius\+\_\+of\+\_\+earth = 6378100.\+0}
+
+
+
+Definition at line 931 of file mavextra.\+py.
+

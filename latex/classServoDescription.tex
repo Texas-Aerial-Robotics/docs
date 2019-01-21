@@ -1,0 +1,185 @@
+\hypertarget{classServoDescription}{}\section{Servo\+Description Class Reference}
+\label{classServoDescription}\index{ServoDescription@{ServoDescription}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServoDescription_ade48340af8bb04123e9f7e74749ad75e}{Servo\+Description}} ()
+\item 
+\mbox{\hyperlink{classServoDescription_aeb5d29abe6875a60140c5e27e5e3f419}{Servo\+Description}} (std\+::string joint\+\_\+name\+\_\+, double lower\+\_\+, double upper\+\_\+, int channel\+\_\+, int min\+\_\+, int max\+\_\+, int trim\+\_\+, int dz\+\_\+, bool rev\+\_\+)
+\item 
+float \mbox{\hyperlink{classServoDescription_a9b53028329d9f4730d0e954ba682bc6b}{normalize}} (uint16\+\_\+t pwm)
+\item 
+float \mbox{\hyperlink{classServoDescription_aac283ff9565c80e5dd5434a03b2d5ab0}{calculate\+\_\+position}} (uint16\+\_\+t pwm)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classServoDescription_ad341e00d12a3f4f2688461895cc4d617}{joint\+\_\+name}}
+\item 
+float \mbox{\hyperlink{classServoDescription_a260add37256676b422f92cd7331ede8c}{joint\+\_\+lower}}
+\item 
+float \mbox{\hyperlink{classServoDescription_a3471d565e6be0538f61ccf9c666e9bdf}{joint\+\_\+upper}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classServoDescription_ae77953ec190417bc8bcbffd30c69c525}{rc\+\_\+channel}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classServoDescription_add84ff84b13562dcc72fb2a7d7f05990}{rc\+\_\+min}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classServoDescription_aff03b39826e42b6a5a1564fb15ee2b50}{rc\+\_\+max}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classServoDescription_a53f8532ce38683c545375dbc5e58d2e2}{rc\+\_\+trim}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classServoDescription_a769eb578d438192da7b6012c52686ba7}{rc\+\_\+dz}}
+\item 
+bool \mbox{\hyperlink{classServoDescription_ace31258fe387d6edb10b35e31adffd93}{rc\+\_\+rev}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classServoDescription_ade48340af8bb04123e9f7e74749ad75e}\label{classServoDescription_ade48340af8bb04123e9f7e74749ad75e}} 
+\index{ServoDescription@{ServoDescription}!ServoDescription@{ServoDescription}}
+\index{ServoDescription@{ServoDescription}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{ServoDescription()}{ServoDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Servo\+Description\+::\+Servo\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_aeb5d29abe6875a60140c5e27e5e3f419}\label{classServoDescription_aeb5d29abe6875a60140c5e27e5e3f419}} 
+\index{ServoDescription@{ServoDescription}!ServoDescription@{ServoDescription}}
+\index{ServoDescription@{ServoDescription}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{ServoDescription()}{ServoDescription()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Servo\+Description\+::\+Servo\+Description (\begin{DoxyParamCaption}\item[{std\+::string}]{joint\+\_\+name\+\_\+,  }\item[{double}]{lower\+\_\+,  }\item[{double}]{upper\+\_\+,  }\item[{int}]{channel\+\_\+,  }\item[{int}]{min\+\_\+,  }\item[{int}]{max\+\_\+,  }\item[{int}]{trim\+\_\+,  }\item[{int}]{dz\+\_\+,  }\item[{bool}]{rev\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classServoDescription_aac283ff9565c80e5dd5434a03b2d5ab0}\label{classServoDescription_aac283ff9565c80e5dd5434a03b2d5ab0}} 
+\index{ServoDescription@{ServoDescription}!calculate\_position@{calculate\_position}}
+\index{calculate\_position@{calculate\_position}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{calculate\_position()}{calculate\_position()}}
+{\footnotesize\ttfamily float Servo\+Description\+::calculate\+\_\+position (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{pwm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 94 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_a9b53028329d9f4730d0e954ba682bc6b}\label{classServoDescription_a9b53028329d9f4730d0e954ba682bc6b}} 
+\index{ServoDescription@{ServoDescription}!normalize@{normalize}}
+\index{normalize@{normalize}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily float Servo\+Description\+::normalize (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{pwm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Normalization code taken from P\+X4 Firmware src/modules/sensors/sensors.\+cpp Sensors\+::rc\+\_\+poll() line 1966 
+
+Definition at line 66 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classServoDescription_a260add37256676b422f92cd7331ede8c}\label{classServoDescription_a260add37256676b422f92cd7331ede8c}} 
+\index{ServoDescription@{ServoDescription}!joint\_lower@{joint\_lower}}
+\index{joint\_lower@{joint\_lower}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{joint\_lower}{joint\_lower}}
+{\footnotesize\ttfamily float Servo\+Description\+::joint\+\_\+lower}
+
+
+
+Definition at line 24 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_ad341e00d12a3f4f2688461895cc4d617}\label{classServoDescription_ad341e00d12a3f4f2688461895cc4d617}} 
+\index{ServoDescription@{ServoDescription}!joint\_name@{joint\_name}}
+\index{joint\_name@{joint\_name}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{joint\_name}{joint\_name}}
+{\footnotesize\ttfamily std\+::string Servo\+Description\+::joint\+\_\+name}
+
+
+
+Definition at line 23 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_a3471d565e6be0538f61ccf9c666e9bdf}\label{classServoDescription_a3471d565e6be0538f61ccf9c666e9bdf}} 
+\index{ServoDescription@{ServoDescription}!joint\_upper@{joint\_upper}}
+\index{joint\_upper@{joint\_upper}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{joint\_upper}{joint\_upper}}
+{\footnotesize\ttfamily float Servo\+Description\+::joint\+\_\+upper}
+
+
+
+Definition at line 25 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_ae77953ec190417bc8bcbffd30c69c525}\label{classServoDescription_ae77953ec190417bc8bcbffd30c69c525}} 
+\index{ServoDescription@{ServoDescription}!rc\_channel@{rc\_channel}}
+\index{rc\_channel@{rc\_channel}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{rc\_channel}{rc\_channel}}
+{\footnotesize\ttfamily size\+\_\+t Servo\+Description\+::rc\+\_\+channel}
+
+
+
+Definition at line 27 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_a769eb578d438192da7b6012c52686ba7}\label{classServoDescription_a769eb578d438192da7b6012c52686ba7}} 
+\index{ServoDescription@{ServoDescription}!rc\_dz@{rc\_dz}}
+\index{rc\_dz@{rc\_dz}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{rc\_dz}{rc\_dz}}
+{\footnotesize\ttfamily uint16\+\_\+t Servo\+Description\+::rc\+\_\+dz}
+
+
+
+Definition at line 32 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_aff03b39826e42b6a5a1564fb15ee2b50}\label{classServoDescription_aff03b39826e42b6a5a1564fb15ee2b50}} 
+\index{ServoDescription@{ServoDescription}!rc\_max@{rc\_max}}
+\index{rc\_max@{rc\_max}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{rc\_max}{rc\_max}}
+{\footnotesize\ttfamily uint16\+\_\+t Servo\+Description\+::rc\+\_\+max}
+
+
+
+Definition at line 30 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_add84ff84b13562dcc72fb2a7d7f05990}\label{classServoDescription_add84ff84b13562dcc72fb2a7d7f05990}} 
+\index{ServoDescription@{ServoDescription}!rc\_min@{rc\_min}}
+\index{rc\_min@{rc\_min}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{rc\_min}{rc\_min}}
+{\footnotesize\ttfamily uint16\+\_\+t Servo\+Description\+::rc\+\_\+min}
+
+
+
+Definition at line 29 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_ace31258fe387d6edb10b35e31adffd93}\label{classServoDescription_ace31258fe387d6edb10b35e31adffd93}} 
+\index{ServoDescription@{ServoDescription}!rc\_rev@{rc\_rev}}
+\index{rc\_rev@{rc\_rev}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{rc\_rev}{rc\_rev}}
+{\footnotesize\ttfamily bool Servo\+Description\+::rc\+\_\+rev}
+
+
+
+Definition at line 33 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+\mbox{\Hypertarget{classServoDescription_a53f8532ce38683c545375dbc5e58d2e2}\label{classServoDescription_a53f8532ce38683c545375dbc5e58d2e2}} 
+\index{ServoDescription@{ServoDescription}!rc\_trim@{rc\_trim}}
+\index{rc\_trim@{rc\_trim}!ServoDescription@{ServoDescription}}
+\subsubsection{\texorpdfstring{rc\_trim}{rc\_trim}}
+{\footnotesize\ttfamily uint16\+\_\+t Servo\+Description\+::rc\+\_\+trim}
+
+
+
+Definition at line 31 of file servo\+\_\+state\+\_\+publisher.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eric/catkin\+\_\+ws/src/mavros/mavros\+\_\+extras/src/\mbox{\hyperlink{servo__state__publisher_8cpp}{servo\+\_\+state\+\_\+publisher.\+cpp}}\end{DoxyCompactItemize}
