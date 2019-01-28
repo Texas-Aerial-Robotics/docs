@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="group__control__functions" kind="group">
+    <compoundname>Control_functions</compoundname>
+    <title>Control_functions</title>
+    <innerclass refid="structcontrol__api__waypoint" prot="public">control_api_waypoint</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__control__functions_1ga92292bc0da7dd2a58edf8e9aa10eb682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_heading</definition>
+        <argsstring>(float heading)</argsstring>
+        <name>set_heading</name>
+        <param>
+          <type>float</type>
+          <declname>heading</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used to specify the drone’s heading in the local reference frame. Psi is a counter clockwise rotation following the drone’s reference frame defined by the x axis through the right side of the drone with the y axis through the front of the drone. <simplesect kind="return"><para>n/a </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="95" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="95" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1gab90a45d8b081ba329b9d0f886adbc2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_destination</definition>
+        <argsstring>(float x, float y, float z, float psi)</argsstring>
+        <name>set_destination</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>psi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used to command the drone to fly to a waypoint. These waypoints should be specified in the local reference frame. This is typically defined from the location the drone is launched. Psi is counter clockwise rotation following the drone’s reference frame defined by the x axis through the right side of the drone with the y axis through the front of the drone. <simplesect kind="return"><para>n/a </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="125" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="125" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1ga1921a30d419eb397f7e40875217b45d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wait4connect</definition>
+        <argsstring>()</argsstring>
+        <name>wait4connect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait for connect is a function that will hold the program until communication with the FCU is established. <simplesect kind="return"><para>0 - connected to fcu </para>
+</simplesect>
+<simplesect kind="return"><para>-1 - failed to connect to drone </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="150" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="150" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1gab6fe46f505ab9804b4ed98b96286a811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wait4start</definition>
+        <argsstring>()</argsstring>
+        <name>wait4start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait for strat will hold the program until the user signals the FCU to enther mode guided. This is typically done from a switch on the safety pilot’s remote or from the ground control station. <simplesect kind="return"><para>0 - mission started </para>
+</simplesect>
+<simplesect kind="return"><para>-1 - failed to start mission </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="176" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="176" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int initialize_local_frame</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_local_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will create a local reference frame based on the starting location of the drone. This is typically done right before takeoff. This reference frame is what all of the the set destination commands will be in reference to. <simplesect kind="return"><para>0 - frame initialized </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="198" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="198" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1gac0aa671c99c09687515ec5bb8891c7d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int takeoff</definition>
+        <argsstring>(float takeoff_alt)</argsstring>
+        <name>takeoff</name>
+        <param>
+          <type>float</type>
+          <declname>takeoff_alt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The takeoff function will arm the drone and put the drone in a hover above the initial position. <simplesect kind="return"><para>0 - nominal takeoff </para>
+</simplesect>
+<simplesect kind="return"><para>-1 - failed to arm </para>
+</simplesect>
+<simplesect kind="return"><para>-2 - failed to takeoff </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="228" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="228" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1ga54abc3f6eae022a8710bc0c2e1c54fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int check_waypoint_reached</definition>
+        <argsstring>()</argsstring>
+        <name>check_waypoint_reached</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns an int of 1 or 0. THis function can be used to check when to request the next waypoint in the mission. <simplesect kind="return"><para>1 - waypoint reached </para>
+</simplesect>
+<simplesect kind="return"><para>0 - waypoint not reached </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="275" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="275" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1ga52a11a139e56315de52d2ab439b0d203" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int land</definition>
+        <argsstring>()</argsstring>
+        <name>land</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this function changes the mode of the drone to land <simplesect kind="return"><para>1 - mode change successful </para>
+</simplesect>
+<simplesect kind="return"><para>0 - mode change not successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="298" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="298" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="group__control__functions_1gae693b071b5392f9253cdfc1f4f362fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int init_publisher_subscriber</definition>
+        <argsstring>(ros::NodeHandle controlnode)</argsstring>
+        <name>init_publisher_subscriber</name>
+        <param>
+          <type>ros::NodeHandle</type>
+          <declname>controlnode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called at the beginning of a program and will start of the communication links to the FCU. The function requires the program&apos;s ros nodehandle as an input <simplesect kind="return"><para>n/a </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="315" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="315" bodyend="325"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This module is designed to make high level control programming more simple. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

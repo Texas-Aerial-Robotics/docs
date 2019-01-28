@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_babf8438ea2b615b969b20d343e2db51" kind="dir">
+    <compoundname>/home/eric/catkin_ws/src/Mission8_OutOfControls/src</compoundname>
+    <innerfile refid="controlAPIExample_8cpp">controlAPIExample.cpp</innerfile>
+    <innerfile refid="flight_8cpp">flight.cpp</innerfile>
+    <innerfile refid="mission7FlightCode_8cpp">mission7FlightCode.cpp</innerfile>
+    <innerfile refid="positionEstimate_8cpp">positionEstimate.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/"/>
+  </compounddef>
+</doxygen>

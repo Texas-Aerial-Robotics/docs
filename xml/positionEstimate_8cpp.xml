@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="positionEstimate_8cpp" kind="file" language="C++">
+    <compoundname>positionEstimate.cpp</compoundname>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">geometry_msgs/TransformStamped.h</includes>
+    <includes local="no">geometry_msgs/PoseStamped.h</includes>
+    <includes local="no">mavros_msgs/OverrideRCIn.h</includes>
+    <includes local="no">gazebo_msgs/ModelStates.h</includes>
+    <includes local="no">geometry_msgs/Pose.h</includes>
+    <includes local="no">tf/transform_broadcaster.h</includes>
+    <includes local="no">nav_msgs/Odometry.h</includes>
+    <incdepgraph>
+      <node id="95">
+        <label>gazebo_msgs/ModelStates.h</label>
+      </node>
+      <node id="97">
+        <label>tf/transform_broadcaster.h</label>
+      </node>
+      <node id="98">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
+      <node id="90">
+        <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp</label>
+        <link refid="positionEstimate_8cpp"/>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>geometry_msgs/TransformStamped.h</label>
+      </node>
+      <node id="93">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="96">
+        <label>geometry_msgs/Pose.h</label>
+      </node>
+      <node id="91">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="94">
+        <label>mavros_msgs/OverrideRCIn.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="positionEstimate_8cpp_1a3d0c7085685bd9bdb621ac605a5f3626" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped currentDroneState</definition>
+        <argsstring></argsstring>
+        <name>currentDroneState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" line="10" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="positionEstimate_8cpp_1af377ee9edba63eb0f097170558286d94" prot="public" static="no" mutable="no">
+        <type>nav_msgs::Odometry</type>
+        <definition>nav_msgs::Odometry current_poseEKF</definition>
+        <argsstring></argsstring>
+        <name>current_poseEKF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" line="40" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="positionEstimate_8cpp_1a7922cff845bf3066c95151de415da9ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void model_cb</definition>
+        <argsstring>(const gazebo_msgs::ModelStates::ConstPtr &amp;msg)</argsstring>
+        <name>model_cb</name>
+        <param>
+          <type>const gazebo_msgs::ModelStates::ConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" line="13" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" bodystart="13" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="positionEstimate_8cpp_1afa0f9061a6152b26289dd2c93b295847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pose_cb</definition>
+        <argsstring>(const nav_msgs::Odometry::ConstPtr &amp;msg)</argsstring>
+        <name>pose_cb</name>
+        <param>
+          <type>const nav_msgs::Odometry::ConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" line="41" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="positionEstimate_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" line="48" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp" bodystart="48" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/positionEstimate.cpp"/>
+  </compounddef>
+</doxygen>

@@ -12,3 +12,5 @@ This site host the documentation for our projects.
 @ref yolo.md - This document explains how to use YOLO (You Only Look Once, a realtime image detection neural net)
 
 @ref yoloTraining.md - This document explains how to train YOLO to recognize your own objects 
+
+@ref monocular_uav.md - This package is designed to work hand in hand with YOLO and Ardupilot to give the UAV awareness of where detected objects are in the UAV's navigational frame. 

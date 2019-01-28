@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md_linux_commands" kind="page">
+    <compoundname>md_linux_commands</compoundname>
+    <title>Common Linux Commands</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><bold>cat</bold> - [filename] Display file’s contents to the standard output device (usually your monitor).</para>
+<para><bold>cd</bold> - /directorypath Change to directory.</para>
+<para><bold>chmod</bold> - [options] mode filename Change a file’s permissions.</para>
+<para><bold>chown</bold> - [options] filename Change who owns a file.</para>
+<para><bold>clear</bold> - Clear a command line screen/window for a fresh start.</para>
+<para><bold>cp</bold> - [options] source destination Copy files and directories.</para>
+<para><bold>date</bold> - [options] Display or set the system date and time.</para>
+<para><bold>df</bold> - [options] Display used and available disk space.</para>
+<para><bold>du</bold> - [options] Show how much space each file takes up.</para>
+<para><bold>file</bold> - [options] filename Determine what type of data is within a file.</para>
+<para><bold>find</bold> - [pathname] [expression] Search for files matching a provided pattern.</para>
+<para><bold>grep</bold> - [options] pattern [filesname] Search files or output for a particular pattern.</para>
+<para><bold>kill</bold> - [options] pid Stop a process. If the process refuses to stop, use kill -9 pid.</para>
+<para><bold>less</bold> - [options] [filename] View the contents of a file one page at a time.</para>
+<para><bold>ln</bold> - [options] source [destination] Create a shortcut. locate filename Search a copy of your filesystem for the specified filename.</para>
+<para><bold>lpr</bold> - [options] Send a print job.</para>
+<para><bold>ls</bold> - [options] List directory contents.</para>
+<para><bold>man</bold> - [command] Display the help information for the specified command.</para>
+<para><bold>mkdir</bold> - [options] directory Create a new directory.</para>
+<para><bold>mv</bold> - [options] source destination Rename or move file(s) or directories.</para>
+<para><bold>passwd</bold> - [name [password]] Change the password or allow (for the system administrator) to</para>
+<para><bold>change</bold> - any password.</para>
+<para><bold>ps</bold> - [options] Display a snapshot of the currently running processes.</para>
+<para><bold>pwd</bold> - Display the pathname for the current directory.</para>
+<para><bold>rm</bold> - [options] directory Remove (delete) file(s) and/or directories.</para>
+<para><bold>rmdir</bold> - [options] directory Delete empty directories.</para>
+<para><bold>ssh</bold> - [options] user@machine Remotely log in to another Linux machine, over the network.</para>
+<para><bold>Leave</bold> - an ssh session by typing exit.</para>
+<para><bold>su</bold> - [options] [user [arguments]] Switch to another user account.</para>
+<para><bold>tail</bold> - [options] [filename] Display the last n lines of a file (the default is 10).</para>
+<para><bold>tar</bold> - [options] filename Store and extract files from a tarfile (.tar) or tarball (.tar.gz or .tgz).</para>
+<para><bold>top</bold> - Displays the resources being used on your system. Press q to exit.</para>
+<para><bold>touch</bold> - filename Create an empty file with the specified name.</para>
+<para><bold>who</bold> - [options] Display who is logged on. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

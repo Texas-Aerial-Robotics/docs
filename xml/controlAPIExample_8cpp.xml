@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="controlAPIExample_8cpp" kind="file" language="C++">
+    <compoundname>controlAPIExample.cpp</compoundname>
+    <includes refid="control__functions_8hpp" local="no">control_functions.hpp</includes>
+    <incdepgraph>
+      <node id="49">
+        <label>ros/duration.h</label>
+      </node>
+      <node id="44">
+        <label>mavros_msgs/CommandBool.h</label>
+      </node>
+      <node id="35">
+        <label>mavros_msgs/State.h</label>
+      </node>
+      <node id="39">
+        <label>cmath</label>
+      </node>
+      <node id="36">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
+      <node id="42">
+        <label>std_msgs/Float64.h</label>
+      </node>
+      <node id="33">
+        <label>control_functions.hpp</label>
+        <link refid="control__functions_8hpp"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="47">
+        <label>unistd.h</label>
+      </node>
+      <node id="48">
+        <label>vector</label>
+      </node>
+      <node id="34">
+        <label>mavros_msgs/CommandTOL.h</label>
+      </node>
+      <node id="45">
+        <label>mavros_msgs/SetMode.h</label>
+      </node>
+      <node id="37">
+        <label>geometry_msgs/Pose.h</label>
+      </node>
+      <node id="41">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="40">
+        <label>math.h</label>
+      </node>
+      <node id="43">
+        <label>std_msgs/String.h</label>
+      </node>
+      <node id="50">
+        <label>iostream</label>
+      </node>
+      <node id="32">
+        <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/src/controlAPIExample.cpp</label>
+        <link refid="controlAPIExample_8cpp"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>mavros_msgs/PositionTarget.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="controlAPIExample_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/controlAPIExample.cpp" line="4" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/controlAPIExample.cpp" bodystart="4" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/controlAPIExample.cpp"/>
+  </compounddef>
+</doxygen>

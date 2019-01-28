@@ -12,26 +12,33 @@ A simple tool for labeling object bounding boxes in images, implemented with Pyt
 
 The following are a modified version of the instructions found on the yolo website
 
+{\itshape 1.} Strat by collecting images. the goal is to collect close to 500 img/class
 
-\begin{DoxyEnumerate}
-\item Strat by collecting images. the goal is to collect close to 500 img/class
-\item create a new folder in B\+Box-\/\+Label-\/\+Tool/\+Images
-\item For multi-\/class task, modify \textquotesingle{}class.\+txt\textquotesingle{} with your own class-\/candidates and before labeling bbox,
-\item run main.\+py and annotate images. The current tool requires that {\bfseries{the images to be labeled reside in /\+Images/001, /\+Images/002, etc. You will need to modify the code if you want to label images elsewhere}}. For multi-\/class choose the \textquotesingle{}Current Class\textquotesingle{} in the Combobox and make sure you click \textquotesingle{}Comfirm\+Class\textquotesingle{} button.
-\item To create a new bounding box, left-\/click to select the first vertex. Moving the mouse to draw a rectangle, and left-\/click again to select the second vertex.
+{\itshape 2.} create a new folder in B\+Box-\/\+Label-\/\+Tool/\+Images
+
+{\itshape 3.} For multi-\/class task, modify \textquotesingle{}class.\+txt\textquotesingle{} with your own class-\/candidates and before labeling bbox,
+
+{\itshape 4.} run main.\+py and annotate images. The current tool requires that {\bfseries{the images to be labeled reside in /\+Images/001, /\+Images/002, etc. You will need to modify the code if you want to label images elsewhere}}. For multi-\/class choose the \textquotesingle{}Current Class\textquotesingle{} in the Combobox and make sure you click \textquotesingle{}Comfirm\+Class\textquotesingle{} button.
+
+{\itshape 5.} To create a new bounding box, left-\/click to select the first vertex. Moving the mouse to draw a rectangle, and left-\/click again to select the second vertex.
 \begin{DoxyItemize}
 \item To cancel the bounding box while drawing, just press {\ttfamily $<$Esc$>$}.
 \item To delete a existing bounding box, select it from the listbox, and click {\ttfamily Delete}.
 \item To delete all existing bounding boxes in the image, simply click {\ttfamily Clear\+All}.
 \end{DoxyItemize}
-\item After finishing one image, click {\ttfamily Next} to advance. Likewise, click {\ttfamily Prev} to reverse. Or, input an image id and click {\ttfamily Go} to navigate to the speficied image.
+
+{\itshape 6.} After finishing one image, click {\ttfamily Next} to advance. Likewise, click {\ttfamily Prev} to reverse. Or, input an image id and click {\ttfamily Go} to navigate to the speficied image.
 \begin{DoxyItemize}
 \item Be sure to click {\ttfamily Next} after finishing a image, or the result won\textquotesingle{}t be saved.
 \end{DoxyItemize}
-\item run the convert.\+py script to format the annotations in yolo form
-\item combine jour dataset\+\_\+list files using your favorite text editor into train.\+txt and test.\+txt. It is recommended to not train on one of your data sets to use as a accuracy metric.
-\item Set up the darknet config.
-\end{DoxyEnumerate}
+
+{\itshape 7.} run the convert.\+py script to format the annotations in yolo form
+
+{\itshape 8.} combine jour dataset\+\_\+list files using your favorite text editor into train.\+txt and test.\+txt. It is recommended to not train on one of your data sets to use as a accuracy metric.
+
+{\itshape 9.} Set up the darknet config.
+
+
 \begin{DoxyItemize}
 \item Create a file in darknet/cfg with the name $<$nameofdata$>$.data
 \item Create a folder to store the output weights in. ex /home/eric/backup 
@@ -44,9 +51,8 @@ The following are a modified version of the instructions found on the yolo websi
 \end{DoxyCode}
 
 \end{DoxyItemize}
-\begin{DoxyEnumerate}
-\item run {\ttfamily ./darknet detector train cfg/$<$nameofdata$>$.data cfg/yolov3.\+cfg $<$weights(if you want to continue training from a backup)$>$}
-\end{DoxyEnumerate}
+
+{\itshape 10.} run {\ttfamily ./darknet detector train cfg/$<$nameofdata$>$.data cfg/yolov3.\+cfg $<$weights(if you want to continue training from a backup)$>$}
 
 {\bfseries{Screenshot\+:}} 
 
@@ -54,20 +60,16 @@ The following are a modified version of the instructions found on the yolo websi
 
 Label\+Tool
 
-$\vert$
+$\ast$$\ast$ $\vert$$\ast$$\ast$
 
-$\vert$--main.\+py $\ast$\# source code for the tool$\ast$
+$\ast$$\ast$$\vert$ --main.\+py source code for the tool$\ast$$\ast$
 
-$\vert$
+$\ast$$\ast$ $\vert$$\ast$$\ast$
 
-$\vert$--Images/ $\ast$\# direcotry containing the images to be labeled$\ast$
+$\ast$$\ast$$\vert$ --Images/ {\bfseries{direcotry containing the images to be labeled}} $\ast$$\ast$ $\vert$$\ast$$\ast$
 
-$\vert$
+$\ast$$\ast$ $\vert$ --Labels/ {\bfseries{direcotry for the labeling results}}
 
-$\vert$--Labels/ $\ast$\# direcotry for the labeling results$\ast$
+$\ast$$\ast$ $\vert$ $\ast$$\ast$ $\ast$$\ast$$\vert$ --Labels-\/\+Yolo-\/\+Format {\bfseries{direcotry for the labeling results in yolo readable format}} $\ast$$\ast$$\vert$$\ast$$\ast$
 
-$\vert$ $\vert$--Labels-\/\+Yolo-\/\+Format $\ast$\# direcotry for the labeling results in yolo readable format$\ast$
-
-$\vert$
-
-$\vert$--Examples/ $\ast$\# direcotry for the example bboxes$\ast$ 
+$\ast$$\ast$$\vert$$\ast$$\ast$ --Examples/ {\bfseries{direcotry for the example bboxes}} 

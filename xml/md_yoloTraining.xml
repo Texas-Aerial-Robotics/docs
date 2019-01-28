@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md_yoloTraining" kind="page">
+    <compoundname>md_yoloTraining</compoundname>
+    <title>Training YOLO with BBox-Label-Tool</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A simple tool for labeling object bounding boxes in images, implemented with Python Tkinter.</para>
+<para><heading level="2">Dependencies</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>python-imaging-tk</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">Training instructions</heading>
+</para>
+<para>The following are a modified version of the instructions found on the yolo website</para>
+<para><emphasis>1.</emphasis> Strat by collecting images. the goal is to collect close to 500 img/class</para>
+<para><emphasis>2.</emphasis> create a new folder in BBox-Label-Tool/Images</para>
+<para><emphasis>3.</emphasis> For multi-class task, modify &apos;class.txt&apos; with your own class-candidates and before labeling bbox,</para>
+<para><emphasis>4.</emphasis> run main.py and annotate images. The current tool requires that <bold>the images to be labeled reside in /Images/001, /Images/002, etc. You will need to modify the code if you want to label images elsewhere</bold>. For multi-class choose the &apos;Current Class&apos; in the Combobox and make sure you click &apos;ComfirmClass&apos; button.</para>
+<para><emphasis>5.</emphasis> To create a new bounding box, left-click to select the first vertex. Moving the mouse to draw a rectangle, and left-click again to select the second vertex.<itemizedlist>
+<listitem><para>To cancel the bounding box while drawing, just press <computeroutput>&lt;Esc&gt;</computeroutput>.</para>
+</listitem><listitem><para>To delete a existing bounding box, select it from the listbox, and click <computeroutput>Delete</computeroutput>.</para>
+</listitem><listitem><para>To delete all existing bounding boxes in the image, simply click <computeroutput>ClearAll</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><emphasis>6.</emphasis> After finishing one image, click <computeroutput>Next</computeroutput> to advance. Likewise, click <computeroutput>Prev</computeroutput> to reverse. Or, input an image id and click <computeroutput>Go</computeroutput> to navigate to the speficied image.<itemizedlist>
+<listitem><para>Be sure to click <computeroutput>Next</computeroutput> after finishing a image, or the result won&apos;t be saved.</para>
+</listitem></itemizedlist>
+</para>
+<para><emphasis>7.</emphasis> run the convert.py script to format the annotations in yolo form</para>
+<para><emphasis>8.</emphasis> combine jour dataset_list files using your favorite text editor into train.txt and test.txt. It is recommended to not train on one of your data sets to use as a accuracy metric.</para>
+<para><emphasis>9.</emphasis> Set up the darknet config.</para>
+<para><itemizedlist>
+<listitem><para>Create a file in darknet/cfg with the name &lt;nameofdata&gt;.data</para>
+</listitem><listitem><para>Create a folder to store the output weights in. ex /home/eric/backup <programlisting><codeline><highlight class="normal">1<sp/>classes=<sp/>20</highlight></codeline>
+<codeline><highlight class="normal">2<sp/>train<sp/><sp/>=<sp/>&lt;path-to-data&gt;/train.txt</highlight></codeline>
+<codeline><highlight class="normal">3<sp/>valid<sp/><sp/>=<sp/>&lt;path-to-data&gt;/test.txt</highlight></codeline>
+<codeline><highlight class="normal">4<sp/>names<sp/>=<sp/>data/voc.names</highlight></codeline>
+<codeline><highlight class="normal">5<sp/>backup<sp/>=<sp/>&lt;path-to-backup-folder&gt;</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para><emphasis>10.</emphasis> run <computeroutput>./darknet detector train cfg/&lt;nameofdata&gt;.data cfg/yolov3.cfg &lt;weights(if you want to continue training from a backup)&gt;</computeroutput></para>
+<para><bold>Screenshot:</bold> <image type="html" name="screenshot.png" inline="yes"></image>
+</para>
+<para><heading level="2">Data Organization </heading>
+</para>
+<para>LabelTool</para>
+<para>** |**</para>
+<para>**| <ndash/>main.py source code for the tool**</para>
+<para>** |**</para>
+<para>**| <ndash/>Images/ <bold>direcotry containing the images to be labeled</bold> ** |**</para>
+<para>** | <ndash/>Labels/ <bold>direcotry for the labeling results</bold></para>
+<para>** | ** **| <ndash/>Labels-Yolo-Format <bold>direcotry for the labeling results in yolo readable format</bold> **|**</para>
+<para>**|** <ndash/>Examples/ <bold>direcotry for the example bboxes</bold> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

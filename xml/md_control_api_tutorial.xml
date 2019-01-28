@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md_control_api_tutorial" kind="page">
+    <compoundname>md_control_api_tutorial</compoundname>
+    <title>Control API</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The below functions will help you to easily create highlevel path planning programs. This API is designed to be used with the ArduCopter flight stack. <ref refid="group__control__functions" kindref="compound">Control_functions</ref></para>
+<para>The below code is a simple example that executes a square flight pattern. <ref refid="controlAPIExample_8cpp" kindref="compound">src/controlAPIExample.cpp</ref></para>
+<para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;control_functions.hpp&gt;</highlight></codeline>
+<codeline><highlight class="normal">//include<sp/>API<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(int<sp/>argc,<sp/>char**<sp/>argv)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//initialize<sp/>ros<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ros::init(argc,<sp/>argv,<sp/>&quot;offb_node&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>controlnode;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//initialize<sp/>control<sp/>publisher/subscribers</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>init_publisher_subscriber(controlnode);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//specify<sp/>some<sp/>waypoints<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;control_api_waypoint&gt;<sp/>waypointList;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>control_api_waypoint<sp/>nextWayPoint;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.psi<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.x<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.psi<sp/>=<sp/>-90;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.x<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.y<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.psi<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.y<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.psi<sp/>=<sp/>90;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nextWayPoint.psi<sp/>=<sp/>180;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>wait<sp/>for<sp/>FCU<sp/>connection</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wait4connect();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//wait<sp/>for<sp/>used<sp/>to<sp/>switch<sp/>to<sp/>mode<sp/>GUIDED</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wait4start();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//create<sp/>local<sp/>reference<sp/>frame<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>initialize_local_frame();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//request<sp/>takeoff</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>takeoff(3);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//specify<sp/>control<sp/>loop<sp/>rate.<sp/>We<sp/>recommend<sp/>a<sp/>low<sp/>frequency<sp/>to<sp/>not<sp/>over<sp/>load<sp/>the<sp/>FCU<sp/>with<sp/>messages.<sp/>Too<sp/>many<sp/>messages<sp/>will<sp/>cause<sp/>the<sp/>drone<sp/>to<sp/>be<sp/>sluggish</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ros::Rate<sp/>rate(2.0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while(ros::ok())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::spinOnce();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rate.sleep();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(check_waypoint_reached()<sp/>==<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(counter<sp/>&lt;<sp/>waypointList.size())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_destination(waypointList[counter].x,waypointList[counter].y,waypointList[counter].z,<sp/>waypointList[counter].psi);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>counter++;<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}else{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//land<sp/>after<sp/>all<sp/>waypoints<sp/>are<sp/>reached</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>land();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> <heading level="2">run example code </heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">roslaunch<sp/>mission8_sim<sp/>droneOnly.launch</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>New<sp/>Terminal</highlight></codeline>
+<codeline><highlight class="normal">~/catkin_ws/src/Mission8_OutOfControls/scripts/startsim.sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>New<sp/>Terminal</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>out_of_controls<sp/>apm.launch</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>New<sp/>Terminal<sp/></highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>out_of_controls<sp/>contolAPIExample.launch</highlight></codeline>
+</programlisting> NOTE** you can tile gnome terminals by pressing <computeroutput>ctrl + shift + t</computeroutput> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

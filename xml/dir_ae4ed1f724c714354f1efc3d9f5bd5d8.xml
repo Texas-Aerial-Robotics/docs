@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_ae4ed1f724c714354f1efc3d9f5bd5d8" kind="dir">
+    <compoundname>/home/eric/catkin_ws/src/Mission8_OutOfControls/include</compoundname>
+    <innerfile refid="control__functions_8hpp">control_functions.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="structcontrol__api__waypoint" kind="struct"><name>control_api_waypoint</name>
+    <member refid="structcontrol__api__waypoint_1a381813ee0649f54116dec8d8ed78b26e" kind="variable"><name>x</name></member>
+    <member refid="structcontrol__api__waypoint_1ac92d8860930259ccb19aa91072d94546" kind="variable"><name>y</name></member>
+    <member refid="structcontrol__api__waypoint_1af77b8d62f18d1b4c1884b46147751b49" kind="variable"><name>z</name></member>
+    <member refid="structcontrol__api__waypoint_1a053fed6c42cdeda2029d2db548f357b4" kind="variable"><name>psi</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="control__api__tutorial_8md" kind="file"><name>control_api_tutorial.md</name>
+  </compound>
+  <compound refid="enviorment__setup_8md" kind="file"><name>enviorment_setup.md</name>
+  </compound>
+  <compound refid="linux__commands_8md" kind="file"><name>linux_commands.md</name>
+  </compound>
+  <compound refid="mainpage_8md" kind="file"><name>mainpage.md</name>
+  </compound>
+  <compound refid="yolo_8md" kind="file"><name>yolo.md</name>
+  </compound>
+  <compound refid="yoloTraining_8md" kind="file"><name>yoloTraining.md</name>
+  </compound>
+  <compound refid="control__functions_8hpp" kind="file"><name>control_functions.hpp</name>
+    <member refid="control__functions_8hpp_1a8bc52f8ef68bfae1449aa646ae5a2517" kind="variable"><name>current_state_g</name></member>
+    <member refid="control__functions_8hpp_1a9194a07fdb9b49db0ec08e2030bb430c" kind="variable"><name>current_pose_g</name></member>
+    <member refid="control__functions_8hpp_1a2856577bd2f84b0267b4ad5e0678f782" kind="variable"><name>correction_vector_g</name></member>
+    <member refid="control__functions_8hpp_1a571aa9dcfa0f6cdd083a500f4c2afa8c" kind="variable"><name>waypoint_g</name></member>
+    <member refid="control__functions_8hpp_1a45fa7796dace886b88ae107e8df70f05" kind="variable"><name>current_heading_g</name></member>
+    <member refid="control__functions_8hpp_1ac5d8c17b47e49fd67af5228669685519" kind="variable"><name>local_offset_g</name></member>
+    <member refid="control__functions_8hpp_1a65752133259c7b2fe178effd597c209d" kind="variable"><name>correction_heading_g</name></member>
+    <member refid="control__functions_8hpp_1a65a6f082f57b092ecc9865c4353c985c" kind="variable"><name>local_pos_pub</name></member>
+    <member refid="control__functions_8hpp_1a4d60095ec8c7649007a635c590191719" kind="variable"><name>currentPos</name></member>
+    <member refid="control__functions_8hpp_1a9942c17e2c44d81a6ea10f172fc89d12" kind="variable"><name>state_sub</name></member>
+    <member refid="control__functions_8hpp_1a6b8479ae21fd3e8eefb9902262292af5" kind="variable"><name>arming_client</name></member>
+    <member refid="control__functions_8hpp_1abbc28c8607153c3050ffc2eba393728b" kind="variable"><name>land_client</name></member>
+    <member refid="control__functions_8hpp_1ac1a884373bfb9dc7f8dff66be8033421" kind="variable"><name>set_mode_client</name></member>
+    <member refid="control__functions_8hpp_1aec70101dd7479fcb0f549dde9f1d0789" kind="variable"><name>takeoff_client</name></member>
+    <member refid="control__functions_8hpp_1a05b0e3da49b65a1eb9907815a9a894a8" kind="function"><name>state_cb</name></member>
+    <member refid="control__functions_8hpp_1ad6fa52a9ddec6f2104e49f30ec1b4605" kind="function"><name>enu_2_local</name></member>
+    <member refid="control__functions_8hpp_1afa0f9061a6152b26289dd2c93b295847" kind="function"><name>pose_cb</name></member>
+    <member refid="group__control__functions_1ga92292bc0da7dd2a58edf8e9aa10eb682" kind="function"><name>set_heading</name></member>
+    <member refid="group__control__functions_1gab90a45d8b081ba329b9d0f886adbc2d5" kind="function"><name>set_destination</name></member>
+    <member refid="group__control__functions_1ga1921a30d419eb397f7e40875217b45d1" kind="function"><name>wait4connect</name></member>
+    <member refid="group__control__functions_1gab6fe46f505ab9804b4ed98b96286a811" kind="function"><name>wait4start</name></member>
+    <member refid="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" kind="function"><name>initialize_local_frame</name></member>
+    <member refid="group__control__functions_1gac0aa671c99c09687515ec5bb8891c7d2" kind="function"><name>takeoff</name></member>
+    <member refid="group__control__functions_1ga54abc3f6eae022a8710bc0c2e1c54fbe" kind="function"><name>check_waypoint_reached</name></member>
+    <member refid="group__control__functions_1ga52a11a139e56315de52d2ab439b0d203" kind="function"><name>land</name></member>
+    <member refid="group__control__functions_1gae693b071b5392f9253cdfc1f4f362fcc" kind="function"><name>init_publisher_subscriber</name></member>
+  </compound>
+  <compound refid="controlAPIExample_8cpp" kind="file"><name>controlAPIExample.cpp</name>
+    <member refid="controlAPIExample_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="flight_8cpp" kind="file"><name>flight.cpp</name>
+    <member refid="flight_8cpp_1aa03a6f341db74b895fa5c862973dd941" kind="variable"><name>current_state</name></member>
+    <member refid="flight_8cpp_1abd2869bcb1ae0d4d93896909e70930e7" kind="variable"><name>current_pose</name></member>
+    <member refid="flight_8cpp_1aeae70abce814c854b8bf3c2c1dea5d40" kind="variable"><name>pose</name></member>
+    <member refid="flight_8cpp_1a789b24bd49a5da0f2134739639555add" kind="variable"><name>current_heading</name></member>
+    <member refid="flight_8cpp_1a1bfd9feb2dd11b3f55fa3f191f021115" kind="variable"><name>GYM_OFFSET</name></member>
+    <member refid="flight_8cpp_1a05b0e3da49b65a1eb9907815a9a894a8" kind="function"><name>state_cb</name></member>
+    <member refid="flight_8cpp_1a8a016ae63cb84f9f8b2f440ba33aa729" kind="function"><name>pose_cb</name></member>
+    <member refid="flight_8cpp_1a85853a76977344d78280db3faca9aa80" kind="function"><name>heading_cb</name></member>
+    <member refid="flight_8cpp_1a9c3baea5ae305330b4692ba0f8b23869" kind="function"><name>setHeading</name></member>
+    <member refid="flight_8cpp_1af7166d52af865f29695cb0746d47918e" kind="function"><name>setDestination</name></member>
+    <member refid="flight_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="mission7FlightCode_8cpp" kind="file"><name>mission7FlightCode.cpp</name>
+    <member refid="mission7FlightCode_8cpp_1aa03a6f341db74b895fa5c862973dd941" kind="variable"><name>current_state</name></member>
+    <member refid="mission7FlightCode_8cpp_1ab9674253569259608088097e713c6905" kind="variable"><name>current_pose</name></member>
+    <member refid="mission7FlightCode_8cpp_1aa4390e7b823c95c4e2bebd1506fc2159" kind="variable"><name>waypoint</name></member>
+    <member refid="mission7FlightCode_8cpp_1a4ddf1a7e9c3afbd07ef62141e50ee3b6" kind="variable"><name>current_2D_scan</name></member>
+    <member refid="mission7FlightCode_8cpp_1a15cc75999325ccc746ad616cc6ffcf63" kind="variable"><name>MODE</name></member>
+    <member refid="mission7FlightCode_8cpp_1a1bfd9feb2dd11b3f55fa3f191f021115" kind="variable"><name>GYM_OFFSET</name></member>
+    <member refid="mission7FlightCode_8cpp_1ab56799f110a6fbd87dc59c9c171516dc" kind="variable"><name>x_min</name></member>
+    <member refid="mission7FlightCode_8cpp_1a73fc13d83638687d92d5ccf9e4fe1722" kind="variable"><name>x_max</name></member>
+    <member refid="mission7FlightCode_8cpp_1a82405015dd45042774ac84009224bfe0" kind="variable"><name>y_min</name></member>
+    <member refid="mission7FlightCode_8cpp_1af518e87d5d4659e5d34c34c39253be31" kind="variable"><name>y_max</name></member>
+    <member refid="mission7FlightCode_8cpp_1ab7008d31ac4fa776d1bb38fa9aaf88d2" kind="variable"><name>z_min</name></member>
+    <member refid="mission7FlightCode_8cpp_1aff08dd48e7d75394795f798133985c94" kind="variable"><name>z_max</name></member>
+    <member refid="mission7FlightCode_8cpp_1a04f048796d0d4e419e496b6193721e87" kind="variable"><name>current_heading</name></member>
+    <member refid="mission7FlightCode_8cpp_1ad707d221b70a1d0ebe24cb530a3aa09c" kind="variable"><name>RUN_START_TIME</name></member>
+    <member refid="mission7FlightCode_8cpp_1a802a2f6341dc295ea76ed453b77293fc" kind="variable"><name>currentlyAvoiding</name></member>
+    <member refid="mission7FlightCode_8cpp_1addf26ee3727868d6c79dd00ad259a8ed" kind="variable"><name>lidarPresent</name></member>
+    <member refid="mission7FlightCode_8cpp_1a05b0e3da49b65a1eb9907815a9a894a8" kind="function"><name>state_cb</name></member>
+    <member refid="mission7FlightCode_8cpp_1afa0f9061a6152b26289dd2c93b295847" kind="function"><name>pose_cb</name></member>
+    <member refid="mission7FlightCode_8cpp_1a7904bc657e27f34a45a8b7bd594fbc8e" kind="function"><name>mode_cb</name></member>
+    <member refid="mission7FlightCode_8cpp_1ac02bc66977d69b6ca40c35c689b15289" kind="function"><name>scan_cb</name></member>
+    <member refid="mission7FlightCode_8cpp_1a9c3baea5ae305330b4692ba0f8b23869" kind="function"><name>setHeading</name></member>
+    <member refid="mission7FlightCode_8cpp_1ae70ce96a1c22c8518aa262a3232889d5" kind="function"><name>setHeading_cb</name></member>
+    <member refid="mission7FlightCode_8cpp_1af7166d52af865f29695cb0746d47918e" kind="function"><name>setDestination</name></member>
+    <member refid="mission7FlightCode_8cpp_1a13da7683d4a37f0a180cd00e3ad04ff0" kind="function"><name>init_ros</name></member>
+    <member refid="mission7FlightCode_8cpp_1ad855d0dc2b0026beae4b33caffdc7ac2" kind="function"><name>waypoint_update</name></member>
+    <member refid="mission7FlightCode_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="positionEstimate_8cpp" kind="file"><name>positionEstimate.cpp</name>
+    <member refid="positionEstimate_8cpp_1a3d0c7085685bd9bdb621ac605a5f3626" kind="variable"><name>currentDroneState</name></member>
+    <member refid="positionEstimate_8cpp_1af377ee9edba63eb0f097170558286d94" kind="variable"><name>current_poseEKF</name></member>
+    <member refid="positionEstimate_8cpp_1a7922cff845bf3066c95151de415da9ab" kind="function"><name>model_cb</name></member>
+    <member refid="positionEstimate_8cpp_1afa0f9061a6152b26289dd2c93b295847" kind="function"><name>pose_cb</name></member>
+    <member refid="positionEstimate_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="group__control__functions" kind="group"><name>Control_functions</name>
+    <member refid="group__control__functions_1ga92292bc0da7dd2a58edf8e9aa10eb682" kind="function"><name>set_heading</name></member>
+    <member refid="group__control__functions_1gab90a45d8b081ba329b9d0f886adbc2d5" kind="function"><name>set_destination</name></member>
+    <member refid="group__control__functions_1ga1921a30d419eb397f7e40875217b45d1" kind="function"><name>wait4connect</name></member>
+    <member refid="group__control__functions_1gab6fe46f505ab9804b4ed98b96286a811" kind="function"><name>wait4start</name></member>
+    <member refid="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" kind="function"><name>initialize_local_frame</name></member>
+    <member refid="group__control__functions_1gac0aa671c99c09687515ec5bb8891c7d2" kind="function"><name>takeoff</name></member>
+    <member refid="group__control__functions_1ga54abc3f6eae022a8710bc0c2e1c54fbe" kind="function"><name>check_waypoint_reached</name></member>
+    <member refid="group__control__functions_1ga52a11a139e56315de52d2ab439b0d203" kind="function"><name>land</name></member>
+    <member refid="group__control__functions_1gae693b071b5392f9253cdfc1f4f362fcc" kind="function"><name>init_publisher_subscriber</name></member>
+  </compound>
+  <compound refid="md_control_api_tutorial" kind="page"><name>md_control_api_tutorial</name>
+  </compound>
+  <compound refid="md_enviorment_setup" kind="page"><name>md_enviorment_setup</name>
+  </compound>
+  <compound refid="md_linux_commands" kind="page"><name>md_linux_commands</name>
+  </compound>
+  <compound refid="md_yolo" kind="page"><name>md_yolo</name>
+  </compound>
+  <compound refid="md_yoloTraining" kind="page"><name>md_yoloTraining</name>
+  </compound>
+  <compound refid="dir_ae4ed1f724c714354f1efc3d9f5bd5d8" kind="dir"><name>/home/eric/catkin_ws/src/Mission8_OutOfControls/include</name>
+  </compound>
+  <compound refid="dir_618e0ee19e61aa486ff3883c198b47c5" kind="dir"><name>/home/eric/catkin_ws/src/Mission8_OutOfControls</name>
+  </compound>
+  <compound refid="dir_babf8438ea2b615b969b20d343e2db51" kind="dir"><name>/home/eric/catkin_ws/src/Mission8_OutOfControls/src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

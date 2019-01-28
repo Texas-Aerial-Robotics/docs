@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md__home_eric_catkin_ws_src_Mission8_OutOfControls_docs_enviorment_setup" kind="page">
+    <compoundname>md__home_eric_catkin_ws_src_Mission8_OutOfControls_docs_enviorment_setup</compoundname>
+    <title>Enviroment Setup Instructions</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Texas Aerial Robotics uses a variety of software packages. Some of these include, ROS, Arducopter, MAVROS, ect.</para>
+<para>We use <bold>Ubuntu 18.04</bold> and <bold>ROS Melodic</bold></para>
+<para>Note that there is a <bold>Troubleshooting</bold> section at the bottom of this page.</para>
+<para>Code blocks are meant to be typed in Terminal windows. &quot;Control+Alt+T&quot; opens a new Terminal window.</para>
+<para><heading level="2">1. Install ROS</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>Do <emphasis>Desktop Install</emphasis></para>
+</listitem><listitem><para>Follow until <emphasis>Step 1.7</emphasis> at the end of the page</para>
+</listitem></itemizedlist>
+</para>
+<para>First, install <bold>ROS Melodic</bold> using the following instructions: <ulink url="http://wiki.ros.org/melodic/Installation/Ubuntu">http://wiki.ros.org/melodic/Installation/Ubuntu</ulink></para>
+<para><heading level="2">2. Set Up Catkin workspace</heading>
+</para>
+<para>We use <computeroutput>catkin build</computeroutput> instead of <computeroutput>catkin_make</computeroutput>. Please install the following: <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>python-wstool<sp/>python-rosinstall-generator<sp/>python-catkin-tools</highlight></codeline>
+</programlisting></para>
+<para>Then, initialize the catkin workspace: <programlisting><codeline><highlight class="normal">mkdir<sp/>-p<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>~/catkin_ws</highlight></codeline>
+<codeline><highlight class="normal">catkin<sp/>init</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">3. Dependencies installation</heading>
+</para>
+<para>Install <computeroutput>mavros</computeroutput> and <computeroutput>mavlink</computeroutput> from source: <programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws</highlight></codeline>
+<codeline><highlight class="normal">wstool<sp/>init<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosinstall_generator<sp/>--upstream<sp/>mavros<sp/>|<sp/>tee<sp/>/tmp/mavros.rosinstall</highlight></codeline>
+<codeline><highlight class="normal">rosinstall_generator<sp/>mavlink<sp/>|<sp/>tee<sp/>-a<sp/>/tmp/mavros.rosinstall</highlight></codeline>
+<codeline><highlight class="normal">wstool<sp/>merge<sp/>-t<sp/>src<sp/>/tmp/mavros.rosinstall</highlight></codeline>
+<codeline><highlight class="normal">wstool<sp/>update<sp/>-t<sp/>src</highlight></codeline>
+<codeline><highlight class="normal">rosdep<sp/>install<sp/>--from-paths<sp/>src<sp/>--ignore-src<sp/>--rosdistro<sp/>`echo<sp/>$ROS_DISTRO`<sp/>-y</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">catkin<sp/>build</highlight></codeline>
+</programlisting></para>
+<para>Open your <computeroutput>~/.bashrc</computeroutput> for editing: <programlisting><codeline><highlight class="normal">gedit<sp/>~/.bashrc</highlight></codeline>
+</programlisting></para>
+<para>Add this line to end of <computeroutput>~/.bashrc</computeroutput>: <programlisting><codeline><highlight class="normal">source<sp/>~/catkin_ws/devel/setup.bash</highlight></codeline>
+</programlisting> Save and exit. Then run: <programlisting><codeline><highlight class="normal">source<sp/>~/.bashrc</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">4. Clone our ROS package repository</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/Mission8_OutOfControls.git</highlight></codeline>
+</programlisting> Our repository should now be copied to <computeroutput>~/catkin_ws/src/Mission8_OutOfControls/</computeroutput> (don&apos;t run this line. This is just saying that if you browse in the file manager, you will see those folders).</para>
+<para><heading level="2">5. Build instructions</heading>
+</para>
+<para>Inside <computeroutput>catkin_ws</computeroutput>, run <computeroutput>catkin build</computeroutput>:</para>
+<para><programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws</highlight></codeline>
+<codeline><highlight class="normal">catkin<sp/>build</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">6. Install Ardupilot</heading>
+</para>
+<para>In home directory: <programlisting><codeline><highlight class="normal">cd<sp/>~</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/ardupilot.git</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>ardupilot</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>checkout<sp/>Copter-3.5</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>submodule<sp/>update<sp/>--init<sp/>--recursive</highlight></codeline>
+</programlisting></para>
+<para>Install some packages: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>python-matplotlib<sp/>python-serial<sp/>python-wxgtk3.0<sp/>python-wxtools<sp/>python-lxml<sp/>python-scipy<sp/>python-opencv<sp/>ccache<sp/>gawk<sp/>git<sp/>python-pip<sp/>python-pexpect</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>pip2<sp/>install<sp/>future<sp/>pymavlink<sp/>MAVProxy</highlight></codeline>
+</programlisting></para>
+<para>Open <computeroutput>~/.bashrc</computeroutput> for editing: <programlisting><codeline><highlight class="normal">gedit<sp/>~/.bashrc</highlight></codeline>
+</programlisting></para>
+<para>Add these lines to end of <computeroutput>~/.bashrc</computeroutput> (the file open in the text editor): <programlisting><codeline><highlight class="normal">export<sp/>PATH=$PATH:$HOME/ardupilot/Tools/autotest</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>PATH=/usr/lib/ccache:$PATH</highlight></codeline>
+</programlisting></para>
+<para>Save and close the text editor.</para>
+<para>Reload <computeroutput>~/.bashrc</computeroutput>: <programlisting><codeline><highlight class="normal">.<sp/>~/.bashrc</highlight></codeline>
+</programlisting></para>
+<para>Run SITL (Software In The Loop) once to set params: <programlisting><codeline><highlight class="normal">cd<sp/>~/ardupilot/ArduCopter</highlight></codeline>
+<codeline><highlight class="normal">sim_vehicle.py<sp/>-w</highlight></codeline>
+</programlisting></para>
+<para>Once the new Terminal window pops up and you see the ArduPilot software say &quot;READY TO FLY,&quot; you can kill the process by hitting &quot;Control+C&quot; in the Terminal it is running out of.</para>
+<para><heading level="2">7. Install Gazebo</heading>
+</para>
+<para>Setup your computer to accept software from <ulink url="http://packages.osrfoundation.org:">http://packages.osrfoundation.org:</ulink> <programlisting><codeline><highlight class="normal">sudo<sp/>sh<sp/>-c<sp/>&apos;echo<sp/>&quot;deb<sp/>http://packages.osrfoundation.org/gazebo/ubuntu-stable<sp/>`lsb_release<sp/>-cs`<sp/>main&quot;<sp/>&gt;<sp/>/etc/apt/sources.list.d/gazebo-stable.list&apos;</highlight></codeline>
+</programlisting></para>
+<para>Setup keys: <programlisting><codeline><highlight class="normal">wget<sp/>http://packages.osrfoundation.org/gazebo.key<sp/>-O<sp/>-<sp/>|<sp/>sudo<sp/>apt-key<sp/>add<sp/>-</highlight></codeline>
+</programlisting></para>
+<para>Reload software list: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>update</highlight></codeline>
+</programlisting></para>
+<para>Install Gazebo: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>gazebo9<sp/>libgazebo9-dev</highlight></codeline>
+</programlisting></para>
+<para>Install ROS plugins: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>ros-melodic-gazebo-ros<sp/>ros-melodic-gazebo-plugins</highlight></codeline>
+</programlisting></para>
+<para>Get Gazebo plugin for APM (ArduPilot Master): <programlisting><codeline><highlight class="normal">cd<sp/>~</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/SwiftGust/ardupilot_gazebo</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>ardupilot_gazebo</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>checkout<sp/>gazebo9</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>-j4</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>make<sp/>install</highlight></codeline>
+</programlisting></para>
+<para>Set paths for models: <programlisting><codeline><highlight class="normal">echo<sp/>&apos;export<sp/>GAZEBO_MODEL_PATH=~/ardupilot_gazebo/gazebo_models&apos;<sp/>&gt;&gt;<sp/>~/.bashrc</highlight></codeline>
+<codeline><highlight class="normal">.<sp/>~/.bashrc</highlight></codeline>
+</programlisting></para>
+<para>Add Gazebo Models: <programlisting><codeline><highlight class="normal">hg<sp/>clone<sp/>https://bitbucket.org/osrf/gazebo_models<sp/>~/gazebo_ws/gazebo_models</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>~/gazebo_ws/gazebo_models</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>&apos;export<sp/>GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}&apos;<sp/>&gt;&gt;<sp/>~/.bashrc</highlight></codeline>
+<codeline><highlight class="normal">source<sp/>~/.bashrc</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">8. Run Simulator</heading>
+</para>
+<para>In one Terminal (Terminal 1), run SITL: <programlisting><codeline><highlight class="normal">cd<sp/>~/ardupilot/ArduCopter/</highlight></codeline>
+<codeline><highlight class="normal">sim_vehicle.py<sp/>-j4<sp/>-f<sp/>Gazebo<sp/>--console</highlight></codeline>
+</programlisting></para>
+<para>In another Terminal (Terminal 2), run Gazebo: <programlisting><codeline><highlight class="normal">gazebo<sp/>--verbose<sp/>~/ardupilot_gazebo/gazebo_worlds/iris_irlock_demo.world</highlight></codeline>
+</programlisting></para>
+<para>Set parameters for sim in the same window after you run the <computeroutput>sim_vehicle.py script</computeroutput>. Do this by using command <computeroutput>param load &lt;filename&gt;</computeroutput> Example params can be found in the <computeroutput>Controls-Other</computeroutput> repo: <ulink url="https://github.com/Texas-Aerial-Robotics/Controls-Other">https://github.com/Texas-Aerial-Robotics/Controls-Other</ulink></para>
+<para>To load our parameters, clone our <computeroutput>Controls-Other</computeroutput> repository (Terminal 3): <programlisting><codeline><highlight class="normal">cd<sp/>~</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/Controls-Other</highlight></codeline>
+</programlisting> In the Ardupilot simulator Terminal (Terminal 1) run: <programlisting><codeline><highlight class="normal">param<sp/>load<sp/>../../Controls-Other/Params/Sim_master.param</highlight></codeline>
+</programlisting> Play around, then close by &quot;Control+C&quot; in the Terminal windows.</para>
+<para><heading level="2">9. Install Mission 8 Simulator</heading>
+</para>
+<para>In order to use the Ardupilot simulator with the Mission 8 field - as well as other plugins such as cameras - you need to add ROS packages to Gazebo. Install the following dependencies: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>ros-melodic-gazebo-ros<sp/>ros-melodic-gazebo-plugins</highlight></codeline>
+</programlisting></para>
+<para>Clone in the mission8_sim repository into your catkin_ws: <programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/mission8_sim.git</highlight></codeline>
+</programlisting></para>
+<para>Add the following to your <computeroutput>~/.bashrc</computeroutput> to help Gazebo find the mission8_sim models: <programlisting><codeline><highlight class="normal">export<sp/>GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:~/catkin_ws/src/mission8_sim/models</highlight></codeline>
+</programlisting></para>
+<para>Build the ROS packages you just downloaded: <programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws/</highlight></codeline>
+<codeline><highlight class="normal">catkin<sp/>build</highlight></codeline>
+</programlisting></para>
+<para>Reload <computeroutput>~/.bashrc</computeroutput> so the Terminal knows where the packages are located: <programlisting><codeline><highlight class="normal">source<sp/>~/.bashrc</highlight></codeline>
+</programlisting></para>
+<para><heading level="3">Run a 3 drone sim with roslaunch</heading>
+</para>
+<para>In one Terminal (Terminal 1): <programlisting><codeline><highlight class="normal">roslaunch<sp/>mission8_sim<sp/>multiDrone.launch</highlight></codeline>
+</programlisting> In another Terminal (Terminal 2), run the following command to start and connect a Ardupilot simulator to Gazebo: <programlisting><codeline><highlight class="normal">cd<sp/>~/ardupilot/ArduCopter/<sp/>&amp;&amp;<sp/>sim_vehicle.py<sp/>-j4<sp/>-f<sp/>Gazebo<sp/>--console<sp/>--location=HOME<sp/>-I0</highlight></codeline>
+</programlisting> In another Terminal (Terminal 3), run the following command to start and connect a Ardupilot simulator to Gazebo: <programlisting><codeline><highlight class="normal">cd<sp/>~/ardupilot/ArduCopter/<sp/>&amp;&amp;<sp/>sim_vehicle.py<sp/>-j4<sp/>-f<sp/>Gazebo<sp/>--console<sp/>--location=HOME<sp/>-I1</highlight></codeline>
+</programlisting> In another Terminal (Terminal 4), run the following command to start and connect a Ardupilot simulator to Gazebo: <programlisting><codeline><highlight class="normal">cd<sp/>~/ardupilot/ArduCopter/<sp/>&amp;&amp;<sp/>sim_vehicle.py<sp/>-j4<sp/>-f<sp/>Gazebo<sp/>--console<sp/>--location=HOME<sp/>-I2</highlight></codeline>
+</programlisting> As you can see, the command above can be modified for any number of drones desired. Play around, then close by &quot;Control+C&quot; in the Terminal windows.</para>
+<para><heading level="3">To view camera plugin</heading>
+</para>
+<para>Install image view: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>ros-melodic-image-view</highlight></codeline>
+</programlisting></para>
+<para>To see camera view: <programlisting><codeline><highlight class="normal">rosrun<sp/>image_view<sp/>image_view<sp/>image:=/webcam/image_raw</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">10. Run Mavros Scripts from Controls-Ros package</heading>
+</para>
+<para>Launch the sim via roslaunch (Terminal 1): <programlisting><codeline><highlight class="normal">roslaunch<sp/>mission8_sim<sp/>droneOnly.launch</highlight></codeline>
+</programlisting> In another Terminal (Terminal 2) run the following command to start and connect the Ardupilot sim to Gazebo: <programlisting><codeline><highlight class="normal">cd<sp/>~/ardupilot/ArduCopter/<sp/>&amp;&amp;<sp/>sim_vehicle.py<sp/>-f<sp/>gazebo-iris<sp/>--console<sp/>-I0</highlight></codeline>
+</programlisting> In another Terminal (Terminal 3) run: <programlisting><codeline><highlight class="normal">cd<sp/>~/Controls-Other/Launch/</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>apm.launch</highlight></codeline>
+</programlisting> Be sure to wait for the drone to go throught the full initialization process. The drone will be ready to fly once the console reads Optical Flow now aiding and origin set to GPS. For the competition we will not use GPS to home the drone, but for introduction sake let the drone use GPS</para>
+<para>In another Terminal (Terminal 4) run: <programlisting><codeline><highlight class="normal">rosrun<sp/>flight_pkg<sp/>staple</highlight></codeline>
+</programlisting></para>
+<para>Then in MavProxy (Terminal 2) switch the mode into <computeroutput>guided</computeroutput>: <programlisting><codeline><highlight class="normal">mode<sp/>GUIDED</highlight></codeline>
+</programlisting></para>
+<para>you did it! 🎉</para>
+<para><hruler/>
+</para>
+<para><heading level="2">Troubleshooting and Common Problems:</heading>
+</para>
+<para><heading level="3">During Catkin Build:</heading>
+</para>
+<para>#### Complains about &quot;GeographicLib&quot; <programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws/src/mavros/mavros/scripts</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>./install_geographiclib_datasets.sh</highlight></codeline>
+</programlisting></para>
+<para>#### Complains about &quot;Geometry Msgs&quot; <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>ros-melodic-geometry-msgs</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+<para>References:<itemizedlist>
+<listitem><para><ulink url="https://dev.px4.io/en/ros/mavros_installation.html#source-installation">https://dev.px4.io/en/ros/mavros_installation.html#source-installation</ulink></para>
+</listitem><listitem><para><ulink url="http://wiki.ros.org/catkin/Tutorials/create_a_workspace">http://wiki.ros.org/catkin/Tutorials/create_a_workspace</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/ArduPilot/ardupilot_wiki/issues/1001">https://github.com/ArduPilot/ardupilot_wiki/issues/1001</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/AS4SR/general_info/wiki/ArduPilot:-Instructions-to-set-up-and-run-an-autopilot-using-SITL-and-Gazebo-simulator">https://github.com/AS4SR/general_info/wiki/ArduPilot:-Instructions-to-set-up-and-run-an-autopilot-using-SITL-and-Gazebo-simulator</ulink> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

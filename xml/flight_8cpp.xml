@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="flight_8cpp" kind="file" language="C++">
+    <compoundname>flight.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">geometry_msgs/PoseStamped.h</includes>
+    <includes local="no">nav_msgs/Odometry.h</includes>
+    <includes local="yes">std_msgs/Float64.h</includes>
+    <includes local="no">mavros_msgs/CommandBool.h</includes>
+    <includes local="no">mavros_msgs/SetMode.h</includes>
+    <includes local="no">mavros_msgs/State.h</includes>
+    <includes local="no">mavros_msgs/PositionTarget.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">geometry_msgs/Pose2D.h</includes>
+    <includes local="no">mavros_msgs/CommandTOL.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">ros/duration.h</includes>
+    <incdepgraph>
+      <node id="68">
+        <label>ros/duration.h</label>
+      </node>
+      <node id="58">
+        <label>mavros_msgs/CommandBool.h</label>
+      </node>
+      <node id="60">
+        <label>mavros_msgs/State.h</label>
+      </node>
+      <node id="66">
+        <label>cmath</label>
+      </node>
+      <node id="56">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
+      <node id="57">
+        <label>std_msgs/Float64.h</label>
+      </node>
+      <node id="55">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="63">
+        <label>geometry_msgs/Pose2D.h</label>
+      </node>
+      <node id="62">
+        <label>unistd.h</label>
+      </node>
+      <node id="64">
+        <label>mavros_msgs/CommandTOL.h</label>
+      </node>
+      <node id="59">
+        <label>mavros_msgs/SetMode.h</label>
+      </node>
+      <node id="54">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="65">
+        <label>time.h</label>
+      </node>
+      <node id="67">
+        <label>math.h</label>
+      </node>
+      <node id="53">
+        <label>iostream</label>
+      </node>
+      <node id="52">
+        <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp</label>
+        <link refid="flight_8cpp"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>mavros_msgs/PositionTarget.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="flight_8cpp_1aa03a6f341db74b895fa5c862973dd941" prot="public" static="no" mutable="no">
+        <type>mavros_msgs::State</type>
+        <definition>mavros_msgs::State current_state</definition>
+        <argsstring></argsstring>
+        <name>current_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="21" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="flight_8cpp_1abd2869bcb1ae0d4d93896909e70930e7" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="23" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="flight_8cpp_1aeae70abce814c854b8bf3c2c1dea5d40" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::PoseStamped</type>
+        <definition>geometry_msgs::PoseStamped pose</definition>
+        <argsstring></argsstring>
+        <name>pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="24" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="flight_8cpp_1a789b24bd49a5da0f2134739639555add" prot="public" static="no" mutable="no">
+        <type>std_msgs::Float64</type>
+        <definition>std_msgs::Float64 current_heading</definition>
+        <argsstring></argsstring>
+        <name>current_heading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="25" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="flight_8cpp_1a1bfd9feb2dd11b3f55fa3f191f021115" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GYM_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>GYM_OFFSET</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="26" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="flight_8cpp_1a05b0e3da49b65a1eb9907815a9a894a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void state_cb</definition>
+        <argsstring>(const mavros_msgs::State::ConstPtr &amp;msg)</argsstring>
+        <name>state_cb</name>
+        <param>
+          <type>const mavros_msgs::State::ConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="29" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="flight_8cpp_1a8a016ae63cb84f9f8b2f440ba33aa729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pose_cb</definition>
+        <argsstring>(const geometry_msgs::PoseStamped::ConstPtr &amp;msg)</argsstring>
+        <name>pose_cb</name>
+        <param>
+          <type>const geometry_msgs::PoseStamped::ConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="36" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="flight_8cpp_1a85853a76977344d78280db3faca9aa80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void heading_cb</definition>
+        <argsstring>(const std_msgs::Float64::ConstPtr &amp;msg)</argsstring>
+        <name>heading_cb</name>
+        <param>
+          <type>const std_msgs::Float64::ConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="49" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="flight_8cpp_1a9c3baea5ae305330b4692ba0f8b23869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setHeading</definition>
+        <argsstring>(float heading)</argsstring>
+        <name>setHeading</name>
+        <param>
+          <type>float</type>
+          <declname>heading</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="55" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="55" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="flight_8cpp_1af7166d52af865f29695cb0746d47918e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDestination</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>setDestination</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="81" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="81" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="flight_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" line="93" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp" bodystart="93" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp"/>
+  </compounddef>
+</doxygen>

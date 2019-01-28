@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Texas Aerial Robotics</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This site host the documentation for our projects.</para>
+<para><heading level="2">Documentation</heading>
+</para>
+<para><ref refid="md_linux_commands" kindref="compound">Common Linux Commands</ref> - This document contains a list of common linux commands</para>
+<para><ref refid="md_enviorment_setup" kindref="compound">Enviroment Setup Instructions</ref> - This document explains how to setup our development enviorment</para>
+<para><ref refid="md_control_api_tutorial" kindref="compound">Control API</ref> - This document explains how to code our drone to move</para>
+<para><ref refid="md_yolo" kindref="compound">YOLO Image Recognition</ref> - This document explains how to use YOLO (You Only Look Once, a realtime image detection neural net)</para>
+<para><ref refid="md_yoloTraining" kindref="compound">Training YOLO with BBox-Label-Tool</ref> - This document explains how to train YOLO to recognize your own objects </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+This package is designed to work hand in hand with Y\+O\+LO and Ardupilot to give the U\+AV awareness of where detected objects are in the U\+AV\textquotesingle{}s navigational frame. This package uses the intrinsics of the camera (the field of view) as well as the mounting angle and the Drone\textquotesingle{}s position.
+
+\subsection*{Why use this package?}
+
+In order to get the position of a detection the traditional solution is to use a stereo camera. However, stereo cameras have 2 significant drawbacks.
+
+$>$1.) They are much hevier than monocular cameras $>$2.) Stereo algorithms require more computational processing
+
+By using this package your U\+AV will have more available computational power and be physically much lighter (This can create significant flight time increases)
+
+\subsection*{What are the limitations of this package?}
+
+This package make 2 key assumptions \begin{quote}
+{\bfseries{Detected objects reside on the ground}} {\bfseries{Detected object\textquotesingle{}s height are much less than the altitude of the drone}} \end{quote}
+
+
+\subsection*{Information Flow Chart}
+
+\subsection*{Dependencies}
+
+
+\begin{DoxyItemize}
+\item darknet\+\_\+ros
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/darknet\_ros.git}
+\end{DoxyCode}
+ \subsection*{Installaton}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/catkin\_ws/src}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/Transformations-Ros.git}
+\end{DoxyCode}
+
+
+\subsection*{Build}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin build}
+\end{DoxyCode}
+
+
+\subsection*{Running package}
+
+To test your system use the gazebo + ardupilot S\+I\+TL simulation
+
+T\+O\+DO make general instructions for running gazebo + ardupilot S\+I\+TL simulation
+
+Run Y\+O\+LO 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch darknet\_ros darknet\_ros.launch}
+\end{DoxyCode}
+
+
+Run Transformation node 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch transformations\_ros transformations.launch  }
+\end{DoxyCode}
+ 

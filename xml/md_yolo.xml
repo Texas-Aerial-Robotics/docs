@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md_yolo" kind="page">
+    <compoundname>md_yolo</compoundname>
+    <title>YOLO Image Recognition</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="2">Detection Using A Pre-Trained Model</heading>
+</para>
+<para>This post will guide you through detecting objects with the YOLO system using a pre-trained model. If you don&apos;t already have Darknet installed, you should do that first.</para>
+<para><programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/pjreddie/darknet</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>darknet</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+</programlisting></para>
+<para>Easy!</para>
+<para>You already have the config file for YOLO in the cfg/ subdirectory. You will have to download the pre-trained weight file <programlisting><codeline><highlight class="normal">wget<sp/>https://pjreddie.com/media/files/yolov3.weights</highlight></codeline>
+</programlisting> Then run the detector!</para>
+<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detect<sp/>cfg/yolov3.cfg<sp/>yolov3.weights<sp/>data/dog.jpg</highlight></codeline>
+</programlisting> You will see some output like this:</para>
+<para><programlisting><codeline><highlight class="normal">layer<sp/><sp/><sp/><sp/><sp/>filters<sp/><sp/><sp/><sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0<sp/>conv<sp/><sp/><sp/><sp/><sp/>32<sp/><sp/>3<sp/>x<sp/>3<sp/>/<sp/>1<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/><sp/>3<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/>32<sp/><sp/>0.299<sp/>BFLOPs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>1<sp/>conv<sp/><sp/><sp/><sp/><sp/>64<sp/><sp/>3<sp/>x<sp/>3<sp/>/<sp/>2<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/>32<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/>208<sp/>x<sp/>208<sp/>x<sp/><sp/>64<sp/><sp/>1.595<sp/>BFLOPs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>.......</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>105<sp/>conv<sp/><sp/><sp/><sp/>255<sp/><sp/>1<sp/>x<sp/>1<sp/>/<sp/>1<sp/><sp/><sp/><sp/>52<sp/>x<sp/><sp/>52<sp/>x<sp/>256<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/><sp/>52<sp/>x<sp/><sp/>52<sp/>x<sp/>255<sp/><sp/>0.353<sp/>BFLOPs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>106<sp/>detection</highlight></codeline>
+<codeline><highlight class="normal">truth_thresh:<sp/>Using<sp/>default<sp/>&apos;1.000000&apos;</highlight></codeline>
+<codeline><highlight class="normal">Loading<sp/>weights<sp/>from<sp/>yolov3.weights...Done!</highlight></codeline>
+<codeline><highlight class="normal">data/dog.jpg:<sp/>Predicted<sp/>in<sp/>0.029329<sp/>seconds.</highlight></codeline>
+<codeline><highlight class="normal">dog:<sp/>99%</highlight></codeline>
+<codeline><highlight class="normal">truck:<sp/>93%</highlight></codeline>
+<codeline><highlight class="normal">bicycle:<sp/>99%</highlight></codeline>
+</programlisting> Darknet prints out the objects it detected, its confidence, and how long it took to find them. We didn&apos;t compile Darknet with OpenCV so it can&apos;t display the detections directly. Instead, it saves them in predictions.png. You can open it to see the detected objects. Since we are using Darknet on the CPU it takes around 6-12 seconds per image. If we use the GPU version it would be much faster.</para>
+<para><heading level="2">Multiple Images</heading>
+</para>
+<para>Instead of supplying an image on the command line, you can leave it blank to try multiple images in a row. Instead you will see a prompt when the config and weights are done loading:</para>
+<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detect<sp/>cfg/yolov3.cfg<sp/>yolov3.weights</highlight></codeline>
+<codeline><highlight class="normal">layer<sp/><sp/><sp/><sp/><sp/>filters<sp/><sp/><sp/><sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0<sp/>conv<sp/><sp/><sp/><sp/><sp/>32<sp/><sp/>3<sp/>x<sp/>3<sp/>/<sp/>1<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/><sp/>3<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/>32<sp/><sp/>0.299<sp/>BFLOPs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>1<sp/>conv<sp/><sp/><sp/><sp/><sp/>64<sp/><sp/>3<sp/>x<sp/>3<sp/>/<sp/>2<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/>32<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/>208<sp/>x<sp/>208<sp/>x<sp/><sp/>64<sp/><sp/>1.595<sp/>BFLOPs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>.......</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>104<sp/>conv<sp/><sp/><sp/><sp/>256<sp/><sp/>3<sp/>x<sp/>3<sp/>/<sp/>1<sp/><sp/><sp/><sp/>52<sp/>x<sp/><sp/>52<sp/>x<sp/>128<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/><sp/>52<sp/>x<sp/><sp/>52<sp/>x<sp/>256<sp/><sp/>1.595<sp/>BFLOPs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>105<sp/>conv<sp/><sp/><sp/><sp/>255<sp/><sp/>1<sp/>x<sp/>1<sp/>/<sp/>1<sp/><sp/><sp/><sp/>52<sp/>x<sp/><sp/>52<sp/>x<sp/>256<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/><sp/>52<sp/>x<sp/><sp/>52<sp/>x<sp/>255<sp/><sp/>0.353<sp/>BFLOPs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>106<sp/>detection</highlight></codeline>
+<codeline><highlight class="normal">Loading<sp/>weights<sp/>from<sp/>yolov3.weights...Done!</highlight></codeline>
+<codeline><highlight class="normal">Enter<sp/>Image<sp/>Path:</highlight></codeline>
+</programlisting> Enter an image path like data/horses.jpg to have it predict boxes for that image.</para>
+<para>Once it is done it will prompt you for more paths to try different images. Use Ctrl-C to exit the program once you are done.</para>
+<para><heading level="2">Changing The Detection Threshold</heading>
+</para>
+<para>By default, YOLO only displays objects detected with a confidence of .25 or higher. You can change this by passing the -thresh &lt;val&gt; flag to the yolo command. For example, to display all detection you can set the threshold to 0:</para>
+<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detect<sp/>cfg/yolov3.cfg<sp/>yolov3.weights<sp/>data/dog.jpg<sp/>-thresh<sp/>0</highlight></codeline>
+</programlisting> Which produces:</para>
+<para>![][all]</para>
+<para>So that&apos;s obviously not super useful but you can set it to different values to control what gets thresholded by the model</para>
+<para><heading level="2">Tiny YOLOv3</heading>
+</para>
+<para>We have a very small model as well for constrained environments, <computeroutput>yolov3-tiny</computeroutput>. To use this model, first download the weights:</para>
+<para><programlisting><codeline><highlight class="normal">wget<sp/>https://pjreddie.com/media/files/yolov3-tiny.weights</highlight></codeline>
+</programlisting> Then run the detector with the tiny config file and weights:</para>
+<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detect<sp/>cfg/yolov3-tiny.cfg<sp/>yolov3-tiny.weights<sp/>data/dog.jpg</highlight></codeline>
+</programlisting> <heading level="2">Compiling With CUDA and Opencv</heading>
+</para>
+<para>Darknet on the CPU is fast but it&apos;s like 500 times faster on GPU! You&apos;ll have to have an Nvidia GPU and you&apos;ll have to install CUDA and opencv. If you have installed ROS desktop you should already have opencv installed</para>
+<para><heading level="2">Install CUDA</heading>
+</para>
+<para><ulink url="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html</ulink></para>
+<para>Once you have CUDA installed, change the first couple lines of the Makefile in the base directory to read:</para>
+<para><programlisting><codeline><highlight class="normal">GPU=1</highlight></codeline>
+<codeline><highlight class="normal">OPENCV=1</highlight></codeline>
+</programlisting> Now you can make the project and CUDA will be enabled. By default it will run the network on the 0th graphics card in your system (if you installed CUDA correctly you can list your graphics cards using <computeroutput>nvidia-smi</computeroutput>). Again you can run</para>
+<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detect<sp/>cfg/yolov3.cfg<sp/>yolov3.weights<sp/>data/dog.jpg</highlight></codeline>
+</programlisting> <heading level="2">Note</heading>
+</para>
+<para>Yolo v3 uses a lot of gpu ram. if you get the following error consider using tiny-yolo or yolov2</para>
+<para>grab pretrained weights for yolo V2 using <programlisting><codeline><highlight class="normal">wget<sp/>https://pjreddie.com/media/files/yolov3.weights</highlight></codeline>
+</programlisting></para>
+<para>run YOLOv2</para>
+<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detect<sp/>cfg/yolov2.cfg<sp/>yolov2.weights<sp/>data/dog.jpg</highlight></codeline>
+</programlisting> <heading level="2">Real-Time Detection on a Webcam</heading>
+</para>
+<para>Running YOLO on test data isn&apos;t very interesting if you can&apos;t see the result. Instead of running it on a bunch of images let&apos;s run it on the input from a webcam!</para>
+<para>To run this demo you will need to compile Darknet with CUDA and OpenCV.</para>
+<para>To run this demo you will need to compile Darknet with CUDA and OpenCV. Then run the command: <programlisting><codeline><highlight class="normal">./darknet<sp/>detector<sp/>demo<sp/>cfg/coco.data<sp/>cfg/yolov3.cfg<sp/>yolov3.weights</highlight></codeline>
+</programlisting> YOLO will display the current FPS and predicted classes as well as the image with bounding boxes drawn on top of it.</para>
+<para>You will need a webcam connected to the computer that OpenCV can connect to or it won&apos;t work. If you have multiple webcams connected and want to select which one to use you can pass the flag -c &lt;num&gt; to pick (OpenCV uses webcam 0 by default).</para>
+<para>You can also run it on a video file if OpenCV can read the video: <programlisting><codeline><highlight class="normal">./darknet<sp/>detector<sp/>demo<sp/>cfg/coco.data<sp/>cfg/yolov3.cfg<sp/>yolov3.weights<sp/>&lt;video<sp/>file&gt;</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">Use YOLO to train your own custom classes</heading>
+</para>
+<para><ref refid="md_yoloTraining" kindref="compound">Training YOLO with BBox-Label-Tool</ref></para>
+<para><heading level="2">Cite</heading>
+</para>
+<para>If you use YOLOv3 in your work please cite our paper!</para>
+<para>@article{yolov3, title={YOLOv3: An Incremental Improvement}, author={Redmon, Joseph and Farhadi, Ali}, journal = {arXiv}, year={2018} } </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

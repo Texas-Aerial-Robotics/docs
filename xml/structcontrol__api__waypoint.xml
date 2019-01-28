@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="structcontrol__api__waypoint" kind="struct" language="C++" prot="public">
+    <compoundname>control_api_waypoint</compoundname>
+    <includes refid="control__functions_8hpp" local="no">control_functions.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcontrol__api__waypoint_1a381813ee0649f54116dec8d8ed78b26e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_api_waypoint::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>distance in x with respect to your reference frame </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="50" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__api__waypoint_1ac92d8860930259ccb19aa91072d94546" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_api_waypoint::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>distance in y with respect to your reference frame </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="51" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__api__waypoint_1af77b8d62f18d1b4c1884b46147751b49" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_api_waypoint::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>distance in z with respect to your reference frame </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="52" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__api__waypoint_1a053fed6c42cdeda2029d2db548f357b4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_api_waypoint::psi</definition>
+        <argsstring></argsstring>
+        <name>psi</name>
+        <briefdescription>
+<para>rotation about the third axis of your reference frame </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="53" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is a convenient way to format waypoints </para>
+    </detaileddescription>
+    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="49" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="49" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structcontrol__api__waypoint_1a053fed6c42cdeda2029d2db548f357b4" prot="public" virt="non-virtual"><scope>control_api_waypoint</scope><name>psi</name></member>
+      <member refid="structcontrol__api__waypoint_1a381813ee0649f54116dec8d8ed78b26e" prot="public" virt="non-virtual"><scope>control_api_waypoint</scope><name>x</name></member>
+      <member refid="structcontrol__api__waypoint_1ac92d8860930259ccb19aa91072d94546" prot="public" virt="non-virtual"><scope>control_api_waypoint</scope><name>y</name></member>
+      <member refid="structcontrol__api__waypoint_1af77b8d62f18d1b4c1884b46147751b49" prot="public" virt="non-virtual"><scope>control_api_waypoint</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
