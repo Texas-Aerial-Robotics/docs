@@ -11,9 +11,14 @@
 </para>
 <para><ref refid="md_linux_commands" kindref="compound">Common Linux Commands</ref> - This document contains a list of common linux commands</para>
 <para><ref refid="md_enviorment_setup" kindref="compound">Enviroment Setup Instructions</ref> - This document explains how to setup our development enviorment</para>
+<para><ref refid="md_basic_ros" kindref="compound">Robot Operating System (ROS)</ref> - This document links to helpful tutorials to help you learn ROS</para>
+<para><ref refid="md_basic_gazebo" kindref="compound">Gazebo</ref> - This document links to helpful tutorials to help you learn ROS</para>
+<para><ref refid="md_arducopter" kindref="compound">ArduCopter</ref> - This gives a quick rundown on arducopter</para>
 <para><ref refid="md_control_api_tutorial" kindref="compound">Control API</ref> - This document explains how to code our drone to move</para>
 <para><ref refid="md_yolo" kindref="compound">YOLO Image Recognition</ref> - This document explains how to use YOLO (You Only Look Once, a realtime image detection neural net)</para>
-<para><ref refid="md_yoloTraining" kindref="compound">Training YOLO with BBox-Label-Tool</ref> - This document explains how to train YOLO to recognize your own objects </para>
+<para><ref refid="md_yoloTraining" kindref="compound">Training YOLO with BBox-Label-Tool</ref> - This document explains how to train YOLO to recognize your own objects</para>
+<para><ref refid="md_yolo_ros" kindref="compound">Using YOLO with ROS</ref> - This package explains how to integrate yolo into your robot architecture using ROS</para>
+<para><ref refid="md_monocular_uav" kindref="compound">Object Contextualization with Monocular Camera for a UAV</ref> - This package is designed to work hand in hand with YOLO and Ardupilot to give the UAV awareness of where detected objects are in the UAV&apos;s navigational frame. </para>
     </detaileddescription>
   </compounddef>
 </doxygen>

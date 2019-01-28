@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md_yolo_ros" kind="page">
+    <compoundname>md_yolo_ros</compoundname>
+    <title>Using YOLO with ROS</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This ROS wrapper is a powerful package that allows your ROS nodes to recieve information about what your drone is percieving. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

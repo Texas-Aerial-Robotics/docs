@@ -4,23 +4,38 @@ This package is designed to work hand in hand with Y\+O\+LO and Ardupilot to giv
 
 In order to get the position of a detection the traditional solution is to use a stereo camera. However, stereo cameras have 2 significant drawbacks.
 
-$>$1.) They are much hevier than monocular cameras $>$2.) Stereo algorithms require more computational processing
+\begin{quote}
+{\bfseries{1.) They are much hevier than monocular cameras}}
+
+{\bfseries{2.) Stereo algorithms require more computational processing}} \end{quote}
+
 
 By using this package your U\+AV will have more available computational power and be physically much lighter (This can create significant flight time increases)
 
 \subsection*{What are the limitations of this package?}
 
 This package make 2 key assumptions \begin{quote}
-{\bfseries{Detected objects reside on the ground}} {\bfseries{Detected object\textquotesingle{}s height are much less than the altitude of the drone}} \end{quote}
+{\bfseries{1.) Detected objects reside on the ground}}
 
+{\bfseries{2.) Detected object\textquotesingle{}s height are much less than the altitude of the drone}} \end{quote}
+
+
+\subsection*{Original Use Case}
+
+This package was orginally used to detect roombas for I\+A\+RC\textquotesingle{}s mission 7. The position of all the roombas fed back to a state machine running onboard the drone which then made decisions on which roombas to pursue.
+
+\href{https://www.youtube.com/watch?v=aa4U99KyjN4}{\texttt{ https\+://www.\+youtube.\+com/watch?v=aa4\+U99\+Kyj\+N4}}
 
 \subsection*{Information Flow Chart}
+
+
 
 \subsection*{Dependencies}
 
 
 \begin{DoxyItemize}
 \item darknet\+\_\+ros
+\item iq\+\_\+control\+\_\+node
 \end{DoxyItemize}
 
 

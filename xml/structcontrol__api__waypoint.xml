@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="50" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="50" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="54" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structcontrol__api__waypoint_1ac92d8860930259ccb19aa91072d94546" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="51" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="51" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="55" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structcontrol__api__waypoint_1af77b8d62f18d1b4c1884b46147751b49" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="52" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="52" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="56" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structcontrol__api__waypoint_1a053fed6c42cdeda2029d2db548f357b4" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="53" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="53" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="57" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -66,7 +66,7 @@
     <detaileddescription>
 <para>This structure is a convenient way to format waypoints </para>
     </detaileddescription>
-    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="49" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="49" bodyend="54"/>
+    <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="53" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="53" bodyend="58"/>
     <listofallmembers>
       <member refid="structcontrol__api__waypoint_1a053fed6c42cdeda2029d2db548f357b4" prot="public" virt="non-virtual"><scope>control_api_waypoint</scope><name>psi</name></member>
       <member refid="structcontrol__api__waypoint_1a381813ee0649f54116dec8d8ed78b26e" prot="public" virt="non-virtual"><scope>control_api_waypoint</scope><name>x</name></member>

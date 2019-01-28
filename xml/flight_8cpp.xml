@@ -19,88 +19,88 @@
     <includes local="no">math.h</includes>
     <includes local="no">ros/duration.h</includes>
     <incdepgraph>
-      <node id="68">
+      <node id="82">
         <label>ros/duration.h</label>
       </node>
-      <node id="58">
+      <node id="72">
         <label>mavros_msgs/CommandBool.h</label>
       </node>
-      <node id="60">
+      <node id="74">
         <label>mavros_msgs/State.h</label>
       </node>
-      <node id="66">
+      <node id="80">
         <label>cmath</label>
       </node>
-      <node id="56">
+      <node id="70">
         <label>nav_msgs/Odometry.h</label>
       </node>
-      <node id="57">
+      <node id="71">
         <label>std_msgs/Float64.h</label>
       </node>
-      <node id="55">
+      <node id="69">
         <label>geometry_msgs/PoseStamped.h</label>
       </node>
-      <node id="63">
+      <node id="77">
         <label>geometry_msgs/Pose2D.h</label>
       </node>
-      <node id="62">
+      <node id="76">
         <label>unistd.h</label>
       </node>
-      <node id="64">
+      <node id="78">
         <label>mavros_msgs/CommandTOL.h</label>
       </node>
-      <node id="59">
+      <node id="73">
         <label>mavros_msgs/SetMode.h</label>
       </node>
-      <node id="54">
+      <node id="68">
         <label>ros/ros.h</label>
       </node>
-      <node id="65">
+      <node id="79">
         <label>time.h</label>
       </node>
-      <node id="67">
+      <node id="81">
         <label>math.h</label>
       </node>
-      <node id="53">
+      <node id="67">
         <label>iostream</label>
       </node>
-      <node id="52">
+      <node id="66">
         <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp</label>
         <link refid="flight_8cpp"/>
-        <childnode refid="53" relation="include">
-        </childnode>
-        <childnode refid="54" relation="include">
-        </childnode>
-        <childnode refid="55" relation="include">
-        </childnode>
-        <childnode refid="56" relation="include">
-        </childnode>
-        <childnode refid="57" relation="include">
-        </childnode>
-        <childnode refid="58" relation="include">
-        </childnode>
-        <childnode refid="59" relation="include">
-        </childnode>
-        <childnode refid="60" relation="include">
-        </childnode>
-        <childnode refid="61" relation="include">
-        </childnode>
-        <childnode refid="62" relation="include">
-        </childnode>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="64" relation="include">
-        </childnode>
-        <childnode refid="65" relation="include">
-        </childnode>
-        <childnode refid="66" relation="include">
-        </childnode>
         <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="68" relation="include">
         </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
       </node>
-      <node id="61">
+      <node id="75">
         <label>mavros_msgs/PositionTarget.h</label>
       </node>
     </incdepgraph>

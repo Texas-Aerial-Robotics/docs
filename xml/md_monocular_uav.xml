@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="md_monocular_uav" kind="page">
+    <compoundname>md_monocular_uav</compoundname>
+    <title>Object Contextualization with Monocular Camera for a UAV</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This package is designed to work hand in hand with YOLO and Ardupilot to give the UAV awareness of where detected objects are in the UAV&apos;s navigational frame. This package uses the intrinsics of the camera (the field of view) as well as the mounting angle and the Drone&apos;s position.</para>
+<para><heading level="2">Why use this package?</heading>
+</para>
+<para>In order to get the position of a detection the traditional solution is to use a stereo camera. However, stereo cameras have 2 significant drawbacks.</para>
+<para><blockquote><para><bold>1.) They are much hevier than monocular cameras</bold></para>
+<para><bold>2.) Stereo algorithms require more computational processing</bold> </para>
+</blockquote></para>
+<para>By using this package your UAV will have more available computational power and be physically much lighter (This can create significant flight time increases)</para>
+<para><heading level="2">What are the limitations of this package?</heading>
+</para>
+<para>This package make 2 key assumptions <blockquote><para><bold>1.) Detected objects reside on the ground</bold></para>
+<para><bold>2.) Detected object&apos;s height are much less than the altitude of the drone</bold> </para>
+</blockquote></para>
+<para><heading level="2">Original Use Case</heading>
+</para>
+<para>This package was orginally used to detect roombas for IARC&apos;s mission 7. The position of all the roombas fed back to a state machine running onboard the drone which then made decisions on which roombas to pursue.</para>
+<para><ulink url="https://www.youtube.com/watch?v=aa4U99KyjN4">https://www.youtube.com/watch?v=aa4U99KyjN4</ulink></para>
+<para><heading level="2">Information Flow Chart</heading>
+</para>
+<para><image type="html" name="transformationDiagram.png" inline="yes"></image>
+</para>
+<para><heading level="2">Dependencies</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>darknet_ros</para>
+</listitem><listitem><para>iq_control_node</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/darknet_ros.git</highlight></codeline>
+</programlisting> <heading level="2">Installaton</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">cd<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/Transformations-Ros.git</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">Build</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">catkin<sp/>build</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">Running package</heading>
+</para>
+<para>To test your system use the gazebo + ardupilot SITL simulation</para>
+<para>TODO make general instructions for running gazebo + ardupilot SITL simulation</para>
+<para>Run YOLO <programlisting><codeline><highlight class="normal">roslaunch<sp/>darknet_ros<sp/>darknet_ros.launch</highlight></codeline>
+</programlisting></para>
+<para>Run Transformation node <programlisting><codeline><highlight class="normal">roslaunch<sp/>transformations_ros<sp/>transformations.launch<sp/><sp/></highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

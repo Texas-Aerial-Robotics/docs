@@ -12,6 +12,8 @@ void \mbox{\hyperlink{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb6
 \item 
 void \mbox{\hyperlink{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}{set\+\_\+destination}} (float x, float y, float z, float psi)
 \item 
+void \mbox{\hyperlink{group__control__functions_ga60eb8f08f1ac190352a7ad6532e4f70e}{spin\+Off\+Set\+Pub}} ()
+\item 
 int \mbox{\hyperlink{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}{wait4connect}} ()
 \item 
 int \mbox{\hyperlink{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}{wait4start}} ()
@@ -45,7 +47,7 @@ This function returns an int of 1 or 0. T\+His function can be used to check whe
 \end{DoxyReturn}
 
 
-Definition at line 275 of file control\+\_\+functions.\+hpp.
+Definition at line 305 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_gae693b071b5392f9253cdfc1f4f362fcc}\label{group__control__functions_gae693b071b5392f9253cdfc1f4f362fcc}} 
 \index{Control\_functions@{Control\_functions}!init\_publisher\_subscriber@{init\_publisher\_subscriber}}
@@ -58,7 +60,7 @@ n/a
 \end{DoxyReturn}
 
 
-Definition at line 315 of file control\+\_\+functions.\+hpp.
+Definition at line 354 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}\label{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}} 
 \index{Control\_functions@{Control\_functions}!initialize\_local\_frame@{initialize\_local\_frame}}
@@ -71,7 +73,7 @@ This function will create a local reference frame based on the starting location
 \end{DoxyReturn}
 
 
-Definition at line 198 of file control\+\_\+functions.\+hpp.
+Definition at line 223 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_ga52a11a139e56315de52d2ab439b0d203}\label{group__control__functions_ga52a11a139e56315de52d2ab439b0d203}} 
 \index{Control\_functions@{Control\_functions}!land@{land}}
@@ -86,7 +88,7 @@ this function changes the mode of the drone to land \begin{DoxyReturn}{Returns}
 \end{DoxyReturn}
 
 
-Definition at line 298 of file control\+\_\+functions.\+hpp.
+Definition at line 336 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}\label{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}} 
 \index{Control\_functions@{Control\_functions}!set\_destination@{set\_destination}}
@@ -99,7 +101,7 @@ n/a
 \end{DoxyReturn}
 
 
-Definition at line 125 of file control\+\_\+functions.\+hpp.
+Definition at line 139 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb682}\label{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb682}} 
 \index{Control\_functions@{Control\_functions}!set\_heading@{set\_heading}}
@@ -112,7 +114,20 @@ n/a
 \end{DoxyReturn}
 
 
-Definition at line 95 of file control\+\_\+functions.\+hpp.
+Definition at line 109 of file control\+\_\+functions.\+hpp.
+
+\mbox{\Hypertarget{group__control__functions_ga60eb8f08f1ac190352a7ad6532e4f70e}\label{group__control__functions_ga60eb8f08f1ac190352a7ad6532e4f70e}} 
+\index{Control\_functions@{Control\_functions}!spinOffSetPub@{spinOffSetPub}}
+\index{spinOffSetPub@{spinOffSetPub}!Control\_functions@{Control\_functions}}
+\subsubsection{\texorpdfstring{spinOffSetPub()}{spinOffSetPub()}}
+{\footnotesize\ttfamily void spin\+Off\+Set\+Pub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function publishes the angle between the E\+NU frame and the local reference frame specified by \mbox{\hyperlink{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}{initialize\+\_\+local\+\_\+frame()}}. This usefull if you have other nodes that need this information. \begin{DoxyReturn}{Returns}
+n/a 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_gac0aa671c99c09687515ec5bb8891c7d2}\label{group__control__functions_gac0aa671c99c09687515ec5bb8891c7d2}} 
 \index{Control\_functions@{Control\_functions}!takeoff@{takeoff}}
@@ -129,7 +144,7 @@ The takeoff function will arm the drone and put the drone in a hover above the i
 \end{DoxyReturn}
 
 
-Definition at line 228 of file control\+\_\+functions.\+hpp.
+Definition at line 257 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}\label{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}} 
 \index{Control\_functions@{Control\_functions}!wait4connect@{wait4connect}}
@@ -144,7 +159,7 @@ Wait for connect is a function that will hold the program until communication wi
 \end{DoxyReturn}
 
 
-Definition at line 150 of file control\+\_\+functions.\+hpp.
+Definition at line 175 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}\label{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}} 
 \index{Control\_functions@{Control\_functions}!wait4start@{wait4start}}
@@ -159,5 +174,5 @@ Wait for strat will hold the program until the user signals the F\+CU to enther 
 \end{DoxyReturn}
 
 
-Definition at line 176 of file control\+\_\+functions.\+hpp.
+Definition at line 201 of file control\+\_\+functions.\+hpp.
 

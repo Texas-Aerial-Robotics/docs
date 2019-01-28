@@ -8,6 +8,12 @@
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
+  <compound refid="arducopter_8md" kind="file"><name>arducopter.md</name>
+  </compound>
+  <compound refid="basic__gazebo_8md" kind="file"><name>basic_gazebo.md</name>
+  </compound>
+  <compound refid="basic__ros_8md" kind="file"><name>basic_ros.md</name>
+  </compound>
   <compound refid="control__api__tutorial_8md" kind="file"><name>control_api_tutorial.md</name>
   </compound>
   <compound refid="enviorment__setup_8md" kind="file"><name>enviorment_setup.md</name>
@@ -16,7 +22,11 @@
   </compound>
   <compound refid="mainpage_8md" kind="file"><name>mainpage.md</name>
   </compound>
+  <compound refid="monocular__uav_8md" kind="file"><name>monocular_uav.md</name>
+  </compound>
   <compound refid="yolo_8md" kind="file"><name>yolo.md</name>
+  </compound>
+  <compound refid="yolo__ros_8md" kind="file"><name>yolo_ros.md</name>
   </compound>
   <compound refid="yoloTraining_8md" kind="file"><name>yoloTraining.md</name>
   </compound>
@@ -25,10 +35,12 @@
     <member refid="control__functions_8hpp_1a9194a07fdb9b49db0ec08e2030bb430c" kind="variable"><name>current_pose_g</name></member>
     <member refid="control__functions_8hpp_1a2856577bd2f84b0267b4ad5e0678f782" kind="variable"><name>correction_vector_g</name></member>
     <member refid="control__functions_8hpp_1a571aa9dcfa0f6cdd083a500f4c2afa8c" kind="variable"><name>waypoint_g</name></member>
+    <member refid="control__functions_8hpp_1aa3b4114b925cdf11691a711a5710f8ee" kind="variable"><name>initial_pose_enu_g</name></member>
     <member refid="control__functions_8hpp_1a45fa7796dace886b88ae107e8df70f05" kind="variable"><name>current_heading_g</name></member>
     <member refid="control__functions_8hpp_1ac5d8c17b47e49fd67af5228669685519" kind="variable"><name>local_offset_g</name></member>
     <member refid="control__functions_8hpp_1a65752133259c7b2fe178effd597c209d" kind="variable"><name>correction_heading_g</name></member>
     <member refid="control__functions_8hpp_1a65a6f082f57b092ecc9865c4353c985c" kind="variable"><name>local_pos_pub</name></member>
+    <member refid="control__functions_8hpp_1a3bc9831686a124ca7a714e6794e80578" kind="variable"><name>local_off_pub</name></member>
     <member refid="control__functions_8hpp_1a4d60095ec8c7649007a635c590191719" kind="variable"><name>currentPos</name></member>
     <member refid="control__functions_8hpp_1a9942c17e2c44d81a6ea10f172fc89d12" kind="variable"><name>state_sub</name></member>
     <member refid="control__functions_8hpp_1a6b8479ae21fd3e8eefb9902262292af5" kind="variable"><name>arming_client</name></member>
@@ -37,9 +49,11 @@
     <member refid="control__functions_8hpp_1aec70101dd7479fcb0f549dde9f1d0789" kind="variable"><name>takeoff_client</name></member>
     <member refid="control__functions_8hpp_1a05b0e3da49b65a1eb9907815a9a894a8" kind="function"><name>state_cb</name></member>
     <member refid="control__functions_8hpp_1ad6fa52a9ddec6f2104e49f30ec1b4605" kind="function"><name>enu_2_local</name></member>
+    <member refid="control__functions_8hpp_1aae34969914a17fe6f8530f8587b89123" kind="function"><name>quat2yaw</name></member>
     <member refid="control__functions_8hpp_1afa0f9061a6152b26289dd2c93b295847" kind="function"><name>pose_cb</name></member>
     <member refid="group__control__functions_1ga92292bc0da7dd2a58edf8e9aa10eb682" kind="function"><name>set_heading</name></member>
     <member refid="group__control__functions_1gab90a45d8b081ba329b9d0f886adbc2d5" kind="function"><name>set_destination</name></member>
+    <member refid="group__control__functions_1ga60eb8f08f1ac190352a7ad6532e4f70e" kind="function"><name>spinOffSetPub</name></member>
     <member refid="group__control__functions_1ga1921a30d419eb397f7e40875217b45d1" kind="function"><name>wait4connect</name></member>
     <member refid="group__control__functions_1gab6fe46f505ab9804b4ed98b96286a811" kind="function"><name>wait4start</name></member>
     <member refid="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" kind="function"><name>initialize_local_frame</name></member>
@@ -102,6 +116,7 @@
   <compound refid="group__control__functions" kind="group"><name>Control_functions</name>
     <member refid="group__control__functions_1ga92292bc0da7dd2a58edf8e9aa10eb682" kind="function"><name>set_heading</name></member>
     <member refid="group__control__functions_1gab90a45d8b081ba329b9d0f886adbc2d5" kind="function"><name>set_destination</name></member>
+    <member refid="group__control__functions_1ga60eb8f08f1ac190352a7ad6532e4f70e" kind="function"><name>spinOffSetPub</name></member>
     <member refid="group__control__functions_1ga1921a30d419eb397f7e40875217b45d1" kind="function"><name>wait4connect</name></member>
     <member refid="group__control__functions_1gab6fe46f505ab9804b4ed98b96286a811" kind="function"><name>wait4start</name></member>
     <member refid="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" kind="function"><name>initialize_local_frame</name></member>
@@ -110,13 +125,23 @@
     <member refid="group__control__functions_1ga52a11a139e56315de52d2ab439b0d203" kind="function"><name>land</name></member>
     <member refid="group__control__functions_1gae693b071b5392f9253cdfc1f4f362fcc" kind="function"><name>init_publisher_subscriber</name></member>
   </compound>
+  <compound refid="md_arducopter" kind="page"><name>md_arducopter</name>
+  </compound>
+  <compound refid="md_basic_gazebo" kind="page"><name>md_basic_gazebo</name>
+  </compound>
+  <compound refid="md_basic_ros" kind="page"><name>md_basic_ros</name>
+  </compound>
   <compound refid="md_control_api_tutorial" kind="page"><name>md_control_api_tutorial</name>
   </compound>
   <compound refid="md_enviorment_setup" kind="page"><name>md_enviorment_setup</name>
   </compound>
   <compound refid="md_linux_commands" kind="page"><name>md_linux_commands</name>
   </compound>
+  <compound refid="md_monocular_uav" kind="page"><name>md_monocular_uav</name>
+  </compound>
   <compound refid="md_yolo" kind="page"><name>md_yolo</name>
+  </compound>
+  <compound refid="md_yolo_ros" kind="page"><name>md_yolo_ros</name>
   </compound>
   <compound refid="md_yoloTraining" kind="page"><name>md_yoloTraining</name>
   </compound>
