@@ -6,9 +6,7 @@
     <includes local="no">mavros_msgs/State.h</includes>
     <includes local="no">nav_msgs/Odometry.h</includes>
     <includes local="no">geometry_msgs/Pose.h</includes>
-    <includes local="no">geometry_msgs/Point.h</includes>
     <includes local="no">geometry_msgs/PoseStamped.h</includes>
-    <includes local="no">geometry_msgs/Quaternion.h</includes>
     <includes local="no">cmath</includes>
     <includes local="no">math.h</includes>
     <includes local="no">ros/ros.h</includes>
@@ -23,25 +21,22 @@
     <includes local="no">iostream</includes>
     <includedby refid="controlAPIExample_8cpp" local="no">/home/eric/catkin_ws/src/Mission8_OutOfControls/src/controlAPIExample.cpp</includedby>
     <incdepgraph>
-      <node id="40">
+      <node id="38">
         <label>ros/duration.h</label>
       </node>
-      <node id="35">
+      <node id="33">
         <label>mavros_msgs/CommandBool.h</label>
       </node>
       <node id="24">
         <label>mavros_msgs/State.h</label>
       </node>
-      <node id="30">
+      <node id="28">
         <label>cmath</label>
       </node>
       <node id="25">
         <label>nav_msgs/Odometry.h</label>
       </node>
-      <node id="27">
-        <label>geometry_msgs/Point.h</label>
-      </node>
-      <node id="33">
+      <node id="31">
         <label>std_msgs/Float64.h</label>
       </node>
       <node id="22">
@@ -81,56 +76,49 @@
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
       </node>
-      <node id="28">
+      <node id="27">
         <label>geometry_msgs/PoseStamped.h</label>
       </node>
-      <node id="38">
+      <node id="36">
         <label>unistd.h</label>
       </node>
-      <node id="39">
+      <node id="37">
         <label>vector</label>
       </node>
       <node id="23">
         <label>mavros_msgs/CommandTOL.h</label>
       </node>
-      <node id="36">
+      <node id="34">
         <label>mavros_msgs/SetMode.h</label>
       </node>
       <node id="26">
         <label>geometry_msgs/Pose.h</label>
       </node>
-      <node id="32">
+      <node id="30">
         <label>ros/ros.h</label>
       </node>
-      <node id="31">
+      <node id="29">
         <label>math.h</label>
       </node>
-      <node id="34">
+      <node id="32">
         <label>std_msgs/String.h</label>
       </node>
-      <node id="41">
+      <node id="39">
         <label>iostream</label>
       </node>
-      <node id="29">
-        <label>geometry_msgs/Quaternion.h</label>
-      </node>
-      <node id="37">
+      <node id="35">
         <label>mavros_msgs/PositionTarget.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="42">
+      <node id="40">
         <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp</label>
         <link refid="control__functions_8hpp"/>
-        <childnode refid="43" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="41">
         <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/src/controlAPIExample.cpp</label>
         <link refid="controlAPIExample_8cpp"/>
       </node>
@@ -148,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="28" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="28" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="26" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a9194a07fdb9b49db0ec08e2030bb430c" prot="public" static="no" mutable="no">
         <type>nav_msgs::Odometry</type>
@@ -161,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="29" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="29" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="27" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a2856577bd2f84b0267b4ad5e0678f782" prot="public" static="no" mutable="no">
         <type>geometry_msgs::Pose</type>
@@ -174,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="30" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="30" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="28" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a571aa9dcfa0f6cdd083a500f4c2afa8c" prot="public" static="no" mutable="no">
         <type>geometry_msgs::PoseStamped</type>
@@ -187,20 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="31" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="control__functions_8hpp_1aa3b4114b925cdf11691a711a5710f8ee" prot="public" static="no" mutable="no">
-        <type>geometry_msgs::Point</type>
-        <definition>geometry_msgs::Point initial_pose_enu_g</definition>
-        <argsstring></argsstring>
-        <name>initial_pose_enu_g</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="32" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="32" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="29" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a45fa7796dace886b88ae107e8df70f05" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -213,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="34" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="34" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="31" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1ac5d8c17b47e49fd67af5228669685519" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -226,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="35" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="35" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="32" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a65752133259c7b2fe178effd597c209d" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -240,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="36" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="36" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="33" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a65a6f082f57b092ecc9865c4353c985c" prot="public" static="no" mutable="no">
         <type>ros::Publisher</type>
@@ -253,20 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="40" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="40" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="control__functions_8hpp_1a3bc9831686a124ca7a714e6794e80578" prot="public" static="no" mutable="no">
-        <type>ros::Publisher</type>
-        <definition>ros::Publisher local_off_pub</definition>
-        <argsstring></argsstring>
-        <name>local_off_pub</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="41" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="41" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="37" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a4d60095ec8c7649007a635c590191719" prot="public" static="no" mutable="no">
         <type>ros::Subscriber</type>
@@ -279,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="42" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="42" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="38" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a9942c17e2c44d81a6ea10f172fc89d12" prot="public" static="no" mutable="no">
         <type>ros::Subscriber</type>
@@ -292,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="43" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="43" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="39" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1a6b8479ae21fd3e8eefb9902262292af5" prot="public" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -305,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="44" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="40" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1abbc28c8607153c3050ffc2eba393728b" prot="public" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -318,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="45" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="45" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="41" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1ac1a884373bfb9dc7f8dff66be8033421" prot="public" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -331,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="46" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="46" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="42" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="control__functions_8hpp_1aec70101dd7479fcb0f549dde9f1d0789" prot="public" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -344,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="47" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="47" bodyend="-1"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="43" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -363,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="61" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="61" bodyend="64"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="57" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="57" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="control__functions_8hpp_1ad6fa52a9ddec6f2104e49f30ec1b4605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -380,24 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="65" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="65" bodyend="75"/>
-      </memberdef>
-      <memberdef kind="function" id="control__functions_8hpp_1aae34969914a17fe6f8530f8587b89123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>float</type>
-        <definition>float quat2yaw</definition>
-        <argsstring>(geometry_msgs::Quaternion quat)</argsstring>
-        <name>quat2yaw</name>
-        <param>
-          <type>geometry_msgs::Quaternion</type>
-          <declname>quat</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="77" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="77" bodyend="85"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="61" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="61" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="control__functions_8hpp_1afa0f9061a6152b26289dd2c93b295847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -414,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="87" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="87" bodyend="101"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="73" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="73" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1ga92292bc0da7dd2a58edf8e9aa10eb682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -434,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="109" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="109" bodyend="132"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="95" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="95" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1gab90a45d8b081ba329b9d0f886adbc2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -466,23 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="139" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="139" bodyend="157"/>
-      </memberdef>
-      <memberdef kind="function" id="group__control__functions_1ga60eb8f08f1ac190352a7ad6532e4f70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void spinOffSetPub</definition>
-        <argsstring>()</argsstring>
-        <name>spinOffSetPub</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>This function publishes the angle between the ENU frame and the local reference frame specified by <ref refid="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" kindref="member">initialize_local_frame()</ref>. This usefull if you have other nodes that need this information. <simplesect kind="return"><para>n/a </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="163" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="163" bodyend="168"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="125" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="125" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1ga1921a30d419eb397f7e40875217b45d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -500,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="175" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="175" bodyend="194"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="150" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="150" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1gab6fe46f505ab9804b4ed98b96286a811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -518,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="201" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="201" bodyend="217"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="176" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="176" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -534,7 +463,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="223" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="223" bodyend="249"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="198" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="198" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1gac0aa671c99c09687515ec5bb8891c7d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -558,7 +487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="257" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="257" bodyend="298"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="228" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="228" bodyend="268"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1ga54abc3f6eae022a8710bc0c2e1c54fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -576,7 +505,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="305" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="305" bodyend="329"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="275" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="275" bodyend="291"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1ga52a11a139e56315de52d2ab439b0d203" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -594,7 +523,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="336" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="336" bodyend="347"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="298" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="298" bodyend="309"/>
       </memberdef>
       <memberdef kind="function" id="group__control__functions_1gae693b071b5392f9253cdfc1f4f362fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -614,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="354" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="354" bodyend="365"/>
+        <location file="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" line="315" column="1" bodyfile="/home/eric/catkin_ws/src/Mission8_OutOfControls/include/control_functions.hpp" bodystart="315" bodyend="325"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

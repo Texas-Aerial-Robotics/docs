@@ -21,27 +21,35 @@
     <includes local="no">math.h</includes>
     <includes local="no">ros/duration.h</includes>
     <incdepgraph>
-      <node id="102">
+      <node id="98">
         <label>ros/duration.h</label>
       </node>
-      <node id="91">
+      <node id="87">
         <label>mavros_msgs/CommandBool.h</label>
       </node>
-      <node id="93">
+      <node id="89">
         <label>mavros_msgs/State.h</label>
       </node>
-      <node id="100">
+      <node id="96">
         <label>cmath</label>
       </node>
-      <node id="88">
+      <node id="84">
         <label>nav_msgs/Odometry.h</label>
       </node>
-      <node id="89">
+      <node id="85">
         <label>std_msgs/Float64.h</label>
       </node>
-      <node id="84">
+      <node id="80">
         <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/src/mission7FlightCode.cpp</label>
         <link refid="mission7FlightCode_8cpp"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
         <childnode refid="85" relation="include">
         </childnode>
         <childnode refid="86" relation="include">
@@ -70,49 +78,41 @@
         </childnode>
         <childnode refid="98" relation="include">
         </childnode>
-        <childnode refid="99" relation="include">
-        </childnode>
-        <childnode refid="100" relation="include">
-        </childnode>
-        <childnode refid="101" relation="include">
-        </childnode>
-        <childnode refid="102" relation="include">
-        </childnode>
       </node>
-      <node id="87">
+      <node id="83">
         <label>geometry_msgs/PoseStamped.h</label>
       </node>
-      <node id="96">
+      <node id="92">
         <label>geometry_msgs/Pose2D.h</label>
       </node>
-      <node id="95">
+      <node id="91">
         <label>unistd.h</label>
       </node>
-      <node id="97">
+      <node id="93">
         <label>mavros_msgs/CommandTOL.h</label>
       </node>
-      <node id="92">
+      <node id="88">
         <label>mavros_msgs/SetMode.h</label>
       </node>
-      <node id="86">
+      <node id="82">
         <label>ros/ros.h</label>
       </node>
-      <node id="99">
+      <node id="95">
         <label>time.h</label>
       </node>
-      <node id="101">
+      <node id="97">
         <label>math.h</label>
       </node>
-      <node id="90">
+      <node id="86">
         <label>std_msgs/String.h</label>
       </node>
-      <node id="85">
+      <node id="81">
         <label>iostream</label>
       </node>
-      <node id="98">
+      <node id="94">
         <label>sensor_msgs/LaserScan.h</label>
       </node>
-      <node id="94">
+      <node id="90">
         <label>mavros_msgs/PositionTarget.h</label>
       </node>
     </incdepgraph>

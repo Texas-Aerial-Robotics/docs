@@ -19,54 +19,62 @@
     <includes local="no">math.h</includes>
     <includes local="no">ros/duration.h</includes>
     <incdepgraph>
-      <node id="82">
+      <node id="78">
         <label>ros/duration.h</label>
       </node>
-      <node id="72">
+      <node id="68">
         <label>mavros_msgs/CommandBool.h</label>
       </node>
-      <node id="74">
+      <node id="70">
         <label>mavros_msgs/State.h</label>
       </node>
-      <node id="80">
+      <node id="76">
         <label>cmath</label>
       </node>
-      <node id="70">
+      <node id="66">
         <label>nav_msgs/Odometry.h</label>
       </node>
-      <node id="71">
+      <node id="67">
         <label>std_msgs/Float64.h</label>
       </node>
-      <node id="69">
+      <node id="65">
         <label>geometry_msgs/PoseStamped.h</label>
       </node>
-      <node id="77">
+      <node id="73">
         <label>geometry_msgs/Pose2D.h</label>
       </node>
-      <node id="76">
+      <node id="72">
         <label>unistd.h</label>
       </node>
-      <node id="78">
+      <node id="74">
         <label>mavros_msgs/CommandTOL.h</label>
       </node>
-      <node id="73">
+      <node id="69">
         <label>mavros_msgs/SetMode.h</label>
       </node>
-      <node id="68">
+      <node id="64">
         <label>ros/ros.h</label>
       </node>
-      <node id="79">
+      <node id="75">
         <label>time.h</label>
       </node>
-      <node id="81">
+      <node id="77">
         <label>math.h</label>
       </node>
-      <node id="67">
+      <node id="63">
         <label>iostream</label>
       </node>
-      <node id="66">
+      <node id="62">
         <label>/home/eric/catkin_ws/src/Mission8_OutOfControls/src/flight.cpp</label>
         <link refid="flight_8cpp"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
         <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="68" relation="include">
@@ -91,16 +99,8 @@
         </childnode>
         <childnode refid="78" relation="include">
         </childnode>
-        <childnode refid="79" relation="include">
-        </childnode>
-        <childnode refid="80" relation="include">
-        </childnode>
-        <childnode refid="81" relation="include">
-        </childnode>
-        <childnode refid="82" relation="include">
-        </childnode>
       </node>
-      <node id="75">
+      <node id="71">
         <label>mavros_msgs/PositionTarget.h</label>
       </node>
     </incdepgraph>

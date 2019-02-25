@@ -7,7 +7,93 @@
     </briefdescription>
     <detaileddescription>
 <para>The below functions will help you to easily create highlevel path planning programs. This API is designed to be used with the ArduCopter flight stack. <ref refid="group__control__functions" kindref="compound">Control_functions</ref></para>
-<para>The below code is a simple example that executes a square flight pattern. <ref refid="controlAPIExample_8cpp" kindref="compound">src/controlAPIExample.cpp</ref></para>
+<para>The following tutorial will show you how to make a simple program that allows you to send your drone to waypoints.</para>
+<para>First, we will clone the package Mission8_OutOfControls. <programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/Mission8_OutOfControls.git</highlight></codeline>
+</programlisting></para>
+<para>this package contains the file <ref refid="control__functions_8hpp" kindref="compound">control_functions.hpp</ref> . This file contains a bunch of useful functions for creating intelligent drone applications.</para>
+<para>Once you have cloned Mission8_OutOfControls. Create a new file in called <computeroutput>control_tutorial.cpp</computeroutput> in <computeroutput>Mission8_OutOfControls/src</computeroutput></para>
+<para>First we will include our control functions <programlisting><codeline><highlight class="normal">#include<sp/>&lt;control_functions.hpp&gt;</highlight></codeline>
+</programlisting> This will allow us to use all of our control functions and structures</para>
+<para>Next add the main function and initialize ros <programlisting><codeline><highlight class="normal">int<sp/>main(int<sp/>argc,<sp/>char**<sp/>argv)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//initialize<sp/>ros<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ros::init(argc,<sp/>argv,<sp/>&quot;offb_node&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>controlnode;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Rest<sp/>of<sp/>code<sp/>here</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>We will then add the function <ref refid="group__control__functions_1gae693b071b5392f9253cdfc1f4f362fcc" kindref="member">init_publisher_subscriber()</ref>. This function takes our ros node handle as an input and initializes subcribers that will collect the necissary information from our autopilot. add the following</para>
+<para><programlisting><codeline><highlight class="normal">//initialize<sp/>control<sp/>publisher/subscribers</highlight></codeline>
+<codeline><highlight class="normal">init_publisher_subscriber(controlnode);</highlight></codeline>
+</programlisting> The control API contains the structure <computeroutput><ref refid="structcontrol__api__waypoint" kindref="compound">control_api_waypoint</ref></computeroutput> this structure contains the variables <computeroutput>x y z psi</computeroutput> which you can use to set locations and orientations of your drone.</para>
+<para>To make your drone fly in a square specify the following waypoints <programlisting><codeline><highlight class="normal">//specify<sp/>some<sp/>waypoints<sp/></highlight></codeline>
+<codeline><highlight class="normal">std::vector&lt;control_api_waypoint&gt;<sp/>waypointList;</highlight></codeline>
+<codeline><highlight class="normal">control_api_waypoint<sp/>nextWayPoint;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.psi<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.x<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.psi<sp/>=<sp/>-90;</highlight></codeline>
+<codeline><highlight class="normal">waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.x<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.y<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.psi<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.y<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.psi<sp/>=<sp/>90;</highlight></codeline>
+<codeline><highlight class="normal">waypointList.push_back(nextWayPoint);</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.z<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">nextWayPoint.psi<sp/>=<sp/>180;</highlight></codeline>
+<codeline><highlight class="normal">waypointList.push_back(nextWayPoint);</highlight></codeline>
+</programlisting> we will then add the following functions to handle preflight opperations <programlisting><codeline><highlight class="normal">//<sp/>wait<sp/>for<sp/>FCU<sp/>connection</highlight></codeline>
+<codeline><highlight class="normal">wait4connect();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//wait<sp/>for<sp/>used<sp/>to<sp/>switch<sp/>to<sp/>mode<sp/>GUIDED</highlight></codeline>
+<codeline><highlight class="normal">wait4start();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//create<sp/>local<sp/>reference<sp/>frame<sp/></highlight></codeline>
+<codeline><highlight class="normal">initialize_local_frame();</highlight></codeline>
+</programlisting> The function <computeroutput><ref refid="group__control__functions_1ga1921a30d419eb397f7e40875217b45d1" kindref="member">wait4connect()</ref></computeroutput> will loop until the node can communicate with the flight control unit (FCU). Once the connection with the FCU is established then we will use the function <computeroutput><ref refid="group__control__functions_1gab6fe46f505ab9804b4ed98b96286a811" kindref="member">wait4start()</ref></computeroutput> to hold the program until the pilot executes the program by switching the FCU flight mode to GUIDED. This can be done from a ground control stattion (GCS) such as Mission Planner or QGroundControlv or from a switch on a radio controller. Finally, once the command to execcute the mission is sent you will use the function <computeroutput><ref refid="group__control__functions_1ga2a1100bb15673a9322c5be3bb8e9999f" kindref="member">initialize_local_frame()</ref></computeroutput> to create your navigation frame. This function creates the local reference frame based on the starting location of the drone.</para>
+<para>Next we will request takeoff. using the function <computeroutput><ref refid="group__control__functions_1gac0aa671c99c09687515ec5bb8891c7d2" kindref="member">takeoff(float takeOffHieght)</ref></computeroutput>. Add <programlisting><codeline><highlight class="normal">//request<sp/>takeoff</highlight></codeline>
+<codeline><highlight class="normal">takeoff(3);</highlight></codeline>
+</programlisting></para>
+<para>Finally we will add our control loop <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//specify<sp/>control<sp/>loop<sp/>rate.<sp/>We<sp/>recommend<sp/>a<sp/>low<sp/>frequency<sp/>to<sp/>not<sp/>over<sp/>load<sp/>the<sp/>FCU<sp/>with<sp/>messages.<sp/>Too<sp/>many<sp/>messages<sp/>will<sp/>cause<sp/>the<sp/>drone<sp/>to<sp/>be<sp/>sluggish</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ros::Rate<sp/>rate(2.0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while(ros::ok())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::spinOnce();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rate.sleep();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(check_waypoint_reached()<sp/>==<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(counter<sp/>&lt;<sp/>waypointList.size())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_destination(waypointList[counter].x,waypointList[counter].y,waypointList[counter].z,<sp/>waypointList[counter].psi);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>counter++;<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}else{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//land<sp/>after<sp/>all<sp/>waypoints<sp/>are<sp/>reached</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>land();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> This loop will continually send the requested destination to the FCU via the <computeroutput>set_destination(x, y, z, psi)</computeroutput> function. The loop uses the function <computeroutput><ref refid="group__control__functions_1ga54abc3f6eae022a8710bc0c2e1c54fbe" kindref="member">check_waypoint_reached()</ref></computeroutput> to determained when the drone has arrived at the requested destination. The function return 1 or 0. 1 denotes the drone has arrived. Each time the waypoint is reached the vector of waypoints is iterated to request the next waypoint via the variable <computeroutput>counter</computeroutput>. Finally, the drone will land via the land function <computeroutput><ref refid="group__control__functions_1ga52a11a139e56315de52d2ab439b0d203" kindref="member">land()</ref></computeroutput></para>
+<para>Your program should like like the following <ref refid="controlAPIExample_8cpp" kindref="compound">src/controlAPIExample.cpp</ref></para>
 <para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;control_functions.hpp&gt;</highlight></codeline>
 <codeline><highlight class="normal">//include<sp/>API<sp/></highlight></codeline>
 <codeline></codeline>
@@ -92,7 +178,8 @@
 <codeline><highlight class="normal">roslaunch<sp/>out_of_controls<sp/>apm.launch</highlight></codeline>
 <codeline><highlight class="normal">#<sp/>New<sp/>Terminal<sp/></highlight></codeline>
 <codeline><highlight class="normal">roslaunch<sp/>out_of_controls<sp/>contolAPIExample.launch</highlight></codeline>
-</programlisting> NOTE** you can tile gnome terminals by pressing <computeroutput>ctrl + shift + t</computeroutput> </para>
+</programlisting> NOTE** you can tile gnome terminals by pressing <computeroutput>ctrl + shift + t</computeroutput></para>
+<para>You should now have a basic understanding of the functions available for controling your drone. You should be able to use these functions to help you make more complex navigation code. </para>
     </detaileddescription>
   </compounddef>
 </doxygen>

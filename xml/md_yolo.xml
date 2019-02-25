@@ -16,7 +16,7 @@
 <para>Easy!</para>
 <para>You already have the config file for YOLO in the cfg/ subdirectory. You will have to download the pre-trained weight file <programlisting><codeline><highlight class="normal">wget<sp/>https://pjreddie.com/media/files/yolov3.weights</highlight></codeline>
 </programlisting> Then run the detector!</para>
-<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detect<sp/>cfg/yolov3.cfg<sp/>yolov3.weights<sp/>data/dog.jpg</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal">./darknet<sp/>detector<sp/>test<sp/>cfg/coco.data<sp/>cfg/yolov3.cfg<sp/>yolov3.weights<sp/>data/dog.jpg</highlight></codeline>
 </programlisting> You will see some output like this:</para>
 <para><programlisting><codeline><highlight class="normal">layer<sp/><sp/><sp/><sp/><sp/>filters<sp/><sp/><sp/><sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0<sp/>conv<sp/><sp/><sp/><sp/><sp/>32<sp/><sp/>3<sp/>x<sp/>3<sp/>/<sp/>1<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/><sp/>3<sp/><sp/><sp/>-&gt;<sp/><sp/><sp/>416<sp/>x<sp/>416<sp/>x<sp/><sp/>32<sp/><sp/>0.299<sp/>BFLOPs</highlight></codeline>
@@ -89,6 +89,9 @@
 <para><heading level="2">Use YOLO to train your own custom classes</heading>
 </para>
 <para><ref refid="md_yoloTraining" kindref="compound">Training YOLO with BBox-Label-Tool</ref></para>
+<para><heading level="2">For more information on YOLO visit</heading>
+</para>
+<para><ulink url="https://pjreddie.com/darknet/yolo/">https://pjreddie.com/darknet/yolo/</ulink></para>
 <para><heading level="2">Cite</heading>
 </para>
 <para>If you use YOLOv3 in your work please cite our paper!</para>

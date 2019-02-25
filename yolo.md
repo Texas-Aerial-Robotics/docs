@@ -19,7 +19,7 @@ wget https://pjreddie.com/media/files/yolov3.weights
 Then run the detector!
 
 ```
-./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+./darknet detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights data/dog.jpg
 ```
 You will see some output like this:
 
@@ -141,6 +141,10 @@ You can also run it on a video file if OpenCV can read the video:
 ## Use YOLO to train your own custom classes 
 
 @ref yoloTraining.md
+
+## For more information on YOLO visit 
+
+https://pjreddie.com/darknet/yolo/
 
 ## Cite
 

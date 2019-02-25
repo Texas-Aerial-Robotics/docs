@@ -4,9 +4,7 @@
 {\ttfamily \#include $<$mavros\+\_\+msgs/\+State.\+h$>$}\newline
 {\ttfamily \#include $<$nav\+\_\+msgs/\+Odometry.\+h$>$}\newline
 {\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose.\+h$>$}\newline
-{\ttfamily \#include $<$geometry\+\_\+msgs/\+Point.\+h$>$}\newline
 {\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
-{\ttfamily \#include $<$geometry\+\_\+msgs/\+Quaternion.\+h$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include $<$ros/ros.\+h$>$}\newline
@@ -31,15 +29,11 @@ void \mbox{\hyperlink{control__functions_8hpp_a05b0e3da49b65a1eb9907815a9a894a8}
 \item 
 void \mbox{\hyperlink{control__functions_8hpp_ad6fa52a9ddec6f2104e49f30ec1b4605}{enu\+\_\+2\+\_\+local}} (nav\+\_\+msgs\+::\+Odometry current\+\_\+pose\+\_\+enu)
 \item 
-float \mbox{\hyperlink{control__functions_8hpp_aae34969914a17fe6f8530f8587b89123}{quat2yaw}} (geometry\+\_\+msgs\+::\+Quaternion quat)
-\item 
 void \mbox{\hyperlink{control__functions_8hpp_afa0f9061a6152b26289dd2c93b295847}{pose\+\_\+cb}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
 \item 
 void \mbox{\hyperlink{group__control__functions_ga92292bc0da7dd2a58edf8e9aa10eb682}{set\+\_\+heading}} (float heading)
 \item 
 void \mbox{\hyperlink{group__control__functions_gab90a45d8b081ba329b9d0f886adbc2d5}{set\+\_\+destination}} (float x, float y, float z, float psi)
-\item 
-void \mbox{\hyperlink{group__control__functions_ga60eb8f08f1ac190352a7ad6532e4f70e}{spin\+Off\+Set\+Pub}} ()
 \item 
 int \mbox{\hyperlink{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}{wait4connect}} ()
 \item 
@@ -66,8 +60,6 @@ geometry\+\_\+msgs\+::\+Pose \mbox{\hyperlink{control__functions_8hpp_a2856577bd
 \item 
 geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{control__functions_8hpp_a571aa9dcfa0f6cdd083a500f4c2afa8c}{waypoint\+\_\+g}}
 \item 
-geometry\+\_\+msgs\+::\+Point \mbox{\hyperlink{control__functions_8hpp_aa3b4114b925cdf11691a711a5710f8ee}{initial\+\_\+pose\+\_\+enu\+\_\+g}}
-\item 
 float \mbox{\hyperlink{control__functions_8hpp_a45fa7796dace886b88ae107e8df70f05}{current\+\_\+heading\+\_\+g}}
 \item 
 float \mbox{\hyperlink{control__functions_8hpp_ac5d8c17b47e49fd67af5228669685519}{local\+\_\+offset\+\_\+g}}
@@ -75,8 +67,6 @@ float \mbox{\hyperlink{control__functions_8hpp_ac5d8c17b47e49fd67af5228669685519
 float \mbox{\hyperlink{control__functions_8hpp_a65752133259c7b2fe178effd597c209d}{correction\+\_\+heading\+\_\+g}} = 0
 \item 
 ros\+::\+Publisher \mbox{\hyperlink{control__functions_8hpp_a65a6f082f57b092ecc9865c4353c985c}{local\+\_\+pos\+\_\+pub}}
-\item 
-ros\+::\+Publisher \mbox{\hyperlink{control__functions_8hpp_a3bc9831686a124ca7a714e6794e80578}{local\+\_\+off\+\_\+pub}}
 \item 
 ros\+::\+Subscriber \mbox{\hyperlink{control__functions_8hpp_a4d60095ec8c7649007a635c590191719}{current\+Pos}}
 \item 
@@ -101,7 +91,7 @@ ros\+::\+Service\+Client \mbox{\hyperlink{control__functions_8hpp_aec70101dd7479
 
 
 
-Definition at line 65 of file control\+\_\+functions.\+hpp.
+Definition at line 61 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_afa0f9061a6152b26289dd2c93b295847}\label{control__functions_8hpp_afa0f9061a6152b26289dd2c93b295847}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!pose\_cb@{pose\_cb}}
@@ -111,17 +101,7 @@ Definition at line 65 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 87 of file control\+\_\+functions.\+hpp.
-
-\mbox{\Hypertarget{control__functions_8hpp_aae34969914a17fe6f8530f8587b89123}\label{control__functions_8hpp_aae34969914a17fe6f8530f8587b89123}} 
-\index{control\_functions.hpp@{control\_functions.hpp}!quat2yaw@{quat2yaw}}
-\index{quat2yaw@{quat2yaw}!control\_functions.hpp@{control\_functions.hpp}}
-\subsubsection{\texorpdfstring{quat2yaw()}{quat2yaw()}}
-{\footnotesize\ttfamily float quat2yaw (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Quaternion}]{quat }\end{DoxyParamCaption})}
-
-
-
-Definition at line 77 of file control\+\_\+functions.\+hpp.
+Definition at line 73 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a05b0e3da49b65a1eb9907815a9a894a8}\label{control__functions_8hpp_a05b0e3da49b65a1eb9907815a9a894a8}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!state\_cb@{state\_cb}}
@@ -131,7 +111,7 @@ Definition at line 77 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 61 of file control\+\_\+functions.\+hpp.
+Definition at line 57 of file control\+\_\+functions.\+hpp.
 
 
 
@@ -144,7 +124,7 @@ Definition at line 61 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 44 of file control\+\_\+functions.\+hpp.
+Definition at line 40 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a65752133259c7b2fe178effd597c209d}\label{control__functions_8hpp_a65752133259c7b2fe178effd597c209d}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!correction\_heading\_g@{correction\_heading\_g}}
@@ -154,7 +134,7 @@ Definition at line 44 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 36 of file control\+\_\+functions.\+hpp.
+Definition at line 33 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a2856577bd2f84b0267b4ad5e0678f782}\label{control__functions_8hpp_a2856577bd2f84b0267b4ad5e0678f782}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!correction\_vector\_g@{correction\_vector\_g}}
@@ -164,7 +144,7 @@ Definition at line 36 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 30 of file control\+\_\+functions.\+hpp.
+Definition at line 28 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a45fa7796dace886b88ae107e8df70f05}\label{control__functions_8hpp_a45fa7796dace886b88ae107e8df70f05}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!current\_heading\_g@{current\_heading\_g}}
@@ -174,7 +154,7 @@ Definition at line 30 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 34 of file control\+\_\+functions.\+hpp.
+Definition at line 31 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a9194a07fdb9b49db0ec08e2030bb430c}\label{control__functions_8hpp_a9194a07fdb9b49db0ec08e2030bb430c}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!current\_pose\_g@{current\_pose\_g}}
@@ -184,7 +164,7 @@ Definition at line 34 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 29 of file control\+\_\+functions.\+hpp.
+Definition at line 27 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a8bc52f8ef68bfae1449aa646ae5a2517}\label{control__functions_8hpp_a8bc52f8ef68bfae1449aa646ae5a2517}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!current\_state\_g@{current\_state\_g}}
@@ -194,7 +174,7 @@ Definition at line 29 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 28 of file control\+\_\+functions.\+hpp.
+Definition at line 26 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a4d60095ec8c7649007a635c590191719}\label{control__functions_8hpp_a4d60095ec8c7649007a635c590191719}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!currentPos@{currentPos}}
@@ -204,33 +184,13 @@ Definition at line 28 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 42 of file control\+\_\+functions.\+hpp.
-
-\mbox{\Hypertarget{control__functions_8hpp_aa3b4114b925cdf11691a711a5710f8ee}\label{control__functions_8hpp_aa3b4114b925cdf11691a711a5710f8ee}} 
-\index{control\_functions.hpp@{control\_functions.hpp}!initial\_pose\_enu\_g@{initial\_pose\_enu\_g}}
-\index{initial\_pose\_enu\_g@{initial\_pose\_enu\_g}!control\_functions.hpp@{control\_functions.hpp}}
-\subsubsection{\texorpdfstring{initial\_pose\_enu\_g}{initial\_pose\_enu\_g}}
-{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Point initial\+\_\+pose\+\_\+enu\+\_\+g}
-
-
-
-Definition at line 32 of file control\+\_\+functions.\+hpp.
+Definition at line 38 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_abbc28c8607153c3050ffc2eba393728b}\label{control__functions_8hpp_abbc28c8607153c3050ffc2eba393728b}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!land\_client@{land\_client}}
 \index{land\_client@{land\_client}!control\_functions.hpp@{control\_functions.hpp}}
 \subsubsection{\texorpdfstring{land\_client}{land\_client}}
 {\footnotesize\ttfamily ros\+::\+Service\+Client land\+\_\+client}
-
-
-
-Definition at line 45 of file control\+\_\+functions.\+hpp.
-
-\mbox{\Hypertarget{control__functions_8hpp_a3bc9831686a124ca7a714e6794e80578}\label{control__functions_8hpp_a3bc9831686a124ca7a714e6794e80578}} 
-\index{control\_functions.hpp@{control\_functions.hpp}!local\_off\_pub@{local\_off\_pub}}
-\index{local\_off\_pub@{local\_off\_pub}!control\_functions.hpp@{control\_functions.hpp}}
-\subsubsection{\texorpdfstring{local\_off\_pub}{local\_off\_pub}}
-{\footnotesize\ttfamily ros\+::\+Publisher local\+\_\+off\+\_\+pub}
 
 
 
@@ -244,7 +204,7 @@ Definition at line 41 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 35 of file control\+\_\+functions.\+hpp.
+Definition at line 32 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a65a6f082f57b092ecc9865c4353c985c}\label{control__functions_8hpp_a65a6f082f57b092ecc9865c4353c985c}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!local\_pos\_pub@{local\_pos\_pub}}
@@ -254,7 +214,7 @@ Definition at line 35 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 40 of file control\+\_\+functions.\+hpp.
+Definition at line 37 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_ac1a884373bfb9dc7f8dff66be8033421}\label{control__functions_8hpp_ac1a884373bfb9dc7f8dff66be8033421}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!set\_mode\_client@{set\_mode\_client}}
@@ -264,7 +224,7 @@ Definition at line 40 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 46 of file control\+\_\+functions.\+hpp.
+Definition at line 42 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a9942c17e2c44d81a6ea10f172fc89d12}\label{control__functions_8hpp_a9942c17e2c44d81a6ea10f172fc89d12}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!state\_sub@{state\_sub}}
@@ -274,7 +234,7 @@ Definition at line 46 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 43 of file control\+\_\+functions.\+hpp.
+Definition at line 39 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_aec70101dd7479fcb0f549dde9f1d0789}\label{control__functions_8hpp_aec70101dd7479fcb0f549dde9f1d0789}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!takeoff\_client@{takeoff\_client}}
@@ -284,7 +244,7 @@ Definition at line 43 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 47 of file control\+\_\+functions.\+hpp.
+Definition at line 43 of file control\+\_\+functions.\+hpp.
 
 \mbox{\Hypertarget{control__functions_8hpp_a571aa9dcfa0f6cdd083a500f4c2afa8c}\label{control__functions_8hpp_a571aa9dcfa0f6cdd083a500f4c2afa8c}} 
 \index{control\_functions.hpp@{control\_functions.hpp}!waypoint\_g@{waypoint\_g}}
@@ -294,5 +254,5 @@ Definition at line 47 of file control\+\_\+functions.\+hpp.
 
 
 
-Definition at line 31 of file control\+\_\+functions.\+hpp.
+Definition at line 29 of file control\+\_\+functions.\+hpp.
 

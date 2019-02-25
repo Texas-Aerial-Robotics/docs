@@ -1,6 +1,127 @@
 The below functions will help you to easily create highlevel path planning programs. This A\+PI is designed to be used with the Ardu\+Copter flight stack. \mbox{\hyperlink{group__control__functions}{Control\+\_\+functions}}
 
-The below code is a simple example that executes a square flight pattern. \mbox{\hyperlink{controlAPIExample_8cpp}{src/control\+A\+P\+I\+Example.\+cpp}}
+The following tutorial will show you how to make a simple program that allows you to send your drone to waypoints.
+
+First, we will clone the package Mission8\+\_\+\+Out\+Of\+Controls. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/Mission8\_OutOfControls.git}
+\end{DoxyCode}
+
+
+this package contains the file \mbox{\hyperlink{control__functions_8hpp}{control\+\_\+functions.\+hpp}} . This file contains a bunch of useful functions for creating intelligent drone applications.
+
+Once you have cloned Mission8\+\_\+\+Out\+Of\+Controls. Create a new file in called {\ttfamily control\+\_\+tutorial.\+cpp} in {\ttfamily Mission8\+\_\+\+Out\+Of\+Controls/src}
+
+First we will include our control functions 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include <control\_functions.hpp>}
+\end{DoxyCode}
+ This will allow us to use all of our control functions and structures
+
+Next add the main function and initialize ros 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int main(int argc, char** argv)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    //initialize ros }
+\DoxyCodeLine{    ros::init(argc, argv, "offb\_node");}
+\DoxyCodeLine{    ros::NodeHandle controlnode;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //Rest of code here}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+We will then add the function \mbox{\hyperlink{group__control__functions_gae693b071b5392f9253cdfc1f4f362fcc}{init\+\_\+publisher\+\_\+subscriber()}}. This function takes our ros node handle as an input and initializes subcribers that will collect the necissary information from our autopilot. add the following
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//initialize control publisher/subscribers}
+\DoxyCodeLine{init\_publisher\_subscriber(controlnode);}
+\end{DoxyCode}
+ The control A\+PI contains the structure {\ttfamily \mbox{\hyperlink{structcontrol__api__waypoint}{control\+\_\+api\+\_\+waypoint}}} this structure contains the variables {\ttfamily x y z psi} which you can use to set locations and orientations of your drone.
+
+To make your drone fly in a square specify the following waypoints 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//specify some waypoints }
+\DoxyCodeLine{std::vector<control\_api\_waypoint> waypointList;}
+\DoxyCodeLine{control\_api\_waypoint nextWayPoint;}
+\DoxyCodeLine{nextWayPoint.x = 0;}
+\DoxyCodeLine{nextWayPoint.y = 0;}
+\DoxyCodeLine{nextWayPoint.z = 3;}
+\DoxyCodeLine{nextWayPoint.psi = 0;}
+\DoxyCodeLine{waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{nextWayPoint.x = 5;}
+\DoxyCodeLine{nextWayPoint.y = 0;}
+\DoxyCodeLine{nextWayPoint.z = 3;}
+\DoxyCodeLine{nextWayPoint.psi = -90;}
+\DoxyCodeLine{waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{nextWayPoint.x = 5;}
+\DoxyCodeLine{nextWayPoint.y = 5;}
+\DoxyCodeLine{nextWayPoint.z = 3;}
+\DoxyCodeLine{nextWayPoint.psi = 0;}
+\DoxyCodeLine{waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{nextWayPoint.x = 0;}
+\DoxyCodeLine{nextWayPoint.y = 5;}
+\DoxyCodeLine{nextWayPoint.z = 3;}
+\DoxyCodeLine{nextWayPoint.psi = 90;}
+\DoxyCodeLine{waypointList.push\_back(nextWayPoint);}
+\DoxyCodeLine{nextWayPoint.x = 0;}
+\DoxyCodeLine{nextWayPoint.y = 0;}
+\DoxyCodeLine{nextWayPoint.z = 3;}
+\DoxyCodeLine{nextWayPoint.psi = 180;}
+\DoxyCodeLine{waypointList.push\_back(nextWayPoint);}
+\end{DoxyCode}
+ we will then add the following functions to handle preflight opperations 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// wait for FCU connection}
+\DoxyCodeLine{wait4connect();}
+\DoxyCodeLine{}
+\DoxyCodeLine{//wait for used to switch to mode GUIDED}
+\DoxyCodeLine{wait4start();}
+\DoxyCodeLine{}
+\DoxyCodeLine{//create local reference frame }
+\DoxyCodeLine{initialize\_local\_frame();}
+\end{DoxyCode}
+ The function {\ttfamily \mbox{\hyperlink{group__control__functions_ga1921a30d419eb397f7e40875217b45d1}{wait4connect()}}} will loop until the node can communicate with the flight control unit (F\+CU). Once the connection with the F\+CU is established then we will use the function {\ttfamily \mbox{\hyperlink{group__control__functions_gab6fe46f505ab9804b4ed98b96286a811}{wait4start()}}} to hold the program until the pilot executes the program by switching the F\+CU flight mode to G\+U\+I\+D\+ED. This can be done from a ground control stattion (G\+CS) such as Mission Planner or Q\+Ground\+Controlv or from a switch on a radio controller. Finally, once the command to execcute the mission is sent you will use the function {\ttfamily \mbox{\hyperlink{group__control__functions_ga2a1100bb15673a9322c5be3bb8e9999f}{initialize\+\_\+local\+\_\+frame()}}} to create your navigation frame. This function creates the local reference frame based on the starting location of the drone.
+
+Next we will request takeoff. using the function {\ttfamily \mbox{\hyperlink{group__control__functions_gac0aa671c99c09687515ec5bb8891c7d2}{takeoff(float take\+Off\+Hieght)}}}. Add 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//request takeoff}
+\DoxyCodeLine{takeoff(3);}
+\end{DoxyCode}
+
+
+Finally we will add our control loop 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    //specify control loop rate. We recommend a low frequency to not over load the FCU with messages. Too many messages will cause the drone to be sluggish}
+\DoxyCodeLine{    ros::Rate rate(2.0);}
+\DoxyCodeLine{    int counter = 0;}
+\DoxyCodeLine{    while(ros::ok())}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        ros::spinOnce();}
+\DoxyCodeLine{        rate.sleep();}
+\DoxyCodeLine{        if(check\_waypoint\_reached() == 1)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            if (counter < waypointList.size())}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                set\_destination(waypointList[counter].x,waypointList[counter].y,waypointList[counter].z, waypointList[counter].psi);}
+\DoxyCodeLine{                counter++;  }
+\DoxyCodeLine{            \}else\{}
+\DoxyCodeLine{                //land after all waypoints are reached}
+\DoxyCodeLine{                land();}
+\DoxyCodeLine{            \}   }
+\DoxyCodeLine{        \}   }
+\DoxyCodeLine{        }
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ This loop will continually send the requested destination to the F\+CU via the {\ttfamily set\+\_\+destination(x, y, z, psi)} function. The loop uses the function {\ttfamily \mbox{\hyperlink{group__control__functions_ga54abc3f6eae022a8710bc0c2e1c54fbe}{check\+\_\+waypoint\+\_\+reached()}}} to determained when the drone has arrived at the requested destination. The function return 1 or 0. 1 denotes the drone has arrived. Each time the waypoint is reached the vector of waypoints is iterated to request the next waypoint via the variable {\ttfamily counter}. Finally, the drone will land via the land function {\ttfamily \mbox{\hyperlink{group__control__functions_ga52a11a139e56315de52d2ab439b0d203}{land()}}}
+
+Your program should like like the following \mbox{\hyperlink{controlAPIExample_8cpp}{src/control\+A\+P\+I\+Example.\+cpp}}
 
 
 \begin{DoxyCode}{0}
@@ -92,4 +213,6 @@ The below code is a simple example that executes a square flight pattern. \mbox{
 \DoxyCodeLine{\# New Terminal }
 \DoxyCodeLine{roslaunch out\_of\_controls contolAPIExample.launch}
 \end{DoxyCode}
- N\+O\+T\+E$\ast$$\ast$ you can tile gnome terminals by pressing {\ttfamily ctrl + shift + t} 
+ N\+O\+T\+E$\ast$$\ast$ you can tile gnome terminals by pressing {\ttfamily ctrl + shift + t}
+
+You should now have a basic understanding of the functions available for controling your drone. You should be able to use these functions to help you make more complex navigation code. 

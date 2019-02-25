@@ -10,14 +10,21 @@
 <para><heading level="2">Dependencies</heading>
 </para>
 <para><programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>python-imaging-tk</highlight></codeline>
+</programlisting> <heading level="2">Clone BBox-Label-Tool</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Texas-Aerial-Robotics/BBox-Label-Tool.git</highlight></codeline>
 </programlisting></para>
 <para><heading level="2">Training instructions</heading>
 </para>
 <para>The following are a modified version of the instructions found on the yolo website</para>
-<para><emphasis>1.</emphasis> Strat by collecting images. the goal is to collect close to 500 img/class</para>
+<para><emphasis>1.</emphasis> Start by collecting images. the goal is to collect close to 500 img/class</para>
 <para><emphasis>2.</emphasis> create a new folder in BBox-Label-Tool/Images</para>
 <para><emphasis>3.</emphasis> For multi-class task, modify &apos;class.txt&apos; with your own class-candidates and before labeling bbox,</para>
-<para><emphasis>4.</emphasis> run main.py and annotate images. The current tool requires that <bold>the images to be labeled reside in /Images/001, /Images/002, etc. You will need to modify the code if you want to label images elsewhere</bold>. For multi-class choose the &apos;Current Class&apos; in the Combobox and make sure you click &apos;ComfirmClass&apos; button.</para>
+<para>ex <programlisting><codeline><highlight class="normal">person</highlight></codeline>
+<codeline><highlight class="normal">dog</highlight></codeline>
+<codeline><highlight class="normal">airplane</highlight></codeline>
+</programlisting></para>
+<para><emphasis>4.</emphasis> run main.py and annotate images. The current tool requires that <bold>the images to be labeled, reside in /Images/001, /Images/002, etc. You will need to modify the code if you want to label images elsewhere</bold>. For multi-class choose the &apos;Current Class&apos; in the Combobox and make sure you click &apos;ComfirmClass&apos; button.</para>
 <para><emphasis>5.</emphasis> To create a new bounding box, left-click to select the first vertex. Moving the mouse to draw a rectangle, and left-click again to select the second vertex.<itemizedlist>
 <listitem><para>To cancel the bounding box while drawing, just press <computeroutput>&lt;Esc&gt;</computeroutput>.</para>
 </listitem><listitem><para>To delete a existing bounding box, select it from the listbox, and click <computeroutput>Delete</computeroutput>.</para>
@@ -28,20 +35,43 @@
 <listitem><para>Be sure to click <computeroutput>Next</computeroutput> after finishing a image, or the result won&apos;t be saved.</para>
 </listitem></itemizedlist>
 </para>
-<para><emphasis>7.</emphasis> run the convert.py script to format the annotations in yolo form</para>
-<para><emphasis>8.</emphasis> combine jour dataset_list files using your favorite text editor into train.txt and test.txt. It is recommended to not train on one of your data sets to use as a accuracy metric.</para>
-<para><emphasis>9.</emphasis> Set up the darknet config.</para>
+<para><emphasis>7.</emphasis> We now need to convert the bbox labels into yolo readable form for this we will modify the convert script in <computeroutput>BBox-Label-Tool/Scripts</computeroutput></para>
+<para>the <computeroutput>mypath</computeroutput> variable should path to the labels folder for your data set. Yolo will look for the annotations in the same folder as the image, so path the <computeroutput>outpath</computeroutput> variable to the image folder. the dataset is the name of the data set ex <computeroutput>002</computeroutput>. Then fill the classes array to match your <computeroutput>classes.txt</computeroutput></para>
+<para><programlisting><codeline><highlight class="normal">mypath<sp/>=<sp/>&quot;/home/eric/BBox-Label-Tool/Labels/002/&quot;<sp/>/</highlight></codeline>
+<codeline><highlight class="normal">outpath<sp/>=<sp/>&quot;/home/eric/BBox-Label-Tool/Images/002/&quot;</highlight></codeline>
+<codeline><highlight class="normal">dataSet<sp/>=<sp/>&quot;002&quot;</highlight></codeline>
+<codeline><highlight class="normal">classes<sp/>=<sp/>[&quot;person&quot;,<sp/>&quot;dog&quot;,&quot;airplane&quot;]</highlight></codeline>
+</programlisting></para>
+<para><emphasis>8.</emphasis> run the convert.py script to format the annotations in yolo form.</para>
+<para><emphasis>9.</emphasis> combine your dataset_list files using your favorite text editor into train.txt and test.txt. It is recommended to not train on one of your data sets to use as a accuracy metric.</para>
+<para><emphasis>10.</emphasis> Set up the darknet .data file</para>
 <para><itemizedlist>
-<listitem><para>Create a file in darknet/cfg with the name &lt;nameofdata&gt;.data</para>
-</listitem><listitem><para>Create a folder to store the output weights in. ex /home/eric/backup <programlisting><codeline><highlight class="normal">1<sp/>classes=<sp/>20</highlight></codeline>
-<codeline><highlight class="normal">2<sp/>train<sp/><sp/>=<sp/>&lt;path-to-data&gt;/train.txt</highlight></codeline>
-<codeline><highlight class="normal">3<sp/>valid<sp/><sp/>=<sp/>&lt;path-to-data&gt;/test.txt</highlight></codeline>
-<codeline><highlight class="normal">4<sp/>names<sp/>=<sp/>data/voc.names</highlight></codeline>
-<codeline><highlight class="normal">5<sp/>backup<sp/>=<sp/>&lt;path-to-backup-folder&gt;</highlight></codeline>
+<listitem><para>Create a file in darknet/cfg with the name &lt;name-of-data&gt;.data</para>
+</listitem><listitem><para>Create a folder to store the output weights in. ex /home/eric/backup <programlisting><codeline><highlight class="normal">classes=<sp/>20</highlight></codeline>
+<codeline><highlight class="normal">train<sp/><sp/>=<sp/>&lt;path-to-data&gt;/train.txt</highlight></codeline>
+<codeline><highlight class="normal">valid<sp/><sp/>=<sp/>&lt;path-to-data&gt;/test.txt</highlight></codeline>
+<codeline><highlight class="normal">names<sp/>=<sp/>data/&lt;name-of-data&gt;.names</highlight></codeline>
+<codeline><highlight class="normal">backup<sp/>=<sp/>&lt;path-to-backup-folder&gt;</highlight></codeline>
 </programlisting></para>
 </listitem></itemizedlist>
 </para>
-<para><emphasis>10.</emphasis> run <computeroutput>./darknet detector train cfg/&lt;nameofdata&gt;.data cfg/yolov3.cfg &lt;weights(if you want to continue training from a backup)&gt;</computeroutput></para>
+<para><emphasis>11.</emphasis> Make your &lt;name-of-date&gt;.names file in <computeroutput>darknet/data</computeroutput>. This file should be a coppy of the classes.txt file in <computeroutput>BBox-Label-Tool</computeroutput>.</para>
+<para>ex. <programlisting><codeline><highlight class="normal">person</highlight></codeline>
+<codeline><highlight class="normal">dog</highlight></codeline>
+<codeline><highlight class="normal">airplane</highlight></codeline>
+</programlisting></para>
+<para><emphasis>12.</emphasis> Start your training run. You will fist need to select wich yolo model you would like to use the options are</para>
+<para><itemizedlist>
+<listitem><para>yolov1: Not recommended. this model is old</para>
+</listitem><listitem><para>yolov2: more accurate, and faster.</para>
+</listitem><listitem><para>yolov3: about as fast as v2, but more accurate. Yolo v3 has a high GPU ram requirement to train and run. If your graphics card does not have enough ram, use yolo v2</para>
+</listitem><listitem><para>tiny-yolo: Very fast yolo model. Would recommend for application where speed is most important. Works very well on Nvidia Jetson</para>
+</listitem></itemizedlist>
+</para>
+<para>The below command start training with yolo v3. Change the .cfg file to train with a different model <programlisting><codeline><highlight class="normal">./darknet<sp/>detector<sp/>train<sp/>cfg/&lt;nameofdata&gt;.data<sp/>cfg/yolov3.cfg<sp/>&lt;weights(if<sp/>you<sp/>want<sp/>to<sp/>continue<sp/>training<sp/>from<sp/>a<sp/>backup)&gt;</highlight></codeline>
+</programlisting></para>
+<para><emphasis>13.</emphasis> After training has completed you can test the output weights by using the following command. <programlisting><codeline><highlight class="normal">./darknet<sp/>detector<sp/>test<sp/>cfg/&lt;nameofdata&gt;.data<sp/>cfg/yolov3.cfg<sp/>&lt;weights&gt;<sp/>&lt;test-picture&gt;</highlight></codeline>
+</programlisting></para>
 <para><bold>Screenshot:</bold> <image type="html" name="screenshot.png" inline="yes"></image>
 </para>
 <para><heading level="2">Data Organization </heading>

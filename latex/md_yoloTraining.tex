@@ -6,19 +6,33 @@ A simple tool for labeling object bounding boxes in images, implemented with Pyt
 \begin{DoxyCode}{0}
 \DoxyCodeLine{sudo apt-get install python-imaging-tk}
 \end{DoxyCode}
+ \subsection*{Clone B\+Box-\/\+Label-\/\+Tool}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/Texas-Aerial-Robotics/BBox-Label-Tool.git}
+\end{DoxyCode}
 
 
 \subsection*{Training instructions}
 
 The following are a modified version of the instructions found on the yolo website
 
-{\itshape 1.} Strat by collecting images. the goal is to collect close to 500 img/class
+{\itshape 1.} Start by collecting images. the goal is to collect close to 500 img/class
 
 {\itshape 2.} create a new folder in B\+Box-\/\+Label-\/\+Tool/\+Images
 
 {\itshape 3.} For multi-\/class task, modify \textquotesingle{}class.\+txt\textquotesingle{} with your own class-\/candidates and before labeling bbox,
 
-{\itshape 4.} run main.\+py and annotate images. The current tool requires that {\bfseries{the images to be labeled reside in /\+Images/001, /\+Images/002, etc. You will need to modify the code if you want to label images elsewhere}}. For multi-\/class choose the \textquotesingle{}Current Class\textquotesingle{} in the Combobox and make sure you click \textquotesingle{}Comfirm\+Class\textquotesingle{} button.
+ex 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{person}
+\DoxyCodeLine{dog}
+\DoxyCodeLine{airplane}
+\end{DoxyCode}
+
+
+{\itshape 4.} run main.\+py and annotate images. The current tool requires that {\bfseries{the images to be labeled, reside in /\+Images/001, /\+Images/002, etc. You will need to modify the code if you want to label images elsewhere}}. For multi-\/class choose the \textquotesingle{}Current Class\textquotesingle{} in the Combobox and make sure you click \textquotesingle{}Comfirm\+Class\textquotesingle{} button.
 
 {\itshape 5.} To create a new bounding box, left-\/click to select the first vertex. Moving the mouse to draw a rectangle, and left-\/click again to select the second vertex.
 \begin{DoxyItemize}
@@ -32,27 +46,70 @@ The following are a modified version of the instructions found on the yolo websi
 \item Be sure to click {\ttfamily Next} after finishing a image, or the result won\textquotesingle{}t be saved.
 \end{DoxyItemize}
 
-{\itshape 7.} run the convert.\+py script to format the annotations in yolo form
+{\itshape 7.} We now need to convert the bbox labels into yolo readable form for this we will modify the convert script in {\ttfamily B\+Box-\/\+Label-\/\+Tool/\+Scripts}
 
-{\itshape 8.} combine jour dataset\+\_\+list files using your favorite text editor into train.\+txt and test.\+txt. It is recommended to not train on one of your data sets to use as a accuracy metric.
+the {\ttfamily mypath} variable should path to the labels folder for your data set. Yolo will look for the annotations in the same folder as the image, so path the {\ttfamily outpath} variable to the image folder. the dataset is the name of the data set ex {\ttfamily 002}. Then fill the classes array to match your {\ttfamily classes.\+txt}
 
-{\itshape 9.} Set up the darknet config.
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mypath = "/home/eric/BBox-Label-Tool/Labels/002/" /}
+\DoxyCodeLine{outpath = "/home/eric/BBox-Label-Tool/Images/002/"}
+\DoxyCodeLine{dataSet = "002"}
+\DoxyCodeLine{classes = ["person", "dog","airplane"]}
+\end{DoxyCode}
+
+
+{\itshape 8.} run the convert.\+py script to format the annotations in yolo form.
+
+{\itshape 9.} combine your dataset\+\_\+list files using your favorite text editor into train.\+txt and test.\+txt. It is recommended to not train on one of your data sets to use as a accuracy metric.
+
+{\itshape 10.} Set up the darknet .data file
 
 
 \begin{DoxyItemize}
-\item Create a file in darknet/cfg with the name $<$nameofdata$>$.data
+\item Create a file in darknet/cfg with the name $<$name-\/of-\/data$>$.data
 \item Create a folder to store the output weights in. ex /home/eric/backup 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 classes= 20}
-\DoxyCodeLine{2 train  = <path-to-data>/train.txt}
-\DoxyCodeLine{3 valid  = <path-to-data>/test.txt}
-\DoxyCodeLine{4 names = data/voc.names}
-\DoxyCodeLine{5 backup = <path-to-backup-folder>}
+\DoxyCodeLine{classes= 20}
+\DoxyCodeLine{train  = <path-to-data>/train.txt}
+\DoxyCodeLine{valid  = <path-to-data>/test.txt}
+\DoxyCodeLine{names = data/<name-of-data>.names}
+\DoxyCodeLine{backup = <path-to-backup-folder>}
 \end{DoxyCode}
 
 \end{DoxyItemize}
 
-{\itshape 10.} run {\ttfamily ./darknet detector train cfg/$<$nameofdata$>$.data cfg/yolov3.\+cfg $<$weights(if you want to continue training from a backup)$>$}
+{\itshape 11.} Make your $<$name-\/of-\/date$>$.names file in {\ttfamily darknet/data}. This file should be a coppy of the classes.\+txt file in {\ttfamily B\+Box-\/\+Label-\/\+Tool}.
+
+ex. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{person}
+\DoxyCodeLine{dog}
+\DoxyCodeLine{airplane}
+\end{DoxyCode}
+
+
+{\itshape 12.} Start your training run. You will fist need to select wich yolo model you would like to use the options are
+
+
+\begin{DoxyItemize}
+\item yolov1\+: Not recommended. this model is old
+\item yolov2\+: more accurate, and faster.
+\item yolov3\+: about as fast as v2, but more accurate. Yolo v3 has a high G\+PU ram requirement to train and run. If your graphics card does not have enough ram, use yolo v2
+\item tiny-\/yolo\+: Very fast yolo model. Would recommend for application where speed is most important. Works very well on Nvidia Jetson
+\end{DoxyItemize}
+
+The below command start training with yolo v3. Change the .cfg file to train with a different model 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detector train cfg/<nameofdata>.data cfg/yolov3.cfg <weights(if you want to continue training from a backup)>}
+\end{DoxyCode}
+
+
+{\itshape 13.} After training has completed you can test the output weights by using the following command. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./darknet detector test cfg/<nameofdata>.data cfg/yolov3.cfg <weights> <test-picture>}
+\end{DoxyCode}
+
 
 {\bfseries{Screenshot\+:}} 
 
